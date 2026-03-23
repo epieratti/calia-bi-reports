@@ -1,6 +1,9 @@
 # calia-bi-reports
 
-Relatório estático (`index.html`). URL pública: **https://epieratti.github.io/calia-bi-reports/**
+Página principal do relatório: **`dossie-auditoria-criadores-embratur-2026.html`**.
+
+- **URL direta do dossiê:** https://epieratti.github.io/calia-bi-reports/dossie-auditoria-criadores-embratur-2026.html  
+- A raiz do site (`/`) redireciona para esse arquivo.
 
 ## Ativar GitHub Pages (obrigatório para sair do 404)
 
