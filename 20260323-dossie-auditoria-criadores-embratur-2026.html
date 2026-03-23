@@ -34,7 +34,21 @@
 </head>
 <body class="p-4 md:p-12">
 
-    <div class="max-w-6xl mx-auto space-y-16">
+    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/95 p-4">
+        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-[#003366] mb-1">Acesso restrito</p>
+            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o dossiê.</p>
+            <form id="access-form" class="space-y-3">
+                <label class="sr-only" for="access-pw">Senha</label>
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-[#003366] focus:outline-none focus:ring-1 focus:ring-[#003366]" placeholder="Senha">
+                <p id="access-err" class="hidden text-sm font-medium text-red-600">Senha incorreta.</p>
+                <button type="submit" class="w-full rounded bg-[#003366] py-2.5 text-sm font-bold uppercase tracking-wide text-white hover:opacity-95">Entrar</button>
+            </form>
+            <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor. Quem tiver o arquivo pode tentar quebrar a senha.</p>
+        </div>
+    </div>
+
+    <div id="dossier-root" class="hidden max-w-6xl mx-auto space-y-16">
         
         <!-- HEADER INSTITUCIONAL -->
         <header class="bg-embratur-navy text-white p-10 rounded shadow-lg flex flex-col md:flex-row justify-between items-center">
@@ -351,34 +365,61 @@
     </div>
 
     <script>
-        const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
-        const tip = { plugins: { tooltip: { callbacks: { title: (i) => { const l = i[0].chart.data.labels[i[0].dataIndex]; return Array.isArray(l) ? l.join(' ') : l; } } } } };
-        const colors = ['#003366', '#009966', '#FFCC00', '#CC0033', '#cbd5e1'];
+        /* Troque a senha: gere SHA-256 em hex da nova senha e substitua PASSWORD_SHA256_HEX.
+           Ex.: printf '%s' 'sua-nova-senha' | openssl dgst -sha256
+           Senha padrão deste arquivo: embratur2026 */
+        const PASSWORD_SHA256_HEX = 'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5';
 
-        const geo = (id, data, labels) => new Chart(document.getElementById(id), {
-            type: 'doughnut',
-            data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: colors, borderWidth: 0 }] },
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } }, ...tip.plugins }, cutout: '70%' }
+        async function sha256Hex(text) {
+            const buf = new TextEncoder().encode(text);
+            const hash = await crypto.subtle.digest('SHA-256', buf);
+            return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function initCharts() {
+            const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
+            const tip = { plugins: { tooltip: { callbacks: { title: (i) => { const l = i[0].chart.data.labels[i[0].dataIndex]; return Array.isArray(l) ? l.join(' ') : l; } } } } };
+            const colors = ['#003366', '#009966', '#FFCC00', '#CC0033', '#cbd5e1'];
+
+            const geo = (id, data, labels) => new Chart(document.getElementById(id), {
+                type: 'doughnut',
+                data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: colors, borderWidth: 0 }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } }, ...tip.plugins }, cutout: '70%' }
+            });
+
+            const rad = (id, data) => new Chart(document.getElementById(id), {
+                type: 'radar',
+                data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(0, 51, 102, 0.2)', borderColor: '#003366', borderWidth: 2, pointBackgroundColor: '#003366' }] },
+                options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false }, ...tip.plugins } }
+            });
+
+            geo('geoJunior', [84, 9, 3, 2, 2], ['Brasil', 'Itália', 'Portugal', 'EUA', 'Outros']);
+            rad('radarJunior', [95, 88, 78, 92, 90]);
+
+            geo('geoSamuel', [78, 12, 5, 3, 2], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
+            rad('radarSamuel', [75, 60, 85, 80, 88]);
+
+            geo('geoZeca', [92, 4, 3, 1, 0], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
+            rad('radarZeca', [50, 95, 70, 60, 98]);
+
+            geo('geoBrown', [70, 15, 8, 5, 2], ['Brasil', 'Europa Continental', 'EUA', 'Itália', 'Outros']);
+            rad('radarBrown', [85, 100, 95, 90, 85]);
+        }
+
+        document.getElementById('access-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const err = document.getElementById('access-err');
+            err.classList.add('hidden');
+            const pw = document.getElementById('access-pw').value;
+            const hex = await sha256Hex(pw);
+            if (hex !== PASSWORD_SHA256_HEX) {
+                err.classList.remove('hidden');
+                return;
+            }
+            document.getElementById('access-gate').classList.add('hidden');
+            document.getElementById('dossier-root').classList.remove('hidden');
+            requestAnimationFrame(() => requestAnimationFrame(() => initCharts()));
         });
-
-        const rad = (id, data) => new Chart(document.getElementById(id), {
-            type: 'radar',
-            data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(0, 51, 102, 0.2)', borderColor: '#003366', borderWidth: 2, pointBackgroundColor: '#003366' }] },
-            options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false }, ...tip.plugins } }
-        });
-
-        // Init Charts
-        geo('geoJunior', [84, 9, 3, 2, 2], ['Brasil', 'Itália', 'Portugal', 'EUA', 'Outros']);
-        rad('radarJunior', [95, 88, 78, 92, 90]);
-
-        geo('geoSamuel', [78, 12, 5, 3, 2], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
-        rad('radarSamuel', [75, 60, 85, 80, 88]);
-
-        geo('geoZeca', [92, 4, 3, 1, 0], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
-        rad('radarZeca', [50, 95, 70, 60, 98]);
-
-        geo('geoBrown', [70, 15, 8, 5, 2], ['Brasil', 'Europa Continental', 'EUA', 'Itália', 'Outros']);
-        rad('radarBrown', [85, 100, 95, 90, 85]);
     </script>
 </body>
 </html>
