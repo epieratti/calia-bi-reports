@@ -1,8 +1,8 @@
 # calia-bi-reports
 
-Página principal do relatório: **`dossie-auditoria-criadores-embratur-2026.html`**.
+Página principal do relatório: **`20260323-dossie-auditoria-criadores-embratur-2026.html`**.
 
-- **URL direta do dossiê:** https://epieratti.github.io/calia-bi-reports/dossie-auditoria-criadores-embratur-2026.html  
+- **URL direta do dossiê:** https://epieratti.github.io/calia-bi-reports/20260323-dossie-auditoria-criadores-embratur-2026.html  
 - A raiz do site (`/`) redireciona para esse arquivo.
 
 ## Ativar GitHub Pages (obrigatório para sair do 404)
