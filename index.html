@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Relatórios e estudos de Business Intelligence publicados pela Agência Calia para seus clientes."
+    />
+    <title>Calia BI Reports</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Agência Calia</div>
+      <h1>BI Reports</h1>
+      <p class="subtitle">Estudos e relatórios de Business Intelligence para nossos clientes</p>
+    </header>
+
+    <nav>
+      <a href="index.html" class="active">Início</a>
+      <a href="#relatorios">Relatórios</a>
+      <a href="#estudos">Estudos</a>
+    </nav>
+
+    <main>
+      <div class="intro-box">
+        <strong>Bem-vindo ao portal de BI da Agência Calia.</strong> Aqui você encontra todos os
+        relatórios analíticos e estudos de dados produzidos para nossos clientes. Cada publicação
+        apresenta insights estratégicos baseados em dados reais, elaborados pela equipe de Business
+        Intelligence da agência.
+      </div>
+
+      <!-- Relatórios -->
+      <section id="relatorios">
+        <h2 class="section-title">Relatórios</h2>
+        <div class="reports-grid">
+          <a class="report-card" href="reports/exemplo-analise-vendas/index.html">
+            <div class="tag">Vendas</div>
+            <h3>Análise de Desempenho de Vendas</h3>
+            <p>
+              Visão consolidada do desempenho comercial com indicadores de receita, ticket médio,
+              conversão e sazonalidade.
+            </p>
+            <div class="meta">
+              <span>📅 Março 2026</span>
+              <span>👤 Exemplo</span>
+            </div>
+          </a>
+
+          <!-- Template para novos relatórios — copie e personalize o bloco acima -->
+        </div>
+      </section>
+
+      <!-- Estudos -->
+      <section id="estudos">
+        <h2 class="section-title">Estudos</h2>
+        <div class="reports-grid">
+          <!-- Estudos serão adicionados aqui -->
+          <div class="report-card" style="opacity: 0.5; cursor: default; pointer-events: none;">
+            <div class="tag">Em breve</div>
+            <h3>Estudos em preparação</h3>
+            <p>Novos estudos analíticos serão publicados em breve nesta seção.</p>
+            <div class="meta">
+              <span>📅 A definir</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span>
+        <a href="https://www.agenciacalia.com.br" target="_blank" rel="noopener">Agência Calia</a>
+        &mdash; Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
