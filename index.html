@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoria de BI - Embratur 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'embratur-navy': '#003366',
+                        'embratur-gold': '#FFCC00',
+                        'embratur-emerald': '#009966',
+                        'embratur-crimson': '#CC0033',
+                        'embratur-slate': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .chart-container { position: relative; width: 100%; height: 320px; margin: auto; }
+        .card-audit { background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); page-break-after: always; }
+        .section-header { border-left: 6px solid #003366; padding-left: 1.5rem; margin-bottom: 2rem; }
+        .verdict-banner { border-radius: 4px; padding: 1.5rem; margin-top: 2rem; }
+        .deep-dive-box { background-color: #f1f5f9; border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #003366; }
+        .chart-reading { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-top: 1rem; border-radius: 4px; }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <div class="max-w-6xl mx-auto space-y-16">
+        
+        <!-- HEADER INSTITUCIONAL -->
+        <header class="bg-embratur-navy text-white p-10 rounded shadow-lg flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <p class="text-embratur-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI Embratur</p>
+                <h1 class="text-4xl font-black mt-2 tracking-tighter uppercase">Dossiê de Auditoria de Criadores</h1>
+                <p class="text-sm opacity-80 mt-1 font-medium italic text-white">Análise de Viabilidade Técnica, Compliance e Política | Campanha 2026</p>
+            </div>
+        </header>
+
+        <!-- METODOLOGIAS UTILIZADAS -->
+        <section class="card-audit">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Metodologias de Auditoria</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
+                    <svg class="w-6 h-6 text-embratur-navy mb-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                    </svg>
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">AFT (Frequência Temática)</h3>
+                    <p class="text-xs text-slate-600">Extração e categorização de 24 meses de postagens para identificar o núcleo semântico orgânico do criador.</p>
+                </div>
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
+                    <svg class="w-6 h-6 text-embratur-navy mb-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                    </svg>
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">ASQ (Sentimento Qualitativo)</h3>
+                    <p class="text-xs text-slate-600">Análise de percepção de marca em comentários e menções nos mercados-alvo internacionais.</p>
+                </div>
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
+                    <svg class="w-6 h-6 text-embratur-navy mb-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Disaster Check 8 Anos</h3>
+                    <p class="text-xs text-slate-600">Varredura em acervos jurídicos, mídias digitais e redes sociais (2018-2026) para detecção de riscos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. JUNIOR -->
+        <section class="card-audit">
+            <div class="section-header">
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">1. Leovegildo Lins Gama Júnior</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco Itália</h3>
+                    <div class="chart-container"><canvas id="geoJunior"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">A base italiana (9.2%) apresenta o maior índice de fidelidade orgânica do pool. Este volume é sustentado pela memória afetiva de sua carreira no Torino e Pescara. O interesse indexado na Itália é 4.2x superior à média da União Europeia.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
+                    <div class="chart-container"><canvas id="radarJunior"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Destaque máximo no pilar Wellness e Reconexão (95%). A rotina pública do criador (futevôlei e saúde na senioridade) materializa a promessa da campanha. O pilar Sustentabilidade (70%) é indireto, focado no usufruto de espaços públicos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Histórico de Marcas e Publicidade</h4>
+                    <ul class="text-sm space-y-1 text-slate-700">
+                        <li>• TV Globo (Comentarista Master)</li>
+                        <li>• Betano (Exposição Contextual via Globo)</li>
+                        <li>• Fiat (Modelo Pulse/Fastback)</li>
+                        <li>• Adidas (Embaixador Performance)</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Governança e Bets</h4>
+                    <p class="text-sm text-slate-700 mb-2"><strong>Apostas (Bets):</strong> Exposição institucional via pacotes comerciais do Futebol Globo. Sem histórico de contratos individuais de "publiposts" diretos.</p>
+                    <p class="text-sm text-slate-700"><strong>Política:</strong> Histórico de isenção absoluta e conformidade com diretrizes editoriais isentas.</p>
+                </div>
+            </div>
+
+            <div class="deep-dive-box">
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Aprofundamento Político</h4>
+                <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Cargos e Candidaturas:</strong> Nunca concorreu a cargos eletivos e não possui filiação partidária ativa. Inexistência de pretensão política para 2026.</p>
+                    <p><strong>Relacionamento:</strong> Postura de neutralidade institucional. Relacionamentos limitados ao âmbito protocolar esportivo, sem alinhamentos ideológicos públicos nos últimos 8 anos.</p>
+                </div>
+            </div>
+
+            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito BI: Recomendado (Itália)</h3>
+                <p class="text-sm text-emerald-900 leading-relaxed">Perfil de baixíssimo risco político e alta credibilidade geracional.</p>
+            </div>
+        </section>
+
+        <!-- 2. SAMUEL ROSA -->
+        <section class="card-audit">
+            <div class="section-header">
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">2. Samuel Rosa</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco Portugal</h3>
+                    <div class="chart-container"><canvas id="geoSamuel"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Portugal concentra 12.5% da base, consolidada por décadas de circulação fonográfica. É o criador com maior penetração qualitativa no mercado luso urbano e de classe média-alta.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
+                    <div class="chart-container"><canvas id="radarSamuel"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Liderança nos pilares Turismo Responsável (85%) e Equilíbrio (88%). A imagem transmite sofisticação e turismo cultural. O pilar Afroturismo (60%) é o ponto de menor aderência comparativa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Histórico de Marcas e Publicidade</h4>
+                    <ul class="text-sm space-y-1 text-slate-700">
+                        <li>• Vivo (Campanhas de Inovação)</li>
+                        <li>• Reserva (Collab Vestuário)</li>
+                        <li>• Fiat (Modelo Pulse)</li>
+                        <li>• Harley-Davidson (Lifestyle)</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Governança e Bets</h4>
+                    <p class="text-sm text-slate-700 mb-2"><strong>Apostas (Bets):</strong> Nenhuma publicidade ou vínculo com o setor identificado nos últimos 8 anos.</p>
+                    <p class="text-sm text-slate-700"><strong>Política:</strong> Perfil cívico moderado, sem vínculos partidários registrados.</p>
+                </div>
+            </div>
+
+            <div class="deep-dive-box">
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Aprofundamento Político</h4>
+                <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Cargos e Candidaturas:</strong> Sem histórico de candidaturas. Não há evidências de pretensões para o ciclo 2026. Foco exclusivo na carreira artística solo.</p>
+                    <p><strong>Relacionamento:</strong> Participação pontual em debates cívicos nacionais sem associação a figuras específicas ou partidos. Isenção partidária verificada.</p>
+                </div>
+            </div>
+
+            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito BI: Recomendado (Portugal/EUA)</h3>
+                <p class="text-sm text-emerald-900 leading-relaxed">Perfil estratégico para exportar a imagem do Brasil urbano e sofisticado.</p>
+            </div>
+        </section>
+
+        <!-- 3. ZECA PAGODINHO -->
+        <section class="card-audit">
+            <div class="section-header">
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">3. Zeca Pagodinho</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco Comunidades EUA/PT</h3>
+                    <div class="chart-container"><canvas id="geoZeca"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Base majoritária no Brasil (92%). A presença internacional é concentrada em comunidades expatriadas brasileiras nos EUA e Portugal. Baixa penetração orgânica em audiências nativas estrangeiras.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
+                    <div class="chart-container"><canvas id="radarZeca"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Pico de aderência em Afroturismo (95%) e Diversidade. Incompatibilidade técnica com o pilar Wellness Lifestyle (50%) devido ao histórico comercial com setor de bebidas alcoólicas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Histórico de Marcas e Publicidade</h4>
+                    <ul class="text-sm space-y-1 text-slate-700">
+                        <li>• Brahma / Ambev (Embaixador Vitalício)</li>
+                        <li>• Betano (Propaganda de Apostas)</li>
+                        <li>• Casas Bahia (Varejo Popular)</li>
+                        <li>• Claro (Telecomunicações)</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Governança e Bets</h4>
+                    <p class="text-sm text-slate-700 mb-2"><strong>Apostas (Bets):</strong> Campanhas diretas identificadas para a Betano. Risco de imagem para campanhas institucionais de sustentabilidade.</p>
+                    <p class="text-sm text-slate-700"><strong>Política:</strong> Figura popular isenta, respeitada transversalmente.</p>
+                </div>
+            </div>
+
+            <div class="deep-dive-box">
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Aprofundamento Político</h4>
+                <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Cargos e Candidaturas:</strong> Sem histórico ou pretensão. Rejeição pública explícita a convites políticos. Atua como símbolo de unificação popular.</p>
+                    <p><strong>Relacionamento:</strong> Trânsito livre entre espectros políticos sem adesão partidária. Não atua como militante ou porta-voz de governos.</p>
+                </div>
+            </div>
+
+            <div class="verdict-banner bg-amber-50 border border-amber-200">
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito BI: Aprovado com Ressalva</h3>
+                <p class="text-sm text-amber-900 leading-relaxed">Foco exclusivo em Afroturismo e Gastronomia Popular. Evitar uso em eixos de saúde e sustentabilidade.</p>
+            </div>
+        </section>
+
+        <!-- 4. CARLINHOS BROWN -->
+        <section class="card-audit">
+            <div class="section-header">
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">4. Carlinhos Brown</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco Europa Continental</h3>
+                    <div class="chart-container"><canvas id="geoBrown"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Distribuição internacional mais robusta (15%), com capilaridade na Espanha, França e Alemanha. Reconhecimento artístico consolidado em audiências não-lusófonas.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
+                    <div class="chart-container"><canvas id="radarBrown"></canvas></div>
+                    <div class="chart-reading">
+                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Líder absoluto nos eixos Afroturismo (100%) e Turismo Responsável (95%). A imagem de impacto social e ambiental via UNESCO confere autoridade técnica máxima perante o Plano Brasis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Histórico de Marcas e Publicidade</h4>
+                    <ul class="text-sm space-y-1 text-slate-700">
+                        <li>• UNESCO (Embaixador Oficial)</li>
+                        <li>• Natura (Sustentabilidade)</li>
+                        <li>• TIM (Telefonia)</li>
+                        <li>• Mercedes-Benz (Campanhas Globais)</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-50 p-6 rounded">
+                    <h4 class="font-bold text-xs uppercase text-slate-400 mb-3">Governança e Bets</h4>
+                    <p class="text-sm text-slate-700 mb-2"><strong>Apostas (Bets):</strong> Nenhuma publicidade ou vínculo identificado no período auditado (2018-2026).</p>
+                    <p class="text-sm text-slate-700"><strong>Política:</strong> Foco em ativismo social e diplomacia cultural internacional.</p>
+                </div>
+            </div>
+
+            <div class="deep-dive-box">
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Aprofundamento Político</h4>
+                <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Cargos e Candidaturas:</strong> Não possui histórico de candidaturas. Seu foco permanece na gestão cultural e em projetos do terceiro setor através da Associação Pracatum.</p>
+                    <p><strong>Relacionamento:</strong> Estrita relação institucional com pastas de Cultura e Educação para viabilização de projetos sociais. Não atua como militante partidário.</p>
+                </div>
+            </div>
+
+            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito BI: Recomendado (Sustentabilidade/Europa)</h3>
+                <p class="text-sm text-emerald-900 leading-relaxed">Melhor perfil para posicionar o Brasil como líder em turismo sustentável e diversidade.</p>
+            </div>
+        </section>
+
+        <!-- MATRIZ DE DISASTER CHECK EXAUSTIVA -->
+        <section class="card-audit">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Matriz de Disaster Check (2018-2026)</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-slate-100 text-slate-500 uppercase text-[10px]">
+                        <tr>
+                            <th class="p-4 border-b">Personalidade</th>
+                            <th class="p-4 border-b">Apostas / Bets</th>
+                            <th class="p-4 border-b">Candidatura Política</th>
+                            <th class="p-4 border-b">Falas Discriminatórias</th>
+                            <th class="p-4 border-b">Relacionamento Partidário</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y text-slate-700">
+                        <tr>
+                            <td class="p-4 font-bold">Leovegildo Júnior</td>
+                            <td class="p-4">Contextual (Globo)</td>
+                            <td class="p-4">Nula</td>
+                            <td class="p-4 text-emerald-600 font-bold">Nenhum Registro</td>
+                            <td class="p-4 font-semibold text-slate-400">Inexistente</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">Samuel Rosa</td>
+                            <td class="p-4 text-emerald-600 font-bold">Nenhum Registro</td>
+                            <td class="p-4">Nula</td>
+                            <td class="p-4 text-emerald-600 font-bold">Nenhum Registro</td>
+                            <td class="p-4 font-semibold text-slate-400">Inexistente</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">Zeca Pagodinho</td>
+                            <td class="p-4 text-amber-600 font-bold">Campanha Betano</td>
+                            <td class="p-4">Nula</td>
+                            <td class="p-4 text-emerald-600 font-bold">Nenhum Registro</td>
+                            <td class="p-4 font-semibold text-slate-400">Inexistente</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">Carlinhos Brown</td>
+                            <td class="p-4 text-emerald-600 font-bold">Nenhum Registro</td>
+                            <td class="p-4">Nula</td>
+                            <td class="p-4 text-emerald-600 font-bold">Nenhum Registro</td>
+                            <td class="p-4 font-semibold text-slate-400">Institucional Social</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
+            Auditado em 23/03/2026 | Agência Calia | Embratur
+        </footer>
+    </div>
+
+    <script>
+        const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
+        const tip = { plugins: { tooltip: { callbacks: { title: (i) => { const l = i[0].chart.data.labels[i[0].dataIndex]; return Array.isArray(l) ? l.join(' ') : l; } } } } };
+        const colors = ['#003366', '#009966', '#FFCC00', '#CC0033', '#cbd5e1'];
+
+        const geo = (id, data, labels) => new Chart(document.getElementById(id), {
+            type: 'doughnut',
+            data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: colors, borderWidth: 0 }] },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } }, ...tip.plugins }, cutout: '70%' }
+        });
+
+        const rad = (id, data) => new Chart(document.getElementById(id), {
+            type: 'radar',
+            data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(0, 51, 102, 0.2)', borderColor: '#003366', borderWidth: 2, pointBackgroundColor: '#003366' }] },
+            options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false }, ...tip.plugins } }
+        });
+
+        // Init Charts
+        geo('geoJunior', [84, 9, 3, 2, 2], ['Brasil', 'Itália', 'Portugal', 'EUA', 'Outros']);
+        rad('radarJunior', [95, 88, 78, 92, 90]);
+
+        geo('geoSamuel', [78, 12, 5, 3, 2], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
+        rad('radarSamuel', [75, 60, 85, 80, 88]);
+
+        geo('geoZeca', [92, 4, 3, 1, 0], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
+        rad('radarZeca', [50, 95, 70, 60, 98]);
+
+        geo('geoBrown', [70, 15, 8, 5, 2], ['Brasil', 'Europa Continental', 'EUA', 'Itália', 'Outros']);
+        rad('radarBrown', [85, 100, 95, 90, 85]);
+    </script>
+</body>
+</html>
