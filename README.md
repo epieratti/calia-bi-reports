@@ -2,7 +2,7 @@
 
 O dossiê fica na pasta **`embratur/`** do repositório (pasta real no GitHub, não só redirecionamento).
 
-- **URL do dossiê:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-criadores-embratur-2026.html  
+- **URL do dossiê:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html  
 - Novos relatórios: adicione mais `.html` em **`embratur/`** no repositório (sem `index.html` na pasta).  
 - A raiz do site (`/`) redireciona para o dossiê atual em `embratur/`.  
 - O caminho antigo na raiz (`/20260323-…html`) existe como página mínima que redireciona para `embratur/`.
