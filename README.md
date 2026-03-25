@@ -1,11 +1,11 @@
 # calia-bi-reports
 
-O dossiê fica na pasta **`embratur/`** do repositório (pasta real no GitHub, não só redirecionamento).
+O dossiê principal fica em **`embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`** (pasta real no repositório).
 
-- **URL do dossiê:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html  
-- Novos relatórios: adicione mais `.html` em **`embratur/`** no repositório (sem `index.html` na pasta).  
-- A raiz do site (`/`) redireciona para o dossiê atual em `embratur/`.  
-- O caminho antigo na raiz (`/20260323-…html`) existe como página mínima que redireciona para `embratur/`.
+- **URL direta do dossiê:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html  
+- **URL da raiz do site:** https://epieratti.github.io/calia-bi-reports/ — o arquivo **`index.html`** na raiz redireciona para o mesmo dossiê em `embratur/`.  
+- **Acesso:** o HTML do dossiê inclui **proteção por senha no navegador** (hash SHA-256). A senha usada no projeto é **`embratur2026`** (altere no próprio HTML se precisar).  
+- **Novos relatórios:** adicione mais `.html` em **`embratur/`** conforme necessário (não é obrigatório ter `index.html` dentro de `embratur/`).
 
 ## Ativar GitHub Pages (obrigatório para sair do 404)
 
@@ -25,3 +25,7 @@ No repositório no GitHub: **Settings** → **Pages** → em **Build and deploym
 Se o Pages foi ativado **depois** de uma execução que falhou, o site só sobe quando houver **pelo menos um deploy com sucesso** (novo push em `main` ou *Re-run* do workflow). Sem isso, a URL pode continuar em 404.
 
 Enquanto o Pages não estiver ativado com uma dessas fontes, a URL acima mostra *“There isn’t a GitHub Pages site here”*.
+
+## Pesquisa complementar (opcional)
+
+Em **`embratur/scripts/`** e **`embratur/research/`** há script e notas sobre proxy de penetração (Trends/Wikipedia); ver `embratur/research/README.md`.

@@ -40,18 +40,55 @@
 </head>
 <body class="p-4 md:p-12">
 
-    <div class="max-w-6xl mx-auto space-y-16">
+    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-[#252525] mb-1">Acesso restrito</p>
+            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o dossiê.</p>
+            <form id="access-form" class="space-y-3">
+                <label class="sr-only" for="access-pw">Senha</label>
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-[#252525] focus:outline-none focus:ring-1 focus:ring-[#252525]" placeholder="Senha">
+                <p id="access-err" class="hidden text-sm font-medium text-red-600">Senha incorreta.</p>
+                <button type="submit" class="w-full rounded bg-[#f9a619] py-2.5 text-sm font-bold uppercase tracking-wide text-[#252525] hover:opacity-90">Entrar</button>
+            </form>
+            <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor.</p>
+        </div>
+    </div>
+
+    <div id="dossier-root" class="hidden max-w-6xl mx-auto space-y-16">
         
-        <header class="bg-embratur-navy text-white p-10 rounded shadow-lg flex flex-col md:flex-row justify-between items-center">
+        <header id="topo" class="bg-embratur-navy text-white p-10 rounded shadow-lg flex flex-col md:flex-row justify-between items-center">
             <div>
                 <p class="text-embratur-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI Embratur</p>
-                <h1 class="text-4xl font-black mt-2 tracking-tight uppercase">Dossiê de Auditoria: Personalidades</h1>
+                <h1 class="text-4xl font-black mt-2 tracking-normal uppercase">Dossiê de Auditoria: Personalidades</h1>
                 <p class="text-sm opacity-80 mt-1 font-medium italic text-white">Análise de Viabilidade Técnica, Conformidade e Política | Campanha 2026</p>
             </div>
         </header>
 
+        <nav class="card-audit py-6" aria-label="Sumário do dossiê">
+            <div class="section-header mb-4">
+                <h2 class="text-lg font-black text-embratur-navy uppercase tracking-tight">Neste dossiê</h2>
+            </div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1 text-sm text-slate-700">
+                <li><a class="text-embratur-navy underline font-semibold hover:opacity-80" href="#metodologias">Metodologias e fontes</a></li>
+                <li><a class="text-embratur-navy underline font-semibold hover:opacity-80" href="#nota-metodologia">Nota de metodologia</a></li>
+                <li><a class="text-embratur-navy underline font-semibold hover:opacity-80" href="#criterios-risco">Critérios da classificação de risco</a></li>
+                <li><a class="text-embratur-navy underline font-semibold hover:opacity-80" href="#resumo-riscos">Tabela resumo de riscos</a></li>
+                <li class="sm:col-span-2 pt-2 mt-2 border-t border-slate-200 text-xs uppercase tracking-wide text-slate-500">Fichas (menor → maior risco)</li>
+                <li><a class="underline hover:opacity-80" href="#perfil-marisa">1. Marisa Monte</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-tiago">2. Tiago Iorc</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-junior">3. Júnior</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-brown">4. Carlinhos Brown</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-djavan">5. Djavan</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-liniker">6. Liniker</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-samuel">7. Samuel Rosa</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-seujorge">8. Seu Jorge</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-bebel">9. Bebel Gilberto</a></li>
+                <li><a class="underline hover:opacity-80" href="#perfil-zeca">10. Zeca Pagodinho</a></li>
+            </ul>
+        </nav>
+
         <!-- METODOLOGIAS -->
-        <section class="card-audit">
+        <section id="metodologias" class="card-audit">
             <div class="section-header">
                 <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Metodologias e Fontes</h2>
             </div>
@@ -63,8 +100,8 @@
                 </div>
                 <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">ASQ (Interesse e Alcance)</h3>
-                    <p class="text-[11px] text-slate-600 mb-2">Análise de percepção e volume de interesse geográfico via APIs de busca e consumo nos mercados-alvo internacionais.</p>
-                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Google & Spotify API</p>
+                    <p class="text-[11px] text-slate-600 mb-2">Indicadores derivados de <strong>dados públicos</strong> de mercado (interesse de busca, sinais de consumo e presença internacional), consolidados para mercados-alvo. Onde couber, complementados por rankings agregados e integrações técnicas disponíveis ao time.</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Trends, Wikipedia, sinais de streaming/ranking (públicos)</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Compliance Check</h3>
@@ -80,7 +117,7 @@
         </section>
 
         <!-- NOTA DE AUDITORIA -->
-        <section class="card-audit bg-slate-50 border-dashed border-2 border-slate-300">
+        <section id="nota-metodologia" class="card-audit bg-slate-50 border-dashed border-2 border-slate-300">
             <div class="section-header">
                 <h2 class="text-xl font-black text-embratur-navy uppercase tracking-tight">Nota de Metodologia de Dados</h2>
             </div>
@@ -89,14 +126,29 @@
                 <br><br>
                 <strong>Atenção:</strong> Por não possuirmos acesso direto a dashboards privados de terceiros, estes números devem ser tratados como <strong>estimativas de potencial de mercado</strong> e benchmarks de tendência.
                 <br><br>
-                As fichas das personalidades e a tabela <strong>Resumo de Riscos</strong> seguem ordem crescente de risco (do menor ao maior), conforme a coluna de classificação de risco.
+                As fichas das personalidades e a tabela <strong>Resumo de Riscos</strong> seguem ordem crescente de risco (do menor ao maior), conforme a coluna de classificação de risco. Em caso de <strong>empate</strong> no mesmo nível (ex.: dois perfis em Risco Zero), a ordem entre eles é <strong>alfabética pelo nome</strong> — não indica preferência de campanha.
                 <br><br>
                 No gráfico de radar, os eixos <strong>Experiências autênticas</strong>, <strong>Afroturismo</strong>, <strong>Sustentabilidade</strong>, <strong>Bem-estar</strong> e <strong>Ecoturismo</strong> são categorias operacionais derivadas da leitura AFT, alinhadas às prioridades de comunicação do Plano Brasis (experiências sustentáveis, diversidade e natureza).
             </p>
         </section>
 
+        <!-- CRITÉRIOS DE RISCO -->
+        <section id="criterios-risco" class="card-audit">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-embratur-navy uppercase tracking-tight">Critérios da classificação de risco</h2>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">A coluna <strong>Risco</strong> resume um score qualitativo. Peso relativo usado neste dossiê (do mais gravoso ao menos):</p>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-2 leading-relaxed">
+                <li><strong>Apostas (Bets):</strong> publicidade <strong>direta</strong> a operadores de apostas tende a <strong>elevar</strong> muito o risco; exposição <strong>indireta</strong> (ex.: veículo de mídia) pesa menos, mas permanece na análise.</li>
+                <li><strong>Conduta / compliance:</strong> incidentes com potencial jurídico ou reputacional grave (ex.: uso controverso de símbolos nacionais) elevam o risco ou geram faixa <strong>Médio/Legal</strong>.</li>
+                <li><strong>Política:</strong> posicionamento público explícito (apoio ou oposição declarados a gestões) aumenta risco de contestação em contratação pública; <strong>neutralidade</strong> ou tom <strong>institucional</strong> reduz.</li>
+                <li><strong>Convergência:</strong> quando várias dimensões acumulam ressalvas, o nível final reflete o <strong>conjunto</strong>, não só um fator isolado.</li>
+            </ol>
+            <p class="text-xs text-slate-500 mt-4">Esta escala é operacional para curadoria de campanha; não substitui parecer jurídico formal.</p>
+        </section>
+
         <!-- 1. MARISA MONTE -->
-        <section class="card-audit">
+        <section id="perfil-marisa" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">1. Marisa Monte</h2>
             </div>
@@ -144,7 +196,7 @@
         </section>
 
         <!-- 2. TIAGO IORC -->
-        <section class="card-audit">
+        <section id="perfil-tiago" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">2. Tiago Iorc</h2>
             </div>
@@ -192,7 +244,7 @@
         </section>
 
         <!-- 3. JÚNIOR -->
-        <section class="card-audit">
+        <section id="perfil-junior" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">3. Júnior (Leovegildo Lins da Gama Júnior)</h2>
             </div>
@@ -240,7 +292,7 @@
         </section>
 
         <!-- 4. CARLINHOS BROWN -->
-        <section class="card-audit">
+        <section id="perfil-brown" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">4. Carlinhos Brown</h2>
             </div>
@@ -281,14 +333,14 @@
                     <p><strong>Política:</strong> Atua como figura de diplomacia cultural. Participação em campanhas pró-gestão federal em 2022, mas mantém excelente trânsito institucional e diplomático.</p>
                 </div>
             </div>
-            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Sustentabilidade/Afro)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Melhor perfil para posicionar o Brasil como destino sustentável e diverso étnico no exterior.</p>
+            <div class="verdict-banner bg-amber-50 border border-amber-200">
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Recomendado com Ressalva (Sustentabilidade/Afro)</h3>
+                <p class="text-sm text-amber-900 leading-relaxed">Forte aderência a sustentabilidade e afroturismo no exterior. A participação em campanhas pró-gestão em 2022 alinha o perfil ao <strong>Risco Médio</strong> da tabela — recomenda-se ROI e narrativa técnica na contratação pública.</p>
             </div>
         </section>
 
         <!-- 5. DJAVAN -->
-        <section class="card-audit">
+        <section id="perfil-djavan" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">5. Djavan</h2>
             </div>
@@ -329,14 +381,14 @@
                     <p><strong>Política:</strong> Reconhecido pela discrição absoluta. Embora tenha manifestado apoio em 2022, é um perfil que unifica diferentes audiências sem gerar resistências ideológicas críticas.</p>
                 </div>
             </div>
-            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Patrimônio Cultural)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Nome de grande prestígio internacional. Risco zero para a marca Embratur.</p>
+            <div class="verdict-banner bg-amber-50 border border-amber-200">
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Recomendado com Ressalva (Patrimônio Cultural)</h3>
+                <p class="text-sm text-amber-900 leading-relaxed">Nome de grande prestígio internacional; sem histórico de apostas ou conduta impeditiva na análise. A <strong>ressalva política</strong> (apoio declarado em 2022) mantém o perfil em <strong>Risco Médio</strong> na tabela — exige fundamentação de ROI, alinhada aos critérios do resumo.</p>
             </div>
         </section>
 
         <!-- 6. LINIKER -->
-        <section class="card-audit">
+        <section id="perfil-liniker" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">6. Liniker</h2>
             </div>
@@ -384,7 +436,7 @@
         </section>
 
         <!-- 7. SAMUEL ROSA -->
-        <section class="card-audit">
+        <section id="perfil-samuel" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">7. Samuel Rosa</h2>
             </div>
@@ -432,7 +484,7 @@
         </section>
 
         <!-- 8. SEU JORGE -->
-        <section class="card-audit">
+        <section id="perfil-seujorge" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">8. Seu Jorge</h2>
             </div>
@@ -480,7 +532,7 @@
         </section>
 
         <!-- 9. BEBEL GILBERTO -->
-        <section class="card-audit">
+        <section id="perfil-bebel" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">9. Bebel Gilberto</h2>
             </div>
@@ -529,7 +581,7 @@
         </section>
 
         <!-- 10. ZECA PAGODINHO -->
-        <section class="card-audit">
+        <section id="perfil-zeca" class="card-audit">
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">10. Zeca Pagodinho</h2>
             </div>
@@ -577,7 +629,7 @@
         </section>
 
         <!-- TABELA RESUMO -->
-        <section class="card-audit">
+        <section id="resumo-riscos" class="card-audit">
             <div class="section-header">
                 <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Resumo de Riscos</h2>
             </div>
@@ -609,32 +661,39 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260326-ordem-risco | Auditado em 25/03/2026 | Agência Calia | Embratur
+            Rev. 20260326-polish | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Auditado em 25/03/2026 | Agência Calia | Embratur
         </footer>
     </div>
 
     <script>
-        const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
-        const baseColors = ['#f9a619', '#009966', '#252525', '#CC0033'];
-        const otherColor = '#cbd5e1'; // Cinza mais claro para Brasil/Outros
+        const PASSWORD_SHA256_HEX = 'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5';
 
-        const geo = (id, data, labels) => {
-            const backgroundColors = data.map((_, i) => (i === data.length - 1 ? otherColor : baseColors[i % baseColors.length]));
-            
-            return new Chart(document.getElementById(id), {
-                type: 'doughnut',
-                data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: backgroundColors, borderWidth: 0 }] },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } } }, cutout: '70%' }
+        async function sha256Hex(text) {
+            const buf = new TextEncoder().encode(text);
+            const hash = await crypto.subtle.digest('SHA-256', buf);
+            return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function initCharts() {
+            const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
+            const baseColors = ['#f9a619', '#009966', '#252525', '#CC0033'];
+            const otherColor = '#cbd5e1';
+
+            const geo = (id, data, labels) => {
+                const backgroundColors = data.map((_, i) => (i === data.length - 1 ? otherColor : baseColors[i % baseColors.length]));
+                return new Chart(document.getElementById(id), {
+                    type: 'doughnut',
+                    data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: backgroundColors, borderWidth: 0 }] },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } } }, cutout: '70%' }
+                });
+            };
+
+            const rad = (id, data) => new Chart(document.getElementById(id), {
+                type: 'radar',
+                data: { labels: ['Experiências autênticas', 'Afroturismo', 'Sustentabilidade', 'Bem-estar', 'Ecoturismo'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(249, 166, 25, 0.2)', borderColor: '#f9a619', borderWidth: 2 }] },
+                options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
             });
-        };
 
-        const rad = (id, data) => new Chart(document.getElementById(id), {
-            type: 'radar',
-            data: { labels: ['Experiências autênticas', 'Afroturismo', 'Sustentabilidade', 'Bem-estar', 'Ecoturismo'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(249, 166, 25, 0.2)', borderColor: '#f9a619', borderWidth: 2 }] },
-            options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
-        });
-
-        window.onload = function() {
             geo('geoMarisa', [8.2, 4.1, 3.4, 2.3, 82], ['Portugal', 'Itália', 'França', 'EUA', 'Brasil/Outros']);
             rad('radarMarisa', [98, 60, 85, 95, 95]);
 
@@ -664,7 +723,21 @@
 
             geo('geoZeca', [3.8, 2.1, 94.1], ['Portugal', 'EUA', 'Brasil/Outros']);
             rad('radarZeca', [50, 95, 70, 60, 98]);
-        };
+        }
+
+        document.getElementById('access-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const err = document.getElementById('access-err');
+            err.classList.add('hidden');
+            const pw = document.getElementById('access-pw').value;
+            if ((await sha256Hex(pw)) !== PASSWORD_SHA256_HEX) {
+                err.classList.remove('hidden');
+                return;
+            }
+            document.getElementById('access-gate').classList.add('hidden');
+            document.getElementById('dossier-root').classList.remove('hidden');
+            requestAnimationFrame(() => requestAnimationFrame(() => initCharts()));
+        });
     </script>
 </body>
 </html>
