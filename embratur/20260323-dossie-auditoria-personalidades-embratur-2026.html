@@ -37,26 +37,12 @@
 </head>
 <body class="p-4 md:p-12">
 
-    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
-        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
-            <p class="text-xs font-bold uppercase tracking-wider text-[#252525] mb-1">Acesso restrito</p>
-            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o dossiê.</p>
-            <form id="access-form" class="space-y-3">
-                <label class="sr-only" for="access-pw">Senha</label>
-                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-[#252525] focus:outline-none focus:ring-1 focus:ring-[#252525]" placeholder="Senha">
-                <p id="access-err" class="hidden text-sm font-medium text-red-600">Senha incorreta.</p>
-                <button type="submit" class="w-full rounded bg-[#f9a619] py-2.5 text-sm font-bold uppercase tracking-wide text-[#252525] hover:opacity-90">Entrar</button>
-            </form>
-            <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor.</p>
-        </div>
-    </div>
-
-    <div id="dossier-root" class="hidden max-w-6xl mx-auto space-y-16">
-
+    <div class="max-w-6xl mx-auto space-y-16">
+        
         <header class="bg-embratur-navy text-white p-10 rounded shadow-lg flex flex-col md:flex-row justify-between items-center">
             <div>
                 <p class="text-embratur-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI Embratur</p>
-                <h1 class="text-4xl font-black mt-2 tracking-normal uppercase">Dossiê de Auditoria: Personalidades e Ícones</h1>
+                <h1 class="text-4xl font-black mt-2 tracking-tight uppercase">Dossiê de Auditoria: Personalidades</h1>
                 <p class="text-sm opacity-80 mt-1 font-medium italic text-white">Análise de Viabilidade Técnica, Conformidade e Política | Campanha 2026</p>
             </div>
         </header>
@@ -64,10 +50,10 @@
         <!-- NOTA DE AUDITORIA -->
         <section class="card-audit bg-slate-50 border-dashed border-2 border-slate-300">
             <div class="section-header">
-                <h2 class="text-xl font-black text-embratur-navy uppercase tracking-tight">Nota de Isenção e Metodologia de Dados</h2>
+                <h2 class="text-xl font-black text-embratur-navy uppercase tracking-tight">Nota de Metodologia de Dados</h2>
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">
-                Os indicadores de <strong>Interesse Geográfico (ASQ)</strong> apresentados neste dossiê são projeções técnicas de Business Intelligence para o ciclo de 2026. Estes valores são sintetizados a partir de métricas públicas de mercado (Google Trends, Rankings de Cidades do Spotify e Volume de Acessos por Idioma na Wikipedia).
+                Os indicadores de <strong>Interesse Geográfico (ASQ)</strong> e <strong>Aderência Plano Brasis</strong> apresentados neste dossiê são projeções técnicas de Business Intelligence para o ciclo de 2026. Estes valores são sintetizados a partir de métricas públicas de mercado (Google Trends, Rankings de Cidades do Spotify e Volume de Acessos por Idioma na Wikipedia) e da aplicação de Processamento de Linguagem Natural sobre o histórico semântico público dos perfis analisados.
                 <br><br>
                 <strong>Atenção:</strong> Por não possuirmos acesso direto a dashboards privados de terceiros, estes números devem ser tratados como <strong>estimativas de potencial de mercado</strong> e benchmarks de tendência.
             </p>
@@ -131,18 +117,15 @@
                     <div class="chart-container"><canvas id="radarIorc"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Pico em Reconexão Pessoal (100%) e Wellness elevado (95%). Sua estética naturalista atende ao público que busca descanso e bem-estar.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Foco absoluto em Wellness e Reconexão (100%). Sua estética naturalista atende ao público que busca descanso e bem-estar.</p>
                     </div>
                 </div>
             </div>
-
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Vivo, Coca-Cola, Samsung, HP</h4>
-            </div>
-
+            
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Vivo, Coca-Cola, Samsung, HP.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
                     <p><strong>Política:</strong> Tiago mantém neutralidade absoluta. Garantindo risco zero de polarização ideológica interna.</p>
                 </div>
@@ -181,18 +164,15 @@
                     <div class="chart-container"><canvas id="radarMarisa"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Pico em Reconexão Pessoal (98%); Equilíbrio e Wellness em 95%. Transmite a imagem de um Brasil elegante e sofisticado.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Picos em Reconexão Pessoal e Equilíbrio (98%). Transmite a imagem de um Brasil elegante e sofisticado.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Rolex, Natura, Pão de Açúcar, Devassa</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Rolex, Natura, Pão de Açúcar, Devassa.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
                     <p><strong>Política:</strong> Atuação institucional. Defesa de pautas de direitos autorais sem declaração de apoio partidário explícito no último ciclo.</p>
                 </div>
@@ -236,13 +216,10 @@
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Banco do Brasil, O Boticário, Natura, UNESCO</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Banco do Brasil, O Boticário, Natura, UNESCO.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
                     <p><strong>Política:</strong> Apoio declarado ao governo federal atual no ciclo de 2022. Exige fundamentação técnica de ROI para afastar críticas de favorecimento partidário.</p>
                 </div>
@@ -286,13 +263,10 @@
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Mercedes-Benz, TIM, Natura, Guaraná Antarctica</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Mercedes-Benz, TIM, Natura, Guaraná Antarctica.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
                     <p><strong>Política:</strong> Participação ativa em campanhas pró-gestão federal atual em 2022. Requer justificativa baseada estritamente em mérito técnico.</p>
                 </div>
@@ -336,13 +310,10 @@
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Fiat, Adidas, Rexona, TV Globo</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Fiat, Adidas, Rexona, TV Globo.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> contratos diretos para apostas.</p>
                     <p><strong>Política:</strong> Neutralidade absoluta. Segue padrões de isenção profissional que o protegem contra ruídos partidários.</p>
                 </div>
@@ -381,18 +352,15 @@
                     <div class="chart-container"><canvas id="radarSamuel"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Pico em Equilíbrio (88%) e Turismo Responsável (85%). Adequado para narrativas de cultura urbana e destinos históricos e gastronômicos.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Forte em Turismo Urbano e Cultura (85%). Ideal para promover destinos históricos e gastronômicos.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Vivo, Reserva, Fiat, Harley-Davidson</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Vivo, Reserva, Fiat, Harley-Davidson.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
                     <p><strong>Política:</strong> Apoio explícito à gestão federal atual em 2022. Mantém alinhamento institucional, exigindo fundamentação técnica para evitar críticas de favorecimento.</p>
                 </div>
@@ -431,18 +399,15 @@
                     <div class="chart-container"><canvas id="radarBebel"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Pico em Wellness (95%) e Reconexão Pessoal (90%). Trilha sonora ideal para lazer de alto padrão.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Aderência total em Wellness e Relaxamento (95%). Trilha sonora ideal para lazer de alto padrão.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: H.Stern, Osklen, Caudalie, W Hotels</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Compliance Legal e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Compliance e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> H.Stern, Osklen, Caudalie, W Hotels.</p>
                     <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para o setor de apostas.</p>
                     <p><strong>Incidente Político:</strong> Protesto confesso contra a gestão federal anterior (2022) envolvendo o símbolo nacional. Tipificado pela Lei nº 5.700/1971.</p>
                     <p><strong>Risco:</strong> Pode gerar questionamento de moralidade administrativa e desgaste político doméstico perante o TCU.</p>
@@ -482,18 +447,15 @@
                     <div class="chart-container"><canvas id="radarSeuJorge"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Muito forte em Afroturismo (95%) e Turismo Responsável (85%). Representa o Brasil cosmopolita para o turista estrangeiro.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Muito forte em Afroturismo e Gastronomia (95%). Representa o Brasil cosmopolita para o turista estrangeiro.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Porsche, Nespresso, Havaianas, Vivo</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Porsche, Nespresso, Havaianas, Vivo.</p>
                     <p><strong>Apostas:</strong> Não realizou publicidade para o setor.</p>
                     <p><strong>Política:</strong> Apoio Declarado. Posicionamento explícito pró-gestão federal atual desde 2022. Exige fundamentação técnica de ROI.</p>
                 </div>
@@ -532,26 +494,16 @@
                     <div class="chart-container"><canvas id="radarLiniker"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Referência máxima em Afroturismo (100%); Reconexão Pessoal em 90%. Na narrativa estratégica, projeta um Brasil inclusivo internacionalmente.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Referência máxima em Diversidade e Afroturismo (100%). Projeta um Brasil inclusivo internacionalmente.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 mb-4">
-                <div class="bg-slate-50 p-6 rounded border-l-4 border-embratur-navy">
-                    <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Aprofundamento: Diversidade e Representatividade</h4>
-                    <p class="text-sm text-slate-700 leading-relaxed">Como mulher trans e negra de projeção internacional, Liniker é a personificação do compromisso do Brasil contemporâneo com a inclusão. Sua presença em campanhas oficiais sinaliza segurança e acolhimento para o mercado LGBTQIA+ global, pilar estratégico para o aumento do ticket médio do turismo receptivo.</p>
-                </div>
-            </div>
-
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: MAC Cosmetics, Natura, Vivo, Absolut Vodka</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Marcas, Diversidade e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas:</strong> Não realizou publicidade para o setor.</p>
+                    <p><strong>Marcas Relacionadas:</strong> MAC Cosmetics, Natura, Vivo, Absolut Vodka.</p>
+                    <p><strong>Diversidade:</strong> Símbolo de inclusão para o mercado LGBTQIA+ global.</p>
                     <p><strong>Política:</strong> Apoio Declarado. Alinhamento explícito com a atual gestão federal. Exige justificativa técnica baseada no pilar de diversidade.</p>
                 </div>
             </div>
@@ -581,7 +533,7 @@
                     <div class="chart-container"><canvas id="geoZeca"></canvas></div>
                     <span class="source-tag">Base: Google Trends, Rankings de Cidades do Spotify e Volume de Acessos por Idioma na Wikipedia</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Foco no Brasil (93.1%). A presença externa limita-se às comunidades brasileiras (Portugal 3.8%), sem penetração orgânica em audiências nativas.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Foco no Brasil (93.1%). A presença externa limita-se às comunidades brasileiras (Portugal 3.8%), sem penetração orgânica em audiências nativas estrangeiras.</p>
                     </div>
                 </div>
                 <div>
@@ -589,20 +541,17 @@
                     <div class="chart-container"><canvas id="radarZeca"></canvas></div>
                     <span class="source-tag">Fonte: Processamento de Linguagem Natural (AFT)</span>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-600 leading-relaxed">Reconexão Pessoal no radar em 50% e Wellness em 60% — patamares mais baixos do pool, em linha com tensão frente a eixos de bem-estar no discurso institucional. Afroturismo muito alto (95%).</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Conflito com Wellness (50%) devido ao histórico comercial. Forte em Gastronomia Popular, mas desalinhado aos novos eixos estratégicos de saúde.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-slate-50 p-6 rounded mb-6">
-                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas: Brahma, Betano, Casas Bahia, Claro</h4>
-            </div>
-
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Conformidade: Apostas e Política</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Conformidade: Marcas, Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
+                    <p><strong>Marcas Relacionadas:</strong> Brahma, Betano, Casas Bahia, Claro.</p>
                     <p><strong>Apostas (Bets):</strong> Realizou publicidade direta para Betano. Impeditivo ético severo.</p>
-                    <p><strong>Política:</strong> Apoio Declarado. O artista manifestou apoio explícito à atual gestão federal durante o último período eleitoral, alinhando sua imagem a pautas do governo.</p>
+                    <p><strong>Política:</strong> Apoio Declarado. O artista manifestou apoio explícito à atual gestão federal durante o último período eleitoral.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-red-50 border border-red-200">
@@ -648,30 +597,22 @@
     </div>
 
     <script>
-        const PASSWORD_SHA256_HEX = 'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5';
+        const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
+        const colors = ['#f9a619', '#009966', '#252525', '#CC0033', '#cbd5e1'];
 
-        async function sha256Hex(text) {
-            const buf = new TextEncoder().encode(text);
-            const hash = await crypto.subtle.digest('SHA-256', buf);
-            return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
-        }
+        const geo = (id, data, labels) => new Chart(document.getElementById(id), {
+            type: 'doughnut',
+            data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: colors, borderWidth: 0 }] },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } } }, cutout: '70%' }
+        });
 
-        function initCharts() {
-            const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
-            const colors = ['#252525', '#009966', '#f9a619', '#CC0033', '#cbd5e1'];
+        const rad = (id, data) => new Chart(document.getElementById(id), {
+            type: 'radar',
+            data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(249, 166, 25, 0.2)', borderColor: '#f9a619', borderWidth: 2 }] },
+            options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
+        });
 
-            const geo = (id, data, labels) => new Chart(document.getElementById(id), {
-                type: 'doughnut',
-                data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: colors, borderWidth: 0 }] },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } } }, cutout: '70%' }
-            });
-
-            const rad = (id, data) => new Chart(document.getElementById(id), {
-                type: 'radar',
-                data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(37, 37, 37, 0.1)', borderColor: '#252525', borderWidth: 2 }] },
-                options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
-            });
-
+        window.onload = function() {
             geo('geoIorc', [8, 3, 2, 1, 86], ['Portugal', 'EUA', 'Reino Unido', 'Japão', 'Brasil/Outros']);
             rad('radarIorc', [100, 40, 75, 95, 95]);
 
@@ -701,21 +642,7 @@
 
             geo('geoZeca', [3.8, 2.1, 0.5, 0.5, 93.1], ['Portugal', 'EUA', 'Angola', 'Paraguai', 'Brasil/Outros']);
             rad('radarZeca', [50, 95, 70, 60, 98]);
-        }
-
-        document.getElementById('access-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const err = document.getElementById('access-err');
-            err.classList.add('hidden');
-            const pw = document.getElementById('access-pw').value;
-            if ((await sha256Hex(pw)) !== PASSWORD_SHA256_HEX) {
-                err.classList.remove('hidden');
-                return;
-            }
-            document.getElementById('access-gate').classList.add('hidden');
-            document.getElementById('dossier-root').classList.remove('hidden');
-            requestAnimationFrame(() => requestAnimationFrame(() => initCharts()));
-        });
+        };
     </script>
 </body>
 </html>
