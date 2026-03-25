@@ -11,8 +11,8 @@
             theme: {
                 extend: {
                     colors: {
-                        'embratur-navy': '#003366',
-                        'embratur-gold': '#FFCC00',
+                        'embratur-navy': '#252525',
+                        'embratur-gold': '#f9a619',
                         'embratur-emerald': '#009966',
                         'embratur-crimson': '#CC0033',
                         'embratur-slate': '#f8fafc'
@@ -26,25 +26,27 @@
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
         .chart-container { position: relative; width: 100%; height: 320px; margin: auto; }
         .card-audit { background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); page-break-after: always; }
-        .section-header { border-left: 6px solid #003366; padding-left: 1.5rem; margin-bottom: 2rem; }
+        .section-header { border-left: 6px solid #252525; padding-left: 1.5rem; margin-bottom: 2rem; }
         .verdict-banner { border-radius: 4px; padding: 1.5rem; margin-top: 2rem; }
-        .deep-dive-box { background-color: #f1f5f9; border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #003366; }
+        .deep-dive-box { background-color: #f1f5f9; border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #252525; }
         .chart-reading { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-top: 1rem; border-radius: 4px; }
+        .bio-intro { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1.5rem; border-radius: 4px; border-left: 4px solid #f9a619; }
+        .metric-badge { background: #252525; color: white; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
 </head>
 <body class="p-4 md:p-12">
 
     <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/95 p-4">
         <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
-            <p class="text-xs font-bold uppercase tracking-wider text-[#003366] mb-1">Acesso restrito</p>
+            <p class="text-xs font-bold uppercase tracking-wider text-[#252525] mb-1">Acesso restrito</p>
             <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o dossiê.</p>
             <form id="access-form" class="space-y-3">
                 <label class="sr-only" for="access-pw">Senha</label>
-                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-[#003366] focus:outline-none focus:ring-1 focus:ring-[#003366]" placeholder="Senha">
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-[#252525] focus:outline-none focus:ring-1 focus:ring-[#252525]" placeholder="Senha">
                 <p id="access-err" class="hidden text-sm font-medium text-red-600">Senha incorreta.</p>
-                <button type="submit" class="w-full rounded bg-[#003366] py-2.5 text-sm font-bold uppercase tracking-wide text-white hover:opacity-95">Entrar</button>
+                <button type="submit" class="w-full rounded bg-[#252525] py-2.5 text-sm font-bold uppercase tracking-wide text-white hover:opacity-95">Entrar</button>
             </form>
-            <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor. Quem tiver o arquivo pode tentar quebrar a senha.</p>
+            <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor.</p>
         </div>
     </div>
 
@@ -53,7 +55,7 @@
         <header class="bg-embratur-navy text-white p-10 rounded shadow-lg flex flex-col md:flex-row justify-between items-center">
             <div>
                 <p class="text-embratur-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI Embratur</p>
-                <h1 class="text-4xl font-black mt-2 tracking-tighter uppercase">Dossiê de Auditoria de Criadores</h1>
+                <h1 class="text-4xl font-black mt-2 tracking-tighter uppercase">Dossiê de Auditoria: Personalidades e Ícones</h1>
                 <p class="text-sm opacity-80 mt-1 font-medium italic text-white">Análise de Viabilidade Técnica, Conformidade e Política | Campanha 2026</p>
             </div>
         </header>
@@ -61,20 +63,28 @@
         <!-- METODOLOGIAS -->
         <section class="card-audit">
             <div class="section-header">
-                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Metodologias de Auditoria</h2>
+                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Metodologias e Fontes</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">AFT (Frequência Temática)</h3>
-                    <p class="text-xs text-slate-600">Extração e categorização de 24 meses de postagens para identificar o núcleo semântico orgânico do criador.</p>
+                    <p class="text-[11px] text-slate-600 mb-2">Processamento de linguagem natural (NLP) sobre histórico de postagens públicas.</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: IA Analytics</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
-                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">ASQ (Sentimento Qualitativo)</h3>
-                    <p class="text-xs text-slate-600">Análise de percepção de marca em comentários e menções nos mercados-alvo internacionais.</p>
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">ASQ (Interesse e Alcance)</h3>
+                    <p class="text-[11px] text-slate-600 mb-2">Estimativa de volume de interesse internacional e capilaridade geográfica.</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Google Trends</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
-                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Disaster Check 8 Anos</h3>
-                    <p class="text-xs text-slate-600">Varredura em acervos jurídicos, mídias digitais e redes sociais (2018-2026) para detecção de riscos.</p>
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Compliance Check</h3>
+                    <p class="text-[11px] text-slate-600 mb-2">Verificação de fatos, incidentes reportados e histórico de parcerias comerciais.</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Google Search</p>
+                </div>
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">VPI (Prestígio Internacional)</h3>
+                    <p class="text-[11px] text-slate-600 mb-2">Consagração pública via prêmios, streaming e idiomas na Wikipedia.</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Spotify, Wiki & Premiações</p>
                 </div>
             </div>
         </section>
@@ -84,12 +94,21 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">1. Tiago Iorc</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Cantor, compositor e produtor vencedor de diversos Grammys Latinos. Expoente da MPB contemporânea com forte apelo no folk e pop acústico, é uma das faces do Brasil moderno e minimalista para o público jovem global.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 5 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 3.1M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 4 Grammys Latinos</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco EUA</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Foco EUA</h3>
                     <div class="chart-container"><canvas id="geoIorc"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
                         <p class="text-xs text-slate-600 leading-relaxed">A base norte-americana (12%) é impulsionada por seu repertório em inglês. Isso permite comunicação direta sem barreiras linguísticas.</p>
                     </div>
                 </div>
@@ -97,21 +116,30 @@
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarIorc"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
                         <p class="text-xs text-slate-600 leading-relaxed">Foco absoluto em Wellness e Reconexão (100%). Sua estética naturalista atende ao público que busca descanso e bem-estar.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Vivo</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Coca-Cola</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Samsung</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">HP</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O criador <strong>não realizou</strong> publicidade para sites de apostas. Seu histórico comercial é focado em marcas de moda sustentável e instrumentos musicais.</p>
-                    <p><strong>Política:</strong> Tiago mantém isolamento total de debates partidários. Sua comunicação foca em música e saúde mental, o que elimina riscos de polarização ideológica.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
+                    <p><strong>Política:</strong> Tiago mantém neutralidade absoluta. Garantindo risco zero de polarização ideológica interna.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Wellness/EUA)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Perfil de risco zero. Perfeito para campanhas de bem-estar na América do Norte sem conflitos de imagem.</p>
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Risco Zero)</h3>
             </div>
         </section>
 
@@ -120,34 +148,52 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">2. Marisa Monte</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Considerada uma das maiores vozes da música brasileira de todos os tempos. Cantora, compositora e integrante dos Tribalistas, possui uma carreira internacional sólida e múltiplos prêmios Grammy, simbolizando a sofisticação cultural brasileira.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 26 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 4.2M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 5 Grammys Latinos</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Itália e França</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Itália e Portugal</h3>
                     <div class="chart-container"><canvas id="geoMarisa"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Concentração internacional qualificada na Itália (8%) e França (4%), atraindo um turista europeu de alto poder aquisitivo.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Forte presença na Itália (8%) e Portugal (7%), atraindo um turista europeu de alto poder aquisitivo.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarMarisa"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Picos em Reconexão Pessoal e Equilíbrio (98%). Transmite a imagem de um Brasil elegante e sofisticado no exterior.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Picos em Reconexão Pessoal e Equilíbrio (98%). Transmite a imagem de um Brasil elegante e sofisticado.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Rolex</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Natura</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Pão de Açúcar</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Devassa</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> A artista <strong>não realizou</strong> publicidade para sites de apostas. Ela possui uma política rígida de seleção de marcas, focada no mercado de luxo.</p>
-                    <p><strong>Política:</strong> Demonstra postura de cidadania em defesa da democracia, sem ligação partidária direta. Sua imagem internacional é blindada contra crises políticas domésticas.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
+                    <p><strong>Política:</strong> Atuação institucional. Defesa de pautas de direitos autorais sem declaração de apoio partidário explícito no último ciclo.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Turismo de Luxo)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Perfil de alta segurança institucional. Ideal para o mercado europeu de alto padrão.</p>
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Risco Zero)</h3>
             </div>
         </section>
 
@@ -156,12 +202,21 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">3. Djavan</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Ícone da música popular brasileira com mais de 40 anos de carreira. Conhecido por fundir ritmos tradicionais brasileiros com jazz, soul e sonoridades africanas, é uma referência técnica mundial e pilar do orgulho cultural negro brasileiro.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 17 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 5.4M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 4 Grammys Latinos</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Ibéria e EUA</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Espanha e Portugal</h3>
                     <div class="chart-container"><canvas id="geoDjavan"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
                         <p class="text-xs text-slate-600 leading-relaxed">Base sólida na Espanha (6%) e Portugal (5%). Nos EUA, sua presença é forte no circuito qualificado de Jazz.</p>
                     </div>
                 </div>
@@ -169,21 +224,30 @@
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarDjavan"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Excelente distribuição em Afroturismo (90%). Representa a profundidade rítmica e cultural da música brasileira contemporânea.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Excelente distribuição em Afroturismo (90%). Representa a profundidade rítmica e cultural brasileira.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Banco do Brasil</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">O Boticário</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Natura</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">UNESCO</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O artista <strong>não realizou</strong> publicidade para sites de apostas. Sua trajetória comercial é restrita a setores tradicionais como bancos e cosméticos.</p>
-                    <p><strong>Política:</strong> Reconhecido pela discrição absoluta. É um perfil que unifica diferentes audiências sem gerar resistências ideológicas ou críticas na contratação pública.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
+                    <p><strong>Política:</strong> Apoio declarado ao governo federal atual no ciclo de 2022. Exige fundamentação técnica de ROI para afastar críticas de favorecimento partidário.</p>
                 </div>
             </div>
-            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Patrimônio Cultural)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Nome de grande prestígio internacional. Risco zero para a marca Embratur.</p>
+            <div class="verdict-banner bg-amber-50 border border-amber-200">
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Aprovado com Ressalva (Risco Médio)</h3>
             </div>
         </section>
 
@@ -192,70 +256,106 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">4. Carlinhos Brown</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Percussionista, compositor, ativista social e Embaixador Ibero-americano da Cultura. Primeiro brasileiro a integrar a Academia de Artes e Ciências Cinematográficas de Hollywood (Oscar), Brown é o maior símbolo da energia rítmica e do impacto social da música baiana.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 18 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 1.1M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: Nomeado ao Oscar | 2 Grammys</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Europa Continental</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Espanha e Alemanha</h3>
                     <div class="chart-container"><canvas id="geoBrown"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Penetração internacional robusta na Europa (15%), com forte reconhecimento na Espanha e Alemanha como símbolo cultural.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Penetração internacional robusta na Europa (15%), sendo visto como símbolo de vanguarda e diversidade.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarBrown"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Líder absoluto em Afroturismo (100%). Sua atuação com a UNESCO confere autoridade técnica ao posicionamento da agência.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Líder absoluto em Afroturismo (100%). Sua atuação com a UNESCO confere autoridade técnica máxima.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Mercedes-Benz</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">TIM</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Natura</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Guaraná Antarctica</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O criador <strong>não realizou</strong> publicidade para sites de apostas. Sua imagem é vinculada a causas sociais e sustentabilidade ambiental.</p>
-                    <p><strong>Política:</strong> Atua como figura de diplomacia cultural. Foca em projetos sociais, mantendo-se distante de militância partidária direta e com excelente trânsito institucional.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
+                    <p><strong>Política:</strong> Participação ativa em campanhas pró-gestão federal atual em 2022. Requer justificativa baseada estritamente em mérito técnico.</p>
                 </div>
             </div>
-            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Sustentabilidade/Afro)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Melhor perfil para posicionar o Brasil como destino sustentável e diverso étnica no exterior.</p>
+            <div class="verdict-banner bg-amber-50 border border-amber-200">
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Aprovado com Ressalva (Risco Médio)</h3>
             </div>
         </section>
 
         <!-- 5. JÚNIOR -->
         <section class="card-audit">
             <div class="section-header">
-                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">5. Júnior</h2>
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">5. Júnior (Leovegildo Lins da Gama Júnior)</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> O "Maestro". Ex-jogador histórico do Flamengo e da Seleção Brasileira (1982), multicampeão e um dos maiores ídolos do futebol italiano (Torino e Pescara). Atual comentarista líder na TV Globo, é sinônimo de credibilidade e estilo de vida saudável na maturidade.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 16 línguas (Wiki)</div>
+                <div class="metric-badge">Contexto: Ídolo Histórico na Itália</div>
+                <div class="metric-badge">Autoridade: Hall da Fama do Futebol</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco Itália</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Itália</h3>
                     <div class="chart-container"><canvas id="geoJunior"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Ídolo eterno na Itália (9%), sustentado pela memória de sua carreira no futebol europeu. Possui alta credibilidade com o público sênior.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Ídolo eterno na Itália (9%), sustentado pela memória afetiva de sua carreira. Alta credibilidade com o público sênior.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarJunior"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Destaque em Wellness e Estilo de Vida Ativo (95%). Reflete a promessa de saúde e lazer para o turista sênior internacional.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Destaque em Wellness e Estilo de Vida Ativo (95%). Reflete saúde e lazer para o turista sênior internacional.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Fiat</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Adidas</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Rexona</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">TV Globo</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O criador <strong>não realizou</strong> contratos diretos para sites de apostas. A exposição à marca Betano é apenas indireta em transmissões da TV Globo.</p>
-                    <p><strong>Política:</strong> Mantém neutralidade total. Como profissional da mídia, segue padrões de isenção que protegem sua imagem contra ataques partidários domésticos.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> contratos diretos para apostas.</p>
+                    <p><strong>Política:</strong> Neutralidade absoluta. Segue padrões de isenção profissional que o protegem contra ruídos partidários.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Itália/Lifestyle)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Perfil sólido e respeitado no mercado italiano com risco de conformidade baixo.</p>
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Risco Baixo)</h3>
             </div>
         </section>
 
@@ -264,34 +364,52 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">6. Samuel Rosa</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Compositor, guitarrista e ex-líder do Skank, uma das bandas de maior sucesso comercial da história do Brasil. Referência do rock e pop nacional, Samuel é uma figura central da cultura urbana brasileira, unindo popularidade com sofisticação intelectual.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 10 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 4.8M Ouvintes Mensais (Skank)</div>
+                <div class="metric-badge">Premiações: 1 Grammy Latino</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Foco Portugal</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Portugal</h3>
                     <div class="chart-container"><canvas id="geoSamuel"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Penetração excepcional em Portugal (12%). É visto como um pilar da música moderna brasileira, atraindo a classe média urbana.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Penetração excepcional em Portugal (12%). Pilar da música moderna brasileira para a classe média urbana lusa.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarSamuel"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Forte em Turismo Urbano e Cultura (85%). Transmite inteligência e sofisticação, ideal para promover a gastronomia mineira.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Forte em Turismo Urbano e Cultura (85%). Ideal para promover destinos históricos e gastronômicos.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Vivo</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Reserva</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Fiat</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Harley-Davidson</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O criador <strong>não realizou</strong> publicidade para sites de apostas. Sua imagem é vinculada a marcas de tecnologia e moda, sem histórico no setor de jogos.</p>
-                    <p><strong>Política:</strong> Formador de opinião moderado. Embora tenha feito críticas cívicas pontuais, não possui filiação partidária. Esse histórico é irrelevante para o mercado estrangeiro.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para sites de apostas.</p>
+                    <p><strong>Política:</strong> Apoio explícito à gestão federal atual em 2022. Mantém alinhamento institucional, exigindo fundamentação técnica para evitar críticas de favorecimento.</p>
                 </div>
             </div>
-            <div class="verdict-banner bg-emerald-50 border border-emerald-200">
-                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito: Recomendado (Portugal/EUA)</h3>
-                <p class="text-sm text-emerald-900 leading-relaxed">Escolha estratégica para exportar a imagem do Brasil urbano e moderno.</p>
+            <div class="verdict-banner bg-amber-50 border border-amber-200">
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Aprovado com Ressalva (Risco Político Médio)</h3>
             </div>
         </section>
 
@@ -300,35 +418,53 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">7. Bebel Gilberto</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Cantora e compositora, filha de João Gilberto. Consolidada como a maior embaixadora da Bossa Nova moderna no mundo, é o rosto e a voz do Brasil sofisticado em circuitos de luxo globais, hotéis-boutique e lounges internacionais.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 19 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 950k Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 3 Nomeações Grammy EUA</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: EUA e Reino Unido</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: EUA e Reino Unido</h3>
                     <div class="chart-container"><canvas id="geoBebel"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Maior audiência internacional relativa (50%). Consolidada como a voz do lounge brasileiro em hotéis e circuitos de luxo globais.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Maior audiência internacional relativa (50%). Voz do Brasil sofisticado em circuitos de alto luxo globais.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarBebel"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Aderência total em Wellness e Relaxamento (95%). Sua música é a trilha sonora global para o lazer de alto padrão.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Aderência total em Wellness e Relaxamento (95%). Trilha sonora ideal para lazer de alto padrão.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">H.Stern</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Osklen</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Caudalie</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">W Hotels</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Contexto do Incidente da Bandeira</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Compliance Legal e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> A artista <strong>não realizou</strong> publicidade para sites de apostas. Seu portfólio comercial foca estritamente no mercado de moda de luxo.</p>
-                    <p><strong>O Incidente:</strong> Em 2022, a artista pisou na bandeira nacional durante um show. Ela justificou o ato como um protesto contra a gestão federal da época (atual oposição). Embora o gesto tenha sido direcionado ao governo anterior, o uso da bandeira gerou forte polêmica interna.</p>
-                    <p><strong>Risco Institucional:</strong> Como a Embratur representa o Estado Brasileiro, a contratação pode ser explorada pela oposição atual como desrespeito a símbolos nacionais (Lei 5.700/71). O risco não é na venda do destino lá fora, mas no desgaste político doméstico.</p>
+                    <p><strong>Apostas (Bets):</strong> A personalidade <strong>não realizou</strong> publicidade para o setor de apostas.</p>
+                    <p><strong>Incidente Político:</strong> Protesto confesso contra a gestão federal anterior (2022) envolvendo o símbolo nacional. Tipificado pela Lei nº 5.700/1971.</p>
+                    <p><strong>Risco:</strong> Pode gerar questionamento de moralidade administrativa e desgaste político doméstico perante o TCU.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-amber-50 border border-amber-200">
-                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Recomendado com Cuidado (Luxo Global)</h3>
-                <p class="text-sm text-amber-900 leading-relaxed">Melhor nome técnico para o público estrangeiro. Exige preparo para gerenciar ataques políticos da oposição interna.</p>
+                <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Recomendado (Risco Médio/Jurídico)</h3>
             </div>
         </section>
 
@@ -337,34 +473,52 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">8. Seu Jorge</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Cantor, compositor e ator de projeção mundial. Conhecido internacionalmente por suas atuações no cinema (Cidade de Deus, The Life Aquatic) e por sua interpretação única do samba-pop e soul, Seu Jorge é um dos artistas brasileiros de maior prestígio nas capitais europeias e norte-americanas.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 22 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 4.6M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 3 Grammys Latinos</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: EUA e França</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: EUA e França</h3>
                     <div class="chart-container"><canvas id="geoSeuJorge"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Audiência internacional qualificada (25%). Sua carreira no cinema global garante trânsito livre entre o público americano e europeu.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Audiência internacional qualificada (25%). Carreira em Hollywood garante trânsito livre nos eixos globais.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarSeuJorge"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Muito forte em Afroturismo e Gastronomia (95%). Representa o Brasil cosmopolita para o turista de alta renda.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Muito forte em Afroturismo e Gastronomia (95%). Representa o Brasil cosmopolita para o turista estrangeiro.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Porsche</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Nespresso</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Havaianas</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Vivo</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O criador <strong>não realizou</strong> publicidade para sites de apostas. Trabalha com marcas premium de café e automobilismo de luxo.</p>
-                    <p><strong>Política:</strong> O apoio declarado ao governo atual em 2022 exige que a Embratur fundamente a contratação com dados de retorno (ROI) para evitar críticas de favorecimento partidário interno.</p>
+                    <p><strong>Apostas:</strong> Não realizou publicidade para o setor.</p>
+                    <p><strong>Política:</strong> Apoio Declarado. Posicionamento explícito pró-gestão federal atual desde 2022. Exige fundamentação técnica de ROI.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-amber-50 border border-amber-200">
                 <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Aprovado com Ressalva (Risco Político Médio)</h3>
-                <p class="text-sm text-amber-900 leading-relaxed">Ativo de alto impacto internacional. Requer fundamentação técnica para diminuir questionamentos governamentais internos.</p>
             </div>
         </section>
 
@@ -373,40 +527,59 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">9. Liniker</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> Cantora, compositora e atriz. Primeira mulher trans brasileira a vencer um Grammy Latino (2022), Liniker é uma voz potente da soul music brasileira e um símbolo global de diversidade, resistência e excelência artística contemporânea.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 9 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 1.2M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 1 Grammy Latino (Melhor Álbum MPB)</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Europa Jovem</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: França e Alemanha</h3>
                     <div class="chart-container"><canvas id="geoLiniker"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Crescimento constante na França e Alemanha (15%). Nome central para o público europeu progressista e de festivais independentes.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Crescimento constante na Europa Progressista (15%). Nome central para o público europeu progressista.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarLiniker"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Referência máxima em Diversidade e Afroturismo (100%). Projeta um Brasil inclusivo para o segmento de turismo LGBTQIA+ internacional.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Referência máxima em Diversidade e Afroturismo (100%). Projeta um Brasil inclusivo internacionalmente.</p>
                     </div>
                 </div>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-1 gap-8 mb-4">
                 <div class="bg-slate-50 p-6 rounded border-l-4 border-embratur-navy">
                     <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Aprofundamento: Diversidade e Representatividade</h4>
                     <p class="text-sm text-slate-700 leading-relaxed">Como mulher trans e negra de projeção internacional, Liniker é a personificação do compromisso do Brasil contemporâneo com a inclusão. Sua presença em campanhas oficiais sinaliza segurança e acolhimento para o mercado LGBTQIA+ global, pilar estratégico para o aumento do ticket médio do turismo receptivo.</p>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">MAC Cosmetics</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Natura</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Vivo</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Absolut Vodka</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Análise de Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> A artista <strong>não realizou</strong> publicidade para sites de apostas. Suas parcerias focam em marcas globais de cosméticos e varejo de moda livre.</p>
-                    <p><strong>Política:</strong> Apoio declarado ao governo atual em 2022. O risco institucional médio decorre do princípio da impessoalidade, exigindo documentação técnica para blindar o contrato contra críticas da oposição.</p>
+                    <p><strong>Apostas:</strong> Não realizou publicidade para o setor.</p>
+                    <p><strong>Política:</strong> Apoio Declarado. Alinhamento explícito com a atual gestão federal. Exige justificativa técnica baseada no pilar de diversidade.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-amber-50 border border-amber-200">
                 <h3 class="text-amber-700 font-black uppercase text-sm mb-2">Veredito: Aprovado com Ressalva (Risco Político Médio)</h3>
-                <p class="text-sm text-amber-900 leading-relaxed">Essencial para a imagem de diversidade no exterior. Requer blindagem técnica da equipe jurídica.</p>
             </div>
         </section>
 
@@ -415,34 +588,52 @@
             <div class="section-header">
                 <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">10. Zeca Pagodinho</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Perfil:</strong> O maior expoente vivo do samba de raiz e do pagode. Zeca é uma das figuras mais carismáticas e unânime da cultura popular brasileira, representando a autenticidade e a alegria do subúrbio carioca, embora sua penetração internacional seja limitada a nichos de expatriados.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-8">
+                <div class="metric-badge">Reconhecimento Global: Artigo em 11 línguas (Wiki)</div>
+                <div class="metric-badge">Spotify: 3.8M Ouvintes Mensais</div>
+                <div class="metric-badge">Premiações: 4 Grammys Latinos</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Segmentação Geográfica: Brasil e Diáspora</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse Geográfico: Diáspora (Portugal/EUA)</h3>
                     <div class="chart-container"><canvas id="geoZeca"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Foco no Brasil (92%). A presença externa limita-se às comunidades brasileiras, sem penetração orgânica em audiências nativas estrangeiras.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Foco no Brasil (92%). A presença externa limita-se às comunidades brasileiras, sem penetração orgânica em audiências nativas.</p>
                     </div>
                 </div>
                 <div>
                     <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência Plano Brasis</h3>
                     <div class="chart-container"><canvas id="radarZeca"></canvas></div>
                     <div class="chart-reading">
-                        <p class="text-xs text-slate-700 font-semibold mb-1 uppercase">Leitura do Gráfico:</p>
-                        <p class="text-xs text-slate-600 leading-relaxed">Conflito com Wellness (50%) devido ao histórico comercial. Forte em Gastronomia Popular, mas desalinhado aos novos eixos estratégicos de saúde.</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Conflito com Wellness (50%) devido ao histórico comercial. Forte em Gastronomia Popular.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="bg-slate-50 p-6 rounded mb-6">
+                <h4 class="font-bold text-xs uppercase text-slate-400 mb-4 tracking-widest">Histórico de Marcas e Parcerias Realizadas</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-slate-700">
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Brahma</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Betano</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Casas Bahia</div>
+                    <div class="border-l-2 border-slate-200 pl-3 uppercase">Claro</div>
+                </div>
+            </div>
+
             <div class="deep-dive-box">
                 <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Conformidade: Apostas e Política</h4>
                 <div class="text-sm text-slate-700 space-y-4">
-                    <p><strong>Apostas (Bets):</strong> O criador <strong>realizou</strong> publicidade direta para a casa de apostas Betano. Essa associação ativa gera conflito de conformidade com as diretrizes institucionais atuais.</p>
-                    <p><strong>Política:</strong> O apoio declarado ao governo atual, somado à publicidade de apostas, eleva o risco de conformidade (compliance) para o nível crítico perante os órgãos de controle externos.</p>
+                    <p><strong>Apostas (Bets):</strong> Realizou publicidade direta para Betano. Impeditivo ético severo.</p>
+                    <p><strong>Política:</strong> Apoio Declarado. O artista manifestou apoio explícito à atual gestão federal durante o último período eleitoral, alinhando sua imagem a pautas do governo.</p>
                 </div>
             </div>
             <div class="verdict-banner bg-red-50 border border-red-200">
                 <h3 class="text-red-700 font-black uppercase text-sm mb-2">Veredito: Não Recomendado (Risco Alto)</h3>
-                <p class="text-sm text-red-900 leading-relaxed">Conflito comercial direto com apostas e risco político elevado inviabilizam a contratação segura pelo Estado.</p>
             </div>
         </section>
 
@@ -451,14 +642,11 @@
             <div class="section-header">
                 <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Resumo de Riscos</h2>
             </div>
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 text-sm text-blue-900">
-                <strong>Nota Metodológica:</strong> Avaliamos o risco para o turista (venda) e institucional (governança). Alinhamentos políticos exigem prova de ROI para afastar acusações de favorecimento partidário.
-            </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                     <thead class="bg-slate-100 text-slate-500 uppercase text-[10px]">
                         <tr>
-                            <th class="p-4 border-b">Classificação</th>
+                            <th class="p-4 border-b">Risco</th>
                             <th class="p-4 border-b">Nome</th>
                             <th class="p-4 border-b">Apostas (Bets)</th>
                             <th class="p-4 border-b">Conduta</th>
@@ -466,28 +654,27 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y text-slate-700">
-                        <tr><td class="p-4 font-bold text-emerald-700">1. Risco Zero</td><td class="p-4">Tiago Iorc</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
-                        <tr><td class="p-4 font-bold text-emerald-700">1. Risco Zero</td><td class="p-4">Marisa Monte</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
-                        <tr><td class="p-4 font-bold text-emerald-700">1. Risco Zero</td><td class="p-4">Djavan</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
-                        <tr><td class="p-4 font-bold text-emerald-700">1. Risco Zero</td><td class="p-4">Carlinhos Brown</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
-                        <tr><td class="p-4 font-bold text-lime-600">2. Risco Baixo</td><td class="p-4">Júnior</td><td class="p-4 text-amber-600 font-bold">Indireto</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
-                        <tr><td class="p-4 font-bold text-lime-600">2. Risco Baixo</td><td class="p-4">Samuel Rosa</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Oposição</td></tr>
-                        <tr><td class="p-4 font-bold text-amber-600">3. Risco Médio</td><td class="p-4">Bebel Gilberto</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4 text-amber-600 font-bold">Bandeira</td><td class="p-4">Não</td></tr>
-                        <tr><td class="p-4 font-bold text-amber-600">3. Risco Médio</td><td class="p-4">Seu Jorge</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio PT</td></tr>
-                        <tr><td class="p-4 font-bold text-amber-600">3. Risco Médio</td><td class="p-4">Liniker</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio PT</td></tr>
-                        <tr><td class="p-4 font-bold text-red-600">4. Risco Alto</td><td class="p-4">Zeca Pagodinho</td><td class="p-4 text-red-600 font-bold">Sim</td><td class="p-4">Não</td><td class="p-4 text-red-600 font-bold">Apoio PT</td></tr>
+                        <tr><td class="p-4 font-bold text-emerald-700">Zero</td><td class="p-4">Tiago Iorc</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
+                        <tr><td class="p-4 font-bold text-emerald-700">Zero</td><td class="p-4">Marisa Monte</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4">Institucional</td></tr>
+                        <tr><td class="p-4 font-bold text-amber-600">Médio</td><td class="p-4">Djavan</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio Governo</td></tr>
+                        <tr><td class="p-4 font-bold text-amber-600">Médio</td><td class="p-4">Carlinhos Brown</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio Governo</td></tr>
+                        <tr><td class="p-4 font-bold text-lime-600">Baixo</td><td class="p-4">Júnior</td><td class="p-4 text-amber-600 font-bold">Indireto</td><td class="p-4">Não</td><td class="p-4">Neutro</td></tr>
+                        <tr><td class="p-4 font-bold text-amber-600">Médio</td><td class="p-4">Samuel Rosa</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio Governo</td></tr>
+                        <tr><td class="p-4 font-bold text-amber-600">Médio/Legal</td><td class="p-4">Bebel Gilberto</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4 text-amber-600 font-bold">Bandeira</td><td class="p-4 text-slate-400">Oposição Anterior</td></tr>
+                        <tr><td class="p-4 font-bold text-amber-600">Médio</td><td class="p-4">Seu Jorge</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio Governo</td></tr>
+                        <tr><td class="p-4 font-bold text-amber-600">Médio</td><td class="p-4">Liniker</td><td class="p-4 text-emerald-600 font-bold">Não</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio Governo</td></tr>
+                        <tr><td class="p-4 font-bold text-red-600">Alto</td><td class="p-4">Zeca Pagodinho</td><td class="p-4 text-red-600 font-bold">Sim</td><td class="p-4">Não</td><td class="p-4 text-amber-600 font-bold">Apoio Governo</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Auditado em 23/03/2026 | Agência Calia | Embratur
+            Auditado em 25/03/2026 | Agência Calia | Embratur
         </footer>
     </div>
 
     <script>
-        /* Senha: embratur2026 — hash SHA-256 em hex abaixo */
         const PASSWORD_SHA256_HEX = 'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5';
 
         async function sha256Hex(text) {
@@ -498,7 +685,7 @@
 
         function initCharts() {
             const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
-            const colors = ['#003366', '#009966', '#FFCC00', '#CC0033', '#cbd5e1'];
+            const colors = ['#252525', '#009966', '#f9a619', '#CC0033', '#cbd5e1'];
 
             const geo = (id, data, labels) => new Chart(document.getElementById(id), {
                 type: 'doughnut',
@@ -508,29 +695,38 @@
 
             const rad = (id, data) => new Chart(document.getElementById(id), {
                 type: 'radar',
-                data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(0, 51, 102, 0.2)', borderColor: '#003366', borderWidth: 2 }] },
+                data: { labels: ['Reconexão Pessoal', 'Afroturismo', 'Turismo Responsável', 'Wellness Lifestyle', 'Equilíbrio'].map(wrap), datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(37, 37, 37, 0.1)', borderColor: '#252525', borderWidth: 2 }] },
                 options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
             });
 
-            geo('geoIorc', [75, 12, 8, 3, 2], ['Brasil', 'EUA', 'Portugal', 'Espanha', 'Outros']);
+            geo('geoIorc', [12, 5, 2, 1, 80], ['EUA', 'Portugal', 'Reino Unido', 'Japão', 'Brasil/Outros']);
             rad('radarIorc', [100, 40, 75, 95, 95]);
-            geo('geoMarisa', [80, 8, 5, 4, 3], ['Brasil', 'Itália', 'Portugal', 'França', 'Outros']);
+
+            geo('geoMarisa', [8, 7, 4, 3, 78], ['Itália', 'Portugal', 'França', 'EUA', 'Brasil/Outros']);
             rad('radarMarisa', [98, 60, 85, 95, 95]);
-            geo('geoDjavan', [82, 6, 5, 4, 3], ['Brasil', 'Espanha', 'Portugal', 'EUA', 'Outros']);
+
+            geo('geoDjavan', [6, 5, 4, 2, 83], ['Espanha', 'Portugal', 'EUA', 'Angola', 'Brasil/Outros']);
             rad('radarDjavan', [85, 90, 80, 80, 85]);
-            geo('geoBrown', [70, 15, 8, 5, 2], ['Brasil', 'Europa', 'EUA', 'Itália', 'Outros']);
+
+            geo('geoBrown', [7, 4, 3, 2, 84], ['Espanha', 'Alemanha', 'França', 'Itália', 'Brasil/Outros']);
             rad('radarBrown', [85, 100, 95, 90, 85]);
-            geo('geoJunior', [84, 9, 3, 2, 2], ['Brasil', 'Itália', 'Portugal', 'EUA', 'Outros']);
+
+            geo('geoJunior', [9.2, 2, 1.5, 1, 86.3], ['Itália', 'Portugal', 'EUA', 'França', 'Brasil/Outros']);
             rad('radarJunior', [95, 88, 78, 92, 90]);
-            geo('geoSamuel', [78, 12, 5, 3, 2], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
+
+            geo('geoSamuel', [12.5, 3, 1.5, 1, 82], ['Portugal', 'EUA', 'Reino Unido', 'Espanha', 'Brasil/Outros']);
             rad('radarSamuel', [75, 60, 85, 80, 88]);
-            geo('geoBebel', [40, 35, 15, 5, 5], ['Brasil', 'EUA', 'UK', 'França', 'Outros']);
+
+            geo('geoBebel', [35, 15, 10, 5, 35], ['EUA', 'Reino Unido', 'França', 'Japão', 'Brasil/Outros']);
             rad('radarBebel', [90, 60, 80, 95, 90]);
-            geo('geoSeuJorge', [75, 10, 8, 5, 2], ['Brasil', 'EUA', 'França', 'Portugal', 'Outros']);
+
+            geo('geoSeuJorge', [15, 8, 5, 2, 70], ['EUA', 'França', 'Portugal', 'Reino Unido', 'Brasil/Outros']);
             rad('radarSeuJorge', [80, 95, 85, 75, 80]);
-            geo('geoLiniker', [85, 5, 4, 3, 3], ['Brasil', 'França', 'Alemanha', 'UK', 'Outros']);
+
+            geo('geoLiniker', [7, 5, 3, 2, 83], ['França', 'Alemanha', 'Reino Unido', 'Espanha', 'Brasil/Outros']);
             rad('radarLiniker', [90, 100, 85, 80, 85]);
-            geo('geoZeca', [92, 4, 3, 1, 0], ['Brasil', 'Portugal', 'EUA', 'Europa', 'Outros']);
+
+            geo('geoZeca', [4, 3, 0.5, 0.5, 92], ['Portugal', 'EUA', 'Angola', 'Paraguai', 'Brasil/Outros']);
             rad('radarZeca', [50, 95, 70, 60, 98]);
         }
 
@@ -539,8 +735,7 @@
             const err = document.getElementById('access-err');
             err.classList.add('hidden');
             const pw = document.getElementById('access-pw').value;
-            const hex = await sha256Hex(pw);
-            if (hex !== PASSWORD_SHA256_HEX) {
+            if ((await sha256Hex(pw)) !== PASSWORD_SHA256_HEX) {
                 err.classList.remove('hidden');
                 return;
             }
