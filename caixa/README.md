@@ -2,7 +2,12 @@
 
 Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/`: arquivos servidos pelo GitHub Pages em:
 
-`https://<usuario>.github.io/<repo>/caixa/<arquivo>.html`
+`https://epieratti.github.io/calia-bi-reports/caixa/<arquivo>.html`
+
+## Dossiê atual (mar/2026)
+
+- **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
+- **Senha no navegador:** `caixa2026` (altere o hash SHA-256 no `<script>` do HTML se mudar a senha).
 
 ## Uso
 
