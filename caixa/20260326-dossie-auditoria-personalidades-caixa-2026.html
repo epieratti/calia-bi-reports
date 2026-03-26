@@ -41,6 +41,11 @@
         .source-tag { font-size: 9px; color: #94a3b8; font-weight: 600; text-transform: uppercase; display: block; margin-top: 4px; }
         .alert-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 4px; padding: 1rem; margin-top: 1rem; }
         .profile-handle { display: inline-block; margin-top: 0.5rem; padding: 0.35rem 0.75rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.02em; color: #252525; background: #f1f5f9; border: 1px solid #cbd5e1; border-left: 3px solid #f9a619; border-radius: 4px; font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace; }
+        .toc-link { font-size: 0.875rem; font-weight: 600; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+        .toc-link:hover { opacity: 0.82; }
+        .toc-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }
+        .toc-list li { margin-top: 0.625rem; }
+        .toc-list li:first-child { margin-top: 0; }
     </style>
 </head>
 <body class="p-4 md:p-12">
@@ -74,46 +79,23 @@
             <div class="space-y-10">
                 <section aria-labelledby="toc-geral">
                     <h3 id="toc-geral" class="mb-3 text-[10px] font-black uppercase tracking-[0.16em] text-slate-400">Geral</h3>
-                    <ul class="space-y-2.5 border-l-2 border-calia-gold pl-4 text-sm">
-                        <li><a class="font-semibold text-calia-navy underline decoration-calia-gold decoration-2 underline-offset-[3px] hover:opacity-80" href="#metodologias">Metodologias e fontes</a></li>
-                        <li><a class="font-semibold text-calia-navy underline decoration-calia-gold decoration-2 underline-offset-[3px] hover:opacity-80" href="#nota-metodologia">Nota de metodologia</a></li>
+                    <ul class="toc-list">
+                        <li><a class="toc-link" href="#metodologias">Metodologias e fontes</a></li>
+                        <li><a class="toc-link" href="#nota-metodologia">Nota de metodologia</a></li>
                     </ul>
                 </section>
                 <section aria-labelledby="toc-perfis">
-                    <h3 id="toc-perfis" class="mb-4 text-[10px] font-black uppercase tracking-[0.16em] text-slate-400">Personalidades</h3>
-                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
-                        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-sm">
-                            <div class="flex gap-3">
-                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-calia-navy text-sm font-black text-calia-gold" aria-hidden="true">1</span>
-                                <div class="min-w-0 flex-1">
-                                    <p class="text-sm font-bold leading-snug text-calia-navy">Lúcio Mauro Filho</p>
-                                    <ul class="mt-3 space-y-2 text-[13px] leading-snug text-slate-600">
-                                        <li><a class="text-calia-navy underline decoration-slate-300 underline-offset-[3px] hover:decoration-calia-gold" href="#perfil-lucio">Perfil, métricas, gráficos e marcas</a></li>
-                                        <li><a class="text-calia-navy underline decoration-slate-300 underline-offset-[3px] hover:decoration-calia-gold" href="#analise-riscos-lucio">Análise de riscos e posicionamento</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-sm">
-                            <div class="flex gap-3">
-                                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-calia-navy text-sm font-black text-calia-gold" aria-hidden="true">2</span>
-                                <div class="min-w-0 flex-1">
-                                    <p class="text-sm font-bold leading-snug text-calia-navy">Alessandra Maestrini</p>
-                                    <ul class="mt-3 space-y-2 text-[13px] leading-snug text-slate-600">
-                                        <li><a class="text-calia-navy underline decoration-slate-300 underline-offset-[3px] hover:decoration-calia-gold" href="#perfil-alessandra">Perfil, métricas, gráficos e marcas</a></li>
-                                        <li><a class="text-calia-navy underline decoration-slate-300 underline-offset-[3px] hover:decoration-calia-gold" href="#analise-riscos-alessandra">Análise de riscos e posicionamento</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 id="toc-perfis" class="mb-3 text-[10px] font-black uppercase tracking-[0.16em] text-slate-400">Personalidades</h3>
+                    <ul class="toc-list">
+                        <li><a class="toc-link" href="#perfil-lucio">1. Lúcio Mauro Filho</a></li>
+                        <li><a class="toc-link" href="#perfil-alessandra">2. Alessandra Maestrini</a></li>
+                    </ul>
                 </section>
                 <section aria-labelledby="toc-fechamento">
                     <h3 id="toc-fechamento" class="mb-3 text-[10px] font-black uppercase tracking-[0.16em] text-slate-400">Encerramento</h3>
-                    <p class="text-sm text-slate-600">
-                        <a class="font-semibold text-calia-navy underline decoration-calia-gold decoration-2 underline-offset-[3px] hover:opacity-80" href="#resumo">Resumo executivo</a>
-                        <span class="text-slate-400"> — tabela comparativa</span>
-                    </p>
+                    <ul class="toc-list">
+                        <li><a class="toc-link" href="#resumo">Resumo executivo</a> <span class="text-sm font-normal text-slate-500">— tabela comparativa</span></li>
+                    </ul>
                 </section>
             </div>
         </nav>
@@ -336,7 +318,7 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260326-caixa-sumario | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260326-caixa-toc-links | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
