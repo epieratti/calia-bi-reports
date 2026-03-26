@@ -1,11 +1,13 @@
 # calia-bi-reports
 
-O dossiê principal fica em **`embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`** (pasta real no repositório).
+O dossiê principal da Embratur fica em **`embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`**. Relatórios da **Caixa** ficam na pasta **`caixa/`** (mesmo padrão; ver `caixa/README.md`).
 
-- **URL direta do dossiê:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html  
+- **URL direta do dossiê Embratur:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html  
+- **Pasta Caixa (exemplo de URL):** `https://epieratti.github.io/calia-bi-reports/caixa/<seu-arquivo>.html` após publicar um HTML em `caixa/`.
 - **URL da raiz do site:** https://epieratti.github.io/calia-bi-reports/ — o arquivo **`index.html`** na raiz redireciona para o mesmo dossiê em `embratur/`.  
 - **Acesso:** o HTML do dossiê inclui **proteção por senha no navegador** (hash SHA-256). A senha usada no projeto é **`embratur2026`** (altere no próprio HTML se precisar).  
-- **Novos relatórios:** adicione mais `.html` em **`embratur/`** conforme necessário (não é obrigatório ter `index.html` dentro de `embratur/`).
+- **Novos relatórios Embratur:** adicione mais `.html` em **`embratur/`** conforme necessário (não é obrigatório ter `index.html` dentro de `embratur/`).
+- **Novos relatórios Caixa:** use a pasta **`caixa/`**.
 
 ## Ativar GitHub Pages (obrigatório para sair do 404)
 
