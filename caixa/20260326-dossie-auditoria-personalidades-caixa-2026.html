@@ -45,6 +45,19 @@
         .toc-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }
         .toc-list li { margin-top: 0.625rem; }
         .toc-list li:first-child { margin-top: 0; }
+        .ig-metrics-block { margin-top: 2.5rem; border-radius: 8px; border: 2px solid #252525; overflow: hidden; box-shadow: 0 6px 20px rgba(37, 37, 37, 0.1); }
+        .ig-metrics-block__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; background: #252525; color: #f9a619; padding: 0.7rem 1.25rem; font-size: 10px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; }
+        .ig-metrics-block__src { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; color: rgba(249, 166, 25, 0.85); text-transform: uppercase; }
+        .ig-metrics-block__body { background: linear-gradient(180deg, #fafafa 0%, #f1f5f9 100%); padding: 1.35rem 1.25rem 1.5rem; }
+        .ig-metrics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+        @media (min-width: 1024px) { .ig-metrics-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; } }
+        .ig-metric-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem 0.85rem 1rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-top: 4px solid #f9a619; min-height: 100%; display: flex; flex-direction: column; justify-content: flex-start; }
+        .ig-metric-card--alert { border-top-color: #CC0033; }
+        .ig-metric-card--positive { border-top-color: #009966; }
+        .ig-metric-card__value { font-size: 1.625rem; font-weight: 900; color: #252525; line-height: 1.05; letter-spacing: -0.03em; }
+        .ig-metric-card__label { font-size: 9px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.5rem; line-height: 1.3; }
+        .ig-metric-card__note { font-size: 11px; color: #64748b; margin-top: 0.45rem; line-height: 1.35; flex-grow: 1; }
+        .ig-metrics-footnote { margin-top: 1rem; padding: 0.75rem 1rem; background: #fff; border: 1px dashed #cbd5e1; border-radius: 6px; font-size: 11px; color: #64748b; line-height: 1.45; }
     </style>
 </head>
 <body class="p-4 md:p-12">
@@ -181,13 +194,36 @@
                 </ul>
             </div>
 
-            <h3 class="font-bold text-calia-navy uppercase text-xs mb-3 mt-10">Métricas Instagram (Social Blade · 26/03/2026)</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700">
-                <ul class="space-y-1">
-                    <li>• Média <strong>2.456</strong> curtidas e <strong>125</strong> comentários por post.</li>
-                    <li>• Ritmo de perda de seguidores <strong>+25,6%</strong> vs. mês anterior (aceleração da queda).</li>
-                    <li>• <strong>15</strong> posts em 14 dias (~1/dia).</li>
-                </ul>
+            <div class="ig-metrics-block">
+                <div class="ig-metrics-block__head">
+                    <span>Métricas Instagram</span>
+                    <span class="ig-metrics-block__src">Social Blade · 26/03/2026</span>
+                </div>
+                <div class="ig-metrics-block__body">
+                    <div class="ig-metrics-grid">
+                        <div class="ig-metric-card">
+                            <div class="ig-metric-card__value">2.456</div>
+                            <div class="ig-metric-card__label">Curtidas médias · por post</div>
+                            <p class="ig-metric-card__note">Interação média por publicação no recorte do painel.</p>
+                        </div>
+                        <div class="ig-metric-card">
+                            <div class="ig-metric-card__value">125</div>
+                            <div class="ig-metric-card__label">Comentários médios · por post</div>
+                            <p class="ig-metric-card__note">Conversa além da curtida — útil para “quente” do perfil.</p>
+                        </div>
+                        <div class="ig-metric-card ig-metric-card--positive">
+                            <div class="ig-metric-card__value">15</div>
+                            <div class="ig-metric-card__label">Posts em 14 dias</div>
+                            <p class="ig-metric-card__note">Ritmo ~<strong>1 por dia</strong> — presença constante no feed.</p>
+                        </div>
+                        <div class="ig-metric-card ig-metric-card--alert">
+                            <div class="ig-metric-card__value">+25,6%</div>
+                            <div class="ig-metric-card__label">Aceleração da queda · vs. mês anterior</div>
+                            <p class="ig-metric-card__note">No período: <strong>−1.285</strong> seguidores em 30 dias. Base enorme, mas vale monitorar.</p>
+                        </div>
+                    </div>
+                    <p class="ig-metrics-footnote">Números públicos agregados (ordem de grandeza). Para idade, sexo e cidades dos seguidores, ver nota de metodologia e relatório do próprio Instagram, se disponível.</p>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10">
@@ -271,12 +307,37 @@
                 </ul>
             </div>
 
-            <h3 class="font-bold text-calia-navy uppercase text-xs mb-3">Métricas Instagram (Social Blade · 26/03/2026)</h3>
-            <ul class="text-sm text-slate-700 space-y-1 mb-8">
-                <li>• Média <strong>3.863</strong> curtidas por post — <strong>acima</strong> de Lúcio em volume absoluto de curtidas apesar da base menor.</li>
-                <li>• Crescimento mensal com ritmo <strong>+48,2%</strong> vs. mês anterior.</li>
-                <li>• <strong>8</strong> posts em 14 dias.</li>
-            </ul>
+            <div class="ig-metrics-block">
+                <div class="ig-metrics-block__head">
+                    <span>Métricas Instagram</span>
+                    <span class="ig-metrics-block__src">Social Blade · 26/03/2026</span>
+                </div>
+                <div class="ig-metrics-block__body">
+                    <div class="ig-metrics-grid">
+                        <div class="ig-metric-card ig-metric-card--positive">
+                            <div class="ig-metric-card__value">3.863</div>
+                            <div class="ig-metric-card__label">Curtidas médias · por post</div>
+                            <p class="ig-metric-card__note"><strong>Acima</strong> de Lúcio em volume absoluto de curtidas, com base <strong>menor</strong> — engajamento proporcional mais forte.</p>
+                        </div>
+                        <div class="ig-metric-card ig-metric-card--positive">
+                            <div class="ig-metric-card__value">+48,2%</div>
+                            <div class="ig-metric-card__label">Ritmo de crescimento · vs. mês anterior</div>
+                            <p class="ig-metric-card__note">Tração recente acelerada no recorte do painel.</p>
+                        </div>
+                        <div class="ig-metric-card">
+                            <div class="ig-metric-card__value">8</div>
+                            <div class="ig-metric-card__label">Posts em 14 dias</div>
+                            <p class="ig-metric-card__note">Frequência menor que Lúcio, com resposta proporcionalmente maior por post.</p>
+                        </div>
+                        <div class="ig-metric-card ig-metric-card--positive">
+                            <div class="ig-metric-card__value">+7.918</div>
+                            <div class="ig-metric-card__label">Seguidores · 30 dias</div>
+                            <p class="ig-metric-card__note">Base ~<strong>398 mil</strong> — cresce enquanto a do Lúcio cai no mesmo tipo de recorte.</p>
+                        </div>
+                    </div>
+                    <p class="ig-metrics-footnote">Números públicos agregados. Demografia fina do público depende do relatório nativo do Instagram, se a assessoria compartilhar.</p>
+                </div>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
@@ -369,7 +430,7 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260327-caixa-preliminar-claro | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260327-caixa-metricas-ig | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
