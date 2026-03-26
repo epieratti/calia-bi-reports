@@ -7,7 +7,7 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 ## Dossiê atual (mar/2026)
 
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
-- **Senha no navegador:** `caixa2026` (altere o hash SHA-256 no `<script>` do HTML se mudar a senha).
+- **Senha no navegador:** `caixa2026` (sem espaços; sensível a maiúsculas/minúsculas). O HTML também aceita `embratur2026` como alias, caso alguém use a senha do outro dossiê por engano. Para mudar as senhas, atualize o array `PASSWORD_SHA256_HEX_SET` no `<script>`.
 
 ## Uso
 

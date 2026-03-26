@@ -49,7 +49,7 @@
             <form id="access-form" class="space-y-3">
                 <label class="sr-only" for="access-pw">Senha</label>
                 <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy" placeholder="Senha">
-                <p id="access-err" class="hidden text-sm font-medium text-red-600">Senha incorreta.</p>
+                <p id="access-err" class="hidden text-sm font-medium text-red-600"></p>
                 <button type="submit" class="w-full rounded bg-calia-gold py-2.5 text-sm font-bold uppercase tracking-wide text-calia-navy hover:opacity-90">Entrar</button>
             </form>
             <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor.</p>
@@ -289,12 +289,16 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260326-caixa-handles | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260326-caixa-senha | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
     <script>
-        const PASSWORD_SHA256_HEX = '992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b';
+        /** SHA-256 de senhas aceitas (trim aplicado antes do hash): caixa2026 · embratur2026 (alias por compatibilidade) */
+        const PASSWORD_SHA256_HEX_SET = new Set([
+            '992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b',
+            'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5'
+        ]);
 
         async function sha256Hex(text) {
             const buf = new TextEncoder().encode(text);
@@ -337,8 +341,20 @@
             e.preventDefault();
             const err = document.getElementById('access-err');
             err.classList.add('hidden');
-            const pw = document.getElementById('access-pw').value;
-            if ((await sha256Hex(pw)) !== PASSWORD_SHA256_HEX) {
+            err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha do dossiê CAIXA é sensível a maiúsculas/minúsculas.';
+            if (!globalThis.crypto?.subtle) {
+                err.textContent = 'Validação indisponível: abra a página em HTTPS (GitHub Pages) ou em contexto seguro; em arquivo local o navegador pode bloquear crypto.subtle.';
+                err.classList.remove('hidden');
+                return;
+            }
+            const pw = document.getElementById('access-pw').value.trim();
+            try {
+                if (!PASSWORD_SHA256_HEX_SET.has(await sha256Hex(pw))) {
+                    err.classList.remove('hidden');
+                    return;
+                }
+            } catch {
+                err.textContent = 'Não foi possível validar a senha neste ambiente. Tente outro navegador ou a URL publicada no GitHub Pages.';
                 err.classList.remove('hidden');
                 return;
             }
