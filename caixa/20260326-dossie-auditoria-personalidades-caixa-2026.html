@@ -14,11 +14,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'caixa-blue': '#005CA9',
-                        'caixa-gold': '#ffcb08',
-                        'caixa-navy': '#003366',
-                        'caixa-emerald': '#009966',
-                        'caixa-slate': '#f8fafc'
+                        'embratur-navy': '#252525',
+                        'embratur-gold': '#f9a619',
+                        'embratur-emerald': '#009966',
+                        'embratur-crimson': '#CC0033',
+                        'embratur-slate': '#f8fafc'
                     }
                 }
             }
@@ -29,27 +29,27 @@
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
         .chart-container { position: relative; width: 100%; height: 300px; margin: auto; }
         .card-audit { background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); page-break-after: always; }
-        .section-header { border-left: 6px solid #005CA9; padding-left: 1.5rem; margin-bottom: 2rem; }
+        .section-header { border-left: 6px solid #252525; padding-left: 1.5rem; margin-bottom: 2rem; }
         .verdict-banner { border-radius: 4px; padding: 1.5rem; margin-top: 2rem; }
-        .deep-dive-box { background-color: #f1f5f9; border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #005CA9; }
+        .deep-dive-box { background-color: #f1f5f9; border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #252525; }
         .chart-reading { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-top: 1rem; border-radius: 4px; }
-        .bio-intro { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1.5rem; border-radius: 4px; border-left: 4px solid #ffcb08; }
-        .metric-badge { background: #005CA9; color: white; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .bio-intro { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1.5rem; border-radius: 4px; border-left: 4px solid #f9a619; }
+        .metric-badge { background: #252525; color: white; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
         .source-tag { font-size: 9px; color: #94a3b8; font-weight: 600; text-transform: uppercase; display: block; margin-top: 4px; }
         .alert-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 4px; padding: 1rem; margin-top: 1rem; }
     </style>
 </head>
 <body class="p-4 md:p-12">
 
-    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#003366] p-4">
-        <div class="w-full max-w-sm rounded border border-slate-500 bg-white p-8 shadow-2xl">
-            <p class="text-xs font-bold uppercase tracking-wider text-caixa-navy mb-1">Acesso restrito</p>
+    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-embratur-navy mb-1">Acesso restrito</p>
             <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o dossiê CAIXA.</p>
             <form id="access-form" class="space-y-3">
                 <label class="sr-only" for="access-pw">Senha</label>
-                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-caixa-blue focus:outline-none focus:ring-1 focus:ring-caixa-blue" placeholder="Senha">
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-embratur-navy focus:outline-none focus:ring-1 focus:ring-embratur-navy" placeholder="Senha">
                 <p id="access-err" class="hidden text-sm font-medium text-red-600">Senha incorreta.</p>
-                <button type="submit" class="w-full rounded bg-caixa-gold py-2.5 text-sm font-bold uppercase tracking-wide text-caixa-navy hover:opacity-90">Entrar</button>
+                <button type="submit" class="w-full rounded bg-embratur-gold py-2.5 text-sm font-bold uppercase tracking-wide text-embratur-navy hover:opacity-90">Entrar</button>
             </form>
             <p class="mt-4 text-[10px] leading-relaxed text-slate-400">Proteção apenas no navegador; não substitui controle de acesso em servidor.</p>
         </div>
@@ -57,57 +57,57 @@
 
     <div id="dossier-root" class="hidden max-w-6xl mx-auto space-y-16">
 
-        <header id="topo" class="bg-caixa-blue text-white p-10 rounded shadow-lg">
-            <p class="text-caixa-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+        <header id="topo" class="bg-embratur-navy text-white p-10 rounded shadow-lg">
+            <p class="text-embratur-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
             <h1 class="text-4xl font-black mt-2 tracking-normal uppercase">Dossiê de Auditoria: Personalidades</h1>
             <p class="text-sm opacity-90 mt-1 font-medium italic">Curadoria para campanha institucional | Março 2026</p>
         </header>
 
         <nav class="card-audit py-6" aria-label="Sumário">
             <div class="section-header mb-4">
-                <h2 class="text-lg font-black text-caixa-navy uppercase tracking-tight">Neste dossiê</h2>
+                <h2 class="text-lg font-black text-embratur-navy uppercase tracking-tight">Neste dossiê</h2>
             </div>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1 text-sm text-slate-700">
-                <li><a class="text-caixa-blue underline font-semibold" href="#metodologias">Metodologias e fontes</a></li>
-                <li><a class="text-caixa-blue underline font-semibold" href="#nota-metodologia">Nota de metodologia</a></li>
+                <li><a class="text-embratur-navy underline font-semibold" href="#metodologias">Metodologias e fontes</a></li>
+                <li><a class="text-embratur-navy underline font-semibold" href="#nota-metodologia">Nota de metodologia</a></li>
                 <li><a class="underline" href="#perfil-lucio">1. Lúcio Mauro Filho</a></li>
                 <li><a class="underline" href="#perfil-alessandra">2. Alessandra Maestrini</a></li>
-                <li><a class="text-caixa-blue underline font-semibold" href="#analise-riscos">Análise de riscos e viabilidade</a></li>
-                <li><a class="text-caixa-blue underline font-semibold" href="#resumo">Resumo executivo</a></li>
+                <li><a class="text-embratur-navy underline font-semibold" href="#analise-riscos">Análise de riscos e viabilidade</a></li>
+                <li><a class="text-embratur-navy underline font-semibold" href="#resumo">Resumo executivo</a></li>
             </ul>
         </nav>
 
         <section id="metodologias" class="card-audit">
             <div class="section-header">
-                <h2 class="text-2xl font-black text-caixa-navy uppercase tracking-tight">Metodologias e Fontes</h2>
+                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Metodologias e Fontes</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-4 bg-slate-50 border-t-2 border-caixa-blue">
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Redes sociais (IG)</h3>
                     <p class="text-[11px] text-slate-600 mb-2">Seguidores, engajamento, variação mensal e frequência de publicação consolidados em painel de terceiros.</p>
-                    <p class="text-[9px] text-caixa-navy font-bold uppercase italic">Fonte: Social Blade · snapshot 26/03/2026</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Social Blade · snapshot 26/03/2026</p>
                 </div>
-                <div class="p-4 bg-slate-50 border-t-2 border-caixa-blue">
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Interesse regional (ASQ)</h3>
                     <p class="text-[11px] text-slate-600 mb-2">Índice relativo de interesse de busca por unidade da federação (Google Trends, janela mar/2025–mar/2026).</p>
-                    <p class="text-[9px] text-caixa-navy font-bold uppercase italic">Fonte: Google Trends</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: Google Trends</p>
                 </div>
-                <div class="p-4 bg-slate-50 border-t-2 border-caixa-blue">
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Marcas e mídia</h3>
                     <p class="text-[11px] text-slate-600 mb-2">Histórico declarado de campanhas e patrocínios veiculados em mídia e releases públicos.</p>
-                    <p class="text-[9px] text-caixa-navy font-bold uppercase italic">Fonte: veículos e peças públicas</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: veículos e peças públicas</p>
                 </div>
-                <div class="p-4 bg-slate-50 border-t-2 border-caixa-blue">
+                <div class="p-4 bg-slate-50 border-t-2 border-embratur-navy">
                     <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Compliance narrativo</h3>
                     <p class="text-[11px] text-slate-600 mb-2">Checagem de exposição a apostas, saúde/reputação e posicionamento político declarado em entrevistas.</p>
-                    <p class="text-[9px] text-caixa-navy font-bold uppercase italic">Fonte: imprensa e perfis oficiais</p>
+                    <p class="text-[9px] text-embratur-navy font-bold uppercase italic">Fonte: imprensa e perfis oficiais</p>
                 </div>
             </div>
         </section>
 
         <section id="nota-metodologia" class="card-audit bg-slate-50 border-dashed border-2 border-slate-300">
             <div class="section-header">
-                <h2 class="text-xl font-black text-caixa-navy uppercase tracking-tight">Nota de Metodologia</h2>
+                <h2 class="text-xl font-black text-embratur-navy uppercase tracking-tight">Nota de Metodologia</h2>
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">
                 Os gráficos de <strong>interesse regional</strong> normalizam os índices do Google Trends para somar 100% no recorte exibido, permitindo comparar <strong>peso relativo</strong> entre estados — não volume absoluto de buscas.
@@ -119,7 +119,7 @@
         <!-- 1. LÚCIO MAURO FILHO -->
         <section id="perfil-lucio" class="card-audit">
             <div class="section-header">
-                <h2 class="text-3xl font-black text-caixa-navy uppercase tracking-tight">1. Lúcio Mauro Filho</h2>
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">1. Lúcio Mauro Filho</h2>
                 <p class="text-xs text-slate-500 font-mono mt-1">@luciomaurofilhooficial</p>
             </div>
             <div class="bio-intro">
@@ -135,7 +135,7 @@
             </div>
 
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-caixa-navy mb-3">Saúde e fatos recentes</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Saúde e fatos recentes</h4>
                 <ul class="text-sm text-slate-700 space-y-2 list-disc list-inside">
                     <li><strong>Esgotamento (2024/2025):</strong> alerta por excesso de trabalho; priorização de bem-estar e descanso em 2025.</li>
                     <li><strong>Acidente (fev/2026):</strong> fratura no pé — afastamento temporário de teatro e TV.</li>
@@ -147,7 +147,7 @@
                 <p class="text-xs text-amber-900"><strong>Leitura de risco:</strong> episódios de saúde e ausência pontual de telão exigem <strong>cláusula de agenda</strong> e plano B de mídia na campanha; não afetam, por si só, imagem ética.</p>
             </div>
 
-            <h3 class="font-bold text-caixa-navy uppercase text-xs mb-3 mt-10">Métricas Instagram (Social Blade · 26/03/2026)</h3>
+            <h3 class="font-bold text-embratur-navy uppercase text-xs mb-3 mt-10">Métricas Instagram (Social Blade · 26/03/2026)</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700">
                 <ul class="space-y-1">
                     <li>• Média <strong>2.456</strong> curtidas e <strong>125</strong> comentários por post.</li>
@@ -158,7 +158,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10">
                 <div>
-                    <h3 class="font-bold text-caixa-navy uppercase text-xs mb-4">Interesse regional (Google Trends)</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse regional (Google Trends)</h3>
                     <p class="text-[11px] text-slate-500 mb-2">Mar/2025 a mar/2026 · índices relativos por UF</p>
                     <div class="chart-container"><canvas id="geoLucio"></canvas></div>
                     <span class="source-tag">Base: Google Trends (normalizado para soma 100% no gráfico)</span>
@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="font-bold text-caixa-navy uppercase text-xs mb-4">Aderência narrativa CAIXA (modelo interno)</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência narrativa CAIXA (modelo interno)</h3>
                     <div class="chart-container"><canvas id="radarLucio"></canvas></div>
                     <span class="source-tag">Dimensões qualitativas + métricas públicas</span>
                     <div class="chart-reading">
@@ -177,7 +177,7 @@
             </div>
 
             <div class="deep-dive-box mt-8">
-                <h4 class="font-bold text-xs uppercase text-caixa-navy mb-3">Histórico com marcas (público)</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Histórico com marcas (público)</h4>
                 <ul class="text-sm text-slate-700 space-y-2">
                     <li><strong>Brilux</strong> (2025/2026) — embaixador.</li>
                     <li><strong>Tele Sena</strong> — campanhas nacionais recorrentes.</li>
@@ -190,7 +190,7 @@
         <!-- 2. ALESSANDRA MAESTRINI -->
         <section id="perfil-alessandra" class="card-audit">
             <div class="section-header">
-                <h2 class="text-3xl font-black text-caixa-navy uppercase tracking-tight">2. Alessandra Maestrini</h2>
+                <h2 class="text-3xl font-black text-embratur-navy uppercase tracking-tight">2. Alessandra Maestrini</h2>
                 <p class="text-xs text-slate-500 font-mono mt-1">@alessandramaestrini</p>
             </div>
             <div class="bio-intro">
@@ -205,7 +205,7 @@
                 <div class="metric-badge">Δ 30d: +7.918 seguidores</div>
             </div>
 
-            <h3 class="font-bold text-caixa-navy uppercase text-xs mb-3">Métricas Instagram (Social Blade · 26/03/2026)</h3>
+            <h3 class="font-bold text-embratur-navy uppercase text-xs mb-3">Métricas Instagram (Social Blade · 26/03/2026)</h3>
             <ul class="text-sm text-slate-700 space-y-1 mb-8">
                 <li>• Média <strong>3.863</strong> curtidas por post — <strong>acima</strong> de Lúcio em volume absoluto de curtidas apesar da base menor.</li>
                 <li>• Crescimento mensal com ritmo <strong>+48,2%</strong> vs. mês anterior.</li>
@@ -214,7 +214,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                 <div>
-                    <h3 class="font-bold text-caixa-navy uppercase text-xs mb-4">Interesse regional (Google Trends)</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Interesse regional (Google Trends)</h3>
                     <p class="text-[11px] text-slate-500 mb-2">Mar/2025 a mar/2026</p>
                     <div class="chart-container"><canvas id="geoAlessandra"></canvas></div>
                     <span class="source-tag">Base: Google Trends (normalizado para soma 100% no gráfico)</span>
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="font-bold text-caixa-navy uppercase text-xs mb-4">Aderência narrativa CAIXA (modelo interno)</h3>
+                    <h3 class="font-bold text-embratur-navy uppercase text-xs mb-4">Aderência narrativa CAIXA (modelo interno)</h3>
                     <div class="chart-container"><canvas id="radarAlessandra"></canvas></div>
                     <span class="source-tag">Dimensões qualitativas + métricas públicas</span>
                     <div class="chart-reading">
@@ -233,7 +233,7 @@
             </div>
 
             <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-caixa-navy mb-3">Histórico com marcas (público)</h4>
+                <h4 class="font-bold text-xs uppercase text-embratur-navy mb-3">Histórico com marcas (público)</h4>
                 <ul class="text-sm text-slate-700 space-y-2">
                     <li><strong>Atlas Eletrodomésticos</strong> — linha branca (fogões, fornos).</li>
                     <li><strong>Campanha Mulher Coração</strong> — saúde cardiovascular.</li>
@@ -245,7 +245,7 @@
         <!-- ANÁLISE -->
         <section id="analise-riscos" class="card-audit">
             <div class="section-header">
-                <h2 class="text-2xl font-black text-caixa-navy uppercase tracking-tight">Análise de riscos e posicionamento</h2>
+                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Análise de riscos e posicionamento</h2>
             </div>
             <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
                 <p><strong>Apostas (bets):</strong> Nenhum dos dois possui vínculo público com casas de apostas ou jogos de azar.</p>
@@ -257,7 +257,7 @@
 
         <section id="resumo" class="card-audit">
             <div class="section-header">
-                <h2 class="text-2xl font-black text-caixa-navy uppercase tracking-tight">Resumo executivo</h2>
+                <h2 class="text-2xl font-black text-embratur-navy uppercase tracking-tight">Resumo executivo</h2>
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
@@ -279,13 +279,13 @@
                 </table>
             </div>
             <div class="verdict-banner bg-emerald-50 border border-emerald-200 mt-8">
-                <h3 class="text-caixa-emerald font-black uppercase text-sm mb-2">Veredito preliminar</h3>
+                <h3 class="text-embratur-emerald font-black uppercase text-sm mb-2">Veredito preliminar</h3>
                 <p class="text-sm text-emerald-900 leading-relaxed">Dupla <strong>tecnicamente viável</strong> para narrativa institucional da CAIXA no eixo família, cultura popular e capilaridade. Recomenda-se <strong>due diligence jurídica</strong> de contratos e <strong>gestão de agenda</strong> (Lúcio) + <strong>Q&amp;A de mídia</strong> preparado para tema político (Alessandra).</p>
             </div>
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260326-caixa-v1 | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260326-caixa-calianavy | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
@@ -300,14 +300,15 @@
 
         function initCharts() {
             const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
-            const colors = ['#005CA9', '#ffcb08', '#003366', '#009966', '#94a3b8', '#cbd5e1'];
+            const baseColors = ['#f9a619', '#009966', '#252525', '#CC0033'];
 
             const geo = (id, raw, labels) => {
                 const sum = raw.reduce((a, b) => a + b, 0);
                 const data = raw.map((v) => Math.round((v / sum) * 1000) / 10);
+                const backgroundColor = data.map((_, i) => baseColors[i % baseColors.length]);
                 return new Chart(document.getElementById(id), {
                     type: 'doughnut',
-                    data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor: colors, borderWidth: 0 }] },
+                    data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor, borderWidth: 0 }] },
                     options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10, weight: 'bold' } } } }, cutout: '65%' }
                 });
             };
@@ -316,7 +317,7 @@
                 type: 'radar',
                 data: {
                     labels: ['Alcance digital', 'Engajamento', 'Tom familiar', 'Capilaridade BR', 'Baixo risco reputacional'].map(wrap),
-                    datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(0, 92, 169, 0.15)', borderColor: '#005CA9', borderWidth: 2 }]
+                    datasets: [{ label: 'Aderência (%)', data, backgroundColor: 'rgba(249, 166, 25, 0.2)', borderColor: '#f9a619', borderWidth: 2 }]
                 },
                 options: { responsive: true, maintainAspectRatio: false, scales: { r: { beginAtZero: true, max: 100, ticks: { display: false } } }, plugins: { legend: { display: false } } }
             });
