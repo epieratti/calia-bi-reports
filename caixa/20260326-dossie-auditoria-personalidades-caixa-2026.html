@@ -65,7 +65,7 @@
     <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
         <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
             <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
-            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o dossiê CAIXA.</p>
+            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
             <form id="access-form" class="space-y-3">
                 <label class="sr-only" for="access-pw">Senha</label>
                 <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy" placeholder="Senha">
@@ -74,6 +74,7 @@
                     <button type="submit" class="w-full rounded-md bg-calia-gold py-3.5 text-sm font-black uppercase tracking-widest text-calia-navy shadow-md shadow-black/15 ring-1 ring-black/5 transition hover:brightness-105 active:brightness-95">Entrar</button>
                 </div>
             </form>
+            <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Agência Calia | Unidade de BI — Cliente CAIXA</p>
         </div>
     </div>
 
@@ -416,7 +417,7 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260327-caixa-gate-botao | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260327-caixa-gate-rodape | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
@@ -469,7 +470,7 @@
             e.preventDefault();
             const err = document.getElementById('access-err');
             err.classList.add('hidden');
-            err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha do dossiê CAIXA é sensível a maiúsculas/minúsculas.';
+            err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha é sensível a maiúsculas/minúsculas.';
             if (!globalThis.crypto?.subtle) {
                 err.textContent = 'Validação indisponível: abra a página em HTTPS (GitHub Pages) ou em contexto seguro; em arquivo local o navegador pode bloquear crypto.subtle.';
                 err.classList.remove('hidden');
