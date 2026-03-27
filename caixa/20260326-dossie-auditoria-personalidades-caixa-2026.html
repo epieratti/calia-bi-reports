@@ -415,7 +415,7 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260327-caixa-resumo-passo | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260327-caixa-rosca-cores | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
@@ -434,12 +434,13 @@
 
         function initCharts() {
             const wrap = (t) => t.length <= 16 ? t : t.split(' ').reduce((a, b) => (a[a.length-1].length + b.length > 16 ? a.push(b) : a[a.length-1] += ' ' + b, a), ['']).filter(x => x);
-            const baseColors = ['#f9a619', '#009966', '#252525', '#CC0033'];
+            /* Uma cor por fatia — gráfico do Lúcio tem 6 UFs; com 4 cores o % repetia dourado e verde */
+            const doughnutColors = ['#f9a619', '#009966', '#252525', '#CC0033', '#0ea5e9', '#94a3b8'];
 
             const geo = (id, raw, labels) => {
                 const sum = raw.reduce((a, b) => a + b, 0);
                 const data = raw.map((v) => Math.round((v / sum) * 1000) / 10);
-                const backgroundColor = data.map((_, i) => baseColors[i % baseColors.length]);
+                const backgroundColor = data.map((_, i) => doughnutColors[i % doughnutColors.length]);
                 return new Chart(document.getElementById(id), {
                     type: 'doughnut',
                     data: { labels: labels.map(wrap), datasets: [{ data, backgroundColor, borderWidth: 0 }] },
