@@ -6,6 +6,7 @@ Uso:
   python scripts/run_pipeline.py
 
 Requer APIFY_TOKEN no ambiente para Instagram/TikTok/X. YouTube funciona sem Apify.
+Wikipedia, Google News (RSS) e DuckDuckGo não exigem token.
 """
 from __future__ import annotations
 
@@ -25,7 +26,8 @@ def run_step(name: str, args: list[str]) -> None:
 
 
 def main() -> None:
-    run_step("Coleta", [str(SCRIPTS / "collect.py")])
+    run_step("Coleta redes sociais", [str(SCRIPTS / "collect.py")])
+    run_step("Coleta web aberta (Wikipedia, notícias, busca)", [str(SCRIPTS / "collect_open_web.py")])
     run_step("Classificação", [str(SCRIPTS / "classify.py")])
     run_step("Agregação por perfil", [str(SCRIPTS / "aggregate_profiles.py")])
     run_step("Relatório HTML", [str(SCRIPTS / "report_html.py")])

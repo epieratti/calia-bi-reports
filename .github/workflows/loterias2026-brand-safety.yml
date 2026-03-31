@@ -26,7 +26,7 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt
 
-      - name: Pipeline (coleta + classificação + HTML)
+      - name: Pipeline (redes + Wikipedia/notícias/busca + classificação + HTML)
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}

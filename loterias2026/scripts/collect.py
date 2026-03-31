@@ -6,6 +6,8 @@ Coleta inicial para Brand Safety — Always ON Loterias 2026.
 - Instagram / TikTok / X: chamadas opcionais à API Apify (APIFY_TOKEN + IDs dos Actors).
 - X alternativo: API oficial v2 com TWITTER_BEARER_TOKEN (limitado por plano).
 
+Fontes abertas adicionais: rode `collect_open_web.py` (Wikipedia PT, Google Notícias RSS, DuckDuckGo).
+
 Saída: data/raw/*.jsonl (um arquivo por plataforma), linhas JSON por post.
 """
 from __future__ import annotations

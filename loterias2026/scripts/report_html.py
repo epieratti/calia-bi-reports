@@ -121,7 +121,7 @@ def main() -> None:
       <p class="text-amber-400 text-xs font-bold uppercase tracking-widest">Brand Safety · Auditoria de conteúdo</p>
       <h1 class="text-3xl font-black mt-2 uppercase tracking-tight">{campaign}</h1>
       <p class="text-sm opacity-90 mt-2">Critérios: concorrência (loterias/apostas), polêmicas, política — classificação heurística por palavras-chave. Revisão humana recomendada.</p>
-      <p class="text-xs opacity-70 mt-4">Gerado em {esc(generated)} · Fontes: Instagram, TikTok, YouTube, X (quando token Apify disponível)</p>
+      <p class="text-xs opacity-70 mt-4">Gerado em {esc(generated)} · Fontes: Instagram, TikTok, YouTube, X (Apify), Wikipedia (API), Google Notícias (RSS), busca web (DuckDuckGo)</p>
     </header>
     {note_block}
     <section class="card mb-10">
