@@ -8,6 +8,18 @@
 
 ---
 
+## Critérios de análise e redes (padrão — todos os perfis)
+
+**Critérios exigidos (avaliar em cada nome):**
+
+1. **Concorrência:** trabalhos atuais ou anteriores com **marcas concorrentes** — outras loterias, casas de apostas (bets), cassinos online, jogos de azar.
+2. **Polêmicas:** falas, atitudes ou envolvimento em **situações delicadas e polêmicas** (risco de imagem para anunciante público/institucional).
+3. **Política:** **posicionamento político** declarado ou inferido (publicações recorrentes, pautas políticas sensíveis).
+
+**Redes de ativação foco:** Instagram · TikTok · YouTube · X — handles canônicos em `loterias2026/data/influencers.yaml`. Cada seção abaixo repete a tabela de redes do perfil e encerra com **Achados objetivos** nos três eixos.
+
+---
+
 ## Validação — hipóteses vindas de IA (Perplexity) vs. busca web
 
 Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`curl` + `rg`); `site:reddit.com` sem thread estável para Gratta.
@@ -78,6 +90,22 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 ## 1. Giovanna Pitel (`@pitelgiovanna`)
 
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `pitelgiovanna` |
+| TikTok | `pitelgiovanna` |
+| YouTube | `@pitelgiovanna` |
+| X | `pitelgiovanna` |
+
+**Nota:** matéria Terra incorpora vídeo do TikTok `@giovannapiteloficial` — cruzar com o handle do squad se for o mesmo criador.
+
+### Fontes coletadas (web aberta)
+
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil / carreira | O Tempo (BBB / participante) | https://aem-stage.otempo.com.br/entretenimento/realities/bbb/2025/participantes/giovanna-pitel | Contexto biográfico; verificar URL estável (stage). |
@@ -131,6 +159,20 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 ## 2. Rafael Gratta (`@rafaelgratta`)
 
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `rafaelgratta` |
+| TikTok | `rafaelgratta` |
+| YouTube | `@rafaelgratta` |
+| X | `rafaelgratta` |
+
+### Fontes coletadas (web aberta)
+
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil (saúde mental) | Notícias Fit | https://noticiasfit.com.br/rafael-gratta-o-influenciador-que-faz-a-diferenca-na-saude-mental/ | Tom promocional; usar como pista, não como prova única. |
@@ -175,6 +217,20 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 ## 3. Índio Behn (`@indio.behn`)
 
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `indio.behn` |
+| TikTok | `indio.behn` |
+| YouTube | `@indio.behn` |
+| X | `indio_behn` |
+
+### Fontes coletadas (web aberta)
+
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil | Correio do Povo | https://www.correiodopovo.com.br/cadernodesabado/%C3%ADndio-behn-fen%C3%B4meno-dos-personagens-do-feed-e-do-palco-1.879228 | Carreira, personagens. |
@@ -212,6 +268,20 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 ## 4. Megh Merly (`@megh_melry`)
 
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `megh_melry` |
+| TikTok | `megh_melry` |
+| YouTube | `@megh_melry` |
+| X | `megh_melry` |
+
+### Fontes coletadas (web aberta)
+
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Site / mídia kit | meghmelry.com.br | https://meghmelry.com.br/ | Oferta de parcerias para marcas. |
@@ -226,22 +296,80 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 **Regra para o relatório:** só vincular a `@megh_melry` se o veículo **nomear o handle ou a pessoa** de forma inequívoca.
 
+### Marcas e parcerias — Megh Merly (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| *Marcas nomeadas em matéria* | **Não localizado** nesta rodada (além do site genérico de parcerias) | meghmelry.com.br | https://meghmelry.com.br/ | — |
+| *Lista de publipost* | Exige varredura **Instagram / TikTok / YouTube / X** ou media kit | — | — | — |
+
+### Achados objetivos — Megh Merly (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada evidência de parceria com loteria concorrente, bet ou cassino **atribuída inequivocamente** a `@megh_melry`. | Baixa a média (pouca imprensa indexada) |
+| **Polêmicas** | Caso judicial / gravidez / ex-atleta em mar/2026 aparece na imprensa ligado a **outra** pessoa (ex.: **Juliana Merhy**); **não** atribuir a Megh Merly sem nomeação explícita do handle ou da pessoa. | Alta (desambiguação) |
+| **Política** | Não localizado posicionamento partidário ou pauta política explícita **para este perfil** nesta rodada. | Baixa |
+
 ---
 
 ## 5. Cleane Sampaio (`@cleanesampaioo`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `cleanesampaioo` |
+| TikTok | `cleanesampaioo` |
+| YouTube | `@cleanesampaioo` |
+| X | `cleanesampaioo` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil | O POVO+ | https://mais.opovo.com.br/reportagens-especiais/influencers-cearenses/2022/08/07/cantora-cleane-sampaio-mostra-humor-cearense-nas-redes-sociais.html | |
 | Perfil | G1 Ceará | https://g1.globo.com/ce/ceara/noticia/2021/11/21/cantora-e-influencer-faz-sucesso-nas-redes-sociais-divulgando-o-cearenses-jeito-cearense-de-falar.ghtml | |
-| TV | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | |
+| TV | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Programa **Todo Mundo Ama**. |
 | Perfil | O POVO+ (Farol) | https://mais.opovo.com.br/jornal/farol/2021/11/28/cearense-cleane-sampaio-quer-exaltar-o-nordeste-nos-palcos-da-vida.html | |
 
 **Atenção:** buscas “Sampaio + política” podem retornar **Edna Sampaio** e outros homônimos — não cruzar automaticamente com Cleane.
 
+### Marcas e parcerias — Cleane Sampaio (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| **Todo Mundo Ama** (comando / TV) | Trabalho em grade (entretenimento) | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Média (checar emissora/contrato no release) |
+| *Publipost de consumo* | **Não localizado** nome de marca em matéria nesta rodada | — | Completar nas quatro redes | — |
+
+### Achados objetivos — Cleane Sampaio (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada associação com bet, cassino ou loteria concorrente. | Média (só web indexada) |
+| **Polêmicas** | Não mapeado nesta rodada episódio de cancelamento ou fala problemática **com fonte** ligada inequivocamente a Cleane Sampaio. | Baixa a média |
+| **Política** | Matérias citam identidade regional (Nordeste/Ceará); **não** localizado voto, filiação ou campanha partidária explícita. Cuidado com homônimos “Sampaio” em política. | Baixa a média |
+
 ---
 
 ## 6. Ivan Baron (`@ivanbaron`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `ivanbaron` |
+| TikTok | `ivanbaron` |
+| YouTube | `@ivanbaron` |
+| X | `ivanbaron` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
@@ -255,21 +383,80 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Idem | Grande Ponto | https://grandeponto.com.br/noticia/video-influenciador-potiguar-ivan-baron-faz-criticas-ao-governo-lula-e-vira-alvo-de-esquerdistas-nas-redes-sociais | |
 | Idem | Pleno.News | https://pleno.news/brasil/politica-nacional/influenciador-que-subiu-a-rampa-com-lula-critica-governo-federal.html | Algumas matérias mencionam remoção de vídeos — checar primary. |
 
+### Marcas e parcerias — Ivan Baron (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| *Marcas em publipost* | **Não localizada** lista explícita nesta rodada | — | Completar nas quatro redes | — |
+
+### Achados objetivos — Ivan Baron (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. | Média |
+| **Polêmicas** | Cobertura sobre **críticas ao governo** e medida ligada ao **BPC** (2024); repercussão e tensão com parte do público relatadas em veículos — avaliar tom e estabilidade de narrativa para anunciante institucional. | Alta (várias matérias) |
+| **Política** | **Alta visibilidade** na **posse Lula 2023** (mídia); depois **críticas** a medidas do mesmo governo. Não é silêncio político: há trajetória pública em pauta federal (PCD, benefícios). | Alta |
+
 ---
 
 ## 7. Mila Costa (`@nocasomila`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `nocasomila` |
+| TikTok | `nocasomila` |
+| YouTube | `@nocasomila` |
+| X | `nocasomila` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Loja | No caso Mila | https://www.nocasomila.com.br/ | Primário. |
 | Perfil | Diário do Nordeste | https://diariodonordeste.verdesmares.com.br/estilo-de-vida/sisi/de-concurseira-a-influencer-conheca-mila-costa-a-cearense-que-mostra-seu-dia-a-dia-com-humor-1.3088698 | |
-| Parceria (saúde / mães) | Portal Nosso Meio | https://nossomeio.com.br/mila-costa-estrela-homenagem-de-dia-das-maes-da-unimed-ceara/ | Unimed Ceará — não é loteria/bet. |
+| Parceria (saúde / mães) | Portal Nosso Meio | https://nossomeio.com.br/mila-costa-estrela-homenagem-de-dia-das-maes-da-unimed-ceara/ | **Unimed Ceará** — não é loteria/bet. |
 | Site pessoal / livro | milacosta.com | https://milacosta.com/ | Conteúdo autoral; checar se há afiliações. |
 | Legado “concurseira” | NE10 | https://ne10.uol.com.br/canal/noticias/tecnologia/noticia/2015/06/01/concurseira-faz-piada-da-propria-rotina-e-vira-sucesso-no-instagram-549319.php | Histórico. |
+
+### Marcas e parcerias — Mila Costa (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| **No caso Mila** (e-commerce) | Marca / loja própria | nocasomila.com.br | https://www.nocasomila.com.br/ | Alta |
+| **Unimed Ceará** | Campanha / homenagem Dia das Mães (mídia) | Portal Nosso Meio | https://nossomeio.com.br/mila-costa-estrela-homenagem-de-dia-das-maes-da-unimed-ceara/ | Alta |
+| **milacosta.com** | Site autoral / produtos | milacosta.com | https://milacosta.com/ | Média |
+| *Demais publipost* | Completar nas redes | — | — | — |
+
+### Achados objetivos — Mila Costa (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada vínculo com bet, cassino ou loteria concorrente. | Média |
+| **Polêmicas** | Não mapeado nesta rodada episódio reputacional grave com fonte estável. | Baixa a média |
+| **Política** | Não localizado endosso partidário explícito nesta rodada; perfil associado a humor e rotina (concurseira/influencer). | Baixa |
 
 ---
 
 ## 8. Cristian Wariu (`@cristianwariu`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `cristianwariu` |
+| TikTok | `cristianwariu` |
+| YouTube | `@cristianwariu` |
+| X | `cristianwariu` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
@@ -278,31 +465,112 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Perfil | Terra | https://www.terra.com.br/noticias/brasil/jovem-xavante-cria-canal-no-youtube-para-combater-preconceito-pensam-que-deixo-de-ser-indigena-por-usar-smartphone,080fdb4bb5aa497ab4948f9e9601ca44g38bo7p1.html | |
 | Mídia | Metrópoles | https://www.metropoles.com/colunas/o-melhor-da-tv/youtuber-e-influenciador-indigena-e-uma-das-estrelas-de-falas-da-terra | |
 
-**Política partidária explícita:** não mapeada nesta lista; pauta indígena/direitos presente nas matérias.
+### Marcas e parcerias — Cristian Wariu (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| *Marcas de consumo em publipost* | **Não localizada** lista nesta rodada | — | Completar nas quatro redes / projetos audiovisuais | — |
+
+### Achados objetivos — Cristian Wariu (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. | Média |
+| **Polêmicas** | Não mapeado “cancelamento” nesta lista; pauta pública ligada a **preconceito anti-indígena** e visibilidade midiática. | Média |
+| **Política** | **Partido / candidatura explícitos:** não mapeados nesta rodada. **Pauta** recorrente em matérias: **direitos indígenas**, identidade, mídia — sensível para anunciante público, sem equivaler automaticamente a filiação partidária. | Alta (pauta); baixa (partido) |
 
 ---
 
 ## 9. Cereja (`@cerejaaaaaa`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `cerejaaaaaa` |
+| TikTok | `cerejaaaaaa` |
+| YouTube | `@cerejaaaaaa` |
+| X | `cerejaaaaaa` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Mídia kit / marcas citadas | Wupper | https://wupper.com.br/influencer-cereja/ | Cita NIVEA, Outback, SHEGLAM — **validar handle** (agregadores citam @ variados). |
 | Agregador | Famous Birthdays (Acereja) | https://pt.famousbirthdays.com/people/acereja.html | Possível divergência de @ (cerejebs etc.). |
 
+### Marcas e parcerias — Cereja (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| **NIVEA**; **Outback**; **SHEGLAM** | Citadas em página tipo mídia kit agregador | Wupper | https://wupper.com.br/influencer-cereja/ | **Média** — confirmar que o perfil é `@cerejaaaaaa` e resgatar post/release primário |
+| *Demais* | Completar nas quatro redes | — | — | — |
+
+### Achados objetivos — Cereja (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada menção a bet/cassino/loteria concorrente nas fontes listadas. | Baixa a média |
+| **Polêmicas** | Não mapeado nesta rodada episódio específico com URL estável. | Baixa |
+| **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
+
 ---
 
 ## 10. Aline Costa (`@comcertezaaline`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `comcertezaaline` |
+| TikTok | `comcertezaaline` |
+| YouTube | `@comcertezaaline` |
+| X | `comcertezaaline` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Agregador “Aline com Certeza” | Famous Birthdays (PT) | https://pt.famousbirthdays.com/people/aline-com-certeza.html | Cita TikTok **@aliineza** — **cruzamento obrigatório** com `@comcertezaaline`. |
 | Agregador (EN) | Famous Birthdays | https://www.famousbirthdays.com/people/aline-com-certeza.html | |
 
-**Demais temas:** sem URL mapeada nesta rodada para concorrência, polêmica ou política.
+### Marcas e parcerias — Aline Costa (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| *Marcas nomeadas* | **Não localizado** nesta rodada (só agregadores) | — | Completar nas quatro redes | — |
+
+### Achados objetivos — Aline Costa (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada evidência de parceria com bet/cassino/loteria concorrente. | Baixa (pouca fonte indexada) |
+| **Polêmicas** | Sem URL mapeada nesta rodada. | Baixa |
+| **Política** | Sem URL mapeada nesta rodada. | Baixa |
 
 ---
 
 ## 11. Davi (`@davizoa`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `davizoa` |
+| TikTok | `davizoa` |
+| YouTube | `@davizoa` |
+| X | `davizoa` |
+
+### Fontes coletadas (web aberta)
 
 **Status:** nenhuma fonte jornalística inequívoca para o handle `@davizoa` nesta compilação.
 
@@ -312,20 +580,76 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 **Ação:** após identificação do perfil correto, acrescentar linhas nesta seção com URLs.
 
+### Marcas e parcerias — Davi (`@davizoa`) (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| — | **Não aplicável** nesta rodada — falta prova de identidade do criador na imprensa indexada | — | — | — |
+
+### Achados objetivos — Davi (`@davizoa`) (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | **Não pesquisável** com precisão nesta base: sem fonte que una nome + `@davizoa`. | Baixa |
+| **Polêmicas** | Idem. | Baixa |
+| **Política** | Idem. | Baixa |
+
 ---
 
 ## 12. Paula Mineira (`@mineira.paula`)
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `mineira.paula` |
+| TikTok | `mineira.paula` |
+| YouTube | `@mineira.paula` |
+| X | `mineira_paula` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil | Portal Onda Sul | https://www.portalondasul.com.br/conheca-paula-helena-a-influenciadora-de-areado-que-representa-o-interior-de-minas-gerais-nas-redes-sociais/ | “Paula Helena” / Paula Mineira. |
 | Arquivo de tags | Portal Onda Sul | https://www.portalondasul.com.br/tag/paula-mineira/ | |
 
-**Concorrência:** busca genérica “clube + bet MG” pode retornar Athletic + Betnacional (Itatiaia) **sem** ligação com Paula — não usar como fonte do perfil sem conexão explícita.
+**Concorrência (falso positivo):** busca genérica “clube + bet MG” pode retornar Athletic + Betnacional (Itatiaia) **sem** ligação com Paula — não usar como fonte do perfil sem conexão explícita.
+
+### Marcas e parcerias — Paula Mineira (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| *Marcas nomeadas em matéria* | **Não localizado** nesta rodada | — | Completar nas quatro redes | — |
+
+### Achados objetivos — Paula Mineira (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não encontrada nesta rodada vínculo **da pessoa** com bet/cassino/loteria concorrente; descartar resultados de clube futebol + bet sem menção a Paula. | Média |
+| **Polêmicas** | Não mapeado nesta rodada. | Baixa |
+| **Política** | Não mapeado nesta rodada. | Baixa |
 
 ---
 
-## 13. Catraca Livre (`@catracalivre`) — veículo
+## 13. Catraca Livre (`@catracalivre`) — veículo / marca editorial
+
+### Critérios — este perfil
+Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo editorial, litígios, posicionamento público da marca).
+
+### Redes de ativação foco
+
+| Rede | Username / canal (`influencers.yaml`) |
+|------|----------------------------------------|
+| Instagram | `catracalivre` |
+| TikTok | `catracalivre` |
+| YouTube | `@catracalivre` |
+| X | `catracalivre` |
+
+### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
@@ -333,7 +657,21 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Editorial / mercado | Catraca Livre | https://catracalivre.com.br/variedades/novas-casas-de-apostas-ganham-licenca-definitiva-para-operar-no-brasil/ | |
 | **Litígio reputacional** | Metrópoles (Fabia Oliveira) | https://www.metropoles.com/colunas/fabia-oliveira/rodrigo-faro-acusa-portal-de-atacar-sua-reputacao-e-aponta-fake-news | Faro vs. Catraca Livre (fake news / honra). |
 
-**Contexto setorial (não específico do portal):** UOL lista bets barradas — https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/10/02/bet-que-patrocina-seu-time-foi-barrada-pelo-governo-veja-lista.htm — útil só para **cenário regulatório**, não para atribuir parceria ao veículo.
+**Contexto setorial (não específico do portal):** UOL lista bets barradas — https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/10/02/bet-que-patrocina-seu-time-foi-barrada-pelo-governo-veja-lista.htm — útil só para **cenário regulatório**, não para atribuir parceria comercial do veículo com operador.
+
+### Marcas e parcerias — Catraca Livre (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| *Parcerias comerciais do portal* | **Não mapeadas** nesta rodada | — | Completar via página institucional / Publis / releases | — |
+
+### Achados objetivos — Catraca Livre (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | O site **publica** matéria sobre **apostas** e **operadoras** — é **cobertura editorial**, não equivale automaticamente a “parceria paga” com bet; para campanha Caixa/Loterias, o **tema** no próprio veículo exige **alinhamento editorial** e checagem de anúncios programmatic / branded content. | Alta (URLs próprias do portal) |
+| **Polêmicas** | **Litígio / acusações** envolvendo **Rodrigo Faro** e alegações de **fake news** (coluna Metrópoles) — risco reputacional para parcerias sensíveis. | Média a alta |
+| **Política** | Não mapeado nesta lista posicionamento partidário explícito do veículo; pauta diversa — completar com linha editorial recorrente se necessário. | Baixa |
 
 ---
 
