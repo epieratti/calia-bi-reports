@@ -20,6 +20,20 @@
 
 ---
 
+## Rodada OSINT — ferramentas open source (31/03/2026)
+
+**Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `loterias2026/research/osint_runs/20260331/` (ver `README.txt` na pasta).
+
+| Ferramenta | Resultado neste ambiente |
+|------------|---------------------------|
+| **Instaloader** | **`graphql/query` → 403** em `instagram.com` → erro genérico **“Profile does not exist”** para `davizoa` e `pitelgiovanna` — **falso negativo** por bloqueio; **não** usar como prova de ausência de perfil. **Ação:** repetir **com login** ou em **rede residencial**. |
+| **Sherlock** | Executado para **`davizoa`**, **`comcertezaaline`**, **`megh_melry`**, **`mineira.paula`** — URLs listadas nas seções §4, §10–§12. |
+| **yt-dlp** | **TikTok** `@davizoa`, `@comcertezaaline`, `@mineira.paula`: amostra de **títulos/legendas** de vídeos (playlist curta). **`@megh_melry`:** erro — conta **privada** ou **embedding desativado** (mensagem do extrator). **YouTube** `@davizoa`, `@comcertezaaline`: títulos de vídeos/shorts. Aviso do extrator TikTok: **impersonation** opcional (dependências extras). |
+
+**Uso no dossiê:** amostra **não** substitui inventário completo; serve para **marcas** (`@marca` na legenda), **nicho** e **ausência** de palavras-chave óbvias (bet/política) nos **títulos** listados.
+
+---
+
 ## Relatório externo — “Inteligência reputacional” (texto + URLs fornecidos) vs. esta compilação
 
 **Origem:** relatório narrativo + lista de fontes enviados pelo usuário (mar/2026). **Uso:** enriquecer pistas e URLs; **toda** alegação sensível exige **cruzamento** com handle do `influencers.yaml` e, quando possível, **corpo da matéria** ou **primário** (post/vídeo).
@@ -618,7 +632,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Rede | Conteúdo refletido aqui |
 |------|-------------------------|
 | **Site** | **meghmelry.com.br** — textos de oferta comercial (publipost, reels, eventos, stories); **não** nomeia marcas cliente no trecho captado. |
-| **Instagram / TikTok / YouTube / X** | **Sem** inventário de posts nesta fase — lacuna principal frente a Pitel/Gratta. |
+| **Instagram / TikTok / YouTube / X** | **Rodada OSINT (31/03/2026):** **yt-dlp** no TikTok `@megh_melry` falhou — mensagem **“private or embedding disabled”** (perfil **não** varrido por ferramenta aqui). **Sherlock:** **Threads** + **omg.lol** — ver **Fontes**. |
 
 ### Rodada adicional — só web aberta (mar/2026)
 
@@ -638,6 +652,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Perfil (agregador) | Famous Birthdays | https://www.famousbirthdays.com/people/megh-melry.html | Dados biográficos; validar. |
 | **Google Notícias — capa Revista Adames** | GiroGO Notícias | https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames | **403** no `curl` neste ambiente; título no RSS confirma pauta. |
 | **Google Notícias (RSS)** | Feed `Megh Melry` | `https://news.google.com/rss/search?q=Megh+Melry&hl=pt-BR&gl=BR&ceid=BR:pt-419` | **GiroGO** + **O POVO+** (este último possível **falso positivo** no título). |
+| **OSINT — Sherlock** | Threads | https://www.threads.net/@megh_melry | Conta listada pelo Sherlock (31/03/2026). |
+| **OSINT — Sherlock** | omg.lol | https://megh_melry.omg.lol | Página “status”/perfil leve — **validar** relevância. |
+| **OSINT — yt-dlp TikTok** | — | `https://www.tiktok.com/@megh_melry` | **Erro do extrator:** privado ou embedding off — **sem** lista de vídeos neste ambiente. Log: `osint_runs/20260331/ytdlp_tiktok_thin3.txt`. |
 
 ### Desambiguação — não atribuir a Megh Merly sem confirmação
 
@@ -655,6 +672,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |---------------------|-----------------|--------|-----|------------|
 | **Revista Adames** (capa) | Matéria **GiroGO** (URL no pacote; **403** no `curl` aqui) | GiroGO Notícias | https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames | Média — abrir no browser |
 | *Marcas nomeadas em matéria (consumo)* | **Não localizado** nesta rodada além da hipótese acima | — | — | — |
+| *TikTok (amostra OSINT)* | **Indisponível** via **yt-dlp** neste teste | — | — | Repetir no app ou com impersonate |
 | *Lista de publipost* | Exige varredura **Instagram / TikTok / YouTube / X** ou media kit | — | — | — |
 
 ### Achados objetivos — Megh Merly (rodada aprofundada)
@@ -665,7 +683,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | Caso judicial / gravidez / ex-atleta em mar/2026 aparece na imprensa ligado a **outra** pessoa (ex.: **Juliana Merhy**); **não** atribuir a Megh Merly sem nomeação explícita do handle ou da pessoa. | Alta (desambiguação) |
 | **Política** | Não localizado posicionamento partidário ou pauta política explícita **para este perfil** nesta rodada. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** `Megh Merly` vazio; `Megh Melry` com **GiroGO** / Adames — URL https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames (**403** no `curl` aqui). (2) **Pendências:** inventário completo nas **quatro redes**; desambiguar **Collabstr megreilyy**; validar números do **site** no app.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** `Megh Merly` vazio; `Megh Melry` com **GiroGO** / Adames — URL https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames (**403** no `curl` aqui). (2) **TikTok:** **yt-dlp** bloqueado (privado/embedding) — usar **app** ou [impersonation](https://github.com/yt-dlp/yt-dlp#impersonation). (3) **Pendências:** inventário **IG/TT**; **Collabstr megreilyy**; números do **site** no app.
 
 ---
 
@@ -1041,21 +1059,30 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Agregador (EN) | Famous Birthdays | https://www.famousbirthdays.com/people/aline-com-certeza.html | Cita **`comcertezaaline`** — alinhar com PT ou confirmar mudança de @. |
 | **Podcast Zero18 (TV Fronteira / jornalismo)** | YouTube | https://www.youtube.com/watch?v=0a0r9OPoZ84 | **Relatório externo** — perfil **jornalístico**; cruzar com **@comcertezaaline** antes de fundir com **Famous Birthdays**. |
 
+### Rodada OSINT (Sherlock + yt-dlp, 31/03/2026)
+
+**Sherlock** `comcertezaaline`: **Linktree** https://linktr.ee/comcertezaaline · **TikTok** · **YouTube** `@comcertezaaline` · **Threads** https://www.threads.net/@comcertezaaline. Log: `sherlock_thin3.log`.
+
+**yt-dlp TikTok** `@comcertezaaline` (8 vídeos): **humor**, **gravidez** (`#desejosdegravida`), **viagem** (Goiânia/GO nos hashtags), desafios “comente o que devo comer”; **sem** bet/loteria nos títulos da amostra.
+
+**yt-dlp YouTube** `@comcertezaaline`: títulos em **inglês** — desafios com **Nutella**, **açaí**, chocolates **Florestal**, **gincanas** (“GINCANA COM CERTEZA”); Shorts. Amostra reforça **entretenimento / food challenge** — **não** resolve se **Zero18** = mesma pessoa (vide checklist).
+
 ### Marcas e parcerias — Aline Costa (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| *Marcas nomeadas* | **Não localizado** nesta rodada (só agregadores) | — | Completar nas quatro redes | — |
+| **Florestal** (chocolates) | Menção em título de vídeo YouTube (amostra **yt-dlp**) | YouTube `@comcertezaaline` | Vídeo “I MIXED ALL THE CHOCOLATES FROM FLORESTAL!” — ID `EeAgJ7P2rl4` | Média — verificar se é **publi** |
+| *Marcas nomeadas (demais)* | Agregadores + amostra de vídeos | — | Completar nas quatro redes | — |
 
 ### Achados objetivos — Aline Costa (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada evidência de parceria com bet/cassino/loteria concorrente. | Baixa (pouca fonte indexada) |
-| **Polêmicas** | Sem URL mapeada nesta rodada. | Baixa |
-| **Política** | Se **Zero18** for o mesmo criador do YAML, perfil **jornalístico** implica **pauta pública** — mapear com evidência; se for **pessoa diferente** do **Famous Birthdays**, manter separado. | Baixa até unificar identidade |
+| **Concorrência** | **Imprensa:** sem bet/cassino/loteria. **OSINT (amostra TT/YT):** **sem** operador de jogo nos títulos; menções a **marcas de alimento** (ex. **Florestal**) em desafios — mapear **publi** no vídeo. | Baixa a média |
+| **Polêmicas** | **Imprensa:** sem URL. **OSINT:** conteúdo **humor/gravidez/viagem** na amostra; **sem** episódio de matéria. | Baixa |
+| **Política** | **Zero18** × **Famous Birthdays** ainda **não** unificado; **OSINT** não mostra pauta política nos **títulos** da amostra. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** **não** confiável para este nome — usar **site:tiktok.com** / **site:instagram.com** com **handle** ou briefing com **nome civil**. (2) Resolver **@aliineza** vs **`@comcertezaaline`**. (3) **Relatório externo (Zero18)** × **Famous Birthdays** — mesma pessoa ou **troca de perfil** no YAML.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** **não** confiável para este nome — usar **site:tiktok.com** / **site:instagram.com** com **handle** ou briefing com **nome civil**. (2) Resolver **@aliineza** vs **`@comcertezaaline`**. (3) **Relatório externo (Zero18)** × **Famous Birthdays** — mesma pessoa ou **troca de perfil** no YAML. (4) **Linktree** + **Instaloader** (fora deste ambiente) para **IG**.
 
 ---
 
@@ -1077,15 +1104,23 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Rede | Situação (mar/2026, ambiente desta auditoria) |
 |------|--------------------------------------------------|
-| **Instagram** | `https://www.instagram.com/davizoa/` responde **302** para **login** — **não** foi possível ler **bio**, nome público ou posts **sem** sessão. |
-| **TikTok** | Buscas abertas (`davizoa`, `@davizoa`) **não** retornaram perfil/menção inequívoca indexada (só ruído e outros “Davi”). |
-| **YouTube** | Idem — sem canal ou matéria indexada ligando o **apelido** ao handle. |
-| **X** | Idem. |
+| **Instagram** | `https://www.instagram.com/davizoa/` responde **302** para **login** — **não** foi possível ler **bio**, nome público ou posts **sem** sessão. **Instaloader:** **403** (GraphQL). |
+| **TikTok** | **Confirmado** perfil público — **yt-dlp** listou vídeos (31/03/2026); busca **Google** antes era ruim. |
+| **YouTube** | Canal **`@davizoa`** existe — **yt-dlp** listou **4** vídeos (metadado de título fraco). |
+| **X** | Sem amostra nova; **Sherlock** **não** listou X.com neste run. |
 | **Google Notícias (RSS)** | Consulta `davizoa` → **zero** itens no feed; `"davi zoa"` → **sem** notícia sobre o criador. |
+
+### Rodada OSINT (Sherlock + yt-dlp, 31/03/2026)
+
+**Sherlock** (`davizoa`, timeout 12s): contas **encontradas** (amostra) — **TikTok** https://www.tiktok.com/@davizoa · **YouTube** https://www.youtube.com/@davizoa · **Pinterest** · **Snapchat** · **Roblox** · **Scratch** · **Tellonym** · **Clubhouse** · **AniWorld** · API **HudsonRock** (OSINT) · **Xbox Gamertag** search. *Discord* retorna URL genérica (não comprova servidor). Log: `osint_runs/20260331/sherlock_davizoa.log`.
+
+**yt-dlp** (playlist curta): **TikTok** — legendas com **#humor #meme #foryou #vlog**; menção **Argentina** em um título; **sem** menção a bet/loteria/cassino nos **15** primeiros títulos. URLs amostrais: `https://www.tiktok.com/@davizoa/video/7584541446364089608` (“Calma chocolate branco…”), `https://www.tiktok.com/@davizoa/video/7544872424320388357` (“…Argentina…”). **YouTube** `@davizoa` — **4** entradas no índice com **título = apenas data** (jul/2024); IDs: `qRkL83q2jgc`, `PQXqV17xbms`, `kbd1JSWl1VA`, `1EaumA5vej8` — **abrir vídeo** para descrição real (metadado flat insuficiente).
+
+**Instaloader:** **403** no GraphQL — ver tabela global **Rodada OSINT**.
 
 ### Fontes coletadas (web aberta)
 
-**Status:** nenhuma fonte jornalística inequívoca para o handle **`@davizoa`** nesta compilação. Briefing: **davizoa** é o **apelido** do talento no squad.
+**Status:** nenhuma fonte **jornalística** inequívoca para o handle **`@davizoa`** nesta compilação. **Complemento OSINT:** perfis **TikTok/YouTube** existem e mostram **humor/viagem** na amostra; **não** substitui matéria. Briefing: **davizoa** é o **apelido** do talento no squad.
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
@@ -1107,11 +1142,11 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | **Não pesquisável** com precisão nesta base: sem fonte que una nome + `@davizoa`. | Baixa |
-| **Polêmicas** | Idem. | Baixa |
-| **Política** | Idem. | Baixa |
+| **Concorrência** | **Imprensa:** sem fonte que una nome + `@davizoa`. **OSINT (amostra TikTok/yt-dlp):** **sem** bet/loteria/cassino nos títulos listados — **não** exclui publi fora da amostra. | Baixa (imprensa); média-baixa (amostra TT) |
+| **Polêmicas** | **Imprensa:** idem. **OSINT:** amostra **humor/memes**; **sem** episódio mapeado com URL de matéria. | Baixa |
+| **Política** | **Imprensa:** idem. **OSINT:** **sem** pauta política explícita nos títulos da amostra. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias** + busca web: **sem** índice útil para o handle. (2) **Instagram** `davizoa`: só acessível com **login** neste ambiente — precisa **app** ou **print** primário. (3) Não preencher lacunas com matérias sobre **outros** “Davi” sem **`@davizoa`** no texto.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias** + busca web: **sem** índice útil para o handle. (2) **Instagram** `davizoa`: **Instaloader** **403** aqui; browser **login** ou outra rede. (3) **yt-dlp** YouTube: conferir **descrição** dos 4 vídeos (títulos só com data). (4) Não preencher lacunas com matérias que **não** cite **`@davizoa`**.
 
 ---
 
@@ -1152,21 +1187,28 @@ Só incorporar itens do pacote quando a fonte citar **`@mineira.paula`**, **Paul
 
 **Outros resultados de busca:** matéria **Plox** “Mineira… moda” refere-se a **Carla Balta** (“Paty da classe média”), **não** Paula Mineira — **não** copiar URL para este perfil.
 
+### Rodada OSINT (Sherlock + yt-dlp, 31/03/2026)
+
+**Sherlock** `mineira.paula`: **TikTok** · **Threads** https://www.threads.net/@mineira.paula · **omg.lol** https://mineira.paula.omg.lol · BoardGameGeek · **Cracked Forum** (URL listada pelo Sherlock — **pode** ser homônimo; **não** atribuir conduta **sem** prova). Log: `sherlock_thin3.log`.
+
+**yt-dlp TikTok** `@mineira.paula` (8 vídeos): humor **Minas Gerais** / **pão de queijo**; um vídeo cita **`@shopee_br`** (“Na @shopee_br tem tudo!…”) — possível **publi**; URL `https://www.tiktok.com/@mineira.paula/video/7622268263677857042`. **Sem** bet/loteria nos títulos da amostra.
+
 ### Marcas e parcerias — Paula Mineira (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
 | **Pousada do Canário**; **Casca Fina**; **Floricultura do Alex** | Citadas como parcerias na matéria **iBest** | Portal Onda Sul | https://www.portalondasul.com.br/premio-ibest-2025-publicitaria-de-areado-concorre-ao-premio-influenciador-minas-gerais/ | Média — confirmar com post |
 | **Gustavo Tubarão** | Colaboração de conteúdo (mídia) | Portal Onda Sul | Mesma URL | Média |
+| **Shopee** (`@shopee_br`) | Menção em legenda TikTok (amostra **yt-dlp**) | TikTok | `https://www.tiktok.com/@mineira.paula/video/7622268263677857042` | Média — confirmar **#publi** / contrato no app |
 | *Demais marcas* | Completar nas quatro redes | — | — | — |
 
 ### Achados objetivos — Paula Mineira (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada vínculo **da pessoa** com bet/cassino/loteria concorrente; descartar resultados de clube futebol + bet sem menção a Paula. Marcas citadas = **hospedagem**, **moda/acessórios**, **floricultura**. | Média |
-| **Polêmicas** | Não mapeado nesta rodada. | Baixa |
-| **Política** | Não mapeado nesta rodada. | Baixa |
+| **Concorrência** | Não encontrada nesta rodada vínculo **da pessoa** com bet/cassino/loteria concorrente; descartar resultados de clube futebol + bet sem menção a Paula. Marcas citadas = **hospedagem**, **moda/acessórios**, **floricultura**; **OSINT:** **Shopee** na amostra. | Média |
+| **Polêmicas** | Não mapeado nesta rodada em **imprensa**. **Sherlock** listou fórum “Cracked” — **não** inferir **sem** prova de identidade. | Baixa |
+| **Política** | Não mapeado nesta rodada. **OSINT (amostra):** **sem** pauta política nos títulos. | Baixa |
 
 **Checklist de completude (snapshot mar/2026):** **Google Notícias** com nome + cidade **não** filtra o perfil — usar **`site:portalondasul.com.br`** ou handles. **Não** importar para **`@mineira.paula`** URLs do pacote externo **sem** cruzamento explícito com o handle ou com **Paula Helena** (ver subseção acima).
 
