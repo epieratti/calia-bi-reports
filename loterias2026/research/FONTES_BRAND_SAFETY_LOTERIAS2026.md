@@ -13,8 +13,36 @@
 - **Concorrência:** distinguir **parceria/publipost** com operador de aposta ou loteria de **menção temática** (humor, título de espetáculo, notícia editorial).
 - **Marcas / parcerias:** registrar **marca ou organização** + **tipo de vínculo** (campanha paga, agenciamento, empregador, produto próprio, mídia/evento, revenda de curso). Lista da web costuma estar **incompleta**; completar com **#publi** / arquivo de stories e **press release** da assessoria.
 - **Confiança (sugestão para o relatório):** *Alta* = várias fontes independentes ou documento primário claro; *Média* = uma boa fonte jornalística; *Baixa* = agregador, rumor, ou página não verificada (ex.: SEO/spam).
+- **Sínteses de IA (ex.: Perplexity, ChatGPT):** podem agregar achados úteis, mas **não substituem URL** nem prova de parceria. Neste arquivo, blocos assim vêm rotulados **“Perplexity (usuário)”** e, quando possível, passam por **verificação cruzada** com busca web do repositório.
 
 **Data de referência da compilação:** 31/03/2026.
+
+---
+
+## Síntese Perplexity (usuário) — Giovanna Pitel & Rafael Gratta
+
+**Origem:** texto consolidado enviado pelo time (Perplexity / pesquisa assistida), **sem** links `[^n]` preservados. **Uso:** hipóteses e linhas de investigação; **obrigatório** cruzar com fontes primárias antes do dossiê final.
+
+### Verificação cruzada (web aberta, Cursor — mar/2026)
+
+| Afirmação (Perplexity) | Status na verificação | Notas |
+|-------------------------|------------------------|--------|
+| Pitel + **Seara, Downy, Stone** | **Não confirmado** | Busca direta não retornou matéria ligando essas marcas ao nome dela; manter como **pendente** até #publi ou release. |
+| Pitel + **iFood** (publipost) | **Parcial / desambiguação** | Matérias descrevem **publi do iFood com Camila** (esposa de Lucas Buda), não com Giovanna Pitel — **não atribuir** a Pitel sem post próprio. Ver Meio e Mensagem / Publicitários Criativos. |
+| Pitel TikTok **@giovannapiteloficial** | **Não validado aqui** | Squad oficial usa `@pitelgiovanna` / `pitelgiovanna` em `influencers.yaml`; checar handle ativo. |
+| Números exatos de seguidores/posts | **Instáveis** | Conferir painel nativo ou captura datada; números de LLM desatualizam rápido. |
+| Gratta + **Growth Supplements** e **Insider Store** | **Risco de homônimo** | “Rafael” + “Insider Store” / “Growth” nas buscas aponta para **Rafael de Vitto Santos** (profissional de growth na Insider Store), **não** o criador **Rafael Gratta**. **Não mesclar.** |
+| Gratta + **Genial / B3 / “Detox Bet”** | **Não confirmado** | Não apareceu matéria indexada com essa tripla; “Bet” pode confundir com **bets** ou produto interno — só entrar com fonte que nomeie **Gratta** + marca. |
+| Gratta entrevista **B3** | **Não confirmado** | Há podcasts (Flow, Inteligência Ltda., PodPeople) sem evidência, nesta rodada, de **B3** como parceira paga. |
+| Críticas **Reddit / coach / TDAH / plágio** | **Hearsay de fórum** | Útil como **sinal de reputação**; para relatório institucional, capturar **prints + URLs de threads** ou tratar como confiança baixa. |
+| Pitel **PL 1904 / aborto** | **Não confirmado nesta base** | Exige post ou entrevista citada; não foi replicado nas buscas do repositório até agora. **Não copiar** para dossiê sem fonte. |
+
+**URLs úteis para a linha iFood (não é Pitel):**
+
+| Fonte | URL |
+|--------|-----|
+| Meio e Mensagem | https://www.meioemensagem.com.br/midia/ifood-aproveita-fofoca-e-faz-publi-com-esposa-de-participante-do-bbb-24 |
+| Publicitários Criativos | https://www.publicitarioscriativos.com/ifood-aproveita-polemica-e-faz-publi-com-esposa-de-lucas-do-bbb-24/ |
 
 ---
 
@@ -60,6 +88,8 @@
 
 **Não encontrado nesta rodada (nome explícito):** parcerias com Shein, Natura, O Boticário etc. — buscas retornaram **Giovanna Lancellotti** ou notícias de mercado sem Pitel.
 
+**Marcas extras citadas só no bloco Perplexity (pendentes):** **Seara**, **Downy**, **Stone** — *não* confirmadas neste repositório; **iFood** → ver alerta de **Camila** na verificação cruzada.
+
 ### Achados objetivos — Giovanna Pitel (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
@@ -67,6 +97,50 @@
 | **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. | Média (só web; falta varredura de redes) |
 | **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
 | **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
+
+### Conteúdo Perplexity — Giovanna Pitel (organizado)
+
+*Trechos abaixo são **resumo fiel** do material enviado; confiança variável — ver tabela de verificação cruzada no topo.*
+
+#### Projetos e carreira (pós-BBB 24)
+
+| Tema | Resumo Perplexity | Confiança |
+|------|-------------------|-----------|
+| TV Globo / Multishow | *Na Cama com Pitanda* (com Fernanda Bande); *Mesacast* / bastidores BBB (menciona Ed Gama, Vitor DiCastro). | Média (cruzar com Terra/NaTelinha) |
+| Gshow / creator | Análises de novela (*Guerreiros do Sol*); menção a **Rio Innovation Week 2025**. | Baixa até achar post ou matéria |
+| Podcast | **Marinhos** (YouTube/Spotify), histórias da tia Nívia; produção familiar prevista para 2026. | Média (O Globo / podcast) |
+| Eventos | Rock in Rio; **Prêmio Potências 2025**; Festival de Verão Salvador 2025. | Baixa (confirmar presença em cada um) |
+| Formação / narrativa | Serviço Social; comunicação digital; agenciamento Globo/ViU Hub. | Média |
+
+#### Métricas de rede (Perplexity)
+
+| Rede | Dado citado | Observação |
+|------|-------------|------------|
+| Instagram `@pitelgiovanna` | ~1M seguidores, ~800 posts | Conferir número atual no app |
+| TikTok `@giovannapiteloficial` | ~110k seguidores, ~3,3M curtidas | **Handle diferente** do YAML; validar qual é o oficial |
+
+#### Marcas citadas pelo Perplexity (além das já verificadas no doc)
+
+**Seara, Downy, iFood, Stone** (+ “outras nove marcas”) — ver **verificação cruzada**: iFood com **Camila**, não Pitel; demais **pendentes**.
+
+#### Polêmicas / sensibilidades (Perplexity)
+
+| Tema | Resumo | Confiança |
+|------|--------|-----------|
+| Corpo / gravidez (fev/2025) | Especulação após vídeo na praia; resposta sobre padrões estéticos. | Baixa (exige post/TikTok) |
+| Xenofobia (2024) | Alinhado a fontes já listadas (Correio Braziliense, Notícia Preta). | Alta (já documentado) |
+| Amizade Fernanda Bande (2025) | Distanciamento sem “briga” pública; rotinas diferentes. | Baixa a média |
+| Visual / piadas (nov/2025) | Comparações na web. | Baixa |
+| BBB 25 / Dani Hypólito | Comentário sobre eliminação. | Baixa |
+| Grande Rio / Alane Dias (mar/2025) | “Debochou” com Ed Gama em desfile — críticas isoladas. | Baixa |
+| Evento com “baixa interação” (2025) | Menção a seguranças — vago. | Baixa |
+| Relacionamento aberto | Já coberto na imprensa (O Globo etc.); Perplexity cita risco de polarização de audiência — leitura qualitativa. | Média |
+
+#### Política (Perplexity)
+
+- Perfil descrito como **sem partido explícito**; causas “progressistas” leves (mulheres, periferia, Nordeste, cultura).
+- Menção a **PL 1904 / aborto**: **não confirmada** neste repositório — **não usar** sem URL.
+- “Voto” no BBB ≠ voto eleitoral.
 
 ---
 
@@ -99,6 +173,8 @@
 
 **Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco). Completar via **Instagram** (marcar #publi / “parceria paga”) e **Media Kit** da assessoria.
 
+**Marcas citadas só no bloco Perplexity (pendentes ou rejeitadas aqui):** **Growth Supplements**, **Insider Store**, **Genial/B3**, **“Detox Bet”** — ver **homônimos** e tabela de verificação cruzada; não incluir no dossiê sem URL.
+
 ### Achados objetivos — Rafael Gratta (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
@@ -106,6 +182,53 @@
 | **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilência: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
 | **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; não se encontrou, nesta rodada, escândalo criminal ou “cancelamento” massivo documentado em veículo mainstream. Questões de **saúde mental / promessa de resultado** são risco recorrente do nicho — exige revisão de peças e disclaimers, não provado aqui como ilícito. | Média |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
+
+### Conteúdo Perplexity — Rafael Gratta (organizado)
+
+*Resumo fiel do material enviado; trechos sobre **Reddit**, **coach** e **TDAH** são majoritariamente **opinião de fórum** — tratar com cautela.*
+
+#### Política e tom público (Perplexity)
+
+| Linha | Resumo | Confiança |
+|-------|--------|-----------|
+| Partidarismo | Conteúdo descrito como **apolítico** em relação a eleições/candidatos até mar/2026. | Média (alinhado à ausência de achados na web do repositório) |
+| Foco temático | Neurociência, ansiedade, dopamina, hábitos, finanças pessoais; podcasts sem política BR “dura”. | Média |
+| Religião | Referências à **fé cristã** (Bíblia, Jesus) em contexto de superação e vícios; **sem** ativismo político explícito no relato Perplexity. | Baixa a média (checar vídeos) |
+| Comparação Nando Moura | Especulação de usuários (tom “apolítico” + coach) — **não é fato**. | Baixa |
+
+#### Marcas / produtos citados pelo Perplexity
+
+| Item citado | Observação |
+|-------------|------------|
+| **Growth Supplements** | Não vinculado ao **Rafael Gratta** nas buscas do repositório; risco de **alucinação** ou confusão com outra marca/pessoa. |
+| **Insider Store** | Homônimo **Rafael de Vitto Santos** (growth na Insider Store) ≠ **Rafael Gratta**. |
+| **Detox Bet + Genial + B3** | Não confirmado; “Bet” exige cuidado com **concorrência** (apostas). Só incluir com fonte que cite Gratta. |
+| **Mentoria ~R$100** | Dado não auditado aqui; validar no site/Instagram na data da campanha. |
+| **Cupons / rafaelgratta.com** | Coerente com **marca própria** (AURA etc.); confiança média. |
+
+#### Métricas e presença (Perplexity)
+
+| Rede | Dado citado | Observação |
+|------|-------------|------------|
+| Instagram `@rafaelgratta` | ~4M seguidores, 1100+ posts | Conferir no app (números mudam) |
+| TikTok | ~600k+ | Idem |
+| YouTube | Vídeos virais (ex.: título citado “Ninguém tá nem aí…”, 9–13M views) | Validar URL do vídeo |
+| X (Twitter) | “Possível, sem dados fortes” | Pendente |
+
+#### Críticas e “polêmicas” (Perplexity — fórum / reputação)
+
+| Tema | Resumo | Uso no dossiê |
+|------|--------|----------------|
+| **TDAH** (jan/2025) | Vídeo sobre superdiagnóstico, “cura” via hábitos; debate no **Reddit**. | Baixa confiança sem thread arquivada; risco **saúde/regulatório** se marca for institucional. |
+| Estilo **coach** (2024–2025) | Simplificação científica, mentoria paga, suplementos, tom de certeza. | Qualitativo; citar como “percepção de público” se houver prints. |
+| Religião + luxo (Copacabana/hotel) | Crítica de **privilégio** estético no relato Perplexity. | Opinião |
+| **Plágio** / adaptação sem crédito (set/2025) | Acusação genérica em vídeo YouTube citado pelo Perplexity. | Exige link e análise; não afirmar como fato. |
+| Psicanálise / Freud (jul/2025) | React de psicanalista. | Mídia secundária |
+| Cannabis / automedicação | Mencionado como “debate” em que aparece — vago. | Não usar sem fonte |
+
+#### Recomendação Perplexity (squad)
+
+Texto original sugere ambos para **saúde mental / bem-estar / lifestyle**, priorizando Gratta por escala; **monitorar** polêmicas. Tratar como **opinião do modelo**, não como parecer jurídico ou de compliance.
 
 ---
 
