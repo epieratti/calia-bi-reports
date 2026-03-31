@@ -26,6 +26,15 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt
 
+      # Na nuvem (GitHub) não existe .env no repo: o token vem só de Repository secret.
+      - name: Checar secret APIFY_TOKEN
+        run: |
+          if [ -z "${{ secrets.APIFY_TOKEN }}" ]; then
+            echo "::error::Defina o Repository secret APIFY_TOKEN: Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+          echo "APIFY_TOKEN está definido (valor oculto)."
+
       - name: Pipeline (redes + Wikipedia/notícias/busca + classificação + HTML)
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
