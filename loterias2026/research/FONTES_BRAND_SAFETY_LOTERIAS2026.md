@@ -161,6 +161,21 @@ Feed: `https://news.google.com/rss/search?q=<consulta>&hl=pt-BR&gl=BR&ceid=BR:pt
 
 **Nota (Megh):** o nome público na imprensa e no site aparece como **Megh Melry**; o handle do squad é **`@megh_melry`**. Usar **ambas** as grafias em buscas. Matéria **GiroGO** sobre **Revista Adames** aparece no RSS; URL do site **girogo.com.br** retornou **503** neste ambiente — tratar como pista até captura estável ou outro veículo.
 
+**Google Notícias — amostras adicionais (RSS, mar/2026)** — rodada **todos os nomes com lacuna** + checagens cruzadas
+
+Feed: `https://news.google.com/rss/search?q=<consulta>&hl=pt-BR&gl=BR&ceid=BR:pt-419`. **Giovanna Pitel** e **Rafael Gratta** seguem nas tabelas longas do início desta seção (§1 e §2 do dossiê).
+
+| Perfil / consulta | Resultado (título — veículo) | Notas |
+|-------------------|-------------------------------|--------|
+| **Mila Costa influencer** | 2ª filha / gravidez (**Diário do Nordeste**); Senac (**Portal IN**); **comercial Granja Regina no intervalo do BBB** (**Portal IN** / título RSS); **JC**; live BECE + Leo Suricate (**secult.ce** — título no RSS) | **Granja Regina × BBB:** confirmar **URL** do release (título RSS sem permalink estável aqui). **JC:** título “de concurseira a influencer” no feed — preferir **DN** + **Portal IN** já resolvidos. |
+| **Cristian Wariu** | COP30 (**Amazônia Vox**); **Trip**; **g1** (título “indígena influencer desmistificar”); **thmais**; **DW**; **BBC** | Reforça eixo **pauta indígena / mídia**; ver URLs novas na §8. |
+| **Paula Mineira Areado** | **Ruído:** TCE-Areado, acidentes MG, Enem — **sem** menção à influenciadora no título | Não usar como fonte do perfil. |
+| **davizoa** | **Sem itens** no RSS | Alinhado a buscas web sem matéria + handle. |
+| **comcertezaaline TikTok** | **Sem itens** | **Aline com certeza** sozinha retorna **Aline Campos**, pets etc. — ruído. |
+| **Megh Merly** | **Sem itens** | Usar **Megh Melry** (linha anterior nesta página). |
+| **"Ana Thereza" Cereja TikTok** | **Sem itens** | Nome da agregador **Wupper**; confirmação só com **post primário**. |
+| **Catraca Livre Chapecoense** | **Meio & Mensagem** — “Catraca Livre: erros na tragédia”; **Folha Vitória** (desculpas Chape); **DCM** (Kiko Nogueira); **O Dia** (imagem/repercussão) | **URL direta** `meioemensagem.com.br/midia/catraca-livre-erros-na-tragedia` retornou **404** no `curl` (mar/2026); manter **Folha Vitória**, **O Dia**, **DCM** como secundárias fortes. |
+
 ---
 
 ## 1. Giovanna Pitel (`@pitelgiovanna`)
@@ -561,6 +576,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Consulta / foco | Resultado |
 |-----------------|-----------|
 | `Megh Merly` no **Google Notícias (RSS)** | **Zero** itens — usar **`Megh Melry`** (grafia do site e de matérias). |
+| `Megh Melry` no **Google Notícias (RSS)** | **GiroGO** — capa **Revista Adames**; **O POVO+** — série FDR (título **sem** o nome no RSS — possível **ruído**). Ver tabela global **Google Notícias** nesta página. |
 | `Megh Melry` + aposta / bet / cassino | **Sem** hit claro ligando a **esta** criadora nesta rodada. |
 | `Megh Melry` + política / Lula / Bolsonaro | **Sem** matéria pertinente indexada na amostra. |
 | **Perfil Collabstr “megreilyy”** | **Handle diferente** do squad — **não** atribuir sem prova de que é a mesma pessoa. |
@@ -572,6 +588,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Site / mídia kit | meghmelry.com.br | https://meghmelry.com.br/ | Oferta de parcerias; métricas no site (+2M seguidores, +5M alcance mensal — **validar no app**). |
 | Perfil (agregador) | Famous Birthdays | https://www.famousbirthdays.com/people/megh-melry.html | Dados biográficos; validar. |
 | **Google Notícias — capa Revista Adames** | GiroGO Notícias | *(URL típica agregada; site retornou **503** aqui)* | Título no RSS: **“Megh Melry… capa da Revista Adames”** — **hipótese de mídia / marca** até página estável ou segundo veículo. |
+| **Google Notícias (RSS)** | Feed `Megh Melry` | `https://news.google.com/rss/search?q=Megh+Melry&hl=pt-BR&gl=BR&ceid=BR:pt-419` | **GiroGO** + **O POVO+** (este último possível **falso positivo** no título). |
 
 ### Desambiguação — não atribuir a Megh Merly sem confirmação
 
@@ -757,6 +774,21 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@nocasomila` |
 | X | `nocasomila` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Instagram / TikTok / YouTube / X** | **Sem** inventário de publipost; matérias citam **`@nocasomila`** / “No Caso Mila” e campanhas (Senac, BNB, Unimed). |
+| **Google Notícias** | Amostra na seção global — gravidez, Senac, **Granja Regina × BBB** (título), JC, secult. |
+
+### Rodada adicional — só web aberta + Google Notícias (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Mila Costa` + aposta / bet / loteria | **Sem** associação com jogo na amostra. |
+| `Mila Costa` + Lula / Bolsonaro / política | **Sem** matéria com filiação ou campanha explícita **dela** nesta rodada. |
+| **BBB / TV Globo** | Visita à casa do **BBB 22** (DN) — relação com **entretenimento Globo**, não publi de bet. |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -766,6 +798,16 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Parceria (saúde / mães) | Portal Nosso Meio | https://nossomeio.com.br/mila-costa-estrela-homenagem-de-dia-das-maes-da-unimed-ceara/ | **Unimed Ceará** — não é loteria/bet. |
 | Site pessoal / livro | milacosta.com | https://milacosta.com/ | Conteúdo autoral; checar se há afiliações. |
 | Legado “concurseira” | NE10 | https://ne10.uol.com.br/canal/noticias/tecnologia/noticia/2015/06/01/concurseira-faz-piada-da-propria-rotina-e-vira-sucesso-no-instagram-549319.php | Histórico. |
+| **Gravidez 2ª filha (2025)** | Diário do Nordeste | https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/influenciadora-cearense-mila-costa-anuncia-gravidez-da-2-filha-realizacao-pessoal-1.3633769 | Vida pessoal; sem implicação direta nos três eixos. |
+| **Senac Ceará — campanha (release)** | Senac Ceará | https://www.ce.senac.br/mila-costa-e-protagonista-da-nova-campanha-do-senac-ceara/ | Institucional educação — **não** é bet/loteria. |
+| **Senac — conceito “Tá no Senac…” (2025)** | Senac Ceará | https://www.ce.senac.br/ta-no-senac-ta-no-mercado-e-nova-campanha-do-senac-ceara/ | |
+| **Senac — agência / mídia** | Portal Nosso Meio | https://nossomeio.com.br/ebmquintto-assina-nova-campanha-do-senac-ceara-com-mila-costa-como-protagonista/ | |
+| **Senac / marketing** | Portal IN | https://www.portalin.com.br/negocios/mila-costa-e-a-protagonista-da-nova-campanha-sobre-cursos-do-senac-ceara/ | |
+| **YouTube (lançamento canal)** | Portal IN | https://www.portalin.com.br/notas/138917/ | Mai/2020. |
+| **Banco do Nordeste — “Vai de Giro”** | Portal Nosso Meio | https://nossomeio.com.br/banco-do-nordeste-e-ebmquintto-lancam-nova-fase-da-campanha-vai-de-giro-com-mila-costa/ | **Instituição financeira pública** — sensível para **anunciante estatal** por **proximidade com crédito/banco**; **não** é concorrente de loteria. |
+| **Visita casa BBB 22** | Diário do Nordeste | https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/influenciadora-cearense-mila-costa-visita-a-casa-do-bbb-22-parece-de-brinquedo-1.3224618 | Conteúdo **Globo** / reality. |
+| **Palestra “Lidera Mulher” / Acesu** | CBTV Play | https://www.cbtvplay.com.br/noticias/brasil/1261437 | Evento **setor supermercados** (CE) — **não** é bet; checar se há **remuneração** no release. |
+| **Google Notícias** | RSS | `https://news.google.com/rss/search?q=Mila+Costa+influencer&hl=pt-BR&gl=BR&ceid=BR:pt-419` | Inclui título **Granja Regina × intervalo BBB** (**Portal IN**) — **URL** do post a fixar. |
 
 ### Marcas e parcerias — Mila Costa (web aberta, rodada marcas)
 
@@ -773,6 +815,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |---------------------|-----------------|--------|-----|------------|
 | **No caso Mila** (e-commerce) | Marca / loja própria | nocasomila.com.br | https://www.nocasomila.com.br/ | Alta |
 | **Unimed Ceará** | Campanha / homenagem Dia das Mães (mídia) | Portal Nosso Meio | https://nossomeio.com.br/mila-costa-estrela-homenagem-de-dia-das-maes-da-unimed-ceara/ | Alta |
+| **Senac Ceará** | **Protagonista** de campanha(s) institucional(is) | Senac CE; Nosso Meio; Portal IN | https://www.ce.senac.br/mila-costa-e-protagonista-da-nova-campanha-do-senac-ceara/ · https://nossomeio.com.br/ebmquintto-assina-nova-campanha-do-senac-ceara-com-mila-costa-como-protagonista/ | Alta |
+| **Banco do Nordeste** | Campanha **“Vai de Giro”** (crédito MPE) | Portal Nosso Meio | https://nossomeio.com.br/banco-do-nordeste-e-ebmquintto-lancam-nova-fase-da-campanha-vai-de-giro-com-mila-costa/ | Alta |
+| **Granja Regina** | **Hipótese** — título RSS (**comercial no intervalo do BBB**) | Google Notícias → Portal IN | **Pendência:** permalink | Média até URL |
 | **milacosta.com** | Site autoral / produtos | milacosta.com | https://milacosta.com/ | Média |
 | *Demais publipost* | Completar nas redes | — | — | — |
 
@@ -780,9 +825,11 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada vínculo com bet, cassino ou loteria concorrente. | Média |
+| **Concorrência** | Não encontrada nesta rodada vínculo com bet, cassino ou loteria concorrente. **Campanha Banco do Nordeste** = **banco público** (crédito), não jogo. **Granja Regina** (alimentos) no título RSS — **não** é operador de aposta. | Média a alta |
 | **Polêmicas** | Não mapeado nesta rodada episódio reputacional grave com fonte estável. | Baixa a média |
-| **Política** | Não localizado endosso partidário explícito nesta rodada; perfil associado a humor e rotina (concurseira/influencer). | Baixa |
+| **Política** | Não localizado endosso partidário explícito nesta rodada; presença em **instituições públicas** (Senac, BNB) é **comercial/institucional**, não prova de filiação. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** linha na tabela global. (2) **Pendências:** URL canônica **Granja Regina × BBB**; corpo **secult** (live humor) se necessário; inventário **IG/TT/YT/X**.
 
 ---
 
@@ -800,6 +847,20 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@cristianwariu` |
 | X | `cristianwariu` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **YouTube / demais** | Matérias citam canal e papel de **comunicador indígena**; **Globoplay** / **Deezer** no podcast (NINJA). |
+| **Google Notícias** | Amostra na seção global — COP30, listas de influenciadores indígenas, **DW**, **BBC**. |
+
+### Rodada adicional — só web aberta + Google Notícias (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Cristian Wariu` + aposta / bet / loteria | **Sem** menção nesta rodada. |
+| `Cristian Wariu` + política / eleição / partido | **Sem** filiação partidária explícita nas fontes listadas; **pauta** de **direitos indígenas** e **desinformação** (mídia). |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -807,21 +868,30 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Enciclopédia | Wikipédia (pt) | https://pt.wikipedia.org/wiki/Cristian_Wariu | |
 | Perfil | Revista Trip | https://revistatrip.uol.com.br/trip/cristian-wariu-um-guerreiro-indigena-do-seculo-xxi | |
 | Perfil | Terra | https://www.terra.com.br/noticias/brasil/jovem-xavante-cria-canal-no-youtube-para-combater-preconceito-pensam-que-deixo-de-ser-indigena-por-usar-smartphone,080fdb4bb5aa497ab4948f9e9601ca44g38bo7p1.html | |
-| Mídia | Metrópoles | https://www.metropoles.com/colunas/o-melhor-da-tv/youtuber-e-influenciador-indigena-e-uma-das-estrelas-de-falas-da-terra | |
+| Mídia | Metrópoles | https://www.metropoles.com/colunas/o-melhor-da-tv/youtuber-e-influenciador-indigena-e-uma-das-estrelas-de-falas-da-terra | *Falas da Terra* (Globo). |
+| **BBC** | BBC News Brasil | https://www.bbc.com/portuguese/brasil-46427800 | Canal no YouTube / preconceito. |
+| **DW** | Deutsche Welle (pt-BR) | https://www.dw.com/pt-br/arco-flecha-e-celular-os-jovens-ind%C3%ADgenas-nas-redes/a-57253768 | Jovens indígenas nas redes (cita **Wariu**). |
+| **VICE** | Vice Brasil | https://www.vice.com/pt/article/quem-sao-os-youtubers-indigenas-do-brasil/ | Perfil + **críticas de internet** (“volta pro mato” etc.) — **polêmica leve** documentada. |
+| **Podcast “Papo de Parente”** | Mídia NINJA | https://midianinja.org/celia-xakriaba-tukuma-pataxo-e-cristian-wariu-lancam-programa-de-podcast-papo-de-parente/ | Com **Célia Xakriabá**, **Tukumã Pataxó**; **Globoplay** e **Deezer** citados — **mídia institucional**, não publi de jogo. |
+| **Google Notícias** | RSS | `https://news.google.com/rss/search?q=Cristian+Wariu&hl=pt-BR&gl=BR&ceid=BR:pt-419` | Amostra: COP30, Trip, g1, thmais, DW, BBC. |
 
 ### Marcas e parcerias — Cristian Wariu (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| *Marcas de consumo em publipost* | **Não localizada** lista nesta rodada | — | Completar nas quatro redes / projetos audiovisuais | — |
+| **Globo / Globoplay** | **Projeto audiovisual** (*Falas da Terra*; podcast em plataforma citada) | Metrópoles; Mídia NINJA | URLs acima | Alta (mídia) |
+| **Deezer** | **Distribuição** de áudio (podcast) | Mídia NINJA | Mesma URL NINJA | Média |
+| *Marcas de consumo em publipost* | **Não localizada** lista nesta rodada | — | Completar nas quatro redes | — |
 
 ### Achados objetivos — Cristian Wariu (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. | Média |
-| **Polêmicas** | Não mapeado “cancelamento” nesta lista; pauta pública ligada a **preconceito anti-indígena** e visibilidade midiática. | Média |
-| **Política** | **Partido / candidatura explícitos:** não mapeados nesta rodada. **Pauta** recorrente em matérias: **direitos indígenas**, identidade, mídia — sensível para anunciante público, sem equivaler automaticamente a filiação partidária. | Alta (pauta); baixa (partido) |
+| **Polêmicas** | Matérias descrevem **ódio/comentários preconceituosos** online (ex.: **VICE**); não mapeado processo ou “cancelamento” com veículo jurídico. | Média |
+| **Política** | **Partido / candidatura explícitos:** não mapeados nesta rodada. **Pauta** recorrente: **direitos indígenas**, combate à **desinformação**, presença em **COP** / listas de influência — sensível para anunciante público, **sem** equivaler a filiação partidária. | Alta (pauta); baixa (partido) |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** linha na tabela global. (2) **Pendências:** checar se matéria **g1** “indígena influencer desmistificar” cita **Wariu** no corpo (título RSS); inventário **IG/TT** para marcas.
 
 ---
 
@@ -839,27 +909,37 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@cerejaaaaaa` |
 | X | `cerejaaaaaa` |
 
+### Rodada adicional — Google Notícias + web (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Cereja influencer TikTok` (RSS) | **Ruído** — “cereja” em sentido figurado (Virginia Fonseca, carnaval etc.) **sem** `@cerejaaaaaa` |
+| `"Ana Thereza" Cereja` (RSS) | **Sem itens** |
+| Nome **Ana Thereza** na **Wupper** | Agregador associa nome real + marcas — **validar** com post |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
-| Mídia kit / marcas citadas | Wupper | https://wupper.com.br/influencer-cereja/ | Cita NIVEA, Outback, SHEGLAM — **validar handle** (agregadores citam @ variados). |
+| Mídia kit / marcas citadas | Wupper | https://wupper.com.br/influencer-cereja/ | Cita **Ana Thereza**, **NIVEA**, **Outback**, **SHEGLAM**, **Positivo** — **validar handle** `@cerejaaaaaa` e **post primário**. |
 | Agregador | Famous Birthdays (Acereja) | https://pt.famousbirthdays.com/people/acereja.html | Possível divergência de @ (cerejebs etc.). |
 
 ### Marcas e parcerias — Cereja (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| **NIVEA**; **Outback**; **SHEGLAM** | Citadas em página tipo mídia kit agregador | Wupper | https://wupper.com.br/influencer-cereja/ | **Média** — confirmar que o perfil é `@cerejaaaaaa` e resgatar post/release primário |
+| **NIVEA**; **Outback**; **SHEGLAM**; **Positivo** | Citadas em página tipo mídia kit agregador | Wupper | https://wupper.com.br/influencer-cereja/ | **Média** — confirmar que o perfil é `@cerejaaaaaa` e resgatar post/release primário |
 | *Demais* | Completar nas quatro redes | — | — | — |
 
 ### Achados objetivos — Cereja (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada menção a bet/cassino/loteria concorrente nas fontes listadas. | Baixa a média |
+| **Concorrência** | Não encontrada nesta rodada menção a bet/cassino/loteria concorrente nas fontes listadas. **SHEGLAM** (maquiagem, grupo **Shein**) = **varejo** — não é operador de jogo; anotar só se houver **publi** no perfil. | Baixa a média |
 | **Polêmicas** | Não mapeado nesta rodada episódio específico com URL estável. | Baixa |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** consultas genéricas **inúteis** — usar nome + handle em busca no app. (2) **Pendências:** prints **#publi** NIVEA/Outback/SHEGLAM.
 
 ---
 
@@ -877,12 +957,20 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@comcertezaaline` |
 | X | `comcertezaaline` |
 
+### Rodada adicional — Google Notícias + web (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `comcertezaaline TikTok` (RSS) | **Sem itens** |
+| `Aline com certeza TikTok` (RSS) | **Ruído** — **Aline Campos**, pets, BBB de terceiros |
+| `Aline Costa` Famous Birthdays (EN) | Menciona **`comcertezaaline`** no TikTok com ~5M seguidores (agregador) |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Agregador “Aline com Certeza” | Famous Birthdays (PT) | https://pt.famousbirthdays.com/people/aline-com-certeza.html | Cita TikTok **@aliineza** — **cruzamento obrigatório** com `@comcertezaaline`. |
-| Agregador (EN) | Famous Birthdays | https://www.famousbirthdays.com/people/aline-com-certeza.html | |
+| Agregador (EN) | Famous Birthdays | https://www.famousbirthdays.com/people/aline-com-certeza.html | Cita **`comcertezaaline`** — alinhar com PT ou confirmar mudança de @. |
 
 ### Marcas e parcerias — Aline Costa (web aberta, rodada marcas)
 
@@ -897,6 +985,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Concorrência** | Não encontrada nesta rodada evidência de parceria com bet/cassino/loteria concorrente. | Baixa (pouca fonte indexada) |
 | **Polêmicas** | Sem URL mapeada nesta rodada. | Baixa |
 | **Política** | Sem URL mapeada nesta rodada. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** **não** confiável para este nome — usar **site:tiktok.com** / **site:instagram.com** com **handle** ou briefing com **nome civil**. (2) Resolver **@aliineza** vs **`@comcertezaaline`**.
 
 ---
 
@@ -921,6 +1011,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Possível homônimo (não vincular sem prova) | Egobrazil | https://egobrazil.ig.com.br/davi-do-ceasa-o-influencer-que-conquistou-o-brasil-com-simplicidade-e-honestidade/ | “Davi do Ceasa” — outro caso. |
+
+**Rodada mar/2026:** buscas web e **Google Notícias (RSS)** com `davizoa`, `"Davi Zoa"` e variações — **sem** matéria que una o **handle** a nome ou fato; retornos são **Davi Brito (BBB)**, **Davi do Ceasa**, músico **Davizão**, etc.
 
 **Ação:** após identificação do perfil correto, acrescentar linhas nesta seção com URLs.
 
@@ -954,28 +1046,42 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@mineira.paula` |
 | X | `mineira_paula` |
 
+### Rodada adicional — Google Notícias (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Paula Mineira Areado` (RSS) | **Ruído** — notícias do **município** (TCE, acidentes, Enem) **sem** a influenciadora |
+| `Paula Mineira influencer` (RSS) | **Ruído** — “Paula” + “mineira” em outros contextos (BBB, mortes) |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil | Portal Onda Sul | https://www.portalondasul.com.br/conheca-paula-helena-a-influenciadora-de-areado-que-representa-o-interior-de-minas-gerais-nas-redes-sociais/ | “Paula Helena” / Paula Mineira. |
 | Arquivo de tags | Portal Onda Sul | https://www.portalondasul.com.br/tag/paula-mineira/ | |
+| **Prêmio iBest 2025** | Portal Onda Sul | https://www.portalondasul.com.br/premio-ibest-2025-publicitaria-de-areado-concorre-ao-premio-influenciador-minas-gerais/ | Cita **parcerias** com **Pousada do Canário**, **Casca Fina**, **Floricultura do Alex**; gravações com **Gustavo Tubarão** — **não** são bets; checar contrato no release. |
 
 **Concorrência (falso positivo):** busca genérica “clube + bet MG” pode retornar Athletic + Betnacional (Itatiaia) **sem** ligação com Paula — não usar como fonte do perfil sem conexão explícita.
+
+**Outros resultados de busca:** matéria **Plox** “Mineira… moda” refere-se a **Carla Balta** (“Paty da classe média”), **não** Paula Mineira — **não** copiar URL para este perfil.
 
 ### Marcas e parcerias — Paula Mineira (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| *Marcas nomeadas em matéria* | **Não localizado** nesta rodada | — | Completar nas quatro redes | — |
+| **Pousada do Canário**; **Casca Fina**; **Floricultura do Alex** | Citadas como parcerias na matéria **iBest** | Portal Onda Sul | https://www.portalondasul.com.br/premio-ibest-2025-publicitaria-de-areado-concorre-ao-premio-influenciador-minas-gerais/ | Média — confirmar com post |
+| **Gustavo Tubarão** | Colaboração de conteúdo (mídia) | Portal Onda Sul | Mesma URL | Média |
+| *Demais marcas* | Completar nas quatro redes | — | — | — |
 
 ### Achados objetivos — Paula Mineira (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada vínculo **da pessoa** com bet/cassino/loteria concorrente; descartar resultados de clube futebol + bet sem menção a Paula. | Média |
+| **Concorrência** | Não encontrada nesta rodada vínculo **da pessoa** com bet/cassino/loteria concorrente; descartar resultados de clube futebol + bet sem menção a Paula. Marcas citadas = **hospedagem**, **moda/acessórios**, **floricultura**. | Média |
 | **Polêmicas** | Não mapeado nesta rodada. | Baixa |
 | **Política** | Não mapeado nesta rodada. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** **Google Notícias** com nome + cidade **não** filtra o perfil — usar **`site:portalondasul.com.br`** ou handles.
 
 ---
 
@@ -993,6 +1099,14 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 | YouTube | `@catracalivre` |
 | X | `catracalivre` |
 
+### Rodada adicional — Google Notícias (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Catraca Livre` (RSS) | Maioria = **URLs do próprio portal** (lazer, gastronomia) — pouco útil para os três eixos |
+| `Catraca Livre Chapecoense` (RSS) | **Meio & Mensagem** (“erros na tragédia”); **Folha Vitória**; **DCM**; **O Dia** |
+| `Catraca Livre Rodrigo Faro` (RSS) | Mix de matérias **catracalivre.com.br** sobre Faro + **Metrópoles** |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -1000,6 +1114,12 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 | Editorial / apostas | Catraca Livre | https://catracalivre.com.br/apostas/apostas-esportivas-como-funciona/ | Conteúdo sobre apostas esportivas. |
 | Editorial / mercado | Catraca Livre | https://catracalivre.com.br/variedades/novas-casas-de-apostas-ganham-licenca-definitiva-para-operar-no-brasil/ | |
 | **Litígio reputacional** | Metrópoles (Fabia Oliveira) | https://www.metropoles.com/colunas/fabia-oliveira/rodrigo-faro-acusa-portal-de-atacar-sua-reputacao-e-aponta-fake-news | Faro vs. Catraca Livre (fake news / honra). |
+| **Crise editorial — tragédia Chapecoense (2016)** | Folha Vitória | https://www.folhavitoria.com.br/esportes/catraca-livre-pede-desculpas-apos-gafes-na-cobertura-da-tragedia-com-voo-da-chapecoense/ | Repercussão, pedido de desculpas. |
+| Idem | O Dia | https://odia.ig.com.br/brasil/2016-12-08/catraca-livre-tem-imagem-arranhada-com-tragedia-da-chapecoense-e-perde-seguidores-no-facebook.html | Perda de seguidores / imagem. |
+| Idem (opinião) | Diário do Centro do Mundo | https://www.diariodocentrodomundo.com.br/a-justa-reacao-ao-oportunismo-barato-do-catraca-livre-diante-da-tragedia-da-chapecoense-por-kiko-nogueira/ | Ângulo **crítico** ao portal. |
+| **Campanha “anti-Catraca” (2016)** | Daqui (O Popular) | https://daqui.opopular.com.br/geral/apos-infeliz-postagem-internautas-se-unem-em-campanha-contra-o-catraca-livre-1.1187686 | Mobilização de internautas. |
+| **Google Notícias / Meio & Mensagem** | Título no RSS | *Catraca Livre: erros na tragédia* | Slug direto `meioemensagem.com.br/midia/catraca-livre-erros-na-tragedia` retornou **404** no `curl` (mar/2026) — buscar no arquivo do veículo ou título exato. |
+| **Parcerias de mídia (histórico)** | Meio & Mensagem | https://www.meioemensagem.com.br/midia/catraca-livre-vira-parceiro-da-epoca-sp · https://www.meioemensagem.com.br/midia/catraca-livre-e-otima-unidos-pelo-lazer | **Não** são bets; contexto **negócio editorial**. |
 
 **Contexto setorial (não específico do portal):** UOL lista bets barradas — https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/10/02/bet-que-patrocina-seu-time-foi-barrada-pelo-governo-veja-lista.htm — útil só para **cenário regulatório**, não para atribuir parceria comercial do veículo com operador.
 
@@ -1007,15 +1127,18 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| *Parcerias comerciais do portal* | **Não mapeadas** nesta rodada | — | Completar via página institucional / Publis / releases | — |
+| **Época SP**; **Ôtima** | **Parceria editorial / lazer** (matérias de trade) | Meio & Mensagem | Ver tabela **Fontes** | Média — legado |
+| *Parcerias comerciais atuais (programmatic / branded)* | **Não mapeadas** nesta rodada | — | Completar via página institucional / Publis / releases | — |
 
 ### Achados objetivos — Catraca Livre (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | O site **publica** matéria sobre **apostas** e **operadoras** — é **cobertura editorial**, não equivale automaticamente a “parceria paga” com bet; para campanha Caixa/Loterias, o **tema** no próprio veículo exige **alinhamento editorial** e checagem de anúncios programmatic / branded content. | Alta (URLs próprias do portal) |
-| **Polêmicas** | **Litígio / acusações** envolvendo **Rodrigo Faro** e alegações de **fake news** (coluna Metrópoles) — risco reputacional para parcerias sensíveis. | Média a alta |
+| **Polêmicas** | **(1)** Crise **2016** na cobertura da **tragédia da Chapecoense** — múltiplos veículos; pedido de desculpas e perda de audiência. **(2)** **Rodrigo Faro** — acusação de **fake news** / ataque à reputação (**Metrópoles**). | Alta (histórico + Faro) |
 | **Política** | Não mapeado nesta lista posicionamento partidário explícito do veículo; pauta diversa — completar com linha editorial recorrente se necessário. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** linhas na tabela global. (2) Recuperar URL **estável** da matéria **Meio & Mensagem** sobre **Chapecoense** (404 no teste). (3) Mapear **monetização** atual (ads / branded) se exigido pelo compliance.
 
 ---
 
