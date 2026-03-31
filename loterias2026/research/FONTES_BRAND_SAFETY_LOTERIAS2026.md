@@ -11,6 +11,7 @@
 - **Coleta:** busca em **web aberta** (notícias, veículos, páginas institucionais indexadas). **Não** houve, nesta rodada, captura sistemática de posts em Instagram, TikTok, YouTube ou X.
 - **Uso no relatório final:** cada achado deve citar a URL abaixo; onde não houver URL, registrar **“sem achado público nesta rodada”** — isso **não** prova ausência de fato.
 - **Concorrência:** distinguir **parceria/publipost** com operador de aposta ou loteria de **menção temática** (humor, título de espetáculo, notícia editorial).
+- **Marcas / parcerias:** registrar **marca ou organização** + **tipo de vínculo** (campanha paga, agenciamento, empregador, produto próprio, mídia/evento, revenda de curso). Lista da web costuma estar **incompleta**; completar com **#publi** / arquivo de stories e **press release** da assessoria.
 - **Confiança (sugestão para o relatório):** *Alta* = várias fontes independentes ou documento primário claro; *Média* = uma boa fonte jornalística; *Baixa* = agregador, rumor, ou página não verificada (ex.: SEO/spam).
 
 **Data de referência da compilação:** 31/03/2026.
@@ -46,6 +47,18 @@
 | Contexto relacionamento / Buda | O Globo | https://oglobo.globo.com/cultura/noticia/2024/03/04/bbb24-namorado-de-pitel-nao-comenta-sobre-conversa-entre-sister-e-buda-saiba-mais-sobre-o-relacionamento-aberto.ghtml | Relacionamento aberto; repercussão BBB. |
 | Discurso (xenofobia sofrida) | Correio Braziliense | https://www.correiobraziliense.com.br/colunistas/mariana-morais/2024/05/6867748-ex-bbb-giovanna-pitel-chora-e-revela-que-sofreu-xenofobia.html | Relato de ataques xenofóbicos pós-BBB. |
 | Discurso (xenofobia / sotaque) | Notícia Preta | https://noticiapreta.com.br/continuar-ocupando-espacos-com-o-sotaque-carregado-mesmo-pitel-fala-sobre-nao-ter-recuado-diante-de-comentarios-xenofobos/ | Entrevista sobre resistência a xenofobia. |
+| **Campanha (laticínios)** | Portal Nosso Meio | https://nossomeio.com.br/fernanda-bande-ana-paula-xongani-e-giovanna-pitel-estrelam-nova-campanha-da-piracanjuba/ | **Piracanjuba** — “Para Viver Bem”, 70 anos, 2025; filmes/reels (Gshow). |
+
+### Marcas e parcerias — Giovanna Pitel (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| **Piracanjuba** | Campanha publicitária (“Para Viver Bem”, aniversário 70 anos, 2025) | Portal Nosso Meio | https://nossomeio.com.br/fernanda-bande-ana-paula-xongani-e-giovanna-pitel-estrelam-nova-campanha-da-piracanjuba/ | Alta |
+| **Globo / Multishow / Globoplay / Gshow** | Contrato de agenciamento e trabalhos em grade (ex.: renovação 2024; *Na Cama com Pitanda*; *MesaCast* BBB 25) | Terra; NaTelinha; Folha F5 | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html · https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php · https://www.terra.com.br/diversao/gente/giovanna-pitel-impulsiona-trajetoria-com-transformacao-usar-minha-voz-para-fazer-algo-maior,00fc30e81906608f19744b2e721180ad48r0lc63.html | Alta (contrato); média (lista exata de projetos) |
+| **ViU Hub** | Unidade de **agenciamento comercial** da Globo (representação para marcas em redes) | NaTelinha; Folha F5; Terra | Mesmas URLs de renovação acima | Alta |
+| *Outras marcas em publipost* | Matérias citam “ações com grandes marcas” **sem nomear** | NaTelinha; Terra (renovação) | Idem | Baixa (genérico — exige Instagram/arquivo) |
+
+**Não encontrado nesta rodada (nome explícito):** parcerias com Shein, Natura, O Boticário etc. — buscas retornaram **Giovanna Lancellotti** ou notícias de mercado sem Pitel.
 
 ### Achados objetivos — Giovanna Pitel (rodada aprofundada)
 
@@ -71,12 +84,26 @@
 | Curso (terceiro revende MFMA) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | **“Bet” aqui é nome da plataforma de cursos**, não casa de apostas; produto = Protocolo MFMA. |
 | Mudança de produto (agregador) | Viralizou | https://viralizou.net/internet/rafael-gratta-cancela-treinamento-e-promete-algo-novo/ | Cancelamento/reformulação MFMA → AURA; checar tom “polêmico”. |
 | **Não usar como fato** | Página tipo SEO (“cassino… 2026”) | https://grupoea.net.br/cache/index.php?tunnel=rafael-gratta | **Confiança baixa**; possível spam/afiliado; exige descarte ou confirmação independente. |
+| **Parceiro operacional (live)** | JorNow (release) | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Live “Dia D: a Dopamina…” (ago/2024) com apoio da **Curta** (hub para criadores). |
+| **Privacidade / ads** | AURA (site) | https://rafaelgratta.com/politica-privacidade/ | Menção a cookies/publicidade (ex.: ecossistema Google); não lista “marcas patrocinadoras” de conteúdo orgânico. |
+
+### Marcas e parcerias — Rafael Gratta (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| **AURA** (“Mais Foco Menos Ansiedade” — razão social em **Termos de Uso** do site, conferir versão atual) | **Marca própria** — plataforma/cursos de desenvolvimento pessoal e saúde mental | rafaelgratta.com | https://rafaelgratta.com/ · https://rafaelgratta.com/bio/ · https://rafaelgratta.com/termos-de-uso/ | Alta |
+| **Protocolo MFMA** | Produto digital próprio (histórico); revenda por terceiros | Bet Cursos; Viralizou | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ · https://viralizou.net/internet/rafael-gratta-cancela-treinamento-e-promete-algo-novo/ | Alta (produto); média (revenda) |
+| **Curta** | Empresa parceira (apoio à live “Dia D”, ago/2024); imprensa associa à operação da AURA em outros textos | JorNow | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Média |
+| **Flow Podcast**; **Inteligência Ltda.** | **Participação como convidado** (mídia/podcast) — não implica, por si só, patrocínio pago ao criador | Apple Podcasts; Everand | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 · https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Média |
+| **Bet Cursos** | **Plataforma terceira** que vende o curso MFMA (nome comercial “Bet”; **não** é casa de apostas) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | Alta |
+
+**Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco). Completar via **Instagram** (marcar #publi / “parceria paga”) e **Media Kit** da assessoria.
 
 ### Achados objetivos — Rafael Gratta (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilância: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
+| **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilência: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
 | **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; não se encontrou, nesta rodada, escândalo criminal ou “cancelamento” massivo documentado em veículo mainstream. Questões de **saúde mental / promessa de resultado** são risco recorrente do nicho — exige revisão de peças e disclaimers, não provado aqui como ilícito. | Média |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
 
@@ -96,6 +123,18 @@
 | **Cancelamento de shows (2024)** | Correio do Povo | https://www.correiodopovo.com.br/arteagenda/%C3%ADndio-benh-cancela-agenda-de-espet%C3%A1culos-at%C3%A9-o-fim-de-2024-1.1542049 | Motivos citados: questões com produtora, qualidade, reembolsos. |
 | Cancelamento (regional) | Campo Grande News | https://www.campograndenews.com.br/lado-b/diversao/sucesso-como-dra-rosangela-i-ndio-behn-cancela-apresentacao-na-capital | |
 | Cancelamento (institucional) | Univates | https://www.univates.br/cultura/noticias/35737-indio-behn-cancela-shows-da-turne-gratiluz-com-dra-rosangela | |
+| Contato comercial (site) | Índio Behn | https://indiobehn.com.br/ | Seções de **publicidade** / contratação; **não** listam marcas parceiras. |
+| Palestras (corporativo / SIPAT) | SIPAT Show | https://sipatshow.com.br/palestrante-indio-behn-palestrante-ator-e-musico-indio-behn/ | Oferta de palestras; **sem** nomes de empresas cliente na página captada. |
+
+### Marcas e parcerias — Índio Behn (web aberta, rodada marcas)
+
+| Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
+|---------------------|-----------------|--------|-----|------------|
+| **SBT** | Trabalho em programa de TV (**A Praça É Nossa**) | Correio do Povo; site oficial; Giro de Gravataí | https://www.correiodopovo.com.br/cadernodesabado/%C3%ADndio-behn-fen%C3%B4meno-dos-personagens-do-feed-e-do-palco-1.879228 · https://indiobehn.com.br/ | Alta (empregador emissor) |
+| **Shows / IP próprios** | *Gratiluz*, *Tratamento de Choque*, *Causos de Família*, personagem **Dra. Rosângela** | Site; ISTOÉ; imprensa regional | https://indiobehn.com.br/gratiluz/ · https://istoe.com.br/humorista-por-tras-da-personagem-dra-rosangela-indio-behn-comemora-sucesso-da-primeira-turne-nacional/ | Alta |
+| *Marcas de consumo em publipost* | **Não localizado** nome de marca em matéria jornalística nesta rodada | — | Completar via **Instagram** / **agência (e-mail no site)** | — |
+
+**Observação:** não confundir buscas “bebê indígena + Johnson's” etc. com Índio Behn — são casos distintos.
 
 ### Achados objetivos — Índio Behn (rodada aprofundada)
 
