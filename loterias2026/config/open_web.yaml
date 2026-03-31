@@ -1,0 +1,27 @@
+# Coleta web aberta — ajuste sem alterar código.
+# Dica: muitos RSS grandes por perfil deixam o pipeline lento; ative feeds com moderação.
+
+delays_seconds:
+  wikipedia: 0.3
+  google_news: 0.45
+  web_search: 0.7
+  feed: 0.35
+
+limits:
+  wiki_search_hits: 1
+  wiki_extract_max_chars: 1200
+  google_news_per_query: 8
+  web_search_max_results: 6
+  feed_entries_per_source: 15
+  feed_fetch_max_bytes: 1200000
+
+# RSS de portais (vazio = rápido). Adicione feeds conforme necessidade.
+# Exemplo (pode ser lento com 13 perfis):
+# feeds_br:
+#   - url: "https://g1.globo.com/rss/g1/"
+#     label: "g1"
+feeds_br: []
+
+# Wikipedia EN (1 hit) — útil para biografias; aumenta tempo por perfil
+wikipedia_en: false
+wikipedia_en_limit: 1

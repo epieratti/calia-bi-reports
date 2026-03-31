@@ -53,16 +53,24 @@ polemicas:
   - prisão
   - prisao
 
+# Estes casam só como palavra inteira (evita "pt" em "capturar", "pl" em "completo")
+politica_palavra_inteira:
+  - pt
+  - pl
+  - psol
+  - psdb
+  - mdb
+  - stf
+  - tse
+
 politica:
   - lula
   - bolsonaro
-  - pt
   - pl partido
   - eleições 2026
   - eleicoes 2026
   - voto
   - impeachment
-  - stf
   - congresso nacional
   - militância
   - militancia
