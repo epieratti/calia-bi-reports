@@ -28,6 +28,15 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_RAW = ROOT / "data" / "raw"
 INFLUENCERS_PATH = ROOT / "data" / "influencers.yaml"
 
+# Actors padrão da Apify Store (sobrescreva com APIFY_*_ACTOR_ID se quiser outro)
+DEFAULT_ACTORS = {
+    "instagram": "apify/instagram-scraper",
+    "tiktok": "clockworks/tiktok-scraper",
+    "x": "apidojo/twitter-scraper-lite",
+}
+
+POSTS_PER_PROFILE = 15
+
 load_dotenv(ROOT / ".env")
 
 SESSION = requests.Session()
@@ -115,8 +124,8 @@ def apify_actor_path(actor_id: str) -> str:
     return actor_id.strip().replace("/", "~")
 
 
-def run_apify_actor(actor_id: str, run_input: dict, token: str) -> dict | None:
-    """Inicia run e aguarda dataset (simplificado)."""
+def run_apify_actor(actor_id: str, run_input: dict, token: str) -> dict:
+    """Inicia run, aguarda término e devolve itens do dataset ou mensagem de erro."""
     base = "https://api.apify.com/v2"
     aid = apify_actor_path(actor_id)
     headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
@@ -124,26 +133,46 @@ def run_apify_actor(actor_id: str, run_input: dict, token: str) -> dict | None:
         f"{base}/acts/{aid}/runs",
         headers=headers,
         json=run_input,
-        timeout=60,
+        timeout=90,
     )
     if not r.ok:
-        return None
+        return {
+            "items": [],
+            "run_id": None,
+            "error": f"HTTP {r.status_code}: {(r.text or '')[:800]}",
+        }
     run = r.json().get("data") or {}
     rid = run.get("id")
     if not rid:
-        return None
-    for _ in range(120):
-        s = SESSION.get(f"{base}/actor-runs/{rid}", headers=headers, timeout=60)
+        return {"items": [], "run_id": None, "error": "resposta sem run id"}
+    final_status = None
+    for _ in range(300):
+        s = SESSION.get(f"{base}/actor-runs/{rid}", headers=headers, timeout=90)
         if not s.ok:
-            return None
+            return {
+                "items": [],
+                "run_id": rid,
+                "error": f"status run HTTP {s.status_code}",
+            }
         st = (s.json().get("data") or {}).get("status")
+        final_status = st
         if st in ("SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"):
             break
         time.sleep(2)
-    d = SESSION.get(f"{base}/actor-runs/{rid}/dataset/items", headers=headers, timeout=120)
+    if final_status != "SUCCEEDED":
+        return {
+            "items": [],
+            "run_id": rid,
+            "error": f"run terminou com status={final_status}",
+        }
+    d = SESSION.get(f"{base}/actor-runs/{rid}/dataset/items", headers=headers, timeout=180)
     if not d.ok:
-        return None
-    return {"items": d.json(), "run_id": rid}
+        return {
+            "items": [],
+            "run_id": rid,
+            "error": f"dataset HTTP {d.status_code}",
+        }
+    return {"items": d.json(), "run_id": rid, "error": None}
 
 
 def collect_youtube(profiles: list[dict]) -> Path:
@@ -189,9 +218,44 @@ def collect_youtube(profiles: list[dict]) -> Path:
     return path
 
 
-def collect_apify_placeholder(
+def _norm_apify_item(platform: str, item: dict) -> dict[str, str]:
+    """Extrai campos comuns para classificação."""
+    url = (
+        item.get("url")
+        or item.get("webVideoUrl")
+        or item.get("twitterUrl")
+        or item.get("postUrl")
+        or ""
+    )
+    text = item.get("text") or item.get("full_text") or ""
+    title = item.get("title") or ""
+    cap = item.get("caption") or ""
+    desc = item.get("description") or item.get("summary") or ""
+    pub = (
+        item.get("timestamp")
+        or item.get("createTimeISO")
+        or item.get("createdAt")
+        or item.get("date")
+        or ""
+    )
+    if isinstance(pub, str):
+        pub_s = pub
+    else:
+        pub_s = str(pub)
+    return {
+        "url": str(url),
+        "title": str(title),
+        "caption": str(cap or text),
+        "description": str(desc),
+        "text": str(text),
+        "published_at": pub_s,
+    }
+
+
+def collect_apify_platform(
     platform: str,
     actor_env: str,
+    default_actor: str,
     profiles: list[dict],
     build_input,
 ) -> Path:
@@ -199,51 +263,51 @@ def collect_apify_placeholder(
     if path.exists():
         path.unlink()
     token = os.environ.get("APIFY_TOKEN", "").strip()
-    actor_id = os.environ.get(actor_env, "").strip()
-    if not token or not actor_id:
+    actor_id = os.environ.get(actor_env, "").strip() or default_actor
+    if not token:
         append_jsonl(
             path,
             {
                 "platform": platform,
-                "note": f"Configure APIFY_TOKEN e {actor_env} no .env para coleta Apify.",
+                "note": (
+                    "Defina APIFY_TOKEN: variável de ambiente do sistema (ex.: secrets do Cursor) "
+                    "ou arquivo loterias2026/.env — sem token a Apify não roda."
+                ),
                 "collected_at": datetime.now(timezone.utc).isoformat(),
             },
         )
         return path
     for p in profiles:
         inp = build_input(p)
+        if inp is None:
+            continue
         res = run_apify_actor(actor_id, inp, token)
-        if not res:
+        err = res.get("error")
+        items = res.get("items") or []
+        if err or not items:
             append_jsonl(
                 path,
                 {
                     "platform": platform,
                     "profile_name": p.get("name"),
-                    "error": "Apify run falhou ou sem itens",
+                    "handle": inp.get("_handle", ""),
+                    "error": err or "nenhum item no dataset",
+                    "apify_run_id": res.get("run_id"),
                     "collected_at": datetime.now(timezone.utc).isoformat(),
                 },
             )
             continue
-        for item in res.get("items") or []:
-            rec = {
+        for item in items:
+            rec: dict = {
                 "platform": platform,
                 "profile_name": p.get("name"),
-                "handle": inp.get("username") or inp.get("usernames") or "",
+                "handle": str(inp.get("_handle", "")),
                 "raw": item,
                 "collected_at": datetime.now(timezone.utc).isoformat(),
             }
-            # Normalização mínima (Actors variam no schema)
             if isinstance(item, dict):
-                rec["url"] = item.get("url") or item.get("webVideoUrl") or item.get("postUrl") or ""
-                rec["title"] = item.get("title") or item.get("text") or ""
-                rec["caption"] = item.get("caption") or item.get("description") or rec["title"]
-                rec["description"] = item.get("description") or ""
-                rec["published_at"] = str(
-                    item.get("timestamp")
-                    or item.get("date")
-                    or item.get("createdAt")
-                    or ""
-                )
+                n = _norm_apify_item(platform, item)
+                rec.update(n)
             append_jsonl(path, rec)
         time.sleep(1)
     return path
@@ -303,27 +367,74 @@ def collect_x_tweepy(profiles: list[dict]) -> None:
         time.sleep(1)
 
 
+def _ig_input(p: dict) -> dict | None:
+    u = str(p.get("instagram") or "").strip().lstrip("@")
+    if not u:
+        return None
+    return {
+        "_handle": u,
+        "directUrls": [f"https://www.instagram.com/{u}/"],
+        "resultsType": "posts",
+        "resultsLimit": POSTS_PER_PROFILE,
+    }
+
+
+def _tt_input(p: dict) -> dict | None:
+    u = str(p.get("tiktok") or "").strip().lstrip("@")
+    if not u:
+        return None
+    return {
+        "_handle": u,
+        "profiles": [u],
+        "resultsPerPage": POSTS_PER_PROFILE,
+        "profileScrapeSections": ["videos"],
+        "profileSorting": "latest",
+        "shouldDownloadVideos": False,
+        "shouldDownloadSubtitles": False,
+        "shouldDownloadSlideshowImages": False,
+        "shouldDownloadCovers": False,
+        "shouldDownloadMusicCovers": False,
+        "shouldDownloadAvatars": False,
+    }
+
+
+def _x_input(p: dict) -> dict | None:
+    h = str(p.get("x") or "").strip().lstrip("@")
+    if not h:
+        return None
+    # twitter-scraper-lite: sem mínimo de 50 tweets (diferente do tweet-scraper V2)
+    return {
+        "_handle": h,
+        "searchTerms": [f"from:{h} -filter:retweets"],
+        "sort": "Latest",
+        "maxItems": POSTS_PER_PROFILE,
+    }
+
+
 def main() -> None:
     profiles = load_profiles()
     collect_youtube(profiles)
 
-    collect_apify_placeholder(
+    collect_apify_platform(
         "instagram",
         "APIFY_INSTAGRAM_ACTOR_ID",
+        DEFAULT_ACTORS["instagram"],
         profiles,
-        lambda p: {"username": [str(p.get("instagram") or "").replace("@", "")], "resultsLimit": 15},
+        _ig_input,
     )
-    collect_apify_placeholder(
+    collect_apify_platform(
         "tiktok",
         "APIFY_TIKTOK_ACTOR_ID",
+        DEFAULT_ACTORS["tiktok"],
         profiles,
-        lambda p: {"profiles": [str(p.get("tiktok") or "").replace("@", "")], "resultsPerPage": 15},
+        _tt_input,
     )
-    collect_apify_placeholder(
+    collect_apify_platform(
         "x",
         "APIFY_X_ACTOR_ID",
+        DEFAULT_ACTORS["x"],
         profiles,
-        lambda p: {"searchTerms": [str(p.get("x") or "").replace("@", "")], "maxTweets": 15},
+        _x_input,
     )
 
     collect_x_tweepy(profiles)
