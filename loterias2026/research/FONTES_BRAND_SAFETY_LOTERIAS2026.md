@@ -28,8 +28,8 @@
 
 | O que o relatório externo afirma | Handle / pessoa do squad | Status nesta auditoria |
 |----------------------------------|---------------------------|-------------------------|
-| **“Paula Mineira”** = **Paula von Sperling**, campeã **BBB 19**, polêmica racial, “marcas têm medo de mim”, **Miss Universe MG** | **`@mineira.paula`** = **Paula Helena de Oliveira**, **Areado (MG)**, **iBest 2025** (Portal Onda Sul) | **NÃO MISTURAR** — são **pessoas diferentes**; as URLs **UAI**, **Notícias da TV** e **Itatiaia** sobre **Paula von Sperling** **não** se aplicam a **`@mineira.paula`** sem prova adicional. |
-| **“Davi”** = **Davi Brito** (BBB 24), loja, bordão **“calma calabreso”**, polêmica judicial | **`@davizoa`** — **apelido/handle do squad**; **não** é **Davi Brito** (correção do briefing) | **NÃO MISTURAR** — matérias sobre **Davi Brito** **não** servem como prova para **`@davizoa`**; falta **imprensa ou primário** que una o **handle** a nome/fato. |
+| **“Paula Mineira”** no relatório externo (narrativa + URLs sem cruzamento com o YAML) | **`@mineira.paula`** — **Paula Helena de Oliveira**, **Areado (MG)**, **iBest 2025** (Portal Onda Sul) | Só aceitar achados do pacote quando **matéria ou post** citar **`@mineira.paula`**, **Paula Helena** ou outro identificador **inequívoco**; matérias genéricas “Paula + mineira” ou **BBB** **não** contam como prova deste perfil. |
+| **“Davi”** no relatório externo (sem **`@davizoa`** no texto) | **`@davizoa`** — apelido/handle do squad | **Não** incorporar matérias que **não** liguem **nome + handle** ou **primário** ao talento; nesta base falta **imprensa indexada** que una **`@davizoa`** a fatos. |
 | **Aline Costa** = repórter **TV Fronteira** / jornalismo institucional | **`@comcertezaaline`** = criadora de humor **TikTok** (Famous Birthdays cita **@aliineza** / **comcertezaaline**) | **Provável troca de perfil** — validar com **nome civil** e canal **YouTube** citado no relatório antes de fundir achados. |
 | **Cereja** = “gaming”, “Goob Vibes”, **Salvador** | **`@cerejaaaaaa`** (agregador **Wupper**: **Ana Thereza**, humor/POV, marcas **NIVEA** etc.) | **Inconsistência de nicho** no relatório — manter **Wupper + YAML** até confirmação em **IG/TT** do handle do squad. |
 
@@ -54,7 +54,7 @@
 - **Cleane:** **YouTube** Os Nordestinos pelo Mundo (#451); outros vídeos do pacote (FOC etc.).
 - **Cristian Wariu:** **YouTube** Feat 006 (`nTWmls8Kb-g`); **PROTEJA Talks** (`zSwUrx0vTlM`). **COP30:** no pacote, o mesmo ID de vídeo foi atribuído a **Gratta** — **URL de COP30 para Wariu** ficou **pendente** na **§8**.
 - **Megh Melry:** **GiroGO** (URL do pacote; 403 no `curl` aqui).
-- **Aline / Davi / Paula “Mineira” / Catraca:** ver **alertas** acima; **Davi** no pacote externo = **Davi Brito** — **não** incorporar em **`@davizoa`** (briefing: **apelido davizoa** é **outra pessoa**); **Catraca** (Dell / Disney+) **não** verificado nesta rodada — marcar como **hipótese do relatório**.
+- **Aline / Davi / Paula “Mineira” / Catraca:** ver **alertas** acima; trechos do pacote sobre **“Davi”** sem **`@davizoa`** — **não** incorporar em **`@davizoa`**; idem **“Paula Mineira”** sem cruzamento com **`@mineira.paula`**; **Catraca** (Dell / Disney+) **não** verificado nesta rodada — marcar como **hipótese do relatório**.
 - **Transversal:** **Metrópoles** (Leo Dias) sobre **cláusulas de neutralidade política** em contratos — contexto de mercado, não vínculo a um nome da lista.
 - **Fora de escopo no pacote (não usar como prova do squad):** PDF acadêmico **Cercomp/UFG** e texto **uBibliorum** — não citam os 13 perfis do YAML de forma verificável.
 
@@ -1085,15 +1085,15 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 ### Fontes coletadas (web aberta)
 
-**Status:** nenhuma fonte jornalística inequívoca para o handle **`@davizoa`** nesta compilação — **apesar** do briefing de que **davizoa** é o **apelido** do talento (persona **distinta** de **Davi Brito**).
+**Status:** nenhuma fonte jornalística inequívoca para o handle **`@davizoa`** nesta compilação. Briefing: **davizoa** é o **apelido** do talento no squad.
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Possível homônimo (não vincular sem prova) | Egobrazil | https://egobrazil.ig.com.br/davi-do-ceasa-o-influencer-que-conquistou-o-brasil-com-simplicidade-e-honestidade/ | “Davi do Ceasa” — outro caso. |
 
-**Rodadas mar/2026 + complemento 31/03/2026:** buscas web (incl. `site:instagram.com`, menções `@davizoa`) e **Google Notícias (RSS)** com `davizoa`, `"Davi Zoa"` — **sem** matéria que una o **handle** a nome ou fato; retornos genéricos continuam sendo **Davi Brito (BBB)**, **Davi do Ceasa**, músico **Davizão**, contas **Davi** com outros usernames, etc.
+**Rodadas mar/2026 + complemento 31/03/2026:** buscas web (incl. `site:instagram.com`, menções `@davizoa`) e **Google Notícias (RSS)** com `davizoa`, `"Davi Zoa"` — **sem** matéria que una o **handle** a nome ou fato; muitos retornos são **outros** criadores ou homônimos “Davi” **sem** vínculo com **`@davizoa`** (ex.: “Davi do Ceasa”, músico **Davizão**, usernames parecidos).
 
-**Relatório externo — não aplicar a `@davizoa` sem prova:** matérias sobre **Davi Brito** (BBB 24), bordão **“calma calabreso”**, loja, processos — ex.: https://aloalobahia.com/noticias/2025/05/16/davi-brito-se-envolve-em-nova-polemica-judicial-apos-abrir-loja-de-roupas-entenda/ — referem-se a **outra pessoa** e **não** substituem evidência sobre **`@davizoa`**.
+**Relatório externo:** só usar trechos que cite **`@davizoa`** ou identificação confirmada pelo briefing/agência — o restante do pacote **não** entra nesta seção.
 
 **Ação:** (1) abrir **`@davizoa`** no app (IG/TT) logado e registrar **nome no perfil**, **bio**, **#publi** e prints com data; (2) obter **nome civil** ou **release** da agência para buscas `site:`; (3) então acrescentar linhas nesta seção com **URLs** de matérias ou posts arquivados.
 
@@ -1111,7 +1111,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | Idem. | Baixa |
 | **Política** | Idem. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias** + busca web: **sem** índice útil para o handle. (2) **Instagram** `davizoa`: só acessível com **login** neste ambiente — precisa **app** ou **print** primário. (3) Briefing: **apelido davizoa** ≠ **Davi Brito** — manter separação nas fontes.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias** + busca web: **sem** índice útil para o handle. (2) **Instagram** `davizoa`: só acessível com **login** neste ambiente — precisa **app** ou **print** primário. (3) Não preencher lacunas com matérias sobre **outros** “Davi” sem **`@davizoa`** no texto.
 
 ---
 
@@ -1136,12 +1136,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | `Paula Mineira Areado` (RSS) | **Ruído** — notícias do **município** (TCE, acidentes, Enem) **sem** a influenciadora |
 | `Paula Mineira influencer` (RSS) | **Ruído** — “Paula” + “mineira” em outros contextos (BBB, mortes) |
 
-### Desambiguação crítica — **Paula Mineira (`@mineira.paula`)** ≠ **Paula von Sperling** (BBB 19)
+### Uso do relatório externo — **Paula Mineira (`@mineira.paula`)**
 
-| Pessoa | Quem é (nesta compilação) | Fontes do **relatório externo** que **não** devem ir para **`@mineira.paula`** sem revisão |
-|--------|---------------------------|--------------------------------------------------------------------------------------------------|
-| **Paula Helena / Paula Mineira** | Influenciadora de **Areado (MG)**; **Portal Onda Sul** + **iBest 2025** | — |
-| **Paula von Sperling** | Campeã **BBB 19**; polêmicas no reality; “marcas têm medo de mim”; **Miss Universe MG** | Notícias da TV — https://noticiasdatv.uol.com.br/noticia/bbb/acusada-de-racismo-no-bbb19-paula-reclama-marcas-tem-medo-de-mim-28574 · UAI — https://www.uai.com.br/app/entretenimento/famosos/2026/03/01/not-famosos,378629/lembra-dela-saiba-o-que-a-campea-do-bbb-19-paula-von-sperling-faz-hoje.shtml · Itatiaia — https://www.itatiaia.com.br/entretenimento/ex-bbb-paula-von-sperling-jurada-do-miss-universe-mg-critica-resultado-do-concurso/ · Purepeople (pacote) |
+Só incorporar itens do pacote quando a fonte citar **`@mineira.paula`**, **Paula Helena de Oliveira** (ou nome civil confirmado pelo briefing) ou outro vínculo **inequívoco**. Matérias genéricas com “Paula”, “mineira” ou **BBB** **sem** esse cruzamento **não** entram neste perfil.
 
 ### Fontes coletadas (web aberta)
 
@@ -1171,7 +1168,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | Não mapeado nesta rodada. | Baixa |
 | **Política** | Não mapeado nesta rodada. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** **Google Notícias** com nome + cidade **não** filtra o perfil — usar **`site:portalondasul.com.br`** ou handles. **Não** importar URLs de **Paula von Sperling** (BBB 19) para **`@mineira.paula`** — ver **Desambiguação** acima.
+**Checklist de completude (snapshot mar/2026):** **Google Notícias** com nome + cidade **não** filtra o perfil — usar **`site:portalondasul.com.br`** ou handles. **Não** importar para **`@mineira.paula`** URLs do pacote externo **sem** cruzamento explícito com o handle ou com **Paula Helena** (ver subseção acima).
 
 ---
 
