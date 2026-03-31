@@ -6,7 +6,7 @@ Documento **separado** do arquivo de **resultados** (`FONTES_BRAND_SAFETY_LOTERI
 
 ## Escopo da coleta
 
-- **Coleta:** web aberta (notícias, sites institucionais indexados). Nesta fase **não** há media kit nem acesso sistemático a Instagram/TikTok/YouTube/X.
+- **Coleta:** web aberta (notícias, sites institucionais indexados). Nesta fase **não** há media kit nem acesso sistemático pago às APIs das redes. Para **ampliar** cobertura com perfil público, ver seção **Ferramentas open source e fluxo OSINT** (Instaloader, yt-dlp, Sherlock, etc.) — uso local e respeitando ToS.
 - **Concorrência:** distinguir parceria/publipost com operador de aposta ou loteria de menção temática (humor, espetáculo, notícia).
 - **Marcas:** nesta fase só entram com **prova pública** (matéria, post arquivado, vídeo); senão ficam como “não verificado”.
 - **Confiança sugerida:** Alta = várias fontes ou primário claro; Média = um veículo sólido; Baixa = agregador, rumor, SEO.
@@ -82,3 +82,42 @@ Jogo do bicho, banca vs. Mega-Sena/CAIXA informativo.
 
 - Media kit Curta em DNS normal
 - Lista formal ViU / assessoria (se cliente abrir fase comercial)
+
+---
+
+## Ferramentas open source e fluxo OSINT (quando a imprensa não cobre o handle)
+
+**Objetivo:** enriquecer perfis “finos” na web (ex.: `@davizoa`, `@comcertezaaline`) **sem** painel proprietário de rede social — usando **perfil público**, legendas, hashtags e metadados que já são visíveis no browser.
+
+**Avisos obrigatórios**
+
+- **Termos de uso** das plataformas podem **proibir** automação; uso excessivo gera **bloqueio** de IP/conta. Preferir **volume baixo**, **intervalo** entre requisições e **só** o necessário para o dossiê.
+- **Não** é substituto de **briefing** (nome civil, @ canônico): continua sendo a fonte mais segura para desambiguar homônimos.
+- Resultado de scraper = **primário frágil**: salvar **HTML/PDF**, **timestamp** e **URL**; plataformas mudam layout e quebram ferramentas.
+
+### Ferramentas no GitHub (ponto de partida)
+
+| Ferramenta | Repositório | Uso típico neste projeto |
+|------------|-------------|---------------------------|
+| **Instaloader** | [instaloader/instaloader](https://github.com/instaloader/instaloader) | Perfil público Instagram: **bio**, posts recentes, **legendas** (caça a `#publi`, `@marca`, “cortesia”). Pode exigir **login** para amostras maiores. |
+| **gallery-dl** | [mikf/gallery-dl](https://github.com/mikf/gallery-dl) | Extrator multi-site (inclui vários hosts); útil quando um post tem **permalink** e você quer **arquivo local** + legenda. |
+| **yt-dlp** | [yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp) | **YouTube** e, quando funcional, **TikTok** público: título, descrição, comentários (se exportados), lista de vídeos do canal — bom para **concorrência** (menções a bet) e **política** (falas em vídeo). |
+| **Sherlock** | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | Mesmo **username** em dezenas de sites: achar **Twitch**, **Kwai**, **Threads**, fóruns — triangula identidade sem API paga. |
+| **Maigret** (alternativa) | buscar no GitHub `maigret osint` | Similar ao Sherlock com outra lista de sites. |
+
+### Buscas e fóruns (complemento)
+
+- **`site:tiktok.com/@handle`** e **`site:x.com/handle`** no Google/DuckDuckGo — frequentemente trazem **snippets** que o RSS de notícias não indexa.
+- **Reddit**, **threads** em português: `site:reddit.com "@" + handle` ou nome + cidade (filtrar ruído).
+- **Web Archive** ([web.archive.org](https://web.archive.org)): perfil ou post que sumiu; útil para **polêmicas** apagadas.
+
+### Fluxo sugerido para os handles “magros”
+
+1. **Sherlock** (ou busca manual `site:`) no **`davizoa`** / variações (`davi.zoa`, etc.).
+2. **yt-dlp** no canal YouTube `@davizoa` (se existir e for público): varrer **descrições** por marca/bet/política.
+3. **Instaloader** ou **navegador logado** só para **amostra** de posts (legendas), exportar CSV/lista de URLs → preencher `FONTES_...md`.
+4. Tudo que entrar no dossiê: **URL + data + trecho** (ou print arquivado).
+
+### Limite deste ambiente (agente cloud)
+
+Máquinas de CI/agente costumam levar **403**, **login wall** ou **CAPTCHA** em Instagram/TikTok. O playbook acima funciona melhor em **máquina local** ou VM com **navegador humano** quando a automação falhar.
