@@ -11,9 +11,31 @@
 - **Coleta:** busca em **web aberta** (notícias, veículos, páginas institucionais indexadas). **Não** houve, nesta rodada, captura sistemática de posts em Instagram, TikTok, YouTube ou X.
 - **Uso no relatório final:** cada achado deve citar a URL abaixo; onde não houver URL, registrar **“sem achado público nesta rodada”** — isso **não** prova ausência de fato.
 - **Concorrência:** distinguir **parceria/publipost** com operador de aposta ou loteria de **menção temática** (humor, título de espetáculo, notícia editorial).
-- **Marcas / parcerias:** registrar **marca ou organização** + **tipo de vínculo** (campanha paga, agenciamento, empregador, produto próprio, mídia/evento, revenda de curso). Lista da web costuma estar **incompleta**; completar com **#publi** / arquivo de stories e **press release** da assessoria.
+- **Marcas / parcerias:** registrar **marca ou organização** + **tipo de vínculo** (campanha paga, agenciamento, empregador, produto próprio, mídia/evento, revenda de curso). **Nesta fase não há media kit:** marcas só entram no dossiê com **prova pública** (matéria, post arquivado, vídeo oficial) ou ficam como **“não verificado”**.
 - **Confiança (sugestão para o relatório):** *Alta* = várias fontes independentes ou documento primário claro; *Média* = uma boa fonte jornalística; *Baixa* = agregador, rumor, ou página não verificada (ex.: SEO/spam).
 - **Sínteses de IA (ex.: Perplexity, ChatGPT):** podem agregar achados úteis, mas **não substituem URL** nem prova de parceria. Neste arquivo, blocos assim vêm rotulados **“Perplexity (usuário)”** e, quando possível, passam por **verificação cruzada** com busca web do repositório.
+
+### Como maximizar confiança, precisão e utilidade (pesquisa **sem** media kit)
+
+1. **Um fato = uma célula na tabela** — Afirmação + **URL** + **data da matéria ou captura** + **tipo de prova** (ex.: “matéria”, “vídeo incorporado”, “página oficial”). Sem URL, o achado é **hipótese**, não conclusão.
+
+2. **Hierarquia de evidência** — Priorizar: **primário** (perfil oficial, peça publicitária clara) > **secundário forte** (veículo com nome do jornalista ou release citado) > **terciário** (agregador, fórum). No relatório, deixar explícito o nível.
+
+3. **Desambiguação obrigatória** — Sempre que o nome for comum: **nome completo + @ + contexto** (“BBB 24”, cidade, profissão). Registrar **homônimos descartados** (ex.: Giovanna Reis ≠ Pitel; Rafael na Insider ≠ Gratta).
+
+4. **Triangulação** — Para risco alto (bet, política, saúde): buscar **duas fontes independentes** ou **uma primária**. Se só uma fonte fraca existir, classificar como **“não confirmado”** ou **confiança baixa**.
+
+5. **Consultas replicáveis** — Guardar a **query** que funcionou (`"Nome Sobrenome" marca`, `site:dominio.com`). Evita “achei uma vez e sumiu” e permite revisão por outra pessoa.
+
+6. **Data e escopo** — Dizer **até quando** a pesquisa vale (“snapshot mar/2026”). Números de seguidores e posts **não** são prova estável; preferir ordem de grandeza + “conferir no perfil”.
+
+7. **Separar “não achei” de “não existe”** — “**Sem achado público nesta rodada**” ≠ inexistência. Isso evita falso negativo no dossiê institucional.
+
+8. **LLM só como fila de trabalho** — Usar Perplexity para **pistas**; cada pista vira linha no checklist até **confirmar ou refutar** com fonte. Nunca copiar lista de marcas da IA sem checagem.
+
+9. **Concorrência (brand safety)** — Para apostas/loteria: exigir **marca + tipo de vínculo** (pago, afiliado, mera menção editorial). Nomes tipo “Bet” em domínio de curso exigem **leitura da página** para não gerar falso positivo.
+
+10. **Utilidade para o cliente** — No texto final, priorizar: **o que é risco**, **por quê**, **qual a evidência**, **qual a incerteza**. Menos adjetivos, mais estrutura repetível entre perfis.
 
 **Data de referência da compilação:** 31/03/2026.
 
@@ -114,8 +136,8 @@ Objetivo: achar **PDF / página pública** com lista de marcas ou métricas ofic
 - [ ] Desambiguar **Megh Merly** vs. notícias sobre **Juliana Merhy** (mesmo recorte temporal de mídia).
 - [ ] Tratar link não jornalístico “Rafael Gratta + cassino” apenas após checagem; não usar como fato isolado.
 - [ ] **Homônimo:** notícias sobre **Giovanna Reis** (racismo / Carnaval) **não** são **Giovanna Pitel** — não misturar no dossiê.
-- [ ] Abrir em rede com DNS normal: **media kit Curta** `https://influencers.curtahub-mediakit.com/pt-BR/rafaelgratta` (capturar PDF/screenshot se existir).
-- [ ] Solicitar à **ViU Hub / assessoria** lista formal de **campanhas pagas** da Giovanna Pitel (e arquivo de **stories** `#publi`, se aplicável).
+- [ ] *(Opcional / fase com acesso comercial)* Abrir **media kit Curta** em rede com DNS normal: `https://influencers.curtahub-mediakit.com/pt-BR/rafaelgratta` — **fora do escopo** da pesquisa pública atual.
+- [ ] *(Opcional / fase com acesso comercial)* **ViU Hub / assessoria:** lista de campanhas pagas — **fora do escopo** da pesquisa pública atual; só usar se abrir nova fase com o cliente.
 
 ---
 
