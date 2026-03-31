@@ -64,7 +64,14 @@ def main() -> None:
                 if not line:
                     continue
                 rec = json.loads(line)
+                # Ignora linhas só de diagnóstico (sem conteúdo de post)
+                if rec.get("note") and not str(rec.get("url", "")).strip():
+                    continue
+                if rec.get("error") and not aggregate_record(rec).strip():
+                    continue
                 blob = aggregate_record(rec)
+                if not blob.strip():
+                    continue
                 c1 = find_hits(blob, kw.get("concorrencia") or [])
                 c2 = find_hits(blob, kw.get("polemicas") or [])
                 c3 = find_hits(blob, kw.get("politica") or [])
