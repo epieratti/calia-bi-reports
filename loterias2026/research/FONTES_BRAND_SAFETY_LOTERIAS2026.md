@@ -22,6 +22,8 @@
 
 ## Validação — hipóteses vindas de IA (Perplexity) vs. busca web
 
+As linhas que citam **Giovanna Pitel** e **Rafael Gratta** estão **replicadas** nas seções **§1** e **§2** (subseção *Validação cruzada*); a tabela abaixo permanece para visão única na auditoria.
+
 Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`curl` + `rg`); `site:reddit.com` sem thread estável para Gratta.
 
 | Afirmação (Perplexity) | Status | Notas |
@@ -104,6 +106,38 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 **Nota:** matéria Terra incorpora vídeo do TikTok `@giovannapiteloficial` — cruzar com o handle do squad se for o mesmo criador.
 
+### Validação cruzada — hipóteses externas (Perplexity), só Giovanna Pitel
+
+| Afirmação | Status | Notas |
+|-----------|--------|--------|
+| **Seara** | Não encontrado | Sem matéria de campanha localizada. |
+| **Downy** | Não encontrado | Idem. |
+| **Stone** (fintech BR) | Não encontrado | Idem. |
+| **iFood** (publipost **dela**) | Não atribuir sem prova | Publi documentada é da **Camila** (esposa de Lucas Buda); URLs na linha iFood abaixo e na tabela global. |
+| Festival Verão Salvador 2025 + **Tim** | Confirmado | iBahia — camarote Tim. |
+| Seguranças / baixa interação | Confirmado (parcial) | Agora Alagoas + ecossistema iBahia. |
+| Lady Gaga / Copacabana mai/2025 | Confirmado | Revista Quem — não confundir com Rock in Rio 2025 como evento. |
+| Rock in Rio vs afastamento **Fernanda Bande** | Ajuste | gshow (URL sob Rock in Rio 2024) — grafia “Giovana Pitel”; não misturar com Lady Gaga. |
+| **Guerreiros do Sol** / gshow | Confirmado | Vídeo gshow. |
+| **Prêmio Potências** 2025 | Não encontrado | Lista CNN varrida — sem “Pitel”. |
+| **Rio Innovation Week** 2025 | Não encontrado / corrigido | CARAS = **Festival Negritudes Globo SP**, não RIW. |
+| **PL 1904 / aborto** | Não encontrado | Retirar do dossiê se vier de IA. |
+| TikTok **@giovannapiteloficial** | Confirmado (embed) | Terra (Nós) — perfil citado na matéria. |
+| Corpo / comentários / “gravidez” (Salvador) | Confirmado | Terra (Nós). |
+| Alane Dias / Ed Gama / Sapucaí mar/2025 | Confirmado | Portal O São Gonçalo. |
+| Comentário eliminação Daniele Hypólito (BBB 25) | Não encontrado | — |
+
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Instagram** | Menções em matérias (ex.: listas de seguidores pós-BBB); **não** há inventário post a post de publipost. |
+| **TikTok** | Evidência forte: embed **@giovannapiteloficial** na Terra; handle do squad **`pitelgiovanna`** — unificar identidade no app. |
+| **YouTube** | Apenas remissão ao canal `@pitelgiovanna` no YAML; sem varredura de vídeo a vídeo nesta fase. |
+| **X** | Sem URLs dedicadas nesta rodada; handle canônico no YAML. |
+
+**Limite explícito:** ausência de achado em **bet/loteria/cassino** e de **política partidária** não substitui revisão de **stories, reels patrocinados e posts não indexados** no Google.
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -132,6 +166,10 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | TikTok / corpo / comentários | Terra (Nós) | https://www.terra.com.br/nos/pitel-se-revolta-com-comentarios-sobre-seu-peso-em-video-de-biquini-voces-merecem-blogueira-mentirosa,825bfa6628c7ee3ad20f82826f08ca00epmwz8d0.html | Embeds **@giovannapiteloficial**; Salvador (BA). |
 | Carnaval 2025 / Alane / Ed Gama | Portal O São Gonçalo | https://www.osaogoncalo.com.br/famosos/153518/giovanna-pitel-e-ed-gama-sao-flagrados-debochando-de-alane-dias-na-marques-de-sapucai | 05/03/2025. |
 | Evento cultura / representatividade | CARAS | https://caras.com.br/atualidades/giovanna-pitel-reforca-a-importancia-da-representatividade-no-audiovisual-mais-plural.phtml | **Festival Negritudes Globo SP** (não confundir com Rio Innovation Week). |
+| Hub editorial Globo (agregador) | gshow — Artistas | https://gshow.globo.com/artistas/giovanna-pitel/ | Página oficial de tag; lista matérias/vídeos (conteúdo dinâmico). |
+| TV / Multishow (contexto programa) | CARAS | https://caras.com.br/atualidades/giovanna-pitel-adianta-sobre-programa-no-multishow-fazer-com-que-pessoas-se-sintam-abracadas.phtml | Entrevista sobre projeto no Multishow. |
+| **iFood — publi de outra pessoa (não atribuir a Pitel)** | Meio e Mensagem | https://www.meioemensagem.com.br/midia/ifood-aproveita-fofoca-e-faz-publi-com-esposa-de-participante-do-bbb-24 | Esposa de Lucas Buda (BBB 24), não Pitel. |
+| Idem | Publicitários Criativos | https://www.publicitarioscriativos.com/ifood-aproveita-polemica-e-faz-publi-com-esposa-de-lucas-do-bbb-24/ | Idem. |
 
 ### Marcas e parcerias — Giovanna Pitel (web aberta, rodada marcas)
 
@@ -155,6 +193,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
 | **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
 
+**Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Pendência:** inventário comercial completo só com **arquivo nas quatro redes** ou media kit (ex.: Curta Hub — indisponível por DNS/503 no ambiente de coleta).
+
 ---
 
 ## 2. Rafael Gratta (`@rafaelgratta`)
@@ -170,6 +210,28 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | TikTok | `rafaelgratta` |
 | YouTube | `@rafaelgratta` |
 | X | `rafaelgratta` |
+
+### Validação cruzada — hipóteses externas (Perplexity), só Rafael Gratta
+
+| Afirmação | Status | Notas |
+|-----------|--------|--------|
+| **Genial / B3 / Detox Bet** como parceria pessoal | Não encontrado | Projeto Detox Bet é real (setor); **sem** menção a Gratta — URLs na linha “contexto setorial” abaixo e na tabela global. |
+| **Growth Supplements** | Não vinculado | Outros sócios/empresa; não listar sem post dele. |
+| **TDAH / “10%” / maus hábitos** | Confirmado (mídia) | Estado de Minas 24/07/2025. |
+| **Reddit / debate** | Parcial | Viralizou cita Reddit; **URL de thread** ainda não fixada nesta compilação. |
+| **Plágio / cópia** (set/2025) | Não validado | Busca vazia. |
+| **Livro Intrínseca** | Confirmado | Blog + página do autor na editora. |
+
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Instagram** | Bio/ofertas via **rafaelgratta.com** e Linktree; sem inventário de publipost nesta fase. |
+| **TikTok** | Estado de Minas cita **@rafaelgrattap**; YAML usa **`rafaelgratta`** — conferir no app se são contas distintas ou divergência da matéria. |
+| **YouTube** | Aparições em podcast (Flow etc.) via links de catálogo; sem varredura completa do canal `@rafaelgratta`. |
+| **X** | Sem URLs dedicadas nesta rodada; handle canônico no YAML. |
+
+**Limite explícito:** mensagens sobre saúde/TDAH geram **debate público** (incl. Reddit); risco reputacional exige checagem de **posts e vídeos atuais** nas redes, não só matérias.
 
 ### Fontes coletadas (web aberta)
 
@@ -189,6 +251,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Não usar como fato** | Página tipo SEO (“cassino… 2026”) | https://grupoea.net.br/cache/index.php?tunnel=rafael-gratta | **Confiança baixa**; possível spam/afiliado; exige descarte ou confirmação independente. |
 | **Parceiro operacional (live)** | JorNow (release) | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Live “Dia D: a Dopamina…” (ago/2024) com apoio da **Curta** (hub para criadores). |
 | **Privacidade / ads** | AURA (site) | https://rafaelgratta.com/politica-privacidade/ | Menção a cookies/publicidade (ex.: ecossistema Google); não lista “marcas patrocinadoras” de conteúdo orgânico. |
+| Autor (página editora) | Intrínseca | https://intrinseca.com.br/autor/rafael-gratta/ | Biografia institucional; primeiro livro pela Intrínseca. |
+| **Contexto setorial — Detox Bet (sem vínculo Gratta)** | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets | Projeto B3 + Genial; **não** citar como parceria dele. |
+| Idem | DetoxBet | https://detoxbet.com.br/ | Site do projeto. |
 
 ### Marcas e parcerias — Rafael Gratta (web aberta, rodada marcas)
 
@@ -199,7 +264,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Curta** | Empresa parceira (apoio à live “Dia D”, ago/2024); imprensa associa à operação da AURA em outros textos | JorNow | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Média |
 | **Flow Podcast**; **Inteligência Ltda.** | **Participação como convidado** (mídia/podcast) — não implica, por si só, patrocínio pago ao criador | Apple Podcasts; Everand | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 · https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Média |
 | **Bet Cursos** | **Plataforma terceira** que vende o curso MFMA (nome comercial “Bet”; **não** é casa de apostas) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | Alta |
-| **Intrínseca** | **Editora** — livro *Mais foco, menos ansiedade* (anúncio mar/2026; lançamento abril/2026) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ | Alta |
+| **Intrínseca** | **Editora** — livro *Mais foco, menos ansiedade* (anúncio mar/2026; lançamento abril/2026) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ · https://intrinseca.com.br/autor/rafael-gratta/ | Alta |
 
 **Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco) na web indexada.
 
@@ -212,6 +277,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilência: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
 | **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** tratar com URL de thread. Sem processo criminal mapeado nesta base. | Alta (TDAH/EM); média (resto) |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Pendências:** URL direta de **thread Reddit**; confirmação **TikTok** `@rafaelgrattap` vs `@rafaelgratta`; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
 
 ---
 
