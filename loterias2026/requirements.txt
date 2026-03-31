@@ -1,0 +1,11 @@
+# Coleta e análise — Always ON Loterias 2026 (Brand Safety)
+requests>=2.31.0
+python-dotenv>=1.0.0
+PyYAML>=6.0.1
+feedparser>=6.0.11
+# YouTube: metadados públicos (alternativa quando RSS por @handle falhar)
+yt-dlp>=2024.12.13
+# X (Twitter) API v2 — opcional; só usado se TWITTER_BEARER_TOKEN estiver definido
+tweepy>=4.14.0
+# Busca web pública (Wikipedia + Google News RSS não precisam)
+ddgs>=9.0.0

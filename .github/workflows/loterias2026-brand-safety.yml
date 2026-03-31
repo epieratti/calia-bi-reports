@@ -1,0 +1,44 @@
+# Opcional: após definir o secret APIFY_TOKEN no repositório (Settings → Secrets),
+# execute manualmente para gerar artefatos de Brand Safety em loterias2026/output/.
+name: Loterias 2026 — Brand Safety (coleta + relatório)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: |
+          cd loterias2026
+          python -m pip install -U pip
+          pip install -r requirements.txt
+
+      - name: Pipeline (redes + Wikipedia/notícias/busca + classificação + HTML)
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          cd loterias2026
+          python scripts/run_pipeline.py
+
+      - name: Upload artefatos (JSONL, CSV, HTML)
+        uses: actions/upload-artifact@v4
+        with:
+          name: loterias2026-brand-safety
+          path: |
+            loterias2026/data/raw/
+            loterias2026/data/processed/
+            loterias2026/output/
