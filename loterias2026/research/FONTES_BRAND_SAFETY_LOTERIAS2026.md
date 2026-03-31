@@ -17,6 +17,22 @@
 
 **Data de referência da compilação:** 31/03/2026.
 
+### Rodada 4 — Media kit, Globo Ads, Curta Hub (mar/2026)
+
+Objetivo: achar **PDF / página pública** com lista de marcas ou métricas oficiais (pedido do time: “ir além da busca genérica”).
+
+| Pista | Resultado | URL / ação |
+|--------|-----------|------------|
+| **ViU Hub — media kit em PDF** | **Não localizado** em busca aberta. Oferta comercial aparece em **Globo Ads → ViU** (casting, “quem já faz parte”), sem download público de kit por talento. | https://globoads.globo.com/para-o-seu-negocio/servicos/viu |
+| **ViU Hub — contexto** | Artigo de lançamento / descrição da unidade (conecta marcas e influenciadores). | https://gkpb.com.br/16797/viu-hub-globosat/ |
+| **Rafael Gratta — Curta “Media Kit”** | Busca retornou URL em **Curta Hub**: `https://influencers.curtahub-mediakit.com/pt-BR/rafaelgratta` — **não foi possível validar conteúdo** neste ambiente (**falha de DNS** / host não resolve). **503** em tentativas alternativas ao fetch. Abrir **no navegador local** ou pedir PDF à **Curta**. | URL acima |
+| **Giovanna Pitel — mesmo domínio Curta** | Tentativas `.../pitelgiovanna` e `.../giovannapitel` → **503** / indisponível. | — |
+| **Instagram `site:instagram.com` + marcas** | Ruído alto (outros “Pitel”, “Downey” EUA, etc.); **inútil** sem ID do post. | — |
+| **Wayback (“Pitel” + publi)** | **Sem** achado útil indexado na busca. Para post apagado: usar **URL exata** do post no web.archive.org. | — |
+| **Paralelo ViU (BBB 24)** | Matéria sobre **Beatriz Reis** **nomeia várias marcas** (ex.: Ton, Kwai, iFood, Casas Bahia…) — **não** é lista da Pitel; serve só para mostrar que **a imprensa às vezes publica inventário** quando vaza ou quando a assessoria divulga. | https://www.terra.com.br/diversao/tv/beatriz-reis-vira-menina-dos-olhos-da-globo-apos-fechar-com-mais-que-5-marcas,11cf0cc4428e1351e166210464e97610z3991hys.html |
+
+**Próximo passo operacional (fora do agente):** e-mail **Globo Ads / ViU Hub** ou assessoria da talento pedindo **relatório de parcerias pagas** (últimos 24–36 meses) + **print** de posts com **#publi** / marcação de produto.
+
 ---
 
 ## Síntese Perplexity (usuário) — Giovanna Pitel & Rafael Gratta
@@ -98,6 +114,8 @@
 - [ ] Desambiguar **Megh Merly** vs. notícias sobre **Juliana Merhy** (mesmo recorte temporal de mídia).
 - [ ] Tratar link não jornalístico “Rafael Gratta + cassino” apenas após checagem; não usar como fato isolado.
 - [ ] **Homônimo:** notícias sobre **Giovanna Reis** (racismo / Carnaval) **não** são **Giovanna Pitel** — não misturar no dossiê.
+- [ ] Abrir em rede com DNS normal: **media kit Curta** `https://influencers.curtahub-mediakit.com/pt-BR/rafaelgratta` (capturar PDF/screenshot se existir).
+- [ ] Solicitar à **ViU Hub / assessoria** lista formal de **campanhas pagas** da Giovanna Pitel (e arquivo de **stories** `#publi`, se aplicável).
 
 ---
 
