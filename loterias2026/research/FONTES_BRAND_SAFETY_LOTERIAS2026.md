@@ -23,6 +23,7 @@
 - [ ] Identificar **@davizoa** (nome completo / cruzar TikTok-Instagram).
 - [ ] Desambiguar **Megh Merly** vs. notícias sobre **Juliana Merhy** (mesmo recorte temporal de mídia).
 - [ ] Tratar link não jornalístico “Rafael Gratta + cassino” apenas após checagem; não usar como fato isolado.
+- [ ] **Homônimo:** notícias sobre **Giovanna Reis** (racismo / Carnaval) **não** são **Giovanna Pitel** — não misturar no dossiê.
 
 ---
 
@@ -35,9 +36,24 @@
 | Perfil / carreira | CNN Brasil (tudo sobre) | https://alpha.cnnbrasil.com.br/tudo-sobre/giovanna-pitel/ | Agregador editorial. |
 | Perfil / carreira | NaTelinha | https://natelinha.uol.com.br/famosos/tudo-sobre/giovanna-pitel | Agregador. |
 | Perfil / carreira | Folha F5 | https://f5.folha.uol.com.br/televisao/bbb24/giovanna-pitel.shtml | Contexto BBB24. |
-| Comentário público (BBB / preconceito) | Terra (vídeo/short) | https://www.terra.com.br/noticias/brasil/videos/ex-bbb-pitel-analisa-quem-esta-fazendo-hora-extra-no-bbb-26-e-critica-falas-preconceituosas-shorts,31b2f2042c05ddbf08153f7d541e330fqgp79c9v.html | Leitura de risco de imagem: opinião sobre reality. |
+| Contrato / marcas (contexto) | Terra | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html | Renovação Globo 2024; menção a demanda de marcas (checar texto integral). |
+| Contrato / marcas (contexto) | NaTelinha | https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php | Renovação + ViU Hub. |
+| Contrato / marcas (contexto) | Folha F5 | https://f5.folha.uol.com.br/televisao/2024/08/apos-programa-e-sucesso-comercial-ex-bbb-24-giovanna-pitel-renova-contrato-com-a-globo.shtml | Idem. |
+| Causas / trajetória | Terra | https://www.terra.com.br/diversao/gente/giovanna-pitel-impulsiona-trajetoria-com-transformacao-usar-minha-voz-para-fazer-algo-maior,00fc30e81906608f19744b2e721180ad48r0lc63.html | Educação, empoderamento, cultura nordestina (entrevista). |
+| Comentário público (BBB / preconceito) | Terra (vídeo/short) | https://www.terra.com.br/noticias/brasil/videos/ex-bbb-pitel-analisa-quem-esta-fazendo-hora-extra-no-bbb-26-e-critica-falas-preconceituosas-shorts,31b2f2042c05ddbf08153f7d541e330fqgp79c9v.html | Opinião sobre reality / falas preconceituosas. |
+| Polêmica BBB24 (dinâmica com Lucas Buda) | O Tempo | https://www.otempo.com.br/entretenimento/2024/6/14/giovanna-pitel-fala-pela-primeira-vez-sobre-polemica-com-lucas-b | Entrevista Multishow: versão de Pitel sobre “cantadas” e cobrança do público. |
+| Polêmica BBB24 (resposta da equipe) | Purepeople | https://www.purepeople.com.br/noticia/bbb-24-equipe-de-giovanna-pitel-desmente-ex-mulher-de-buda-apos-polemica-de-traicao_a388854/1 | Nota de equipe + menção a medidas contra ataques. |
+| Contexto relacionamento / Buda | O Globo | https://oglobo.globo.com/cultura/noticia/2024/03/04/bbb24-namorado-de-pitel-nao-comenta-sobre-conversa-entre-sister-e-buda-saiba-mais-sobre-o-relacionamento-aberto.ghtml | Relacionamento aberto; repercussão BBB. |
+| Discurso (xenofobia sofrida) | Correio Braziliense | https://www.correiobraziliense.com.br/colunistas/mariana-morais/2024/05/6867748-ex-bbb-giovanna-pitel-chora-e-revela-que-sofreu-xenofobia.html | Relato de ataques xenofóbicos pós-BBB. |
+| Discurso (xenofobia / sotaque) | Notícia Preta | https://noticiapreta.com.br/continuar-ocupando-espacos-com-o-sotaque-carregado-mesmo-pitel-fala-sobre-nao-ter-recuado-diante-de-comentarios-xenofobos/ | Entrevista sobre resistência a xenofobia. |
 
-**Concorrência / política (esta rodada):** sem URL específica mapeada para bet/loteria ou filiação partidária.
+### Achados objetivos — Giovanna Pitel (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. | Média (só web; falta varredura de redes) |
+| **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
+| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
 
 ---
 
@@ -46,12 +62,23 @@
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil (saúde mental) | Notícias Fit | https://noticiasfit.com.br/rafael-gratta-o-influenciador-que-faz-a-diferenca-na-saude-mental/ | Tom promocional; usar como pista, não como prova única. |
+| Bio / produto (primário) | Site AURA / bio | https://rafaelgratta.com/bio/ | Ofertas e posicionamento oficial. |
+| Links oficiais | Linktree | https://linktr.ee/rafaelgrattacts | Central de links. |
 | Podcast | Flow #408 (Apple Podcasts) | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 | Entrevista longa; checar menções a marcas. |
 | Podcast | Flow #408 (espelho) | https://nv99.com.br/flow/episodes/Z38tcbrvFow | Mesmo episódio; URL pode mudar. |
 | Podcast | Inteligência Ltda. (Everand) | https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Catálogo de podcast. |
+| Perfil / método | Estado de Minas (Em Foco) | https://www.em.com.br/emfoco/2025/06/10/rafael-gratta-criador-do-mais-foco-diz-quem-nao-teme-a-solidao-e-impossivel-de-manipular/ | Reportagem sobre conteúdo e mensagens. |
+| Curso (terceiro revende MFMA) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | **“Bet” aqui é nome da plataforma de cursos**, não casa de apostas; produto = Protocolo MFMA. |
+| Mudança de produto (agregador) | Viralizou | https://viralizou.net/internet/rafael-gratta-cancela-treinamento-e-promete-algo-novo/ | Cancelamento/reformulação MFMA → AURA; checar tom “polêmico”. |
 | **Não usar como fato** | Página tipo SEO (“cassino… 2026”) | https://grupoea.net.br/cache/index.php?tunnel=rafael-gratta | **Confiança baixa**; possível spam/afiliado; exige descarte ou confirmação independente. |
 
-**Polêmicas / política / concorrência comercial (esta rodada):** sem fonte jornalística sólida mapeada além do item acima a descartar/checagem.
+### Achados objetivos — Rafael Gratta (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilância: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
+| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; não se encontrou, nesta rodada, escândalo criminal ou “cancelamento” massivo documentado em veículo mainstream. Questões de **saúde mental / promessa de resultado** são risco recorrente do nicho — exige revisão de peças e disclaimers, não provado aqui como ilícito. | Média |
+| **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
 
 ---
 
@@ -64,6 +91,19 @@
 | **Tema “loteria” (espetáculo)** | Correio do Povo (agenda) | https://www.correiodopovo.com.br/arteagenda/%C3%ADndio-behn-e-maikinho-pereira-apresentam-o-epis%C3%B3dio-minha-tia-ganhou-na-loteria-em-porto-alegre-1.858074 | Título **“Minha tia ganhou na Loteria!”** — contexto **artístico**, não parceria comercial por si só. |
 | Perfil | Diario de Pernambuco | https://www.diariodepernambuco.com.br/noticia/viver/2023/07/sucesso-na-tv-e-na-internet-humorista-indio-behn-traz-espetaculo-grat.html | |
 | Agenda | Folha PE | https://www.folhape.com.br/cultura/indio-behn-apresenta-o-espetaculo-de-humor-gratiluz-no-recife-saiba/284139/ | |
+| Carreira / turnê | ISTOÉ | https://istoe.com.br/humorista-por-tras-da-personagem-dra-rosangela-indio-behn-comemora-sucesso-da-primeira-turne-nacional/ | Dra. Rosângela, Gratiluz. |
+| Pauta (saúde mental) | CARAS | https://caras.com.br/influenciadores/indio-behn-dra-rosangela-reforca-importancia-da-saude-mental-artigo-de-luxo.phtml | |
+| **Cancelamento de shows (2024)** | Correio do Povo | https://www.correiodopovo.com.br/arteagenda/%C3%ADndio-benh-cancela-agenda-de-espet%C3%A1culos-at%C3%A9-o-fim-de-2024-1.1542049 | Motivos citados: questões com produtora, qualidade, reembolsos. |
+| Cancelamento (regional) | Campo Grande News | https://www.campograndenews.com.br/lado-b/diversao/sucesso-como-dra-rosangela-i-ndio-behn-cancela-apresentacao-na-capital | |
+| Cancelamento (institucional) | Univates | https://www.univates.br/cultura/noticias/35737-indio-behn-cancela-shows-da-turne-gratiluz-com-dra-rosangela | |
+
+### Achados objetivos — Índio Behn (rodada aprofundada)
+
+| Eixo | Conclusão | Confiança |
+|------|-----------|-----------|
+| **Concorrência** | Sem menção a **publipost de bet/loteria/cassino** nesta rodada. Título de espetáculo com palavra “loteria” é **ficção de palco**, não prova de contrato com operador. | Alta (tema artístico); média (ausência de parceria) |
+| **Polêmicas** | **2024:** cancelamento amplo de apresentações até fim do ano; imprensa associa a **rompimento com produtora** e compromisso com qualidade/reembolso — **risco operacional/reputacional** para datas, não “crime” ou hate campaign mapeado aqui. | Alta (várias fontes) |
+| **Política** | Não localizado endosso ou filiação partidária explícita nesta rodada. | Baixa |
 
 ---
 
