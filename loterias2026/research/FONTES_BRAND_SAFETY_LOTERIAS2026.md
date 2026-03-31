@@ -37,6 +37,51 @@
 
 10. **Utilidade para o cliente** — No texto final, priorizar: **o que é risco**, **por quê**, **qual a evidência**, **qual a incerteza**. Menos adjetivos, mais estrutura repetível entre perfis.
 
+### Pesquisa aprofundada: polêmicas, política e riscos para **anunciante público / loterias** (sem media kit)
+
+Use **blocos de busca** por perfil; cada hit promissor abre em aba e vira linha na tabela (URL + data + tipo).
+
+#### A) Polêmicas e reputação
+
+| Alvo | Exemplos de termos (combinar com **nome completo** ou **@**) | Observação |
+|------|----------------------------------------------------------------|------------|
+| Justiça / polícia | `processo`, `processada`, `processado`, `denúncia`, `inquérito`, `BO`, `delegacia`, `Ministério Público`, `justiça`, `condenado`, `acordo`, `TSE` | Checar se o processo é **da mesma pessoa** (CPF/nome mãe raro em matéria). |
+| Comportamento / mídia | `polêmica`, `cancelado`, `cancelamento`, `críticas`, `pedido de desculpas`, `racismo`, `homofobia`, `machismo`, `transfobia`, `gordofobia`, `xenofobia`, `fake news` | Incluir **ano** (ex.: `2024`, `2025`, `2026`) para filtrar ruído antigo. |
+| Saúde / conteúdo sensível | `TDAH`, `depressão`, `ansiedade`, `cura`, `automedicação`, `promessa`, `golpe` (em contexto de curso) | Para **Caixa**: risco **regulatório/reputacional** se o criador **minimiza** saúde mental ou **substitui** profissional — exige matéria ou vídeo, não só fórum. |
+| Economia / golpes | `golpe`, `fraude`, `pix`, `esquema`, `pirâmide`, `cripto` | Alto risco para **imagem de confiança** (banco + loteria). |
+
+**Tática:** repetir com **`site:g1.globo.com`**, **`site:uol.com.br`**, **`site:folha.uol.com.br`**, **`site:estadao.com.br`** em dias separados (indexação varia). Fóruns (Reddit, Twitter/X): só como **pista** até achar **link estável** ou matéria que cite o episódio.
+
+#### B) Política e pautas sensíveis (institucional)
+
+| Alvo | Exemplos de termos | Observação |
+|------|-------------------|------------|
+| Partidarismo explícito | `Lula`, `Bolsonaro`, `PT`, `PL`, `voto`, `eleição`, `campanha`, `comício`, `#elenão`, `#elesim` | Distinguir **eleição real** de **paredão BBB** (muitos falsos positivos com “voto”). |
+| Pautas polarizantes | `aborto`, `armas`, `STF`, `golpe`, `impeachment`, `militar`, `privatização` | Para **empresa estatal/pública**: risco de **cabeçalho de manchete** adversário; registrar **tom** (único post vs. pauta recorrente). |
+| Protesto / greve / serviço público | `greve`, `servidor`, `SUS`, `privatização da Caixa`, `banco público` | Útil se o talento **ataca** explicitamente **banco público** ou **loteria federal** — busca rara, mas de alto impacto. |
+
+**Tática:** buscar também **`"Nome" entrevista política`** e **`"Nome" declara voto`**. Se o perfil for **humor**, incluir **`piada` + político** (risco de recorte descontextualizado).
+
+#### C) Concorrência e “vizinhança” com **jogo / aposta** (específico loterias + Caixa)
+
+| Risco | O que procurar | Classificar no relatório |
+|-------|----------------|---------------------------|
+| **Concorrência direta** | Publipost / cupom / afiliado: `bet`, `aposta`, `cassino`, `Tigrinho`, `Aviator`, `blaze`, `estrela bet`, `betnacional`, `palpite`, `bônus de cadastro`, `link na bio` + aposta | Só **pago/afiliado** = conflito forte com **loteria estatal**. Menção em **notícia** ou **piada** = contexto (baixo ou médio). |
+| **Loteria privada / ilegal** | `jogo do bicho`, `banca`, `animal`, `milhar` (com nome da pessoa) | Diferente de **Mega-Sena** / **CAIXA** em tom **educativo** ou **matéria jornalística**. |
+| **Mensagem anti-jogo responsável** | Críticas a **vício em aposta**, glamourização de **perda**, incentivo a **endividamento** para jogar | Pode ser **alinhado** ou **sensível** conforme tom; documentar vídeo/trecho. |
+| **“Bet” em nome de produto** | `Detox Bet`, `Bet Cursos` | Ler a página: **não** é casa de apostas — evitar **falso positivo** no filtro automático. |
+| **Caixa como banco** | `Caixa Econômica`, `CEF`, `FGTS`, `consignado`, `fila da Caixa`, `greve dos bancários` | Avaliar se o talento **criticou a marca Caixa** ou apenas **serviço bancário** genérico. |
+
+**Tática:** uma busca por **`"Nome Sobrenome" (aposta OR bet OR cassino OR loteria OR mega-sena OR tigrinho)`**. Outra só **`"Nome" Caixa OR "lotérica"`** (falso positivo com “caixa” = caixa de som — preferir **`Caixa Econômica`** ou **`CEF`**).
+
+#### D) O que o agente automatizado (ex.: Cursor) faz melhor vs. pior
+
+| Melhor | Pior / exige humano |
+|--------|---------------------|
+| Dezenas de queries padronizadas, `site:`, aspas, janela de ano | Stories expirados, DMs, grupos fechados, vídeo sem transcrição indexada |
+| Tabelar URL + data + tipo de prova | Julgar **ironia** ou **contexto cultural** fino sem ver o vídeo |
+| Detectar homônimos e conflitos óbvios | Substituir **avaliação jurídica** ou **parecer de compliance** |
+
 **Data de referência da compilação:** 31/03/2026.
 
 ### Rodada 4 — Media kit, Globo Ads, Curta Hub (mar/2026)
