@@ -1,114 +1,16 @@
-# Fontes — Brand Safety & Due Diligence
+# Fontes — Brand Safety & Due Diligence (resultados)
 
-**Campanha:** Always ON Loterias 2026  
-**Escopo:** concorrência (loterias concorrentes, bets, cassino, jogos de azar), polêmicas/cancelamento, posicionamento político.  
-**Perfis:** Giovanna Pitel, Rafael Gratta, Índio Behn, Megh Merly, Cleane Sampaio, Ivan Baron, Mila Costa, Cristian Wariu, Cereja, Aline Costa, Davi, Paula Mineira, Catraca Livre (handles em `loterias2026/data/influencers.yaml`).
+**Campanha:** Always ON Loterias 2026 · **Snapshot:** mar/2026  
+**Escopo:** concorrência (bets/loterias), polêmicas, política.  
+**Perfis:** `loterias2026/data/influencers.yaml`
 
----
-
-## Metodologia e limitações
-
-- **Coleta:** busca em **web aberta** (notícias, veículos, páginas institucionais indexadas). **Não** houve, nesta rodada, captura sistemática de posts em Instagram, TikTok, YouTube ou X.
-- **Uso no relatório final:** cada achado deve citar a URL abaixo; onde não houver URL, registrar **“sem achado público nesta rodada”** — isso **não** prova ausência de fato.
-- **Concorrência:** distinguir **parceria/publipost** com operador de aposta ou loteria de **menção temática** (humor, título de espetáculo, notícia editorial).
-- **Marcas / parcerias:** registrar **marca ou organização** + **tipo de vínculo** (campanha paga, agenciamento, empregador, produto próprio, mídia/evento, revenda de curso). **Nesta fase não há media kit:** marcas só entram no dossiê com **prova pública** (matéria, post arquivado, vídeo oficial) ou ficam como **“não verificado”**.
-- **Confiança (sugestão para o relatório):** *Alta* = várias fontes independentes ou documento primário claro; *Média* = uma boa fonte jornalística; *Baixa* = agregador, rumor, ou página não verificada (ex.: SEO/spam).
-- **Sínteses de IA (ex.: Perplexity, ChatGPT):** podem agregar achados úteis, mas **não substituem URL** nem prova de parceria. Neste arquivo, blocos assim vêm rotulados **“Perplexity (usuário)”** e, quando possível, passam por **verificação cruzada** com busca web do repositório.
-
-### Como maximizar confiança, precisão e utilidade (pesquisa **sem** media kit)
-
-1. **Um fato = uma célula na tabela** — Afirmação + **URL** + **data da matéria ou captura** + **tipo de prova** (ex.: “matéria”, “vídeo incorporado”, “página oficial”). Sem URL, o achado é **hipótese**, não conclusão.
-
-2. **Hierarquia de evidência** — Priorizar: **primário** (perfil oficial, peça publicitária clara) > **secundário forte** (veículo com nome do jornalista ou release citado) > **terciário** (agregador, fórum). No relatório, deixar explícito o nível.
-
-3. **Desambiguação obrigatória** — Sempre que o nome for comum: **nome completo + @ + contexto** (“BBB 24”, cidade, profissão). Registrar **homônimos descartados** (ex.: Giovanna Reis ≠ Pitel; Rafael na Insider ≠ Gratta).
-
-4. **Triangulação** — Para risco alto (bet, política, saúde): buscar **duas fontes independentes** ou **uma primária**. Se só uma fonte fraca existir, classificar como **“não confirmado”** ou **confiança baixa**.
-
-5. **Consultas replicáveis** — Guardar a **query** que funcionou (`"Nome Sobrenome" marca`, `site:dominio.com`). Evita “achei uma vez e sumiu” e permite revisão por outra pessoa.
-
-6. **Data e escopo** — Dizer **até quando** a pesquisa vale (“snapshot mar/2026”). Números de seguidores e posts **não** são prova estável; preferir ordem de grandeza + “conferir no perfil”.
-
-7. **Separar “não achei” de “não existe”** — “**Sem achado público nesta rodada**” ≠ inexistência. Isso evita falso negativo no dossiê institucional.
-
-8. **LLM só como fila de trabalho** — Usar Perplexity para **pistas**; cada pista vira linha no checklist até **confirmar ou refutar** com fonte. Nunca copiar lista de marcas da IA sem checagem.
-
-9. **Concorrência (brand safety)** — Para apostas/loteria: exigir **marca + tipo de vínculo** (pago, afiliado, mera menção editorial). Nomes tipo “Bet” em domínio de curso exigem **leitura da página** para não gerar falso positivo.
-
-10. **Utilidade para o cliente** — No texto final, priorizar: **o que é risco**, **por quê**, **qual a evidência**, **qual a incerteza**. Menos adjetivos, mais estrutura repetível entre perfis.
-
-### Pesquisa aprofundada: polêmicas, política e riscos para **anunciante público / loterias** (sem media kit)
-
-Use **blocos de busca** por perfil; cada hit promissor abre em aba e vira linha na tabela (URL + data + tipo).
-
-#### A) Polêmicas e reputação
-
-| Alvo | Exemplos de termos (combinar com **nome completo** ou **@**) | Observação |
-|------|----------------------------------------------------------------|------------|
-| Justiça / polícia | `processo`, `processada`, `processado`, `denúncia`, `inquérito`, `BO`, `delegacia`, `Ministério Público`, `justiça`, `condenado`, `acordo`, `TSE` | Checar se o processo é **da mesma pessoa** (CPF/nome mãe raro em matéria). |
-| Comportamento / mídia | `polêmica`, `cancelado`, `cancelamento`, `críticas`, `pedido de desculpas`, `racismo`, `homofobia`, `machismo`, `transfobia`, `gordofobia`, `xenofobia`, `fake news` | Incluir **ano** (ex.: `2024`, `2025`, `2026`) para filtrar ruído antigo. |
-| Saúde / conteúdo sensível | `TDAH`, `depressão`, `ansiedade`, `cura`, `automedicação`, `promessa`, `golpe` (em contexto de curso) | Para **Caixa**: risco **regulatório/reputacional** se o criador **minimiza** saúde mental ou **substitui** profissional — exige matéria ou vídeo, não só fórum. |
-| Economia / golpes | `golpe`, `fraude`, `pix`, `esquema`, `pirâmide`, `cripto` | Alto risco para **imagem de confiança** (banco + loteria). |
-
-**Tática:** repetir com **`site:g1.globo.com`**, **`site:uol.com.br`**, **`site:folha.uol.com.br`**, **`site:estadao.com.br`** em dias separados (indexação varia). Fóruns (Reddit, Twitter/X): só como **pista** até achar **link estável** ou matéria que cite o episódio.
-
-#### B) Política e pautas sensíveis (institucional)
-
-| Alvo | Exemplos de termos | Observação |
-|------|-------------------|------------|
-| Partidarismo explícito | `Lula`, `Bolsonaro`, `PT`, `PL`, `voto`, `eleição`, `campanha`, `comício`, `#elenão`, `#elesim` | Distinguir **eleição real** de **paredão BBB** (muitos falsos positivos com “voto”). |
-| Pautas polarizantes | `aborto`, `armas`, `STF`, `golpe`, `impeachment`, `militar`, `privatização` | Para **empresa estatal/pública**: risco de **cabeçalho de manchete** adversário; registrar **tom** (único post vs. pauta recorrente). |
-| Protesto / greve / serviço público | `greve`, `servidor`, `SUS`, `privatização da Caixa`, `banco público` | Útil se o talento **ataca** explicitamente **banco público** ou **loteria federal** — busca rara, mas de alto impacto. |
-
-**Tática:** buscar também **`"Nome" entrevista política`** e **`"Nome" declara voto`**. Se o perfil for **humor**, incluir **`piada` + político** (risco de recorte descontextualizado).
-
-#### C) Concorrência e “vizinhança” com **jogo / aposta** (específico loterias + Caixa)
-
-| Risco | O que procurar | Classificar no relatório |
-|-------|----------------|---------------------------|
-| **Concorrência direta** | Publipost / cupom / afiliado: `bet`, `aposta`, `cassino`, `Tigrinho`, `Aviator`, `blaze`, `estrela bet`, `betnacional`, `palpite`, `bônus de cadastro`, `link na bio` + aposta | Só **pago/afiliado** = conflito forte com **loteria estatal**. Menção em **notícia** ou **piada** = contexto (baixo ou médio). |
-| **Loteria privada / ilegal** | `jogo do bicho`, `banca`, `animal`, `milhar` (com nome da pessoa) | Diferente de **Mega-Sena** / **CAIXA** em tom **educativo** ou **matéria jornalística**. |
-| **Mensagem anti-jogo responsável** | Críticas a **vício em aposta**, glamourização de **perda**, incentivo a **endividamento** para jogar | Pode ser **alinhado** ou **sensível** conforme tom; documentar vídeo/trecho. |
-| **“Bet” em nome de produto** | `Detox Bet`, `Bet Cursos` | Ler a página: **não** é casa de apostas — evitar **falso positivo** no filtro automático. |
-| **Caixa como banco** | `Caixa Econômica`, `CEF`, `FGTS`, `consignado`, `fila da Caixa`, `greve dos bancários` | Avaliar se o talento **criticou a marca Caixa** ou apenas **serviço bancário** genérico. |
-
-**Tática:** uma busca por **`"Nome Sobrenome" (aposta OR bet OR cassino OR loteria OR mega-sena OR tigrinho)`**. Outra só **`"Nome" Caixa OR "lotérica"`** (falso positivo com “caixa” = caixa de som — preferir **`Caixa Econômica`** ou **`CEF`**).
-
-#### D) O que o agente automatizado (ex.: Cursor) faz melhor vs. pior
-
-| Melhor | Pior / exige humano |
-|--------|---------------------|
-| Dezenas de queries padronizadas, `site:`, aspas, janela de ano | Stories expirados, DMs, grupos fechados, vídeo sem transcrição indexada |
-| Tabelar URL + data + tipo de prova | Julgar **ironia** ou **contexto cultural** fino sem ver o vídeo |
-| Detectar homônimos e conflitos óbvios | Substituir **avaliação jurídica** ou **parecer de compliance** |
-
-**Data de referência da compilação:** 31/03/2026.
-
-### Rodada 4 — Media kit, Globo Ads, Curta Hub (mar/2026)
-
-Objetivo: achar **PDF / página pública** com lista de marcas ou métricas oficiais (pedido do time: “ir além da busca genérica”).
-
-| Pista | Resultado | URL / ação |
-|--------|-----------|------------|
-| **ViU Hub — media kit em PDF** | **Não localizado** em busca aberta. Oferta comercial aparece em **Globo Ads → ViU** (casting, “quem já faz parte”), sem download público de kit por talento. | https://globoads.globo.com/para-o-seu-negocio/servicos/viu |
-| **ViU Hub — contexto** | Artigo de lançamento / descrição da unidade (conecta marcas e influenciadores). | https://gkpb.com.br/16797/viu-hub-globosat/ |
-| **Rafael Gratta — Curta “Media Kit”** | Busca retornou URL em **Curta Hub**: `https://influencers.curtahub-mediakit.com/pt-BR/rafaelgratta` — **não foi possível validar conteúdo** neste ambiente (**falha de DNS** / host não resolve). **503** em tentativas alternativas ao fetch. Abrir **no navegador local** ou pedir PDF à **Curta**. | URL acima |
-| **Giovanna Pitel — mesmo domínio Curta** | Tentativas `.../pitelgiovanna` e `.../giovannapitel` → **503** / indisponível. | — |
-| **Instagram `site:instagram.com` + marcas** | Ruído alto (outros “Pitel”, “Downey” EUA, etc.); **inútil** sem ID do post. | — |
-| **Wayback (“Pitel” + publi)** | **Sem** achado útil indexado na busca. Para post apagado: usar **URL exata** do post no web.archive.org. | — |
-| **Paralelo ViU (BBB 24)** | Matéria sobre **Beatriz Reis** **nomeia várias marcas** (ex.: Ton, Kwai, iFood, Casas Bahia…) — **não** é lista da Pitel; serve só para mostrar que **a imprensa às vezes publica inventário** quando vaza ou quando a assessoria divulga. | https://www.terra.com.br/diversao/tv/beatriz-reis-vira-menina-dos-olhos-da-globo-apos-fechar-com-mais-que-5-marcas,11cf0cc4428e1351e166210464e97610z3991hys.html |
-
-**Próximo passo operacional (fora do agente):** e-mail **Globo Ads / ViU Hub** ou assessoria da talento pedindo **relatório de parcerias pagas** (últimos 24–36 meses) + **print** de posts com **#publi** / marcação de produto.
+**Este arquivo contém só resultados:** URLs, tabelas de fontes e **status de verificação**. Processo, checklist e guias de busca → `METODO_BRAND_SAFETY_LOTERIAS2026.md`.
 
 ---
 
-## Síntese Perplexity (usuário) — Giovanna Pitel & Rafael Gratta
+## Validação — hipóteses vindas de IA (Perplexity) vs. busca web
 
-**Origem:** texto consolidado enviado pelo time (Perplexity / pesquisa assistida), **sem** links `[^n]` preservados. **Uso:** hipóteses e linhas de investigação; **obrigatório** cruzar com fontes primárias antes do dossiê final.
-
-### Verificação cruzada — resumo (atualizado após **rodadas 2 e 3** de busca Cursor, 31/03/2026)
-
-**Métodos extras na rodada 3:** variações de query + download da página da CNN (`curl` + `rg` na lista Potências); leitura integral de matérias (Terra, Meio & Mensagem, Intrínseca, O São Gonçalo, CARAS); busca `site:reddit.com` (**sem** thread útil indexada para Gratta).
+Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`curl` + `rg`); `site:reddit.com` sem thread estável para Gratta.
 
 | Afirmação (Perplexity) | Status | Notas |
 |-------------------------|--------|--------|
@@ -174,18 +76,6 @@ Objetivo: achar **PDF / página pública** com lista de marcas ou métricas ofic
 
 ---
 
-## Checklist pós-pesquisa (preencher no dossiê)
-
-- [ ] Validar **@comcertezaaline** vs. fontes que citam **@aliineza** (“Aline com Certeza”).
-- [ ] Identificar **@davizoa** (nome completo / cruzar TikTok-Instagram).
-- [ ] Desambiguar **Megh Merly** vs. notícias sobre **Juliana Merhy** (mesmo recorte temporal de mídia).
-- [ ] Tratar link não jornalístico “Rafael Gratta + cassino” apenas após checagem; não usar como fato isolado.
-- [ ] **Homônimo:** notícias sobre **Giovanna Reis** (racismo / Carnaval) **não** são **Giovanna Pitel** — não misturar no dossiê.
-- [ ] *(Opcional / fase com acesso comercial)* Abrir **media kit Curta** em rede com DNS normal: `https://influencers.curtahub-mediakit.com/pt-BR/rafaelgratta` — **fora do escopo** da pesquisa pública atual.
-- [ ] *(Opcional / fase com acesso comercial)* **ViU Hub / assessoria:** lista de campanhas pagas — **fora do escopo** da pesquisa pública atual; só usar se abrir nova fase com o cliente.
-
----
-
 ## 1. Giovanna Pitel (`@pitelgiovanna`)
 
 | Tema | Fonte | URL | Notas |
@@ -207,7 +97,7 @@ Objetivo: achar **PDF / página pública** com lista de marcas ou métricas ofic
 | Discurso (xenofobia / sotaque) | Notícia Preta | https://noticiapreta.com.br/continuar-ocupando-espacos-com-o-sotaque-carregado-mesmo-pitel-fala-sobre-nao-ter-recuado-diante-de-comentarios-xenofobos/ | Entrevista sobre resistência a xenofobia. |
 | **Campanha (laticínios)** | Portal Nosso Meio | https://nossomeio.com.br/fernanda-bande-ana-paula-xongani-e-giovanna-pitel-estrelam-nova-campanha-da-piracanjuba/ | **Piracanjuba** — “Para Viver Bem”, 70 anos, 2025; filmes/reels (Gshow). |
 | Evento / patrocinador (camarote) | iBahia | https://www.ibahia.com/festival-de-verao/ex-bbb-giovanna-pitel-curte-vale-night-no-festival-de-verao-2025-334533 | Festival de Verão Salvador 2025; texto cita **camarote da Tim** — não prova contrato de influência com Tim sem release. |
-| Repercussão (seguranças) | Agora Alagoas | https://agoraalagoas.com/ex-bbb-alagoana-giovanna-pitel-aparece-em-evento-rodeada-por-segurancas/ | Alinha narrativa Perplexity (“evento com seguranças”). |
+| Repercussão (seguranças) | Agora Alagoas | https://agoraalagoas.com/ex-bbb-alagoana-giovanna-pitel-aparece-em-evento-rodeada-por-segurancas/ | Cobertura sobre seguranças em evento. |
 | Mídia / entretenimento (show) | Revista Quem | https://revistaquem.globo.com/moda-e-beleza/noticia/2025/05/giovanna-pitel-usa-look-inspirado-em-lady-gaga-para-show.ghtml | Show na praia (mai/2025); contexto Lady Gaga — **não** é Rock in Rio. |
 | Trabalho gshow / novela | gshow (vídeo) | https://gshow.globo.com/videos/video/pitel-comenta-o-final-de-rosa-em-guerreiros-do-sol-13833226.ghtml | Conteúdo para **Guerreiros do Sol** (Globo/Gshow). |
 | Relacionamento Fernanda Bande | gshow | https://gshow.globo.com/festivais/rock-in-rio/2024/noticia/fernanda-bande-esclarece-afastamento-de-giovana-pitel-nossos-caminhos-foram-diferentes.ghtml | Nota sobre afastamento; URL sob pasta Rock in Rio 2024; **validar grafia** “Giovana” vs “Giovanna”. |
@@ -236,50 +126,6 @@ Objetivo: achar **PDF / página pública** com lista de marcas ou métricas ofic
 | **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. | Média (só web; falta varredura de redes) |
 | **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
 | **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
-
-### Conteúdo Perplexity — Giovanna Pitel (organizado)
-
-*Trechos abaixo são **resumo fiel** do material enviado; confiança variável — ver tabela de verificação cruzada no topo.*
-
-#### Projetos e carreira (pós-BBB 24)
-
-| Tema | Resumo Perplexity | Confiança |
-|------|-------------------|-----------|
-| TV Globo / Multishow | *Na Cama com Pitanda* (com Fernanda Bande); *Mesacast* / bastidores BBB (menciona Ed Gama, Vitor DiCastro). | Média (cruzar com Terra/NaTelinha) |
-| Gshow / creator | *Guerreiros do Sol* — **confirmado** (vídeo gshow). **Rio Innovation Week 2025** com Pitel — **não** encontrado. | Alta (novela); baixa (RIW) |
-| Podcast | **Marinhos** (YouTube/Spotify), histórias da tia Nívia; produção familiar prevista para 2026. | Média (O Globo / podcast) |
-| Eventos | **Festival Verão Salvador 2025** — **confirmado** (iBahia + Tim). Show **Lady Gaga** Copacabana mai/2025 — **confirmado** (Quem); **não** confundir com Rock in Rio. **Rock in Rio** como presença dela — **não** validado; URL gshow “Rock in Rio” é sobre **Fernanda Bande** + afastamento. **Prêmio Potências 2025** — **não** encontrado. |
-| Formação / narrativa | Serviço Social; comunicação digital; agenciamento Globo/ViU Hub. | Média |
-
-#### Métricas de rede (Perplexity)
-
-| Rede | Dado citado | Observação |
-|------|-------------|------------|
-| Instagram `@pitelgiovanna` | ~1M seguidores, ~800 posts | Conferir número atual no app |
-| TikTok `@giovannapiteloficial` | ~110k seguidores, ~3,3M curtidas | **Handle diferente** do YAML; validar qual é o oficial |
-
-#### Marcas citadas pelo Perplexity (além das já verificadas no doc)
-
-**Seara, Downy, iFood, Stone** — ver **tabela de validação** no topo: três primeiras **não** achadas; iFood **Camila**, não Pitel.
-
-#### Polêmicas / sensibilidades (Perplexity)
-
-| Tema | Resumo | Confiança |
-|------|--------|-----------|
-| Corpo / gravidez (fev/2025) | Especulação após vídeo na praia; resposta sobre padrões estéticos. | Baixa (exige post/TikTok) |
-| Xenofobia (2024) | Alinhado a fontes já listadas (Correio Braziliense, Notícia Preta). | Alta (já documentado) |
-| Amizade Fernanda Bande (2025) | Distanciamento sem “briga” pública; rotinas diferentes. | Média (**gshow** com Fernanda Bande — ver URL na tabela principal) |
-| Visual / piadas (nov/2025) | Comparações na web. | Baixa |
-| BBB 25 / Dani Hypólito | Comentário sobre eliminação. | Baixa |
-| Grande Rio / Alane Dias (mar/2025) | “Debochou” com Ed Gama em desfile — críticas isoladas. | Baixa |
-| Evento com seguranças (2025) | Matérias sobre festival / seguranças (Agora Alagoas; ecossistema FVS). | Média |
-| Relacionamento aberto | Já coberto na imprensa (O Globo etc.); Perplexity cita risco de polarização de audiência — leitura qualitativa. | Média |
-
-#### Política (Perplexity)
-
-- Perfil descrito como **sem partido explícito**; causas “progressistas” leves (mulheres, periferia, Nordeste, cultura).
-- Menção a **PL 1904 / aborto**: **não confirmada** neste repositório — **não usar** sem URL.
-- “Voto” no BBB ≠ voto eleitoral.
 
 ---
 
@@ -313,7 +159,7 @@ Objetivo: achar **PDF / página pública** com lista de marcas ou métricas ofic
 | **Bet Cursos** | **Plataforma terceira** que vende o curso MFMA (nome comercial “Bet”; **não** é casa de apostas) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | Alta |
 | **Intrínseca** | **Editora** — livro *Mais foco, menos ansiedade* (anúncio mar/2026; lançamento abril/2026) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ | Alta |
 
-**Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco). Completar via **Instagram** (marcar #publi / “parceria paga”) e **Media Kit** da assessoria.
+**Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco) na web indexada.
 
 **Marcas Perplexity — validação (rodada 3):** **Growth Supplements**, **Insider Store** = **não** vinculados ao criador. **Genial/B3/Detox Bet** = projeto **real** (educação financeira gamificada; ver Meio & Mensagem + detoxbet.com.br), mas **sem** menção a **Rafael Gratta** — **não** listar como parceria dele. **TDAH / debate** = **EM** 24/07/2025 + Viralizou; **Reddit** sem URL estável na busca.
 
@@ -324,53 +170,6 @@ Objetivo: achar **PDF / página pública** com lista de marcas ou métricas ofic
 | **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilência: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
 | **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** tratar com URL de thread. Sem processo criminal mapeado nesta base. | Alta (TDAH/EM); média (resto) |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
-
-### Conteúdo Perplexity — Rafael Gratta (organizado)
-
-*Resumo fiel do material enviado; trechos sobre **Reddit**, **coach** e **TDAH** são majoritariamente **opinião de fórum** — tratar com cautela.*
-
-#### Política e tom público (Perplexity)
-
-| Linha | Resumo | Confiança |
-|-------|--------|-----------|
-| Partidarismo | Conteúdo descrito como **apolítico** em relação a eleições/candidatos até mar/2026. | Média (alinhado à ausência de achados na web do repositório) |
-| Foco temático | Neurociência, ansiedade, dopamina, hábitos, finanças pessoais; podcasts sem política BR “dura”. | Média |
-| Religião | Referências à **fé cristã** (Bíblia, Jesus) em contexto de superação e vícios; **sem** ativismo político explícito no relato Perplexity. | Baixa a média (checar vídeos) |
-| Comparação Nando Moura | Especulação de usuários (tom “apolítico” + coach) — **não é fato**. | Baixa |
-
-#### Marcas / produtos citados pelo Perplexity
-
-| Item citado | Observação |
-|-------------|------------|
-| **Growth Supplements** | Não vinculado ao **Rafael Gratta** nas buscas do repositório; risco de **alucinação** ou confusão com outra marca/pessoa. |
-| **Insider Store** | Homônimo **Rafael de Vitto Santos** (growth na Insider Store) ≠ **Rafael Gratta**. |
-| **Detox Bet + Genial + B3** | Não confirmado; “Bet” exige cuidado com **concorrência** (apostas). Só incluir com fonte que cite Gratta. |
-| **Mentoria ~R$100** | Dado não auditado aqui; validar no site/Instagram na data da campanha. |
-| **Cupons / rafaelgratta.com** | Coerente com **marca própria** (AURA etc.); confiança média. |
-
-#### Métricas e presença (Perplexity)
-
-| Rede | Dado citado | Observação |
-|------|-------------|------------|
-| Instagram `@rafaelgratta` | ~4M seguidores, 1100+ posts | Conferir no app (números mudam) |
-| TikTok | ~600k+ | Idem |
-| YouTube | Vídeos virais (ex.: título citado “Ninguém tá nem aí…”, 9–13M views) | Validar URL do vídeo |
-| X (Twitter) | “Possível, sem dados fortes” | Pendente |
-
-#### Críticas e “polêmicas” (Perplexity — fórum / reputação)
-
-| Tema | Resumo | Uso no dossiê |
-|------|--------|----------------|
-| **TDAH** | Perplexity cita jan/2025; **Estado de Minas** publicou matéria em **24/07/2025** sobre o mesmo eixo (prevalência 10%, “maus hábitos”, dopamina) — **usar EM + TikTok** como âncora; Reddit ainda ideal com **URL de thread**. Risco **saúde/regulatório** para marca institucional. |
-| Estilo **coach** (2024–2025) | Simplificação científica, mentoria paga, suplementos, tom de certeza. | Qualitativo; citar como “percepção de público” se houver prints. |
-| Religião + luxo (Copacabana/hotel) | Crítica de **privilégio** estético no relato Perplexity. | Opinião |
-| **Plágio** / adaptação sem crédito (set/2025) | Acusação genérica em vídeo YouTube citado pelo Perplexity. | Exige link e análise; não afirmar como fato. |
-| Psicanálise / Freud (jul/2025) | React de psicanalista. | Mídia secundária |
-| Cannabis / automedicação | Mencionado como “debate” em que aparece — vago. | Não usar sem fonte |
-
-#### Recomendação Perplexity (squad)
-
-Texto original sugere ambos para **saúde mental / bem-estar / lifestyle**, priorizando Gratta por escala; **monitorar** polêmicas. Tratar como **opinião do modelo**, não como parecer jurídico ou de compliance.
 
 ---
 
@@ -558,4 +357,4 @@ Usar com critério: **panorama de mercado**, não vínculo com um influencer da 
 
 ---
 
-*Documento para apoio ao dossiê final. Atualizar após nova rodada de coleta (redes + entrevistas + assessorias).*
+*Somente resultados e fontes. Metodologia: `METODO_BRAND_SAFETY_LOTERIAS2026.md`.*
