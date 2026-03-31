@@ -1,0 +1,70 @@
+# Squad — Always ON Loterias 2026
+# handles: usernames sem @; youtube pode ser @handle ou channel_id (UC...)
+campaign: "Always ON Loterias 2026"
+
+profiles:
+  - name: "Giovanna Pitel"
+    instagram: pitelgiovanna
+    tiktok: pitelgiovanna
+    youtube: "@pitelgiovanna"
+    x: pitelgiovanna
+  - name: "Rafael Gratta"
+    instagram: rafaelgratta
+    tiktok: rafaelgratta
+    youtube: "@rafaelgratta"
+    x: rafaelgratta
+  - name: "Indio Behn"
+    instagram: indio.behn
+    tiktok: indio.behn
+    youtube: "@indio.behn"
+    x: indio_behn
+  - name: "Megh Merly"
+    instagram: megh_melry
+    tiktok: megh_melry
+    youtube: "@megh_melry"
+    x: megh_melry
+  - name: "Cleane Sampaio"
+    instagram: cleanesampaioo
+    tiktok: cleanesampaioo
+    youtube: "@cleanesampaioo"
+    x: cleanesampaioo
+  - name: "Ivan Baron"
+    instagram: ivanbaron
+    tiktok: ivanbaron
+    youtube: "@ivanbaron"
+    x: ivanbaron
+  - name: "Mila Costa"
+    instagram: nocasomila
+    tiktok: nocasomila
+    youtube: "@nocasomila"
+    x: nocasomila
+  - name: "Cristian Wariu"
+    instagram: cristianwariu
+    tiktok: cristianwariu
+    youtube: "@cristianwariu"
+    x: cristianwariu
+  - name: "Cereja"
+    instagram: cerejaaaaaa
+    tiktok: cerejaaaaaa
+    youtube: "@cerejaaaaaa"
+    x: cerejaaaaaa
+  - name: "Aline Costa"
+    instagram: comcertezaaline
+    tiktok: comcertezaaline
+    youtube: "@comcertezaaline"
+    x: comcertezaaline
+  - name: "Davi"
+    instagram: davizoa
+    tiktok: davizoa
+    youtube: "@davizoa"
+    x: davizoa
+  - name: "Paula Mineira"
+    instagram: mineira.paula
+    tiktok: mineira.paula
+    youtube: "@mineira.paula"
+    x: mineira_paula
+  - name: "Catraca Livre"
+    instagram: catracalivre
+    tiktok: catracalivre
+    youtube: "@catracalivre"
+    x: catracalivre
