@@ -20,6 +20,46 @@
 
 ---
 
+## Relatório externo — “Inteligência reputacional” (texto + URLs fornecidos) vs. esta compilação
+
+**Origem:** relatório narrativo + lista de fontes enviados pelo usuário (mar/2026). **Uso:** enriquecer pistas e URLs; **toda** alegação sensível exige **cruzamento** com handle do `influencers.yaml` e, quando possível, **corpo da matéria** ou **primário** (post/vídeo).
+
+### Alertas de homônimo / troca de pessoa (crítico)
+
+| O que o relatório externo afirma | Handle / pessoa do squad | Status nesta auditoria |
+|----------------------------------|---------------------------|-------------------------|
+| **“Paula Mineira”** = **Paula von Sperling**, campeã **BBB 19**, polêmica racial, “marcas têm medo de mim”, **Miss Universe MG** | **`@mineira.paula`** = **Paula Helena de Oliveira**, **Areado (MG)**, **iBest 2025** (Portal Onda Sul) | **NÃO MISTURAR** — são **pessoas diferentes**; as URLs **UAI**, **Notícias da TV** e **Itatiaia** sobre **Paula von Sperling** **não** se aplicam a **`@mineira.paula`** sem prova adicional. |
+| **“Davi”** = **Davi Brito** (BBB 24), loja, bordão **“calma calabreso”**, polêmica judicial | **`@davizoa`** (criador sem matéria + handle na web indexada desta base) | **NÃO MISTURAR** — **Davi Brito** ≠ **`@davizoa`** até identificação inequívoca. |
+| **Aline Costa** = repórter **TV Fronteira** / jornalismo institucional | **`@comcertezaaline`** = criadora de humor **TikTok** (Famous Birthdays cita **@aliineza** / **comcertezaaline**) | **Provável troca de perfil** — validar com **nome civil** e canal **YouTube** citado no relatório antes de fundir achados. |
+| **Cereja** = “gaming”, “Goob Vibes”, **Salvador** | **`@cerejaaaaaa`** (agregador **Wupper**: **Ana Thereza**, humor/POV, marcas **NIVEA** etc.) | **Inconsistência de nicho** no relatório — manter **Wupper + YAML** até confirmação em **IG/TT** do handle do squad. |
+
+### Validação rápida de URLs do pacote (ambiente mar/2026)
+
+| URL (domínio) | `curl -I` (amostra) | Notas |
+|---------------|---------------------|--------|
+| `agenciabrasil.ebc.com.br/.../ivan-baron...mec` | **200** | Embaixador / MEC — alinha com outras matérias do **Ivan Baron**. |
+| `diariodonordeste.../mila-costa...rackeados...` | **200** | Incidente de **conta hackeada** — eixo **polêmica / segurança**. |
+| `veja.abril.com.br/.../indio-behn...` | **200** | Perfil **Índio Behn** / **Dra. Rosângela**. |
+| `noticiasdatv.uol.com.br/.../pitel...pl-do-aborto...` | **403** | Robots/WAF neste ambiente — tratar URL como **válida para humanos**; **corpo** a ler no browser. |
+| `www.reddit.com/r/PsicologiaBR/.../rafael_gratta...` | **403** | Idem — thread **existe** (citada no relatório). |
+| `www.girogonoticias.com.br/.../megh-melry...adames` | **403** | Idem — confirma linha **GiroGO** já vista no RSS. |
+
+### Itens incorporados nas seções §1–§13 (mar/2026)
+
+- **Pitel:** **PL do aborto / posicionamento com bailarina** — **Notícias da TV** (URL no pacote); **NaTelinha** pós-BBB; **YouTube** xenofobia (ID 27 no pacote). **Contradiz** linha antiga “PL 1904 não encontrado” → ajustado na tabela **Perplexity** e na **§1**.
+- **Gratta:** **Reddit** `r/PsicologiaBR` (URL fixa); **YouTube** `watch?v=3XR8ZuwIi3g` (críticas / plágio — **hipótese**, checar conteúdo); **YouTube** `BEdt6ehAOhE` (Podpeople #101). **Cuidado:** no pacote do usuário o mesmo `watch?v=3XR8ZuwIi3g` aparece ligado a **dois** IDs (Gratta e Cristian) — **provável erro de catalogação**; aqui fica só sob **Gratta** até conferência.
+- **Índio Behn:** **Veja** (coluna Veja Gente); **YouTube** “O Pod é Nosso #27”; canal **YouTube** oficial citado.
+- **Ivan Baron:** **Agência Brasil** (MEC 2025); **YouTube** CriaCast **Ambev** (`zZgf0zGaSVE`); **YouTube** BDF Entrevista.
+- **Mila Costa:** **Diário do Nordeste** (hack); **YouTube** Que Nem Tu / LIKE YOU; **JC UOL** (texto do pacote).
+- **Cleane:** **YouTube** Os Nordestinos pelo Mundo (#451); outros vídeos do pacote (FOC etc.).
+- **Cristian Wariu:** **YouTube** Feat 006 (`nTWmls8Kb-g`); **PROTEJA Talks** (`zSwUrx0vTlM`). **COP30:** no pacote, o mesmo ID de vídeo foi atribuído a **Gratta** — **URL de COP30 para Wariu** ficou **pendente** na **§8**.
+- **Megh Melry:** **GiroGO** (URL do pacote; 403 no `curl` aqui).
+- **Aline / Davi / Paula “Mineira” / Catraca:** ver **alertas** acima; **Catraca** (Dell / Disney+) **não** verificado nesta rodada — marcar como **hipótese do relatório**.
+- **Transversal:** **Metrópoles** (Leo Dias) sobre **cláusulas de neutralidade política** em contratos — contexto de mercado, não vínculo a um nome da lista.
+- **Fora de escopo no pacote (não usar como prova do squad):** PDF acadêmico **Cercomp/UFG** e texto **uBibliorum** — não citam os 13 perfis do YAML de forma verificável.
+
+---
+
 ## Validação — hipóteses vindas de IA (Perplexity) vs. busca web
 
 As linhas que citam **Giovanna Pitel** e **Rafael Gratta** estão **replicadas** nas seções **§1** e **§2** (subseção *Validação cruzada*); a tabela abaixo permanece para visão única na auditoria.
@@ -41,13 +81,13 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Pitel **Guerreiros do Sol / gshow** | **Confirmado** | Vídeo no gshow: “Pitel comenta… Guerreiros do Sol”. |
 | Pitel **Prêmio Potências 2025** | **Não encontrado** | Matérias sobre o prêmio **sem** Pitel; página CNN “lista completa de vencedores” varrida com `curl` + `rg` — **sem** ocorrência “Pitel”. |
 | Pitel **Rio Innovation Week 2025** | **Confirmado (painel gshow)** | **gshow** (ago/2025): painel “Multiplicar vozes…” na **Rio Innovation Week** com **Pitel** + diretoria Publishing Globo — ver URL na seção **Google Notícias** e em **Fontes** Pitel. **CARAS** sobre **Festival Negritudes** continua sendo **outro** evento (não invalida RIW). |
-| Pitel **PL 1904 / aborto** | **Não encontrado** | Rodada 3: queries com aborto/estupro + nome — **zero** ligação a ela. **Retirar** do dossiê. |
+| Pitel **PL / aborto** (posicionamento público) | **Hipótese forte (URL)** | **Notícias da TV** (UOL) — título cita **Pitel** e **“PL do aborto”** com bailarina no **BBB 24**; **403** no `curl` aqui — **ler corpo** no browser e **confirmar número** do PL (não assumir **1904** sem texto). Ver **§ Relatório externo** e **§1 Fontes**. |
 | **Detox Bet** (B3 + Genial) | **Existe (projeto)** | Iniciativa real: Meio & Mensagem 11/04/2025; site https://detoxbet.com.br/ — **gamificação** ligada a ações (alternativa a bets). **Gratta:** **não** citado nessas fontes; **não** inferir parceria. |
 | Gratta + **Genial / B3** como **parceria pessoal** | **Não encontrado** | Nenhuma matéria junta **Rafael Gratta** + Genial/B3/Detox Bet. |
 | Gratta + **Growth Supplements** | **Não vinculado** | Growth Supplements = outra empresa/outros sócios; **não** listar como parceria do criador sem post. |
 | Gratta **TDAH / “10%” / maus hábitos** | **Confirmado (mídia)** | **Estado de Minas**, 24/07/2025 — matéria sobre posicionamento dele + debate; ver URL abaixo. |
-| Gratta **Reddit / debate** | **Parcial** | Agregador **Viralizou** cita debate; **thread Reddit** ainda ideal capturar URL direta. |
-| Críticas **plágio / cópia** (set/2025) | **Não validado** | Busca `plágio OR copiou OR sem crédito` + Gratta: **vazio**. |
+| Gratta **Reddit / debate** | **Confirmado (URL)** | Thread **`r/PsicologiaBR`**: https://www.reddit.com/r/PsicologiaBR/comments/1kne46o/gostava_dos_v%C3%ADdeos_do_rafael_gratta_mas/ — **403** no `curl` aqui; abrir no browser. |
+| Críticas **plágio / cópia** / credibilidade | **Hipótese (vídeo)** | Relatório externo cita **YouTube** `https://www.youtube.com/watch?v=3XR8ZuwIi3g` — **checar título e menção a Gratta** no vídeo; **não** duplicar o mesmo ID para outro perfil sem revisão (erro de catalogação no pacote). |
 | Pitel TikTok **@giovannapiteloficial** | **Confirmado (embed)** | **Terra** (Nós) incorpora resposta no TikTok **@giovannapiteloficial** no artigo sobre corpo/gravidez — perfil **existe** e foi fonte da matéria; IG do squad pode ser `@pitelgiovanna` em paralelo. |
 | Pitel **corpo / “gravidez” / comentários** (TikTok Salvador) | **Confirmado** | **Terra** reproduz vídeo e citações de comentários; desabafo sobre peso e “blogueira mentirosa”. |
 | Pitel **Alane Dias / Ed Gama / Sapucaí** (mar/2025) | **Confirmado** | **Portal O São Gonçalo** 05/03/2025 — imitação do passo de Alane; contexto BBB24. |
@@ -211,7 +251,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Guerreiros do Sol** / gshow | Confirmado | Vídeo gshow. |
 | **Prêmio Potências** 2025 | Não encontrado | Lista CNN varrida — sem “Pitel”. |
 | **Rio Innovation Week** 2025 | **Confirmado** | **gshow** ago/2025 — painel na RIW com **Pitel** (vide **Fontes** + tabela Google Notícias). **CARAS** = **Festival Negritudes** (outro evento). |
-| **PL 1904 / aborto** | Não encontrado | Retirar do dossiê se vier de IA. |
+| **PL / aborto** (pauta reprodutiva) | **URL (Notícias da TV)** | Ver **Fontes** — matéria com **Pitel** + **“PL do aborto”**; **confirmar número do PL** no texto (não presupor **1904**). |
 | TikTok **@giovannapiteloficial** | Confirmado (embed) | Terra (Nós) — perfil citado na matéria. |
 | Corpo / comentários / “gravidez” (Salvador) | Confirmado | Terra (Nós). |
 | Alane Dias / Ed Gama / Sapucaí mar/2025 | Confirmado | Portal O São Gonçalo. |
@@ -281,6 +321,9 @@ Registros **fornecidos em print** (interface desktop). **URL permalink** do post
 | Perfil / carreira | O Globo | https://oglobo.globo.com/play/entrevistas/noticia/2026/01/14/giovanna-pitel-fala-de-novo-podcast-e-das-mudancas-na-sua-vida-apos-o-bbb-24.ghtml | Pós-BBB, podcast. |
 | Perfil / carreira | CNN Brasil (tudo sobre) | https://alpha.cnnbrasil.com.br/tudo-sobre/giovanna-pitel/ | Agregador editorial. |
 | Perfil / carreira | NaTelinha | https://natelinha.uol.com.br/famosos/tudo-sobre/giovanna-pitel | Agregador. |
+| **Pós-BBB / carreira** | NaTelinha | https://natelinha.uol.com.br/famosos/2026/01/14/giovanna-pitel-conta-como-bbb-mudou-sua-realidade-transformador-236518.php | Entrevista 14/01/2026 (pacote relatório externo). |
+| **Política / PL aborto (BBB 24)** | Notícias da TV (UOL) | https://noticiasdatv.uol.com.br/noticia/celebridades/rival-de-alane-no-bbb-24-giovanna-pitel-se-une-a-bailarina-contra-pl-do-aborto-121322 | **Pauta legislativa sensível**; **403** no `curl` neste ambiente. |
+| **Xenofobia (vídeo)** | YouTube | https://www.youtube.com/watch?v=HmYcR99RHio | Título no pacote: Pitel e xenofobia pós-BBB — checar canal e data. |
 | Perfil / carreira | Folha F5 | https://f5.folha.uol.com.br/televisao/bbb24/giovanna-pitel.shtml | Contexto BBB24. |
 | Contrato / marcas (contexto) | Terra | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html | Renovação Globo 2024; menção a demanda de marcas (checar texto integral). |
 | Contrato / marcas (contexto) | NaTelinha | https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php | Renovação + ViU Hub. |
@@ -345,7 +388,7 @@ Registros **fornecidos em print** (interface desktop). **URL permalink** do post
 |------|-----------|-----------|
 | **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. **Prints Instagram:** **Mercado Livre**, **TIM** (telecom), **Natura** (cosméticos) — **fora** do escopo bet/loteria; **Earthshot**/CSR **não** é jogo. | Alta (com prints) |
 | **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **F5 (mar/2026):** fala sobre **Solange Couto** no BBB 26 — possível **risco de imagem** por crítica a participante. **Print IG (Globo × Lolla):** tom provocativo na legenda (“emparedando atrações”) — risco leve de **interpretação negativa** por fãs de artistas. **Print IG (PL 896/2023):** pauta **sensível** (misoginia/racismo); possível **tensão** nos comentários. **Relato no BBB** sobre **fake news** na escola — **CARAS**. **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
-| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros). **Print Instagram:** **PL 896/2023** (gênero/legislativo). **Print Earthshot:** menção a **prêmio internacional** e **figura da realeza britânica** (William) — sensível para **anunciante estatal** só se houver **narrativa anticorporativa/anticliente**; no trecho é **pauta ambiental**. **Google Notícias:** **O Liberal** (amazofuturismo) — **URL pendente**. Pautas sociais/culturais (Nordeste, **Negritudes**, cultura). | Média |
+| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros). **Print Instagram:** **PL 896/2023** (gênero/legislativo). **Matéria Notícias da TV:** posicionamento sobre **“PL do aborto”** no contexto **BBB 24** (URL em **Fontes**; **ler corpo** — não assumir número do PL sem texto). **Print Earthshot:** menção a **prêmio internacional** e **figura da realeza britânica** (William) — sensível para **anunciante estatal** só se houver **narrativa anticorporativa/anticliente**; no trecho é **pauta ambiental**. **Google Notícias:** **O Liberal** (amazofuturismo) — **URL pendente**. Pautas sociais/culturais (Nordeste, **Negritudes**, cultura). | Média a alta (aborto/legislativo, se confirmado no artigo) |
 
 **Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Rodada 5:** Meio & Mensagem / Propmark / AdNews **varridos** — sem novas peças com o nome. (4) **Rodada 6:** Santa Resistência / Ateliê Mão de Mãe — **sem** peça de parceria indexada além do fio de agregadores; perfil de marca (O Globo / ELLE) **sem** cruzamento com Pitel. (5) **Google Notícias:** amostra do RSS na seção global + novas URLs (F5, Terra visual, gshow RIW). (6) **Prints Instagram (lotes):** ML, Lolla, **PL 896/2023**; **lote 2:** **Earthshot** / Valor Social Glô, **TIM** (#publi), **Natura Luna** — documentados; **pendência:** permalinks + arquivo PDF no repositório (se exigido). (7) **Outras pendências:** URL **O Liberal** (amazofuturismo); post **`instagram.com/p/DLiw_OaOYUn`**; inventário nas quatro redes / media kit.
 
@@ -396,7 +439,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | `"Rafael Gratta" + aposta/bet/cassino/loteria` | Retorno **suspeito:** página **grupoea.net.br** com nome dele + cassino — **já** no dossiê como **baixa confiança** / possível **SEO spam afiliado**; **não** tratar como parceria sem prova primária. |
 | `"Rafael Gratta" + Lula/Bolsonaro/política` | **Sem** matéria ligando o criador a endosso ou filiação; resultados são **pesquisas eleitorais genéricas** sem o nome dele. |
 | `"Rafael Gratta" + processo/justiça` | Caso **Rafael Gracioli** (TJMG) = **homônimo** — **não** atribuir. |
-| `site:reddit.com "Rafael Gratta"` | **Sem** thread estável indexada com o nome (debate permanece via **Viralizou** como secundário). |
+| `site:reddit.com "Rafael Gratta"` | **Thread** `r/PsicologiaBR` com URL direta (ver **Fontes** e tabela **Perplexity**); **403** no `curl` aqui. |
 | `site:x.com` / `site:twitter.com` | Sem posts X indexados na amostra; presença em **Threads** [@rafaelgratta](https://www.threads.net/@rafaelgratta) (rede Meta) — **fora** do escopo YAML, mas útil para contexto. |
 | CFM / CRM + nome | **Sem** menção indexada a processo ético com **este** nome nesta rodada. |
 
@@ -408,13 +451,16 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | `"Rafael Gratta" campanha marca` (notícias gerais) | Reforça **Intrínseca**, **AURA**, **MFMA**; sem lista nova de **publipost** de terceiros. |
 | Episódio **Flow #408** (descrição do vídeo) | Patrocínios do **episódio** listados na página espelho: **SmartFit**, **Insider** (#InsiderStore), **Teleton** — são **patrocinadores do podcast**, **não** equivalência automática a contrato do convidado. |
 | `Monetizzecursos.com` + MFMA | URL citada em buscas **redireciona** para a home do site no `curl -sL` — **não** usar como prova de oferta até página de produto estável. |
-| `site:reddit.com "Rafael Gratta"` (repetição) | Continua **sem** thread indexada na amostra. |
+| `site:reddit.com "Rafael Gratta"` (repetição) | URL fixa em **Fontes** (PsicologiaBR). |
 
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil (saúde mental) | Notícias Fit | https://noticiasfit.com.br/rafael-gratta-o-influenciador-que-faz-a-diferenca-na-saude-mental/ | Tom promocional; usar como pista, não como prova única. |
+| **Podcast (saúde mental)** | YouTube — PODPEOPLE #101 | https://www.youtube.com/watch?v=BEdt6ehAOhE | Pacote relatório externo. |
+| **Críticas / plágio / estratégia (vídeo)** | YouTube | https://www.youtube.com/watch?v=3XR8ZuwIi3g | **Hipótese reputacional** — validar se o vídeo refere-se a **Rafael Gratta** e quais alegações. |
+| **Reddit — críticas à linha de conteúdo** | Reddit r/PsicologiaBR | https://www.reddit.com/r/PsicologiaBR/comments/1kne46o/gostava_dos_v%C3%ADdeos_do_rafael_gratta_mas/ | Debate comunitário; **403** no `curl` aqui. |
 | Bio / produto (primário) | Site AURA / bio | https://rafaelgratta.com/bio/ | Ofertas e posicionamento oficial. |
 | Links oficiais | Linktree | https://linktr.ee/rafaelgrattacts | Central de links. |
 | Podcast | Flow #408 (Apple Podcasts) | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 | Entrevista longa; checar menções a marcas. |
@@ -461,17 +507,17 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 **Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco) na web indexada.
 
-**Marcas Perplexity — validação (rodada 3):** **Growth Supplements** = **não** vinculado ao criador como parceria comprovada. **Insider Store** aparece na **descrição do Flow #408** como patrocinador do **episódio** (cupom FLOW15) — **não** inferir publi pessoal do Gratta sem post dele. **Genial/B3/Detox Bet** = projeto **real** (educação financeira gamificada; ver Meio & Mensagem + detoxbet.com.br), mas **sem** menção a **Rafael Gratta** — **não** listar como parceria dele. **TDAH / debate** = **EM** 24/07/2025 + Viralizou; **Reddit** sem URL estável na busca.
+**Marcas Perplexity — validação (rodada 3):** **Growth Supplements** = **não** vinculado ao criador como parceria comprovada. **Insider Store** aparece na **descrição do Flow #408** como patrocinador do **episódio** (cupom FLOW15) — **não** inferir publi pessoal do Gratta sem post dele. **Genial/B3/Detox Bet** = projeto **real** (educação financeira gamificada; ver Meio & Mensagem + detoxbet.com.br), mas **sem** menção a **Rafael Gratta** — **não** listar como parceria dele. **TDAH / debate** = **EM** 24/07/2025 + Viralizou + **Reddit** `r/PsicologiaBR` (URL em **Fontes**). **Plágio** = **hipótese** via vídeo YouTube no pacote externo — checar conteúdo.
 
 ### Achados objetivos — Rafael Gratta (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. **Rodada adicional:** buscas com bet/cassino repetem **grupoea.net.br** (tratado como **não confiável** até prova contrária). **Cursos Certo** = revenda de curso, não operador de jogo. Manter vigilência: nomes “Bet” / páginas spam geram **falso positivo**. | Alta (para plataformas de curso); média (redes não varridas) |
-| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Google Notícias / Em Foco:** textos com **afirmações fortes** (ex.: música reduz ansiedade **“até 65%”**; títulos alternam **médico/psicólogo/neuroeducador**) — exige **checagem de evidência** e de **título profissional** para compliance. **Folha #Hashtag (2024):** viralização do lema e da linha **“ninguém tá nem aí”**. **Reddit:** **rodada `site:reddit.com`** não localizou thread estável; manter **Viralizou** como ponte. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**. **Documentário** — várias matérias (Terra, Gazeta SP, dgabc). Sem processo criminal **deste** nome mapeado (cuidado com **homônimos**). | Alta (TDAH/EM); média (resto) |
+| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Google Notícias / Em Foco:** textos com **afirmações fortes** (ex.: música reduz ansiedade **“até 65%”**; títulos alternam **médico/psicólogo/neuroeducador**) — exige **checagem de evidência** e de **título profissional** para compliance. **Folha #Hashtag (2024):** viralização do lema e da linha **“ninguém tá nem aí”**. **Reddit** `r/PsicologiaBR` — críticas à linha de conteúdo (URL em **Fontes**; **403** no `curl` aqui). **Vídeo YouTube** no pacote externo sobre **estratégia/plágio** — **hipótese** até assistir e cruzar com nomes. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**. **Documentário** — várias matérias (Terra, Gazeta SP, dgabc). Sem processo criminal **deste** nome mapeado (cuidado com **homônimos**). | Alta (TDAH/EM); média (resto) |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada; **rodada adicional** com nome + Lula/Bolsonaro não retornou matéria pertinente. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodadas adicionais:** consultas documentadas; **Cursos Certo** + **Viralizou** (formação/redes); **Rodada 5** trade + Flow (patrocínios do episódio) + documentário **Terra**. (4) **Google Notícias:** amostra do RSS na seção global + URLs EM/Folha/Gazeta/dgabc/IstoÉ adicionadas em **Fontes**. (5) **Pendências:** thread **Reddit** com URL (se existir pública); confirmar menção a **Gratta** no texto completo do **IstoÉ** (Sounds of Quartzo); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
+**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodadas adicionais:** consultas documentadas; **Cursos Certo** + **Viralizou** (formação/redes); **Rodada 5** trade + Flow (patrocínios do episódio) + documentário **Terra**. (4) **Google Notícias:** amostra do RSS na seção global + URLs EM/Folha/Gazeta/dgabc/IstoÉ adicionadas em **Fontes**. (5) **Pendências:** confirmar conteúdo do vídeo **YouTube** `3XR8ZuwIi3g` (plágio/estratégia); confirmar menção a **Gratta** no texto completo do **IstoÉ** (Sounds of Quartzo); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
 
 ---
 
@@ -526,6 +572,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Sesc Camaquã — Tratamento de Choque** | Sesc/RS | https://www.sesc-rs.com.br/noticias/sesc-camaqua-promove-espetaculo-de-comedia-dra-rosangela-em-tratamento-de-choque/ | Mar/2026 — cita **Índio Behn** como criador da personagem. |
 | **Sesc Canoas — programação 2026** | Sesc/RS | https://www.sesc-rs.com.br/noticias/sesc-canoas-lanca-programacao-cultural-do-ano-com-espetaculo-de-thiago-lacerda/ | Texto cita **Índio Behn** e Dra. Rosângela em data **03/10/2026** (Matinê do Humor). |
 | Estreia TV (Praça É Nossa) | Giro de Gravataí | https://www.girodegravatai.com.br/humorista-de-cachoeirinha-indio-behn-estreia-na-praca-e-nossa/ | Contexto **SBT** / regional. |
+| **Perfil (Veja)** | Veja (coluna Veja Gente) | https://veja.abril.com.br/coluna/veja-gente/o-humorista-que-faz-sucesso-ironizando-a-turma-good-vibes/ | Dra. Rosângela / “good vibes”. |
+| **Podcast** | YouTube — O Pod é Nosso #27 | https://www.youtube.com/watch?v=NIVMvblC8lo | Pacote relatório externo. |
+| **Canal oficial** | YouTube — Índio Behn | https://www.youtube.com/c/%C3%8DndioBehn/videos | Lista de vídeos (primário). |
 
 ### Marcas e parcerias — Índio Behn (web aberta, rodada marcas)
 
@@ -587,7 +636,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |------|--------|-----|--------|
 | Site / mídia kit | meghmelry.com.br | https://meghmelry.com.br/ | Oferta de parcerias; métricas no site (+2M seguidores, +5M alcance mensal — **validar no app**). |
 | Perfil (agregador) | Famous Birthdays | https://www.famousbirthdays.com/people/megh-melry.html | Dados biográficos; validar. |
-| **Google Notícias — capa Revista Adames** | GiroGO Notícias | *(URL típica agregada; site retornou **503** aqui)* | Título no RSS: **“Megh Melry… capa da Revista Adames”** — **hipótese de mídia / marca** até página estável ou segundo veículo. |
+| **Google Notícias — capa Revista Adames** | GiroGO Notícias | https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames | **403** no `curl` neste ambiente; título no RSS confirma pauta. |
 | **Google Notícias (RSS)** | Feed `Megh Melry` | `https://news.google.com/rss/search?q=Megh+Melry&hl=pt-BR&gl=BR&ceid=BR:pt-419` | **GiroGO** + **O POVO+** (este último possível **falso positivo** no título). |
 
 ### Desambiguação — não atribuir a Megh Merly sem confirmação
@@ -604,7 +653,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| **Revista Adames** (capa) | **Hipótese** — mídia impressa/digital (título no RSS **GiroGO**) | Google Notícias → GiroGO | Ver seção global **Google Notícias**; URL **GiroGO** instável (503) | Baixa até confirmação |
+| **Revista Adames** (capa) | Matéria **GiroGO** (URL no pacote; **403** no `curl` aqui) | GiroGO Notícias | https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames | Média — abrir no browser |
 | *Marcas nomeadas em matéria (consumo)* | **Não localizado** nesta rodada além da hipótese acima | — | — | — |
 | *Lista de publipost* | Exige varredura **Instagram / TikTok / YouTube / X** ou media kit | — | — | — |
 
@@ -616,7 +665,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | Caso judicial / gravidez / ex-atleta em mar/2026 aparece na imprensa ligado a **outra** pessoa (ex.: **Juliana Merhy**); **não** atribuir a Megh Merly sem nomeação explícita do handle ou da pessoa. | Alta (desambiguação) |
 | **Política** | Não localizado posicionamento partidário ou pauta política explícita **para este perfil** nesta rodada. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** `Megh Merly` vazio; `Megh Melry` com **GiroGO** / Adames — capturar URL canônica ou espelho. (2) **Pendências:** inventário completo nas **quatro redes**; desambiguar **Collabstr megreilyy**; validar números do **site** no app.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** `Megh Merly` vazio; `Megh Melry` com **GiroGO** / Adames — URL https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames (**403** no `curl` aqui). (2) **Pendências:** inventário completo nas **quatro redes**; desambiguar **Collabstr megreilyy**; validar números do **site** no app.
 
 ---
 
@@ -662,6 +711,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Álbum forró (2022)** | O POVO | https://www.opovo.com.br/vidaearte/2022/10/21/ex-the-voice-e-humorista-cleane-sampaio-exalta-nordeste-em-album.html | *Pra Dançar Um Forrozim* — obra autoral, não publipost. |
 | **CD / carreira** | Tô Na Mídia | https://tonamidia.com.br/resgatando-o-forro-dancante-cleane-sampaio-ex-the-voice-brasil-lanca-novo-cd/ | Tom promocional; cruzar com O POVO. |
 | **Colação Unifor (show)** | Unifor (Graduação) | https://unifor.br/web/graduacao/-/cleane-sampaio-faz-show-em-colacao-de-grau-2021.2-da-unifor | Colação **2021.2**; atração musical — vínculo **institucional** com universidade, não consumo massivo. |
+| **Entrevista / podcast (YouTube)** | YouTube — Os Nordestinos pelo Mundo #451 | https://www.youtube.com/watch?v=NOvZuh0oEhI | Pacote relatório externo. |
+| **YouTube (FOC / 2ª temp.)** | YouTube | https://www.youtube.com/watch?v=AQMJE5RnAaM | Pacote relatório externo — checar título e data. |
 
 **Atenção:** buscas “Sampaio + política” podem retornar **Edna Sampaio** e outros homônimos — não cruzar automaticamente com Cleane.
 
@@ -672,6 +723,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **TV Globo / gshow** | **Reality** *The Voice Brasil* (9ª temporada; time Carlinhos Brown) | Plus FM; gshow | https://plusfm.com.br/cearenses-gabriel-nogueira-e-cleane-sampaio-vencem-primeira-etapa-do-the-voice-brasil/ · https://gshow.globo.com/realities/the-voice-brasil/2020/playlist/the-voice-reveja-as-batalhas-do-time-brown-na-9-temporada.ghtml | Alta (grade Globo) |
 | **TV Jangadeiro** | **Apresentação** *Todo Mundo Ama* | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Alta (matéria cita emissora) |
 | **Unifor** | **Show em colação de grau** (cerimônia acadêmica) | Unifor | https://unifor.br/web/graduacao/-/cleane-sampaio-faz-show-em-colacao-de-grau-2021.2-da-unifor | Alta |
+| **Betânia Lácteos**; **Pardal**; **Dunorte**; **Solar Coca-Cola** | Citadas no **relatório externo** como parcerias regionais | — | **Não** espelhadas em matéria nesta compilação — **hipótese** até post/release | Baixa |
 | *Publipost de consumo* | **Não localizado** nome de marca em matéria nesta rodada | — | Completar nas quatro redes | — |
 
 ### Achados objetivos — Cleane Sampaio (rodada aprofundada)
@@ -739,6 +791,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Lula / Janja / Sapucaí** | 96 FM | https://96fm.com.br/post/apos-desfile-ivan-baron-encontra-lula-e-reforca-alianca-com-o-pt-estaremos-juntos | |
 | **Planalto / Secretaria Nacional PcD (sondagem)** | Diário PcD | https://diariopcd.com.br/planalto-sonda-ivan-baron-para-a-secretaria-nacional-dos-direitos-das-pessoas-com-deficiencia/ | Especulação de cargo; matéria cita resposta do entorno. |
 | **Teleton 2024 (apresentador)** | Diário PcD | https://diariopcd.com.br/ivan-baron-integra-time-de-apresentadores-do-teleton-2024-e-reforca-compromisso-pela-inclusao/ | **SBT** / institucional — não é bet/loteria. |
+| **MEC — campanha anticapacitista (2025)** | Agência Brasil (EBC) | https://agenciabrasil.ebc.com.br/educacao/noticia/2025-03/pedagogo-ivan-baron-fara-campanha-anticapacitista-com-mec | Reforça papel **institucional** / governo federal. |
+| **CriaCast — Ambev** | YouTube | https://www.youtube.com/watch?v=zZgf0zGaSVE | Pacote relatório externo — **Ambev** / bebidas; **não** é bet/loteria; sensível para **álcool** em governança de marca pública. |
+| **Brasil de Fato — entrevista** | YouTube | https://www.youtube.com/watch?v=xNFslebuxeA | Pacote relatório externo. |
 
 ### Marcas e parcerias — Ivan Baron (web aberta, rodada marcas)
 
@@ -746,13 +801,15 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |---------------------|-----------------|--------|-----|------------|
 | **Teleton / SBT** | **Apresentação** (matéria **2024**) | Diário PcD | https://diariopcd.com.br/ivan-baron-integra-time-de-apresentadores-do-teleton-2024-e-reforca-compromisso-pela-inclusao/ | Alta (veículo especializado) |
 | **MEC** (Ministério da Educação) | **Campanha nacional** — convite como **embaixador** (matéria **Agora RN**) | Agora RN | https://agorarn.com.br/ultimas/ivan-baron-nova-campanha-nacional-do-mec/ | Média — checar peça oficial do ministério |
+| **MEC** | **Campanha anticapacitista** (matéria **2025**) | Agência Brasil | https://agenciabrasil.ebc.com.br/educacao/noticia/2025-03/pedagogo-ivan-baron-fara-campanha-anticapacitista-com-mec | Alta (agência pública) |
+| **Ambev** | **Aparição** em **CriaCast** (vídeo no pacote externo) | YouTube | https://www.youtube.com/watch?v=zZgf0zGaSVE | Média — checar se é publi paga ou só convite editorial |
 | *Demais marcas em publipost* | **Não localizada** lista explícita nesta rodada | — | Completar nas quatro redes | — |
 
 ### Achados objetivos — Ivan Baron (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. **Teleton** é **telefundraising** institucional (mídia cita **SBT**), não operador de jogo. | Média a alta |
+| **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. **Teleton** é **telefundraising** institucional (mídia cita **SBT**), não operador de jogo. **Ambev** (CriaCast) = **bebidas** — fora de bet; avaliar **álcool** para anunciante público. | Média a alta |
 | **Polêmicas** | **2024:** críticas a medida ligada ao **BPC** e repercussão polarizada (Poder360, Gazeta do Povo, Grande Ponto, Pleno.News). **2025–2026:** tensão política em torno de **MDB** vs **PT** e **coerência** narrativa — várias matérias. Para anunciante **público**, risco de **associação partidária** e de **crítica a governos** (mesmo após símbolo de **apoio** a Lula na posse). | Alta |
 | **Política** | **Trajetória explícita:** rampa **Lula 2023**; **pré-candidatura** **2026** (Brasil de Fato); **filiação MDB** com críticas da esquerda (Agora RN); **desfiliação MDB** e **convite/filiação PT** (Blog Barreto, Senadinho, 96 FM, Agora RN). **Sondagem** para **Secretaria Nacional PcD** (Diário PcD). **Alto** alinhamento com **agenda PCD** e **campo político** — para **Loterias/Caixa**, costuma ser **fator central** de brand safety (partidarismo). | Alta |
 
@@ -808,6 +865,11 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Visita casa BBB 22** | Diário do Nordeste | https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/influenciadora-cearense-mila-costa-visita-a-casa-do-bbb-22-parece-de-brinquedo-1.3224618 | Conteúdo **Globo** / reality. |
 | **Palestra “Lidera Mulher” / Acesu** | CBTV Play | https://www.cbtvplay.com.br/noticias/brasil/1261437 | Evento **setor supermercados** (CE) — **não** é bet; checar se há **remuneração** no release. |
 | **Google Notícias** | RSS | `https://news.google.com/rss/search?q=Mila+Costa+influencer&hl=pt-BR&gl=BR&ceid=BR:pt-419` | Inclui título **Granja Regina × intervalo BBB** (**Portal IN**) — **URL** do post a fixar. |
+| **Conta hackeada / golpe** | Diário do Nordeste | https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/influenciadora-digital-cearense-mila-costa-tem-rede-social-e-telefone-rackeados-1.3374336 | **Polêmica / segurança** — eixo reputacional. |
+| **Perfil (JC UOL)** | JC | https://jc.uol.com.br/cultura/2021/06/12133851-de-concurseira-a-influencer-mila-costa-ganha-a-web-com-perfil-cheio-de-bom-humor-e-sem-filtro-na-pandemia.html | Pacote relatório externo. |
+| **Podcast Que Nem Tu** | YouTube | https://www.youtube.com/watch?v=4YosVTINMjE | Pacote relatório externo. |
+| **LIKE YOU #08 (inglês)** | YouTube | https://www.youtube.com/watch?v=dS3OmhlDA_4 | Pacote relatório externo. |
+| **Cláusulas / política em contrato de influenciador (contexto)** | Metrópoles (Leo Dias) | https://www.metropoles.com.br/colunas/leo-dias/marcas-proibem-influenciadores-de-se-posicionarem-sobre-politica-e-ideologia-entenda | **Panorama de mercado** — não atribui fato a **Mila** sem prova. |
 
 ### Marcas e parcerias — Mila Costa (web aberta, rodada marcas)
 
@@ -818,6 +880,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Senac Ceará** | **Protagonista** de campanha(s) institucional(is) | Senac CE; Nosso Meio; Portal IN | https://www.ce.senac.br/mila-costa-e-protagonista-da-nova-campanha-do-senac-ceara/ · https://nossomeio.com.br/ebmquintto-assina-nova-campanha-do-senac-ceara-com-mila-costa-como-protagonista/ | Alta |
 | **Banco do Nordeste** | Campanha **“Vai de Giro”** (crédito MPE) | Portal Nosso Meio | https://nossomeio.com.br/banco-do-nordeste-e-ebmquintto-lancam-nova-fase-da-campanha-vai-de-giro-com-mila-costa/ | Alta |
 | **Granja Regina** | **Hipótese** — título RSS (**comercial no intervalo do BBB**) | Google Notícias → Portal IN | **Pendência:** permalink | Média até URL |
+| **Solar Coca-Cola**; **Vitamílio**; **Óticas Mais Brasil** | Citadas no **relatório externo** | — | **Não** espelhadas em matéria nesta compilação — **hipótese** até post | Baixa |
 | **milacosta.com** | Site autoral / produtos | milacosta.com | https://milacosta.com/ | Média |
 | *Demais publipost* | Completar nas redes | — | — | — |
 
@@ -826,7 +889,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Não encontrada nesta rodada vínculo com bet, cassino ou loteria concorrente. **Campanha Banco do Nordeste** = **banco público** (crédito), não jogo. **Granja Regina** (alimentos) no título RSS — **não** é operador de aposta. | Média a alta |
-| **Polêmicas** | Não mapeado nesta rodada episódio reputacional grave com fonte estável. | Baixa a média |
+| **Polêmicas** | **Hack** de redes/telefone (**Diário do Nordeste**) — risco **segurança/golpe** (Pix etc., conforme matéria). | Média |
 | **Política** | Não localizado endosso partidário explícito nesta rodada; presença em **instituições públicas** (Senac, BNB) é **comercial/institucional**, não prova de filiação. | Baixa |
 
 **Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** linha na tabela global. (2) **Pendências:** URL canônica **Granja Regina × BBB**; corpo **secult** (live humor) se necessário; inventário **IG/TT/YT/X**.
@@ -874,6 +937,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **VICE** | Vice Brasil | https://www.vice.com/pt/article/quem-sao-os-youtubers-indigenas-do-brasil/ | Perfil + **críticas de internet** (“volta pro mato” etc.) — **polêmica leve** documentada. |
 | **Podcast “Papo de Parente”** | Mídia NINJA | https://midianinja.org/celia-xakriaba-tukuma-pataxo-e-cristian-wariu-lancam-programa-de-podcast-papo-de-parente/ | Com **Célia Xakriabá**, **Tukumã Pataxó**; **Globoplay** e **Deezer** citados — **mídia institucional**, não publi de jogo. |
 | **Google Notícias** | RSS | `https://news.google.com/rss/search?q=Cristian+Wariu&hl=pt-BR&gl=BR&ceid=BR:pt-419` | Amostra: COP30, Trip, g1, thmais, DW, BBC. |
+| **Entrevista — direitos indígenas** | YouTube — Feat 006 | https://www.youtube.com/watch?v=nTWmls8Kb-g | Pacote relatório externo. |
+| **PROTEJA Talks 2023** | YouTube | https://www.youtube.com/watch?v=zSwUrx0vTlM | Pacote relatório externo. |
+| **COP30 / justiça climática (vídeo)** | Relatório externo | *(ID **3XR8ZuwIi3g** no pacote do usuário = **mesmo** link atribuído a **Gratta** — **erro de catalogação** provável; **não** listar URL duplicada até confirmar vídeo correto de **Wariu**.)* | Pendência |
 
 ### Marcas e parcerias — Cristian Wariu (web aberta, rodada marcas)
 
@@ -891,7 +957,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | Matérias descrevem **ódio/comentários preconceituosos** online (ex.: **VICE**); não mapeado processo ou “cancelamento” com veículo jurídico. | Média |
 | **Política** | **Partido / candidatura explícitos:** não mapeados nesta rodada. **Pauta** recorrente: **direitos indígenas**, combate à **desinformação**, presença em **COP** / listas de influência — sensível para anunciante público, **sem** equivaler a filiação partidária. | Alta (pauta); baixa (partido) |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** linha na tabela global. (2) **Pendências:** checar se matéria **g1** “indígena influencer desmistificar” cita **Wariu** no corpo (título RSS); inventário **IG/TT** para marcas.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** linha na tabela global. (2) **Pendências:** checar se matéria **g1** “indígena influencer desmistificar” cita **Wariu** no corpo (título RSS); **vídeo COP30** — ID **3XR8ZuwIi3g** no pacote externo colide com **Gratta** (não duplicar); localizar URL correta para **Wariu**; inventário **IG/TT** para marcas.
 
 ---
 
@@ -921,7 +987,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
-| Mídia kit / marcas citadas | Wupper | https://wupper.com.br/influencer-cereja/ | Cita **Ana Thereza**, **NIVEA**, **Outback**, **SHEGLAM**, **Positivo** — **validar handle** `@cerejaaaaaa` e **post primário**. |
+| Mídia kit / marcas citadas | Wupper | https://wupper.com.br/influencer-cereja/ | Cita **Ana Thereza**, **NIVEA**, **Outback**, **SHEGLAM**, **Positivo** — **validar handle** `@cerejaaaaaa` e **post primário**. **Relatório externo** também cita **Ana Thereza** (alinha com Wupper; diverge do nicho “gaming” do texto narrativo). |
 | Agregador | Famous Birthdays (Acereja) | https://pt.famousbirthdays.com/people/acereja.html | Possível divergência de @ (cerejebs etc.). |
 
 ### Marcas e parcerias — Cereja (web aberta, rodada marcas)
@@ -938,6 +1004,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Concorrência** | Não encontrada nesta rodada menção a bet/cassino/loteria concorrente nas fontes listadas. **SHEGLAM** (maquiagem, grupo **Shein**) = **varejo** — não é operador de jogo; anotar só se houver **publi** no perfil. | Baixa a média |
 | **Polêmicas** | Não mapeado nesta rodada episódio específico com URL estável. | Baixa |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
+
+**Relatório externo:** menção a campanha **“Goob Vibes”** — **não** espelhada em fonte nesta compilação; tratar como **hipótese** até post.
 
 **Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** consultas genéricas **inúteis** — usar nome + handle em busca no app. (2) **Pendências:** prints **#publi** NIVEA/Outback/SHEGLAM.
 
@@ -971,6 +1039,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |------|--------|-----|--------|
 | Agregador “Aline com Certeza” | Famous Birthdays (PT) | https://pt.famousbirthdays.com/people/aline-com-certeza.html | Cita TikTok **@aliineza** — **cruzamento obrigatório** com `@comcertezaaline`. |
 | Agregador (EN) | Famous Birthdays | https://www.famousbirthdays.com/people/aline-com-certeza.html | Cita **`comcertezaaline`** — alinhar com PT ou confirmar mudança de @. |
+| **Podcast Zero18 (TV Fronteira / jornalismo)** | YouTube | https://www.youtube.com/watch?v=0a0r9OPoZ84 | **Relatório externo** — perfil **jornalístico**; cruzar com **@comcertezaaline** antes de fundir com **Famous Birthdays**. |
 
 ### Marcas e parcerias — Aline Costa (web aberta, rodada marcas)
 
@@ -984,9 +1053,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |------|-----------|-----------|
 | **Concorrência** | Não encontrada nesta rodada evidência de parceria com bet/cassino/loteria concorrente. | Baixa (pouca fonte indexada) |
 | **Polêmicas** | Sem URL mapeada nesta rodada. | Baixa |
-| **Política** | Sem URL mapeada nesta rodada. | Baixa |
+| **Política** | Se **Zero18** for o mesmo criador do YAML, perfil **jornalístico** implica **pauta pública** — mapear com evidência; se for **pessoa diferente** do **Famous Birthdays**, manter separado. | Baixa até unificar identidade |
 
-**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** **não** confiável para este nome — usar **site:tiktok.com** / **site:instagram.com** com **handle** ou briefing com **nome civil**. (2) Resolver **@aliineza** vs **`@comcertezaaline`**.
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** **não** confiável para este nome — usar **site:tiktok.com** / **site:instagram.com** com **handle** ou briefing com **nome civil**. (2) Resolver **@aliineza** vs **`@comcertezaaline`**. (3) **Relatório externo (Zero18)** × **Famous Birthdays** — mesma pessoa ou **troca de perfil** no YAML.
 
 ---
 
@@ -1013,6 +1082,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Possível homônimo (não vincular sem prova) | Egobrazil | https://egobrazil.ig.com.br/davi-do-ceasa-o-influencer-que-conquistou-o-brasil-com-simplicidade-e-honestidade/ | “Davi do Ceasa” — outro caso. |
 
 **Rodada mar/2026:** buscas web e **Google Notícias (RSS)** com `davizoa`, `"Davi Zoa"` e variações — **sem** matéria que una o **handle** a nome ou fato; retornos são **Davi Brito (BBB)**, **Davi do Ceasa**, músico **Davizão**, etc.
+
+**Relatório externo — não aplicar a `@davizoa` sem prova:** matérias sobre **Davi Brito** (BBB 24), bordão **“calma calabreso”**, loja, processos — ex.: https://aloalobahia.com/noticias/2025/05/16/davi-brito-se-envolve-em-nova-polemica-judicial-apos-abrir-loja-de-roupas-entenda/ — referem-se a **outra pessoa** até o **handle** ser cruzado.
 
 **Ação:** após identificação do perfil correto, acrescentar linhas nesta seção com URLs.
 
@@ -1053,6 +1124,13 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | `Paula Mineira Areado` (RSS) | **Ruído** — notícias do **município** (TCE, acidentes, Enem) **sem** a influenciadora |
 | `Paula Mineira influencer` (RSS) | **Ruído** — “Paula” + “mineira” em outros contextos (BBB, mortes) |
 
+### Desambiguação crítica — **Paula Mineira (`@mineira.paula`)** ≠ **Paula von Sperling** (BBB 19)
+
+| Pessoa | Quem é (nesta compilação) | Fontes do **relatório externo** que **não** devem ir para **`@mineira.paula`** sem revisão |
+|--------|---------------------------|--------------------------------------------------------------------------------------------------|
+| **Paula Helena / Paula Mineira** | Influenciadora de **Areado (MG)**; **Portal Onda Sul** + **iBest 2025** | — |
+| **Paula von Sperling** | Campeã **BBB 19**; polêmicas no reality; “marcas têm medo de mim”; **Miss Universe MG** | Notícias da TV — https://noticiasdatv.uol.com.br/noticia/bbb/acusada-de-racismo-no-bbb19-paula-reclama-marcas-tem-medo-de-mim-28574 · UAI — https://www.uai.com.br/app/entretenimento/famosos/2026/03/01/not-famosos,378629/lembra-dela-saiba-o-que-a-campea-do-bbb-19-paula-von-sperling-faz-hoje.shtml · Itatiaia — https://www.itatiaia.com.br/entretenimento/ex-bbb-paula-von-sperling-jurada-do-miss-universe-mg-critica-resultado-do-concurso/ · Purepeople (pacote) |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -1081,7 +1159,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | Não mapeado nesta rodada. | Baixa |
 | **Política** | Não mapeado nesta rodada. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** **Google Notícias** com nome + cidade **não** filtra o perfil — usar **`site:portalondasul.com.br`** ou handles.
+**Checklist de completude (snapshot mar/2026):** **Google Notícias** com nome + cidade **não** filtra o perfil — usar **`site:portalondasul.com.br`** ou handles. **Não** importar URLs de **Paula von Sperling** (BBB 19) para **`@mineira.paula`** — ver **Desambiguação** acima.
 
 ---
 
@@ -1129,6 +1207,7 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 |---------------------|-----------------|--------|-----|------------|
 | **Época SP**; **Ôtima** | **Parceria editorial / lazer** (matérias de trade) | Meio & Mensagem | Ver tabela **Fontes** | Média — legado |
 | *Parcerias comerciais atuais (programmatic / branded)* | **Não mapeadas** nesta rodada | — | Completar via página institucional / Publis / releases | — |
+| **Dell Technologies**; **Disney+** | Citadas no **relatório externo** como parcerias atuais | — | **Não** verificadas nesta compilação — **hipótese** | Baixa |
 
 ### Achados objetivos — Catraca Livre (rodada aprofundada)
 
