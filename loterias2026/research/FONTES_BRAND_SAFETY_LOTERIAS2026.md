@@ -29,7 +29,7 @@
 | O que o relatório externo afirma | Handle / pessoa do squad | Status nesta auditoria |
 |----------------------------------|---------------------------|-------------------------|
 | **“Paula Mineira”** = **Paula von Sperling**, campeã **BBB 19**, polêmica racial, “marcas têm medo de mim”, **Miss Universe MG** | **`@mineira.paula`** = **Paula Helena de Oliveira**, **Areado (MG)**, **iBest 2025** (Portal Onda Sul) | **NÃO MISTURAR** — são **pessoas diferentes**; as URLs **UAI**, **Notícias da TV** e **Itatiaia** sobre **Paula von Sperling** **não** se aplicam a **`@mineira.paula`** sem prova adicional. |
-| **“Davi”** = **Davi Brito** (BBB 24), loja, bordão **“calma calabreso”**, polêmica judicial | **`@davizoa`** (criador sem matéria + handle na web indexada desta base) | **NÃO MISTURAR** — **Davi Brito** ≠ **`@davizoa`** até identificação inequívoca. |
+| **“Davi”** = **Davi Brito** (BBB 24), loja, bordão **“calma calabreso”**, polêmica judicial | **`@davizoa`** — **apelido/handle do squad**; **não** é **Davi Brito** (correção do briefing) | **NÃO MISTURAR** — matérias sobre **Davi Brito** **não** servem como prova para **`@davizoa`**; falta **imprensa ou primário** que una o **handle** a nome/fato. |
 | **Aline Costa** = repórter **TV Fronteira** / jornalismo institucional | **`@comcertezaaline`** = criadora de humor **TikTok** (Famous Birthdays cita **@aliineza** / **comcertezaaline**) | **Provável troca de perfil** — validar com **nome civil** e canal **YouTube** citado no relatório antes de fundir achados. |
 | **Cereja** = “gaming”, “Goob Vibes”, **Salvador** | **`@cerejaaaaaa`** (agregador **Wupper**: **Ana Thereza**, humor/POV, marcas **NIVEA** etc.) | **Inconsistência de nicho** no relatório — manter **Wupper + YAML** até confirmação em **IG/TT** do handle do squad. |
 
@@ -54,7 +54,7 @@
 - **Cleane:** **YouTube** Os Nordestinos pelo Mundo (#451); outros vídeos do pacote (FOC etc.).
 - **Cristian Wariu:** **YouTube** Feat 006 (`nTWmls8Kb-g`); **PROTEJA Talks** (`zSwUrx0vTlM`). **COP30:** no pacote, o mesmo ID de vídeo foi atribuído a **Gratta** — **URL de COP30 para Wariu** ficou **pendente** na **§8**.
 - **Megh Melry:** **GiroGO** (URL do pacote; 403 no `curl` aqui).
-- **Aline / Davi / Paula “Mineira” / Catraca:** ver **alertas** acima; **Catraca** (Dell / Disney+) **não** verificado nesta rodada — marcar como **hipótese do relatório**.
+- **Aline / Davi / Paula “Mineira” / Catraca:** ver **alertas** acima; **Davi** no pacote externo = **Davi Brito** — **não** incorporar em **`@davizoa`** (briefing: **apelido davizoa** é **outra pessoa**); **Catraca** (Dell / Disney+) **não** verificado nesta rodada — marcar como **hipótese do relatório**.
 - **Transversal:** **Metrópoles** (Leo Dias) sobre **cláusulas de neutralidade política** em contratos — contexto de mercado, não vínculo a um nome da lista.
 - **Fora de escopo no pacote (não usar como prova do squad):** PDF acadêmico **Cercomp/UFG** e texto **uBibliorum** — não citam os 13 perfis do YAML de forma verificável.
 
@@ -210,7 +210,7 @@ Feed: `https://news.google.com/rss/search?q=<consulta>&hl=pt-BR&gl=BR&ceid=BR:pt
 | **Mila Costa influencer** | 2ª filha / gravidez (**Diário do Nordeste**); Senac (**Portal IN**); **comercial Granja Regina no intervalo do BBB** (**Portal IN** / título RSS); **JC**; live BECE + Leo Suricate (**secult.ce** — título no RSS) | **Granja Regina × BBB:** confirmar **URL** do release (título RSS sem permalink estável aqui). **JC:** título “de concurseira a influencer” no feed — preferir **DN** + **Portal IN** já resolvidos. |
 | **Cristian Wariu** | COP30 (**Amazônia Vox**); **Trip**; **g1** (título “indígena influencer desmistificar”); **thmais**; **DW**; **BBC** | Reforça eixo **pauta indígena / mídia**; ver URLs novas na §8. |
 | **Paula Mineira Areado** | **Ruído:** TCE-Areado, acidentes MG, Enem — **sem** menção à influenciadora no título | Não usar como fonte do perfil. |
-| **davizoa** | **Sem itens** no RSS | Alinhado a buscas web sem matéria + handle. |
+| **davizoa** | **Sem itens** no RSS (canal vazio) | Repetido em **31/03/2026** — idem. Consulta **`"davi zoa"`** no RSS: **sem** notícias sobre o apelido (itens irrelevantes/fora do escopo). |
 | **comcertezaaline TikTok** | **Sem itens** | **Aline com certeza** sozinha retorna **Aline Campos**, pets etc. — ruído. |
 | **Megh Merly** | **Sem itens** | Usar **Megh Melry** (linha anterior nesta página). |
 | **"Ana Thereza" Cereja TikTok** | **Sem itens** | Nome da agregador **Wupper**; confirmação só com **post primário**. |
@@ -1073,19 +1073,29 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@davizoa` |
 | X | `davizoa` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Situação (mar/2026, ambiente desta auditoria) |
+|------|--------------------------------------------------|
+| **Instagram** | `https://www.instagram.com/davizoa/` responde **302** para **login** — **não** foi possível ler **bio**, nome público ou posts **sem** sessão. |
+| **TikTok** | Buscas abertas (`davizoa`, `@davizoa`) **não** retornaram perfil/menção inequívoca indexada (só ruído e outros “Davi”). |
+| **YouTube** | Idem — sem canal ou matéria indexada ligando o **apelido** ao handle. |
+| **X** | Idem. |
+| **Google Notícias (RSS)** | Consulta `davizoa` → **zero** itens no feed; `"davi zoa"` → **sem** notícia sobre o criador. |
+
 ### Fontes coletadas (web aberta)
 
-**Status:** nenhuma fonte jornalística inequívoca para o handle `@davizoa` nesta compilação.
+**Status:** nenhuma fonte jornalística inequívoca para o handle **`@davizoa`** nesta compilação — **apesar** do briefing de que **davizoa** é o **apelido** do talento (persona **distinta** de **Davi Brito**).
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Possível homônimo (não vincular sem prova) | Egobrazil | https://egobrazil.ig.com.br/davi-do-ceasa-o-influencer-que-conquistou-o-brasil-com-simplicidade-e-honestidade/ | “Davi do Ceasa” — outro caso. |
 
-**Rodada mar/2026:** buscas web e **Google Notícias (RSS)** com `davizoa`, `"Davi Zoa"` e variações — **sem** matéria que una o **handle** a nome ou fato; retornos são **Davi Brito (BBB)**, **Davi do Ceasa**, músico **Davizão**, etc.
+**Rodadas mar/2026 + complemento 31/03/2026:** buscas web (incl. `site:instagram.com`, menções `@davizoa`) e **Google Notícias (RSS)** com `davizoa`, `"Davi Zoa"` — **sem** matéria que una o **handle** a nome ou fato; retornos genéricos continuam sendo **Davi Brito (BBB)**, **Davi do Ceasa**, músico **Davizão**, contas **Davi** com outros usernames, etc.
 
-**Relatório externo — não aplicar a `@davizoa` sem prova:** matérias sobre **Davi Brito** (BBB 24), bordão **“calma calabreso”**, loja, processos — ex.: https://aloalobahia.com/noticias/2025/05/16/davi-brito-se-envolve-em-nova-polemica-judicial-apos-abrir-loja-de-roupas-entenda/ — referem-se a **outra pessoa** até o **handle** ser cruzado.
+**Relatório externo — não aplicar a `@davizoa` sem prova:** matérias sobre **Davi Brito** (BBB 24), bordão **“calma calabreso”**, loja, processos — ex.: https://aloalobahia.com/noticias/2025/05/16/davi-brito-se-envolve-em-nova-polemica-judicial-apos-abrir-loja-de-roupas-entenda/ — referem-se a **outra pessoa** e **não** substituem evidência sobre **`@davizoa`**.
 
-**Ação:** após identificação do perfil correto, acrescentar linhas nesta seção com URLs.
+**Ação:** (1) abrir **`@davizoa`** no app (IG/TT) logado e registrar **nome no perfil**, **bio**, **#publi** e prints com data; (2) obter **nome civil** ou **release** da agência para buscas `site:`; (3) então acrescentar linhas nesta seção com **URLs** de matérias ou posts arquivados.
 
 ### Marcas e parcerias — Davi (`@davizoa`) (web aberta, rodada marcas)
 
@@ -1100,6 +1110,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Concorrência** | **Não pesquisável** com precisão nesta base: sem fonte que una nome + `@davizoa`. | Baixa |
 | **Polêmicas** | Idem. | Baixa |
 | **Política** | Idem. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias** + busca web: **sem** índice útil para o handle. (2) **Instagram** `davizoa`: só acessível com **login** neste ambiente — precisa **app** ou **print** primário. (3) Briefing: **apelido davizoa** ≠ **Davi Brito** — manter separação nas fontes.
 
 ---
 
