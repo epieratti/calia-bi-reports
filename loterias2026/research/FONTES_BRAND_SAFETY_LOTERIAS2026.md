@@ -23,28 +23,35 @@
 
 **Origem:** texto consolidado enviado pelo time (Perplexity / pesquisa assistida), **sem** links `[^n]` preservados. **Uso:** hipóteses e linhas de investigação; **obrigatório** cruzar com fontes primárias antes do dossiê final.
 
-### Verificação cruzada — resumo (atualizado após **rodada 2** de busca Cursor, 31/03/2026)
+### Verificação cruzada — resumo (atualizado após **rodadas 2 e 3** de busca Cursor, 31/03/2026)
+
+**Métodos extras na rodada 3:** variações de query + download da página da CNN (`curl` + `rg` na lista Potências); leitura integral de matérias (Terra, Meio & Mensagem, Intrínseca, O São Gonçalo, CARAS); busca `site:reddit.com` (**sem** thread útil indexada para Gratta).
 
 | Afirmação (Perplexity) | Status | Notas |
 |-------------------------|--------|--------|
-| Pitel + **Seara** | **Não encontrado** | Queries `"Giovanna Pitel" Seara` — só perfis genéricos; **sem** matéria de campanha. |
-| Pitel + **Downy** | **Não encontrado** | Idem; resultado Downy foi **Dona Hermínia** (Paulo Gustavo), sem Pitel. |
-| Pitel + **Stone** (fintech BR) | **Não encontrado** | `"Giovanna Pitel" Stone` puxa ruído internacional; sem vínculo Stone Co. + Pitel. |
+| Pitel + **Seara** | **Não encontrado** | Rodada 3 repetiu: sem matéria campanha. |
+| Pitel + **Downy** | **Não encontrado** | Idem. |
+| Pitel + **Stone** (fintech BR) | **Não encontrado** | Idem. |
 | Pitel + **iFood** (publipost **dela**) | **Não atribuir sem prova** | Publi documentada é da **Camila** (esposa de Lucas Buda), não de Pitel. |
 | Pitel **Festival Verão Salvador 2025** + **Tim** | **Confirmado** | iBahia: camarote **Tim**; “vale night” do marido. |
 | Pitel **seguranças / baixa interação** | **Confirmado (parcial)** | Agora Alagoas e ecossistema iBahia sobre seguranças e repercussão. |
 | Pitel **show Lady Gaga Copacabana mai/2025** | **Confirmado** | Revista Quem / Globo — look, não confundir com “Rock in Rio 2025” como evento. |
 | Pitel **Rock in Rio** vs **afastamento Fernanda Bande** | **Ajuste** | Gshow em URL de **Rock in Rio** fala em **Fernanda Bande** e afastamento de **Giovana Pitel** — checar se typo do veículo; **não** misturar com Lady Gaga. |
 | Pitel **Guerreiros do Sol / gshow** | **Confirmado** | Vídeo no gshow: “Pitel comenta… Guerreiros do Sol”. |
-| Pitel **Prêmio Potências 2025** | **Não encontrado** | Busca com nome da premiação **não** retorna Pitel. |
-| Pitel **Rio Innovation Week 2025** | **Não encontrado** | Sem menção conjunta indexada. |
-| Pitel **PL 1904 / aborto** | **Não encontrado** | Query com nome + PL 1904: zero resultado ligando a ela. **Retirar** do texto Perplexity no dossiê. |
-| Gratta + **Genial / B3 / “Detox Bet”** | **Não encontrado** | `"Rafael Gratta" Genial` sem match; **não** usar “Detox Bet” sem fonte (risco de confusão com aposta). |
+| Pitel **Prêmio Potências 2025** | **Não encontrado** | Matérias sobre o prêmio **sem** Pitel; página CNN “lista completa de vencedores” varrida com `curl` + `rg` — **sem** ocorrência “Pitel”. |
+| Pitel **Rio Innovation Week 2025** | **Não encontrado** | **Correção:** CARAS documenta presença no **Festival Negritudes Globo São Paulo** (representatividade audiovisual), **não** Rio Innovation Week — possível **confusão temática** no Perplexity. |
+| Pitel **PL 1904 / aborto** | **Não encontrado** | Rodada 3: queries com aborto/estupro + nome — **zero** ligação a ela. **Retirar** do dossiê. |
+| **Detox Bet** (B3 + Genial) | **Existe (projeto)** | Iniciativa real: Meio & Mensagem 11/04/2025; site https://detoxbet.com.br/ — **gamificação** ligada a ações (alternativa a bets). **Gratta:** **não** citado nessas fontes; **não** inferir parceria. |
+| Gratta + **Genial / B3** como **parceria pessoal** | **Não encontrado** | Nenhuma matéria junta **Rafael Gratta** + Genial/B3/Detox Bet. |
 | Gratta + **Growth Supplements** | **Não vinculado** | Growth Supplements = outra empresa/outros sócios; **não** listar como parceria do criador sem post. |
 | Gratta **TDAH / “10%” / maus hábitos** | **Confirmado (mídia)** | **Estado de Minas**, 24/07/2025 — matéria sobre posicionamento dele + debate; ver URL abaixo. |
 | Gratta **Reddit / debate** | **Parcial** | Agregador **Viralizou** cita debate; **thread Reddit** ainda ideal capturar URL direta. |
-| Críticas **plágio / cópia** (set/2025) | **Não validado** | Perplexity cita “vídeo YouTube” genérico — **pendente** link. |
-| Pitel TikTok **@giovannapiteloficial** | **Não validado** | YAML do squad: `pitelgiovanna`; conferir perfil ativo. |
+| Críticas **plágio / cópia** (set/2025) | **Não validado** | Busca `plágio OR copiou OR sem crédito` + Gratta: **vazio**. |
+| Pitel TikTok **@giovannapiteloficial** | **Confirmado (embed)** | **Terra** (Nós) incorpora resposta no TikTok **@giovannapiteloficial** no artigo sobre corpo/gravidez — perfil **existe** e foi fonte da matéria; IG do squad pode ser `@pitelgiovanna` em paralelo. |
+| Pitel **corpo / “gravidez” / comentários** (TikTok Salvador) | **Confirmado** | **Terra** reproduz vídeo e citações de comentários; desabafo sobre peso e “blogueira mentirosa”. |
+| Pitel **Alane Dias / Ed Gama / Sapucaí** (mar/2025) | **Confirmado** | **Portal O São Gonçalo** 05/03/2025 — imitação do passo de Alane; contexto BBB24. |
+| Pitel **comentário eliminação Daniele Hypólito (BBB 25)** | **Não encontrado** | Sem matéria ligando fala específica de Pitel à eliminação. |
+| Gratta **livro Intrínseca** | **Confirmado** | Editora **Intrínseca**, mar/2026 — *Mais foco, menos ansiedade*; pré-venda / lançamento abril 2026. |
 | Números de seguidores/posts | **Instáveis** | Validar no app na data do dossiê. |
 
 **URLs — iFood (publi = Camila, não Pitel)**
@@ -63,6 +70,9 @@
 | Lady Gaga / Copacabana mai/2025 | Revista Quem | https://revistaquem.globo.com/moda-e-beleza/noticia/2025/05/giovanna-pitel-usa-look-inspirado-em-lady-gaga-para-show.ghtml |
 | Gshow / Guerreiros do Sol | gshow (vídeo) | https://gshow.globo.com/videos/video/pitel-comenta-o-final-de-rosa-em-guerreiros-do-sol-13833226.ghtml |
 | Fernanda Bande / distância (contexto festival) | gshow | https://gshow.globo.com/festivais/rock-in-rio/2024/noticia/fernanda-bande-esclarece-afastamento-de-giovana-pitel-nossos-caminhos-foram-diferentes.ghtml |
+| Corpo / comentários TikTok (Salvador) | Terra (Nós) | https://www.terra.com.br/nos/pitel-se-revolta-com-comentarios-sobre-seu-peso-em-video-de-biquini-voces-merecem-blogueira-mentirosa,825bfa6628c7ee3ad20f82826f08ca00epmwz8d0.html |
+| Carnaval / Alane Dias / Ed Gama | Portal O São Gonçalo | https://www.osaogoncalo.com.br/famosos/153518/giovanna-pitel-e-ed-gama-sao-flagrados-debochando-de-alane-dias-na-marques-de-sapucai |
+| Festival Negritudes (SP) — **não** RIW | CARAS | https://caras.com.br/atualidades/giovanna-pitel-reforca-a-importancia-da-representatividade-no-audiovisual-mais-plural.phtml |
 
 **URLs — validação positiva (Gratta)**
 
@@ -70,6 +80,14 @@
 |------|--------|-----|
 | TDAH / cobertura jornalística | Estado de Minas (Em Foco) | https://www.em.com.br/emfoco/2025/07/24/rafael-gratta-especialista-voce-que-acha-que-tem-tdah-so-esta-com-maus-habitos/ |
 | Debate (menção Reddit) | Viralizou | https://viralizou.net/internet/rafael-gratta-vira-tema-de-debate-no-reddit/ |
+| Livro (editora) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ |
+
+**URLs — contexto setorial (sem vínculo Gratta comprovado)**
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Detox Bet B3 + Genial | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets |
+| Site do projeto | DetoxBet | https://detoxbet.com.br/ |
 
 ---
 
@@ -108,6 +126,9 @@
 | Mídia / entretenimento (show) | Revista Quem | https://revistaquem.globo.com/moda-e-beleza/noticia/2025/05/giovanna-pitel-usa-look-inspirado-em-lady-gaga-para-show.ghtml | Show na praia (mai/2025); contexto Lady Gaga — **não** é Rock in Rio. |
 | Trabalho gshow / novela | gshow (vídeo) | https://gshow.globo.com/videos/video/pitel-comenta-o-final-de-rosa-em-guerreiros-do-sol-13833226.ghtml | Conteúdo para **Guerreiros do Sol** (Globo/Gshow). |
 | Relacionamento Fernanda Bande | gshow | https://gshow.globo.com/festivais/rock-in-rio/2024/noticia/fernanda-bande-esclarece-afastamento-de-giovana-pitel-nossos-caminhos-foram-diferentes.ghtml | Nota sobre afastamento; URL sob pasta Rock in Rio 2024; **validar grafia** “Giovana” vs “Giovanna”. |
+| TikTok / corpo / comentários | Terra (Nós) | https://www.terra.com.br/nos/pitel-se-revolta-com-comentarios-sobre-seu-peso-em-video-de-biquini-voces-merecem-blogueira-mentirosa,825bfa6628c7ee3ad20f82826f08ca00epmwz8d0.html | Embeds **@giovannapiteloficial**; Salvador (BA). |
+| Carnaval 2025 / Alane / Ed Gama | Portal O São Gonçalo | https://www.osaogoncalo.com.br/famosos/153518/giovanna-pitel-e-ed-gama-sao-flagrados-debochando-de-alane-dias-na-marques-de-sapucai | 05/03/2025. |
+| Evento cultura / representatividade | CARAS | https://caras.com.br/atualidades/giovanna-pitel-reforca-a-importancia-da-representatividade-no-audiovisual-mais-plural.phtml | **Festival Negritudes Globo SP** (não confundir com Rio Innovation Week). |
 
 ### Marcas e parcerias — Giovanna Pitel (web aberta, rodada marcas)
 
@@ -205,10 +226,11 @@
 | **Curta** | Empresa parceira (apoio à live “Dia D”, ago/2024); imprensa associa à operação da AURA em outros textos | JorNow | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Média |
 | **Flow Podcast**; **Inteligência Ltda.** | **Participação como convidado** (mídia/podcast) — não implica, por si só, patrocínio pago ao criador | Apple Podcasts; Everand | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 · https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Média |
 | **Bet Cursos** | **Plataforma terceira** que vende o curso MFMA (nome comercial “Bet”; **não** é casa de apostas) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | Alta |
+| **Intrínseca** | **Editora** — livro *Mais foco, menos ansiedade* (anúncio mar/2026; lançamento abril/2026) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ | Alta |
 
 **Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco). Completar via **Instagram** (marcar #publi / “parceria paga”) e **Media Kit** da assessoria.
 
-**Marcas Perplexity — validação:** **Growth Supplements**, **Insider Store**, **Genial/B3**, **“Detox Bet”** = **não** confirmadas para **este** Rafael Gratta (criador); ver tabela no topo. **TDAH / debate** = **confirmado** em veículo (**EM** 24/07/2025) + menção agregador Reddit.
+**Marcas Perplexity — validação (rodada 3):** **Growth Supplements**, **Insider Store** = **não** vinculados ao criador. **Genial/B3/Detox Bet** = projeto **real** (educação financeira gamificada; ver Meio & Mensagem + detoxbet.com.br), mas **sem** menção a **Rafael Gratta** — **não** listar como parceria dele. **TDAH / debate** = **EM** 24/07/2025 + Viralizou; **Reddit** sem URL estável na busca.
 
 ### Achados objetivos — Rafael Gratta (rodada aprofundada)
 
