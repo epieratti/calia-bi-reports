@@ -138,6 +138,17 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 **Limite explícito:** ausência de achado em **bet/loteria/cassino** e de **política partidária** não substitui revisão de **stories, reels patrocinados e posts não indexados** no Google.
 
+**Handles em matéria (X):** CARAS reproduz post **@giovannapitel** (mar/2024); YAML do squad usa **`pitelgiovanna`** no X — conferir se houve mudança de @ ou se são contas distintas.
+
+### Rodada adicional — só web aberta (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `"Giovanna Pitel" + aposta/bet/cassino/loteria/patrocínio` | **Sem** matéria ligando a pessoa a operador de jogo ou publi de bet (só notícias genéricas de mercado ou outras celebridades). |
+| `"Giovanna Pitel" + Lula/Bolsonaro/política` | **Sem** vínculo partidário explícito indexado; retornos são perfil/entretenimento ou política sem nome. |
+| `"Giovanna Pitel" + processo/justiça` | **Sem** processo criminal/cível mapeado; achado relevante = relato de **fake news** na escola (ver CARAS abaixo). |
+| `site:instagram.com pitelgiovanna publi` | **Sem** resultado útil indexado (ruído de outros perfis “Giovanna”). |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -170,6 +181,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | TV / Multishow (contexto programa) | CARAS | https://caras.com.br/atualidades/giovanna-pitel-adianta-sobre-programa-no-multishow-fazer-com-que-pessoas-se-sintam-abracadas.phtml | Entrevista sobre projeto no Multishow. |
 | **iFood — publi de outra pessoa (não atribuir a Pitel)** | Meio e Mensagem | https://www.meioemensagem.com.br/midia/ifood-aproveita-fofoca-e-faz-publi-com-esposa-de-participante-do-bbb-24 | Esposa de Lucas Buda (BBB 24), não Pitel. |
 | Idem | Publicitários Criativos | https://www.publicitarioscriativos.com/ifood-aproveita-polemica-e-faz-publi-com-esposa-de-lucas-do-bbb-24/ | Idem. |
+| Fake news / escola (“site de fofoca”, “garota do blog”) | CARAS | https://caras.com.br/big-brother/bbb-24-pitel-relembra-acusacao-de-ser-dona-de-site-de-fofoca-garota-do-blog.phtml | Relato no BBB 24; inclui embed de post no **X** como **@giovannapitel** (ver nota de handles). |
+| Ensaio São João / moda (looks + embed Instagram oficial) | Jornal do Busão | https://jornaldobusao.com.br/giovanna-pitel-faz-ensaio-de-sao-joao-em-homenagem-ao-nordeste-fechando-junho/ | Cita looks **Santa Resistência** e **Ateliê Mão de Mãe**; embed `instagram.com/p/DLiw_OaOYUn` — **@pitelgiovanna**. |
+| Moda praia / entrevista ELA (preferências de marcas, Mesacast) | O Globo (Ela/Gente) | https://oglobo.globo.com/ela/gente/noticia/2025/03/13/giovanna-pitel-esbanja-beleza-em-ensaio-e-fala-sobre-a-sua-relacao-com-a-moda-praia-nao-tenho-neura-com-corpo-perfeito.ghtml | Lista marcas que **gosta** (Cantão, Maria Filó, Blue Man, Salinas, Rosa Chá, Cia. Marítima) — **preferência em entrevista**, não prova de contrato. Menciona **Mesacast BBB**. |
 
 ### Marcas e parcerias — Giovanna Pitel (web aberta, rodada marcas)
 
@@ -179,6 +193,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Globo / Multishow / Globoplay / Gshow** | Contrato de agenciamento e trabalhos em grade (ex.: renovação 2024; *Na Cama com Pitanda*; *MesaCast* BBB 25) | Terra; NaTelinha; Folha F5 | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html · https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php · https://www.terra.com.br/diversao/gente/giovanna-pitel-impulsiona-trajetoria-com-transformacao-usar-minha-voz-para-fazer-algo-maior,00fc30e81906608f19744b2e721180ad48r0lc63.html | Alta (contrato); média (lista exata de projetos) |
 | **ViU Hub** | Unidade de **agenciamento comercial** da Globo (representação para marcas em redes) | NaTelinha; Folha F5; Terra | Mesmas URLs de renovação acima | Alta |
 | **Tim** | Presença em **camarote da marca** (Festival de Verão Salvador 2025); tipo de contrato (convidada vs. publi) **não** esclarecido só pela matéria | iBahia | https://www.ibahia.com/festival-de-verao/ex-bbb-giovanna-pitel-curte-vale-night-no-festival-de-verao-2025-334533 | Média |
+| **Santa Resistência**; **Ateliê Mão de Mãe** | Looks citados em **ensaio** / matéria com embed do IG **@pitelgiovanna** (jun/2025) | Jornal do Busão | https://jornaldobusao.com.br/giovanna-pitel-faz-ensaio-de-sao-joao-em-homenagem-ao-nordeste-fechando-junho/ | Média — **não** prova campanha paga sem post marcado como publi |
+| *Preferência de consumo (não contrato)* | Em entrevista, cita marcas de moda praia que admira | O Globo (Ela/Gente) | https://oglobo.globo.com/ela/gente/noticia/2025/03/13/giovanna-pitel-esbanja-beleza-em-ensaio-e-fala-sobre-a-sua-relacao-com-a-moda-praia-nao-tenho-neura-com-corpo-perfeito.ghtml | Baixa para “parceria” — é **opinião** |
 | *Outras marcas em publipost* | Matérias citam “ações com grandes marcas” **sem nomear** | NaTelinha; Terra (renovação) | Idem | Baixa (genérico — exige Instagram/arquivo) |
 
 **Não encontrado nesta rodada (nome explícito):** parcerias com Shein, Natura, O Boticário etc. — buscas retornaram **Giovanna Lancellotti** ou notícias de mercado sem Pitel.
@@ -189,9 +205,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. | Média (só web; falta varredura de redes) |
-| **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
-| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
+| **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. **Rodada adicional** com termos de aposta/bet/cassino **não** acrescentou fonte nova com o nome dela. | Média (só web; falta varredura de redes) |
+| **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Relato no BBB** sobre **fake news** na escola (acusação de ser “dona do site de fofoca”) — **CARAS**. **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
+| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada; **rodada adicional** com nome + política não trouxe endosso partidário indexado. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
 
 **Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Pendência:** inventário comercial completo só com **arquivo nas quatro redes** ou media kit (ex.: Curta Hub — indisponível por DNS/503 no ambiente de coleta).
 
@@ -233,6 +249,19 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 **Limite explícito:** mensagens sobre saúde/TDAH geram **debate público** (incl. Reddit); risco reputacional exige checagem de **posts e vídeos atuais** nas redes, não só matérias.
 
+**TikTok canônico (agregador):** **Viralizou** lista **[@rafaelgrattap](https://www.tiktok.com/@rafaelgrattap)** como TikTok dele — alinha com citação do **Estado de Minas**; o YAML do squad mantém **`rafaelgratta`** só no TikTok — **conferir no app** (conta principal vs. secundária ou atualização do YAML).
+
+### Rodada adicional — só web aberta (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `"Rafael Gratta" + aposta/bet/cassino/loteria` | Retorno **suspeito:** página **grupoea.net.br** com nome dele + cassino — **já** no dossiê como **baixa confiança** / possível **SEO spam afiliado**; **não** tratar como parceria sem prova primária. |
+| `"Rafael Gratta" + Lula/Bolsonaro/política` | **Sem** matéria ligando o criador a endosso ou filiação; resultados são **pesquisas eleitorais genéricas** sem o nome dele. |
+| `"Rafael Gratta" + processo/justiça` | Caso **Rafael Gracioli** (TJMG) = **homônimo** — **não** atribuir. |
+| `site:reddit.com "Rafael Gratta"` | **Sem** thread estável indexada com o nome (debate permanece via **Viralizou** como secundário). |
+| `site:x.com` / `site:twitter.com` | Sem posts X indexados na amostra; presença em **Threads** [@rafaelgratta](https://www.threads.net/@rafaelgratta) (rede Meta) — **fora** do escopo YAML, mas útil para contexto. |
+| CFM / CRM + nome | **Sem** menção indexada a processo ético com **este** nome nesta rodada. |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -254,6 +283,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Autor (página editora) | Intrínseca | https://intrinseca.com.br/autor/rafael-gratta/ | Biografia institucional; primeiro livro pela Intrínseca. |
 | **Contexto setorial — Detox Bet (sem vínculo Gratta)** | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets | Projeto B3 + Genial; **não** citar como parceria dele. |
 | Idem | DetoxBet | https://detoxbet.com.br/ | Site do projeto. |
+| Formação / biografia (agregador; lista redes) | Viralizou | https://viralizou.net/internet/quem-e-rafael-gratta-formacao/ | Medicina (formatura citada 2024), UnB, Berkeley; links **Instagram / TikTok @rafaelgrattap / YouTube @rafaelgratta**. |
+| Revenda MFMA (terceiro; grafia “Raffael”) | Cursos Certo | http://cursoscerto.com/protocolo-mfma-raffael-gratta/ | Página de venda do **Protocolo MFMA**; **não** é casa de apostas; **checar** autorização comercial e grafia do nome. |
 
 ### Marcas e parcerias — Rafael Gratta (web aberta, rodada marcas)
 
@@ -264,6 +295,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Curta** | Empresa parceira (apoio à live “Dia D”, ago/2024); imprensa associa à operação da AURA em outros textos | JorNow | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Média |
 | **Flow Podcast**; **Inteligência Ltda.** | **Participação como convidado** (mídia/podcast) — não implica, por si só, patrocínio pago ao criador | Apple Podcasts; Everand | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 · https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Média |
 | **Bet Cursos** | **Plataforma terceira** que vende o curso MFMA (nome comercial “Bet”; **não** é casa de apostas) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | Alta |
+| **Cursos Certo** | **Plataforma terceira** — revenda listada do MFMA (grafia **“Raffael”** no título da página) | Cursos Certo | http://cursoscerto.com/protocolo-mfma-raffael-gratta/ | Média — revenda; validar vínculo oficial |
 | **Intrínseca** | **Editora** — livro *Mais foco, menos ansiedade* (anúncio mar/2026; lançamento abril/2026) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ · https://intrinseca.com.br/autor/rafael-gratta/ | Alta |
 
 **Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco) na web indexada.
@@ -274,11 +306,11 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. Manter vigilência: nome da plataforma pode gerar **falso positivo** em buscas automáticas. | Alta (para betcursos = curso); média (redes não varridas) |
-| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** tratar com URL de thread. Sem processo criminal mapeado nesta base. | Alta (TDAH/EM); média (resto) |
-| **Política** | Não localizado posicionamento partidário explícito nesta rodada. | Baixa |
+| **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. **Rodada adicional:** buscas com bet/cassino repetem **grupoea.net.br** (tratado como **não confiável** até prova contrária). **Cursos Certo** = revenda de curso, não operador de jogo. Manter vigilência: nomes “Bet” / páginas spam geram **falso positivo**. | Alta (para plataformas de curso); média (redes não varridas) |
+| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** **rodada `site:reddit.com`** não localizou thread estável; manter **Viralizou** como ponte. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**, não “crime” nesta base. Sem processo criminal **deste** nome mapeado (cuidado com **homônimos** em notícias de Justiça). | Alta (TDAH/EM); média (resto) |
+| **Política** | Não localizado posicionamento partidário explícito nesta rodada; **rodada adicional** com nome + Lula/Bolsonaro não retornou matéria pertinente. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Pendências:** URL direta de **thread Reddit**; confirmação **TikTok** `@rafaelgrattap` vs `@rafaelgratta`; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
+**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodada adicional web:** consultas documentadas na tabela acima; **Cursos Certo** + **Viralizou** (formação/redes) acrescentados. (4) **Pendências:** thread **Reddit** com URL (se existir pública); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
 
 ---
 
