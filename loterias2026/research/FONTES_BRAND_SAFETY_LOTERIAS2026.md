@@ -149,6 +149,14 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | `"Giovanna Pitel" + processo/justiça` | **Sem** processo criminal/cível mapeado; achado relevante = relato de **fake news** na escola (ver CARAS abaixo). |
 | `site:instagram.com pitelgiovanna publi` | **Sem** resultado útil indexado (ruído de outros perfis “Giovanna”). |
 
+### Rodada 5 — veículos de marketing / operadores #publi (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `"Giovanna Pitel" site:meioemensagem.com.br` OR `site:propmark.com.br` | **Sem** matéria com o nome (além de **iFood/Camila** já mapeada). |
+| `"Giovanna Pitel" site:adnews.com.br` OR `portaldapropaganda` | **Sem** resultado; ruído com **Giovanna Antonelli** / **Giovanna Cartapatti**. |
+| `"Giovanna Pitel" embaixadora / garota-propaganda / face da marca` | **Sem** título comercial explícito indexado além do que já está em **Nosso Meio** (Piracanjuba) e **ensaio** (Santa Resistência / Ateliê Mão de Mãe). |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -184,6 +192,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Fake news / escola (“site de fofoca”, “garota do blog”) | CARAS | https://caras.com.br/big-brother/bbb-24-pitel-relembra-acusacao-de-ser-dona-de-site-de-fofoca-garota-do-blog.phtml | Relato no BBB 24; inclui embed de post no **X** como **@giovannapitel** (ver nota de handles). |
 | Ensaio São João / moda (looks + embed Instagram oficial) | Jornal do Busão | https://jornaldobusao.com.br/giovanna-pitel-faz-ensaio-de-sao-joao-em-homenagem-ao-nordeste-fechando-junho/ | Cita looks **Santa Resistência** e **Ateliê Mão de Mãe**; embed `instagram.com/p/DLiw_OaOYUn` — **@pitelgiovanna**. |
 | Moda praia / entrevista ELA (preferências de marcas, Mesacast) | O Globo (Ela/Gente) | https://oglobo.globo.com/ela/gente/noticia/2025/03/13/giovanna-pitel-esbanja-beleza-em-ensaio-e-fala-sobre-a-sua-relacao-com-a-moda-praia-nao-tenho-neura-com-corpo-perfeito.ghtml | Lista marcas que **gosta** (Cantão, Maria Filó, Blue Man, Salinas, Rosa Chá, Cia. Marítima) — **preferência em entrevista**, não prova de contrato. Menciona **Mesacast BBB**. |
+| Rotina pós-BBB (menção genérica a publicidades / marcas) | Mais Novela | https://www.maisnovela.com.br/famosos/mais-magra-ex-bbb-pitel-chama-atencao-de-biquini-na-praia-esta-linda.phtml | Texto afirma que “fez publicidades” e “representante de algumas marcas” **sem nomear**; embed IG **@pitelgiovanna** (`/p/DAWzxg7ucDA`). |
+| Relacionamento / Fernanda Bande (agregador) | Mais Novela | https://www.maisnovela.com.br/famosos/climao-giovanna-pitel-fala-sobre-afastamento-de-fernanda-bande.phtml | Cobertura de fofoca; cruzar com **gshow**. |
 
 ### Marcas e parcerias — Giovanna Pitel (web aberta, rodada marcas)
 
@@ -209,7 +219,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Relato no BBB** sobre **fake news** na escola (acusação de ser “dona do site de fofoca”) — **CARAS**. **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
 | **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada; **rodada adicional** com nome + política não trouxe endosso partidário indexado. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
 
-**Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Pendência:** inventário comercial completo só com **arquivo nas quatro redes** ou media kit (ex.: Curta Hub — indisponível por DNS/503 no ambiente de coleta).
+**Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Rodada 5:** Meio & Mensagem / Propmark / AdNews **varridos** — sem novas peças com o nome. (4) **Pendência:** inventário comercial completo só com **arquivo nas quatro redes** ou media kit (ex.: Curta Hub — indisponível por DNS/503 no ambiente de coleta).
 
 ---
 
@@ -262,6 +272,16 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | `site:x.com` / `site:twitter.com` | Sem posts X indexados na amostra; presença em **Threads** [@rafaelgratta](https://www.threads.net/@rafaelgratta) (rede Meta) — **fora** do escopo YAML, mas útil para contexto. |
 | CFM / CRM + nome | **Sem** menção indexada a processo ético com **este** nome nesta rodada. |
 
+### Rodada 5 — veículos de marketing / infoproduto / Flow (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `"Rafael Gratta" site:meioemensagem.com.br` OR `propmark` OR `adnews` | **Sem** matéria com o nome (ruído **Rafael Grampá** etc.). |
+| `"Rafael Gratta" campanha marca` (notícias gerais) | Reforça **Intrínseca**, **AURA**, **MFMA**; sem lista nova de **publipost** de terceiros. |
+| Episódio **Flow #408** (descrição do vídeo) | Patrocínios do **episódio** listados na página espelho: **SmartFit**, **Insider** (#InsiderStore), **Teleton** — são **patrocinadores do podcast**, **não** equivalência automática a contrato do convidado. |
+| `Monetizzecursos.com` + MFMA | URL citada em buscas **redireciona** para a home do site no `curl -sL` — **não** usar como prova de oferta até página de produto estável. |
+| `site:reddit.com "Rafael Gratta"` (repetição) | Continua **sem** thread indexada na amostra. |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -270,7 +290,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Bio / produto (primário) | Site AURA / bio | https://rafaelgratta.com/bio/ | Ofertas e posicionamento oficial. |
 | Links oficiais | Linktree | https://linktr.ee/rafaelgrattacts | Central de links. |
 | Podcast | Flow #408 (Apple Podcasts) | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 | Entrevista longa; checar menções a marcas. |
-| Podcast | Flow #408 (espelho) | https://nv99.com.br/flow/episodes/Z38tcbrvFow | Mesmo episódio; URL pode mudar. |
+| Podcast | Flow #408 (espelho) | https://nv99.com.br/flow/episodes/Z38tcbrvFow | Mesmo episódio; URL pode mudar. **Descrição** lista patrocínios do episódio: **SmartFit**, **Insider** (cupom FLOW15 / #InsiderStore), **Teleton** — ver **Marcas e parcerias**. |
 | Podcast | Inteligência Ltda. (Everand) | https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Catálogo de podcast. |
 | Perfil / método | Estado de Minas (Em Foco) | https://www.em.com.br/emfoco/2025/06/10/rafael-gratta-criador-do-mais-foco-diz-quem-nao-teme-a-solidao-e-impossivel-de-manipular/ | Reportagem sobre conteúdo e mensagens. |
 | **TDAH / saúde (posicionamento público)** | Estado de Minas (Em Foco) | https://www.em.com.br/emfoco/2025/07/24/rafael-gratta-especialista-voce-que-acha-que-tem-tdah-so-esta-com-maus-habitos/ | 24/07/2025; cita TikTok @rafaelgrattap; **fonte forte** para eixo “polêmica reputacional / saúde”. |
@@ -285,6 +305,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Idem | DetoxBet | https://detoxbet.com.br/ | Site do projeto. |
 | Formação / biografia (agregador; lista redes) | Viralizou | https://viralizou.net/internet/quem-e-rafael-gratta-formacao/ | Medicina (formatura citada 2024), UnB, Berkeley; links **Instagram / TikTok @rafaelgrattap / YouTube @rafaelgratta**. |
 | Revenda MFMA (terceiro; grafia “Raffael”) | Cursos Certo | http://cursoscerto.com/protocolo-mfma-raffael-gratta/ | Página de venda do **Protocolo MFMA**; **não** é casa de apostas; **checar** autorização comercial e grafia do nome. |
+| Documentário (papel de condução / MFMA) | Terra (Entre Telas / Rolling Stone Brasil) | https://www.terra.com.br/diversao/entre-telas/ser-feliz-por-nenhum-motivo-documentario-sobre-a-evolucao-da-meditacao-no-brasil-tera-estreia-na-49-mostra-de-sp,5dc621e1f2de15fa19e052f58d56f6a0vb5loyfv.html | *Ser Feliz Por Nenhum Motivo* — direção **Edu Felistoque**; produção **Felistoque Cinema**; streaming **Aquarius** citado como primeiro longa original; **Rafael Gratta** como figura central no filme. |
 
 ### Marcas e parcerias — Rafael Gratta (web aberta, rodada marcas)
 
@@ -294,23 +315,26 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Protocolo MFMA** | Produto digital próprio (histórico); revenda por terceiros | Bet Cursos; Viralizou | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ · https://viralizou.net/internet/rafael-gratta-cancela-treinamento-e-promete-algo-novo/ | Alta (produto); média (revenda) |
 | **Curta** | Empresa parceira (apoio à live “Dia D”, ago/2024); imprensa associa à operação da AURA em outros textos | JorNow | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Média |
 | **Flow Podcast**; **Inteligência Ltda.** | **Participação como convidado** (mídia/podcast) — não implica, por si só, patrocínio pago ao criador | Apple Podcasts; Everand | https://podcasts.apple.com/gb/podcast/rafael-gratta-flow-408/id1466327128?i=1000674383198 · https://pt.everand.com/podcast/759405907/1281-RAFAEL-GRATTA | Média |
+| **SmartFit**; **Insider** (Insider Store); **Teleton** | **Patrocínios do episódio Flow #408** (cupons na descrição do vídeo/espelho) — vínculo com o **programa Flow**, não comprovado como contrato **pessoal** do convidado | nv99 (espelho Flow) | https://nv99.com.br/flow/episodes/Z38tcbrvFow | Média — contexto de mídia; não listar como “marca do Gratta” sem post próprio |
+| **Aquarius** (streaming) | **Distribuição / primeiro longa original** citado na matéria do documentário *Ser Feliz Por Nenhum Motivo* | Terra | https://www.terra.com.br/diversao/entre-telas/ser-feliz-por-nenhum-motivo-documentario-sobre-a-evolucao-da-meditacao-no-brasil-tera-estreia-na-49-mostra-de-sp,5dc621e1f2de15fa19e052f58d56f6a0vb5loyfv.html | Média — obra audiovisual, não publipost de consumo |
+| **Felistoque Cinema** | **Produtora** do documentário (matéria Terra) | Terra | Mesma URL acima | Média |
 | **Bet Cursos** | **Plataforma terceira** que vende o curso MFMA (nome comercial “Bet”; **não** é casa de apostas) | Bet Cursos | https://betcursos.com/produto/protocolo-mfma-rafael-gratta-2024/ | Alta |
 | **Cursos Certo** | **Plataforma terceira** — revenda listada do MFMA (grafia **“Raffael”** no título da página) | Cursos Certo | http://cursoscerto.com/protocolo-mfma-raffael-gratta/ | Média — revenda; validar vínculo oficial |
 | **Intrínseca** | **Editora** — livro *Mais foco, menos ansiedade* (anúncio mar/2026; lançamento abril/2026) | Intrínseca | https://intrinseca.com.br/blog/2026/03/mais-foco-menos-ansiedade-confira-o-novo-livro-de-rafael-gratta/ · https://intrinseca.com.br/autor/rafael-gratta/ | Alta |
 
 **Não encontrado nesta rodada:** lista explícita de **publipost** para marcas de consumo (ex.: beleza, banco, telco) na web indexada.
 
-**Marcas Perplexity — validação (rodada 3):** **Growth Supplements**, **Insider Store** = **não** vinculados ao criador. **Genial/B3/Detox Bet** = projeto **real** (educação financeira gamificada; ver Meio & Mensagem + detoxbet.com.br), mas **sem** menção a **Rafael Gratta** — **não** listar como parceria dele. **TDAH / debate** = **EM** 24/07/2025 + Viralizou; **Reddit** sem URL estável na busca.
+**Marcas Perplexity — validação (rodada 3):** **Growth Supplements** = **não** vinculado ao criador como parceria comprovada. **Insider Store** aparece na **descrição do Flow #408** como patrocinador do **episódio** (cupom FLOW15) — **não** inferir publi pessoal do Gratta sem post dele. **Genial/B3/Detox Bet** = projeto **real** (educação financeira gamificada; ver Meio & Mensagem + detoxbet.com.br), mas **sem** menção a **Rafael Gratta** — **não** listar como parceria dele. **TDAH / debate** = **EM** 24/07/2025 + Viralizou; **Reddit** sem URL estável na busca.
 
 ### Achados objetivos — Rafael Gratta (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. **Rodada adicional:** buscas com bet/cassino repetem **grupoea.net.br** (tratado como **não confiável** até prova contrária). **Cursos Certo** = revenda de curso, não operador de jogo. Manter vigilência: nomes “Bet” / páginas spam geram **falso positivo**. | Alta (para plataformas de curso); média (redes não varridas) |
-| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** **rodada `site:reddit.com`** não localizou thread estável; manter **Viralizou** como ponte. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**, não “crime” nesta base. Sem processo criminal **deste** nome mapeado (cuidado com **homônimos** em notícias de Justiça). | Alta (TDAH/EM); média (resto) |
+| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** **rodada `site:reddit.com`** não localizou thread estável; manter **Viralizou** como ponte. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**, não “crime” nesta base. **Documentário** (*Ser Feliz Por Nenhum Motivo*, Terra) reforça exposição em tema de **saúde mental/meditação** — soma **relevância midiática**, não é polêmica por si só. Sem processo criminal **deste** nome mapeado (cuidado com **homônimos** em notícias de Justiça). | Alta (TDAH/EM); média (resto) |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada; **rodada adicional** com nome + Lula/Bolsonaro não retornou matéria pertinente. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodada adicional web:** consultas documentadas na tabela acima; **Cursos Certo** + **Viralizou** (formação/redes) acrescentados. (4) **Pendências:** thread **Reddit** com URL (se existir pública); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
+**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodadas adicionais:** consultas documentadas; **Cursos Certo** + **Viralizou** (formação/redes); **Rodada 5** trade + Flow (patrocínios do episódio) + documentário **Terra**. (4) **Pendências:** thread **Reddit** com URL (se existir pública); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
 
 ---
 
