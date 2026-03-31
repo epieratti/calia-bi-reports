@@ -38,7 +38,7 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Pitel **Rock in Rio** vs **afastamento Fernanda Bande** | **Ajuste** | Gshow em URL de **Rock in Rio** fala em **Fernanda Bande** e afastamento de **Giovana Pitel** — checar se typo do veículo; **não** misturar com Lady Gaga. |
 | Pitel **Guerreiros do Sol / gshow** | **Confirmado** | Vídeo no gshow: “Pitel comenta… Guerreiros do Sol”. |
 | Pitel **Prêmio Potências 2025** | **Não encontrado** | Matérias sobre o prêmio **sem** Pitel; página CNN “lista completa de vencedores” varrida com `curl` + `rg` — **sem** ocorrência “Pitel”. |
-| Pitel **Rio Innovation Week 2025** | **Não encontrado** | **Correção:** CARAS documenta presença no **Festival Negritudes Globo São Paulo** (representatividade audiovisual), **não** Rio Innovation Week — possível **confusão temática** no Perplexity. |
+| Pitel **Rio Innovation Week 2025** | **Confirmado (painel gshow)** | **gshow** (ago/2025): painel “Multiplicar vozes…” na **Rio Innovation Week** com **Pitel** + diretoria Publishing Globo — ver URL na seção **Google Notícias** e em **Fontes** Pitel. **CARAS** sobre **Festival Negritudes** continua sendo **outro** evento (não invalida RIW). |
 | Pitel **PL 1904 / aborto** | **Não encontrado** | Rodada 3: queries com aborto/estupro + nome — **zero** ligação a ela. **Retirar** do dossiê. |
 | **Detox Bet** (B3 + Genial) | **Existe (projeto)** | Iniciativa real: Meio & Mensagem 11/04/2025; site https://detoxbet.com.br/ — **gamificação** ligada a ações (alternativa a bets). **Gratta:** **não** citado nessas fontes; **não** inferir parceria. |
 | Gratta + **Genial / B3** como **parceria pessoal** | **Não encontrado** | Nenhuma matéria junta **Rafael Gratta** + Genial/B3/Detox Bet. |
@@ -88,6 +88,63 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Detox Bet B3 + Genial | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets |
 | Site do projeto | DetoxBet | https://detoxbet.com.br/ |
 
+### Google Notícias — busca livre (RSS `news.google.com`, mar/2026)
+
+**Método:** `curl` no feed `https://news.google.com/rss/search?q=<nome>&hl=pt-BR&gl=BR&ceid=BR:pt-419` (a página HTML de busca retornou **403** neste ambiente). Os links `news.google.com/rss/articles/...` são **IDs do Google**; abaixo listam-se **título + veículo + data** do feed e, quando possível, **URL canônica** do publisher.
+
+**Giovanna Pitel — amostra do feed (20 primeiras entradas)**
+
+| # | Data (feed) | Veículo | Título |
+|---|-------------|---------|--------|
+| 1 | 21 mar 2026 | F5 (Folha) | Giovanna Pitel diz que BBB 26 só tem protagonista, mas Solange Couto não faria falta |
+| 2 | 14 jan 2026 | O Globo | Giovanna Pitel fala de novo podcast e das mudanças na sua vida após o 'BBB 24' |
+| 3 | 21 mar 2026 | URB News | (espelho) mesmo tema Solange Couto / BBB 26 |
+| 4 | 3 nov 2025 | Terra | Visual diferente da ex-BBB Pitel causa na web |
+| 5 | 3 dez 2025 | gshow | Ex-BBBs se reencontram em casamento de Rodriguinho |
+| 6 | 28 jan 2026 | O Liberal | Giovanna Pitel participa de debate sobre amazofuturismo em evento gratuito na capital paraense |
+| 7 | 17 set 2025 | CARAS | Giovanna Pitel revela transformação após o BBB 24… |
+| 8 | 14 jan 2026 | NaTelinha | Giovanna Pitel conta como BBB mudou sua realidade… |
+| 9 | 16 mai 2025 | Metrópoles | Pitel abre o jogo sobre amizade com Fernanda Bande |
+| 10 | 15 dez 2025 | LeiaJá | Pitel esbanja sensualidade ao posar de biquíni na praia |
+| 11 | 17 mai 2025 | CARAS | Giovanna Pitel revela motivo do fim da amizade com Fernanda Bande |
+| 12 | 1 out 2025 | O Globo | Giovanna Pitel compartilha trajetória com o cabelo afro… |
+| 13 | 16 mai 2025 | Notícias da TV | (tema Fernanda Bande) |
+| 14 | 30 set 2025 | CARAS | Tag / arquivo Giovanna Pitel |
+| 15 | 16 mai 2025 | Hugo Gloss | (tema Fernanda Bande) |
+| 16 | 15 ago 2025 | gshow | gshow anuncia novas parcerias com creators… Rio Innovation Week |
+| 17–20 | 2025–2026 | gshow / Marie Claire | Casamento Rodriguinho, quiz ex-BBBs, carreira artística, fotos biquíni |
+
+**URL canônica — item 1 (F5):** https://f5.folha.uol.com.br/televisao/bbb26/2026/03/giovanna-pitel-diz-que-bbb-26-so-tem-protagonista-mas-solange-couto-nao-faria-falta.shtml  
+
+**Item 6 (O Liberal):** título presente no RSS; **URL canônica** não resolvida aqui (link do Google não redirecionou para `oliberal.com` no teste) — repetir busca no site do veículo ou abrir pelo app Google Notícias.
+
+**Rafael Gratta — amostra do feed (12 primeiras entradas)**
+
+| # | Data (feed) | Veículo | Título |
+|---|-------------|---------|--------|
+| 1 | 14 ago 2025 | em.com.br | Dr. Rafael Gratta, médico: “Como reagir quando alguém te desrespeita sem perder o controle” |
+| 2 | 22 out 2025 | Terra | 'Ser Feliz Por Nenhum Motivo'… 49ª Mostra de SP |
+| 3 | 24 out 2025 | Gazeta de São Paulo | Original Aquarius, 'Ser Feliz Por Nenhum Motivo'… |
+| 4 | 30 jul 2025 | em.com.br | Rafael Gratta, psicólogo, “ouvir este som pode reduzir a ansiedade em até 65%” |
+| 5 | 20 out 2025 | dgabc.com.br | 'Ser Feliz Por Nenhum Motivo' propõe pausa e reflexão sobre ansiedade |
+| 6 | 21 mai 2025 | IstoÉ | Evento Sounds of Quartzo busca proporcionar equilíbrio… |
+| 7 | 21 mai 2024 | Folha (#Hashtag) | Com lema 'mais foco, menos ansiedade', influencer mostra que 'ninguém tá nem aí pra você' |
+| 8 | 10 jun 2025 | em.com.br | Criador de conteúdo sobre controle da ansiedade diz “quem não teme a solidão…” |
+| 9–12 | 2024–2025 | Viralizou | Cancela treinamento; formação; pornografia; “Quem é do TikTok” |
+
+**URLs canônicas resolvidas (Gratta):**
+
+| Tema | URL |
+|------|-----|
+| Desrespeito / controle (EM; feed diz 14/08, URL final **13/08/2025**) | https://www.em.com.br/emfoco/2025/08/13/dr-rafael-gratta-medico-como-reagir-quando-alguem-te-desrespeita-sem-perder-o-controle/ |
+| Som / ansiedade 65% | https://www.em.com.br/emfoco/2025/07/30/rafael-gratta-psicologo-ouvir-este-som-pode-reduzir-a-ansiedade-em-ate-65/ |
+| Documentário (Gazeta SP) | https://www.gazetasp.com.br/cotidiano/original-aquarius-ser-feliz-por-nenhum-motivo-traz-olhar/1165609/ |
+| Documentário (dgabc) | https://www.dgabc.com.br/Noticia/4264314/-ser-feliz-por-nenhum-motivo-propoe-pausa-e-reflexao-sobre-ansiedade |
+| Folha #Hashtag | https://www1.folha.uol.com.br/blogs/hashtag/2024/05/com-lema-mais-foco-menos-ansiedade-influencer-mostra-que-ninguem-ta-nem-ai-pra-voce.shtml |
+| Sounds of Quartzo (IstoÉ) | https://istoe.com.br/evento-sounds-of-quartzo-busca-proporcionar-equilibrio-em-meio-a-correria-cotidiana |
+
+**Nota (Gratta):** matérias do **Em Foco** alternam **médico / psicólogo / neuroeducador** no título — checar **registro profissional** (CRM/CRP) se for requisito de compliance, sem inferir sanção só pelo texto.
+
 ---
 
 ## 1. Giovanna Pitel (`@pitelgiovanna`)
@@ -120,7 +177,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Rock in Rio vs afastamento **Fernanda Bande** | Ajuste | gshow (URL sob Rock in Rio 2024) — grafia “Giovana Pitel”; não misturar com Lady Gaga. |
 | **Guerreiros do Sol** / gshow | Confirmado | Vídeo gshow. |
 | **Prêmio Potências** 2025 | Não encontrado | Lista CNN varrida — sem “Pitel”. |
-| **Rio Innovation Week** 2025 | Não encontrado / corrigido | CARAS = **Festival Negritudes Globo SP**, não RIW. |
+| **Rio Innovation Week** 2025 | **Confirmado** | **gshow** ago/2025 — painel na RIW com **Pitel** (vide **Fontes** + tabela Google Notícias). **CARAS** = **Festival Negritudes** (outro evento). |
 | **PL 1904 / aborto** | Não encontrado | Retirar do dossiê se vier de IA. |
 | TikTok **@giovannapiteloficial** | Confirmado (embed) | Terra (Nós) — perfil citado na matéria. |
 | Corpo / comentários / “gravidez” (Salvador) | Confirmado | Terra (Nós). |
@@ -196,7 +253,11 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Relacionamento Fernanda Bande | gshow | https://gshow.globo.com/festivais/rock-in-rio/2024/noticia/fernanda-bande-esclarece-afastamento-de-giovana-pitel-nossos-caminhos-foram-diferentes.ghtml | Nota sobre afastamento; URL sob pasta Rock in Rio 2024; **validar grafia** “Giovana” vs “Giovanna”. |
 | TikTok / corpo / comentários | Terra (Nós) | https://www.terra.com.br/nos/pitel-se-revolta-com-comentarios-sobre-seu-peso-em-video-de-biquini-voces-merecem-blogueira-mentirosa,825bfa6628c7ee3ad20f82826f08ca00epmwz8d0.html | Embeds **@giovannapiteloficial**; Salvador (BA). |
 | Carnaval 2025 / Alane / Ed Gama | Portal O São Gonçalo | https://www.osaogoncalo.com.br/famosos/153518/giovanna-pitel-e-ed-gama-sao-flagrados-debochando-de-alane-dias-na-marques-de-sapucai | 05/03/2025. |
-| Evento cultura / representatividade | CARAS | https://caras.com.br/atualidades/giovanna-pitel-reforca-a-importancia-da-representatividade-no-audiovisual-mais-plural.phtml | **Festival Negritudes Globo SP** (não confundir com Rio Innovation Week). |
+| Evento cultura / representatividade | CARAS | https://caras.com.br/atualidades/giovanna-pitel-reforca-a-importancia-da-representatividade-no-audiovisual-mais-plural.phtml | **Festival Negritudes Globo SP** (evento distinto da **Rio Innovation Week**). |
+| **Rio Innovation Week 2025** (painel gshow + creators) | gshow | https://gshow.globo.com/cultura-pop/noticia/globo-debate-o-futuro-durante-a-rio-innovation-week.ghtml | **15/08/2025** painel “Multiplicar vozes…” — **Pitel** + Rodolfo Bastos + Pedro Sardaux + Ricardo Cubba; menção a parcerias gshow com creators. |
+| Comentário BBB 26 / Solange Couto | F5 (Folha) | https://f5.folha.uol.com.br/televisao/bbb26/2026/03/giovanna-pitel-diz-que-bbb-26-so-tem-protagonista-mas-solange-couto-nao-faria-falta.shtml | **21/03/2026** — fala sobre participante do reality; risco reputacional (tom crítico). |
+| Visual / repercussão (Halloween / look) | Terra | https://www.terra.com.br/diversao/gente/visual-diferente-da-ex-bbb-pitel-causa-na-web-que-piada-parece-a,6fe9e1720c75ed4ab6b4c7745aad01d06vxxjfk5.html | Cobertura de mudança de visual e reações. |
+| **Google Notícias** — índice de busca | Feed RSS | `https://news.google.com/rss/search?q=Giovanna+Pitel&hl=pt-BR&gl=BR&ceid=BR:pt-419` | Amostra de títulos/datas na seção global **Google Notícias**; HTML da busca **403** aqui. |
 | Hub editorial Globo (agregador) | gshow — Artistas | https://gshow.globo.com/artistas/giovanna-pitel/ | Página oficial de tag; lista matérias/vídeos (conteúdo dinâmico). |
 | TV / Multishow (contexto programa) | CARAS | https://caras.com.br/atualidades/giovanna-pitel-adianta-sobre-programa-no-multishow-fazer-com-que-pessoas-se-sintam-abracadas.phtml | Entrevista sobre projeto no Multishow. |
 | **iFood — publi de outra pessoa (não atribuir a Pitel)** | Meio e Mensagem | https://www.meioemensagem.com.br/midia/ifood-aproveita-fofoca-e-faz-publi-com-esposa-de-participante-do-bbb-24 | Esposa de Lucas Buda (BBB 24), não Pitel. |
@@ -216,7 +277,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
 | **Piracanjuba** | Campanha publicitária (“Para Viver Bem”, aniversário 70 anos, 2025) | Portal Nosso Meio | https://nossomeio.com.br/fernanda-bande-ana-paula-xongani-e-giovanna-pitel-estrelam-nova-campanha-da-piracanjuba/ | Alta |
-| **Globo / Multishow / Globoplay / Gshow** | Contrato de agenciamento e trabalhos em grade (ex.: renovação 2024; *Na Cama com Pitanda*; *MesaCast* BBB 25) | Terra; NaTelinha; Folha F5 | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html · https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php · https://www.terra.com.br/diversao/gente/giovanna-pitel-impulsiona-trajetoria-com-transformacao-usar-minha-voz-para-fazer-algo-maior,00fc30e81906608f19744b2e721180ad48r0lc63.html | Alta (contrato); média (lista exata de projetos) |
+| **Globo / Multishow / Globoplay / Gshow** | Contrato de agenciamento e trabalhos em grade (ex.: renovação 2024; *Na Cama com Pitanda*; *MesaCast* BBB 25; **painel Rio Innovation Week** ago/2025) | Terra; NaTelinha; Folha F5; gshow | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html · https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php · https://www.terra.com.br/diversao/gente/giovanna-pitel-impulsiona-trajetoria-com-transformacao-usar-minha-voz-para-fazer-algo-maior,00fc30e81906608f19744b2e721180ad48r0lc63.html · https://gshow.globo.com/cultura-pop/noticia/globo-debate-o-futuro-durante-a-rio-innovation-week.ghtml | Alta (contrato); média (lista exata de projetos) |
 | **ViU Hub** | Unidade de **agenciamento comercial** da Globo (representação para marcas em redes) | NaTelinha; Folha F5; Terra | Mesmas URLs de renovação acima | Alta |
 | **Tim** | Presença em **camarote da marca** (Festival de Verão Salvador 2025); tipo de contrato (convidada vs. publi) **não** esclarecido só pela matéria | iBahia | https://www.ibahia.com/festival-de-verao/ex-bbb-giovanna-pitel-curte-vale-night-no-festival-de-verao-2025-334533 | Média |
 | **Santa Resistência**; **Ateliê Mão de Mãe** | Looks citados em **ensaio** / matérias com embed do IG **@pitelgiovanna** (`p/DLiw_OaOYUn`); **Rodada 6:** sem release em trade + perfis O Globo/ELLE **sem** menção cruzada a Pitel | Jornal do Busão; TOP FAMOSOS; Radar Digital Brasília | https://jornaldobusao.com.br/giovanna-pitel-faz-ensaio-de-sao-joao-em-homenagem-ao-nordeste-fechando-junho/ · https://www.topfamosos.com.br/giovanna-pitel-faz-ensaio-de-sao-joao-em-homenagem-ao-nordeste-fechando-junho/ · https://radardigitalbrasilia.com.br/famosos/giovanna-pitel-faz-ensaio-de-sao-joao-em-homenagem-ao-nordeste-fechando-junho/ | **Baixa a média** para “contrato publicitário”; **média** para “uso de marca em conteúdo” — falta **captura do post** (legenda/#publi) |
@@ -225,17 +286,17 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 **Não encontrado nesta rodada (nome explícito):** parcerias com Shein, Natura, O Boticário etc. — buscas retornaram **Giovanna Lancellotti** ou notícias de mercado sem Pitel.
 
-**Marcas Perplexity — validação (rodada 2):** **Seara, Downy, Stone** = **não localizadas** em busca com aspas. **iFood** = **não** atribuir a Pitel (publi documentada é **Camila**). **Prêmio Potências** e **Rio Innovation Week** com Pitel = **não** encontrados.
+**Marcas Perplexity — validação (rodada 2):** **Seara, Downy, Stone** = **não localizadas** em busca com aspas. **iFood** = **não** atribuir a Pitel (publi documentada é **Camila**). **Prêmio Potências** = **não** encontrado. **Rio Innovation Week** com Pitel = **confirmado** (painel **gshow**, ago/2025).
 
 ### Achados objetivos — Giovanna Pitel (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência (bet/loteria/cassino)** | Nenhuma matéria jornalística ou registro verificável nesta rodada associando a pessoa a publipost ou parceria com operador de aposta, cassino ou loteria concorrente. **Rodada adicional** com termos de aposta/bet/cassino **não** acrescentou fonte nova com o nome dela. | Média (só web; falta varredura de redes) |
-| **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **Relato no BBB** sobre **fake news** na escola (acusação de ser “dona do site de fofoca”) — **CARAS**. **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
-| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada; **rodada adicional** com nome + política não trouxe endosso partidário indexado. Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
+| **Polêmicas** | **Alta repercussão no BBB 24** em torno da dinâmica com **Lucas Buda** e reação da ex-esposa dele; Pitel e equipe negaram interpretação de “traição” e citaram medidas contra difamação. **Relatos públicos** de **xenofobia** sofrida após o reality. Comentário em 2026 criticando **falas preconceituosas** no BBB (posicionamento de valores, não necessariamente “cancelamento”). **F5 (mar/2026):** fala sobre **Solange Couto** no BBB 26 — possível **risco de imagem** por crítica a participante. **Relato no BBB** sobre **fake news** na escola — **CARAS**. **Não confundir** com **Giovanna Reis** (outra pessoa, polêmica racial/homofobia 2026). | Alta (BBB/xenofobia); alta (desambiguação Reis ≠ Pitel) |
+| **Política** | Não localizado voto ou filiação explícitos (Lula/Bolsonaro/outros) nesta rodada; **rodada adicional** com nome + política não trouxe endosso partidário indexado. **Google Notícias** listou matéria **O Liberal** (jan/2026) sobre **debate** e **amazofuturismo** — pauta cultural/regional; **URL canônica pendente** (ver tabela global). Pautas sociais/culturais aparecem em entrevistas (causas, Nordeste). | Baixa a média |
 
-**Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Rodada 5:** Meio & Mensagem / Propmark / AdNews **varridos** — sem novas peças com o nome. (4) **Rodada 6:** Santa Resistência / Ateliê Mão de Mãe — **sem** peça de parceria indexada além do fio de agregadores; perfil de marca (O Globo / ELLE) **sem** cruzamento com Pitel. (5) **Pendência:** abrir post **`instagram.com/p/DLiw_OaOYUn`** (legenda, #publi, marcação) + inventário nas quatro redes / media kit.
+**Checklist de completude (snapshot mar/2026):** (1) Todas as linhas da validação Perplexity **deste nome** estão na subseção acima. (2) URLs da tabela global “validação positiva (Pitel)” estão espelhadas na tabela **Fontes coletadas**. (3) **Rodada 5:** Meio & Mensagem / Propmark / AdNews **varridos** — sem novas peças com o nome. (4) **Rodada 6:** Santa Resistência / Ateliê Mão de Mãe — **sem** peça de parceria indexada além do fio de agregadores; perfil de marca (O Globo / ELLE) **sem** cruzamento com Pitel. (5) **Google Notícias:** amostra do RSS na seção global + novas URLs (F5, Terra visual, gshow RIW). (6) **Pendência:** URL **O Liberal** (debate amazofuturismo, jan/2026); post **`instagram.com/p/DLiw_OaOYUn`**; inventário nas quatro redes / media kit.
 
 ---
 
@@ -322,6 +383,15 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Formação / biografia (agregador; lista redes) | Viralizou | https://viralizou.net/internet/quem-e-rafael-gratta-formacao/ | Medicina (formatura citada 2024), UnB, Berkeley; links **Instagram / TikTok @rafaelgrattap / YouTube @rafaelgratta**. |
 | Revenda MFMA (terceiro; grafia “Raffael”) | Cursos Certo | http://cursoscerto.com/protocolo-mfma-raffael-gratta/ | Página de venda do **Protocolo MFMA**; **não** é casa de apostas; **checar** autorização comercial e grafia do nome. |
 | Documentário (papel de condução / MFMA) | Terra (Entre Telas / Rolling Stone Brasil) | https://www.terra.com.br/diversao/entre-telas/ser-feliz-por-nenhum-motivo-documentario-sobre-a-evolucao-da-meditacao-no-brasil-tera-estreia-na-49-mostra-de-sp,5dc621e1f2de15fa19e052f58d56f6a0vb5loyfv.html | *Ser Feliz Por Nenhum Motivo* — direção **Edu Felistoque**; produção **Felistoque Cinema**; streaming **Aquarius** citado como primeiro longa original; **Rafael Gratta** como figura central no filme. |
+| **Google Notícias** — índice de busca | Feed RSS | `https://news.google.com/rss/search?q=Rafael+Gratta&hl=pt-BR&gl=BR&ceid=BR:pt-419` | Amostra na seção global **Google Notícias**. |
+| Em Foco — desrespeito / controle emocional | Estado de Minas | https://www.em.com.br/emfoco/2025/08/13/dr-rafael-gratta-medico-como-reagir-quando-alguem-te-desrespeita-sem-perder-o-controle/ | Título no **Google Notícias** com data **14/08/2025**; URL final do **EM** **13/08/2025**. |
+| Em Foco — música / ansiedade “65%” | Estado de Minas | https://www.em.com.br/emfoco/2025/07/30/rafael-gratta-psicologo-ouvir-este-som-pode-reduzir-a-ansiedade-em-ate-65/ | Título cita **psicólogo** — cruzar com formação/registro se necessário. |
+| Em Foco — dopamina / esforço | Estado de Minas | https://www.em.com.br/emfoco/2025/08/15/rafael-gratta-neuroeducador-dopamina-sem-esforco-vai-eventualmente-te-destruir/ | Aparece em buscas correlatas; reforça eixo saúde/comportamento. |
+| Em Foco — oração e ciência | Estado de Minas | https://www.em.com.br/emfoco/2025/08/05/rafael-gratta-psicologo-o-que-a-ciencia-diz-sobre-a-oracao/ | Pauta sensível (religião × saúde) para anunciante institucional. |
+| Documentário (Gazeta SP) | Gazeta de São Paulo | https://www.gazetasp.com.br/cotidiano/original-aquarius-ser-feliz-por-nenhum-motivo-traz-olhar/1165609/ | Mesmo filme; ângulo Aquarius. |
+| Documentário (Grande ABC) | Diário do Grande ABC | https://www.dgabc.com.br/Noticia/4264314/-ser-feliz-por-nenhum-motivo-propoe-pausa-e-reflexao-sobre-ansiedade | |
+| #Hashtag — viral / “ninguém tá nem aí” | Folha de S.Paulo | https://www1.folha.uol.com.br/blogs/hashtag/2024/05/com-lema-mais-foco-menos-ansiedade-influencer-mostra-que-ninguem-ta-nem-ai-pra-voce.shtml | **mai/2024**. |
+| Evento Sounds of Quartzo | IstoÉ | https://istoe.com.br/evento-sounds-of-quartzo-busca-proporcionar-equilibrio-em-meio-a-correria-cotidiana | Conteúdo da página mínimo no fetch — checar corpo completo para menção direta ao nome. |
 
 ### Marcas e parcerias — Rafael Gratta (web aberta, rodada marcas)
 
@@ -347,10 +417,10 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Não há evidência nesta rodada de parceria com **loteria concorrente, bet, cassino**. Curso listado em **betcursos.com** é **e-commerce de cursos** (marca “Bet”), não operador de jogo. **Rodada adicional:** buscas com bet/cassino repetem **grupoea.net.br** (tratado como **não confiável** até prova contrária). **Cursos Certo** = revenda de curso, não operador de jogo. Manter vigilência: nomes “Bet” / páginas spam geram **falso positivo**. | Alta (para plataformas de curso); média (redes não varridas) |
-| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Reddit:** **rodada `site:reddit.com`** não localizou thread estável; manter **Viralizou** como ponte. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**, não “crime” nesta base. **Documentário** (*Ser Feliz Por Nenhum Motivo*, Terra) reforça exposição em tema de **saúde mental/meditação** — soma **relevância midiática**, não é polêmica por si só. Sem processo criminal **deste** nome mapeado (cuidado com **homônimos** em notícias de Justiça). | Alta (TDAH/EM); média (resto) |
+| **Polêmicas** | Matérias de agregador sobre **descontinuação do treinamento MFMA** e migração para **AURA**; **TDAH:** **Estado de Minas** (24/07/2025) resume posicionamento dele (“maioria com maus hábitos”, prevalência 10%) e cita debate — **risco reputacional** em saúde/regulatório para marca institucional. **Google Notícias / Em Foco:** textos com **afirmações fortes** (ex.: música reduz ansiedade **“até 65%”**; títulos alternam **médico/psicólogo/neuroeducador**) — exige **checagem de evidência** e de **título profissional** para compliance. **Folha #Hashtag (2024):** viralização do lema e da linha **“ninguém tá nem aí”**. **Reddit:** **rodada `site:reddit.com`** não localizou thread estável; manter **Viralizou** como ponte. **Revenda** do MFMA em **Cursos Certo** (terceiro) — questão **comercial/autorização**. **Documentário** — várias matérias (Terra, Gazeta SP, dgabc). Sem processo criminal **deste** nome mapeado (cuidado com **homônimos**). | Alta (TDAH/EM); média (resto) |
 | **Política** | Não localizado posicionamento partidário explícito nesta rodada; **rodada adicional** com nome + Lula/Bolsonaro não retornou matéria pertinente. | Baixa |
 
-**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodadas adicionais:** consultas documentadas; **Cursos Certo** + **Viralizou** (formação/redes); **Rodada 5** trade + Flow (patrocínios do episódio) + documentário **Terra**. (4) **Pendências:** thread **Reddit** com URL (se existir pública); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
+**Checklist de completude (snapshot mar/2026):** (1) Validação Perplexity **deste nome** na subseção acima. (2) URLs “validação positiva (Gratta)” e **contexto Detox Bet** espelhadas em **Fontes coletadas**. (3) **Rodadas adicionais:** consultas documentadas; **Cursos Certo** + **Viralizou** (formação/redes); **Rodada 5** trade + Flow (patrocínios do episódio) + documentário **Terra**. (4) **Google Notícias:** amostra do RSS na seção global + URLs EM/Folha/Gazeta/dgabc/IstoÉ adicionadas em **Fontes**. (5) **Pendências:** thread **Reddit** com URL (se existir pública); confirmar menção a **Gratta** no texto completo do **IstoÉ** (Sounds of Quartzo); alinhar **TikTok** YAML vs **@rafaelgrattap**; inventário de publipost nas quatro redes; media kit Curta Hub se acessível.
 
 ---
 
