@@ -6,6 +6,32 @@
 
 **Este arquivo contém só resultados:** URLs, tabelas de fontes e **status de verificação**. Processo, checklist e guias de busca → `METODO_BRAND_SAFETY_LOTERIAS2026.md`.
 
+**Governança — leitura obrigatória:** sem **dados primários das redes** como base do dossiê (sem inventário de posts pela assessoria, sem API proprietária, sem arquivo sistemático de IG/TT/YT/X), aplicam-se os limites na seção **Limite do dossiê — sem dados primários das redes** abaixo.
+
+---
+
+## Limite do dossiê — sem dados primários das redes (governança)
+
+**Premissa:** o dossiê alimentado por **esta** compilação descansa em **internet aberta indexada** (notícias, sites, RSS, veículos de trade, agregadores, PDFs públicos) e, **onde documentado**, em **suplemento** de metadados **públicos** obtidos por ferramentas automatizadas (ex.: rodada **OSINT** com `yt-dlp` / Sherlock). **Não** há inventário contratual nem varredura completa e oficial do que cada talento publicou nas quatro redes.
+
+**Regra de leitura (explícita):**
+
+| Formulário no texto | O que significa | O que **não** significa |
+|---------------------|-----------------|-------------------------|
+| **“Não consta nesta compilação”** / **“Não localizado nesta rodada”** | Nada foi encontrado **nas fontes listadas** até o snapshot (mar/2026). | **Não** prova que o fato **não existiu** nem que o perfil **está livre** de risco na rede. |
+| **“Sem evidência de parceria com bet/loteria concorrente”** (só web) | Nenhuma **matéria ou fonte secundária forte** ligou o nome/handle a operador de jogo. | **Não** equivale a due diligence **exaustiva** de publipost sem acesso a arquivo de posts ou confirmação da assessoria. |
+| **“Confiança baixa”** em um eixo | Pouca ou nenhuma fonte indexada para aquele critério. | **Não** é um “selo de baixo risco”; é **incerteza documental**. |
+
+**Lacunas estruturais** (inevitáveis sem primário):
+
+1. **Concorrência:** ausência de menção na imprensa **não** fecha o tema; só **achados positivos** (URL + contexto) sustentam alerta com rigor.
+2. **Marcas / publipost:** histórico comercial fica **parcial**; agregadores e matérias esporádicas **subestimam** volume real de campanhas.
+3. **Polêmicas:** episódios que **não viraram notícia** ou saíram do índice **não** aparecem aqui.
+4. **Política:** filiação, candidatura ou linha partidária **explícita** exige, em ideal, **fonte oficial** (TSE, partido); só imprensa pode **divergir** ou **omitir**.
+5. **Identidade:** homônimos e troca de @ só se fecham com **briefing** (nome civil, @ canônico) ou matéria que **cite o handle**.
+
+**Uso recomendado para anunciante público/institucional:** tratar esta compilação como **camada 1** (risco **sinalizado** na web + transparência sobre lacunas). Complementar com **camada 2** quando a governança do programa exigir: declaração do talento/agência, cláusulas contratuais, ou arquivo de posts **fora** deste escopo.
+
 ---
 
 ## Critérios de análise e redes (padrão — todos os perfis)

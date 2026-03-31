@@ -7,6 +7,7 @@ Documento **separado** do arquivo de **resultados** (`FONTES_BRAND_SAFETY_LOTERI
 ## Escopo da coleta
 
 - **Coleta:** web aberta (notícias, sites institucionais indexados). Nesta fase **não** há media kit nem acesso sistemático pago às APIs das redes. Para **ampliar** cobertura com perfil público, ver seção **Ferramentas open source e fluxo OSINT** (Instaloader, yt-dlp, Sherlock, etc.) — uso local e respeitando ToS.
+- **Governança — sem dados primários das redes:** texto explícito para leitores do dossiê em `FONTES_BRAND_SAFETY_LOTERIAS2026.md` → seção **Limite do dossiê — sem dados primários das redes** (“não consta” ≠ ausência de risco; lacunas estruturais).
 - **Concorrência:** distinguir parceria/publipost com operador de aposta ou loteria de menção temática (humor, espetáculo, notícia).
 - **Marcas:** nesta fase só entram com **prova pública** (matéria, post arquivado, vídeo); senão ficam como “não verificado”.
 - **Confiança sugerida:** Alta = várias fontes ou primário claro; Média = um veículo sólido; Baixa = agregador, rumor, SEO.
