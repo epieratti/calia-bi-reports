@@ -147,6 +147,20 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 
 **Nota (Gratta):** matérias do **Em Foco** alternam **médico / psicólogo / neuroeducador** no título — checar **registro profissional** (CRM/CRP) se for requisito de compliance, sem inferir sanção só pelo texto.
 
+**Índio Behn, Cleane Sampaio, Ivan Baron — amostra do feed (8 primeiras entradas cada)**
+
+Feed: `https://news.google.com/rss/search?q=<consulta>&hl=pt-BR&gl=BR&ceid=BR:pt-419`. Os links `news.google.com/rss/articles/...` **não** redirecionaram aqui para URL do veículo (permanecem no domínio Google).
+
+| Perfil | Consulta no feed | Amostra (título — veículo) |
+|--------|------------------|----------------------------|
+| **Índio Behn** | `Indio Behn` | São José (prefeitura) — espetáculo Dra. Rosângela; **Portal ABC do ABC** — *Tratamento de Choque*; **Matinal** — Araújo Vianna; **GZH** — cinema POA; **Univates** — teatro; **Sesc/RS** — Natal Alberto Bins; **Prefeitura Americana** — *Tratamento de Choque*; **Jornal da Capital** — POA |
+| **Megh Merly** | `Megh Merly` | **Sem itens** no RSS (grafias da busca não batem com imprensa) |
+| **Megh Melry** | `Megh Melry` | **GiroGO Notícias** — capa **Revista Adames**; **O POVO+** — série FDR / Rio São Francisco (**ruído** — não cita a influenciadora no título) |
+| **Cleane Sampaio** | `Cleane Sampaio` | **Portal Nosso Meio** — *Todo Mundo Ama*; **Unifor** — colação; **gshow** — The Voice / votação; **O POVO** — álbum Nordeste; **secult.ce** — Festival do Pratinho (checar menção no corpo); **Terra** — semifinalistas TV; **paparazoom** — programa culinário (checar menção) |
+| **Ivan Baron** | `Ivan Baron` | **Diário do RN** — unidade movimento PCD; **Brasil de Fato** — pré-candidatura 2026; **Blog do Barreto** — Lula convida ao PT; **Saiba Mais** — filiação PT deputado estadual; **DeFato.com** — candidatura PT / Janja; **Agora RN** — críticas por filiação MDB; **Tribuna do Norte** — desfiliação MDB; **O POTI** — Lula e Janja pós-Sapucaí; **Diário PcD** — sondagem Planalto |
+
+**Nota (Megh):** o nome público na imprensa e no site aparece como **Megh Melry**; o handle do squad é **`@megh_melry`**. Usar **ambas** as grafias em buscas. Matéria **GiroGO** sobre **Revista Adames** aparece no RSS; URL do site **girogo.com.br** retornou **503** neste ambiente — tratar como pista até captura estável ou outro veículo.
+
 ---
 
 ## 1. Giovanna Pitel (`@pitelgiovanna`)
@@ -460,6 +474,21 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@indio.behn` |
 | X | `indio_behn` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Instagram / TikTok / YouTube / X** | **Não** há inventário de posts nesta fase; imprensa e **site oficial** descrevem carreira e shows. |
+| **Primário** | **indiobehn.com.br** — bio, agenda, contato comercial; **não** lista campanhas de terceiros captadas aqui. |
+
+### Rodada adicional — só web aberta (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Índio Behn` + aposta / bet / cassino / loteria (parceria) | **Sem** matéria ligando o artista a publi de jogo; ruído = notícias genéricas sobre PL de bets (sem o nome dele). |
+| `Índio Behn` + Lula / Bolsonaro / PT / política | **Sem** matéria com **nome explícito** do humorista nesta rodada (diferente de pauta “indígena” genérica). |
+| **Google Notícias (RSS)** | Amostra na seção global — reforça agenda **teatro / Sesc / cinema / municípios**. |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -476,13 +505,20 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Cancelamento (institucional) | Univates | https://www.univates.br/cultura/noticias/35737-indio-behn-cancela-shows-da-turne-gratiluz-com-dra-rosangela | |
 | Contato comercial (site) | Índio Behn | https://indiobehn.com.br/ | Seções de **publicidade** / contratação; **não** listam marcas parceiras. |
 | Palestras (corporativo / SIPAT) | SIPAT Show | https://sipatshow.com.br/palestrante-indio-behn-palestrante-ator-e-musico-indio-behn/ | Oferta de palestras; **sem** nomes de empresas cliente na página captada. |
+| **Cinema / Dra. Rosângela (2025)** | GZH (Amanda Souza) | https://gauchazh.clicrbs.com.br/colunistas/amanda-souza/noticia/2025/07/indio-behn-interprete-da-dra-rosangela-estreia-espetaculo-no-cinema-com-sessao-exclusiva-em-porto-alegre-cmdp114nd006t0161i6v0f3ei.html | Sessão exclusiva POA — reforça IP **personagem**. |
+| **Araújo Vianna / Tratamento de Choque** | GZH | https://gauchazh.clicrbs.com.br/colunistas/amanda-souza/noticia/2025/09/em-novo-espetaculo-dra-rosangela-estreia-no-araujo-vianna-com-tratamento-de-choque-cmfyg8pjf01a0014iwur6a4sr.html | |
+| **Sesc Alberto Bins — especial Natal** | Sesc/RS | https://www.sesc-rs.com.br/noticias/teatro-do-sesc-alberto-bins-recebe-dra-rosangela-com-especial-de-natal/ | Institucional **Sesc** + personagem (não é publipost de consumo do feed). |
+| **Sesc Camaquã — Tratamento de Choque** | Sesc/RS | https://www.sesc-rs.com.br/noticias/sesc-camaqua-promove-espetaculo-de-comedia-dra-rosangela-em-tratamento-de-choque/ | Mar/2026 — cita **Índio Behn** como criador da personagem. |
+| **Sesc Canoas — programação 2026** | Sesc/RS | https://www.sesc-rs.com.br/noticias/sesc-canoas-lanca-programacao-cultural-do-ano-com-espetaculo-de-thiago-lacerda/ | Texto cita **Índio Behn** e Dra. Rosângela em data **03/10/2026** (Matinê do Humor). |
+| Estreia TV (Praça É Nossa) | Giro de Gravataí | https://www.girodegravatai.com.br/humorista-de-cachoeirinha-indio-behn-estreia-na-praca-e-nossa/ | Contexto **SBT** / regional. |
 
 ### Marcas e parcerias — Índio Behn (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
 | **SBT** | Trabalho em programa de TV (**A Praça É Nossa**) | Correio do Povo; site oficial; Giro de Gravataí | https://www.correiodopovo.com.br/cadernodesabado/%C3%ADndio-behn-fen%C3%B4meno-dos-personagens-do-feed-e-do-palco-1.879228 · https://indiobehn.com.br/ | Alta (empregador emissor) |
-| **Shows / IP próprios** | *Gratiluz*, *Tratamento de Choque*, *Causos de Família*, personagem **Dra. Rosângela** | Site; ISTOÉ; imprensa regional | https://indiobehn.com.br/gratiluz/ · https://istoe.com.br/humorista-por-tras-da-personagem-dra-rosangela-indio-behn-comemora-sucesso-da-primeira-turne-nacional/ | Alta |
+| **Sesc/RS** | **Palcos institucionais** (Alberto Bins, Camaquã, Canoas) — contratação de espetáculo / personagem | Sesc/RS | https://www.sesc-rs.com.br/noticias/teatro-do-sesc-alberto-bins-recebe-dra-rosangela-com-especial-de-natal/ · https://www.sesc-rs.com.br/noticias/sesc-camaqua-promove-espetaculo-de-comedia-dra-rosangela-em-tratamento-de-choque/ · https://www.sesc-rs.com.br/noticias/sesc-canoas-lanca-programacao-cultural-do-ano-com-espetaculo-de-thiago-lacerda/ | Alta (release oficial) |
+| **Shows / IP próprios** | *Gratiluz*, *Tratamento de Choque*, *Causos de Família*, personagem **Dra. Rosângela** | Site; ISTOÉ; imprensa regional; GZH | https://indiobehn.com.br/gratiluz/ · https://istoe.com.br/humorista-por-tras-da-personagem-dra-rosangela-indio-behn-comemora-sucesso-da-primeira-turne-nacional/ | Alta |
 | *Marcas de consumo em publipost* | **Não localizado** nome de marca em matéria jornalística nesta rodada | — | Completar via **Instagram** / **agência (e-mail no site)** | — |
 
 **Observação:** não confundir buscas “bebê indígena + Johnson's” etc. com Índio Behn — são casos distintos.
@@ -492,8 +528,10 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Sem menção a **publipost de bet/loteria/cassino** nesta rodada. Título de espetáculo com palavra “loteria” é **ficção de palco**, não prova de contrato com operador. | Alta (tema artístico); média (ausência de parceria) |
-| **Polêmicas** | **2024:** cancelamento amplo de apresentações até fim do ano; imprensa associa a **rompimento com produtora** e compromisso com qualidade/reembolso — **risco operacional/reputacional** para datas, não “crime” ou hate campaign mapeado aqui. | Alta (várias fontes) |
+| **Polêmicas** | **2024:** cancelamento amplo de apresentações até fim do ano; imprensa associa a **rompimento com produtora** e compromisso com qualidade/reembolso — **risco operacional/reputacional** para datas, não “crime” ou hate campaign mapeado aqui. Personagem aborda **saúde mental** de forma humorística — sensível para marca institucional **só** se houver leitura de **minimização**; aqui não há sanção regulatória mapeada. | Alta (cancelamento); média (humor × saúde) |
 | **Política** | Não localizado endosso ou filiação partidária explícita nesta rodada. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** amostra na seção global. (2) **GZH** cinema + Araújo Vianna; **Sesc/RS** (3 URLs). (3) **Pendências:** inventário **IG/TT/YT/X** para publipost de marcas de consumo; PDF do media kit se exigido.
 
 ---
 
@@ -511,12 +549,29 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@megh_melry` |
 | X | `megh_melry` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Site** | **meghmelry.com.br** — textos de oferta comercial (publipost, reels, eventos, stories); **não** nomeia marcas cliente no trecho captado. |
+| **Instagram / TikTok / YouTube / X** | **Sem** inventário de posts nesta fase — lacuna principal frente a Pitel/Gratta. |
+
+### Rodada adicional — só web aberta (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Megh Merly` no **Google Notícias (RSS)** | **Zero** itens — usar **`Megh Melry`** (grafia do site e de matérias). |
+| `Megh Melry` + aposta / bet / cassino | **Sem** hit claro ligando a **esta** criadora nesta rodada. |
+| `Megh Melry` + política / Lula / Bolsonaro | **Sem** matéria pertinente indexada na amostra. |
+| **Perfil Collabstr “megreilyy”** | **Handle diferente** do squad — **não** atribuir sem prova de que é a mesma pessoa. |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
-| Site / mídia kit | meghmelry.com.br | https://meghmelry.com.br/ | Oferta de parcerias para marcas. |
+| Site / mídia kit | meghmelry.com.br | https://meghmelry.com.br/ | Oferta de parcerias; métricas no site (+2M seguidores, +5M alcance mensal — **validar no app**). |
 | Perfil (agregador) | Famous Birthdays | https://www.famousbirthdays.com/people/megh-melry.html | Dados biográficos; validar. |
+| **Google Notícias — capa Revista Adames** | GiroGO Notícias | *(URL típica agregada; site retornou **503** aqui)* | Título no RSS: **“Megh Melry… capa da Revista Adames”** — **hipótese de mídia / marca** até página estável ou segundo veículo. |
 
 ### Desambiguação — não atribuir a Megh Merly sem confirmação
 
@@ -524,6 +579,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 |------|--------|-----|--------|
 | Justiça / gravidez / jogador | O Extra | https://extra.globo.com/famosos/noticia/2026/03/gravida-influenciadora-e-processada-e-impedida-de-citar-ex-jogador-sob-pena-de-multa.ghtml | Matérias citam **outra** influenciadora no corpo da nota (**Juliana Merhy** em outras fontes). |
 | Idem | Terra | https://www.terra.com.br/diversao/gente/gravida-de-ex-zagueiro-da-selecao-influencer-e-proibida-de-cita-lo-sob-pena-de-multa-diz-jornal,9d87bf62972872a3333b9e62878a4212fojmu168.html | |
+| Perfil com grafia parecida (Collabstr) | Collabstr | https://collabstr.com/megreilyy | **@megreilyy** — **não** é o handle **`@megh_melry`** do YAML; tratar como **homônimo / conta distinta** até cruzamento. |
 
 **Regra para o relatório:** só vincular a `@megh_melry` se o veículo **nomear o handle ou a pessoa** de forma inequívoca.
 
@@ -531,7 +587,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| *Marcas nomeadas em matéria* | **Não localizado** nesta rodada (além do site genérico de parcerias) | meghmelry.com.br | https://meghmelry.com.br/ | — |
+| **Revista Adames** (capa) | **Hipótese** — mídia impressa/digital (título no RSS **GiroGO**) | Google Notícias → GiroGO | Ver seção global **Google Notícias**; URL **GiroGO** instável (503) | Baixa até confirmação |
+| *Marcas nomeadas em matéria (consumo)* | **Não localizado** nesta rodada além da hipótese acima | — | — | — |
 | *Lista de publipost* | Exige varredura **Instagram / TikTok / YouTube / X** ou media kit | — | — | — |
 
 ### Achados objetivos — Megh Merly (rodada aprofundada)
@@ -541,6 +598,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Concorrência** | Não encontrada nesta rodada evidência de parceria com loteria concorrente, bet ou cassino **atribuída inequivocamente** a `@megh_melry`. | Baixa a média (pouca imprensa indexada) |
 | **Polêmicas** | Caso judicial / gravidez / ex-atleta em mar/2026 aparece na imprensa ligado a **outra** pessoa (ex.: **Juliana Merhy**); **não** atribuir a Megh Merly sem nomeação explícita do handle ou da pessoa. | Alta (desambiguação) |
 | **Política** | Não localizado posicionamento partidário ou pauta política explícita **para este perfil** nesta rodada. | Baixa |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** `Megh Merly` vazio; `Megh Melry` com **GiroGO** / Adames — capturar URL canônica ou espelho. (2) **Pendências:** inventário completo nas **quatro redes**; desambiguar **Collabstr megreilyy**; validar números do **site** no app.
 
 ---
 
@@ -558,14 +617,34 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@cleanesampaioo` |
 | X | `cleanesampaioo` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Instagram / TikTok / YouTube / X** | **Sem** inventário de publipost; imprensa descreve **The Voice**, **TV Jangadeiro**, humor **cearensês**. |
+| **TV Globo / gshow** | Presença documentada via **The Voice Brasil** (temporada 9, time **Carlinhos Brown**) em matérias e playlist oficial. |
+
+### Rodada adicional — só web aberta (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Cleane Sampaio` + aposta / bet / cassino / loteria | **Sem** associação com jogo na amostra. |
+| `Cleane Sampaio` + política / eleição | Cuidado com **homônimos**; **sem** filiação partidária explícita **dela** nesta rodada. |
+| **Google Notícias (RSS)** | Amostra na seção global — inclui **gshow**, **O POVO**, **Unifor**, **secult.ce**, **paparazoom**; dois últimos exigem **checagem de corpo** (título pode ser agregador). |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Perfil | O POVO+ | https://mais.opovo.com.br/reportagens-especiais/influencers-cearenses/2022/08/07/cantora-cleane-sampaio-mostra-humor-cearense-nas-redes-sociais.html | |
 | Perfil | G1 Ceará | https://g1.globo.com/ce/ceara/noticia/2021/11/21/cantora-e-influencer-faz-sucesso-nas-redes-sociais-divulgando-o-cearenses-jeito-cearense-de-falar.ghtml | |
-| TV | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Programa **Todo Mundo Ama**. |
+| TV | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Programa **Todo Mundo Ama** na **TV Jangadeiro**. |
 | Perfil | O POVO+ (Farol) | https://mais.opovo.com.br/jornal/farol/2021/11/28/cearense-cleane-sampaio-quer-exaltar-o-nordeste-nos-palcos-da-vida.html | |
+| **The Voice — etapa (Plus FM)** | Plus FM | https://plusfm.com.br/cearenses-gabriel-nogueira-e-cleane-sampaio-vencem-primeira-etapa-do-the-voice-brasil/ | Nome + programa **TV Globo**. |
+| **The Voice — playlist Batalhas (time Brown)** | gshow | https://gshow.globo.com/realities/the-voice-brasil/2020/playlist/the-voice-reveja-as-batalhas-do-time-brown-na-9-temporada.ghtml | Contexto **Globo** / **9ª temporada**. |
+| **Álbum forró (2022)** | O POVO | https://www.opovo.com.br/vidaearte/2022/10/21/ex-the-voice-e-humorista-cleane-sampaio-exalta-nordeste-em-album.html | *Pra Dançar Um Forrozim* — obra autoral, não publipost. |
+| **CD / carreira** | Tô Na Mídia | https://tonamidia.com.br/resgatando-o-forro-dancante-cleane-sampaio-ex-the-voice-brasil-lanca-novo-cd/ | Tom promocional; cruzar com O POVO. |
+| **Colação Unifor (show)** | Unifor (Graduação) | https://unifor.br/web/graduacao/-/cleane-sampaio-faz-show-em-colacao-de-grau-2021.2-da-unifor | Colação **2021.2**; atração musical — vínculo **institucional** com universidade, não consumo massivo. |
 
 **Atenção:** buscas “Sampaio + política” podem retornar **Edna Sampaio** e outros homônimos — não cruzar automaticamente com Cleane.
 
@@ -573,7 +652,9 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| **Todo Mundo Ama** (comando / TV) | Trabalho em grade (entretenimento) | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Média (checar emissora/contrato no release) |
+| **TV Globo / gshow** | **Reality** *The Voice Brasil* (9ª temporada; time Carlinhos Brown) | Plus FM; gshow | https://plusfm.com.br/cearenses-gabriel-nogueira-e-cleane-sampaio-vencem-primeira-etapa-do-the-voice-brasil/ · https://gshow.globo.com/realities/the-voice-brasil/2020/playlist/the-voice-reveja-as-batalhas-do-time-brown-na-9-temporada.ghtml | Alta (grade Globo) |
+| **TV Jangadeiro** | **Apresentação** *Todo Mundo Ama* | Portal Nosso Meio | https://nossomeio.com.br/consolidada-na-cena-artistica-regional-cleane-sampaio-estreia-no-comando-do-todo-mundo-ama/ | Alta (matéria cita emissora) |
+| **Unifor** | **Show em colação de grau** (cerimônia acadêmica) | Unifor | https://unifor.br/web/graduacao/-/cleane-sampaio-faz-show-em-colacao-de-grau-2021.2-da-unifor | Alta |
 | *Publipost de consumo* | **Não localizado** nome de marca em matéria nesta rodada | — | Completar nas quatro redes | — |
 
 ### Achados objetivos — Cleane Sampaio (rodada aprofundada)
@@ -583,6 +664,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Concorrência** | Não encontrada nesta rodada associação com bet, cassino ou loteria concorrente. | Média (só web indexada) |
 | **Polêmicas** | Não mapeado nesta rodada episódio de cancelamento ou fala problemática **com fonte** ligada inequivocamente a Cleane Sampaio. | Baixa a média |
 | **Política** | Matérias citam identidade regional (Nordeste/Ceará); **não** localizado voto, filiação ou campanha partidária explícita. Cuidado com homônimos “Sampaio” em política. | Baixa a média |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** amostra na seção global. (2) **Pendências:** checar **secult.ce** e **paparazoom** (itens do RSS) no **corpo** da matéria; inventário **IG/TT/YT/X** para marcas.
 
 ---
 
@@ -600,6 +683,21 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | YouTube | `@ivanbaron` |
 | X | `ivanbaron` |
 
+### Cobertura por rede (o que esta compilação cobre — web indexada)
+
+| Rede | Conteúdo refletido aqui |
+|------|-------------------------|
+| **Instagram / TikTok / YouTube / X** | **Sem** inventário de publipost nesta fase; **Diário PcD** e matérias **2025–2026** citam apresentação **Teleton** e trajetória como criador. |
+| **Política** | Forte cobertura em veículos **RN** e **nacionais** sobre **pré-candidatura**, **MDB**, **PT**, **Lula/Janja** — ver **Fontes** e **Google Notícias** (seção global). |
+
+### Rodada adicional — só web aberta (mar/2026)
+
+| Consulta / foco | Resultado |
+|-----------------|-----------|
+| `Ivan Baron` + aposta / bet / cassino / loteria | **Sem** vínculo com jogo na amostra. |
+| **Google Notícias (RSS)** | Amostra na seção global — filiação **PT**, saída **MDB**, **Diário RN**, **Brasil de Fato**, **Planalto** / secretaria (via **Diário PcD**), **Sapucaí**. |
+| **Partido em 2026** | Matérias **concorrentes** citam **PV** (pré-candidatura jan/2026, **Brasil de Fato**) e **PT** (fev/2026, vários veículos) — **não** consolidar legenda final sem **TSE** ou declaração única atual; registrar **ambas** como **cobertura jornalística**. |
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -609,24 +707,39 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Perfil | L'Officiel Hommes | https://www.revistalofficiel.com.br/hommes/ivan-baron-confira-a-entrevista-exclusiva-com-o-influenciador | |
 | Posse / Lula 2023 | UOL Splash | https://www.uol.com.br/splash/noticias/2023/01/01/ivan-baron-influenciador-foi-de-bronca-em-juliette-a-rampa-com-lula.htm | Visibilidade política simbólica. |
 | Enciclopédia | Wikipédia (pt) | https://pt.wikipedia.org/wiki/Ivan_Baron | Checar citações da página. |
-| **Críticas ao governo / BPC (2024)** | Poder360 | https://www.poder360.com.br/poder-gente/influencer-que-subiu-rampa-com-lula-cobra-veto-no-bpc/.modal-box--author | |
+| **Críticas ao governo / BPC (2024)** | Poder360 | https://www.poder360.com.br/poder-gente/influencer-que-subiu-rampa-com-lula-cobra-veto-no-bpc/ | URL canônica (sem sufixo `.modal-box`). |
 | Idem | Gazeta do Povo | https://www.gazetadopovo.com.br/republica/jovem-com-deficiencia-que-subiu-a-rampa-com-lula-critica-medida-do-governo-contra-bpc/ | |
 | Idem | Grande Ponto | https://grandeponto.com.br/noticia/video-influenciador-potiguar-ivan-baron-faz-criticas-ao-governo-lula-e-vira-alvo-de-esquerdistas-nas-redes-sociais | |
 | Idem | Pleno.News | https://pleno.news/brasil/politica-nacional/influenciador-que-subiu-a-rampa-com-lula-critica-governo-federal.html | Algumas matérias mencionam remoção de vídeos — checar primary. |
+| **Pré-candidatura 2026 / narrativa** | Brasil de Fato | https://www.brasildefato.com.br/podcast/bem-viver/2026/01/06/nao-sou-aliado-da-inclusao-sou-protagonista-diz-ativista-anticapacitista-ivan-baron-ao-anunciar-pre-candidatura-em-2026/ | Título cita **anticapacitismo** e **pré-candidatura**; corpo: checar **partido** citado (matérias divergem **PV** vs **PT**). |
+| **Movimento PCD / RN** | Portal Diário do RN | https://diariodorn.com.br/ivan-baron-defende-unidade-no-movimento-pcd-e-reacende-debate-sobre-representatividade-no-rn/ | Política / representatividade. |
+| **MEC — campanha nacional (embaixador)** | Agora RN | https://agorarn.com.br/ultimas/ivan-baron-nova-campanha-nacional-do-mec/ | Pauta **educação / inclusão**; vínculo **governo federal** (institucional). |
+| **Saída do MDB** | Blog Território Livre (Tribuna do Norte) | https://blog.tribunadonorte.com.br/territoriolivre/um-mes-depois-ativista-ivan-baron-pede-desfiliacao-ao-mdb/ | |
+| **Desfiliação MDB (rompimento Walter/Fátima)** | Agora RN | https://agorarn.com.br/ultimas/ivan-baron-anuncia-desfiliacao-do-mdb-apos-rompimento-entre-walter-alves-e-fatima-bezerra/ | |
+| **Contexto saída MDB** | Erinilson Cunha (blog) | https://www.erinilsoncunha.com.br/2026/02/influenciador-digital-ivan-baron-deixa.html | |
+| **Convite Lula / filiação PT** | Blog do Barreto | https://blogdobarreto.com.br/lula-convida-ivan-baron-para-o-pt-e-brinca-candidato-de-janja-ativista-confirma-que-se-filiara-ao-partido/ | |
+| **Filiação PT / Lula** | Senadinho Macaíba | https://senadinhomacaiba.com.br/ivan-baron-vai-se-filiar-ao-pt-apos-saida-do-mdb-e-recebe-incentivo-publico-de-lula/ | |
+| **Lula / Janja / Sapucaí** | 96 FM | https://96fm.com.br/post/apos-desfile-ivan-baron-encontra-lula-e-reforca-alianca-com-o-pt-estaremos-juntos | |
+| **Planalto / Secretaria Nacional PcD (sondagem)** | Diário PcD | https://diariopcd.com.br/planalto-sonda-ivan-baron-para-a-secretaria-nacional-dos-direitos-das-pessoas-com-deficiencia/ | Especulação de cargo; matéria cita resposta do entorno. |
+| **Teleton 2024 (apresentador)** | Diário PcD | https://diariopcd.com.br/ivan-baron-integra-time-de-apresentadores-do-teleton-2024-e-reforca-compromisso-pela-inclusao/ | **SBT** / institucional — não é bet/loteria. |
 
 ### Marcas e parcerias — Ivan Baron (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
-| *Marcas em publipost* | **Não localizada** lista explícita nesta rodada | — | Completar nas quatro redes | — |
+| **Teleton / SBT** | **Apresentação** (matéria **2024**) | Diário PcD | https://diariopcd.com.br/ivan-baron-integra-time-de-apresentadores-do-teleton-2024-e-reforca-compromisso-pela-inclusao/ | Alta (veículo especializado) |
+| **MEC** (Ministério da Educação) | **Campanha nacional** — convite como **embaixador** (matéria **Agora RN**) | Agora RN | https://agorarn.com.br/ultimas/ivan-baron-nova-campanha-nacional-do-mec/ | Média — checar peça oficial do ministério |
+| *Demais marcas em publipost* | **Não localizada** lista explícita nesta rodada | — | Completar nas quatro redes | — |
 
 ### Achados objetivos — Ivan Baron (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. | Média |
-| **Polêmicas** | Cobertura sobre **críticas ao governo** e medida ligada ao **BPC** (2024); repercussão e tensão com parte do público relatadas em veículos — avaliar tom e estabilidade de narrativa para anunciante institucional. | Alta (várias matérias) |
-| **Política** | **Alta visibilidade** na **posse Lula 2023** (mídia); depois **críticas** a medidas do mesmo governo. Não é silêncio político: há trajetória pública em pauta federal (PCD, benefícios). | Alta |
+| **Concorrência** | Não encontrada nesta rodada parceria com bet, cassino ou loteria concorrente. **Teleton** é **telefundraising** institucional (mídia cita **SBT**), não operador de jogo. | Média a alta |
+| **Polêmicas** | **2024:** críticas a medida ligada ao **BPC** e repercussão polarizada (Poder360, Gazeta do Povo, Grande Ponto, Pleno.News). **2025–2026:** tensão política em torno de **MDB** vs **PT** e **coerência** narrativa — várias matérias. Para anunciante **público**, risco de **associação partidária** e de **crítica a governos** (mesmo após símbolo de **apoio** a Lula na posse). | Alta |
+| **Política** | **Trajetória explícita:** rampa **Lula 2023**; **pré-candidatura** **2026** (Brasil de Fato); **filiação MDB** com críticas da esquerda (Agora RN); **desfiliação MDB** e **convite/filiação PT** (Blog Barreto, Senadinho, 96 FM, Agora RN). **Sondagem** para **Secretaria Nacional PcD** (Diário PcD). **Alto** alinhamento com **agenda PCD** e **campo político** — para **Loterias/Caixa**, costuma ser **fator central** de brand safety (partidarismo). | Alta |
+
+**Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** amostra na seção global. (2) **Pendências:** fixar **legenda partidária** e **cargo** com fonte **primária** (rede social oficial ou **TSE**) — matérias **jan/2026** (PV) vs **fev/2026** (PT) divergem; **DeFato.com** / **Tribuna** raiz retornaram **406** no `curl` — preferir **espelhos** já listados ou busca no site do veículo. (3) Inventário **IG/TT/YT/X** para **publipost** de consumo.
 
 ---
 
