@@ -123,6 +123,30 @@
 
 ---
 
+## Painel X (Twitter) — leitura direta do perfil (mar/2026)
+
+**Origem:** tabela extraída **direto do X** (interface / export do usuário). **Handles no YAML:** campo `x` em `loterias2026/data/influencers.yaml`.
+
+**Alinhamento:** a coluna **X (`influencers.yaml`)** é o handle oficial do squad. O **@ na tabela** segue o extract; onde for **diferente** do YAML, marcamos **⚠**.
+
+**Perfis do squad sem linha neste extract:** **Aline Costa** (`comcertezaaline`), **Megh Merly** (`megh_melry`), **Mila Costa** (`nocasomila`), **Paula Mineira** (`mineira_paula`), **Davi** (`davizoa`), **Cereja** (`cerejaaaaaa`) — **não constam** na amostra abaixo.
+
+**Uso no dossiê:** resumo **qualitativo** do teor recente (não é arquivo de tweets); **“Ativo”** = julgamento na data da extração; **não** substitui os três eixos de brand safety.
+
+| Perfil (rótulo no extract) | @ no X (extract) | X (`influencers.yaml`) | Seguidores | Ativo atualmente? | Observações (teor dos últimos tweets) |
+|----------------------------|------------------|------------------------|------------|-------------------|----------------------------------------|
+| Catraca Livre | @CatracaLivre | `catracalivre` | 1,5M | Sim | Publicações patrocinadas (#publinaCatraca) e divulgação de eventos culturais. |
+| Tseremeywa | @cristianwariu | `cristianwariu` | 11,8K | Sim | Relatos sobre o quotidiano pessoal, humor e partilha de conteúdos sobre desporto. |
+| Ivan Baron | @ivanbaron | `ivanbaron` | 47,8K | Sim | Comentários sobre representatividade política (pesquisa eleitoral), inclusão, anticapacitismo e análise de telenovelas. |
+| Cleane Sampaio | @cleane_sampaio | `cleanesampaioo` ⚠ | 223 | Não | Divulgação de projetos musicais próprios e publicações de luto pela cantora Gal Costa (nov/2022). |
+| Índio Behn | @indiobehn | `indio_behn` ⚠ | 187 | Não | Anúncios sobre novos projetos e mensagens sobre regresso à rede social (mar/2024). |
+| Rafael Gratta | @RafaGratta | `rafaelgratta` ⚠ | 534 | Não | Reflexões motivacionais (estoicismo, disciplina, hábitos, foco) — finais de 2025. |
+| Pitel | @giovannapitel | `pitelgiovanna` ⚠ | 70,2K | Sim | Pedidos de recomendações de lazer no Rio e comentários sobre reality shows. |
+
+**Legenda ⚠:** @ do extract **≠** string exata do YAML (`cleane_sampaio` vs `cleanesampaioo`; `indiobehn` vs `indio_behn`; `RafaGratta` vs `rafaelgratta`; `giovannapitel` vs `pitelgiovanna`) — confirmar qual conta é a do programa.
+
+---
+
 ## Rodada OSINT — ferramentas open source (31/03/2026)
 
 **Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `loterias2026/research/osint_runs/20260331/` (ver `README.txt` na pasta).
