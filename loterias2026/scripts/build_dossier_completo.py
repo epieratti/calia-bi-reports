@@ -619,6 +619,11 @@ def main() -> None:
 
     _pn_all_pre = bundle.get("panels") or {}
 
+    def esc_lines_br(s: str) -> str:
+        """Quebras de linha no YAML viram <br> (texto escapado por linha)."""
+        lines = (s or "").strip().splitlines()
+        return "<br />".join(esc(line.strip()) for line in lines if line.strip())
+
     def coverage_block_html(base: str, cells_dash: str) -> str:
         b = (base or "").strip()
         d = (cells_dash or "").strip()
@@ -631,7 +636,8 @@ def main() -> None:
             )
         if d:
             paras.append(
-                f"<p class='text-xs text-slate-500 mt-2 max-w-prose leading-relaxed'>{esc(d)}</p>"
+                f"<p class='text-xs text-slate-500 mt-2 max-w-prose leading-relaxed'>"
+                f"{esc_lines_br(d)}</p>"
             )
         return "".join(paras)
 
