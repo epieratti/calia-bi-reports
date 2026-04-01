@@ -152,10 +152,13 @@ def main() -> None:
         toc_items += f"<li><a class='toc-link' href='#{slug}'>{i}. {esc(name)}</a></li>"
 
         h = pc.get("handles") or {}
-        handles_html = ""
+        handle_bits = []
         for label, val in h.items():
             if val:
-                handles_html += f"<span class='profile-handle mr-2 mb-2'>{esc(label)}: @{esc(str(val).lstrip('@'))}</span>"
+                handle_bits.append(
+                    f"<span class='profile-handle'>{esc(label)}: @{esc(str(val).lstrip('@'))}</span>"
+                )
+        handles_html = "<br />".join(handle_bits)
 
         tier = esc(pc.get("tier", "—"))
         r_geral = esc(pc.get("risco_geral", "—"))
@@ -181,7 +184,7 @@ def main() -> None:
             f"<div class='risk-analysis-box__body'>"
             f"<div class='risk-analysis-box__name'>{esc(name)}</div>"
             f"<p class='text-xs font-bold text-slate-600 mb-2'>Risco geral (síntese): <span class='text-calia-navy'>{r_geral}</span></p>"
-            f"<div class='handles flex flex-wrap'>{handles_html}</div>"
+            f"<div class='handles space-y-2'>{handles_html}</div>"
             f"</div></div>"
             f"{narr_html}"
             f"<div class='deep-dive-box'><h4 class='text-xs font-black uppercase text-calia-navy mb-2'>Três eixos (esta compilação)</h4>"

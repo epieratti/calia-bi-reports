@@ -4,6 +4,8 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 `https://epieratti.github.io/calia-bi-reports/caixa/<arquivo>.html`
 
+**Índice:** https://epieratti.github.io/calia-bi-reports/caixa/ — lista os `.html` com links corretos (evita 404 por digitação).
+
 ## Dossiê atual (mar/2026)
 
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
