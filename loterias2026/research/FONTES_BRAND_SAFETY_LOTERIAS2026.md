@@ -70,6 +70,34 @@
 
 ---
 
+## Painel TikTok — auditoria (Upfluence, mar/2026)
+
+**Origem:** dados extraídos com **Upfluence TikTok Audit Tool** — https://www.upfluence.com/tiktok-audit-tool — (tabela consolidada enviada pelo usuário).
+
+**Alinhamento com `influencers.yaml`:** a coluna **TikTok (YAML)** é o handle do squad; a coluna **Perfil (Upfluence)** reproduz o rótulo da ferramenta. **Divergências:** **Pitel** no YAML = `pitelgiovanna` · Upfluence = **`giovannapiteloficial`** (conta distinta ou renome — conferir qual é a do programa). **Rafael Gratta** no YAML = `rafaelgratta` · Upfluence = **`rafaelgrattap`** (já sinalizado na compilação EM / TikTok). **Ivan** YAML = `ivanbaron` · Upfluence = **`ivanvbaron`**. **Cleane** YAML = `cleanesampaioo` · Upfluence = **`cleane_sampaioo`** (underscore + grafia). **Megh** YAML = `megh_melry` · Upfluence = **`meghmelry`** (sem underscore). **Cereja** YAML = `cerejaaaaaa` · Upfluence = **`cerejaaaaaaaa`** (contagem de caracteres diferente — conferir @ correto). **Wari'u** no export = **`cristianwariu`** (igual ao YAML).
+
+**Uso no dossiê:** métricas de **audiência e formato** — **não** substituem os três eixos de brand safety; **N/A** indica dado **não** retornado pela ferramenta naquele campo; **Total de Vídeos = 0** em algumas linhas pode ser **artefato** do relatório — validar no app.
+
+| Perfil (Upfluence) | TikTok (`influencers.yaml`) | Taxa engajamento | Seguidores | Média comentários | Média curtidas | Média compartilhamentos | Média reproduções | Seguindo | Total curtidas | Total vídeos | Público feminino | Público masculino |
+|--------------------|----------------------------|-----------------:|-----------:|------------------:|---------------:|------------------------:|------------------:|---------:|---------------:|-------------:|-----------------:|------------------:|
+| ivanvbaron (Ivan Baron) | `ivanbaron` ⚠ | 0,12% | 671,5K | 83,62 | 720,64 | 42,09 | 14,6K | 805,0 | 12,9M | 1,4K | N/A | N/A |
+| cleane_sampaioo (Cleane Sampaio) | `cleanesampaioo` ⚠ | 0,41% | 190,7K | 19,6 | 754,84 | 45,16 | 255,7K | 35,0 | 4,3M | 0,0 | N/A | N/A |
+| meghmelry (Megh Melry) | `megh_melry` ⚠ | 0,18% | 1,4M | 94,15 | 2,4K | 82,85 | 50,9K | 559,0 | 24,7M | 0,0 | N/A | N/A |
+| indio.behn (Indio Behn) | `indio.behn` | 0,44% | 263,5K | 49,52 | 1,1K | 178,83 | 12,4K | 1,3K | 5,9M | 1,2K | 76,44% | 23,56% |
+| rafaelgrattap (Rafael Gratta) | `rafaelgratta` ⚠ | 0,35% | 1,3M | 53,67 | 4,5K | 444,75 | 38,2K | 73,0 | 36,7M | 983,0 | 57,44% | 42,56% |
+| giovannapiteloficial (Pitel) | `pitelgiovanna` ⚠ | 2,00% | 110,3K | 15,4 | 2,2K | 29,17 | 17,9K | 86,0 | 3,4M | 461,0 | N/A | N/A |
+| Catraca Livre (@catracalivre) | `catracalivre` | N/A | 204,1K | N/A | N/A | N/A | N/A | 54 | 4,8M | 923 | N/A | N/A |
+| mineira.paula (mineira.paula) | `mineira.paula` | 0,07% | 345,1K | 8,5 | 240,07 | 12,86 | 3,7K | 2,1K | 8,0M | 1,2K | N/A | N/A |
+| Davizoa (@davizoa) | `davizoa` | N/A | 220,7K | N/A | N/A | N/A | N/A | 1397 | 4,6M | 208 | N/A | N/A |
+| comcertezaaline (Aline com Certeza) | `comcertezaaline` | 0,16% | 5,1M | 46,07 | 8,2K | 123 | 613,9K | 810,0 | 55,7M | 614,0 | 75,28% | 24,72% |
+| cerejaaaaaaaa (@cerejaaaaaaaa) | `cerejaaaaaa` ⚠ | 0,40% | 9,8K | 1,75 | 38 | 3,25 | 639,25 | 173,0 | 53,3K | 0,0 | 68,17% | 31,83% |
+| Wari'u (@cristianwariu) | `cristianwariu` | N/A | 110,6K | N/A | N/A | N/A | N/A | 955 | 1,5M | 97 | N/A | N/A |
+| nocasomila (Mila Costa) | `nocasomila` | 4,05% | 44,4K | 26 | 1,8K | 192,8 | 21,4K | 73,0 | 1,2M | 151,0 | 86,42% | 13,58% |
+
+**Legenda:** ⚠ = handle auditado pela Upfluence **diferente** do TikTok listado no YAML — unificar no briefing antes do dossiê final.
+
+---
+
 ## Rodada OSINT — ferramentas open source (31/03/2026)
 
 **Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `loterias2026/research/osint_runs/20260331/` (ver `README.txt` na pasta).
