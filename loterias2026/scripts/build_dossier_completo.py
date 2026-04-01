@@ -576,6 +576,17 @@ def main() -> None:
             return t
         return f"Fonte: {t}"
 
+    _pn_all_pre = bundle.get("panels") or {}
+    _cov_raw = (
+        (_pn_all_pre.get("coverage_note") or _pn_all_pre.get("missing_rows_note") or "")
+        .strip()
+    )
+    coverage_after_foot = (
+        f"<p class='text-xs text-slate-500 mt-3 max-w-prose leading-relaxed'>{esc(_cov_raw)}</p>"
+        if _cov_raw
+        else ""
+    )
+
     def panel_section(key: str, title_txt: str, foot: str) -> str:
         p = bundle.get("panels", {}).get(key) or {}
         if not p.get("headers") or not p.get("rows"):
@@ -594,13 +605,14 @@ def main() -> None:
             foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
             return (
                 f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
-                f"{empty_msg}{foot_p}</section>"
+                f"{empty_msg}{foot_p}{coverage_after_foot}</section>"
             )
         tbl = render_table(oh, body_rows, html_safe_columns=frozenset({0}))
         foot_fmt = format_panel_footnote(foot)
         foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
         return (
-            f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>{tbl}{foot_p}</section>"
+            f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
+            f"{tbl}{foot_p}{coverage_after_foot}</section>"
         )
 
     panels_intro = esc(
@@ -610,10 +622,6 @@ def main() -> None:
         )
     )
     _pn_all = bundle.get("panels") or {}
-    coverage_note = (
-        (_pn_all.get("coverage_note") or _pn_all.get("missing_rows_note") or "")
-        .strip()
-    )
     panels_html = (
         f"<p class='text-sm text-slate-600 mb-6'>{panels_intro}</p>"
         + panel_section("instagram", "Instagram", _pn_all.get("instagram", {}).get("footnote", ""))
@@ -621,10 +629,6 @@ def main() -> None:
         + panel_section("youtube", "YouTube", _pn_all.get("youtube", {}).get("footnote", ""))
         + panel_section("x", "X", _pn_all.get("x", {}).get("footnote", ""))
     )
-    if coverage_note:
-        panels_html += (
-            f"<p class='text-xs text-slate-500 mt-8 max-w-prose leading-relaxed'>{esc(coverage_note)}</p>"
-        )
 
     cons = bundle.get("consolidated_narrative") or {}
     cons_title = esc(cons.get("title", "Síntese adicional do squad"))
