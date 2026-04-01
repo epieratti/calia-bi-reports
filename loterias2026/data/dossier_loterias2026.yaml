@@ -140,53 +140,43 @@ panels:
 
 consolidated_narrative:
   title: "Síntese adicional do squad"
-  subtitle: "Consolidação (abril/2026) — cruzar com Perfis, Tabela resumo e métricas abaixo."
-  tagline: "Complemento à Leitura rápida: mesmo recorte, foco em decisão de campanha e governança."
+  subtitle: "__Abril/2026__ — cruzar com **Perfis**, **Tabela resumo** e **métricas**."
+  tagline: "Decisão de __campanha__ e **governança**: o que muda o go/no-go além do detalhe por nome."
   blocks:
-    - title: "Visão geral"
+    - title: "Leitura estratégica"
       items:
-        - "Squad majoritariamente favorável a peças de humor, diversidade e impacto social."
-        - "Quem exige neutralidade política máxima na veiculação deve olhar com lupa: Ivan Baron (trajetória pública em causas e campo progressista) e Catraca Livre (veículo com linha editorial explícita)."
+        - "Squad **adequado** a humor, diversidade e impacto social."
+        - "__Neutralidade política rígida__ na peça: foco em **Ivan Baron** e **Catraca Livre**."
     - title: "Concorrência"
       items:
-        - "Pessoas físicas: na amostra, não há contrato público nem campanha anunciada como garoto-propaganda de casa de apostas ou de loteria concorrente à CAIXA."
-        - "Separar de parceria com operador: menções a “aposta” em entretenimento ou em nome comercial (ex.: plataforma de cursos com “bet” no nome)."
-        - "Catraca Livre: há material que orienta o leitor a jogo online com indicação de operador."
-        - "Rafael Gratta: imprensa cita participação em evento da bolsa e de corretora sobre conscientização em apostas (educação financeira — não equivale a publi de bet)."
-    - title: "Contexto regulatório"
+        - "Pessoas físicas: **sem garoto-propaganda** de bet ou loteria concorrente à CAIXA na amostra."
+        - "Separar: **“bet”** só em nome de curso/plataforma **≠** parceria com __operador de jogo__."
+        - "**Catraca Livre**: conteúdo com **encaminhamento a operador**. **Gratta**: evento bolsa/corretora (**educação financeira**; **não** publi de bet)."
+    - title: "Governança"
       items:
-        - "Apostas e publicidade estão no radar do Congresso e da mídia (incluindo práticas abusivas). Isso reforça clareza contratual e monitoramento de novas peças nas redes após a contratação."
-    - title: "Próximos passos"
-      items:
-        - "Alinhar roteiro da peça com compliance; se necessário, solicitar declaração ou material atualizado aos representantes dos talentos antes da assinatura."
+        - "Apostas sob **escrutínio** (Congresso/mídia) → **contrato claro** e monitorar **novas peças** nas redes pós-contratação."
+        - "__Próximo passo__: roteiro com **compliance**; pedir **declaração** ou material atualizado aos talentos se necessário."
 
 executive_summary:
-  tagline: "Visão executiva — mesmo recorte de conteúdo, leitura em blocos."
+  tagline: "**13 nomes** — visão __C-level__; detalhe nos perfis e na tabela matricial."
   blocks:
     - title: "Escopo"
       items:
-        - "13 nomes: 12 pessoas físicas + veículo Catraca Livre."
-        - "Camadas: Tier 1 (Giovanna Pitel), Tier 2 (Rafael Gratta), quatro Mezzos, seis Micros, página Catraca Livre."
-        - "Critérios do briefing aplicados a todos: concorrência (bets/loterias/jogos), polêmicas, política."
+        - "**13 nomes**: 12 pessoas + __Catraca Livre__. **Tiers**: Pitel (1), Gratta (2), 4 Mezzos, 6 Micros."
+        - "Critérios: __concorrência__ (bets/loterias/jogos), __polêmicas__, __política__."
     - title: "Concorrência"
       items:
-        - "Pessoas físicas: na amostra pública, não há contrato anunciado com operador de apostas."
-        - "Catraca Livre: cobertura do setor + pelo menos um conteúdo que encaminha a operador (jogo online com guia). Decisão de associação à CAIXA exige jurídico/compliance."
-        - "Rafael Gratta: imprensa cita participação em evento de conscientização sobre apostas (bolsa + corretora). Não equivale, por si só, a publi de casa de apostas esportiva."
-    - title: "Política"
+        - "Pessoas físicas: **sem contrato público** com operador de apostas na amostra."
+        - "__Catraca Livre__: setor + **CTA a operador** (guia online) — __jurídico/compliance__ antes de vincular à **CAIXA**."
+        - "__Gratta__: evento **bolsa/corretora** (conscientização; **não** publi de bet esportivo)."
+    - title: "Política e imagem"
       items:
-        - "Maior exposição a pauta política explícita: Ivan Baron e Catraca Livre."
-        - "Cristian Wariu: causas indígenas e ambientais. Giovanna Pitel: causas sociais, sem filiação partidária clara na amostra."
-        - "Apostas na esfera pública (mídia e Congresso): pano de fundo de sensibilidade para a peça; não serve como rótulo partidário dos talentos."
-    - title: "Polêmicas e reputação"
+        - "Pauta explícita: **Baron**, **Catraca**; **Wariu** (indígena/ambiente); **Pitel** (causas sociais, **sem partido** na amostra)."
+        - "Apostas no __Congresso/mídia__: **sensibilidade de marca**, não rótulo partidário dos talentos."
+        - "Ruído: **Gratta** (saúde/método), **Pitel** (BBB), **Mila** (__hackeio__ — não conduta); demais: **baixo** na amostra."
+    - title: "Diligência"
       items:
-        - "Rafael Gratta: debate público sobre conteúdo de saúde, promessas e modelo de negócio."
-        - "Giovanna Pitel: histórico de exposição no BBB e repercussão na mídia."
-        - "Mila Costa: episódio documentado de conta invadida (ângulo de segurança digital, não de conduta da criadora)."
-        - "Demais perfis: menor volume de alertas na imprensa aberta, na amostra."
-    - title: "Diligência residual"
-      items:
-        - "Davi (@davizoa): alcance relevante em TikTok e YouTube nos painéis; pouca matéria jornalística com o mesmo @ — validar identidade com a agência do talento."
+        - "**Davi @davizoa**: alcance em redes vs. pouca matéria com o mesmo @ — __validar com agência__."
 
 profiles:
   - name: "Giovanna Pitel"

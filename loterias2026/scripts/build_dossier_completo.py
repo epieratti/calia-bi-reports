@@ -22,28 +22,52 @@ def esc(s: object) -> str:
     return html.escape(str(s or ""), quote=True)
 
 
+def mini_md(s: object) -> str:
+    """**negrito** e __sublinhado__ em strings do YAML; restante escapado."""
+    text = str(s or "")
+    out: list[str] = []
+    pos = 0
+    for m in re.finditer(r"\*\*(.+?)\*\*|__(.+?)__", text):
+        out.append(esc(text[pos : m.start()]))
+        if m.group(1) is not None:
+            out.append(
+                '<strong class="font-semibold text-slate-900">'
+                f"{esc(m.group(1))}</strong>"
+            )
+        else:
+            out.append(
+                '<span class="underline decoration-calia-gold/80 decoration-2 '
+                'underline-offset-2">'
+                f"{esc(m.group(2))}</span>"
+            )
+        pos = m.end()
+    out.append(esc(text[pos:]))
+    return "".join(out)
+
+
 def render_clevel_body(cfg: dict) -> str:
     """Subtítulo opcional, tagline, depois blocos em cards ou fallback bullets/parágrafos."""
     parts: list[str] = []
     if cfg.get("subtitle"):
         parts.append(
-            f"<p class='text-xs text-slate-500 mb-3'>{esc(cfg['subtitle'])}</p>"
+            f"<p class='text-xs text-slate-500 mb-3'>{mini_md(cfg['subtitle'])}</p>"
         )
     if cfg.get("tagline"):
         parts.append(
-            f"<p class='text-sm font-semibold text-slate-800 mb-5 leading-snug'>{esc(cfg['tagline'])}</p>"
+            f"<p class='text-sm font-semibold text-slate-800 mb-5 leading-snug'>"
+            f"{mini_md(cfg['tagline'])}</p>"
         )
     blocks = cfg.get("blocks")
     if blocks:
         cards: list[str] = []
         for b in blocks:
-            tit = esc(b.get("title", ""))
+            tit = mini_md(b.get("title", ""))
             items = b.get("items") or []
             lis = "".join(
                 (
                     "<li class='flex gap-2.5 text-sm text-slate-700 leading-snug'>"
                     "<span class='text-calia-gold font-bold shrink-0 mt-0.5'>•</span>"
-                    f"<span>{esc(it)}</span></li>"
+                    f"<span>{mini_md(it)}</span></li>"
                 )
                 for it in items
             )
@@ -62,7 +86,7 @@ def render_clevel_body(cfg: dict) -> str:
             (
                 "<li class='flex gap-2.5 text-sm text-slate-700 leading-snug'>"
                 "<span class='text-calia-gold font-bold shrink-0'>•</span>"
-                f"<span>{esc(b)}</span></li>"
+                f"<span>{mini_md(b)}</span></li>"
             )
             for b in bullets
         )
@@ -70,7 +94,7 @@ def render_clevel_body(cfg: dict) -> str:
         return "".join(parts)
     for para in cfg.get("paragraphs") or []:
         parts.append(
-            f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(para)}</p>"
+            f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{mini_md(para)}</p>"
         )
     return "".join(parts)
 
