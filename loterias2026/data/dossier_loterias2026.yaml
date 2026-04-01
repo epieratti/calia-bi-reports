@@ -42,10 +42,10 @@ panels:
   intro_note: "Snapshot de métricas; validar na data da veiculação."
 
   instagram:
-    footnote: "Fonte: Social Blade. Coluna @ = usuário do briefing."
+    footnote: "Fonte: Social Blade."
     headers:
       - "Nome"
-      - "@"
+      - "Usuário"
       - "Seguidores"
       - "Variação 14 dias"
       - "Média/dia"
@@ -71,10 +71,10 @@ panels:
       - ["Cristian Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%", "Alta taxa; base menor"]
 
   tiktok:
-    footnote: "Fonte: Upfluence. Quando o relatório mostra @ diferente do briefing (ex.: variação de grafia), o squad segue o briefing; a linha descreve o que a ferramenta captou."
+    footnote: "Fonte: Upfluence. Nome alinhado ao squad quando possível; usuário = handle captado pela ferramenta (ou do briefing se a coluna vier como nome)."
     headers:
-      - "Nome no relatório"
-      - "@ briefing"
+      - "Nome (painel)"
+      - "Usuário (briefing)"
       - "Engaj."
       - "Seguidores"
       - "Com. méd."
@@ -102,10 +102,10 @@ panels:
       - ["nocasomila", "nocasomila", "4,05%", "44,4K", "26", "1,8K", "192,8", "21,4K", "73,0", "1,2M", "151", "86,42%", "13,58%"]
 
   youtube:
-    footnote: "Fonte: Social Blade. Canais sem linha: conferir se o talento usa outro nome de canal ou só shorts integrados a outro perfil."
+    footnote: "Fonte: Social Blade. Nome alinhado ao squad quando possível; usuário = @ do canal no briefing."
     headers:
-      - "Canal (nome no painel)"
-      - "@ briefing"
+      - "Canal (painel)"
+      - "Usuário (briefing)"
       - "Inscritos"
       - "Visualizações"
       - "Vídeos"
@@ -122,22 +122,21 @@ panels:
       - ["Megh Merly", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    footnote: "Leitura direta do perfil no X em data da coleta. “Ativo” = havia postagens recentes na amostra."
+    footnote: "Leitura direta do perfil no X em data da coleta. “Ativo” = havia postagens recentes na amostra. Usuário = @ visto na coleta."
     headers:
       - "Nome"
-      - "@ visto"
-      - "@ briefing"
+      - "Usuário"
       - "Seguidores"
       - "Ativo?"
       - "Teor recente (resumo)"
     rows:
-      - ["Catraca Livre", "CatracaLivre", "catracalivre", "1,5M", "Sim", "Conteúdo patrocinado e cultura"]
-      - ["Cristian Wariu", "cristianwariu", "cristianwariu", "11,8K", "Sim", "Cotidiano, humor, esporte"]
-      - ["Ivan Baron", "ivanbaron", "ivanbaron", "47,8K", "Sim", "Inclusão, política, entretenimento"]
-      - ["Cleane Sampaio", "cleane_sampaio", "cleanesampaioo", "223", "Não", "Última atividade antiga; foco musical"]
-      - ["Índio Behn", "indiobehn", "indio_behn", "187", "Não", "Retorno esporádico ao X"]
-      - ["Rafael Gratta", "RafaGratta", "rafaelgratta", "534", "Não", "Desenvolvimento pessoal e hábitos"]
-      - ["Giovanna Pitel", "giovannapitel", "pitelgiovanna", "70,2K", "Sim", "Rio de Janeiro, realities"]
+      - ["Catraca Livre", "CatracaLivre", "1,5M", "Sim", "Conteúdo patrocinado e cultura"]
+      - ["Cristian Wariu", "cristianwariu", "11,8K", "Sim", "Cotidiano, humor, esporte"]
+      - ["Ivan Baron", "ivanbaron", "47,8K", "Sim", "Inclusão, política, entretenimento"]
+      - ["Cleane Sampaio", "cleane_sampaio", "223", "Não", "Última atividade antiga; foco musical"]
+      - ["Índio Behn", "indiobehn", "187", "Não", "Retorno esporádico ao X"]
+      - ["Rafael Gratta", "RafaGratta", "534", "Não", "Desenvolvimento pessoal e hábitos"]
+      - ["Giovanna Pitel", "giovannapitel", "70,2K", "Sim", "Rio de Janeiro, realities"]
 
 consolidated_narrative:
   title: "Síntese adicional do squad"

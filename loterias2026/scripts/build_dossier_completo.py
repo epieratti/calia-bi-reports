@@ -53,15 +53,65 @@ def panel_row_by_briefing(rows: list, brief_col: int, yaml_handle: object) -> li
     return None
 
 
+def ig_name_by_briefing(ig_rows: list, brief: object) -> str:
+    k = norm_handle(brief)
+    if not k:
+        return ""
+    for row in ig_rows:
+        if len(row) > 1 and norm_handle(row[1]) == k:
+            return str(row[0] or "").strip()
+    return ""
+
+
+def normalize_panel_for_display(key: str, panel: dict, ig_rows: list) -> tuple[list[str], list[list]]:
+    """Tabelas de redes: só duas colunas de identificação — Nome e Usuário."""
+    headers = list(panel.get("headers") or [])
+    rows = [list(r) for r in (panel.get("rows") or [])]
+
+    if key == "instagram":
+        out_h = ["Usuário" if h == "@" else h for h in headers]
+        return out_h, rows
+
+    if key == "tiktok" and len(headers) >= 2:
+        out_h = ["Nome", "Usuário"] + headers[2:]
+        out_rows: list[list] = []
+        for r in rows:
+            if len(r) < 2:
+                out_rows.append(r)
+                continue
+            brief = r[1]
+            nome = ig_name_by_briefing(ig_rows, brief) or str(r[0] or "").strip()
+            raw_tool = str(r[0] or "").strip()
+            usuario = raw_tool if raw_tool and " " not in raw_tool else str(brief).strip()
+            out_rows.append([nome, usuario] + r[2:])
+        return out_h, out_rows
+
+    if key == "youtube" and len(headers) >= 2:
+        out_h = ["Nome", "Usuário"] + headers[2:]
+        out_rows = []
+        for r in rows:
+            if len(r) < 2:
+                out_rows.append(r)
+                continue
+            brief = r[1]
+            nome = ig_name_by_briefing(ig_rows, brief) or str(r[0] or "").strip()
+            usuario = str(brief).strip()
+            out_rows.append([nome, usuario] + r[2:])
+        return out_h, out_rows
+
+    return headers, rows
+
+
 def panel_row_x(rows: list, profile_name: str, yaml_x: object) -> list[str] | None:
+    """Linha X: Nome, Usuário, Seguidores, Ativo?, Teor."""
     xk = norm_handle(yaml_x)
     pn = (profile_name or "").strip().lower()
     for row in rows:
-        if len(row) < 4:
+        if len(row) < 5:
             continue
-        if xk and norm_handle(row[2]) == xk:
-            return row
         if pn and str(row[0] or "").strip().lower() == pn:
+            return row
+        if xk and norm_handle(row[1]) == xk:
             return row
     return None
 
@@ -111,7 +161,7 @@ def format_profile_networks_html(
     if xr and len(xr) >= 5:
         xv = esc(str(xr[1]).lstrip("@"))
         lines.append(
-            f"<span class='block'><strong>X</strong> @{xv} — {esc(xr[3])} seguidores · {esc(xr[4])}</span>"
+            f"<span class='block'><strong>X</strong> @{xv} — {esc(xr[2])} seguidores · {esc(xr[3])}</span>"
         )
 
     if not lines:
@@ -205,12 +255,15 @@ def main() -> None:
             f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{esc(col.get('body', ''))}</p></div>"
         )
 
+    ig_for_panels = (bundle.get("panels", {}).get("instagram") or {}).get("rows") or []
+
     def panel_section(key: str, title_txt: str, foot: str) -> str:
         p = bundle.get("panels", {}).get(key) or {}
         if not p.get("headers") or not p.get("rows"):
             return ""
-        body_rows = [[esc(c) for c in r] for r in p["rows"]]
-        tbl = render_table(p["headers"], body_rows)
+        disp_h, disp_r = normalize_panel_for_display(key, p, ig_for_panels)
+        body_rows = [[esc(c) for c in r] for r in disp_r]
+        tbl = render_table(disp_h, body_rows)
         foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot)}</p>" if foot else ""
         return (
             f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>{tbl}{foot_p}</section>"
