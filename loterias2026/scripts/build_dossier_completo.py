@@ -746,7 +746,7 @@ def main() -> None:
         return (
             f"<div class='rounded border border-slate-200 p-4 bg-white'>"
             f"<p class='text-xs font-black uppercase text-calia-gold mb-2'>{esc(lab)}</p>"
-            f"<p class='text-sm text-slate-700 leading-relaxed'>{esc(txt or '—')}</p></div>"
+            f"<p class='text-sm text-slate-700 leading-relaxed'>{mini_md(txt or '—')}</p></div>"
         )
 
     def render_profile(idx: int, pc: dict) -> str:
@@ -757,7 +757,7 @@ def main() -> None:
             name, h, ig_panel_rows, tt_panel_rows, yt_panel_rows, x_panel_rows
         )
         eixos = pc.get("eixos") or {}
-        narr = esc(pc.get("narrativa", ""))
+        narr = mini_md(pc.get("narrativa", ""))
         risco_raw = pc.get("risco_geral", "—")
         risco_badge = risco_badge_block_html(risco_raw, compact=False)
         tier_l = esc(pc.get("tier", "—"))
