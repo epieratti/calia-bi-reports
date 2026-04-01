@@ -55,21 +55,20 @@ panels:
       - "Curtidas méd."
       - "Coment. méd."
       - "Engaj."
-      - "Obs."
     rows:
-      - ["Rafael Gratta", "rafaelgratta", "3.547.067", "-13.059", "-1.011", "-869", "1.110", "16K", "271", "0,46%", "Queda acentuada no período"]
-      - ["Catraca Livre", "catracalivre", "1.463.093", "-949", "-65", "-41", "12.545", "609", "12", "0,04%", "Menor engajamento do grupo"]
-      - ["Giovanna Pitel", "pitelgiovanna", "1.269.480", "-1.760", "-170", "-112", "838", "4,3K", "91", "0,35%", "Queda constante"]
-      - ["Mila Costa", "nocasomila", "724.674", "-66", "+46", "-3", "1.425", "26K", "1,3K", "3,80%", "Engajamento alto"]
-      - ["Índio Behn", "indio.behn", "619.868", "+21.330", "+949", "+1.668", "2.897", "23K", "799", "3,80%", "Forte crescimento"]
-      - ["Ivan Baron", "ivanbaron", "550.499", "+882", "+45", "+56", "2.176", "8,3K", "180", "1,50%", "Crescimento positivo"]
-      - ["Cleane Sampaio", "cleanesampaioo", "523.359", "+4.010", "+197", "+256", "1.369", "10K", "422", "2%", "Crescimento consistente"]
-      - ["Megh Melry", "megh_melry", "488.455", "0", "0", "0", "0", "0", "0", "0%", "Painel zerado — validar no app; há atividade recente no perfil"]
-      - ["Aline Costa", "comcertezaaline", "230.134", "+2.063", "+310", "+203", "637", "5K", "37", "2,20%", "Equilíbrio de métricas"]
-      - ["Paula Mineira", "mineira.paula", "176.755", "+771", "+83", "+41", "642", "1,2K", "45", "0,69%", "Ganho regular"]
-      - ["Davi", "davizoa", "101.442", "+2.396", "+151", "+342", "344", "125K", "1,5K", "125%", "Taxa atípica — conferir metodologia do painel"]
-      - ["Cereja", "cerejaaaaaa", "92.175", "-76", "+1", "-4", "365", "580", "51", "0,69%", "Estável com leve queda"]
-      - ["Cristian Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%", "Alta taxa; base menor"]
+      - ["Rafael Gratta", "rafaelgratta", "3.547.067", "-13.059", "-1.011", "-869", "1.110", "16K", "271", "0,46%"]
+      - ["Catraca Livre", "catracalivre", "1.463.093", "-949", "-65", "-41", "12.545", "609", "12", "0,04%"]
+      - ["Giovanna Pitel", "pitelgiovanna", "1.269.480", "-1.760", "-170", "-112", "838", "4,3K", "91", "0,35%"]
+      - ["Mila Costa", "nocasomila", "724.674", "-66", "+46", "-3", "1.425", "26K", "1,3K", "3,80%"]
+      - ["Índio Behn", "indio.behn", "619.868", "+21.330", "+949", "+1.668", "2.897", "23K", "799", "3,80%"]
+      - ["Ivan Baron", "ivanbaron", "550.499", "+882", "+45", "+56", "2.176", "8,3K", "180", "1,50%"]
+      - ["Cleane Sampaio", "cleanesampaioo", "523.359", "+4.010", "+197", "+256", "1.369", "10K", "422", "2%"]
+      - ["Megh Melry", "megh_melry", "488.455", "0", "0", "0", "0", "0", "0", "0%"]
+      - ["Aline Costa", "comcertezaaline", "230.134", "+2.063", "+310", "+203", "637", "5K", "37", "2,20%"]
+      - ["Paula Mineira", "mineira.paula", "176.755", "+771", "+83", "+41", "642", "1,2K", "45", "0,69%"]
+      - ["Davi", "davizoa", "101.442", "+2.396", "+151", "+342", "344", "125K", "1,5K", "125%"]
+      - ["Cereja", "cerejaaaaaa", "92.175", "-76", "+1", "-4", "365", "580", "51", "0,69%"]
+      - ["Cristian Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%"]
 
   tiktok:
     footnote: "Upfluence."

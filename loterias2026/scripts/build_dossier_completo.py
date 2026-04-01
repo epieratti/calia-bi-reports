@@ -147,6 +147,20 @@ def normalize_panel_for_display(key: str, panel: dict, ig_rows: list) -> tuple[l
 
     if key == "instagram":
         out_h = ["Usuário" if h == "@" else h for h in headers]
+        # Remove coluna Obs. (não entra no dossiê)
+        if out_h:
+            last = str(out_h[-1] or "").strip().lower().rstrip(".")
+            if last in ("obs", "observações", "observacoes"):
+                out_h = out_h[:-1]
+                n = len(out_h)
+                new_rows: list[list] = []
+                for r in rows:
+                    r = list(r)
+                    if len(r) >= n:
+                        new_rows.append(r[:n])
+                    else:
+                        new_rows.append(r + ["—"] * (n - len(r)))
+                rows = new_rows
         return out_h, rows
 
     if key == "tiktok" and len(headers) >= 2:
@@ -195,6 +209,99 @@ def normalize_panel_for_display(key: str, panel: dict, ig_rows: list) -> tuple[l
         return out_h, out_rows
 
     return headers, rows
+
+
+def profiles_in_summary_order(profiles_cfg: list, tier_order: list) -> list[dict]:
+    """Mesma ordem da Tabela resumo: tier_order, depois perfis sem tier conhecido."""
+    known = set(tier_order)
+    ordered: list[dict] = []
+    for t in tier_order:
+        ordered.extend([p for p in profiles_cfg if p.get("tier") == t])
+    for p in profiles_cfg:
+        if p.get("tier") not in known:
+            ordered.append(p)
+    return ordered
+
+
+def name_tier_cell_html(name: object, tier: object) -> str:
+    """Primeira coluna alinhada à Tabela resumo: nome + tier abaixo."""
+    n = esc(name or "—")
+    t = esc(tier or "—")
+    return (
+        f"<strong class='font-semibold text-slate-900'>{n}</strong>"
+        f"<br><span class='text-xs text-slate-500'>{t}</span>"
+    )
+
+
+def panel_row_index_for_profile(panel_key: str, raw_rows: list[list], pc: dict) -> int | None:
+    """Índice da linha no painel YAML: coluna 1 = @ do briefing (IG/TT/YT); X por nome ou @."""
+    h = pc.get("handles") or {}
+    name_l = str(pc.get("name") or "").strip().lower()
+    if panel_key == "instagram":
+        k = norm_handle(h.get("instagram"))
+        if not k:
+            return None
+        for i, r in enumerate(raw_rows):
+            if len(r) > 1 and norm_handle(r[1]) == k:
+                return i
+        return None
+    if panel_key == "tiktok":
+        k = norm_handle(h.get("tiktok"))
+        if not k:
+            return None
+        for i, r in enumerate(raw_rows):
+            if len(r) > 1 and norm_handle(r[1]) == k:
+                return i
+        return None
+    if panel_key == "youtube":
+        k = norm_handle(h.get("youtube"))
+        if not k:
+            return None
+        for i, r in enumerate(raw_rows):
+            if len(r) > 1 and norm_handle(r[1]) == k:
+                return i
+        return None
+    if panel_key == "x":
+        xk = norm_handle(h.get("x"))
+        for i, r in enumerate(raw_rows):
+            if len(r) < 2:
+                continue
+            if name_l and str(r[0] or "").strip().lower() == name_l:
+                return i
+            if xk and norm_handle(r[1]) == xk:
+                return i
+        return None
+    return None
+
+
+def build_ordered_panel_rows(
+    panel_key: str,
+    disp_headers: list[str],
+    disp_rows: list[list],
+    ordered_profiles: list[dict],
+    raw_rows: list[list],
+) -> tuple[list[str], list[list[str]]]:
+    """Cabeçalho Nome/camada + métricas; linhas na ordem da tabela resumo."""
+    h0 = "Nome / camada"
+    out_headers = [h0] + list(disp_headers[1:])
+    n_rest = max(0, len(disp_headers) - 1)
+    out_rows: list[list[str]] = []
+    for pc in ordered_profiles:
+        first = name_tier_cell_html(pc.get("name"), pc.get("tier"))
+        idx = panel_row_index_for_profile(panel_key, raw_rows, pc)
+        found = disp_rows[idx] if idx is not None and idx < len(disp_rows) else None
+        if found and len(found) > 1:
+            rest_raw = list(found[1 : 1 + n_rest])
+        elif found:
+            rest_raw = list(found[1:])
+        else:
+            rest_raw = []
+        while len(rest_raw) < n_rest:
+            rest_raw.append("—")
+        rest_raw = rest_raw[:n_rest]
+        rest = [esc(str(x)) for x in rest_raw]
+        out_rows.append([first] + rest)
+    return out_headers, out_rows
 
 
 def panel_row_x(rows: list, profile_name: str, yaml_x: object) -> list[str] | None:
@@ -347,14 +454,25 @@ def format_profile_networks_html(
     )
 
 
-def render_table(headers: list[str], rows: list[list[str]]) -> str:
+def render_table(
+    headers: list[str],
+    rows: list[list[str]],
+    *,
+    html_safe_columns: frozenset[int] | None = None,
+) -> str:
     th = "".join(
         f"<th class='py-2 px-3 text-left text-xs font-bold text-slate-600 border-b border-slate-200'>{esc(h)}</th>"
         for h in headers
     )
     trs = []
     for row in rows:
-        tds = "".join(f"<td class='py-2 px-3 border-b border-slate-100 text-sm align-top'>{c}</td>" for c in row)
+        tds_l: list[str] = []
+        for j, c in enumerate(row):
+            cell = c if (html_safe_columns is not None and j in html_safe_columns) else esc(c)
+            tds_l.append(
+                f"<td class='py-2 px-3 border-b border-slate-100 text-sm align-top'>{cell}</td>"
+            )
+        tds = "".join(tds_l)
         trs.append(f"<tr>{tds}</tr>")
     return (
         "<div class='overflow-x-auto rounded border border-slate-200'>"
@@ -418,6 +536,9 @@ def main() -> None:
     def tier_anchor(t: str) -> str:
         return tier_slug_map.get(t, slug_id(t))
 
+    profiles_cfg = bundle.get("profiles") or []
+    ordered_profiles = profiles_in_summary_order(profiles_cfg, tier_order)
+
     exec_summary_cfg = bundle.get("executive_summary") or {}
     exec_body_html = render_clevel_body(exec_summary_cfg)
 
@@ -444,9 +565,12 @@ def main() -> None:
         p = bundle.get("panels", {}).get(key) or {}
         if not p.get("headers") or not p.get("rows"):
             return ""
+        raw_r = [list(r) for r in (p.get("rows") or [])]
         disp_h, disp_r = normalize_panel_for_display(key, p, ig_for_panels)
-        body_rows = [[esc(c) for c in r] for r in disp_r]
-        tbl = render_table(disp_h, body_rows)
+        oh, body_rows = build_ordered_panel_rows(
+            key, disp_h, disp_r, ordered_profiles, raw_r
+        )
+        tbl = render_table(oh, body_rows, html_safe_columns=frozenset({0}))
         foot_fmt = format_panel_footnote(foot)
         foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
         return (
@@ -480,7 +604,6 @@ def main() -> None:
     cons_title = esc(cons.get("title", "Síntese adicional do squad"))
     cons_body_html = render_clevel_body(cons) if (cons.get("blocks") or cons.get("bullets") or cons.get("paragraphs")) else ""
 
-    profiles_cfg = bundle.get("profiles") or []
     _pn = bundle.get("panels") or {}
     ig_panel_rows = (_pn.get("instagram") or {}).get("rows") or []
     tt_panel_rows = (_pn.get("tiktok") or {}).get("rows") or []
@@ -604,6 +727,7 @@ def main() -> None:
     sum_table = render_table(
         ["Nome / camada", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
         summary_rows,
+        html_safe_columns=frozenset({0}),
     )
 
     doc = f"""<!DOCTYPE html>
