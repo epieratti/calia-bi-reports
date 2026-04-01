@@ -25,6 +25,13 @@ briefing:
   limites_paragraphs:
     - "Os números de seguidores, engajamento e tabelas de ferramentas de mercado servem apenas para dimensionar alcance e perfil de audiência. Eles não substituem a análise dos três critérios acima."
     - "Quando o mesmo nome aparece com usuário ligeiramente diferente entre redes (por exemplo TikTok x Instagram), a linha do squad segue o briefing original; a tabela pode mostrar o usuário captado pela ferramenta."
+  tiers_nota: "Classificação por tier segue o desenho do squad: Tier 1 e Tier 2 concentram maior peso de mídia; Mezzos = camada intermediária; Micros = capilaridade; Página = veículo digital (não é pessoa física). Nesta lista, Tier 2 está sem nomes — reservado se a criação incluir novos talentos nessa camada."
+  tier_order:
+    - "Tier 1"
+    - "Tier 2"
+    - "Mezzos"
+    - "Micros"
+    - "Página"
 
 methodology:
   columns:
@@ -146,7 +153,8 @@ consolidated_narrative:
 
 executive_summary:
   bullets:
-    - "Treze nomes: doze pessoas físicas e a página Catraca Livre. Todos foram lidos nos três critérios do briefing."
+    - "Composição por camada: Tier 1 (dois nomes), Tier 2 (vazio nesta rodada), Mezzos (quatro), Micros (seis), Página (Catraca Livre)."
+    - "Treze nomes no total: doze pessoas físicas e um veículo digital. Todos foram analisados nos três critérios do briefing."
     - "Concorrência (bets/loterias): nenhum vínculo comercial inequívoco com operador de jogo foi encontrado na pesquisa pública; Catraca cobre o tema como veículo de notícia, o que é diferente de ser patrocinada por uma bet."
     - "Política: Ivan Baron e Catraca Livre concentram a maior exposição a pauta política explícita; Cristian Wariu atua em causas indígenas e ambientais; Giovanna Pitel tem posicionamento em pautas sociais sem filiação partidária clara na amostra."
     - "Polêmicas: Rafael Gratta aparece em debate público sobre conteúdo de saúde e método; Giovanna Pitel com histórico de exposição no BBB e repercussão na mídia; Mila Costa com episódio documentado de conta invadida; demais perfis com menor volume de alertas na imprensa aberta."
@@ -154,6 +162,7 @@ executive_summary:
 
 profiles:
   - name: "Giovanna Pitel"
+    tier: "Tier 1"
     risco_geral: "Baixo a moderado — alta visibilidade na mídia"
     handles:
       instagram: pitelgiovanna
@@ -167,6 +176,7 @@ profiles:
       politica: "Atuação em causas sociais e de periferia; posicionamento em temas de gênero e direitos ligados a notícias públicas. Sem filiação partidária explícita identificada na amostra."
 
   - name: "Rafael Gratta"
+    tier: "Tier 1"
     risco_geral: "Moderado — reputação em conteúdo de saúde e vendas"
     handles:
       instagram: rafaelgratta
@@ -180,6 +190,7 @@ profiles:
       politica: "Sem posicionamento político relevante mapeado na amostra."
 
   - name: "Índio Behn"
+    tier: "Mezzos"
     risco_geral: "Baixo"
     handles:
       instagram: indio.behn
@@ -193,6 +204,7 @@ profiles:
       politica: "Humor eventualmente toca política sem adesão explícita a partido na amostra. Perfil no X com pouca atividade recente na leitura fechada."
 
   - name: "Megh Merly"
+    tier: "Mezzos"
     risco_geral: "Baixo"
     handles:
       instagram: megh_melry
@@ -206,6 +218,7 @@ profiles:
       politica: "Tom satírico, sem agenda partidária clara na amostra."
 
   - name: "Cleane Sampaio"
+    tier: "Mezzos"
     risco_geral: "Baixo"
     handles:
       instagram: cleanesampaioo
@@ -219,6 +232,7 @@ profiles:
       politica: "Neutra na amostra."
 
   - name: "Ivan Baron"
+    tier: "Mezzos"
     risco_geral: "Moderado — política e causas explícitas"
     handles:
       instagram: ivanbaron
@@ -232,6 +246,7 @@ profiles:
       politica: "Alta visibilidade em causas associadas ao campo progressista; notícias sobre filiação partidária e possível candidatura — confirmar situação atual em fonte oficial se a peça exigir neutralidade eleitoral."
 
   - name: "Mila Costa"
+    tier: "Micros"
     risco_geral: "Baixo"
     handles:
       instagram: nocasomila
@@ -245,6 +260,7 @@ profiles:
       politica: "Declarações públicas de evitar posicionamento partidário forte; manter coerência com briefing da campanha."
 
   - name: "Cristian Wariu"
+    tier: "Micros"
     risco_geral: "Baixo a moderado — pauta indígena e ambiental"
     handles:
       instagram: cristianwariu
@@ -258,6 +274,7 @@ profiles:
       politica: "Defesa de direitos territoriais e críticas a marcos legais sensíveis; alinhamento perceptível a agendas de direitos humanos e ambientais."
 
   - name: "Cereja"
+    tier: "Micros"
     risco_geral: "Baixo"
     handles:
       instagram: cerejaaaaaa
@@ -271,6 +288,7 @@ profiles:
       politica: "Não mapeada na amostra."
 
   - name: "Aline Costa"
+    tier: "Micros"
     risco_geral: "Baixo"
     handles:
       instagram: comcertezaaline
@@ -284,6 +302,7 @@ profiles:
       politica: "Não identificada na amostra."
 
   - name: "Davi"
+    tier: "Micros"
     risco_geral: "Incerteza documental — baixo na síntese narrativa"
     handles:
       instagram: davizoa
@@ -297,6 +316,7 @@ profiles:
       politica: "Não mapeada."
 
   - name: "Paula Mineira"
+    tier: "Micros"
     risco_geral: "Baixo"
     handles:
       instagram: mineira.paula
@@ -310,6 +330,7 @@ profiles:
       politica: "Neutra na amostra."
 
   - name: "Catraca Livre"
+    tier: "Página"
     risco_geral: "Moderado a alto — veículo, não influenciador individual"
     handles:
       instagram: catracalivre

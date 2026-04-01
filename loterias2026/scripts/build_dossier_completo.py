@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import html
 import re
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -22,7 +23,9 @@ def esc(s: object) -> str:
 
 
 def slug_id(name: str) -> str:
-    s = re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+    n = unicodedata.normalize("NFKD", name or "")
+    n = "".join(c for c in n if not unicodedata.combining(c))
+    s = re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-")
     return s or "perfil"
 
 
@@ -88,6 +91,27 @@ def main() -> None:
     limites_html = "".join(
         f"<p class='text-sm text-slate-600 leading-relaxed mb-2'>{esc(p)}</p>" for p in limites
     )
+    tiers_nota = bundle.get("briefing", {}).get("tiers_nota", "")
+    tiers_nota_html = (
+        f"<p class='text-sm text-slate-600 leading-relaxed mt-3'>{esc(tiers_nota)}</p>" if tiers_nota else ""
+    )
+    tier_order = bundle.get("briefing", {}).get("tier_order") or [
+        "Tier 1",
+        "Tier 2",
+        "Mezzos",
+        "Micros",
+        "Página",
+    ]
+    tier_slug_map = {
+        "Tier 1": "tier-1",
+        "Tier 2": "tier-2",
+        "Mezzos": "mezzos",
+        "Micros": "micros",
+        "Página": "pagina",
+    }
+
+    def tier_anchor(t: str) -> str:
+        return tier_slug_map.get(t, slug_id(t))
 
     exec_bullets = bundle.get("executive_summary", {}).get("bullets") or []
     exec_html = "".join(
@@ -146,32 +170,33 @@ def main() -> None:
     profile_sections = ""
     summary_rows: list[list[str]] = []
 
-    for i, pc in enumerate(profiles_cfg, 1):
-        name = pc.get("name", "")
-        slug = slug_id(name)
-        toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{i}. {esc(name)}</a></li>"
+    def clip(s: object, n: int = 140) -> str:
+        t = str(s or "—")
+        return esc(t if len(t) <= n else t[: n - 1] + "…")
 
-        h = pc.get("handles") or {}
-        order = [("Instagram", h.get("instagram")), ("TikTok", h.get("tiktok")), ("YouTube", h.get("youtube")), ("X", h.get("x"))]
-        handles_line = " · ".join(
-            f"{lab} @{esc(str(v).lstrip('@'))}" for lab, v in order if v
-        )
-
-        eixos = pc.get("eixos") or {}
-        narr = esc(pc.get("narrativa", ""))
-        risco = esc(pc.get("risco_geral", "—"))
-
-        box = lambda lab, txt: (
+    def box(lab: str, txt: str | None) -> str:
+        return (
             f"<div class='rounded border border-slate-200 p-4 bg-white'>"
             f"<p class='text-xs font-black uppercase text-calia-gold mb-2'>{esc(lab)}</p>"
             f"<p class='text-sm text-slate-700 leading-relaxed'>{esc(txt or '—')}</p></div>"
         )
 
-        profile_sections += (
+    def render_profile(idx: int, pc: dict) -> str:
+        name = pc.get("name", "")
+        slug = slug_id(name)
+        h = pc.get("handles") or {}
+        order = [("Instagram", h.get("instagram")), ("TikTok", h.get("tiktok")), ("YouTube", h.get("youtube")), ("X", h.get("x"))]
+        handles_line = " · ".join(f"{lab} @{esc(str(v).lstrip('@'))}" for lab, v in order if v)
+        eixos = pc.get("eixos") or {}
+        narr = esc(pc.get("narrativa", ""))
+        risco = esc(pc.get("risco_geral", "—"))
+        tier_l = esc(pc.get("tier", "—"))
+        return (
             f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
             f"<div class='flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-3 mb-4'>"
-            f"<h2 class='text-xl font-black text-calia-navy'>{i}. {esc(name)}</h2>"
+            f"<h2 class='text-xl font-black text-calia-navy'>{idx}. {esc(name)}</h2>"
             f"<span class='text-sm font-semibold text-slate-600'>Síntese de risco: {risco}</span></div>"
+            f"<p class='text-xs text-slate-600 mb-2'><span class='font-bold text-calia-navy'>{tier_l}</span></p>"
             f"<p class='text-xs text-slate-500 font-mono mb-4'>{handles_line}</p>"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
             f"<div class='grid md:grid-cols-3 gap-4'>"
@@ -181,22 +206,85 @@ def main() -> None:
             f"</div></section>"
         )
 
-        def clip(s: object, n: int = 140) -> str:
-            t = str(s or "—")
-            return esc(t if len(t) <= n else t[: n - 1] + "…")
+    global_idx = 0
+    for ti, tier_name in enumerate(tier_order):
+        tslug = tier_anchor(tier_name)
+        people = [p for p in profiles_cfg if p.get("tier") == tier_name]
+        mt = "" if ti == 0 else " mt-4"
+        toc_items += (
+            f"<li class='{mt.strip()}'>"
+            f"<a class='toc-link font-bold text-calia-navy' href='#{esc(tslug)}'>{esc(tier_name)}</a>"
+        )
+        if people:
+            toc_items += "<ul class='mt-1 space-y-0.5 pl-0 list-none'>"
+        blocks: list[str] = []
+        for pc in people:
+            global_idx += 1
+            name = pc.get("name", "")
+            slug = slug_id(name)
+            toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
+            blocks.append(render_profile(global_idx, pc))
+            eixos = pc.get("eixos") or {}
+            summary_rows.append(
+                [
+                    f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{esc(pc.get('tier', '—'))}</span>",
+                    esc(pc.get("risco_geral", "—")),
+                    clip(eixos.get("concorrencia")),
+                    clip(eixos.get("polemicas")),
+                    clip(eixos.get("politica")),
+                ]
+            )
+        if people:
+            toc_items += "</ul>"
+        toc_items += "</li>"
 
-        summary_rows.append(
-            [
-                f"<strong>{esc(name)}</strong>",
-                risco,
-                clip(eixos.get("concorrencia")),
-                clip(eixos.get("polemicas")),
-                clip(eixos.get("politica")),
-            ]
+        if people:
+            profile_sections += (
+                f"<div id='{esc(tslug)}' class='scroll-mt-20 mb-10'>"
+                f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-6'>{esc(tier_name)}</h3>"
+                f"{''.join(blocks)}</div>"
+            )
+        elif tier_name == "Tier 2":
+            profile_sections += (
+                f"<div id='{esc(tslug)}' class='scroll-mt-20 mb-10'>"
+                f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-4'>{esc(tier_name)}</h3>"
+                f"<p class='text-sm text-slate-500 italic'>Nenhum nome nesta camada nesta versão do squad. Espaço reservado para inclusões futuras.</p></div>"
+            )
+
+    known_tiers = set(tier_order)
+    orphan = [p for p in profiles_cfg if p.get("tier") not in known_tiers]
+    if orphan:
+        oslug = "sem-camada"
+        toc_items += (
+            f"<li class='mt-4'><a class='toc-link font-bold text-calia-navy' href='#{esc(oslug)}'>Sem camada definida</a>"
+            "<ul class='mt-1 space-y-0.5 pl-0 list-none'>"
+        )
+        obl: list[str] = []
+        for pc in orphan:
+            global_idx += 1
+            name = pc.get("name", "")
+            slug = slug_id(name)
+            toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
+            obl.append(render_profile(global_idx, pc))
+            eixos = pc.get("eixos") or {}
+            summary_rows.append(
+                [
+                    f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>—</span>",
+                    esc(pc.get("risco_geral", "—")),
+                    clip(eixos.get("concorrencia")),
+                    clip(eixos.get("polemicas")),
+                    clip(eixos.get("politica")),
+                ]
+            )
+        toc_items += "</ul></li>"
+        profile_sections += (
+            f"<div id='{esc(oslug)}' class='scroll-mt-20 mb-10'>"
+            f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-6'>Sem camada definida</h3>"
+            f"{''.join(obl)}</div>"
         )
 
     sum_table = render_table(
-        ["Nome", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
+        ["Nome / camada", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
         summary_rows,
     )
 
@@ -265,7 +353,7 @@ def main() -> None:
         <li><a class="toc-link" href="#como">Como foi analisado</a></li>
         <li><a class="toc-link" href="#metricas">Métricas (contexto)</a></li>
         <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
-        <li><a class="toc-link" href="#perfis">Perfis (um a um)</a></li>
+        <li><a class="toc-link" href="#perfis">Perfis por camada (Tier 1, Tier 2, Mezzos, Micros, Página)</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
       </ul>
       <p class="text-xs text-slate-500 mt-6 font-semibold uppercase tracking-wide">Perfis</p>
@@ -281,6 +369,7 @@ def main() -> None:
       <div class="mt-6 pt-4 border-t border-slate-200">
         <p class="text-xs font-bold uppercase text-slate-500 mb-2">Leitura dos resultados</p>
         {limites_html}
+        {tiers_nota_html}
       </div>
     </section>
 
@@ -302,7 +391,8 @@ def main() -> None:
     <section id="sintese" class="scroll-mt-20 mb-6">{cons_html}</section>
 
     <section id="perfis" class="scroll-mt-20">
-      <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise detalhada</h2></div>
+      <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise por camada</h2></div>
+      <p class="text-sm text-slate-600 mb-8">Ordem: Tier 1, Tier 2 (se houver nomes), Mezzos, Micros e Página.</p>
       {profile_sections}
     </section>
 

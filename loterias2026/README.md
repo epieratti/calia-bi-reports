@@ -3,7 +3,7 @@
 ## Dossiê HTML (página do cliente)
 
 - O HTML publicado **não** menciona repositório, `.md`, `.yaml` nem ferramentas internas — só o pedido da campanha, os três critérios, leitura clara e métricas como contexto.
-- **Edição interna:** `data/dossier_loterias2026.yaml` (textos e tabelas que alimentam o HTML).
+- **Edição interna:** `data/dossier_loterias2026.yaml` (textos, tabelas e campo **`tier`** por perfil: Tier 1, Tier 2, Mezzos, Micros, Página — ordem em `briefing.tier_order`).
 - **Evidências com URLs:** `research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`
 - **Metodologia:** `research/METODO_BRAND_SAFETY_LOTERIAS2026.md`
 - **Handles do squad:** `data/influencers.yaml`
