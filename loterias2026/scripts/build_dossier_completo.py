@@ -22,9 +22,8 @@ def esc(s: object) -> str:
     return html.escape(str(s or ""), quote=True)
 
 
-def mini_md(s: object) -> str:
-    """**negrito** e __sublinhado__ em strings do YAML; restante escapado."""
-    text = str(s or "")
+def _mini_md_bold_under(text: str) -> str:
+    """**negrito** e __sublinhado__; sem links."""
     out: list[str] = []
     pos = 0
     for m in re.finditer(r"\*\*(.+?)\*\*|__(.+?)__", text):
@@ -43,6 +42,28 @@ def mini_md(s: object) -> str:
         pos = m.end()
     out.append(esc(text[pos:]))
     return "".join(out)
+
+
+def mini_md(s: object) -> str:
+    """**negrito**, __sublinhado__, [rótulo](https://url) como link; restante escapado."""
+    text = str(s or "")
+    chunks: list[str] = []
+    pos = 0
+    for m in re.finditer(r"\[([^\]]*)\]\(([^)]+)\)", text):
+        chunks.append(_mini_md_bold_under(text[pos : m.start()]))
+        lab = m.group(1)
+        url = (m.group(2) or "").strip()
+        if re.match(r"https?://", url, re.I):
+            chunks.append(
+                '<a class="text-calia-navy underline font-semibold decoration-calia-gold/70 '
+                'underline-offset-2" href="'
+                f'{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(lab)}</a>'
+            )
+        else:
+            chunks.append(esc(m.group(0)))
+        pos = m.end()
+    chunks.append(_mini_md_bold_under(text[pos:]))
+    return "".join(chunks)
 
 
 def render_clevel_body(cfg: dict) -> str:
@@ -802,9 +823,9 @@ def main() -> None:
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{esc(pc.get('tier', '—'))}</span>",
                     risco_cell,
-                    esc(rt.get("concorrencia", "—")),
-                    esc(rt.get("polemicas", "—")),
-                    esc(rt.get("politica", "—")),
+                    mini_md(rt.get("concorrencia", "—")),
+                    mini_md(rt.get("polemicas", "—")),
+                    mini_md(rt.get("politica", "—")),
                 ]
             )
         if people:
@@ -847,9 +868,9 @@ def main() -> None:
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>—</span>",
                     risco_cell_o,
-                    esc(rt.get("concorrencia", "—")),
-                    esc(rt.get("polemicas", "—")),
-                    esc(rt.get("politica", "—")),
+                    mini_md(rt.get("concorrencia", "—")),
+                    mini_md(rt.get("polemicas", "—")),
+                    mini_md(rt.get("politica", "—")),
                 ]
             )
         toc_items += "</ul></li>"
@@ -862,7 +883,7 @@ def main() -> None:
     sum_table = render_table(
         ["Nome / camada", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
         summary_rows,
-        html_safe_columns=frozenset({0, 1}),
+        html_safe_columns=frozenset({0, 1, 2, 3, 4}),
     )
 
     doc = f"""<!DOCTYPE html>
