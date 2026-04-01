@@ -395,6 +395,70 @@ Buscas em motores gerais, perfis oficiais IG/TT/YT/X e portais (G1, UOL, Folha, 
 
 ---
 
+## Pacote de fontes — mercado de apostas / bets / CPI (lista do usuário, abr/2026)
+
+**Origem:** texto longo (“Análise Sistêmica do Mercado de Apostas…”) + URLs enviadas pelo usuário. **Uso interno:** contexto **regulatório**, **concorrência** (bets) e **Catraca Livre**; **não** colar narrativa acadêmica no HTML do cliente. Afirmações com **estatística global** (“80% dos apostadores…”) exigem **citação primária** — aqui ficam como **hipótese do texto** até localizar o estudo original.
+
+### Triagem e limites
+
+| Ponto | Tratamento nesta compilação |
+|-------|-----------------------------|
+| **“Cereja” em materiais Betano / “Betano Mag”** | Expressão idiomática / revista da casa — **não** prova envolvimento da criadora **`@cerejaaaaaa`**. Ver **§9**. |
+| **r/Maromba — “influencer maromba mais abobado”** | **URL exata** da thread **não** localizada nesta rodada (Reddit com **403**/HTML dinâmico). **Não** atribuir menção a **Rafael Gratta** sem permalink que cite o nome ou post. |
+| **reinoliterariobr.com.br — série Ivan Baron** | URL informada → **404** (abr/2026). Usar fontes alternativas abaixo (**G1** cinema; **Guia de Rodas** sobre a série). |
+| **Afirmação “Gratta promoveu bets”** | Só entra como **achado** com **post, contrato ou matéria** que una **nome + operador**. **Detox Bet** = iniciativa **B3 + Genial** (educação / alternativa gamificada); presença dele como **palestrante** em evento ≠ publi de **casa de apostas**. |
+
+### Panorama — regulação, mídia e CPI (transversal)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Influenciadores e “dinheiro fácil” / tigrinho (Fantástico) | G1 | https://g1.globo.com/fantastico/noticia/2024/06/23/veja-como-influenciadores-atraem-vitimas-com-promessas-de-dinheiro-facil-no-jogo-do-tigrinho.ghtml |
+| Multas / portarias — propaganda de bets e influencers | G1 | https://g1.globo.com/tecnologia/noticia/2024/08/01/portarias-ministerio-da-fazenda-jogos-online.ghtml |
+| Explosão das bets — influencers e “estratégia” | Extra / Globo | https://extra.globo.com/economia/noticia/2025/04/explosao-das-bets-influenciadores-atraem-seguidores-com-promessa-de-ensinar-estrategia-de-jogo-baseada-em-probabilidade.ghtml |
+| CPI — lista de celebridades / convocações (Gkay, Jojo Todynho, etc.) | G1 | https://g1.globo.com/politica/noticia/2025/05/16/gkay-jojo-todynho-e-mais-veja-as-celebridades-que-ainda-devem-ser-ouvidas-na-cpi-das-bets.ghtml |
+| CPI — após Virgínia e Rico, quem a comissão quer ouvir | CNN Brasil | https://www.cnnbrasil.com.br/politica/depois-de-virginia-e-rico-veja-quais-influencers-cpi-das-bets-quer-ouvir/ |
+| Influencers e bet ilegal — ganhos (título do episódio) | YouTube — Podcast UOL Prime #101 | https://www.youtube.com/watch?v=mvyLaVVSybs |
+
+### Catraca Livre — conteúdo com conversão para operador (eixo concorrência)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| **Uplinko** (Fashion TV) — guia com menção a **Superbet** e CTA | Catraca Livre | https://catracalivre.com.br/noticias/uplinko-fashion-tv-guia-completo-2025/ |
+| Apostas esportivas — conteúdo editorial (já na §13) | Catraca Livre | https://catracalivre.com.br/apostas/apostas-esportivas-como-funciona/ |
+
+### Rafael Gratta — Detox Bet / B3 / Genial (presença documentada em matéria)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Evento **Detox Bet** na B3 — texto cita **“médico Rafael Gratta”** e **Gustavo Kuerten** | Máquina do Esporte | https://maquinadoesporte.com.br/mercado/genial-investimentos-e-b3-usam-ciencia-para-promover-detox-bet/ |
+| Projeto (site) | DetoxBet | https://detoxbet.com.br/ |
+| Release / trade (duplicata útil) | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets |
+
+### Squad — identidade / ausência de bet na amostra (links do pacote)
+
+| Perfil | Tema | Fonte | URL |
+|--------|------|--------|-----|
+| **Giovanna Pitel** | Trajetória / empoderamento capilar (não é aposta) | Cultura Preta | https://culturapreta.com/giovanna-pitel-revisita-sua-trajetoria-de-autodescoberta-e-empoderamento-capilar/ |
+| **Ivan Baron** | Indenização por danos morais (cinema) | G1 | https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/09/02/cinema-e-condenado-a-indenizar-ivan-baron-por-danos-morais.ghtml |
+| **Ivan Baron** | Série **“Minha Vida com Paralisia Cerebral”** (URL estável; substitui **reinoliterariobr** 404) | Guia de Rodas | https://guiaderodas.com/jovem-cria-serie-para-compartilhar-sua-vida-com-paralisia-cerebral/ |
+
+### Reddit — discussão sobre Gratta (comunidades citadas no texto)
+
+| Tema | Fonte | URL | Notas |
+|------|--------|-----|--------|
+| Programa / linha de conteúdo | Reddit r/PsicologiaBR | https://www.reddit.com/r/PsicologiaBR/comments/1kne46o/gostava_dos_v%C3%ADdeos_do_rafael_gratta_mas/ | **403** no `curl` aqui; já listado na **§2**. |
+| Thread **r/Maromba** citada no texto longo | — | **Pendente** | Buscar no Reddit com título exato ou print com permalink. |
+
+### Betano Mag (contexto “cereja” — não é a criadora)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Blog corporativo Betano (PT) | Betano | https://blog.betano.pt/ |
+
+**Nota:** localizar dentro do blog a edição **“Betano Mag”** / posts que usem “cereja” no sentido figurado — serve só para **desambiguar** **`@cerejaaaaaa`** de jargão de marketing da operadora.
+
+---
+
 ## Validação — hipóteses vindas de IA (Perplexity) vs. busca web
 
 As linhas que citam **Giovanna Pitel** e **Rafael Gratta** estão **replicadas** nas seções **§1** e **§2** (subseção *Validação cruzada*); a tabela abaixo permanece para visão única na auditoria.
@@ -417,8 +481,8 @@ Rodadas 2–3: queries + leitura de matérias; CNN lista Potências varrida (`cu
 | Pitel **Prêmio Potências 2025** | **Não encontrado** | Matérias sobre o prêmio **sem** Pitel; página CNN “lista completa de vencedores” varrida com `curl` + `rg` — **sem** ocorrência “Pitel”. |
 | Pitel **Rio Innovation Week 2025** | **Confirmado (painel gshow)** | **gshow** (ago/2025): painel “Multiplicar vozes…” na **Rio Innovation Week** com **Pitel** + diretoria Publishing Globo — ver URL na seção **Google Notícias** e em **Fontes** Pitel. **CARAS** sobre **Festival Negritudes** continua sendo **outro** evento (não invalida RIW). |
 | Pitel **PL / aborto** (posicionamento público) | **Hipótese forte (URL)** | **Notícias da TV** (UOL) — título cita **Pitel** e **“PL do aborto”** com bailarina no **BBB 24**; **403** no `curl` aqui — **ler corpo** no browser e **confirmar número** do PL (não assumir **1904** sem texto). Ver **§ Relatório externo** e **§1 Fontes**. |
-| **Detox Bet** (B3 + Genial) | **Existe (projeto)** | Iniciativa real: Meio & Mensagem 11/04/2025; site https://detoxbet.com.br/ — **gamificação** ligada a ações (alternativa a bets). **Gratta:** **não** citado nessas fontes; **não** inferir parceria. |
-| Gratta + **Genial / B3** como **parceria pessoal** | **Não encontrado** | Nenhuma matéria junta **Rafael Gratta** + Genial/B3/Detox Bet. |
+| **Detox Bet** (B3 + Genial) | **Existe (projeto)** | Iniciativa real: Meio & Mensagem; site https://detoxbet.com.br/ — **gamificação** / alternativa a bets. **Máquina do Esporte:** evento na B3 cita **Rafael Gratta** como palestrante e **Gustavo Kuerten** — ver **§ Pacote mercado de apostas** e **§2 Fontes**. **Não** equivale a publi de **casa de apostas** licenciada. |
+| Gratta + **Genial / B3** como **contrato de influência para bet** | **Parcial** | **Presença documentada** em evento **Detox Bet** (matéria **Máquina do Esporte**). **Não** confundir com **patrocínio** de operador de aposta esportiva; checar se há **post pago** separado. |
 | Gratta + **Growth Supplements** | **Não vinculado** | Growth Supplements = outra empresa/outros sócios; **não** listar como parceria do criador sem post. |
 | Gratta **TDAH / “10%” / maus hábitos** | **Confirmado (mídia)** | **Estado de Minas**, 24/07/2025 — matéria sobre posicionamento dele + debate; ver URL abaixo. |
 | Gratta **Reddit / debate** | **Confirmado (URL)** | Thread **`r/PsicologiaBR`**: https://www.reddit.com/r/PsicologiaBR/comments/1kne46o/gostava_dos_v%C3%ADdeos_do_rafael_gratta_mas/ — **403** no `curl` aqui; abrir no browser. |
@@ -661,6 +725,7 @@ Registros **fornecidos em print** (interface desktop). **URL permalink** do post
 | **Pós-eliminação — fala sobre rivais (BBB 24)** | NaTelinha | https://natelinha.uol.com.br/famosos/2024/04/03/bbb-24-eliminada-pitel-nao-deita-para-rivais-e-detona-davi-beatriz-e-matteus-barraqueiro-brifada-e-sonso | **Polêmica de reality** (tom agressivo) — não confundir com **`@davizoa`**; nomes citados são **participantes do BBB 24**. Ver também **§ Pacote polarização**. |
 | **Belém / programa** | O Liberal | https://www.oliberal.com/cultura/celebridades/ex-bbb-pitel-curte-calor-de-belem-e-se-prepara-para-a-estreia-do-seu-programa-1.897739 | **§ Pacote polarização**. |
 | **Xenofobia (vídeo)** | YouTube | https://www.youtube.com/watch?v=HmYcR99RHio | Título no pacote: Pitel e xenofobia pós-BBB — checar canal e data. |
+| **Trajetória / empoderamento capilar** | Cultura Preta | https://culturapreta.com/giovanna-pitel-revisita-sua-trajetoria-de-autodescoberta-e-empoderamento-capilar/ | **§ Pacote mercado de apostas** — contexto identitário; **não** é aposta. |
 | Perfil / carreira | Folha F5 | https://f5.folha.uol.com.br/televisao/bbb24/giovanna-pitel.shtml | Contexto BBB24. |
 | Contrato / marcas (contexto) | Terra | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html | Renovação Globo 2024; menção a demanda de marcas (checar texto integral). |
 | Contrato / marcas (contexto) | NaTelinha | https://natelinha.uol.com.br/televisao/2024/08/01/depois-de-beatriz-reis-globo-renova-com-giovanna-pitel-ansiosa-215033.php | Renovação + ViU Hub. |
@@ -749,7 +814,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Afirmação | Status | Notas |
 |-----------|--------|--------|
-| **Genial / B3 / Detox Bet** como parceria pessoal | Não encontrado | Projeto Detox Bet é real (setor); **sem** menção a Gratta — URLs na linha “contexto setorial” abaixo e na tabela global. |
+| **Genial / B3 / Detox Bet** — presença em evento | **Confirmado (matéria)** | **Máquina do Esporte** cita **Rafael Gratta** no lançamento/relato do **Detox Bet** na B3 — ver URL na **§ Pacote mercado de apostas** e em **Fontes**. **Distinção:** iniciativa **educativa/alternativa** a bet, **não** é operador de aposta. |
 | **Growth Supplements** | Não vinculado | Outros sócios/empresa; não listar sem post dele. |
 | **TDAH / “10%” / maus hábitos** | Confirmado (mídia) | Estado de Minas 24/07/2025. |
 | **Reddit / debate** | Parcial | Viralizou cita Reddit; **URL de thread** ainda não fixada nesta compilação. |
@@ -812,7 +877,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Parceiro operacional (live)** | JorNow (release) | http://www.jornow.com.br/jornow/noticia.php?idempresa=7311&num_release=295465 | Live “Dia D: a Dopamina…” (ago/2024) com apoio da **Curta** (hub para criadores). |
 | **Privacidade / ads** | AURA (site) | https://rafaelgratta.com/politica-privacidade/ | Menção a cookies/publicidade (ex.: ecossistema Google); não lista “marcas patrocinadoras” de conteúdo orgânico. |
 | Autor (página editora) | Intrínseca | https://intrinseca.com.br/autor/rafael-gratta/ | Biografia institucional; primeiro livro pela Intrínseca. |
-| **Contexto setorial — Detox Bet (sem vínculo Gratta)** | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets | Projeto B3 + Genial; **não** citar como parceria dele. |
+| **Detox Bet — evento B3 + palestra (cita Gratta)** | Máquina do Esporte | https://maquinadoesporte.com.br/mercado/genial-investimentos-e-b3-usam-ciencia-para-promover-detox-bet/ | Corpo cita **“médico Rafael Gratta”** e **Gustavo Kuerten**; **§ Pacote mercado de apostas**. |
+| **Contexto setorial — Detox Bet (trade)** | Meio & Mensagem | https://www.meioemensagem.com.br/marketing/detox-bet-b3-genial-alternativa-bets | Projeto B3 + Genial. |
 | Idem | DetoxBet | https://detoxbet.com.br/ | Site do projeto. |
 | Formação / biografia (agregador; lista redes) | Viralizou | https://viralizou.net/internet/quem-e-rafael-gratta-formacao/ | Medicina (formatura citada 2024), UnB, Berkeley; links **Instagram / TikTok @rafaelgrattap / YouTube @rafaelgratta**. |
 | Revenda MFMA (terceiro; grafia “Raffael”) | Cursos Certo | http://cursoscerto.com/protocolo-mfma-raffael-gratta/ | Página de venda do **Protocolo MFMA**; **não** é casa de apostas; **checar** autorização comercial e grafia do nome. |
@@ -1135,6 +1201,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **MEC — campanha anticapacitista (2025)** | Agência Brasil (EBC) | https://agenciabrasil.ebc.com.br/educacao/noticia/2025-03/pedagogo-ivan-baron-fara-campanha-anticapacitista-com-mec | Reforça papel **institucional** / governo federal. |
 | **CriaCast — Ambev** | YouTube | https://www.youtube.com/watch?v=zZgf0zGaSVE | Pacote relatório externo — **Ambev** / bebidas; **não** é bet/loteria; sensível para **álcool** em governança de marca pública. |
 | **Brasil de Fato — entrevista** | YouTube | https://www.youtube.com/watch?v=xNFslebuxeA | Pacote relatório externo. |
+| **Cinema — condenação por danos morais (capacitismo)** | G1 | https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/09/02/cinema-e-condenado-a-indenizar-ivan-baron-por-danos-morais.ghtml | **Polêmica** com fonte judicial/jornalística; **§ Pacote mercado de apostas**. |
+| **Série “Minha Vida com Paralisia Cerebral”** | Guia de Rodas | https://guiaderodas.com/jovem-cria-serie-para-compartilhar-sua-vida-com-paralisia-cerebral/ | **§ Pacote mercado de apostas** — URL estável (substitui **reinoliterariobr** 404). |
 
 ### Marcas e parcerias — Ivan Baron (web aberta, rodada marcas)
 
@@ -1330,6 +1398,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Mídia kit / marcas citadas | Wupper | https://wupper.com.br/influencer-cereja/ | Cita **Ana Thereza**, **NIVEA**, **Outback**, **SHEGLAM**, **Positivo** — **validar handle** `@cerejaaaaaa` e **post primário**. **Relatório externo** também cita **Ana Thereza** (alinha com Wupper; diverge do nicho “gaming” do texto narrativo). |
+| **“Cereja” em marketing de operadora (não é o @)** | Betano (blog PT) | https://blog.betano.pt/ | Uso idiomático / **Betano Mag** — **desambiguação**; ver **§ Pacote mercado de apostas**. |
 | Agregador | Famous Birthdays (Acereja) | https://pt.famousbirthdays.com/people/acereja.html | Possível divergência de @ (cerejebs etc.). |
 
 ### Marcas e parcerias — Cereja (web aberta, rodada marcas)
@@ -1567,6 +1636,7 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
 | Editorial / apostas | Catraca Livre | https://catracalivre.com.br/apostas/apostas-esportivas-como-funciona/ | Conteúdo sobre apostas esportivas. |
+| **Uplinko / Superbet — guia com CTA** | Catraca Livre | https://catracalivre.com.br/noticias/uplinko-fashion-tv-guia-completo-2025/ | **Concorrência** — texto direciona a operador; ver **§ Pacote mercado de apostas**. |
 | Editorial / mercado | Catraca Livre | https://catracalivre.com.br/variedades/novas-casas-de-apostas-ganham-licenca-definitiva-para-operar-no-brasil/ | |
 | **Litígio reputacional** | Metrópoles (Fabia Oliveira) | https://www.metropoles.com/colunas/fabia-oliveira/rodrigo-faro-acusa-portal-de-atacar-sua-reputacao-e-aponta-fake-news | Faro vs. Catraca Livre (fake news / honra). |
 | **Crise editorial — tragédia Chapecoense (2016)** | Folha Vitória | https://www.folhavitoria.com.br/esportes/catraca-livre-pede-desculpas-apos-gafes-na-cobertura-da-tragedia-com-voo-da-chapecoense/ | Repercussão, pedido de desculpas. |
@@ -1593,7 +1663,7 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
-| **Concorrência** | O site **publica** matéria sobre **apostas** e **operadoras** — é **cobertura editorial**, não equivale automaticamente a “parceria paga” com bet; para campanha Caixa/Loterias, o **tema** no próprio veículo exige **alinhamento editorial** e checagem de anúncios programmatic / branded content. | Alta (URLs próprias do portal) |
+| **Concorrência** | O site **publica** matéria sobre **apostas** e **operadoras** — em geral **cobertura editorial**. **Exceção documentada:** guia **Uplinko** com **CTA** para **Superbet** (URL em **Fontes** e **§ Pacote mercado de apostas**) — para **Loterias/Caixa** isso sobe o **risco de concorrência/percepção** mesmo sem prova de contrato assinado no repositório. Completar checagem de **monetização** (afiliado / branded / programmatic). | Alta |
 | **Polêmicas** | **(1)** Crise **2016** na cobertura da **tragédia da Chapecoense** — múltiplos veículos; pedido de desculpas e perda de audiência. **(2)** **Rodrigo Faro** — acusação de **fake news** / ataque à reputação (**Metrópoles**). | Alta (histórico + Faro) |
 | **Política** | Não mapeado nesta lista posicionamento partidário explícito do veículo; pauta diversa — completar com linha editorial recorrente se necessário. | Baixa |
 
