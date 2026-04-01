@@ -161,6 +161,89 @@
 
 ---
 
+## Relatório consolidado — Dossiê análise de perfil (Proposta P · 54 conteúdos previstos)
+
+**Origem:** texto fornecido pelo usuário · **Data da análise consolidada declarada no documento:** 01/04/2026 · **Tipo:** síntese narrativa (declara abrangência em notícias, Instagram, TikTok, YouTube e X).
+
+**Nota de uso:** trechos abaixo **reproduzem o relatório** para arquivo único; **não** substituem as **tabelas com URL** das §1–§13 nem os **painéis** Social Blade / Upfluence / X deste arquivo. Ver subseção **Validação rápida vs. esta compilação** no fim desta seção.
+
+### Introdução (texto original)
+
+Este dossiê consolida análises anteriores em um documento estruturado. Verificação em fontes públicas (notícias, Instagram, TikTok, YouTube e X) até a data da análise, com foco em:
+
+1. Trabalhos atuais ou anteriores com **marcas concorrentes** (parcerias relevantes; sem segmento exato da campanha, riscos genéricos de overlap).
+2. **Falas, atitudes ou situações delicadas/polêmicas.**
+3. **Posicionamento político** (declarações públicas, ações e conteúdo).
+
+**Redes de ativação foco:** Instagram, TikTok, YouTube e X.
+
+**Conclusão geral preliminar (texto original):** risco **baixo** para o squad. Micros e humoristas com perfil limpo e baixa exposição. **Dois perfis** com viés político explícito de **esquerda:** **Ivan Baron** e **Catraca Livre** — possível polarização em públicos conservadores ou neutros.
+
+### Estrutura do squad (texto original)
+
+- **Big Names (2)**
+- **Mezzos (4)**
+- **Micros (6)**
+- **Página digital (1)**
+
+### Análise detalhada por perfil (texto original)
+
+**Big Names (2)**
+
+1. **Giovanna Pitel** (`@pitelgiovanna`) — Ex-BBB 24, assistente social. Conteúdo: direitos das mulheres, saúde mental, cidadania, cultura periférica/amazonense; forte IG e YouTube (análises BBB). **Marcas:** campanha **Piracanjuba** (leite); contrato **Globo** (Mesacast, debates BBB 25/26; renovação 2025). **Polêmicas:** críticas isoladas (BBB, Mesacast / Sônia Abrão); comentários BBB 26 sem repercussão negativa duradoura; sem polêmicas graves recentes. **Política:** progressista/esquerda; pautas sociais e de periferia; sem filiação partidária explícita. **Risco (texto):** baixo.
+
+2. **Rafael Gratta** (`@rafaelgratta`) — Foco, ansiedade, produtividade, saúde mental (engenharia + medicina); IG, TikTok, YouTube. **Marcas:** participação em **evento B3** (mar/2026); sem patrocínios grandes anunciados; foco em mentorias próprias. **Polêmicas:** críticas por estilo “coach” e vendas (Reddit, TikTok); sem novidades relevantes em 2025–2026. **Política:** neutro/não vocal. **Risco (texto):** baixo-médio (monetização).
+
+**Mezzos (4)**
+
+3. **Índio Behn** (`@indio.behn`) — Humorista/ator (ex.: Dra. Rosângela); humor leve; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** neutro/leve; política como piada, sem lado. **Risco (texto):** muito baixo.
+
+4. **Megh Merly** (`@megh_melry`) — Humor com pegadinhas (vó Marina), sátira cotidiana; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** satírico/neutro. **Risco (texto):** baixo.
+
+5. **Cleane Sampaio** (`@cleanesampaioo`) — Cantora, ex-The Voice, humor cearense; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** neutro. **Risco (texto):** muito baixo.
+
+6. **Ivan Baron** (`@ivanbaron`) — Ativista anticapacitista, pedagogo, inclusão; IG, TikTok e X. **Marcas:** nenhuma comercial grande; embaixador de campanhas governamentais (MEC anticapacitismo, vacinação). **Polêmicas:** críticas pontuais ao governo Lula (burocracia BPC); ataques de opositores. **Política:** esquerda explícita; **filiado ao PT (fev/2026)**; pré-candidato deputado estadual; posse/faixa Lula. **Risco (texto):** médio (viés político forte).
+
+**Micros (6)**
+
+7. **Mila Costa** (`@nocasomila`) — Humor vida adulta, ex-concurseira, colunista **Diário do Nordeste**; IG e TikTok. **Marcas:** campanha **Senac Ceará (2024)** — sem renovação recente. **Polêmicas:** nenhuma. **Política:** neutro. **Risco (texto):** baixo.
+
+8. **Cristian Wariu** (`@cristianwariu`) — Comunicador indígena Xavante; ativismo; IG, TikTok, YouTube. **Marcas:** nenhuma comercial grande; eventos tipo **COP30**. **Polêmicas:** nenhuma grave. **Política:** esquerda/indígena; crítico ao marco temporal; alinhado a pautas sob Lula. **Risco (texto):** baixo-médio.
+
+9. **Cereja** (`@cerejaaaaaa`) — Humor/positividade; baixa visibilidade nacional. **Marcas / polêmicas / política:** não identificadas. **Risco (texto):** muito baixo.
+
+10. **Aline Costa** (`@comcertezaaline`) — Humor/lifestyle; baixa visibilidade pública. **Marcas / polêmicas / política:** não identificadas. **Risco (texto):** muito baixo.
+
+11. **Davi** (`@davizoa`) — Conteúdo leve; baixa visibilidade. **Marcas / polêmicas / política:** não identificadas. **Risco (texto):** muito baixo.
+
+12. **Paula Mineira** (`@mineira.paula`) — Humor mineiro/cotidiano; TikTok e Instagram. **Marcas:** nenhuma identificada. **Polêmicas:** nenhuma. **Política:** neutro. **Risco (texto):** muito baixo.
+
+**Página digital (1)**
+
+13. **Catraca Livre** (`@catracalivre`) — Portal notícias/cultura progressista; IG e Facebook. **Marcas:** foco jornalístico — sem parcerias como influenciador. **Polêmicas:** sensacionalismo/caça-cliques (ex.: **Chapecoense**); **condenação judicial em 2017**; campanha **anti-Bolsonaro 2018**. **Política:** esquerda/progressista; pautas sociais, Lula, direitos indígenas. **Risco (texto):** médio-alto.
+
+### Recomendação final (texto original)
+
+Risco geral do squad: **baixo**. Atenção: **Ivan Baron** (PT, pré-candidato) e **Catraca Livre** (viés editorial) — rejeição possível em públicos conservadores. **Giovanna Pitel** com alta exposição Globo — verificar compatibilidade interna. Uso sugerido: humor, inclusão, diversidade, impacto social; para neutralidade máxima, considerar substituir **Ivan Baron** ou **Catraca Livre**. Nenhum perfil com trabalho atual com **marcas concorrentes evidentes**. Próximos passos: cruzamento com segmento exato da marca + monitoramento de posts recentes (especialmente X).
+
+### Fontes (texto original)
+
+Buscas em motores gerais, perfis oficiais IG/TT/YT/X e portais (G1, UOL, Folha, Diário do Nordeste, etc.). Dados até **01/04/2026**. Informações públicas; sem perfis privados nem dados pagos (conforme o texto).
+
+### Validação rápida vs. esta compilação (abril/2026)
+
+| Afirmação no relatório P | Como aparece em **FONTES** / painéis |
+|--------------------------|--------------------------------------|
+| Gratta em **evento B3** (mar/2026) | **Não** confirmado com URL nesta base; tabela Perplexity mantém **sem** vínculo Gratta + B3/Genial — tratar como **pendência** até matéria ou release. |
+| Megh **sem grande parceria** | **GiroGO / capa Revista Adames** e **site meghmelry.com.br** constam — qualificar “grande” ou **ajustar** narrativa. |
+| Paula **sem marca** | **Portal Onda Sul / iBest** cita parcerias (hospedagem, moda, floricultura) — **não** alinha com “nenhuma”. |
+| Aline **baixa visibilidade pública** | **Upfluence** TikTok **5,1M** seguidores — visibilidade **alta** na amostra da ferramenta; narrativa **diverge**. |
+| Davi **baixa visibilidade / sem achados** | Imprensa **fina** para `@davizoa`; **OSINT** (Sherlock, yt-dlp) mostra **TT/YT** ativos — manter **lacunas** explícitas. |
+| Catraca **condenação judicial 2017** | **Não** listada nas **Fontes coletadas** até esta revisão — **pendência** de URL e corpo de sentença. |
+| Ivan **filiado PT fev/2026** | **Alinhado** a linha política já mapeada; **FONTES** ainda pede **TSE / primário** por divergência de matérias (PV vs PT) em snapshot anterior. |
+
+---
+
 ## Relatório externo — “Inteligência reputacional” (texto + URLs fornecidos) vs. esta compilação
 
 **Origem:** relatório narrativo + lista de fontes enviados pelo usuário (mar/2026). **Uso:** enriquecer pistas e URLs; **toda** alegação sensível exige **cruzamento** com handle do `influencers.yaml` e, quando possível, **corpo da matéria** ou **primário** (post/vídeo).
