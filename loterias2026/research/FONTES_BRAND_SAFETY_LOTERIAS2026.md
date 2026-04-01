@@ -46,6 +46,30 @@
 
 ---
 
+## Painel Instagram — métricas agregadas (fornecido pelo usuário, mar/2026)
+
+**Origem:** tabela enviada pelo usuário (ferramenta/painel **não** especificado). **Instagram handle** alinhado a `loterias2026/data/influencers.yaml`.
+
+**Uso no dossiê:** métricas de **audiência e engajamento** — **não** substituem evidência de **concorrência**, **polêmicas** ou **política**; números **variam** por dia e por metodologia do painel — **validar** no app na data oficial do programa. Linha **Megh** indica **perfil inativo** no IG desde **set/2023** segundo o painel; se o squad usar **outra conta** no Instagram, corrigir o YAML e esta tabela.
+
+| Criador (nome painel) | Instagram (`influencers.yaml`) | Seguidores totais | Ganhos/perdas (14 d) | Média diária (seg.) | Média semanal (seg.) | Media count (posts) | Curtidas médias | Comentários médios | Engajamento | Observações (painel) |
+|------------------------|--------------------------------|-------------------:|---------------------:|--------------------:|---------------------:|--------------------:|----------------:|-------------------:|-------------|----------------------|
+| Rafael Gratta | `rafaelgratta` | 3.547.067 | −13.059 | −1.011 | −869 | 1.110 | 16K | 271 | 0,46% | Perda acentuada no período |
+| Catraca Livre | `catracalivre` | 1.463.093 | −949 | −65 | −41 | 12.545 | 609 | 12 | 0,04% | Menor engajamento do grupo |
+| Pitel | `pitelgiovanna` | 1.269.480 | −1.760 | −170 | −112 | 838 | 4,3K | 91 | 0,35% | Queda constante |
+| Mila Costa | `nocasomila` | 724.674 | −66 | +46 | −3 | 1.425 | 26K | 1,3K | 3,80% | Engajamento alto; estabilidade |
+| Índio Behn | `indio.behn` | 619.868 | +21.330 | +949 | +1.668 | 2.897 | 23K | 799 | 3,80% | Maior crescimento nominal |
+| Ivan Baron | `ivanbaron` | 550.499 | +882 | +45 | +56 | 2.176 | 8,3K | 180 | 1,50% | Crescimento positivo |
+| Cleane Sampaio | `cleanesampaioo` | 523.359 | +4.010 | +197 | +256 | 1.369 | 10K | 422 | 2% | Crescimento consistente |
+| Megh Melry | `megh_melry` | 488.455 | 0 | 0 | 0 | 0 | 0 | 0 | 0% | Inativa desde set/2023 |
+| Aline com Certeza | `comcertezaaline` | 230.134 | +2.063 | +310 | +203 | 637 | 5K | 37 | 2,20% | Bom equilíbrio de métricas |
+| Paula, a mineira | `mineira.paula` | 176.755 | +771 | +83 | +41 | 642 | 1,2K | 45 | 0,69% | Ganho diário regular |
+| Davizoa | `davizoa` | 101.442 | +2.396 | +151 | +342 | 344 | 125K | 1,5K | 125% | Engajamento atípico (viral) — **conferir fórmula do painel** (valor >100% sugere métrica ou janela específica) |
+| Cereja | `cerejaaaaaa` | 92.175 | −76 | +1 | −4 | 365 | 580 | 51 | 0,69% | Estabilidade com viés de queda |
+| Wariu | `cristianwariu` | 77.218 | −109 | −7 | −4 | 85 | 2,7K | 50 | 3,50% | Engajamento alto; base nichada |
+
+---
+
 ## Rodada OSINT — ferramentas open source (31/03/2026)
 
 **Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `loterias2026/research/osint_runs/20260331/` (ver `README.txt` na pasta).
