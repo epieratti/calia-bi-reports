@@ -228,13 +228,6 @@ def humanize_x_ativo(cell: object) -> tuple[str, str]:
     return (raw or "—", "bg-slate-50 text-slate-600 ring-1 ring-slate-200")
 
 
-def clip_txt(s: object, n: int = 42) -> str:
-    t = str(s or "").strip()
-    if len(t) <= n:
-        return t
-    return t[: n - 1] + "…"
-
-
 def net_mini_card(
     bar_class: str,
     platform: str,
@@ -242,7 +235,7 @@ def net_mini_card(
     stats_html: str,
     footer_html: str = "",
 ) -> str:
-    """Mini-card compacto: barra de cor, plataforma, @ com truncamento, métricas."""
+    """Mini-card compacto: barra de cor, plataforma, @ e métricas (texto completo, quebra de linha)."""
     h = str(handle_raw or "").lstrip("@")
     return (
         "<div class='group min-w-0 rounded-lg border border-slate-200/90 bg-white p-2 shadow-sm "
@@ -251,7 +244,7 @@ def net_mini_card(
         f"<div class='w-0.5 shrink-0 rounded-full {esc(bar_class)}' aria-hidden='true'></div>"
         "<div class='min-w-0 flex-1'>"
         f"<p class='text-[9px] font-bold uppercase tracking-wider text-slate-500 leading-none mb-1'>{esc(platform)}</p>"
-        f"<p class='font-mono text-[11px] text-slate-700 truncate' title='@{esc(h)}'>@{esc(h)}</p>"
+        f"<p class='font-mono text-[11px] text-slate-700 break-all leading-snug'>@{esc(h)}</p>"
         f"<div class='mt-1.5 flex flex-wrap gap-x-2.5 gap-y-0.5 text-[11px] leading-tight'>{stats_html}</div>"
         f"{footer_html}"
         "</div></div></div>"
@@ -300,15 +293,14 @@ def format_profile_networks_html(
     if yt and len(yt) >= 5:
         yu = str(yt[1]).lstrip("@")
         ch_full = str(yt[0] or "").strip()
-        ch_short = clip_txt(ch_full, 22)
         stats = (
             stat_pair("insc.", str(yt[2]))
             + stat_pair("views", str(yt[3]))
             + stat_pair("víd.", str(yt[4]))
         )
         footer = (
-            f"<p class='mt-1.5 pt-1 border-t border-slate-100 text-[9px] text-slate-500 truncate' "
-            f"title='{esc(ch_full)}'><span class='text-slate-400'>Canal · </span>{esc(ch_short)}</p>"
+            "<p class='mt-1.5 pt-1 border-t border-slate-100 text-[9px] text-slate-500 break-words leading-snug'>"
+            f"<span class='text-slate-400'>Canal · </span>{esc(ch_full)}</p>"
         )
         cards.append(net_mini_card("bg-red-600", "YouTube", yu, stats, footer))
 
@@ -316,17 +308,20 @@ def format_profile_networks_html(
     if xr and len(xr) >= 5:
         xv = str(xr[1]).lstrip("@")
         act_txt, act_cls = humanize_x_ativo(xr[3])
-        short_act = "posts recentes" if str(xr[3] or "").strip().lower() in ("sim", "s", "yes") else (
-            "Sem posts" if str(xr[3] or "").strip().lower() in ("não", "nao") else clip_txt(xr[3], 10)
-        )
+        raw_act = str(xr[3] or "").strip().lower()
+        if raw_act in ("sim", "s", "yes"):
+            chip_label = "posts recentes"
+        elif raw_act in ("não", "nao"):
+            chip_label = "Sem posts"
+        else:
+            chip_label = str(xr[3] or "").strip() or "—"
         teor_full = str(xr[4] or "").strip()
-        teor_vis = clip_txt(teor_full, 40)
         stats = stat_pair("seg.", str(xr[2]))
         footer = (
             "<div class='mt-1.5 pt-1 border-t border-slate-100 space-y-1'>"
-            f"<span class='inline-flex max-w-full rounded px-1.5 py-0.5 text-[9px] font-semibold leading-none {act_cls}' "
-            f"title='{esc(act_txt)}'>{esc(short_act)}</span>"
-            f"<p class='text-[9px] text-slate-500 leading-snug truncate' title='{esc(teor_full)}'>{esc(teor_vis)}</p>"
+            f"<span class='inline-block max-w-full rounded px-1.5 py-0.5 text-[9px] font-semibold leading-snug break-words {act_cls}' "
+            f"title='{esc(act_txt)}'>{esc(chip_label)}</span>"
+            f"<p class='text-[9px] text-slate-500 leading-snug break-words'>{esc(teor_full)}</p>"
             "</div>"
         )
         cards.append(net_mini_card("bg-slate-900", "X", xv, stats, footer))
