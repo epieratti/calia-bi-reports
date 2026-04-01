@@ -402,7 +402,7 @@ profiles:
 
   - name: "Catraca Livre"
     tier: "Página"
-    risco_geral: "Moderado a alto — veículo, não influenciador individual"
+    risco_geral: "Moderado a alto"
     resumo_tabela:
       risco: "Moderado a alto (veículo)."
       concorrencia: "[Guia no Catraca](https://catracalivre.com.br/noticias/uplinko-fashion-tv-guia-completo-2025/) encaminha a site de aposta; ver regras internas."
