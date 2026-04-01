@@ -16,7 +16,7 @@ briefing:
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar."
     - "Polêmicas: falas ou episódios com risco de imagem."
-    - "Política: lado ou partido quando aparecer em público."
+    - "Política: filiação partidária ou posicionamento público recorrente quando houver registro."
   redes:
     - "Instagram"
     - "TikTok"
@@ -168,7 +168,7 @@ executive_summary:
     - title: "Política e imagem"
       items:
         - "Quem mais fala de **política** no que vimos: **Baron**, **Catraca**; também **Wariu** (indígena e meio ambiente) e **Pitel** (causas sociais, **sem partido** claro)."
-        - "**Apostas** na **TV e no Congresso** deixam o tema sensível; isso não é “lado” dos talentos."
+        - "**Apostas** na **TV e no Congresso** deixam o tema sensível para qualquer peça de loterias; isso **não indica** lado político dos talentos desta lista."
         - "Barulho a mais: **Gratta** (saúde/venda), **Pitel** (BBB), **Mila** (**conta invadida** — não é atitude dela); resto **quieto** no que vimos."
     - title: "Checagem extra"
       items:
@@ -191,7 +191,7 @@ profiles:
     narrativa: "Saiu do BBB com imagem de voz crítica e formação em Serviço Social. Hoje mistura entretenimento (TV Globo, realities) com campanhas de marcas de consumo e causas sociais. A imprensa de cultura e celebridades costuma citar também a trajetória de empoderamento capilar e representatividade — perfil de alta visibilidade, onde qualquer fala pública ganha eco rápido."
     eixos:
       concorrencia: "Não achamos publi de casa de aposta, cassino ou outra loteria. No histórico público aparecem parcerias com laticínios, telefonia, beleza e entretenimento — nada que conflite diretamente com loterias no que vimos."
-      polemicas: "Exposição típica de ex-BBB: colunas, comparações e cobertura contínua. Na imprensa, episódio de xenofobia após o programa; também comentou publicamente leis polêmicas (ex.: direitos reprodutivos) — temas que podem polarizar audiência."
+      polemicas: "Exposição típica de ex-BBB: colunas, comparações e cobertura contínua. Na imprensa, relatos de que ela sofreu xenofobia após o programa (não como autora do episódio); também comentou publicamente leis polêmicas (ex.: direitos reprodutivos) — temas que podem polarizar audiência."
       politica: "Pautas sociais, periferia, gênero e direitos humanos aparecem de forma recorrente. Não há filiação partidária clara nas fontes que vimos; o risco para peça institucional é mais de **sensibilidade** do que de rótulo eleitoral."
 
   - name: "Rafael Gratta"
@@ -211,7 +211,7 @@ profiles:
     eixos:
       concorrencia: "Não achamos contrato público com casa de aposta ou outra loteria. Há curso cujo site traz “bet” no nome — no que vimos trata de **educação financeira**, não de publi de jogo. Participou de evento de bolsa/corretora sobre apostas como **informação de mercado**, não como garoto-propaganda de operador. Fóruns e vídeos críticos existem; vale cruzar com fonte primária antes de usar como fato."
       polemicas: "Discussões públicas sobre método, promessas fortes e modelo de venda (coaching, neuro, espiritualidade). Saiu matéria relevante na imprensa e há threads críticos em comunidades online — risco de imagem ligado a **confiança** e não a escândalo isolado."
-      politica: "Não achamos engajamento político-partidário relevante nas buscas. O conteúdo às vezes mexe em liberdade religiosa e crítica ao Estado — leitura conservadora em alguns trechos, sem endosso explícito a candidato no que vimos."
+      politica: "Não achamos engajamento político-partidário relevante nas buscas. Em alguns vídeos o discurso sobre liberdade religiosa e Estado aproxima-se de **argumentos usados pela direita**, sem endosso explícito a candidato no que vimos."
 
   - name: "Índio Behn"
     tier: "Mezzos"
@@ -249,7 +249,7 @@ profiles:
     eixos:
       concorrencia: "Não achamos publi de casa de aposta ou loteria concorrente. Em busca de notícia, textos com nome parecido podem referir **outra pessoa**; não atribuir à Megh Melry sem confirmar identidade e URL."
       polemicas: "Sem alerta forte ou matéria negativa recorrente ligada a este perfil nas fontes abertas. Manter o mesmo cuidado com homônimos em futuras buscas."
-      politica: "Conteúdo majoritariamente apolítico e satírico no tom. Não achamos agenda partidária clara; adequado a peça que queira distância de eleição, desde que isso se alinhe ao contrato."
+      politica: "Conteúdo majoritariamente apolítico e satírico no tom. Não achamos agenda partidária clara; combina com peça que deva ficar longe de campanha eleitoral, se o contrato assim previr."
 
   - name: "Cleane Sampaio"
     tier: "Mezzos"
@@ -287,7 +287,7 @@ profiles:
     eixos:
       concorrencia: "Aparições em podcast e mídia ao lado de marcas de bebida e instituições — avaliar se o contrato da peça Loterias exige neutralidade sobre álcool. Sem bet no que vimos."
       polemicas: "Recebe críticas de quem **rejeita** políticas inclusivas; comenta decisões do governo. No cinema, caso de discriminação contra pessoa com deficiência: ele foi **vítima** e a imprensa registrou **vitória na Justiça**."
-      politica: "Forte em causas de esquerda na visão pública; saiu notícia de filiação e possível candidatura — checar hoje se a peça precisa ficar neutra em eleição."
+      politica: "A imprensa e as redes o associam a causas progressistas; já houve notícia de filiação partidária e possível candidatura — **confirmar situação atual** se a peça exigir neutralidade em período eleitoral."
 
   - name: "Mila Costa"
     tier: "Micros"
@@ -305,7 +305,7 @@ profiles:
     narrativa: "Criadora do “No Caso Mila”: humor sobre vida adulta, maternidade, diferenças regionais (Cearense em Recife é narrativa recorrente) e rotina sem filtro. Tem colunas e campanhas com órgãos e marcas grandes no Nordeste; audiência engajada no Instagram. O tom é **relatable**, com risco baixo de polêmica política se a peça for neutra."
     eixos:
       concorrencia: "Histórico de campanhas com curso preparatório e marcas de consumo; não achamos casa de aposta ou outra loteria no que vimos."
-      polemicas: "Em 2023 a imprensa noticiou invasão de conta e telefone para golpe com Pix — episódio de **cibersegurança**, não de conduta da influenciadora. Vale mencionar em briefing de crise se o tema voltar."
+      polemicas: "Em 2023 a imprensa noticiou invasão de conta e telefone para golpe com Pix — risco de **segurança digital**, não de conduta dela. Se o caso voltar à tona, ter resposta pronta (crise de imagem)."
       politica: "Ela mesma falou em entrevistas sobre pressão por posição política e preferência por não polarizar. Para campanha institucional, alinhar expectativa de neutralidade no contrato."
 
   - name: "Cristian Wariu"
@@ -324,8 +324,8 @@ profiles:
     narrativa: "Comunicador do povo Xavante (Mato Grosso) com canal focado em povos originários, território e combate a estereótipos. Aparece em eventos nacionais e internacionais ligados a clima, COP e direitos humanos. É voz **institucional da causa indígena** nas redes — parceria com anunciante público exige alinhamento com pauta ambiental e sensibilidade a ataques de ódio online."
     eixos:
       concorrencia: "Não achamos casa de aposta ou publi de jogo no material público que cruzamos."
-      polemicas: "Como outros criadores indígenas, está sujeito a comentários hostis e desinformação — risco de **ambiente tóxico nos comentários**, não necessariamente de falta própria."
-      politica: "Defesa de território, crítica ao Marco Temporal e a políticas vistas como anti-indígenas. Perfil alinhado a direitos humanos e agenda ambiental; peça neutra em eleição pode exigir **roteiro e aprovação** explícitos."
+      polemicas: "Como outros criadores indígenas, está sujeito a comentários hostis e desinformação — risco de **comentários tóxicos** na publicação, não de conduta inadequada dele."
+      politica: "Defesa de território, crítica ao Marco Temporal e a políticas vistas como anti-indígenas. Perfil alinhado a direitos humanos e agenda ambiental; se a **campanha** tiver que evitar tema eleitoral, pode ser preciso **roteiro e aprovação** explícitos."
 
   - name: "Cereja"
     tier: "Micros"
@@ -344,7 +344,7 @@ profiles:
     eixos:
       concorrencia: "Marcas de loja, beleza e gastronomia em bases de dados de influência não equivalem a casa de aposta. Não achamos vínculo com bet ou loteria concorrente no que vimos."
       polemicas: "Pouca matéria negativa na imprensa geral que consultamos; perfil de baixo ruído midiático até aqui."
-      politica: "Não identificamos posicionamento político recorrente ou filiação nas fontes abertas usadas neste dossiê."
+      politica: "Nas fontes abertas deste trabalho não apareceu posicionamento político recorrente nem filiação partidária."
 
   - name: "Aline Costa"
     tier: "Micros"
@@ -367,9 +367,9 @@ profiles:
 
   - name: "Davi"
     tier: "Micros"
-    risco_geral: "Pouca prova em notícia — risco parece baixo no texto"
+    risco_geral: "Poucas matérias na imprensa aberta; risco documentado parece baixo"
     resumo_tabela:
-      risco: "Pouca prova em notícia."
+      risco: "Pouca matéria na imprensa aberta."
       concorrencia: "Sem bet no que vimos."
       polemicas: "Sem matéria na imprensa aberta ligada ao perfil no que vimos."
       politica: "Não achamos no que vimos."
@@ -381,7 +381,7 @@ profiles:
     narrativa: "Talento conhecido pelo apelido **davizoa** (não confundir com outros “Davi” famosos). Nos painéis há tração em TikTok e presença em YouTube; na **imprensa aberta** achamos pouca matéria proporcional ao alcance digital — lacuna comum em micros que explodem no algoritmo. Antes de fechar peça institucional, a agência deve entregar bio atual, histórico de publi e eventual nome civil para novas buscas."
     eixos:
       concorrencia: "Buscas por nome e @ não mostraram casa de aposta ou loteria concorrente ligada a este perfil."
-      polemicas: "Sem notícia negativa clara associada ao davizoa nas fontes abertas deste trabalho; o risco residual é **desconhecimento** do histórico completo fora do que foi possível verificar."
+      polemicas: "Nas fontes abertas deste trabalho não achamos notícia negativa clara ligada ao @davizoa; o ponto fraco é **falta de arquivo na imprensa** — o histórico completo pode existir fora do que foi possível checar."
       politica: "Não achamos posicionamento político relevante nas fontes usadas."
 
   - name: "Paula Mineira"
@@ -399,8 +399,8 @@ profiles:
       x: mineira_paula
     narrativa: "Criadora com humor centrado em Minas Gerais, rotina e identidade regional (“mineira” no nome da persona). Matérias regionais citam parcerias com comércio local, eventos e prêmios de influência digital — perfil de **capilaridade** no Sudeste, com tom leve e próximo do público."
     eixos:
-      concorrencia: "Busca na internet por “bet”, futebol ou genéricos pode puxar resultados **sem ligação** com esta pessoa; só usar o que estiver amarrado ao @ e ao nome do briefing."
-      polemicas: "Baixa exposição a polêmicas grandes na amostra de imprensa que vimos; acompanhar se o volume de seguidores crescer e atrair mídia nacional."
+      concorrencia: "Busca na internet por “bet”, futebol ou termos genéricos pode trazer resultados **sem ligação** com ela; só tratar como fato o que estiver ligado ao @ do perfil e ao nome do talento **neste dossiê**."
+      polemicas: "Baixa exposição a polêmicas grandes nas notícias que consultamos; acompanhar se o público crescer e atrair cobertura nacional."
       politica: "Tom neutro nas fontes abertas consultadas; sem pauta militante recorrente."
 
   - name: "Catraca Livre"
@@ -418,6 +418,6 @@ profiles:
       x: catracalivre
     narrativa: "Veículo digital de notícias, cultura e utilidade urbana — **não é pessoa física**: decisões são de redação, comercial e donos da marca. Publica sobre o ecossistema de apostas e chegou a ter **guia** com link para site de operador, o que exige avaliação jurídica antes de qualquer vinculação com loterias da CAIXA. Histórico público inclui crises de cobertura e posicionamento editorial claramente progressista."
     eixos:
-      concorrencia: "Além de matérias sobre o setor, há conteúdo que encaminha leitor a site de aposta. Para campanha Loterias, mapear URL, formato (orgânico x patrocinado) e vigência com **jurídico** e mídia; risco é de **marca + plataforma**, não só do post isolado."
+      concorrencia: "Além de matérias sobre o setor, há conteúdo que encaminha o leitor a site de aposta. Para campanha Loterias, mapear URL, se é **matéria editorial ou conteúdo pago**, e vigência, com **jurídico** e mídia; o risco envolve **marca do portal e conjunto do site**, não só um post isolado."
       polemicas: "Crises antigas de cobertura sensível e embates com celebridades fazem parte do arquivo público do portal; avaliar protocolo atual de correção e resposta a crise antes de associar a imagem institucional."
       politica: "Linha editorial e peças antigas associam a marca a causas de esquerda e pautas progressistas — relevante se o cliente pedir neutralidade política estrita."
