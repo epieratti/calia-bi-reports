@@ -18,9 +18,9 @@ Saída: `output/20260401-dossie-squad-always-on-loterias-2026.html`
 
 **No ar (GitHub Pages, pasta `caixa/`):** após o deploy em `main`, use  
 https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html  
-(senha `caixa2026` ou `embratur2026`). Copie o HTML atualizado para `caixa/` ao publicar.
+(senha **apenas** `caixa2026`). Copie o HTML atualizado para `caixa/` ao publicar.
 
-**Acesso:** mesma proteção do dossiê CAIXA — senhas **`caixa2026`** ou **`embratur2026`** (hash SHA-256 no script).
+**Acesso:** proteção client-side — somente **`caixa2026`** (SHA-256 no script), alinhado ao box do dossiê 20260326, sem alias.
 
 Após alterar métricas ou textos, edite o YAML e **regenere** o HTML para manter uma única fonte da verdade estruturada.
 

@@ -7,10 +7,9 @@ meta:
   client_line: "Calia BI · Brand Safety & Due Diligence"
   snapshot: "mar–abr/2026 (consolidado FONTES + painéis Social Blade / Upfluence / X)"
 
-# Mesmos hashes do dossiê CAIXA (caixa2026 + embratur2026)
+# Apenas caixa2026 (SHA-256 hex, trim) — igual critério do dossiê 20260326, sem alias
 password_sha256_hex:
   - "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b"
-  - "dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5"
 
 repo_note: "Repositório de evidências (Markdown)"
 

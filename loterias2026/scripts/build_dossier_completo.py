@@ -250,17 +250,20 @@ def main() -> None:
     .toc-list li {{ margin-top: 0.5rem; }}
   </style>
 </head>
-<body class="p-4 md:p-10">
+<body class="p-4 md:p-12">
   <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
     <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
       <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
-      <p class="text-sm text-slate-600 mb-4">Senha: a mesma do dossiê CAIXA de referência (<strong>caixa2026</strong>) ou <strong>embratur2026</strong>.</p>
+      <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
       <form id="access-form" class="space-y-3">
-        <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm" placeholder="Senha">
+        <label class="sr-only" for="access-pw">Senha</label>
+        <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy" placeholder="Senha">
         <p id="access-err" class="hidden text-sm font-medium text-red-600"></p>
-        <button type="submit" class="w-full rounded-md bg-calia-gold py-3 text-sm font-black uppercase text-calia-navy">Entrar</button>
+        <div class="mt-5 border-t border-slate-200 pt-5">
+          <button type="submit" class="w-full rounded-md bg-calia-gold py-3.5 text-sm font-black uppercase tracking-widest text-calia-navy shadow-md shadow-black/15 ring-1 ring-black/5 transition hover:brightness-105 active:brightness-95">Entrar</button>
+        </div>
       </form>
-      <p class="mt-6 text-center text-[10px] font-bold uppercase text-slate-500">Calia BI · uso interno</p>
+      <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Agência Calia | Unidade de BI — Cliente CAIXA</p>
     </div>
   </div>
 
@@ -332,6 +335,7 @@ def main() -> None:
   </div>
 
   <script>
+    /** SHA-256 da senha (trim): apenas caixa2026 — mesmo critério do dossiê 20260326 */
     const PASSWORD_SHA256_HEX_SET = new Set([ {pw_json} ]);
     async function sha256Hex(text) {{
       const buf = new TextEncoder().encode(text);
@@ -342,20 +346,20 @@ def main() -> None:
       e.preventDefault();
       const err = document.getElementById('access-err');
       err.classList.add('hidden');
+      err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha é sensível a maiúsculas/minúsculas.';
       if (!globalThis.crypto?.subtle) {{
-        err.textContent = 'Use HTTPS (ex.: GitHub Pages).';
+        err.textContent = 'Validação indisponível: abra a página em HTTPS (GitHub Pages) ou em contexto seguro; em arquivo local o navegador pode bloquear crypto.subtle.';
         err.classList.remove('hidden');
         return;
       }}
       const pw = document.getElementById('access-pw').value.trim();
       try {{
         if (!PASSWORD_SHA256_HEX_SET.has(await sha256Hex(pw))) {{
-          err.textContent = 'Senha incorreta.';
           err.classList.remove('hidden');
           return;
         }}
       }} catch {{
-        err.textContent = 'Validação indisponível.';
+        err.textContent = 'Não foi possível validar a senha neste ambiente. Tente outro navegador ou a URL publicada no GitHub Pages.';
         err.classList.remove('hidden');
         return;
       }}
