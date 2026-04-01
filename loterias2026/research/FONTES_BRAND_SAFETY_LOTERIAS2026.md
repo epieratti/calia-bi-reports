@@ -98,6 +98,31 @@
 
 ---
 
+## Painel YouTube — métricas agregadas (Social Blade, mar/2026)
+
+**Origem:** dados extraídos com **Social Blade** — https://socialblade.com — (tabela enviada pelo usuário; métricas típicas de canal).
+
+**Alinhamento:** coluna **YouTube (`influencers.yaml`)** = identificador do squad (`@handle` no campo `youtube` do YAML). Nome do canal na Social Blade pode divergir do @.
+
+**Canais no YAML sem linha neste extract:** **Giovanna Pitel** (`@pitelgiovanna`), **Ivan Baron** (`@ivanbaron`), **Cereja** (`@cerejaaaaaa`) — **não constam** na tabela abaixo; completar com nova consulta no Social Blade se necessário.
+
+**Uso no dossiê:** **inscritos / views / contagem de vídeos** — contexto de escala; **não** substituem os eixos concorrência · polêmicas · política.
+
+| Canal / creator (Social Blade) | YouTube (`influencers.yaml`) | Inscritos | Visualizações | Vídeos |
+|--------------------------------|------------------------------|----------:|--------------:|-------:|
+| Aline com Certeza | `@comcertezaaline` | 2M | 1,1B | 563 |
+| Rafael Gratta | `@rafaelgratta` | 1,2M | 178M | 1,1K |
+| Catraca Livre | `@catracalivre` | 308K | 48M | 3,3K |
+| Índio Behn | `@indio.behn` | 76K | 15M | 1,6K |
+| WARIU - Canal sobre povos Indígenas | `@cristianwariu` | 55K | 1,8M | 48 |
+| No caso Mila | `@nocasomila` | 15K | 176K | 14 |
+| Cleane Sampaio | `@cleanesampaioo` | 2,6K | 101K | 32 |
+| Paula Helena - Mineira | `@mineira.paula` | 2K | 950K | 77 |
+| Davizoa | `@davizoa` | 1K | 24K | 18 |
+| Megh Melry | `@megh_melry` | 133 | 2,5K | 6 |
+
+---
+
 ## Rodada OSINT — ferramentas open source (31/03/2026)
 
 **Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `loterias2026/research/osint_runs/20260331/` (ver `README.txt` na pasta).
