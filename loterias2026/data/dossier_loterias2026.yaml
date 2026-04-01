@@ -25,7 +25,7 @@ briefing:
   limites_paragraphs:
     - "Os números de seguidores, engajamento e tabelas de ferramentas de mercado servem apenas para dimensionar alcance e perfil de audiência. Eles não substituem a análise dos três critérios acima."
     - "Quando o mesmo nome aparece com usuário ligeiramente diferente entre redes (por exemplo TikTok x Instagram), a linha do squad segue o briefing original; a tabela pode mostrar o usuário captado pela ferramenta."
-  tiers_nota: "Classificação por tier segue o desenho do squad: Tier 1 e Tier 2 concentram maior peso de mídia; Mezzos = camada intermediária; Micros = capilaridade; Página = veículo digital (não é pessoa física). Nesta lista, Tier 2 está sem nomes — reservado se a criação incluir novos talentos nessa camada."
+  tiers_nota: "Classificação por tier segue o desenho do squad: Tier 1 e Tier 2 concentram maior peso de mídia; Mezzos = camada intermediária; Micros = capilaridade; Página = veículo digital (não é pessoa física). Nesta lista, Tier 2 inclui Rafael Gratta; Tier 1, Giovanna Pitel."
   tier_order:
     - "Tier 1"
     - "Tier 2"
@@ -153,7 +153,7 @@ consolidated_narrative:
 
 executive_summary:
   bullets:
-    - "Composição por camada: Tier 1 (dois nomes), Tier 2 (vazio nesta rodada), Mezzos (quatro), Micros (seis), Página (Catraca Livre)."
+    - "Composição por camada: Tier 1 (Giovanna Pitel), Tier 2 (Rafael Gratta), Mezzos (quatro), Micros (seis), Página (Catraca Livre)."
     - "Treze nomes no total: doze pessoas físicas e um veículo digital. Todos foram analisados nos três critérios do briefing."
     - "Concorrência (bets/loterias): nenhum vínculo comercial inequívoco com operador de jogo foi encontrado na pesquisa pública; Catraca cobre o tema como veículo de notícia, o que é diferente de ser patrocinada por uma bet."
     - "Política: Ivan Baron e Catraca Livre concentram a maior exposição a pauta política explícita; Cristian Wariu atua em causas indígenas e ambientais; Giovanna Pitel tem posicionamento em pautas sociais sem filiação partidária clara na amostra."
@@ -176,7 +176,7 @@ profiles:
       politica: "Atuação em causas sociais e de periferia; posicionamento em temas de gênero e direitos ligados a notícias públicas. Sem filiação partidária explícita identificada na amostra."
 
   - name: "Rafael Gratta"
-    tier: "Tier 1"
+    tier: "Tier 2"
     risco_geral: "Moderado — reputação em conteúdo de saúde e vendas"
     handles:
       instagram: rafaelgratta
