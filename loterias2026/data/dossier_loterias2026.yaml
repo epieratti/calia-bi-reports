@@ -11,7 +11,7 @@ password_sha256_hex:
 
 briefing:
   intro_paragraphs:
-    - "Squad Always ON Loterias 2026 — 13 nomes do briefing. Levantamento em fonte pública: concorrência (bets, jogos, loterias concorrentes), polêmicas e política. Redes: Instagram, TikTok, YouTube e X."
+    - "Squad Always ON Loterias 2026 — 13 nomes indicados para a campanha. Levantamento em fonte pública: concorrência (bets, jogos, loterias concorrentes), polêmicas e política. Redes: Instagram, TikTok, YouTube e X."
     - "“Não consta” = não encontrado nesta amostra; não garante que o tema não exista fora dela."
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar."
@@ -71,10 +71,10 @@ panels:
       - ["Cristian Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%", "Alta taxa; base menor"]
 
   tiktok:
-    footnote: "Fonte: Upfluence. Nome alinhado ao squad quando possível; usuário = handle captado pela ferramenta (ou do briefing se a coluna vier como nome)."
+    footnote: "Fonte: Upfluence."
     headers:
       - "Nome (painel)"
-      - "Usuário (briefing)"
+      - "Usuário"
       - "Engaj."
       - "Seguidores"
       - "Com. méd."
@@ -102,10 +102,10 @@ panels:
       - ["nocasomila", "nocasomila", "4,05%", "44,4K", "26", "1,8K", "192,8", "21,4K", "73,0", "1,2M", "151", "86,42%", "13,58%"]
 
   youtube:
-    footnote: "Fonte: Social Blade. Nome alinhado ao squad quando possível; usuário = @ do canal no briefing."
+    footnote: "Fonte: Social Blade."
     headers:
       - "Canal (painel)"
-      - "Usuário (briefing)"
+      - "Usuário"
       - "Inscritos"
       - "Visualizações"
       - "Vídeos"
@@ -122,7 +122,7 @@ panels:
       - ["Megh Melry", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    footnote: "Leitura direta do perfil no X na data da coleta. Coluna “Postagens recentes” indica se havia tweets recentes na amostra analisada (não é medida de alcance). Usuário = @ visto na coleta."
+    footnote: "Leitura direta do perfil no X na data da coleta. A coluna “Postagens recentes” indica se havia tweets recentes na amostra analisada (não mede alcance)."
     headers:
       - "Nome"
       - "Usuário"
@@ -176,7 +176,7 @@ executive_summary:
         - "Ruído: **Gratta** (saúde/método), **Pitel** (BBB), **Mila** (__hackeio__ — não conduta); demais: **baixo** na amostra."
     - title: "Diligência"
       items:
-        - "**Davi @davizoa**: alcance em redes vs. pouca matéria com o mesmo @ — __validar com agência__."
+        - "**Davi** (apelido público davizoa): alcance nas redes acima do que a imprensa aberta documenta — __validar com agência__."
 
 profiles:
   - name: "Giovanna Pitel"
@@ -192,7 +192,7 @@ profiles:
       tiktok: pitelgiovanna
       youtube: pitelgiovanna
       x: pitelgiovanna
-    narrativa: "Ex-BBB, assistente social. Conteúdo e presença em TV (Globo), campanhas de marcas de consumo e pautas sociais; imprensa de cultura negra também destaca trajetória de empoderamento capilar. TikTok no painel pode aparecer com usuário paralelo ao do briefing."
+    narrativa: "Ex-BBB, assistente social. Conteúdo e presença em TV (Globo), campanhas de marcas de consumo e pautas sociais; imprensa de cultura negra também destaca trajetória de empoderamento capilar."
     eixos:
       concorrencia: "Não localizada parceria pública com casa de apostas, cassino ou loteria concorrente. Campanhas com marcas de laticínios, telecom, cosméticos e entretenimento."
       polemicas: "Repercussão de reality show, críticas de colunistas e debates em torno de comportamento no BBB; relatos na imprensa sobre xenofobia após o programa; participação em pautas legislativas sensíveis citadas na mídia."
@@ -211,7 +211,7 @@ profiles:
       tiktok: rafaelgratta
       youtube: rafaelgratta
       x: rafaelgratta
-    narrativa: "Médico, conteúdo sobre ansiedade, foco e produtos digitais próprios. Livro com editora grande. No TikTok, painéis de mercado podem apontar conta com grafia diferente da do briefing."
+    narrativa: "Médico, conteúdo sobre ansiedade, foco e produtos digitais próprios. Livro com editora grande."
     eixos:
       concorrencia: "Sem evidência pública de contrato com operador de apostas ou loteria concorrente. Cursos revendidos em site com “bet” no nome da plataforma são de educação, não de jogo. Matéria de mercado cita participação em evento na bolsa com corretora sobre conscientização em relação a apostas (projeto de educação financeira) — não equivale a campanha de casa de apostas; ruídos em fóruns exigem checagem de fonte."
       polemicas: "Discussão na imprensa e em comunidades online sobre rigor científico, promessas e modelo de negócio; matérias em veículos de grande circulação."
@@ -268,7 +268,7 @@ profiles:
       tiktok: cleanesampaioo
       youtube: cleanesampaioo
       x: cleanesampaioo
-    narrativa: "Cantora, ex-The Voice, humor ligado ao Ceará. X pode aparecer com grafia diferente no extrato da rede."
+    narrativa: "Cantora, ex-The Voice, humor ligado ao Ceará."
     eixos:
       concorrencia: "Sem relação pública com operador de jogo."
       polemicas: "Pouca exposição a polêmicas na imprensa geral."
@@ -287,7 +287,7 @@ profiles:
       tiktok: ivanbaron
       youtube: ivanbaron
       x: ivanbaron
-    narrativa: "Pedagogo e ativista por inclusão da pessoa com deficiência. Campanhas com órgãos públicos e presença em eventos nacionais; série sobre vida com paralisia cerebral amplamente citada na imprensa especializada. TikTok em painel de mercado pode usar variante do @."
+    narrativa: "Pedagogo e ativista por inclusão da pessoa com deficiência. Campanhas com órgãos públicos e presença em eventos nacionais; série sobre vida com paralisia cerebral amplamente citada na imprensa especializada."
     eixos:
       concorrencia: "Aparições em podcast e mídia ao lado de marcas de bebida e instituições — avaliar se o contrato da peça Loterias exige neutralidade sobre álcool. Sem bet na amostra."
       polemicas: "Críticas e ataques de grupos contrários a pautas inclusivas; resposta pública a políticas governamentais. Caso de discriminação em cinema com condenação e indenização relatadas na imprensa — perfil de vítima de capacitismo, com desfecho judicial documentado."
@@ -310,7 +310,7 @@ profiles:
     eixos:
       concorrencia: "Campanhas com foco em educação profissional e marcas institucionais; sem bet."
       polemicas: "Episódio documentado de invasão de contas e uso indevido para golpe — risco de segurança digital, não de conduta da criadora."
-      politica: "Declarações públicas de evitar posicionamento partidário forte; manter coerência com briefing da campanha."
+      politica: "Declarações públicas de evitar posicionamento partidário forte; manter coerência com o tom da campanha."
 
   - name: "Cristian Wariu"
     tier: "Micros"
@@ -363,7 +363,7 @@ profiles:
       tiktok: comcertezaaline
       youtube: comcertezaaline
       x: comcertezaaline
-    narrativa: "Humor e desafios em vídeo; alcance muito alto no TikTok nos painéis. Garantir que o nome do briefing é o mesmo da pessoa contratada (evitar troca com homônimos ou jornalistas de mesmo nome)."
+    narrativa: "Humor e desafios em vídeo; alcance muito alto no TikTok nos painéis. Confirmar identidade com a agência (homônimos e jornalistas de mesmo nome)."
     eixos:
       concorrencia: "Sem bet na amostra."
       polemicas: "Pouco na imprensa tradicional."
@@ -375,17 +375,17 @@ profiles:
     resumo_tabela:
       risco: "Incerteza documental."
       concorrencia: "Sem bet na amostra."
-      polemicas: "Sem matéria com @ do briefing."
+      polemicas: "Sem matéria na imprensa aberta ligada ao perfil nesta amostra."
       politica: "Não mapeada."
     handles:
       instagram: davizoa
       tiktok: davizoa
       youtube: davizoa
       x: davizoa
-    narrativa: "Apelido público davizoa. Painéis mostram audiência em TikTok e YouTube; poucas matérias com o mesmo usuário — cruzar com agência antes de decisão final."
+    narrativa: "Apelido público davizoa. Painéis mostram audiência em TikTok e YouTube; pouca cobertura na imprensa aberta frente ao alcance nas redes — cruzar com agência antes da decisão final."
     eixos:
       concorrencia: "Nada identificado com operador de jogo na amostra de títulos e notícias."
-      polemicas: "Não mapeadas em veículo jornalístico com o @ do briefing."
+      polemicas: "Não mapeadas em veículo jornalístico para este perfil na amostra."
       politica: "Não mapeada."
 
   - name: "Paula Mineira"

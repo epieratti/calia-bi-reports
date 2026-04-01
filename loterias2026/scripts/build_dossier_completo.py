@@ -447,7 +447,7 @@ def main() -> None:
     panels_intro = esc(
         bundle.get("panels", {}).get(
             "intro_note",
-            "Números abaixo são retratos de ferramentas de mercado (alcance, engajamento, público). Servem só para contextualizar escala e formato — a decisão de risco deve seguir os três critérios do briefing.",
+            "Números abaixo são retratos de ferramentas de mercado (alcance, engajamento, público). Servem só para contextualizar escala e formato — a decisão de risco deve seguir os três critérios da análise.",
         )
     )
     panels_html = (
