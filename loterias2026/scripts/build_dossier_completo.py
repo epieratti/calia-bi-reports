@@ -450,7 +450,7 @@ def format_profile_networks_html(
         if raw_act in ("sim", "s", "yes"):
             chip_label = "posts recentes"
         elif raw_act in ("não", "nao"):
-            chip_label = "Sem posts"
+            chip_label = "sem posts recentes"
         else:
             chip_label = str(xr[3] or "").strip() or "—"
         teor_full = str(xr[4] or "").strip()
