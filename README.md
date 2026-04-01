@@ -8,6 +8,7 @@ O dossiê principal da Embratur fica em **`embratur/20260323-dossie-auditoria-pe
 - **Acesso:** o HTML do dossiê inclui **proteção por senha no navegador** (hash SHA-256). A senha usada no projeto é **`embratur2026`** (altere no próprio HTML se precisar).  
 - **Novos relatórios Embratur:** adicione mais `.html` em **`embratur/`** conforme necessário (não é obrigatório ter `index.html` dentro de `embratur/`).
 - **Novos relatórios Caixa:** use a pasta **`caixa/`**.
+- **Loterias 2026 (Brand Safety):** pesquisa em `loterias2026/research/`; dossiê HTML gerado com `python loterias2026/scripts/build_dossier_completo.py` → `loterias2026/output/20260401-dossie-brand-safety-loterias-2026-completo.html` (senhas `caixa2026` / `embratur2026`). Ver `loterias2026/README.md`.
 
 ## Ativar GitHub Pages (obrigatório para sair do 404)
 

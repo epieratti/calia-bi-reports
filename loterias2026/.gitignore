@@ -4,4 +4,6 @@ __pycache__/
 *.pyc
 data/raw/*.jsonl
 data/processed/*
-output/*.html
+# HTML gerado localmente ignorado, exceto o dossiê completo versionado
+output/*
+!output/20260401-dossie-brand-safety-loterias-2026-completo.html

@@ -1,0 +1,25 @@
+# Always ON Loterias 2026 — Brand Safety
+
+## Dossiê HTML completo
+
+- **Fonte estruturada:** `data/dossier_loterias2026.yaml` (governança, painéis IG/TT/YT/X, síntese Proposta P, 13 perfis).
+- **Evidências com URLs:** `research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`
+- **Metodologia:** `research/METODO_BRAND_SAFETY_LOTERIAS2026.md`
+- **Handles do squad:** `data/influencers.yaml`
+
+**Gerar o HTML:**
+
+```bash
+cd loterias2026
+python scripts/build_dossier_completo.py
+```
+
+Saída: `output/20260401-dossie-brand-safety-loterias-2026-completo.html`
+
+**Acesso:** mesma proteção do dossiê CAIXA — senhas **`caixa2026`** ou **`embratur2026`** (hash SHA-256 no script).
+
+Após alterar métricas ou textos, edite o YAML e **regenere** o HTML para manter uma única fonte da verdade estruturada.
+
+## Pipeline opcional (Apify)
+
+Ver `requirements.txt` e `.github/workflows/loterias2026-brand-safety.yml` — exige `APIFY_TOKEN`; gera outro HTML heurístico em `output/dossie-brand-safety-loterias-2026.html`.
