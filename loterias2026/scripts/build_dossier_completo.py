@@ -618,17 +618,32 @@ def main() -> None:
         return f"Fonte: {t}"
 
     _pn_all_pre = bundle.get("panels") or {}
-    _cov_raw = (
+
+    def coverage_block_html(base: str, cells_dash: str) -> str:
+        b = (base or "").strip()
+        d = (cells_dash or "").strip()
+        if not b and not d:
+            return ""
+        paras: list[str] = []
+        if b:
+            paras.append(
+                f"<p class='text-xs text-slate-500 mt-3 max-w-prose leading-relaxed'>{esc(b)}</p>"
+            )
+        if d:
+            paras.append(
+                f"<p class='text-xs text-slate-500 mt-2 max-w-prose leading-relaxed'>{esc(d)}</p>"
+            )
+        return "".join(paras)
+
+    _cov_base = (
         (_pn_all_pre.get("coverage_note") or _pn_all_pre.get("missing_rows_note") or "")
         .strip()
     )
-    coverage_after_foot = (
-        f"<p class='text-xs text-slate-500 mt-3 max-w-prose leading-relaxed'>{esc(_cov_raw)}</p>"
-        if _cov_raw
-        else ""
-    )
+    _cov_dash = (_pn_all_pre.get("coverage_note_cells_dash") or "").strip()
+    coverage_after_foot_short = coverage_block_html(_cov_base, "")
+    coverage_after_foot_tiktok = coverage_block_html(_cov_base, _cov_dash)
 
-    def panel_section(key: str, title_txt: str, foot: str) -> str:
+    def panel_section(key: str, title_txt: str, foot: str, coverage_suffix: str) -> str:
         p = bundle.get("panels", {}).get(key) or {}
         if not p.get("headers") or not p.get("rows"):
             return ""
@@ -646,14 +661,14 @@ def main() -> None:
             foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
             return (
                 f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
-                f"{empty_msg}{foot_p}{coverage_after_foot}</section>"
+                f"{empty_msg}{foot_p}{coverage_suffix}</section>"
             )
         tbl = render_table(oh, body_rows, html_safe_columns=frozenset({0}))
         foot_fmt = format_panel_footnote(foot)
         foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
         return (
             f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
-            f"{tbl}{foot_p}{coverage_after_foot}</section>"
+            f"{tbl}{foot_p}{coverage_suffix}</section>"
         )
 
     panels_intro = esc(
@@ -665,10 +680,30 @@ def main() -> None:
     _pn_all = bundle.get("panels") or {}
     panels_html = (
         f"<p class='text-sm text-slate-600 mb-6'>{panels_intro}</p>"
-        + panel_section("instagram", "Instagram", _pn_all.get("instagram", {}).get("footnote", ""))
-        + panel_section("tiktok", "TikTok", _pn_all.get("tiktok", {}).get("footnote", ""))
-        + panel_section("youtube", "YouTube", _pn_all.get("youtube", {}).get("footnote", ""))
-        + panel_section("x", "X", _pn_all.get("x", {}).get("footnote", ""))
+        + panel_section(
+            "instagram",
+            "Instagram",
+            _pn_all.get("instagram", {}).get("footnote", ""),
+            coverage_after_foot_short,
+        )
+        + panel_section(
+            "tiktok",
+            "TikTok",
+            _pn_all.get("tiktok", {}).get("footnote", ""),
+            coverage_after_foot_tiktok,
+        )
+        + panel_section(
+            "youtube",
+            "YouTube",
+            _pn_all.get("youtube", {}).get("footnote", ""),
+            coverage_after_foot_short,
+        )
+        + panel_section(
+            "x",
+            "X",
+            _pn_all.get("x", {}).get("footnote", ""),
+            coverage_after_foot_short,
+        )
     )
 
     cons = bundle.get("consolidated_narrative") or {}
