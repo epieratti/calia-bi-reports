@@ -50,7 +50,7 @@
 
 **Origem:** tabela enviada pelo usuário (ferramenta/painel **não** especificado). **Instagram handle** alinhado a `loterias2026/data/influencers.yaml`.
 
-**Uso no dossiê:** métricas de **audiência e engajamento** — **não** substituem evidência de **concorrência**, **polêmicas** ou **política**; números **variam** por dia e por metodologia do painel — **validar** no app na data oficial do programa. Linha **Megh** indica **perfil inativo** no IG desde **set/2023** segundo o painel; se o squad usar **outra conta** no Instagram, corrigir o YAML e esta tabela.
+**Uso no dossiê:** métricas de **audiência e engajamento** — **não** substituem evidência de **concorrência**, **polêmicas** ou **política**; números **variam** por dia e por metodologia do painel — **validar** no app na data oficial do programa. Linha **Megh** veio com **zeros** no export do painel — **conferir** sincronização do painel com o **`@megh_melry`** correto (há **atividade recente** no perfil segundo briefing).
 
 | Criador (nome painel) | Instagram (`influencers.yaml`) | Seguidores totais | Ganhos/perdas (14 d) | Média diária (seg.) | Média semanal (seg.) | Media count (posts) | Curtidas médias | Comentários médios | Engajamento | Observações (painel) |
 |------------------------|--------------------------------|-------------------:|---------------------:|--------------------:|---------------------:|--------------------:|----------------:|-------------------:|-------------|----------------------|
@@ -61,7 +61,7 @@
 | Índio Behn | `indio.behn` | 619.868 | +21.330 | +949 | +1.668 | 2.897 | 23K | 799 | 3,80% | Maior crescimento nominal |
 | Ivan Baron | `ivanbaron` | 550.499 | +882 | +45 | +56 | 2.176 | 8,3K | 180 | 1,50% | Crescimento positivo |
 | Cleane Sampaio | `cleanesampaioo` | 523.359 | +4.010 | +197 | +256 | 1.369 | 10K | 422 | 2% | Crescimento consistente |
-| Megh Melry | `megh_melry` | 488.455 | 0 | 0 | 0 | 0 | 0 | 0 | 0% | Inativa desde set/2023 |
+| Megh Melry | `megh_melry` | 488.455 | 0 | 0 | 0 | 0 | 0 | 0 | 0% | Métricas zeradas no painel — validar no app; **não** inferir inatividade |
 | Aline com Certeza | `comcertezaaline` | 230.134 | +2.063 | +310 | +203 | 637 | 5K | 37 | 2,20% | Bom equilíbrio de métricas |
 | Paula, a mineira | `mineira.paula` | 176.755 | +771 | +83 | +41 | 642 | 1,2K | 45 | 0,69% | Ganho diário regular |
 | Davizoa | `davizoa` | 101.442 | +2.396 | +151 | +342 | 344 | 125K | 1,5K | 125% | Engajamento atípico (viral) — **conferir fórmula do painel** (valor >100% sugere métrica ou janela específica) |
