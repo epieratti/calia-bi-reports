@@ -351,9 +351,9 @@ def main() -> None:
         <li><a class="toc-link" href="#pedido">Pedido e critérios</a></li>
         <li><a class="toc-link" href="#leitura">Leitura rápida</a></li>
         <li><a class="toc-link" href="#como">Como foi analisado</a></li>
-        <li><a class="toc-link" href="#metricas">Métricas (contexto)</a></li>
-        <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
         <li><a class="toc-link" href="#perfis">Perfis por camada (Tier 1, Tier 2, Mezzos, Micros, Página)</a></li>
+        <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
+        <li><a class="toc-link" href="#metricas">Métricas nas redes (contexto)</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
       </ul>
       <p class="text-xs text-slate-500 mt-6 font-semibold uppercase tracking-wide">Perfis</p>
@@ -383,22 +383,22 @@ def main() -> None:
       <div class="grid sm:grid-cols-2 gap-3">{meth_cards}</div>
     </section>
 
-    <section id="metricas" class="card-audit scroll-mt-20">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes (contexto)</h2></div>
-      {panels_html}
-    </section>
-
-    <section id="sintese" class="scroll-mt-20 mb-6">{cons_html}</section>
-
     <section id="perfis" class="scroll-mt-20">
       <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise por camada</h2></div>
       <p class="text-sm text-slate-600 mb-8">Ordem: Tier 1, Tier 2 (se houver nomes), Mezzos, Micros e Página.</p>
       {profile_sections}
     </section>
 
+    <section id="sintese" class="scroll-mt-20 mb-6">{cons_html}</section>
+
+    <section id="metricas" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes (contexto)</h2></div>
+      {panels_html}
+    </section>
+
     <section id="tabela" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
-      <p class="text-sm text-slate-600 mb-4">Visão única dos três critérios. Detalhes estão em cada perfil acima.</p>
+      <p class="text-sm text-slate-600 mb-4">Visão única dos três critérios. O detalhe por nome está na seção Perfis; as tabelas numéricas vêm antes desta matriz.</p>
       {sum_table}
     </section>
 
