@@ -2,7 +2,7 @@
 
 meta:
   title: "Squad Always ON Loterias 2026 — Brand Safety"
-  subtitle: "Levantamento de risco de imagem para campanha institucional de loterias — 13 nomes indicados pela criação."
+  subtitle: "Risco de imagem para campanha de loterias — 13 nomes da lista."
   client_line: "Agência Calia | Unidade de BI — Cliente CAIXA"
   periodo: "Março–abril de 2026"
 
@@ -11,12 +11,12 @@ password_sha256_hex:
 
 briefing:
   intro_paragraphs:
-    - "Squad Always ON Loterias 2026 — 13 nomes indicados para a campanha. Levantamento em fonte pública: concorrência (bets, jogos, loterias concorrentes), polêmicas e política. Redes: Instagram, TikTok, YouTube e X."
-    - "“Não consta” = não encontrado nesta amostra; não garante que o tema não exista fora dela."
+    - "Always ON Loterias 2026 — 13 nomes da lista. O que foi olhado: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes: Instagram, TikTok, YouTube e X."
+    - "“Não consta” = não achamos na busca; pode existir fora do que foi visto."
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar."
     - "Polêmicas: falas ou episódios com risco de imagem."
-    - "Política: posicionamento ou filiação quando houver registro público."
+    - "Política: lado ou partido quando aparecer em público."
   redes:
     - "Instagram"
     - "TikTok"
@@ -32,14 +32,14 @@ briefing:
 methodology:
   columns:
     - label: "Imprensa e busca aberta"
-      body: "Matérias e portais. Inclui regulação e apostas quando couber; fato separado de rumor."
+      body: "Notícias e sites. O que é fato separado de boato."
     - label: "Redes sociais"
-      body: "Perfil público e trechos reproduzidos na imprensa."
+      body: "Perfil aberto e o que a imprensa mostrou."
     - label: "Painéis de mercado"
-      body: "Social Blade (IG/YT), Upfluence (TikTok), amostra no X — apoio à escala, não prova única de risco."
+      body: "Social Blade (Instagram/YouTube), Upfluence (TikTok), checagem no X — só para tamanho de público, não prova de risco sozinha."
 
 panels:
-  intro_note: "Snapshot de métricas; validar na data da veiculação."
+  intro_note: "Números na data da coleta; conferir de novo na data do ar."
 
   instagram:
     footnote: "Fonte: Social Blade."
@@ -122,7 +122,7 @@ panels:
       - ["Megh Melry", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    footnote: "Leitura direta do perfil no X na data da coleta. A coluna “Postagens recentes” indica se havia tweets recentes na amostra analisada (não mede alcance)."
+    footnote: "Perfil do X na data da coleta. “Posts recentes” = se tinha post novo na checagem (não é número de alcance)."
     headers:
       - "Nome"
       - "Usuário"
@@ -140,39 +140,39 @@ panels:
 
 consolidated_narrative:
   title: "Síntese adicional do squad"
-  subtitle: "__Abril/2026__ — cruzar com **Perfis**, **Tabela resumo** e **métricas**."
-  tagline: "Decisão de __campanha__: o que pesa no go/no-go além do detalhe por nome."
+  subtitle: "__Abril/2026__ — ver junto com **Perfis**, **Tabela resumo** e **métricas**."
+  tagline: "O que pode pesar na **decisão da campanha**, além do texto por nome."
   blocks:
-    - title: "Leitura estratégica"
+    - title: "Visão geral"
       items:
-        - "Squad **adequado** a humor, diversidade e impacto social."
-        - "Se a peça exigir **neutralidade política rígida**, **Ivan Baron** e **Catraca Livre** aparecem na amostra com **mais pauta política explícita** — vale **checagem** com jurídico/comunicação. **Não** significa escolhê-los para “ser neutro”; significa **maior atenção** se o cliente quiser distância de política."
+        - "Bom encaixe para **humor**, **diversidade** e **causas sociais**."
+        - "Se a peça precisar ficar **longe de política**, **Ivan Baron** e **Catraca Livre** são os que mais falam de política no que vimos — alinhar com **jurídico** e **comunicação**. Não é sugestão de casting; é **cuidado a mais**."
     - title: "Concorrência"
       items:
-        - "Pessoas físicas: **sem garoto-propaganda** de bet ou loteria concorrente à CAIXA na amostra."
-        - "Separar: **“bet”** só em nome de curso/plataforma **≠** parceria com __operador de jogo__."
-        - "**Catraca Livre**: conteúdo com **encaminhamento a operador**. **Gratta**: evento bolsa/corretora (**educação financeira**; **não** publi de bet)."
+        - "Pessoas: **não achamos** publi de bet ou de outra loteria contra a CAIXA no que buscamos."
+        - "Nome com “bet” em **curso ou site** **não é** o mesmo que publi de **casa de aposta**."
+        - "**Catraca Livre**: texto que **leva** a site de aposta. **Gratta**: evento de **bolsa/corretora** sobre apostas (**aula**, não publi de bet)."
 
 executive_summary:
-  tagline: "**13 nomes** — visão __sintética__; detalhe nos perfis e na tabela matricial."
+  tagline: "**13 nomes** — **resumo**; o resto está nos perfis e na tabela."
   blocks:
-    - title: "Escopo"
+    - title: "Quem entra"
       items:
-        - "**13 nomes**: 12 pessoas + __Catraca Livre__. **Tiers**: Pitel (1), Gratta (2), 4 Mezzos, 6 Micros."
-        - "Critérios: __concorrência__ (bets/loterias/jogos), __polêmicas__, __política__."
+        - "**13 nomes**: 12 pessoas + __Catraca Livre__. **Camadas**: Pitel (1), Gratta (2), 4 Mezzos, 6 Micros."
+        - "O que olhamos: **concorrência** (bets, loterias, jogos), **polêmicas**, **política**."
     - title: "Concorrência"
       items:
-        - "Pessoas físicas: **sem contrato público** com operador de apostas na amostra."
-        - "__Catraca Livre__: setor + **CTA a operador** (guia online) — __jurídico/compliance__ antes de vincular à **CAIXA**."
-        - "__Gratta__: evento **bolsa/corretora** (conscientização; **não** publi de bet esportivo)."
+        - "Pessoas: **não achamos** contrato público com casa de apostas no que buscamos."
+        - "**Catraca Livre**: fala do setor + **guia** que manda para site de aposta — ver com **jurídico** antes de ligar à **CAIXA**."
+        - "**Gratta**: evento de **bolsa/corretora** sobre apostas (**informação**, não publi de bet)."
     - title: "Política e imagem"
       items:
-        - "Maior **exposição a pauta política** na amostra: **Baron**, **Catraca**; também **Wariu** (indígena/ambiente) e **Pitel** (causas sociais, **sem partido** explícito)."
-        - "Apostas no __Congresso/mídia__: **sensibilidade de marca**, não rótulo partidário dos talentos."
-        - "Ruído: **Gratta** (saúde/método), **Pitel** (BBB), **Mila** (__hackeio__ — não conduta); demais: **baixo** na amostra."
-    - title: "Diligência"
+        - "Quem mais fala de **política** no que vimos: **Baron**, **Catraca**; também **Wariu** (indígena e meio ambiente) e **Pitel** (causas sociais, **sem partido** claro)."
+        - "**Apostas** na **TV e no Congresso** deixam o tema sensível; isso não é “lado” dos talentos."
+        - "Barulho a mais: **Gratta** (saúde/venda), **Pitel** (BBB), **Mila** (**conta invadida** — não é atitude dela); resto **quieto** no que vimos."
+    - title: "Checagem extra"
       items:
-        - "**Davi** (apelido público davizoa): alcance nas redes acima do que a imprensa aberta documenta — __validar com agência__."
+        - "**Davi** (davizoa): muito alcance nas redes e **pouca notícia** — **confirmar com a agência**."
 
 profiles:
   - name: "Giovanna Pitel"
@@ -180,7 +180,7 @@ profiles:
     risco_geral: "Baixo a moderado — alta visibilidade na mídia"
     resumo_tabela:
       risco: "Baixo a moderado."
-      concorrencia: "Sem bet/loteria concorrente na amostra."
+      concorrencia: "Sem bet/loteria concorrente no que vimos."
       polemicas: "Exposição BBB e mídia; pautas sensíveis."
       politica: "Causas sociais; sem partido explícito."
     handles:
@@ -190,9 +190,9 @@ profiles:
       x: pitelgiovanna
     narrativa: "Ex-BBB, assistente social. Conteúdo e presença em TV (Globo), campanhas de marcas de consumo e pautas sociais; imprensa de cultura negra também destaca trajetória de empoderamento capilar."
     eixos:
-      concorrencia: "Não localizada parceria pública com casa de apostas, cassino ou loteria concorrente. Campanhas com marcas de laticínios, telecom, cosméticos e entretenimento."
-      polemicas: "Repercussão de reality show, críticas de colunistas e debates em torno de comportamento no BBB; relatos na imprensa sobre xenofobia após o programa; participação em pautas legislativas sensíveis citadas na mídia."
-      politica: "Atuação em causas sociais e de periferia; posicionamento em temas de gênero e direitos ligados a notícias públicas. Sem filiação partidária explícita identificada na amostra."
+      concorrencia: "Não achamos publi de casa de aposta, cassino ou outra loteria. Campanhas com laticínios, telefonia, beleza e entretenimento."
+      polemicas: "BBB e colunas; na imprensa, xenofobia após o programa; leis polêmicas comentadas na mídia."
+      politica: "Causas sociais e de periferia; gênero e direitos. Sem partido claro no que vimos."
 
   - name: "Rafael Gratta"
     tier: "Tier 2"
@@ -201,7 +201,7 @@ profiles:
       risco: "Moderado."
       concorrencia: "Sem publi de bet; evento educação financeira (bolsa)."
       polemicas: "Debates sobre método e promessas."
-      politica: "Sem pauta política relevante na amostra."
+      politica: "Sem pauta política relevante no que vimos."
     handles:
       instagram: rafaelgratta
       tiktok: rafaelgratta
@@ -209,9 +209,9 @@ profiles:
       x: rafaelgratta
     narrativa: "Médico, conteúdo sobre ansiedade, foco e produtos digitais próprios. Livro com editora grande."
     eixos:
-      concorrencia: "Sem evidência pública de contrato com operador de apostas ou loteria concorrente. Cursos revendidos em site com “bet” no nome da plataforma são de educação, não de jogo. Matéria de mercado cita participação em evento na bolsa com corretora sobre conscientização em relação a apostas (projeto de educação financeira) — não equivale a campanha de casa de apostas; ruídos em fóruns exigem checagem de fonte."
-      polemicas: "Discussão na imprensa e em comunidades online sobre rigor científico, promessas e modelo de negócio; matérias em veículos de grande circulação."
-      politica: "Sem posicionamento político relevante mapeado na amostra."
+      concorrencia: "Não achamos contrato público com casa de aposta ou outra loteria. Curso com “bet” no nome do site é **aula**, não jogo. Evento de bolsa/corretora sobre apostas é **informação**, não publi de bet; comentários na internet pedem checar fonte."
+      polemicas: "Imprensa e internet falam de promessa forte, método e venda; saiu em veículo grande."
+      politica: "Sem posicionamento político relevante achado no que vimos."
 
   - name: "Índio Behn"
     tier: "Mezzos"
@@ -219,8 +219,8 @@ profiles:
     resumo_tabela:
       risco: "Baixo."
       concorrencia: "Sem bet/loteria concorrente."
-      polemicas: "Sem alerta grave na amostra."
-      politica: "Neutro na amostra; X pouco ativo."
+      polemicas: "Sem alerta grave no que vimos."
+      politica: "Neutro no que vimos; X pouco ativo."
     handles:
       instagram: indio.behn
       tiktok: indio.behn
@@ -228,9 +228,9 @@ profiles:
       x: indio_behn
     narrativa: "Humorista e ator, personagens como a Dra. Rosângela. Conteúdo leve e familiar."
     eixos:
-      concorrencia: "Sem vínculo com bet ou loteria concorrente. Menções a “loteria” em títulos de espetáculo são contexto artístico, não publicidade de operador."
-      polemicas: "Nenhum episódio grave recorrente na imprensa analisada."
-      politica: "Humor eventualmente toca política sem adesão explícita a partido na amostra. Perfil no X com pouca atividade recente na leitura fechada."
+      concorrencia: "Sem ligação com bet ou outra loteria. “Loteria” no título de show é **arte**, não publi de jogo."
+      polemicas: "Nada grave recorrente na imprensa que vimos."
+      politica: "Humor às vezes mexe em política, sem partido claro no que vimos. No X, pouco movimento na checagem."
 
   - name: "Megh Melry"
     tier: "Mezzos"
@@ -238,7 +238,7 @@ profiles:
     resumo_tabela:
       risco: "Baixo."
       concorrencia: "Sem bet; cuidado com homônimos na busca."
-      polemicas: "Sem alerta na amostra."
+      polemicas: "Sem alerta no que vimos."
       politica: "Sem agenda partidária clara."
     handles:
       instagram: megh_melry
@@ -247,18 +247,18 @@ profiles:
       x: megh_melry
     narrativa: "Humor com família (figura da avó). Forte presença no TikTok segundo painéis de mercado."
     eixos:
-      concorrencia: "Não atribuir à criadora casos judiciais ou fofocas que na imprensa citam outra pessoa com nome parecido."
-      polemicas: "Sem alerta sólido na amostra, além do cuidado com homônimos."
-      politica: "Tom satírico, sem agenda partidária clara na amostra."
+      concorrencia: "Na imprensa, notícias com nome parecido podem ser **outra pessoa** — não colar na criadora sem prova."
+      polemicas: "Sem alerta forte no que vimos; cuidado com homônimos."
+      politica: "Tom satírico, sem agenda partidária clara no que vimos."
 
   - name: "Cleane Sampaio"
     tier: "Mezzos"
     risco_geral: "Baixo"
     resumo_tabela:
       risco: "Baixo."
-      concorrencia: "Sem operador de jogo."
+      concorrencia: "Sem casa de aposta."
       polemicas: "Baixa exposição negativa."
-      politica: "Neutra na amostra."
+      politica: "Neutra no que vimos."
     handles:
       instagram: cleanesampaioo
       tiktok: cleanesampaioo
@@ -266,9 +266,9 @@ profiles:
       x: cleanesampaioo
     narrativa: "Cantora, ex-The Voice, humor ligado ao Ceará."
     eixos:
-      concorrencia: "Sem relação pública com operador de jogo."
+      concorrencia: "Sem ligação pública com casa de aposta."
       polemicas: "Pouca exposição a polêmicas na imprensa geral."
-      politica: "Neutra na amostra."
+      politica: "Neutra no que vimos."
 
   - name: "Ivan Baron"
     tier: "Mezzos"
@@ -285,9 +285,9 @@ profiles:
       x: ivanbaron
     narrativa: "Pedagogo e ativista por inclusão da pessoa com deficiência. Campanhas com órgãos públicos e presença em eventos nacionais; série sobre vida com paralisia cerebral amplamente citada na imprensa especializada."
     eixos:
-      concorrencia: "Aparições em podcast e mídia ao lado de marcas de bebida e instituições — avaliar se o contrato da peça Loterias exige neutralidade sobre álcool. Sem bet na amostra."
-      polemicas: "Críticas e ataques de grupos contrários a pautas inclusivas; resposta pública a políticas governamentais. Caso de discriminação em cinema com condenação e indenização relatadas na imprensa — perfil de vítima de capacitismo, com desfecho judicial documentado."
-      politica: "Alta visibilidade em causas associadas ao campo progressista; notícias sobre filiação partidária e possível candidatura — confirmar situação atual em fonte oficial se a peça exigir neutralidade eleitoral."
+      concorrencia: "Aparições em podcast e mídia ao lado de marcas de bebida e instituições — avaliar se o contrato da peça Loterias exige neutralidade sobre álcool. Sem bet no que vimos."
+      polemicas: "Críticas a quem defende inclusão; resposta a decisões do governo. Cinema: caso de discriminação contra pessoa com deficiência com **vitória na Justiça** na imprensa."
+      politica: "Forte em causas de esquerda na visão pública; saiu notícia de filiação e possível candidatura — checar hoje se a peça precisa ficar neutra em eleição."
 
   - name: "Mila Costa"
     tier: "Micros"
@@ -296,16 +296,16 @@ profiles:
       risco: "Baixo."
       concorrencia: "Sem bet."
       polemicas: "Conta hackeada (segurança), não conduta."
-      politica: "Evita partido forte na amostra."
+      politica: "Evita partido forte no que vimos."
     handles:
       instagram: nocasomila
       tiktok: nocasomila
       youtube: nocasomila
       x: nocasomila
-    narrativa: "Humor sobre vida adulta; colunas e campanhas institucionais no Nordeste."
+    narrativa: "Humor sobre vida adulta; colunas e campanhas com órgãos e marcas no Nordeste."
     eixos:
-      concorrencia: "Campanhas com foco em educação profissional e marcas institucionais; sem bet."
-      polemicas: "Episódio documentado de invasão de contas e uso indevido para golpe — risco de segurança digital, não de conduta da criadora."
+      concorrencia: "Campanhas de curso e marcas grandes; sem bet."
+      polemicas: "Conta invadida e usada em golpe — risco de **segurança**, não de conduta dela."
       politica: "Declarações públicas de evitar posicionamento partidário forte; manter coerência com o tom da campanha."
 
   - name: "Cristian Wariu"
@@ -314,7 +314,7 @@ profiles:
     resumo_tabela:
       risco: "Baixo a moderado."
       concorrencia: "Sem bet."
-      polemicas: "Hostilidade online (contexto de pauta)."
+      polemicas: "Comentários hostis online (tema da pauta dele)."
       politica: "Território e ambiente; direitos humanos."
     handles:
       instagram: cristianwariu
@@ -323,28 +323,28 @@ profiles:
       x: cristianwariu
     narrativa: "Comunicador indígena Xavante; eventos nacionais e internacionais sobre clima e direitos."
     eixos:
-      concorrencia: "Sem operador de jogo na amostra."
+      concorrencia: "Sem casa de aposta no que vimos."
       polemicas: "Exposição a comentários hostis em redes, tema recorrente na imprensa sobre criadores indígenas."
-      politica: "Defesa de direitos territoriais e críticas a marcos legais sensíveis; alinhamento perceptível a agendas de direitos humanos e ambientais."
+      politica: "Defesa de terra e crítica a leis polêmicas; perfil ligado a **direitos humanos** e **meio ambiente** no que vimos."
 
   - name: "Cereja"
     tier: "Micros"
     risco_geral: "Baixo"
     resumo_tabela:
       risco: "Baixo."
-      concorrencia: "Sem operador de jogo."
+      concorrencia: "Sem casa de aposta."
       polemicas: "Pouca matéria negativa."
-      politica: "Não mapeada."
+      politica: "Não achamos no que vimos."
     handles:
       instagram: cerejaaaaaa
       tiktok: cerejaaaaaa
       youtube: cerejaaaaaa
       x: cerejaaaaaa
-    narrativa: "Humor e rotina. Base menor em alguns painéis; agregadores citam marcas de consumo — validar com material do talento se necessário."
+    narrativa: "Humor e rotina. Números menores em alguns painéis; listas de mercado citam marcas — conferir com o talento se precisar."
     eixos:
-      concorrencia: "Marcas de varejo e beleza citadas em bases de mercado não são operadores de jogo."
-      polemicas: "Pouca matéria negativa na amostra."
-      politica: "Não mapeada na amostra."
+      concorrencia: "Marcas de loja e beleza em lista de mercado não são casa de aposta."
+      polemicas: "Pouca matéria negativa no que vimos."
+      politica: "Não achamos no que vimos."
 
   - name: "Aline Costa"
     tier: "Micros"
@@ -353,7 +353,7 @@ profiles:
       risco: "Baixo."
       concorrencia: "Sem bet."
       polemicas: "Pouco na imprensa tradicional."
-      politica: "Não identificada."
+      politica: "Não achamos."
     handles:
       instagram: comcertezaaline
       tiktok: comcertezaaline
@@ -361,28 +361,28 @@ profiles:
       x: comcertezaaline
     narrativa: "Humor e desafios em vídeo; alcance muito alto no TikTok nos painéis. Confirmar identidade com a agência (homônimos e jornalistas de mesmo nome)."
     eixos:
-      concorrencia: "Sem bet na amostra."
+      concorrencia: "Sem bet no que vimos."
       polemicas: "Pouco na imprensa tradicional."
-      politica: "Não identificada na amostra."
+      politica: "Não identificada no que vimos."
 
   - name: "Davi"
     tier: "Micros"
-    risco_geral: "Incerteza documental — baixo na síntese narrativa"
+    risco_geral: "Pouca prova em notícia — risco parece baixo no texto"
     resumo_tabela:
-      risco: "Incerteza documental."
-      concorrencia: "Sem bet na amostra."
-      polemicas: "Sem matéria na imprensa aberta ligada ao perfil nesta amostra."
-      politica: "Não mapeada."
+      risco: "Pouca prova em notícia."
+      concorrencia: "Sem bet no que vimos."
+      polemicas: "Sem matéria na imprensa aberta ligada ao perfil no que vimos."
+      politica: "Não achamos no que vimos."
     handles:
       instagram: davizoa
       tiktok: davizoa
       youtube: davizoa
       x: davizoa
-    narrativa: "Apelido público davizoa. Painéis mostram audiência em TikTok e YouTube; pouca cobertura na imprensa aberta frente ao alcance nas redes — cruzar com agência antes da decisão final."
+    narrativa: "Apelido público davizoa. Nos painéis, audiência em TikTok e YouTube; na imprensa, pouca matéria perto do tamanho nas redes — **falar com a agência** antes de fechar."
     eixos:
-      concorrencia: "Nada identificado com operador de jogo na amostra de títulos e notícias."
-      polemicas: "Não mapeadas em veículo jornalístico para este perfil na amostra."
-      politica: "Não mapeada."
+      concorrencia: "Nada de casa de aposta nas buscas de título e notícia."
+      polemicas: "Sem notícia ligada a este perfil no que vimos."
+      politica: "Não achamos no que vimos."
 
   - name: "Paula Mineira"
     tier: "Micros"
@@ -391,7 +391,7 @@ profiles:
       risco: "Baixo."
       concorrencia: "Sem bet; ruído de busca genérica."
       polemicas: "Baixa exposição negativa."
-      politica: "Neutra na amostra."
+      politica: "Neutra no que vimos."
     handles:
       instagram: mineira.paula
       tiktok: mineira.paula
@@ -400,15 +400,15 @@ profiles:
     narrativa: "Humor com Minas Gerais; matérias regionais citam parcerias com comércio local e prêmios de influência."
     eixos:
       concorrencia: "Busca genérica por “bet” e time de futebol pode gerar ruído sem ligação com a pessoa — não usar como prova."
-      polemicas: "Baixa exposição negativa na amostra."
-      politica: "Neutra na amostra."
+      polemicas: "Baixa exposição negativa no que vimos."
+      politica: "Neutra no que vimos."
 
   - name: "Catraca Livre"
     tier: "Página"
     risco_geral: "Moderado a alto — veículo, não influenciador individual"
     resumo_tabela:
       risco: "Moderado a alto (veículo)."
-      concorrencia: "Conteúdo com CTA a operador de jogo; compliance."
+      concorrencia: "Texto que manda para site de aposta; ver regras internas."
       polemicas: "Histórico de crises editoriais."
       politica: "Linha progressista explícita."
     handles:
@@ -416,8 +416,8 @@ profiles:
       tiktok: catracalivre
       youtube: catracalivre
       x: catracalivre
-    narrativa: "Portal de notícias e entretenimento. Além de reportagens sobre o setor de apostas, há conteúdo que funciona como guia de jogo online com encaminhamento a operador — sensível para campanha institucional de loterias. Histórico de crises editoriais e posicionamento político explícito em campanhas passadas."
+    narrativa: "Portal de notícias e entretenimento. Tem matéria sobre apostas e **guia** que leva a site de jogo — sensível para loterias. Histórico de crises na cobertura e tom político claro em campanhas antigas."
     eixos:
-      concorrencia: "Há matéria com orientação prática e chamada a operador de jogo online, além de outras páginas sobre apostas. Isso exige decisão explícita de compliance (associação da CAIXA ao veículo e à monetização do site), além do tom editorial."
-      polemicas: "Crises antigas de cobertura (ex.: tragédias) e conflitos com personalidades públicas; checar atualização institucional do veículo."
-      politica: "Linha editorial associada a esquerda e a causas progressistas em material público analisado."
+      concorrencia: "Há texto que ensina e manda para site de aposta, além de outras páginas sobre jogo. Decidir com **jurídico** se a CAIXA entra (marca + site + anúncios), além do tom da redação."
+      polemicas: "Crises velhas de cobertura (ex.: tragédias) e briga com famosos; ver como o portal responde hoje."
+      politica: "Tom de esquerda e causas progressistas no que vimos."

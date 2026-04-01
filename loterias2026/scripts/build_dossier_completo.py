@@ -178,7 +178,7 @@ def normalize_panel_for_display(key: str, panel: dict, ig_rows: list) -> tuple[l
 
     if key == "x" and rows and len(headers) >= 4:
         out_h = list(headers)
-        ativo_label = "Postagens recentes (amostra)"
+        ativo_label = "Posts recentes (checagem)"
         try:
             ai = out_h.index("Ativo?")
         except ValueError:
@@ -217,12 +217,12 @@ def humanize_x_ativo(cell: object) -> tuple[str, str]:
     low = raw.lower()
     if low in ("sim", "s", "yes"):
         return (
-            "Havia postagens recentes na amostra",
+            "Havia posts recentes na checagem",
             "bg-emerald-50 text-emerald-900 ring-1 ring-emerald-200/80",
         )
     if low in ("não", "nao"):
         return (
-            "Sem postagens recentes na amostra",
+            "Sem posts recentes na checagem",
             "bg-slate-100 text-slate-700 ring-1 ring-slate-200",
         )
     return (raw or "—", "bg-slate-50 text-slate-600 ring-1 ring-slate-200")
@@ -447,7 +447,7 @@ def main() -> None:
     panels_intro = esc(
         bundle.get("panels", {}).get(
             "intro_note",
-            "Números abaixo são retratos de ferramentas de mercado (alcance, engajamento, público). Servem só para contextualizar escala e formato — a decisão de risco deve seguir os três critérios da análise.",
+            "Números das ferramentas (alcance, engajamento). Só ajudam a ver tamanho de público; o risco da campanha segue os três critérios acima.",
         )
     )
     panels_html = (
@@ -654,7 +654,7 @@ def main() -> None:
         <li><a class="toc-link" href="#perfis">Perfis por camada (Tier 1, Tier 2, Mezzos, Micros, Página)</a></li>
         <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
-        <li><a class="toc-link" href="#metricas">Métricas nas redes (contexto)</a></li>
+        <li><a class="toc-link" href="#metricas">Métricas nas redes</a></li>
       </ul>
       <p class="text-xs text-slate-500 mt-6 font-semibold uppercase tracking-wide">Perfis</p>
       <ul class="toc-list">{toc_items}</ul>
@@ -691,12 +691,12 @@ def main() -> None:
 
     <section id="tabela" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
-      <p class="text-sm text-slate-600 mb-4">Síntese executiva por nome. O detalhe está em Perfis; números de rede vêm na seção seguinte.</p>
+      <p class="text-sm text-slate-600 mb-4">Um resumo por nome. O texto completo está em Perfis; os números vêm depois.</p>
       {sum_table}
     </section>
 
     <section id="metricas" class="card-audit scroll-mt-20">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes (contexto)</h2></div>
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes</h2></div>
       {panels_html}
     </section>
 
