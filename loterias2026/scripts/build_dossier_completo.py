@@ -432,6 +432,14 @@ def main() -> None:
 
     ig_for_panels = (bundle.get("panels", {}).get("instagram") or {}).get("rows") or []
 
+    def format_panel_footnote(foot: str) -> str:
+        t = (foot or "").strip()
+        if not t:
+            return ""
+        if t.lower().startswith("fonte:"):
+            return t
+        return f"Fonte: {t}"
+
     def panel_section(key: str, title_txt: str, foot: str) -> str:
         p = bundle.get("panels", {}).get(key) or {}
         if not p.get("headers") or not p.get("rows"):
@@ -439,7 +447,8 @@ def main() -> None:
         disp_h, disp_r = normalize_panel_for_display(key, p, ig_for_panels)
         body_rows = [[esc(c) for c in r] for r in disp_r]
         tbl = render_table(disp_h, body_rows)
-        foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot)}</p>" if foot else ""
+        foot_fmt = format_panel_footnote(foot)
+        foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
         return (
             f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>{tbl}{foot_p}</section>"
         )
@@ -451,7 +460,10 @@ def main() -> None:
         )
     )
     _pn_all = bundle.get("panels") or {}
-    missing_rows_note = (_pn_all.get("missing_rows_note") or "").strip()
+    coverage_note = (
+        (_pn_all.get("coverage_note") or _pn_all.get("missing_rows_note") or "")
+        .strip()
+    )
     panels_html = (
         f"<p class='text-sm text-slate-600 mb-6'>{panels_intro}</p>"
         + panel_section("instagram", "Instagram", _pn_all.get("instagram", {}).get("footnote", ""))
@@ -459,9 +471,9 @@ def main() -> None:
         + panel_section("youtube", "YouTube", _pn_all.get("youtube", {}).get("footnote", ""))
         + panel_section("x", "X", _pn_all.get("x", {}).get("footnote", ""))
     )
-    if missing_rows_note:
+    if coverage_note:
         panels_html += (
-            f"<p class='text-xs text-slate-500 mt-8 max-w-prose leading-relaxed'>{esc(missing_rows_note)}</p>"
+            f"<p class='text-xs text-slate-500 mt-8 max-w-prose leading-relaxed'>{esc(coverage_note)}</p>"
         )
 
     cons = bundle.get("consolidated_narrative") or {}

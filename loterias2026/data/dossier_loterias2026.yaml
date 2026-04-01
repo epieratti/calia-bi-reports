@@ -40,7 +40,7 @@ methodology:
 
 panels:
   intro_note: "Números na data da coleta; conferir de novo na data do ar."
-  missing_rows_note: "Quem não aparece na tabela: a ferramenta não devolveu linha para esse perfil nesta exportação. O perfil pode existir normalmente na rede; só faltou captura no painel."
+  coverage_note: "Quem não aparece na tabela desta rede: na lista do projeto esse talento não tem perfil nessa plataforma. Célula vazia ou traço (—): o perfil entrou no painel, mas a ferramenta não trouxe aquele dado nesta exportação."
 
   instagram:
     footnote: "Social Blade."
@@ -123,7 +123,7 @@ panels:
       - ["Megh Melry", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    footnote: "Leitura no X na data da coleta."
+    footnote: "Checagem direta no X na data da coleta."
     headers:
       - "Nome"
       - "Usuário"
