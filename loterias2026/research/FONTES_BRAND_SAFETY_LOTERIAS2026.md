@@ -284,6 +284,117 @@ Buscas em motores gerais, perfis oficiais IG/TT/YT/X e portais (G1, UOL, Folha, 
 
 ---
 
+## Pacote de fontes — relatório “polarização / política digital” (lista do usuário, abr/2026)
+
+**Origem:** URLs enviadas pelo usuário como **bibliografia** de um texto longo sobre polarização, influenciadores e política. **Uso interno:** registrar links **canônicos** e **avisos de triagem**; **não** levar ao HTML do cliente. Só vira **achado de perfil** quando a fonte cita **handle** do `influencers.yaml` ou identificação **inequívoca** da pessoa do squad.
+
+### Triagem obrigatória (homônimos e ruído)
+
+| Ponto | O que fazer |
+|-------|-------------|
+| **YouTube “LULA vs BOLSONARO… Rafael Fontana”** | **Rafael Fontana ≠ Rafael Gratta** — não cruzar com `@rafaelgratta` sem abrir o vídeo e confirmar convidado. |
+| **Estado de Minas — “influencer bolsonarista” / vídeo do Lula / “teorias”** | Contexto **pós-2022**; personagem da matéria é **Paula Marisa** — **não** atribuir a **`@mineira.paula`** / **Paula Helena** sem matéria que una nome + handle (ver **§12**). |
+| **Entrada “youtube.com / YouTube” sem título** na lista | **Inválida** para citação até localizar `watch?v=` e título. |
+| **Artigo “Cristian Wariu — guerreiro…” em terrasindigenas.org.br** | Caminho citado pelo usuário → **404** aqui; **URL estável com mesmo texto (Trip/UOL):** https://revistatrip.uol.com.br/trip/cristian-wariu-um-guerreiro-indigena-do-seculo-xxi |
+| **PIB / ISA — “A desinformação faz grande parte do racismo”** | URL com aspas codificadas (funciona no browser): https://pib.socioambiental.org/pt/%E2%80%9CA_desinforma%C3%A7%C3%A3o_faz_grande_parte_do_racismo%E2%80%9D |
+| **Apple Podcasts “641 — Índio Behn”** | Numeração do catálogo **Apple** muda com o tempo — buscar **“Índio Behn”** no feed https://podcasts.apple.com/br/podcast/intelig%C3%AAncia-ltda/id1566207871 ou usar o **YouTube** do mesmo episódio em arquivo. |
+| **NaTelinha — headline “barraqueiro, brifada e sonso”** | URL canônica (HTTP **200**): https://natelinha.uol.com.br/famosos/2024/04/03/bbb-24-eliminada-pitel-nao-deita-para-rivais-e-detona-davi-beatriz-e-matteus-barraqueiro-brifada-e-sonso |
+| **Poder360 — Lula e influenciadores** | Preferir URL **sem** sufixo de modal: https://www.poder360.com.br/governo/lula-discute-mobilizacao-da-sociedade-digital-com-influenciadores/ |
+
+### Contexto institucional e polarização (não amarrado a um único nome do squad)
+
+| Tema | Fonte | URL canônica |
+|------|--------|----------------|
+| Lula — encontro com influenciadores (“mobilização da sociedade digital”) | Poder360 | https://www.poder360.com.br/governo/lula-discute-mobilizacao-da-sociedade-digital-com-influenciadores/ |
+| Endossos à campanha de Bolsonaro 2022 (lista) | Wikipédia PT | https://pt.wikipedia.org/wiki/Lista_de_endossos_%C3%A0_campanha_presidencial_de_Jair_Bolsonaro_em_2022 |
+| Apoio a Lula — lista de nomes (CUT) | CUT | https://www.cut.org.br/noticias/mais-de-200-artistas-juristas-e-politicos-ja-declararam-apoio-a-lula-veja-quem-s-o-8d95 |
+| Política / bola de cristal 2025 | Brazil Journal | https://braziljournal.com/bola-de-cristal-lula-bolsonaro-e-a-politica-em-2025/ |
+| OEI — juventudes, desigualdades | OEI | https://www.oei.int/pt/noticias/vulnerabilidades-e-resistencias-entre-as-juventudes-brasileiras-em-contextos-de-desigualdades/ |
+| Revista acadêmica RCD (UERJ) | RCD | https://www.e-publicacoes.uerj.br/rcd |
+| UFFS — pós “Comunicação e Saúde” (página do curso; não é PDF único do título citado) | UFFS | https://www.uffs.edu.br/uffs/especializacao/comunicacao-e-saude |
+| Diários da Câmara (imagem .br) | Câmara | https://imagem.camara.leg.br/ (portal; localizar edição no acervo se necessário) |
+| Blog CB — arquivo “Política Externa” | Correio Braziliense | https://blogs.correiobraziliense.com.br/ |
+
+### Giovanna Pitel (`@pitelgiovanna`)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Pós-eliminação — rivais (NaTelinha) | NaTelinha | https://natelinha.uol.com.br/famosos/2024/04/03/bbb-24-eliminada-pitel-nao-deita-para-rivais-e-detona-davi-beatriz-e-matteus-barraqueiro-brifada-e-sonso |
+| PL / aborto — com bailarina (BBB 24) | Notícias da TV | https://noticiasdatv.uol.com.br/noticia/celebridades/rival-de-alane-no-bbb-24-giovanna-pitel-se-une-a-bailarina-contra-pl-do-aborto-121322 |
+| Belém / programa (O Liberal) | O Liberal | https://www.oliberal.com/cultura/celebridades/ex-bbb-pitel-curte-calor-de-belem-e-se-prepara-para-a-estreia-do-seu-programa-1.897739 |
+
+### Rafael Gratta (`@rafaelgratta`)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Críticas / estratégia (título do vídeo — checar menção a Gratta) | YouTube | https://www.youtube.com/watch?v=3XR8ZuwIi3g |
+| Inteligência Ltda. #1281 | YouTube | https://www.youtube.com/watch?v=6EcfcinMHNo |
+| Flow #408 | YouTube | https://www.youtube.com/watch?v=Z38tcbrvFow |
+| **Cuidado:** “Rafael Fontana” | — | **Não** listar aqui sem `watch?v=` confirmado; **não** assumir que é Gratta. |
+
+### Índio Behn (`@indio.behn`)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Canal oficial | YouTube | https://www.youtube.com/c/%C3%8DndioBehn/videos |
+| Personagem Dra. Rosângela — “5 fatos” (canal Índio Behn) | YouTube | https://www.youtube.com/watch?v=FI_T7X_UaG0 |
+| Personagem — recorte GZH Timeline (“yoga vegano”) | YouTube | https://www.youtube.com/watch?v=7jHgdvq0_z8 |
+| Inteligência Ltda. (ep. com Índio — buscar no feed Apple/Spotify) | Apple Podcasts | https://podcasts.apple.com/br/podcast/intelig%C3%AAncia-ltda/id1566207871 |
+
+### Ivan Baron (`@ivanbaron`)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Quem é / rampa / posse | G1 | https://g1.globo.com/rn/rio-grande-do-norte/noticia/2023/01/02/quem-e-ivan-baron-conheca-o-influencer-potiguar-que-subiu-a-rampa-do-planalto-com-lula.ghtml |
+| Metalúrgico na rampa (outro convidado; contexto posse) | G1 | https://g1.globo.com/sp/sao-paulo/noticia/2023/01/02/todos-somos-importantes-para-o-pais-e-isso-estava-representado-ali-diz-metalurgico-que-subiu-a-rampa-do-planalto-com-lula.ghtml |
+| Bastidores da posse (CriaCast / CartaCapital) | YouTube | https://www.youtube.com/watch?v=8_g-UA7HBNk |
+| CriaCast completo (Ambev no programa — ver **§6**) | YouTube | https://www.youtube.com/watch?v=zZgf0zGaSVE |
+| Assembleia RN — “Edição 2024” (portal; localizar matéria de campanha/capacitismo no buscador do site) | ALRN | https://www.al.rn.leg.br/ |
+
+### Cristian Wariu (`@cristianwariu`)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Perfil longo (“guerreiro…”) | Revista Trip (UOL) | https://revistatrip.uol.com.br/trip/cristian-wariu-um-guerreiro-indigena-do-seculo-xxi |
+| “Voz indígena…” (Feat 006) | YouTube | https://www.youtube.com/watch?v=nTWmls8Kb-g |
+| Desinformação e racismo (citação) | PIB / ISA | https://pib.socioambiental.org/pt/%E2%80%9CA_desinforma%C3%A7%C3%A3o_faz_grande_parte_do_racismo%E2%80%9D |
+
+### Mila Costa (`@nocasomila`)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Que Nem Tu #08 | YouTube | https://www.youtube.com/watch?v=4YosVTINMjE |
+| **Intimus — time de embaixadoras 2023** (mídia cita **Mila Costa** como criadora) | Propmark | https://propmark.com.br/intimus-apresenta-seu-time-de-embaixadores-de-2023/ |
+| Ep. “As Cunhãs” (56) — **URL a fixar** no Anchor/Spotify se o `watch?v=` não existir | Podcast | https://anchor.fm/as-cunhas (buscar episódio **56** / convidada **Mila Costa**) |
+
+### “Paula Mineira” — matéria que **não** é o perfil do squad
+
+| Tema | Fonte | URL | Ligação a `@mineira.paula` |
+|------|--------|-----|----------------------------|
+| Influenciadora bolsonarista / vídeo do Lula / “teorias” | Estado de Minas | https://www.em.com.br/app/noticia/politica/2022/11/09/interna_politica,1418989/influencer-bolsonarista-quer-video-de-lula-hoje-para-nao-criar-teorias.shtml | **Não** — personagem **Paula Marisa**; manter fora da **§12** salvo novo cruzamento. |
+
+### Catraca Livre (`@catracalivre`) — veículo
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Bolsonaro — articulação e toma-lá-dá-cá (canal Catraca Livre) | YouTube | https://www.youtube.com/watch?v=3tJs_4k9W-k |
+| Catraca Livre e MBL — debate política nacional | YouTube | https://www.youtube.com/watch?v=BuSObRQ78is |
+| Daniel Santini — tarifa zero / utopia (live #109; canal “Lives Caverna do Morcego”) | YouTube | https://www.youtube.com/watch?v=2FZKTYCxd1M |
+| Criador do Catraca admite erro — fantasias de carnaval | Jovem Pan | https://jovempan.com.br/programas/panico/criador-do-catraca-livre-diz-que-errou-ao-apontar-preconceito-em-fantasias-de-carnaval.html |
+| Sinop / direita / ocupação (contexto agro-político) | Agência Pública | https://apublica.org/2024/10/sem-clima-o-domingo-em-que-a-direita-tomou-o-poder-em-sinop-pelos-proximos-4-anos/ |
+
+### Vídeos YouTube — análise / mídia (transversal)
+
+| Tema | Fonte | URL |
+|------|--------|-----|
+| Paulo Niccoli — corrida eleitoral (título em inglês no oEmbed) | YouTube | (buscar no canal que hospeda a entrevista; título citado pelo usuário — **confirmar** `watch?v=` no YouTube) |
+| Gustavo Uribe — Bastidores CNN / governo 2025 | YouTube | (localizar episódio **Bastidores CNN** na data citada) |
+| Giro VEJA — CPI das Bets e influencers | YouTube | (localizar **Giro VEJA** com esse headline) |
+
+**Nota:** as três linhas acima ficaram **sem ID fixo** na lista do usuário — completar com busca no YouTube ou link direto da produtora quando disponível.
+
+---
+
 ## Validação — hipóteses vindas de IA (Perplexity) vs. busca web
 
 As linhas que citam **Giovanna Pitel** e **Rafael Gratta** estão **replicadas** nas seções **§1** e **§2** (subseção *Validação cruzada*); a tabela abaixo permanece para visão única na auditoria.
@@ -547,6 +658,8 @@ Registros **fornecidos em print** (interface desktop). **URL permalink** do post
 | Perfil / carreira | NaTelinha | https://natelinha.uol.com.br/famosos/tudo-sobre/giovanna-pitel | Agregador. |
 | **Pós-BBB / carreira** | NaTelinha | https://natelinha.uol.com.br/famosos/2026/01/14/giovanna-pitel-conta-como-bbb-mudou-sua-realidade-transformador-236518.php | Entrevista 14/01/2026 (pacote relatório externo). |
 | **Política / PL aborto (BBB 24)** | Notícias da TV (UOL) | https://noticiasdatv.uol.com.br/noticia/celebridades/rival-de-alane-no-bbb-24-giovanna-pitel-se-une-a-bailarina-contra-pl-do-aborto-121322 | **Pauta legislativa sensível**; **403** no `curl` neste ambiente. |
+| **Pós-eliminação — fala sobre rivais (BBB 24)** | NaTelinha | https://natelinha.uol.com.br/famosos/2024/04/03/bbb-24-eliminada-pitel-nao-deita-para-rivais-e-detona-davi-beatriz-e-matteus-barraqueiro-brifada-e-sonso | **Polêmica de reality** (tom agressivo) — não confundir com **`@davizoa`**; nomes citados são **participantes do BBB 24**. Ver também **§ Pacote polarização**. |
+| **Belém / programa** | O Liberal | https://www.oliberal.com/cultura/celebridades/ex-bbb-pitel-curte-calor-de-belem-e-se-prepara-para-a-estreia-do-seu-programa-1.897739 | **§ Pacote polarização**. |
 | **Xenofobia (vídeo)** | YouTube | https://www.youtube.com/watch?v=HmYcR99RHio | Título no pacote: Pitel e xenofobia pós-BBB — checar canal e data. |
 | Perfil / carreira | Folha F5 | https://f5.folha.uol.com.br/televisao/bbb24/giovanna-pitel.shtml | Contexto BBB24. |
 | Contrato / marcas (contexto) | Terra | https://www.terra.com.br/diversao/tv/reality-shows/giovanna-pitel-renova-contrato-com-a-globo,ecf5fb1c7d5f45f56d4307213591e6cajqn0ivcp.html | Renovação Globo 2024; menção a demanda de marcas (checar texto integral). |
@@ -1109,6 +1222,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **Banco do Nordeste** | Campanha **“Vai de Giro”** (crédito MPE) | Portal Nosso Meio | https://nossomeio.com.br/banco-do-nordeste-e-ebmquintto-lancam-nova-fase-da-campanha-vai-de-giro-com-mila-costa/ | Alta |
 | **Granja Regina** | **Hipótese** — título RSS (**comercial no intervalo do BBB**) | Google Notícias → Portal IN | **Pendência:** permalink | Média até URL |
 | **Solar Coca-Cola**; **Vitamílio**; **Óticas Mais Brasil** | Citadas no **relatório externo** | — | **Não** espelhadas em matéria nesta compilação — **hipótese** até post | Baixa |
+| **Intimus** | **Embaixadora** no **time 2023** (trade) | Propmark | https://propmark.com.br/intimus-apresenta-seu-time-de-embaixadores-de-2023/ | Alta — matéria cita **Mila Costa** (PE) como criadora; confirmar **#publi** / vigência no app |
 | **milacosta.com** | Site autoral / produtos | milacosta.com | https://milacosta.com/ | Média |
 | *Demais publipost* | Completar nas redes | — | — | — |
 
@@ -1385,6 +1499,8 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 Só incorporar itens do pacote quando a fonte citar **`@mineira.paula`**, **Paula Helena de Oliveira** (ou nome civil confirmado pelo briefing) ou outro vínculo **inequívoco**. Matérias genéricas com “Paula”, “mineira” ou **BBB** **sem** esse cruzamento **não** entram neste perfil.
 
+**Matéria Estado de Minas (nov/2022) — “influencer bolsonarista” / vídeo do Lula:** trata-se de **Paula Marisa** — **não** é prova do perfil **`@mineira.paula`**. URL e tabela em **§ Pacote de fontes — relatório “polarização…”**.
+
 ### Fontes coletadas (web aberta)
 
 | Tema | Fonte | URL | Notas |
@@ -1458,6 +1574,9 @@ Concorrência · Polêmicas · Política aplicados ao **veículo** (conteúdo ed
 | Idem (opinião) | Diário do Centro do Mundo | https://www.diariodocentrodomundo.com.br/a-justa-reacao-ao-oportunismo-barato-do-catraca-livre-diante-da-tragedia-da-chapecoense-por-kiko-nogueira/ | Ângulo **crítico** ao portal. |
 | **Campanha “anti-Catraca” (2016)** | Daqui (O Popular) | https://daqui.opopular.com.br/geral/apos-infeliz-postagem-internautas-se-unem-em-campanha-contra-o-catraca-livre-1.1187686 | Mobilização de internautas. |
 | **Google Notícias / Meio & Mensagem** | Título no RSS | *Catraca Livre: erros na tragédia* | Slug direto `meioemensagem.com.br/midia/catraca-livre-erros-na-tragedia` retornou **404** no `curl` (mar/2026) — buscar no arquivo do veículo ou título exato. |
+| **YouTube — Bolsonaro / toma-lá-dá-cá** | Catraca Livre (canal) | https://www.youtube.com/watch?v=3tJs_4k9W-k | **§ Pacote polarização** — título: *BOLSONARO, ARTICULAÇÃO E TOMA-LÁ-DÁ-CÁ*. |
+| **YouTube — debate com MBL** | Catraca Livre (canal) | https://www.youtube.com/watch?v=BuSObRQ78is | **§ Pacote polarização**. |
+| **Carnaval / lista de fantasias — retratação** | Jovem Pan | https://jovempan.com.br/programas/panico/criador-do-catraca-livre-diz-que-errou-ao-apontar-preconceito-em-fantasias-de-carnaval.html | Entrevista com **Gilberto Dimenstein** — admissão de erro editorial. |
 | **Parcerias de mídia (histórico)** | Meio & Mensagem | https://www.meioemensagem.com.br/midia/catraca-livre-vira-parceiro-da-epoca-sp · https://www.meioemensagem.com.br/midia/catraca-livre-e-otima-unidos-pelo-lazer | **Não** são bets; contexto **negócio editorial**. |
 
 **Contexto setorial (não específico do portal):** UOL lista bets barradas — https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/10/02/bet-que-patrocina-seu-time-foi-barrada-pelo-governo-veja-lista.htm — útil só para **cenário regulatório**, não para atribuir parceria comercial do veículo com operador.
