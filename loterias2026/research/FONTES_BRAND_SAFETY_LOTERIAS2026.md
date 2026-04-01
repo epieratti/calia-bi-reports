@@ -46,9 +46,9 @@
 
 ---
 
-## Painel Instagram — métricas agregadas (fornecido pelo usuário, mar/2026)
+## Painel Instagram — métricas agregadas (Social Blade, mar/2026)
 
-**Origem:** tabela enviada pelo usuário (ferramenta/painel **não** especificado). **Instagram handle** alinhado a `loterias2026/data/influencers.yaml`.
+**Origem:** dados extraídos com **Social Blade** — https://socialblade.com — (tabela consolidada enviada pelo usuário). **Instagram handle** alinhado a `loterias2026/data/influencers.yaml`.
 
 **Uso no dossiê:** métricas de **audiência e engajamento** — **não** substituem evidência de **concorrência**, **polêmicas** ou **política**; números **variam** por dia e por metodologia do painel — **validar** no app na data oficial do programa. Linha **Megh** veio com **zeros** no export do painel — **conferir** sincronização do painel com o **`@megh_melry`** correto (há **atividade recente** no perfil segundo briefing).
 
