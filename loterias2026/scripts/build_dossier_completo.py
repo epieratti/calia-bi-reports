@@ -379,9 +379,9 @@ def format_profile_networks_html(
     cards: list[str] = []
 
     ig = panel_row_by_briefing(ig_rows, 1, handles.get("instagram"))
-    if ig and len(ig) >= 10:
+    if ig and len(ig) >= 8:
         u = str(ig[1]).lstrip("@")
-        stats = stat_pair("seg.", str(ig[2])) + stat_pair("eng.", str(ig[9]))
+        stats = stat_pair("seg.", str(ig[2])) + stat_pair("eng.", str(ig[7]))
         cards.append(net_mini_card("bg-gradient-to-b from-pink-500 to-rose-600", "Instagram", u, stats))
 
     tt = panel_row_by_briefing(tt_rows, 1, handles.get("tiktok"))
