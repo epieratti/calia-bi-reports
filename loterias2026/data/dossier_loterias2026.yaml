@@ -141,22 +141,52 @@ panels:
 consolidated_narrative:
   title: "Síntese adicional do squad"
   subtitle: "Consolidação (abril/2026) — cruzar com Perfis, Tabela resumo e métricas abaixo."
-  paragraphs:
-    - "Visão geral: perfil majoritariamente favorável para campanhas de humor, diversidade e impacto social. Dois pontos pedem atenção de quem busca máxima neutralidade política na peça: Ivan Baron (trajetória pública ligada a causas e ao campo progressista) e Catraca Livre (veículo com linha editorial explícita)."
-    - "No conjunto das pessoas físicas, não apareceu contrato público ou campanha anunciada como garoto-propaganda de casa de apostas ou loteria concorrente à CAIXA. Menções a “aposta” em entretenimento ou nome comercial (ex.: plataforma de cursos com “bet” no nome) foram tratadas à parte de parceria com operador de jogo."
-    - "Dois pontos específicos merecem atenção no eixo concorrência: o veículo Catraca Livre publicou material que orienta o leitor em direção a um jogo online com indicação de operador; e Rafael Gratta foi citado na imprensa como participante de um evento da bolsa e de uma corretora sobre conscientização em relação a apostas (projeto de educação financeira, não equivalência com publi de bet)."
-    - "O ambiente político e regulatório em torno de apostas e publicidade (incluindo debates no Congresso e cobertura sobre práticas abusivas) reforça a necessidade de clareza contratual e de monitoramento de novas peças nas redes após a contratação."
-    - "Recomendação operacional: alinhar o roteiro da peça com compliance e, se necessário, pedir declaração ou material atualizado aos representantes dos talentos antes da assinatura."
+  tagline: "Complemento à Leitura rápida: mesmo recorte, foco em decisão de campanha e governança."
+  blocks:
+    - title: "Visão geral"
+      items:
+        - "Squad majoritariamente favorável a peças de humor, diversidade e impacto social."
+        - "Quem exige neutralidade política máxima na veiculação deve olhar com lupa: Ivan Baron (trajetória pública em causas e campo progressista) e Catraca Livre (veículo com linha editorial explícita)."
+    - title: "Concorrência"
+      items:
+        - "Pessoas físicas: na amostra, não há contrato público nem campanha anunciada como garoto-propaganda de casa de apostas ou de loteria concorrente à CAIXA."
+        - "Separar de parceria com operador: menções a “aposta” em entretenimento ou em nome comercial (ex.: plataforma de cursos com “bet” no nome)."
+        - "Catraca Livre: há material que orienta o leitor a jogo online com indicação de operador."
+        - "Rafael Gratta: imprensa cita participação em evento da bolsa e de corretora sobre conscientização em apostas (educação financeira — não equivale a publi de bet)."
+    - title: "Contexto regulatório"
+      items:
+        - "Apostas e publicidade estão no radar do Congresso e da mídia (incluindo práticas abusivas). Isso reforça clareza contratual e monitoramento de novas peças nas redes após a contratação."
+    - title: "Próximos passos"
+      items:
+        - "Alinhar roteiro da peça com compliance; se necessário, solicitar declaração ou material atualizado aos representantes dos talentos antes da assinatura."
 
 executive_summary:
-  bullets:
-    - "Composição por camada: Tier 1 (Giovanna Pitel), Tier 2 (Rafael Gratta), Mezzos (quatro), Micros (seis), Página (Catraca Livre)."
-    - "Treze nomes no total: doze pessoas físicas e um veículo digital. Todos foram analisados nos três critérios do briefing."
-    - "Concorrência (bets/loterias): nas pessoas físicas, não há na amostra pública contrato anunciado com operador de apostas. Catraca Livre mistura reportagem sobre o setor com pelo menos um conteúdo que encaminha o leitor a um operador (jogo online com guia prático) — avaliar com jurídico/compliance antes de associar a marca da CAIXA ao veículo."
-    - "Rafael Gratta: imprensa especializada associa o nome a um evento de conscientização sobre apostas promovido por bolsa de valores e corretora (não é, por si só, publi de casa de apostas esportiva)."
-    - "Política: Ivan Baron e Catraca Livre concentram a maior exposição a pauta política explícita; Cristian Wariu atua em causas indígenas e ambientais; Giovanna Pitel tem posicionamento em pautas sociais sem filiação partidária clara na amostra. O tema apostas aparece na esfera pública (mídia e Congresso) de forma transversal — útil como pano de fundo de sensibilidade, não como rótulo partidário dos talentos."
-    - "Polêmicas: Rafael Gratta aparece em debate público sobre conteúdo de saúde e método; Giovanna Pitel com histórico de exposição no BBB e repercussão na mídia; Mila Costa com episódio documentado de conta invadida; demais perfis com menor volume de alertas na imprensa aberta."
-    - "Davi (apelido davizoa): presença relevante em TikTok e YouTube nos painéis; pouca matéria jornalística com o mesmo @ — manter checagem de identidade com a agência do talento."
+  tagline: "Visão executiva — mesmo recorte de conteúdo, leitura em blocos."
+  blocks:
+    - title: "Escopo"
+      items:
+        - "13 nomes: 12 pessoas físicas + veículo Catraca Livre."
+        - "Camadas: Tier 1 (Giovanna Pitel), Tier 2 (Rafael Gratta), quatro Mezzos, seis Micros, página Catraca Livre."
+        - "Critérios do briefing aplicados a todos: concorrência (bets/loterias/jogos), polêmicas, política."
+    - title: "Concorrência"
+      items:
+        - "Pessoas físicas: na amostra pública, não há contrato anunciado com operador de apostas."
+        - "Catraca Livre: cobertura do setor + pelo menos um conteúdo que encaminha a operador (jogo online com guia). Decisão de associação à CAIXA exige jurídico/compliance."
+        - "Rafael Gratta: imprensa cita participação em evento de conscientização sobre apostas (bolsa + corretora). Não equivale, por si só, a publi de casa de apostas esportiva."
+    - title: "Política"
+      items:
+        - "Maior exposição a pauta política explícita: Ivan Baron e Catraca Livre."
+        - "Cristian Wariu: causas indígenas e ambientais. Giovanna Pitel: causas sociais, sem filiação partidária clara na amostra."
+        - "Apostas na esfera pública (mídia e Congresso): pano de fundo de sensibilidade para a peça; não serve como rótulo partidário dos talentos."
+    - title: "Polêmicas e reputação"
+      items:
+        - "Rafael Gratta: debate público sobre conteúdo de saúde, promessas e modelo de negócio."
+        - "Giovanna Pitel: histórico de exposição no BBB e repercussão na mídia."
+        - "Mila Costa: episódio documentado de conta invadida (ângulo de segurança digital, não de conduta da criadora)."
+        - "Demais perfis: menor volume de alertas na imprensa aberta, na amostra."
+    - title: "Diligência residual"
+      items:
+        - "Davi (@davizoa): alcance relevante em TikTok e YouTube nos painéis; pouca matéria jornalística com o mesmo @ — validar identidade com a agência do talento."
 
 profiles:
   - name: "Giovanna Pitel"

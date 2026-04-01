@@ -22,6 +22,59 @@ def esc(s: object) -> str:
     return html.escape(str(s or ""), quote=True)
 
 
+def render_clevel_body(cfg: dict) -> str:
+    """Subtítulo opcional, tagline, depois blocos em cards ou fallback bullets/parágrafos."""
+    parts: list[str] = []
+    if cfg.get("subtitle"):
+        parts.append(
+            f"<p class='text-xs text-slate-500 mb-3'>{esc(cfg['subtitle'])}</p>"
+        )
+    if cfg.get("tagline"):
+        parts.append(
+            f"<p class='text-sm font-semibold text-slate-800 mb-5 leading-snug'>{esc(cfg['tagline'])}</p>"
+        )
+    blocks = cfg.get("blocks")
+    if blocks:
+        cards: list[str] = []
+        for b in blocks:
+            tit = esc(b.get("title", ""))
+            items = b.get("items") or []
+            lis = "".join(
+                (
+                    "<li class='flex gap-2.5 text-sm text-slate-700 leading-snug'>"
+                    "<span class='text-calia-gold font-bold shrink-0 mt-0.5'>•</span>"
+                    f"<span>{esc(it)}</span></li>"
+                )
+                for it in items
+            )
+            cards.append(
+                "<div class='rounded-lg border border-slate-200 bg-white p-4 md:p-5 shadow-sm'>"
+                "<p class='text-xs font-black uppercase tracking-wide text-calia-navy "
+                "border-l-4 border-calia-gold pl-3 -ml-px mb-3'>"
+                f"{tit}</p>"
+                f"<ul class='list-none space-y-2.5 m-0 p-0'>{lis}</ul></div>"
+            )
+        parts.append(f"<div class='grid md:grid-cols-2 gap-4'>{''.join(cards)}</div>")
+        return "".join(parts)
+    bullets = cfg.get("bullets") or []
+    if bullets:
+        lis = "".join(
+            (
+                "<li class='flex gap-2.5 text-sm text-slate-700 leading-snug'>"
+                "<span class='text-calia-gold font-bold shrink-0'>•</span>"
+                f"<span>{esc(b)}</span></li>"
+            )
+            for b in bullets
+        )
+        parts.append(f"<ul class='list-none space-y-2 m-0 p-0'>{lis}</ul>")
+        return "".join(parts)
+    for para in cfg.get("paragraphs") or []:
+        parts.append(
+            f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(para)}</p>"
+        )
+    return "".join(parts)
+
+
 def slug_id(name: str) -> str:
     n = unicodedata.normalize("NFKD", name or "")
     n = "".join(c for c in n if not unicodedata.combining(c))
@@ -240,11 +293,8 @@ def main() -> None:
     def tier_anchor(t: str) -> str:
         return tier_slug_map.get(t, slug_id(t))
 
-    exec_bullets = bundle.get("executive_summary", {}).get("bullets") or []
-    exec_html = "".join(
-        f"<li class='flex gap-2'><span class='text-calia-gold font-bold'>•</span><span class='text-sm text-slate-700'>{esc(b)}</span></li>"
-        for b in exec_bullets
-    )
+    exec_summary_cfg = bundle.get("executive_summary") or {}
+    exec_body_html = render_clevel_body(exec_summary_cfg)
 
     meth = bundle.get("methodology", {}).get("columns") or []
     meth_cards = ""
@@ -284,16 +334,8 @@ def main() -> None:
     )
 
     cons = bundle.get("consolidated_narrative") or {}
-    cons_html = ""
-    if cons.get("title"):
-        cons_html = (
-            f"<section class='card-audit bg-slate-50 border border-slate-200'><h2 class='text-xl font-black text-calia-navy mb-2'>{esc(cons['title'])}</h2>"
-        )
-        if cons.get("subtitle"):
-            cons_html += f"<p class='text-xs text-slate-500 mb-4'>{esc(cons['subtitle'])}</p>"
-        for para in cons.get("paragraphs") or []:
-            cons_html += f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(para)}</p>"
-        cons_html += "</section>"
+    cons_title = esc(cons.get("title", "Síntese adicional do squad"))
+    cons_body_html = render_clevel_body(cons) if (cons.get("blocks") or cons.get("bullets") or cons.get("paragraphs")) else ""
 
     profiles_cfg = bundle.get("profiles") or []
     _pn = bundle.get("panels") or {}
@@ -503,7 +545,7 @@ def main() -> None:
 
     <section id="leitura" class="card-audit scroll-mt-20 bg-slate-50">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Leitura rápida</h2></div>
-      <ul class="space-y-2 list-none">{exec_html}</ul>
+      {exec_body_html}
     </section>
 
     <section id="como" class="card-audit scroll-mt-20">
@@ -517,7 +559,10 @@ def main() -> None:
       {profile_sections}
     </section>
 
-    <section id="sintese" class="scroll-mt-20 mb-6">{cons_html}</section>
+    <section id="sintese" class="card-audit scroll-mt-20 mb-6 bg-slate-50">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">{cons_title}</h2></div>
+      {cons_body_html}
+    </section>
 
     <section id="tabela" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
