@@ -274,6 +274,18 @@ def panel_row_index_for_profile(panel_key: str, raw_rows: list[list], pc: dict) 
     return None
 
 
+def _metric_cells_all_empty(rest_raw: list) -> bool:
+    """True se não há dado em nenhuma coluna de métrica (só traço, vazio ou equivalente)."""
+    miss = frozenset({"", "—", "–", "-", "n/a", "na", "N/A", "NA"})
+    for v in rest_raw:
+        t = str(v or "").strip().lower()
+        if t in frozenset({"n/a", "na"}):
+            t = ""
+        if t not in frozenset({"", "—", "–", "-"}):
+            return False
+    return True
+
+
 def build_ordered_panel_rows(
     panel_key: str,
     disp_headers: list[str],
@@ -281,7 +293,8 @@ def build_ordered_panel_rows(
     ordered_profiles: list[dict],
     raw_rows: list[list],
 ) -> tuple[list[str], list[list[str]]]:
-    """Cabeçalho Nome/camada + métricas; linhas na ordem da tabela resumo."""
+    """Cabeçalho Nome/camada + métricas; linhas na ordem da tabela resumo.
+    Omite criador quando não há perfil na rede (todas as métricas vazias/—)."""
     h0 = "Nome / camada"
     out_headers = [h0] + list(disp_headers[1:])
     n_rest = max(0, len(disp_headers) - 1)
@@ -299,6 +312,8 @@ def build_ordered_panel_rows(
         while len(rest_raw) < n_rest:
             rest_raw.append("—")
         rest_raw = rest_raw[:n_rest]
+        if _metric_cells_all_empty(rest_raw):
+            continue
         rest = [esc(str(x)) for x in rest_raw]
         out_rows.append([first] + rest)
     return out_headers, out_rows
@@ -570,6 +585,17 @@ def main() -> None:
         oh, body_rows = build_ordered_panel_rows(
             key, disp_h, disp_r, ordered_profiles, raw_r
         )
+        if not body_rows:
+            empty_msg = (
+                "<p class='text-sm text-slate-500 italic py-2'>Nenhum perfil da lista com dados nesta rede "
+                "nesta exportação.</p>"
+            )
+            foot_fmt = format_panel_footnote(foot)
+            foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
+            return (
+                f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
+                f"{empty_msg}{foot_p}</section>"
+            )
         tbl = render_table(oh, body_rows, html_safe_columns=frozenset({0}))
         foot_fmt = format_panel_footnote(foot)
         foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""

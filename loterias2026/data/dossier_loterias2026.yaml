@@ -40,7 +40,7 @@ methodology:
 
 panels:
   intro_note: "Números na data da coleta; conferir de novo na data do ar."
-  coverage_note: "Quem não aparece na tabela desta rede: na lista do projeto esse talento não tem perfil nessa plataforma. Célula vazia ou traço (—): o perfil entrou no painel, mas a ferramenta não trouxe aquele dado nesta exportação."
+  coverage_note: "Quem não entra na tabela desta rede: na lista não há perfil nessa plataforma ou não houve dado nenhum nesta exportação. Linha na tabela com traço (—) só em parte das colunas: o perfil entrou no painel, mas a ferramenta não trouxe aquele número."
 
   instagram:
     footnote: "Social Blade."
