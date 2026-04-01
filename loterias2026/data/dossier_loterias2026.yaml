@@ -25,6 +25,7 @@ briefing:
   limites_paragraphs:
     - "Os números de seguidores, engajamento e tabelas de ferramentas de mercado servem apenas para dimensionar alcance e perfil de audiência. Eles não substituem a análise dos três critérios acima."
     - "Quando o mesmo nome aparece com usuário ligeiramente diferente entre redes (por exemplo TikTok x Instagram), a linha do squad segue o briefing original; a tabela pode mostrar o usuário captado pela ferramenta."
+    - "O mercado de apostas no Brasil é objeto de cobertura intensa na imprensa e de escrutínio no Congresso. Isso aumenta a sensibilidade de qualquer peça institucional de loterias: vale distinguir matéria informativa, conteúdo que encaminha o leitor a um operador e campanha paga com celebridade."
   tiers_nota: "Classificação por tier segue o desenho do squad: Tier 1 e Tier 2 concentram maior peso de mídia; Mezzos = camada intermediária; Micros = capilaridade; Página = veículo digital (não é pessoa física). Nesta lista, Tier 2 inclui Rafael Gratta; Tier 1, Giovanna Pitel."
   tier_order:
     - "Tier 1"
@@ -36,7 +37,7 @@ briefing:
 methodology:
   columns:
     - label: "Imprensa e busca aberta"
-      body: "Notícias, veículos especializados e buscas em portais brasileiros. Prioridade para fatos com data e veículo identificável."
+      body: "Notícias, veículos especializados e buscas em portais brasileiros. Inclui, quando relevante, matérias sobre regulação de apostas, conteúdo editorial de veículos e iniciativas de educação financeira ligadas ao tema — sempre separando fato de rumor."
     - label: "Redes sociais"
       body: "Perfis públicos, trechos citados em matérias e amostras de conteúdo quando acessíveis sem login corporativo."
     - label: "Painéis de mercado"
@@ -148,15 +149,18 @@ consolidated_narrative:
   subtitle: "Consolidação interna (abril/2026) — cruzar com o detalhe por perfil abaixo."
   paragraphs:
     - "Visão geral: perfil majoritariamente favorável para campanhas de humor, diversidade e impacto social. Dois pontos pedem atenção de quem busca máxima neutralidade política na peça: Ivan Baron (trajetória pública ligada a causas e ao campo progressista) e Catraca Livre (veículo com linha editorial explícita)."
-    - "Não foi identificado, na pesquisa pública consolidada, trabalho atual claro de qualquer nome do squad como garoto-propaganda ou contrato anunciado com operador de apostas ou loteria concorrente à CAIXA. Menções a “aposta” em matérias de entretenimento ou nome de empresa (ex.: plataforma de cursos com “bet” no nome) foram separadas de parceria com casa de apostas."
-    - "Recomendação operacional: alinhar o roteiro da peça com compliance e, se necessário, pedir declaração ou mídia kit atualizado aos representantes dos talentos antes da assinatura."
+    - "No conjunto das pessoas físicas, não apareceu contrato público ou campanha anunciada como garoto-propaganda de casa de apostas ou loteria concorrente à CAIXA. Menções a “aposta” em entretenimento ou nome comercial (ex.: plataforma de cursos com “bet” no nome) foram tratadas à parte de parceria com operador de jogo."
+    - "Dois pontos específicos merecem atenção no eixo concorrência: o veículo Catraca Livre publicou material que orienta o leitor em direção a um jogo online com indicação de operador; e Rafael Gratta foi citado na imprensa como participante de um evento da bolsa e de uma corretora sobre conscientização em relação a apostas (projeto de educação financeira, não equivalência com publi de bet)."
+    - "O ambiente político e regulatório em torno de apostas e publicidade (incluindo debates no Congresso e cobertura sobre práticas abusivas) reforça a necessidade de clareza contratual e de monitoramento de novas peças nas redes após a contratação."
+    - "Recomendação operacional: alinhar o roteiro da peça com compliance e, se necessário, pedir declaração ou material atualizado aos representantes dos talentos antes da assinatura."
 
 executive_summary:
   bullets:
     - "Composição por camada: Tier 1 (Giovanna Pitel), Tier 2 (Rafael Gratta), Mezzos (quatro), Micros (seis), Página (Catraca Livre)."
     - "Treze nomes no total: doze pessoas físicas e um veículo digital. Todos foram analisados nos três critérios do briefing."
-    - "Concorrência (bets/loterias): nenhum vínculo comercial inequívoco com operador de jogo foi encontrado na pesquisa pública; Catraca cobre o tema como veículo de notícia, o que é diferente de ser patrocinada por uma bet."
-    - "Política: Ivan Baron e Catraca Livre concentram a maior exposição a pauta política explícita; Cristian Wariu atua em causas indígenas e ambientais; Giovanna Pitel tem posicionamento em pautas sociais sem filiação partidária clara na amostra."
+    - "Concorrência (bets/loterias): nas pessoas físicas, não há na amostra pública contrato anunciado com operador de apostas. Catraca Livre mistura reportagem sobre o setor com pelo menos um conteúdo que encaminha o leitor a um operador (jogo online com guia prático) — avaliar com jurídico/compliance antes de associar a marca da CAIXA ao veículo."
+    - "Rafael Gratta: imprensa especializada associa o nome a um evento de conscientização sobre apostas promovido por bolsa de valores e corretora (não é, por si só, publi de casa de apostas esportiva)."
+    - "Política: Ivan Baron e Catraca Livre concentram a maior exposição a pauta política explícita; Cristian Wariu atua em causas indígenas e ambientais; Giovanna Pitel tem posicionamento em pautas sociais sem filiação partidária clara na amostra. O tema apostas aparece na esfera pública (mídia e Congresso) de forma transversal — útil como pano de fundo de sensibilidade, não como rótulo partidário dos talentos."
     - "Polêmicas: Rafael Gratta aparece em debate público sobre conteúdo de saúde e método; Giovanna Pitel com histórico de exposição no BBB e repercussão na mídia; Mila Costa com episódio documentado de conta invadida; demais perfis com menor volume de alertas na imprensa aberta."
     - "Davi (apelido davizoa): presença relevante em TikTok e YouTube nos painéis; pouca matéria jornalística com o mesmo @ — manter checagem de identidade com a agência do talento."
 
@@ -169,7 +173,7 @@ profiles:
       tiktok: pitelgiovanna
       youtube: pitelgiovanna
       x: pitelgiovanna
-    narrativa: "Ex-BBB, assistente social. Conteúdo e presença em TV (Globo), campanhas de marcas de consumo e pautas sociais. TikTok no painel pode aparecer com usuário paralelo ao do briefing."
+    narrativa: "Ex-BBB, assistente social. Conteúdo e presença em TV (Globo), campanhas de marcas de consumo e pautas sociais; imprensa de cultura negra também destaca trajetória de empoderamento capilar. TikTok no painel pode aparecer com usuário paralelo ao do briefing."
     eixos:
       concorrencia: "Não localizada parceria pública com casa de apostas, cassino ou loteria concorrente. Campanhas com marcas de laticínios, telecom, cosméticos e entretenimento."
       polemicas: "Repercussão de reality show, críticas de colunistas e debates em torno de comportamento no BBB; relatos na imprensa sobre xenofobia após o programa; participação em pautas legislativas sensíveis citadas na mídia."
@@ -185,7 +189,7 @@ profiles:
       x: rafaelgratta
     narrativa: "Médico, conteúdo sobre ansiedade, foco e produtos digitais próprios. Livro com editora grande. No TikTok, painéis de mercado podem apontar conta com grafia diferente da do briefing."
     eixos:
-      concorrencia: "Sem evidência pública de contrato com operador de apostas ou loteria concorrente. Cursos revendidos em site com “bet” no nome da plataforma são de educação, não de jogo."
+      concorrencia: "Sem evidência pública de contrato com operador de apostas ou loteria concorrente. Cursos revendidos em site com “bet” no nome da plataforma são de educação, não de jogo. Matéria de mercado cita participação em evento na bolsa com corretora sobre conscientização em relação a apostas (projeto de educação financeira) — não equivale a campanha de casa de apostas; ruídos em fóruns exigem checagem de fonte."
       polemicas: "Discussão na imprensa e em comunidades online sobre rigor científico, promessas e modelo de negócio; matérias em veículos de grande circulação."
       politica: "Sem posicionamento político relevante mapeado na amostra."
 
@@ -239,10 +243,10 @@ profiles:
       tiktok: ivanbaron
       youtube: ivanbaron
       x: ivanbaron
-    narrativa: "Pedagogo e ativista por inclusão da pessoa com deficiência. Campanhas com órgãos públicos e presença em eventos nacionais. TikTok em painel de mercado pode usar variante do @."
+    narrativa: "Pedagogo e ativista por inclusão da pessoa com deficiência. Campanhas com órgãos públicos e presença em eventos nacionais; série sobre vida com paralisia cerebral amplamente citada na imprensa especializada. TikTok em painel de mercado pode usar variante do @."
     eixos:
       concorrencia: "Aparições em podcast e mídia ao lado de marcas de bebida e instituições — avaliar se o contrato da peça Loterias exige neutralidade sobre álcool. Sem bet na amostra."
-      polemicas: "Críticas e ataques de grupos contrários a pautas inclusivas; resposta pública a políticas governamentais."
+      polemicas: "Críticas e ataques de grupos contrários a pautas inclusivas; resposta pública a políticas governamentais. Caso de discriminação em cinema com condenação e indenização relatadas na imprensa — perfil de vítima de capacitismo, com desfecho judicial documentado."
       politica: "Alta visibilidade em causas associadas ao campo progressista; notícias sobre filiação partidária e possível candidatura — confirmar situação atual em fonte oficial se a peça exigir neutralidade eleitoral."
 
   - name: "Mila Costa"
@@ -337,8 +341,8 @@ profiles:
       tiktok: catracalivre
       youtube: catracalivre
       x: catracalivre
-    narrativa: "Portal de notícias e entretenimento. Publica sobre apostas como pauta jornalística. Histórico de crises editoriais e posicionamento político explícito em campanhas passadas."
+    narrativa: "Portal de notícias e entretenimento. Além de reportagens sobre o setor de apostas, há conteúdo que funciona como guia de jogo online com encaminhamento a operador — sensível para campanha institucional de loterias. Histórico de crises editoriais e posicionamento político explícito em campanhas passadas."
     eixos:
-      concorrencia: "Cobertura editorial do setor de apostas não é, por si só, patrocínio de bet; exige alinhamento de compliance sobre tom e monetização do site."
+      concorrencia: "Há matéria com orientação prática e chamada a operador de jogo online, além de outras páginas sobre apostas. Isso exige decisão explícita de compliance (associação da CAIXA ao veículo e à monetização do site), além do tom editorial."
       polemicas: "Crises antigas de cobertura (ex.: tragédias) e conflitos com personalidades públicas; checar atualização institucional do veículo."
       politica: "Linha editorial associada a esquerda e a causas progressistas em material público analisado."
