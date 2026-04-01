@@ -1,8 +1,9 @@
 # Always ON Loterias 2026 — Brand Safety
 
-## Dossiê HTML completo
+## Dossiê HTML (página do cliente)
 
-- **Fonte estruturada:** `data/dossier_loterias2026.yaml` (governança, painéis IG/TT/YT/X, síntese Proposta P, 13 perfis).
+- O HTML publicado **não** menciona repositório, `.md`, `.yaml` nem ferramentas internas — só o pedido da campanha, os três critérios, leitura clara e métricas como contexto.
+- **Edição interna:** `data/dossier_loterias2026.yaml` (textos e tabelas que alimentam o HTML).
 - **Evidências com URLs:** `research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`
 - **Metodologia:** `research/METODO_BRAND_SAFETY_LOTERIAS2026.md`
 - **Handles do squad:** `data/influencers.yaml`

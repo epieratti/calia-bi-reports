@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 """
-Gera dossiê HTML único (Brand Safety — Always ON Loterias 2026) a partir de
-`data/dossier_loterias2026.yaml` + `data/influencers.yaml`.
-
+Gera dossiê HTML (Always ON Loterias 2026) a partir de data/dossier_loterias2026.yaml.
 Saída: output/20260401-dossie-squad-always-on-loterias-2026.html
-
-Uso: cd loterias2026 && python scripts/build_dossier_completo.py
 """
 from __future__ import annotations
 
@@ -31,48 +27,71 @@ def slug_id(name: str) -> str:
 
 
 def load_yaml(path: Path) -> dict:
-    if not path.is_file():
-        raise FileNotFoundError(path)
     with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
 
 
-def render_table(headers: list[str], rows: list[list[str]], css: str = "min-w-full text-sm") -> str:
-    th = "".join(f"<th class='py-2 px-3 text-left text-xs uppercase text-slate-500 border-b border-slate-200'>{esc(h)}</th>" for h in headers)
+def render_table(headers: list[str], rows: list[list[str]]) -> str:
+    th = "".join(
+        f"<th class='py-2 px-3 text-left text-xs font-bold text-slate-600 border-b border-slate-200'>{esc(h)}</th>"
+        for h in headers
+    )
     trs = []
     for row in rows:
-        tds = "".join(f"<td class='py-2 px-3 border-b border-slate-100 align-top'>{c}</td>" for c in row)
+        tds = "".join(f"<td class='py-2 px-3 border-b border-slate-100 text-sm align-top'>{c}</td>" for c in row)
         trs.append(f"<tr>{tds}</tr>")
     return (
-        f"<div class='overflow-x-auto'><table class='{esc(css)}'>"
-        f"<thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table></div>"
+        "<div class='overflow-x-auto rounded border border-slate-200'>"
+        "<table class='min-w-full'>"
+        f"<thead class='bg-slate-50'><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table></div>"
     )
 
 
 def main() -> None:
     bundle = load_yaml(DATA / "dossier_loterias2026.yaml")
-    influencers = load_yaml(DATA / "influencers.yaml")
     meta = bundle.get("meta") or {}
-    generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    generated = datetime.now(timezone.utc).strftime("%d/%m/%Y")
 
-    title = esc(meta.get("title", "Dossiê Brand Safety — Loterias 2026"))
+    title = esc(meta.get("title", "Squad Always ON Loterias 2026 — Brand Safety"))
     subtitle = esc(meta.get("subtitle", ""))
     client = esc(meta.get("client_line", ""))
-    snapshot = esc(meta.get("snapshot", ""))
+    periodo = esc(meta.get("periodo", "Março–abril de 2026"))
 
     pw_set = bundle.get("password_sha256_hex") or [
         "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b",
-        "dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5",
     ]
     pw_json = ",\n            ".join(f"'{p}'" for p in pw_set)
 
-    # --- Governance & methodology (from YAML markdown-ish blocks)
-    gov_paras = bundle.get("governance", {}).get("paragraphs") or []
-    gov_html = "".join(f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(p)}</p>" for p in gov_paras)
+    # Pedido do briefing (texto fixo + opcional do YAML)
+    briefing_intro = bundle.get("briefing", {}).get("intro_paragraphs") or []
+    if not briefing_intro:
+        briefing_intro = [
+            "Levantamento dos nomes indicados pela criação para compor o squad de entregas ao longo de 2026, com foco em risco de imagem para uma campanha institucional de loterias.",
+        ]
+    briefing_html = "".join(
+        f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(p)}</p>" for p in briefing_intro
+    )
+
+    criterios = bundle.get("briefing", {}).get("criterios") or [
+        "Trabalhos atuais ou anteriores com marcas concorrentes (outras loterias, casas de apostas, cassinos online ou jogos de azar).",
+        "Falas, atitudes ou envolvimento em situações delicadas ou polêmicas.",
+        "Posicionamento político declarado ou inferido (conteúdo recorrente, causas, filiações).",
+    ]
+    crit_html = "<ol class='list-decimal pl-5 text-sm text-slate-700 space-y-2'>" + "".join(
+        f"<li>{esc(c)}</li>" for c in criterios
+    ) + "</ol>"
+
+    redes = bundle.get("briefing", {}).get("redes") or ["Instagram", "TikTok", "YouTube", "X"]
+    redes_html = "<p class='text-sm text-slate-700'><strong>Redes de ativação:</strong> " + esc(", ".join(redes)) + ".</p>"
+
+    limites = bundle.get("briefing", {}).get("limites_paragraphs") or []
+    limites_html = "".join(
+        f"<p class='text-sm text-slate-600 leading-relaxed mb-2'>{esc(p)}</p>" for p in limites
+    )
 
     exec_bullets = bundle.get("executive_summary", {}).get("bullets") or []
     exec_html = "".join(
-        f"<li class='flex gap-3'><span class='mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold'></span><span>{esc(b)}</span></li>"
+        f"<li class='flex gap-2'><span class='text-calia-gold font-bold'>•</span><span class='text-sm text-slate-700'>{esc(b)}</span></li>"
         for b in exec_bullets
     )
 
@@ -80,68 +99,49 @@ def main() -> None:
     meth_cards = ""
     for col in meth:
         meth_cards += (
-            f"<div class='p-4 bg-slate-50 border-t-2 border-calia-navy'>"
-            f"<p class='text-[10px] font-black uppercase text-calia-gold tracking-widest'>{esc(col.get('label', ''))}</p>"
-            f"<p class='text-sm text-slate-700 mt-2 leading-relaxed'>{esc(col.get('body', ''))}</p></div>"
+            f"<div class='p-4 bg-white border border-slate-200 rounded'>"
+            f"<p class='text-xs font-black text-calia-navy uppercase tracking-wide'>{esc(col.get('label', ''))}</p>"
+            f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{esc(col.get('body', ''))}</p></div>"
         )
 
-    # --- Panel tables
-    def panel_section(key: str, title_txt: str, src_note: str) -> str:
+    def panel_section(key: str, title_txt: str, foot: str) -> str:
         p = bundle.get("panels", {}).get(key) or {}
         if not p.get("headers") or not p.get("rows"):
             return ""
-        headers = p["headers"]
-        body_rows: list[list[str]] = []
-        for r in p["rows"]:
-            body_rows.append([esc(c) for c in r])
-        tbl = render_table(headers, body_rows)
+        body_rows = [[esc(c) for c in r] for r in p["rows"]]
+        tbl = render_table(p["headers"], body_rows)
+        foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot)}</p>" if foot else ""
         return (
-            f"<section class='card-audit'><div class='section-header mb-4'>"
-            f"<h2 class='text-xl font-black text-calia-navy uppercase tracking-tight'>{esc(title_txt)}</h2>"
-            f"<p class='source-tag'>{esc(src_note)}</p></div>{tbl}</section>"
+            f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>{tbl}{foot_p}</section>"
         )
 
-    panels_html = (
-        panel_section(
-            "instagram",
-            "Painel Instagram",
-            bundle.get("panels", {}).get("instagram", {}).get("source_note", ""),
-        )
-        + panel_section(
-            "tiktok",
-            "Painel TikTok",
-            bundle.get("panels", {}).get("tiktok", {}).get("source_note", ""),
-        )
-        + panel_section(
-            "youtube",
-            "Painel YouTube",
-            bundle.get("panels", {}).get("youtube", {}).get("source_note", ""),
-        )
-        + panel_section(
-            "x",
-            "Painel X (Twitter)",
-            bundle.get("panels", {}).get("x", {}).get("source_note", ""),
+    panels_intro = esc(
+        bundle.get("panels", {}).get(
+            "intro_note",
+            "Números abaixo são retratos de ferramentas de mercado (alcance, engajamento, público). Servem só para contextualizar escala e formato — a decisão de risco deve seguir os três critérios do briefing.",
         )
     )
+    panels_html = (
+        f"<p class='text-sm text-slate-600 mb-6'>{panels_intro}</p>"
+        + panel_section("instagram", "Instagram", bundle.get("panels", {}).get("instagram", {}).get("footnote", ""))
+        + panel_section("tiktok", "TikTok", bundle.get("panels", {}).get("tiktok", {}).get("footnote", ""))
+        + panel_section("youtube", "YouTube", bundle.get("panels", {}).get("youtube", {}).get("footnote", ""))
+        + panel_section("x", "X", bundle.get("panels", {}).get("x", {}).get("footnote", ""))
+    )
 
-    # --- Consolidated narrative block
     cons = bundle.get("consolidated_narrative") or {}
     cons_html = ""
     if cons.get("title"):
-        cons_html += (
-            f"<section class='card-audit border-l-4 border-calia-emerald'><div class='section-header'>"
-            f"<h2 class='text-xl font-black text-calia-navy uppercase'>{esc(cons['title'])}</h2>"
-            f"<p class='text-xs text-slate-500 mt-1'>{esc(cons.get('subtitle', ''))}</p></div>"
+        cons_html = (
+            f"<section class='card-audit bg-slate-50 border border-slate-200'><h2 class='text-xl font-black text-calia-navy mb-2'>{esc(cons['title'])}</h2>"
         )
+        if cons.get("subtitle"):
+            cons_html += f"<p class='text-xs text-slate-500 mb-4'>{esc(cons['subtitle'])}</p>"
         for para in cons.get("paragraphs") or []:
             cons_html += f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(para)}</p>"
         cons_html += "</section>"
 
-    # --- Profiles from bundle (order = YAML order)
-    profiles_yaml = influencers.get("profiles") or []
-    by_name = {p.get("name"): p for p in profiles_yaml}
     profiles_cfg = bundle.get("profiles") or []
-
     toc_items = ""
     profile_sections = ""
     summary_rows: list[list[str]] = []
@@ -149,57 +149,46 @@ def main() -> None:
     for i, pc in enumerate(profiles_cfg, 1):
         name = pc.get("name", "")
         slug = slug_id(name)
-        toc_items += f"<li><a class='toc-link' href='#{slug}'>{i}. {esc(name)}</a></li>"
+        toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{i}. {esc(name)}</a></li>"
 
         h = pc.get("handles") or {}
-        handle_bits = []
-        for label, val in h.items():
-            if val:
-                handle_bits.append(
-                    f"<span class='profile-handle'>{esc(label)}: @{esc(str(val).lstrip('@'))}</span>"
-                )
-        handles_html = "<br />".join(handle_bits)
-
-        tier = esc(pc.get("tier", "—"))
-        r_geral = esc(pc.get("risco_geral", "—"))
-
-        eixos = pc.get("eixos") or {}
-        eixo_rows = ""
-        for k, lab in (("concorrencia", "Concorrência"), ("polemicas", "Polêmicas"), ("politica", "Política")):
-            cell = eixos.get(k, "—")
-            conf = eixos.get(f"{k}_confianca", "")
-            extra = f" <span class='text-xs text-slate-400'>({esc(conf)})</span>" if conf else ""
-            eixo_rows += f"<tr><td class='py-2 pr-4 font-semibold text-slate-700'>{lab}</td><td class='py-2 text-sm'>{esc(cell)}{extra}</td></tr>"
-
-        narr = pc.get("narrativa") or ""
-        narr_html = f"<div class='bio-intro text-sm text-slate-700 whitespace-pre-line'>{esc(narr)}</div>" if narr else ""
-
-        fontes_note = pc.get("fontes_note", "")
-        fn_html = f"<p class='text-xs text-slate-500 mt-4 border-t border-slate-200 pt-3'>{esc(fontes_note)}</p>" if fontes_note else ""
-
-        profile_sections += (
-            f"<section id='{esc(slug)}' class='card-audit scroll-mt-24'>"
-            f"<div class='risk-analysis-box mb-6'>"
-            f"<div class='risk-analysis-box__head'>Perfil {i} · {tier}</div>"
-            f"<div class='risk-analysis-box__body'>"
-            f"<div class='risk-analysis-box__name'>{esc(name)}</div>"
-            f"<p class='text-xs font-bold text-slate-600 mb-2'>Risco geral (síntese): <span class='text-calia-navy'>{r_geral}</span></p>"
-            f"<div class='handles space-y-2'>{handles_html}</div>"
-            f"</div></div>"
-            f"{narr_html}"
-            f"<div class='deep-dive-box'><h4 class='text-xs font-black uppercase text-calia-navy mb-2'>Três eixos (esta compilação)</h4>"
-            f"<table class='w-full'>{eixo_rows}</table></div>"
-            f"{fn_html}</section>"
+        order = [("Instagram", h.get("instagram")), ("TikTok", h.get("tiktok")), ("YouTube", h.get("youtube")), ("X", h.get("x"))]
+        handles_line = " · ".join(
+            f"{lab} @{esc(str(v).lstrip('@'))}" for lab, v in order if v
         )
 
-        def clip(s: object, n: int = 160) -> str:
+        eixos = pc.get("eixos") or {}
+        narr = esc(pc.get("narrativa", ""))
+        risco = esc(pc.get("risco_geral", "—"))
+
+        box = lambda lab, txt: (
+            f"<div class='rounded border border-slate-200 p-4 bg-white'>"
+            f"<p class='text-xs font-black uppercase text-calia-gold mb-2'>{esc(lab)}</p>"
+            f"<p class='text-sm text-slate-700 leading-relaxed'>{esc(txt or '—')}</p></div>"
+        )
+
+        profile_sections += (
+            f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
+            f"<div class='flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-3 mb-4'>"
+            f"<h2 class='text-xl font-black text-calia-navy'>{i}. {esc(name)}</h2>"
+            f"<span class='text-sm font-semibold text-slate-600'>Síntese de risco: {risco}</span></div>"
+            f"<p class='text-xs text-slate-500 font-mono mb-4'>{handles_line}</p>"
+            f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
+            f"<div class='grid md:grid-cols-3 gap-4'>"
+            f"{box('1. Concorrência (bets / loterias / jogos)', eixos.get('concorrencia'))}"
+            f"{box('2. Polêmicas e situações delicadas', eixos.get('polemicas'))}"
+            f"{box('3. Política e pautas sensíveis', eixos.get('politica'))}"
+            f"</div></section>"
+        )
+
+        def clip(s: object, n: int = 140) -> str:
             t = str(s or "—")
             return esc(t if len(t) <= n else t[: n - 1] + "…")
 
         summary_rows.append(
             [
-                f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{tier}</span>",
-                r_geral,
+                f"<strong>{esc(name)}</strong>",
+                risco,
                 clip(eixos.get("concorrencia")),
                 clip(eixos.get("polemicas")),
                 clip(eixos.get("politica")),
@@ -207,7 +196,7 @@ def main() -> None:
         )
 
     sum_table = render_table(
-        ["Perfil", "Risco geral", "Concorrência (resumo)", "Polêmicas (resumo)", "Política (resumo)"],
+        ["Nome", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
         summary_rows,
     )
 
@@ -235,19 +224,12 @@ def main() -> None:
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
     body {{ font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }}
-    .card-audit {{ background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-bottom: 2.5rem; }}
-    .section-header {{ border-left: 6px solid #252525; padding-left: 1.5rem; margin-bottom: 1.5rem; }}
-    .profile-handle {{ display: inline-block; margin-top: 0.25rem; padding: 0.35rem 0.75rem; font-size: 0.8125rem; font-weight: 700; color: #252525; background: #f1f5f9; border: 1px solid #cbd5e1; border-left: 3px solid #f9a619; border-radius: 4px; font-family: ui-monospace, monospace; }}
+    .card-audit {{ background: white; border-radius: 6px; border: 1px solid #e2e8f0; padding: 1.75rem; margin-bottom: 1.5rem; }}
+    .section-header {{ border-left: 4px solid #252525; padding-left: 1rem; margin-bottom: 1rem; }}
     .toc-link {{ font-size: 0.875rem; font-weight: 600; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; }}
-    .source-tag {{ font-size: 9px; color: #94a3b8; font-weight: 600; text-transform: uppercase; }}
-    .deep-dive-box {{ background-color: #f1f5f9; border-radius: 4px; padding: 1.25rem; margin-top: 1.25rem; border-left: 4px solid #252525; }}
-    .risk-analysis-box {{ margin-top: 0; border-radius: 6px; border: 2px solid #252525; overflow: hidden; }}
-    .risk-analysis-box__head {{ background: #252525; color: #f9a619; padding: 0.65rem 1.25rem; font-size: 10px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; }}
-    .risk-analysis-box__body {{ background: #f1f5f9; padding: 1.25rem 1.5rem; }}
-    .risk-analysis-box__name {{ font-size: 0.9375rem; font-weight: 900; color: #252525; text-transform: uppercase; letter-spacing: 0.04em; }}
-    .bio-intro {{ background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; border-left: 4px solid #f9a619; }}
     .toc-list {{ margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }}
-    .toc-list li {{ margin-top: 0.5rem; }}
+    .toc-list li {{ margin-top: 0.35rem; }}
+    .sr-only {{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }}
   </style>
 </head>
 <body class="p-4 md:p-12">
@@ -267,75 +249,75 @@ def main() -> None:
     </div>
   </div>
 
-  <div id="dossier-root" class="hidden max-w-6xl mx-auto space-y-4">
-    <header id="topo" class="bg-calia-navy text-white p-10 rounded shadow-lg">
+  <div id="dossier-root" class="hidden max-w-4xl mx-auto">
+    <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded-lg shadow-lg mb-8">
       <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">{client}</p>
-      <h1 class="text-3xl md:text-4xl font-black mt-2 uppercase tracking-tight">{title}</h1>
-      <p class="text-sm opacity-90 mt-2 font-medium">{subtitle}</p>
-      <p class="text-xs opacity-70 mt-4">Snapshot declarado: {snapshot} · HTML gerado em {esc(generated)}</p>
+      <h1 class="text-2xl md:text-3xl font-black mt-2 leading-tight">{title}</h1>
+      <p class="text-sm opacity-90 mt-3">{subtitle}</p>
+      <p class="text-xs opacity-75 mt-4">Atualização: {periodo} · Documento: {esc(generated)}</p>
     </header>
 
-    <nav class="card-audit py-8" aria-label="Sumário">
-      <div class="section-header"><h2 class="text-lg font-black text-calia-navy uppercase">Neste dossiê</h2></div>
-      <ul class="toc-list">
-        <li><a class="toc-link" href="#governanca">Governança e limites</a></li>
-        <li><a class="toc-link" href="#executiva">Leitura executiva</a></li>
-        <li><a class="toc-link" href="#metodo">Metodologia e fontes</a></li>
-        <li><a class="toc-link" href="#painéis">Painéis de métricas</a></li>
-        <li><a class="toc-link" href="#consolidado">Relatório consolidado (Proposta P)</a></li>
-        <li><a class="toc-link" href="#perfis">Perfis (detalhe)</a></li>
-        <li><a class="toc-link" href="#matriz">Matriz comparativa</a></li>
-        <li><a class="toc-link" href="#repo">Evidências no repositório (Markdown)</a></li>
+    <nav class="card-audit py-6" aria-label="Sumário">
+      <div class="section-header"><h2 class="text-base font-black text-calia-navy uppercase">Sumário</h2></div>
+      <ul class="toc-list text-sm">
+        <li><a class="toc-link" href="#pedido">Pedido e critérios</a></li>
+        <li><a class="toc-link" href="#leitura">Leitura rápida</a></li>
+        <li><a class="toc-link" href="#como">Como foi analisado</a></li>
+        <li><a class="toc-link" href="#metricas">Métricas (contexto)</a></li>
+        <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
+        <li><a class="toc-link" href="#perfis">Perfis (um a um)</a></li>
+        <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
       </ul>
-      <h3 class="mt-8 mb-2 text-[10px] font-black uppercase text-slate-400">Perfis</h3>
+      <p class="text-xs text-slate-500 mt-6 font-semibold uppercase tracking-wide">Perfis</p>
       <ul class="toc-list">{toc_items}</ul>
     </nav>
 
-    <section id="governanca" class="card-audit scroll-mt-24 border-l-4 border-calia-crimson">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy uppercase">Governança — sem dados primários proprietários</h2></div>
-      {gov_html}
+    <section id="pedido" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Pedido e critérios de análise</h2></div>
+      {briefing_html}
+      <p class="text-sm font-bold text-calia-navy mt-4 mb-2">O que foi verificado para cada nome:</p>
+      {crit_html}
+      {redes_html}
+      <div class="mt-6 pt-4 border-t border-slate-200">
+        <p class="text-xs font-bold uppercase text-slate-500 mb-2">Leitura dos resultados</p>
+        {limites_html}
+      </div>
     </section>
 
-    <section id="executiva" class="card-audit scroll-mt-24 bg-gradient-to-b from-white to-slate-50">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy uppercase">Leitura executiva</h2></div>
-      <ul class="list-none space-y-2">{exec_html}</ul>
+    <section id="leitura" class="card-audit scroll-mt-20 bg-slate-50">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Leitura rápida</h2></div>
+      <ul class="space-y-2 list-none">{exec_html}</ul>
     </section>
 
-    <section id="metodo" class="card-audit scroll-mt-24">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy uppercase">Metodologia e fontes</h2></div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">{meth_cards}</div>
+    <section id="como" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Como foi analisado</h2></div>
+      <div class="grid sm:grid-cols-2 gap-3">{meth_cards}</div>
     </section>
 
-    <section id="painéis" class="scroll-mt-24">
-      <div class="section-header px-1"><h2 class="text-xl font-black text-calia-navy uppercase">Painéis de métricas (quatro redes)</h2>
-      <p class="text-sm text-slate-600 mt-2">Valores são snapshots de terceiros; conferir data no repositório (FONTES).</p></div>
+    <section id="metricas" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes (contexto)</h2></div>
       {panels_html}
     </section>
 
-    <div id="consolidado">{cons_html}</div>
+    <section id="sintese" class="scroll-mt-20 mb-6">{cons_html}</section>
 
-    <section id="perfis" class="scroll-mt-24">
-      <div class="section-header"><h2 class="text-2xl font-black text-calia-navy uppercase">Análise por perfil</h2></div>
+    <section id="perfis" class="scroll-mt-20">
+      <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise detalhada</h2></div>
       {profile_sections}
     </section>
 
-    <section id="matriz" class="card-audit scroll-mt-24">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy uppercase">Matriz comparativa (resumo)</h2></div>
+    <section id="tabela" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
+      <p class="text-sm text-slate-600 mb-4">Visão única dos três critérios. Detalhes estão em cada perfil acima.</p>
       {sum_table}
     </section>
 
-    <section id="repo" class="card-audit scroll-mt-24 bg-slate-50">
-      <h2 class="text-sm font-black uppercase text-slate-500">Linha de base com URLs</h2>
-      <p class="text-sm text-slate-700 mt-2">Toda evidência citável, tabelas de validação Perplexity/OSINT, relatórios externos e checklists permanecem em <code class='bg-white px-1 border rounded'>loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md</code> e <code class='bg-white px-1 border rounded'>METODO_BRAND_SAFETY_LOTERIAS2026.md</code>. Regenerar este HTML após editar <code class='bg-white px-1 border rounded'>data/dossier_loterias2026.yaml</code>.</p>
-    </section>
-
-    <footer class="text-center py-8 text-[10px] text-slate-400 font-bold uppercase tracking-widest border-t">
-      <a class="toc-link" href="#topo">Voltar ao topo</a> · Calia BI · Always ON Loterias 2026
+    <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">
+      <a class="toc-link" href="#topo">Voltar ao topo</a> · Agência Calia · Uso interno · Always ON Loterias 2026
     </footer>
   </div>
 
   <script>
-    /** SHA-256 da senha (trim): apenas caixa2026 — mesmo critério do dossiê 20260326 */
     const PASSWORD_SHA256_HEX_SET = new Set([ {pw_json} ]);
     async function sha256Hex(text) {{
       const buf = new TextEncoder().encode(text);

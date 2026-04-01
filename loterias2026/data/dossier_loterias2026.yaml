@@ -1,381 +1,323 @@
-# Fonte única para o HTML gerado por scripts/build_dossier_completo.py
-# Edite aqui e rode: python scripts/build_dossier_completo.py
+# Dados do dossiê HTML (uso interno Calia). Textos abaixo aparecem na página do cliente.
 
 meta:
-  title: "Dossiê Brand Safety — Always ON Loterias 2026"
-  subtitle: "Due diligence reputacional · Squad 13 perfis · Proposta P (54 conteúdos previstos)"
-  client_line: "Calia BI · Brand Safety & Due Diligence"
-  snapshot: "mar–abr/2026 (consolidado FONTES + painéis Social Blade / Upfluence / X)"
+  title: "Squad Always ON Loterias 2026 — Brand Safety"
+  subtitle: "Levantamento de risco de imagem para campanha institucional de loterias — 13 nomes indicados pela criação."
+  client_line: "Agência Calia | Unidade de BI — Cliente CAIXA"
+  periodo: "Março–abril de 2026"
 
-# Apenas caixa2026 (SHA-256 hex, trim) — igual critério do dossiê 20260326, sem alias
 password_sha256_hex:
   - "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b"
 
-repo_note: "Repositório de evidências (Markdown)"
-
-governance:
-  paragraphs:
-    - "Este dossiê HTML é uma camada de apresentação. A linha de base com URLs, validações cruzadas, OSINT e relatórios externos está em FONTES_BRAND_SAFETY_LOTERIAS2026.md."
-    - "Sem inventário proprietário sistemático das quatro redes como base contratual: “não consta na compilação” não prova ausência de risco. Lacunas estruturais em concorrência (lista negativa), marcas, polêmicas fora da imprensa e política sem fonte oficial."
-    - "Métricas de Social Blade, Upfluence e leitura de perfil no X são snapshots de terceiros; validar no app na data da decisão."
-
-executive_summary:
-  bullets:
-    - "Squad diverso (big names, mezzos, micros, página digital). Risco global preliminar baixo na síntese Proposta P; maior atenção a viés político explícito (Ivan Baron, Catraca Livre) e a exposição institucional/Globo (Pitel)."
-    - "Concorrência (bets/loterias): na compilação com URLs não há parceria com operador de jogo atribuída de forma inequívoca ao squad; falsos positivos (ex.: “Bet” em nome de curso) foram descartados onde documentado."
-    - "Gratta: debate público (mídia, Reddit) sobre linha de conteúdo/saúde; evento B3 citado no relatório P não está confirmado com URL na FONTES — pendência."
-    - "Davi (@davizoa): imprensa fina; painéis e OSINT mostram presença em TikTok/YouTube — manter desambiguação e briefing."
-    - "Próximo passo de excelência: cruzar segmento exato da peça Loterias + monitorar X; para lacunas, briefing/agência ou arquivo de posts se a governança exigir."
+briefing:
+  intro_paragraphs:
+    - "Para o Always ON de Loterias 2026, a criação indicou um squad com entregas ao longo do ano. Este documento consolida o levantamento público sobre cada nome: concorrência com o universo de apostas e jogos, situações delicadas ou polêmicas, e posicionamento político."
+    - "As quatro redes previstas no planejamento (Instagram, TikTok, YouTube e X) foram consideradas na coleta. Onde a imprensa ou o histórico público não trazem um tema, isso está indicado de forma explícita — ausência de achado na pesquisa não equivale a garantia de que o tema não exista em posts não captados."
+  criterios:
+    - "Trabalhos atuais ou anteriores com marcas concorrentes: outras loterias, casas de apostas, cassinos online ou jogos de azar."
+    - "Falas, atitudes ou envolvimento em situações delicadas e polêmicas."
+    - "Posicionamento político: declarações, causas recorrentes ou filiação, quando identificáveis em fonte pública."
+  redes:
+    - "Instagram"
+    - "TikTok"
+    - "YouTube"
+    - "X"
+  limites_paragraphs:
+    - "Os números de seguidores, engajamento e tabelas de ferramentas de mercado servem apenas para dimensionar alcance e perfil de audiência. Eles não substituem a análise dos três critérios acima."
+    - "Quando o mesmo nome aparece com usuário ligeiramente diferente entre redes (por exemplo TikTok x Instagram), a linha do squad segue o briefing original; a tabela pode mostrar o usuário captado pela ferramenta."
 
 methodology:
   columns:
-    - label: "Web aberta"
-      body: "Notícias, RSS (Google Notícias), veículos de trade, sites institucionais, agregadores. Hierarquia: primário verificável > jornal > agregador."
-    - label: "Painéis"
-      body: "Instagram e YouTube — Social Blade (socialblade.com). TikTok — Upfluence TikTok Audit Tool. X — leitura direta do perfil (export consolidado)."
-    - label: "OSINT (opcional)"
-      body: "Sherlock, yt-dlp, tentativa Instaloader — logs em loterias2026/research/osint_runs/20260331/; limites de 403/login documentados."
-    - label: "Relatórios externos"
-      body: "Inteligência reputacional (pacote URLs) e dossiê consolidado Proposta P (01/04/2026) incorporados na FONTES com tabela de validação cruzada."
+    - label: "Imprensa e busca aberta"
+      body: "Notícias, veículos especializados e buscas em portais brasileiros. Prioridade para fatos com data e veículo identificável."
+    - label: "Redes sociais"
+      body: "Perfis públicos, trechos citados em matérias e amostras de conteúdo quando acessíveis sem login corporativo."
+    - label: "Painéis de mercado"
+      body: "Instagram e YouTube (Social Blade), TikTok (Upfluence), leitura consolidada de perfis no X — sempre como apoio, não como prova única de risco."
 
 panels:
+  intro_note: "Retratos de alcance e engajamento em data próxima à elaboração do dossiê. Conferir evolução no dia da contratação ou veiculação."
+
   instagram:
-    source_note: "Social Blade · socialblade.com · tabela alinhada ao influencers.yaml"
+    footnote: "Fonte: Social Blade. Coluna @ = usuário do briefing."
     headers:
-      - "Criador"
-      - "Instagram (YAML)"
+      - "Nome"
+      - "@"
       - "Seguidores"
-      - "Δ 14d"
+      - "Variação 14 dias"
       - "Média/dia"
       - "Média/semana"
       - "Posts"
-      - "Curtidas ø"
-      - "Coment. ø"
+      - "Curtidas méd."
+      - "Coment. méd."
       - "Engaj."
       - "Obs."
     rows:
-      - ["Rafael Gratta", "rafaelgratta", "3.547.067", "-13.059", "-1.011", "-869", "1.110", "16K", "271", "0,46%", "Perda acentuada no período"]
+      - ["Rafael Gratta", "rafaelgratta", "3.547.067", "-13.059", "-1.011", "-869", "1.110", "16K", "271", "0,46%", "Queda acentuada no período"]
       - ["Catraca Livre", "catracalivre", "1.463.093", "-949", "-65", "-41", "12.545", "609", "12", "0,04%", "Menor engajamento do grupo"]
-      - ["Pitel", "pitelgiovanna", "1.269.480", "-1.760", "-170", "-112", "838", "4,3K", "91", "0,35%", "Queda constante"]
-      - ["Mila Costa", "nocasomila", "724.674", "-66", "+46", "-3", "1.425", "26K", "1,3K", "3,80%", "Engajamento alto; estabilidade"]
-      - ["Índio Behn", "indio.behn", "619.868", "+21.330", "+949", "+1.668", "2.897", "23K", "799", "3,80%", "Maior crescimento nominal"]
+      - ["Giovanna Pitel", "pitelgiovanna", "1.269.480", "-1.760", "-170", "-112", "838", "4,3K", "91", "0,35%", "Queda constante"]
+      - ["Mila Costa", "nocasomila", "724.674", "-66", "+46", "-3", "1.425", "26K", "1,3K", "3,80%", "Engajamento alto"]
+      - ["Índio Behn", "indio.behn", "619.868", "+21.330", "+949", "+1.668", "2.897", "23K", "799", "3,80%", "Forte crescimento"]
       - ["Ivan Baron", "ivanbaron", "550.499", "+882", "+45", "+56", "2.176", "8,3K", "180", "1,50%", "Crescimento positivo"]
       - ["Cleane Sampaio", "cleanesampaioo", "523.359", "+4.010", "+197", "+256", "1.369", "10K", "422", "2%", "Crescimento consistente"]
-      - ["Megh Melry", "megh_melry", "488.455", "0", "0", "0", "0", "0", "0", "0%", "Métricas zeradas no painel — validar; atividade recente no perfil (briefing)"]
-      - ["Aline com Certeza", "comcertezaaline", "230.134", "+2.063", "+310", "+203", "637", "5K", "37", "2,20%", "Bom equilíbrio de métricas"]
-      - ["Paula, a mineira", "mineira.paula", "176.755", "+771", "+83", "+41", "642", "1,2K", "45", "0,69%", "Ganho diário regular"]
-      - ["Davizoa", "davizoa", "101.442", "+2.396", "+151", "+342", "344", "125K", "1,5K", "125%", "Engajamento atípico — conferir fórmula do painel"]
-      - ["Cereja", "cerejaaaaaa", "92.175", "-76", "+1", "-4", "365", "580", "51", "0,69%", "Estabilidade com viés de queda"]
-      - ["Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%", "Engajamento alto; base nichada"]
+      - ["Megh Merly", "megh_melry", "488.455", "0", "0", "0", "0", "0", "0", "0%", "Painel zerado — validar no app; há atividade recente no perfil"]
+      - ["Aline Costa", "comcertezaaline", "230.134", "+2.063", "+310", "+203", "637", "5K", "37", "2,20%", "Equilíbrio de métricas"]
+      - ["Paula Mineira", "mineira.paula", "176.755", "+771", "+83", "+41", "642", "1,2K", "45", "0,69%", "Ganho regular"]
+      - ["Davi", "davizoa", "101.442", "+2.396", "+151", "+342", "344", "125K", "1,5K", "125%", "Taxa atípica — conferir metodologia do painel"]
+      - ["Cereja", "cerejaaaaaa", "92.175", "-76", "+1", "-4", "365", "580", "51", "0,69%", "Estável com leve queda"]
+      - ["Cristian Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%", "Alta taxa; base menor"]
 
   tiktok:
-    source_note: "Upfluence · www.upfluence.com/tiktok-audit-tool"
+    footnote: "Fonte: Upfluence. Quando o relatório mostra @ diferente do briefing (ex.: variação de grafia), o squad segue o briefing; a linha descreve o que a ferramenta captou."
     headers:
-      - "Perfil (Upfluence)"
-      - "TikTok (YAML)"
+      - "Nome no relatório"
+      - "@ briefing"
       - "Engaj."
       - "Seguidores"
-      - "Com. ø"
-      - "Curt. ø"
-      - "Comp. ø"
-      - "Repr. ø"
+      - "Com. méd."
+      - "Curt. méd."
+      - "Comp. méd."
+      - "Repr. méd."
       - "Seguindo"
-      - "Total curt."
+      - "Total curtidas"
       - "Vídeos"
-      - "%F"
-      - "%M"
+      - "% mulheres"
+      - "% homens"
     rows:
-      - ["ivanvbaron (Ivan Baron)", "ivanbaron ⚠", "0,12%", "671,5K", "83,62", "720,64", "42,09", "14,6K", "805,0", "12,9M", "1,4K", "N/A", "N/A"]
-      - ["cleane_sampaioo (Cleane)", "cleanesampaioo ⚠", "0,41%", "190,7K", "19,6", "754,84", "45,16", "255,7K", "35,0", "4,3M", "0,0", "N/A", "N/A"]
-      - ["meghmelry (Megh Melry)", "megh_melry ⚠", "0,18%", "1,4M", "94,15", "2,4K", "82,85", "50,9K", "559,0", "24,7M", "0,0", "N/A", "N/A"]
+      - ["ivanvbaron", "ivanbaron", "0,12%", "671,5K", "83,62", "720,64", "42,09", "14,6K", "805,0", "12,9M", "1,4K", "—", "—"]
+      - ["cleane_sampaioo", "cleanesampaioo", "0,41%", "190,7K", "19,6", "754,84", "45,16", "255,7K", "35,0", "4,3M", "0", "—", "—"]
+      - ["meghmelry", "megh_melry", "0,18%", "1,4M", "94,15", "2,4K", "82,85", "50,9K", "559,0", "24,7M", "0", "—", "—"]
       - ["indio.behn", "indio.behn", "0,44%", "263,5K", "49,52", "1,1K", "178,83", "12,4K", "1,3K", "5,9M", "1,2K", "76,44%", "23,56%"]
-      - ["rafaelgrattap (Rafael Gratta)", "rafaelgratta ⚠", "0,35%", "1,3M", "53,67", "4,5K", "444,75", "38,2K", "73,0", "36,7M", "983,0", "57,44%", "42,56%"]
-      - ["giovannapiteloficial (Pitel)", "pitelgiovanna ⚠", "2,00%", "110,3K", "15,4", "2,2K", "29,17", "17,9K", "86,0", "3,4M", "461,0", "N/A", "N/A"]
-      - ["Catraca Livre", "catracalivre", "N/A", "204,1K", "N/A", "N/A", "N/A", "N/A", "54", "4,8M", "923", "N/A", "N/A"]
-      - ["mineira.paula", "mineira.paula", "0,07%", "345,1K", "8,5", "240,07", "12,86", "3,7K", "2,1K", "8,0M", "1,2K", "N/A", "N/A"]
-      - ["Davizoa", "davizoa", "N/A", "220,7K", "N/A", "N/A", "N/A", "N/A", "1397", "4,6M", "208", "N/A", "N/A"]
-      - ["comcertezaaline (Aline)", "comcertezaaline", "0,16%", "5,1M", "46,07", "8,2K", "123", "613,9K", "810,0", "55,7M", "614,0", "75,28%", "24,72%"]
-      - ["cerejaaaaaaaa", "cerejaaaaaa ⚠", "0,40%", "9,8K", "1,75", "38", "3,25", "639,25", "173,0", "53,3K", "0,0", "68,17%", "31,83%"]
-      - ["Wari'u (@cristianwariu)", "cristianwariu", "N/A", "110,6K", "N/A", "N/A", "N/A", "N/A", "955", "1,5M", "97", "N/A", "N/A"]
-      - ["nocasomila (Mila Costa)", "nocasomila", "4,05%", "44,4K", "26", "1,8K", "192,8", "21,4K", "73,0", "1,2M", "151,0", "86,42%", "13,58%"]
+      - ["rafaelgrattap", "rafaelgratta", "0,35%", "1,3M", "53,67", "4,5K", "444,75", "38,2K", "73,0", "36,7M", "983", "57,44%", "42,56%"]
+      - ["giovannapiteloficial", "pitelgiovanna", "2,00%", "110,3K", "15,4", "2,2K", "29,17", "17,9K", "86,0", "3,4M", "461", "—", "—"]
+      - ["Catraca Livre", "catracalivre", "—", "204,1K", "—", "—", "—", "—", "54", "4,8M", "923", "—", "—"]
+      - ["mineira.paula", "mineira.paula", "0,07%", "345,1K", "8,5", "240,07", "12,86", "3,7K", "2,1K", "8,0M", "1,2K", "—", "—"]
+      - ["Davizoa", "davizoa", "—", "220,7K", "—", "—", "—", "—", "1397", "4,6M", "208", "—", "—"]
+      - ["comcertezaaline", "comcertezaaline", "0,16%", "5,1M", "46,07", "8,2K", "123", "613,9K", "810,0", "55,7M", "614", "75,28%", "24,72%"]
+      - ["cerejaaaaaaaa", "cerejaaaaaa", "0,40%", "9,8K", "1,75", "38", "3,25", "639,25", "173,0", "53,3K", "0", "68,17%", "31,83%"]
+      - ["cristianwariu", "cristianwariu", "—", "110,6K", "—", "—", "—", "—", "955", "1,5M", "97", "—", "—"]
+      - ["nocasomila", "nocasomila", "4,05%", "44,4K", "26", "1,8K", "192,8", "21,4K", "73,0", "1,2M", "151", "86,42%", "13,58%"]
 
   youtube:
-    source_note: "Social Blade · socialblade.com"
+    footnote: "Fonte: Social Blade. Canais sem linha: conferir se o talento usa outro nome de canal ou só shorts integrados a outro perfil."
     headers:
-      - "Canal (Social Blade)"
-      - "YouTube (YAML)"
+      - "Canal (nome no painel)"
+      - "@ briefing"
       - "Inscritos"
       - "Visualizações"
       - "Vídeos"
     rows:
-      - ["Aline com Certeza", "@comcertezaaline", "2M", "1,1B", "563"]
-      - ["Rafael Gratta", "@rafaelgratta", "1,2M", "178M", "1,1K"]
-      - ["Catraca Livre", "@catracalivre", "308K", "48M", "3,3K"]
-      - ["Índio Behn", "@indio.behn", "76K", "15M", "1,6K"]
-      - ["WARIU - povos Indígenas", "@cristianwariu", "55K", "1,8M", "48"]
-      - ["No caso Mila", "@nocasomila", "15K", "176K", "14"]
-      - ["Cleane Sampaio", "@cleanesampaioo", "2,6K", "101K", "32"]
-      - ["Paula Helena - Mineira", "@mineira.paula", "2K", "950K", "77"]
-      - ["Davizoa", "@davizoa", "1K", "24K", "18"]
-      - ["Megh Melry", "@megh_melry", "133", "2,5K", "6"]
+      - ["Aline com Certeza", "comcertezaaline", "2M", "1,1B", "563"]
+      - ["Rafael Gratta", "rafaelgratta", "1,2M", "178M", "1,1K"]
+      - ["Catraca Livre", "catracalivre", "308K", "48M", "3,3K"]
+      - ["Índio Behn", "indio.behn", "76K", "15M", "1,6K"]
+      - ["WARIU — povos indígenas", "cristianwariu", "55K", "1,8M", "48"]
+      - ["No caso Mila", "nocasomila", "15K", "176K", "14"]
+      - ["Cleane Sampaio", "cleanesampaioo", "2,6K", "101K", "32"]
+      - ["Paula Helena — Mineira", "mineira.paula", "2K", "950K", "77"]
+      - ["Davizoa", "davizoa", "1K", "24K", "18"]
+      - ["Megh Merly", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    source_note: "Leitura direta do perfil no X (export consolidado)"
+    footnote: "Leitura direta do perfil no X em data da coleta. “Ativo” = havia postagens recentes na amostra."
     headers:
-      - "Perfil (rótulo)"
-      - "@ extract"
-      - "X (YAML)"
+      - "Nome"
+      - "@ visto"
+      - "@ briefing"
       - "Seguidores"
       - "Ativo?"
       - "Teor recente (resumo)"
     rows:
-      - ["Catraca Livre", "@CatracaLivre", "catracalivre", "1,5M", "Sim", "#publinaCatraca; eventos culturais"]
-      - ["Tseremeywa / Wariu", "@cristianwariu", "cristianwariu", "11,8K", "Sim", "Cotidiano, humor, desporto"]
-      - ["Ivan Baron", "@ivanbaron", "ivanbaron", "47,8K", "Sim", "Representatividade, pesquisa eleitoral, inclusão, novelas"]
-      - ["Cleane Sampaio", "@cleane_sampaio", "cleanesampaioo ⚠", "223", "Não", "Música; luto Gal Costa 2022"]
-      - ["Índio Behn", "@indiobehn", "indio_behn ⚠", "187", "Não", "Projetos; retorno mar/2024"]
-      - ["Rafael Gratta", "@RafaGratta", "rafaelgratta ⚠", "534", "Não", "Estoicismo, hábitos, foco (fim 2025)"]
-      - ["Pitel", "@giovannapitel", "pitelgiovanna ⚠", "70,2K", "Sim", "Rio/lazer; realities"]
+      - ["Catraca Livre", "CatracaLivre", "catracalivre", "1,5M", "Sim", "Conteúdo patrocinado e cultura"]
+      - ["Cristian Wariu", "cristianwariu", "cristianwariu", "11,8K", "Sim", "Cotidiano, humor, esporte"]
+      - ["Ivan Baron", "ivanbaron", "ivanbaron", "47,8K", "Sim", "Inclusão, política, entretenimento"]
+      - ["Cleane Sampaio", "cleane_sampaio", "cleanesampaioo", "223", "Não", "Última atividade antiga; foco musical"]
+      - ["Índio Behn", "indiobehn", "indio_behn", "187", "Não", "Retorno esporádico ao X"]
+      - ["Rafael Gratta", "RafaGratta", "rafaelgratta", "534", "Não", "Desenvolvimento pessoal e hábitos"]
+      - ["Giovanna Pitel", "giovannapitel", "pitelgiovanna", "70,2K", "Sim", "Rio de Janeiro, realities"]
 
 consolidated_narrative:
-  title: "Relatório consolidado — Proposta P (54 conteúdos)"
-  subtitle: "Análise 01/04/2026 — síntese; ver validação cruzada na FONTES"
+  title: "Síntese adicional do squad"
+  subtitle: "Consolidação interna (abril/2026) — cruzar com o detalhe por perfil abaixo."
   paragraphs:
-    - "Conclusão preliminar do texto-fonte: risco baixo para o squad; micros/humor com perfil limpo. Viés político explícito de esquerda destacado em Ivan Baron e Catraca Livre (possível polarização). Pitel com alta exposição Globo — checar compatibilidade interna."
-    - "Recomendação do texto-fonte: uso para humor, inclusão, diversidade e impacto social; para neutralidade máxima considerar substituição de Baron ou Catraca. Nenhum trabalho atual com marcas concorrentes evidentes no texto-fonte — cruzar com FONTES para URLs."
-    - "Divergências já mapeadas na FONTES: Gratta+B3 (pendência de URL); Megh+Adames; Paula+parcerias Onda Sul; Aline (alto alcance TT vs narrativa de baixa visibilidade); Catraca condenação 2017 (pendência de URL)."
+    - "Visão geral: perfil majoritariamente favorável para campanhas de humor, diversidade e impacto social. Dois pontos pedem atenção de quem busca máxima neutralidade política na peça: Ivan Baron (trajetória pública ligada a causas e ao campo progressista) e Catraca Livre (veículo com linha editorial explícita)."
+    - "Não foi identificado, na pesquisa pública consolidada, trabalho atual claro de qualquer nome do squad como garoto-propaganda ou contrato anunciado com operador de apostas ou loteria concorrente à CAIXA. Menções a “aposta” em matérias de entretenimento ou nome de empresa (ex.: plataforma de cursos com “bet” no nome) foram separadas de parceria com casa de apostas."
+    - "Recomendação operacional: alinhar o roteiro da peça com compliance e, se necessário, pedir declaração ou mídia kit atualizado aos representantes dos talentos antes da assinatura."
+
+executive_summary:
+  bullets:
+    - "Treze nomes: doze pessoas físicas e a página Catraca Livre. Todos foram lidos nos três critérios do briefing."
+    - "Concorrência (bets/loterias): nenhum vínculo comercial inequívoco com operador de jogo foi encontrado na pesquisa pública; Catraca cobre o tema como veículo de notícia, o que é diferente de ser patrocinada por uma bet."
+    - "Política: Ivan Baron e Catraca Livre concentram a maior exposição a pauta política explícita; Cristian Wariu atua em causas indígenas e ambientais; Giovanna Pitel tem posicionamento em pautas sociais sem filiação partidária clara na amostra."
+    - "Polêmicas: Rafael Gratta aparece em debate público sobre conteúdo de saúde e método; Giovanna Pitel com histórico de exposição no BBB e repercussão na mídia; Mila Costa com episódio documentado de conta invadida; demais perfis com menor volume de alertas na imprensa aberta."
+    - "Davi (apelido davizoa): presença relevante em TikTok e YouTube nos painéis; pouca matéria jornalística com o mesmo @ — manter checagem de identidade com a agência do talento."
 
 profiles:
   - name: "Giovanna Pitel"
-    tier: "Big Name"
-    risco_geral: "Baixo (síntese P) — alta exposição mídia"
+    risco_geral: "Baixo a moderado — alta visibilidade na mídia"
     handles:
       instagram: pitelgiovanna
       tiktok: pitelgiovanna
       youtube: pitelgiovanna
       x: pitelgiovanna
-    narrativa: "Ex-BBB 24, assistente social. Direitos das mulheres, saúde mental, cultura amazônese/periferia. Campanhas documentadas: Piracanjuba, Globo (Mesacast/debates BBB), TIM/Natura (prints na FONTES)."
+    narrativa: "Ex-BBB, assistente social. Conteúdo e presença em TV (Globo), campanhas de marcas de consumo e pautas sociais. TikTok no painel pode aparecer com usuário paralelo ao do briefing."
     eixos:
-      concorrencia: "Sem evidência de parceria com bet/loteria concorrente na compilação com URL."
-      concorrencia_confianca: "Alta (com ressalvas de inventário)"
-      polemicas: "BBB/Mesacast; xenofobia pós-reality; pautas sensíveis (PL, eventos) — ver FONTES."
-      polemicas_confianca: "Alta em trechos com matéria/print"
-      politica: "Pautas progressistas/sociais; sem filiação partidária explícita na síntese P."
-      politica_confianca: "Média a alta"
-    fontes_note: "§1 FONTES + painéis (IG/TikTok @ distintos na Upfluence)."
+      concorrencia: "Não localizada parceria pública com casa de apostas, cassino ou loteria concorrente. Campanhas com marcas de laticínios, telecom, cosméticos e entretenimento."
+      polemicas: "Repercussão de reality show, críticas de colunistas e debates em torno de comportamento no BBB; relatos na imprensa sobre xenofobia após o programa; participação em pautas legislativas sensíveis citadas na mídia."
+      politica: "Atuação em causas sociais e de periferia; posicionamento em temas de gênero e direitos ligados a notícias públicas. Sem filiação partidária explícita identificada na amostra."
 
   - name: "Rafael Gratta"
-    tier: "Big Name"
-    risco_geral: "Baixo-médio (monetização/críticas conteúdo)"
+    risco_geral: "Moderado — reputação em conteúdo de saúde e vendas"
     handles:
       instagram: rafaelgratta
       tiktok: rafaelgratta
       youtube: rafaelgratta
       x: rafaelgratta
-    narrativa: "Saúde mental, foco, ansiedade, infoproduto/AURA, livro Intrínseca. TikTok na Upfluence sob @rafaelgrattap."
+    narrativa: "Médico, conteúdo sobre ansiedade, foco e produtos digitais próprios. Livro com editora grande. No TikTok, painéis de mercado podem apontar conta com grafia diferente da do briefing."
     eixos:
-      concorrencia: "Sem parceria bet na compilação; cuidado com falso positivo 'Bet Cursos' (plataforma de curso)."
-      concorrencia_confianca: "Alta"
-      polemicas: "Debate TDAH/EM, Reddit, hipótese vídeo críticas — ver FONTES."
-      polemicas_confianca: "Média a alta"
-      politica: "Neutro na síntese P e na amostra de buscas."
-      politica_confianca: "Baixa a média"
-    fontes_note: "§2 FONTES; evento B3 (P) não confirmado por URL na FONTES."
+      concorrencia: "Sem evidência pública de contrato com operador de apostas ou loteria concorrente. Cursos revendidos em site com “bet” no nome da plataforma são de educação, não de jogo."
+      polemicas: "Discussão na imprensa e em comunidades online sobre rigor científico, promessas e modelo de negócio; matérias em veículos de grande circulação."
+      politica: "Sem posicionamento político relevante mapeado na amostra."
 
   - name: "Índio Behn"
-    tier: "Mezzo"
-    risco_geral: "Muito baixo"
+    risco_geral: "Baixo"
     handles:
       instagram: indio.behn
       tiktok: indio.behn
       youtube: indio.behn
       x: indio_behn
-    narrativa: "Humor, Dra. Rosângela, conteúdo leve. X com baixa atividade no extract."
+    narrativa: "Humorista e ator, personagens como a Dra. Rosângela. Conteúdo leve e familiar."
     eixos:
-      concorrencia: "Sem bet; menção 'loteria' em contexto artístico (espetáculo) na FONTES."
-      concorrencia_confianca: "Média"
-      polemicas: "Sem episódio grave mapeado."
-      polemicas_confianca: "Baixa a média"
-      politica: "Neutro / piada sem lado (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§3 FONTES."
+      concorrencia: "Sem vínculo com bet ou loteria concorrente. Menções a “loteria” em títulos de espetáculo são contexto artístico, não publicidade de operador."
+      polemicas: "Nenhum episódio grave recorrente na imprensa analisada."
+      politica: "Humor eventualmente toca política sem adesão explícita a partido na amostra. Perfil no X com pouca atividade recente na leitura fechada."
 
   - name: "Megh Merly"
-    tier: "Mezzo"
     risco_geral: "Baixo"
     handles:
       instagram: megh_melry
       tiktok: megh_melry
       youtube: megh_melry
       x: megh_melry
-    narrativa: "Humor com avó; TikTok alto alcance no painel Upfluence. Desambiguação Juliana Merhy na FONTES."
+    narrativa: "Humor com família (figura da avó). Forte presença no TikTok segundo painéis de mercado."
     eixos:
-      concorrencia: "Não atribuído bet na compilação."
-      concorrencia_confianca: "Baixa a média"
-      polemicas: "Não atribuir caso judicial de outra pessoa."
-      polemicas_confianca: "Alta (desambiguação)"
-      politica: "Satírico/neutro (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§4 FONTES; IG Social Blade com zeros — validar sync."
+      concorrencia: "Não atribuir à criadora casos judiciais ou fofocas que na imprensa citam outra pessoa com nome parecido."
+      polemicas: "Sem alerta sólido na amostra, além do cuidado com homônimos."
+      politica: "Tom satírico, sem agenda partidária clara na amostra."
 
   - name: "Cleane Sampaio"
-    tier: "Mezzo"
-    risco_geral: "Muito baixo"
+    risco_geral: "Baixo"
     handles:
       instagram: cleanesampaioo
       tiktok: cleanesampaioo
       youtube: cleanesampaioo
       x: cleanesampaioo
-    narrativa: "Cantora, The Voice, humor cearense. X inativo no extract (@cleane_sampaio vs YAML)."
+    narrativa: "Cantora, ex-The Voice, humor ligado ao Ceará. X pode aparecer com grafia diferente no extrato da rede."
     eixos:
-      concorrencia: "Sem bet."
-      concorrencia_confianca: "Média"
-      polemicas: "Pouco mapeado em imprensa."
-      polemicas_confianca: "Baixa"
-      politica: "Neutro (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§5 FONTES."
+      concorrencia: "Sem relação pública com operador de jogo."
+      polemicas: "Pouca exposição a polêmicas na imprensa geral."
+      politica: "Neutra na amostra."
 
   - name: "Ivan Baron"
-    tier: "Mezzo"
-    risco_geral: "Médio (política explícita)"
+    risco_geral: "Moderado — política e causas explícitas"
     handles:
       instagram: ivanbaron
       tiktok: ivanbaron
       youtube: ivanbaron
       x: ivanbaron
-    narrativa: "Anticapacitismo, MEC, mídia. Filiação PT / pré-candidatura na síntese P — confirmar TSE/primário."
+    narrativa: "Pedagogo e ativista por inclusão da pessoa com deficiência. Campanhas com órgãos públicos e presença em eventos nacionais. TikTok em painel de mercado pode usar variante do @."
     eixos:
-      concorrencia: "Ambev em aparição (CriaCast) — contexto mídia; vacinação/MEC institucional."
-      concorrencia_confianca: "Média"
-      polemicas: "Críticas e ataques por agenda inclusiva."
-      polemicas_confianca: "Média"
-      politica: "Esquerda explícita, PT (P); FONTES com matérias divergentes em datas — consolidar."
-      politica_confianca: "Alta"
-    fontes_note: "§6 FONTES + painel TikTok @ivanvbaron."
+      concorrencia: "Aparições em podcast e mídia ao lado de marcas de bebida e instituições — avaliar se o contrato da peça Loterias exige neutralidade sobre álcool. Sem bet na amostra."
+      polemicas: "Críticas e ataques de grupos contrários a pautas inclusivas; resposta pública a políticas governamentais."
+      politica: "Alta visibilidade em causas associadas ao campo progressista; notícias sobre filiação partidária e possível candidatura — confirmar situação atual em fonte oficial se a peça exigir neutralidade eleitoral."
 
   - name: "Mila Costa"
-    tier: "Micro"
     risco_geral: "Baixo"
     handles:
       instagram: nocasomila
       tiktok: nocasomila
       youtube: nocasomila
       x: nocasomila
-    narrativa: "Humor vida adulta; colunista DN; Senac CE; incidente hack documentado."
+    narrativa: "Humor sobre vida adulta; colunas e campanhas institucionais no Nordeste."
     eixos:
-      concorrencia: "Sem bet; marcas institucionais (Senac, etc.)."
-      concorrencia_confianca: "Média"
-      polemicas: "Hack de conta (segurança)."
-      polemicas_confianca: "Média"
-      politica: "Neutro explícito (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§7 FONTES."
+      concorrencia: "Campanhas com foco em educação profissional e marcas institucionais; sem bet."
+      polemicas: "Episódio documentado de invasão de contas e uso indevido para golpe — risco de segurança digital, não de conduta da criadora."
+      politica: "Declarações públicas de evitar posicionamento partidário forte; manter coerência com briefing da campanha."
 
   - name: "Cristian Wariu"
-    tier: "Micro"
-    risco_geral: "Baixo-médio (pauta indígena)"
+    risco_geral: "Baixo a moderado — pauta indígena e ambiental"
     handles:
       instagram: cristianwariu
       tiktok: cristianwariu
       youtube: cristianwariu
       x: cristianwariu
-    narrativa: "Comunicador Xavante, COP, direitos indígenas, mídia nacional."
+    narrativa: "Comunicador indígena Xavante; eventos nacionais e internacionais sobre clima e direitos."
     eixos:
-      concorrencia: "Sem bet."
-      concorrencia_confianca: "Média"
-      polemicas: "Ódio online (mídia); sem processo mapeado."
-      polemicas_confianca: "Média"
-      politica: "Progressista/indígena; marco temporal (P + FONTES)."
-      politica_confianca: "Alta"
-    fontes_note: "§8 FONTES."
+      concorrencia: "Sem operador de jogo na amostra."
+      polemicas: "Exposição a comentários hostis em redes, tema recorrente na imprensa sobre criadores indígenas."
+      politica: "Defesa de direitos territoriais e críticas a marcos legais sensíveis; alinhamento perceptível a agendas de direitos humanos e ambientais."
 
   - name: "Cereja"
-    tier: "Micro"
-    risco_geral: "Muito baixo"
+    risco_geral: "Baixo"
     handles:
       instagram: cerejaaaaaa
       tiktok: cerejaaaaaa
       youtube: cerejaaaaaa
       x: cerejaaaaaa
-    narrativa: "Humor/POV; Wupper cita marcas — validar @ (8×a vs 6×a no TikTok painel)."
+    narrativa: "Humor e rotina. Base menor em alguns painéis; agregadores citam marcas de consumo — validar com material do talento se necessário."
     eixos:
-      concorrencia: "SHEGLAM/varejo — não é bet."
-      concorrencia_confianca: "Baixa a média"
-      polemicas: "Pouco em matéria."
-      polemicas_confianca: "Baixa"
-      politica: "Neutro (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§9 FONTES."
+      concorrencia: "Marcas de varejo e beleza citadas em bases de mercado não são operadores de jogo."
+      polemicas: "Pouca matéria negativa na amostra."
+      politica: "Não mapeada na amostra."
 
   - name: "Aline Costa"
-    tier: "Micro"
-    risco_geral: "Muito baixo (síntese P) — desambiguação identidade"
+    risco_geral: "Baixo"
     handles:
       instagram: comcertezaaline
       tiktok: comcertezaaline
       youtube: comcertezaaline
       x: comcertezaaline
-    narrativa: "Humor/lifestyle; TikTok massivo no Upfluence; cruzar Zero18/jornalismo na FONTES."
+    narrativa: "Humor e desafios em vídeo; alcance muito alto no TikTok nos painéis. Garantir que o nome do briefing é o mesmo da pessoa contratada (evitar troca com homônimos ou jornalistas de mesmo nome)."
     eixos:
       concorrencia: "Sem bet na amostra."
-      concorrencia_confianca: "Baixa a média"
-      polemicas: "Pouco em imprensa."
-      polemicas_confianca: "Baixa"
-      politica: "Não identificado (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§10 FONTES."
+      polemicas: "Pouco na imprensa tradicional."
+      politica: "Não identificada na amostra."
 
   - name: "Davi"
-    tier: "Micro"
-    risco_geral: "Incerto documental — muito baixo na síntese P"
+    risco_geral: "Incerteza documental — baixo na síntese narrativa"
     handles:
       instagram: davizoa
       tiktok: davizoa
       youtube: davizoa
       x: davizoa
-    narrativa: "Apelido davizoa; TT/YT ativos nos painéis; imprensa fina para o @."
+    narrativa: "Apelido público davizoa. Painéis mostram audiência em TikTok e YouTube; poucas matérias com o mesmo usuário — cruzar com agência antes de decisão final."
     eixos:
-      concorrencia: "Sem matéria + @ na FONTES; amostra OSINT sem bet nos títulos."
-      concorrencia_confianca: "Baixa"
-      polemicas: "Não mapeado em matéria."
-      polemicas_confianca: "Baixa"
-      politica: "Não identificado."
-      politica_confianca: "Baixa"
-    fontes_note: "§11 FONTES + OSINT."
+      concorrencia: "Nada identificado com operador de jogo na amostra de títulos e notícias."
+      polemicas: "Não mapeadas em veículo jornalístico com o @ do briefing."
+      politica: "Não mapeada."
 
   - name: "Paula Mineira"
-    tier: "Micro"
-    risco_geral: "Muito baixo (P) — marcas regionais na FONTES"
+    risco_geral: "Baixo"
     handles:
       instagram: mineira.paula
       tiktok: mineira.paula
       youtube: mineira.paula
       x: mineira_paula
-    narrativa: "Humor mineiro; Portal Onda Sul / iBest; possível Shopee TT (OSINT)."
+    narrativa: "Humor com Minas Gerais; matérias regionais citam parcerias com comércio local e prêmios de influência."
     eixos:
-      concorrencia: "Sem bet; falso positivo clube+Bet MG descartado na FONTES."
-      concorrencia_confianca: "Média"
-      polemicas: "Pouco em matéria."
-      polemicas_confianca: "Baixa"
-      politica: "Neutro (P)."
-      politica_confianca: "Baixa"
-    fontes_note: "§12 FONTES."
+      concorrencia: "Busca genérica por “bet” e time de futebol pode gerar ruído sem ligação com a pessoa — não usar como prova."
+      polemicas: "Baixa exposição negativa na amostra."
+      politica: "Neutra na amostra."
 
   - name: "Catraca Livre"
-    tier: "Página digital"
-    risco_geral: "Médio-alto (viés editorial + histórico)"
+    risco_geral: "Moderado a alto — veículo, não influenciador individual"
     handles:
       instagram: catracalivre
       tiktok: catracalivre
       youtube: catracalivre
       x: catracalivre
-    narrativa: "Veículo; conteúdo sobre apostas = editorial; Chapecoense/Faro; parcerias trade (M&M)."
+    narrativa: "Portal de notícias e entretenimento. Publica sobre apostas como pauta jornalística. Histórico de crises editoriais e posicionamento político explícito em campanhas passadas."
     eixos:
-      concorrencia: "Cobertura apostas ≠ parceria paga; mapear ads/branded."
-      concorrencia_confianca: "Média"
-      polemicas: "Chapecoense; Faro; condenação 2017 citada em P — URL pendente FONTES."
-      polemicas_confianca: "Média a alta"
-      politica: "Esquerda/progressista clara (P + editorial)."
-      politica_confianca: "Alta"
-    fontes_note: "§13 FONTES + X #publinaCatraca."
+      concorrencia: "Cobertura editorial do setor de apostas não é, por si só, patrocínio de bet; exige alinhamento de compliance sobre tom e monetização do site."
+      polemicas: "Crises antigas de cobertura (ex.: tragédias) e conflitos com personalidades públicas; checar atualização institucional do veículo."
+      politica: "Linha editorial associada a esquerda e a causas progressistas em material público analisado."
