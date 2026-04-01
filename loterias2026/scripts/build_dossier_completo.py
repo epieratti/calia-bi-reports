@@ -228,22 +228,43 @@ def humanize_x_ativo(cell: object) -> tuple[str, str]:
     return (raw or "—", "bg-slate-50 text-slate-600 ring-1 ring-slate-200")
 
 
-def x_ativo_compact(cell: object) -> str:
-    """Frase curta para linha compacta de perfil."""
-    raw = str(cell or "").strip()
-    low = raw.lower()
-    if low in ("sim", "s", "yes"):
-        return "com posts na amostra"
-    if low in ("não", "nao"):
-        return "sem posts na amostra"
-    return raw or "—"
-
-
 def clip_txt(s: object, n: int = 42) -> str:
     t = str(s or "").strip()
     if len(t) <= n:
         return t
     return t[: n - 1] + "…"
+
+
+def net_mini_card(
+    bar_class: str,
+    platform: str,
+    handle_raw: str,
+    stats_html: str,
+    footer_html: str = "",
+) -> str:
+    """Mini-card compacto: barra de cor, plataforma, @ com truncamento, métricas."""
+    h = str(handle_raw or "").lstrip("@")
+    return (
+        "<div class='group min-w-0 rounded-lg border border-slate-200/90 bg-white p-2 shadow-sm "
+        "ring-1 ring-slate-100/80 hover:border-slate-300 hover:shadow transition-shadow'>"
+        "<div class='flex gap-2 min-w-0'>"
+        f"<div class='w-0.5 shrink-0 rounded-full {esc(bar_class)}' aria-hidden='true'></div>"
+        "<div class='min-w-0 flex-1'>"
+        f"<p class='text-[9px] font-bold uppercase tracking-wider text-slate-500 leading-none mb-1'>{esc(platform)}</p>"
+        f"<p class='font-mono text-[11px] text-slate-700 truncate' title='@{esc(h)}'>@{esc(h)}</p>"
+        f"<div class='mt-1.5 flex flex-wrap gap-x-2.5 gap-y-0.5 text-[11px] leading-tight'>{stats_html}</div>"
+        f"{footer_html}"
+        "</div></div></div>"
+    )
+
+
+def stat_pair(short_label: str, value: str) -> str:
+    return (
+        "<span class='inline-flex items-baseline gap-0.5'>"
+        f"<span class='text-[9px] font-medium uppercase text-slate-400'>{esc(short_label)}</span>"
+        f"<span class='font-semibold tabular-nums text-slate-900'>{esc(value)}</span>"
+        "</span>"
+    )
 
 
 def format_profile_networks_html(
@@ -254,77 +275,79 @@ def format_profile_networks_html(
     yt_rows: list,
     x_rows: list,
 ) -> str:
-    """Handles e números só a partir das tabelas dos painéis; rede sem linha não aparece. Layout compacto."""
-    segs: list[str] = []
+    """Handles e números a partir dos painéis — mini-cards em grade, compactos e sem estouro."""
+    cards: list[str] = []
 
     ig = panel_row_by_briefing(ig_rows, 1, handles.get("instagram"))
     if ig and len(ig) >= 10:
-        u = esc(str(ig[1]).lstrip("@"))
-        segs.append(
-            "<span class='whitespace-nowrap'>"
-            f"<span class='font-semibold text-slate-800'>IG</span> "
-            f"<span class='font-mono text-slate-600'>@{u}</span> "
-            f"<span class='text-slate-500'>·</span> {esc(ig[2])} seg "
-            f"<span class='text-slate-500'>·</span> eng. {esc(ig[9])}"
-            "</span>"
-        )
+        u = str(ig[1]).lstrip("@")
+        stats = stat_pair("seg.", str(ig[2])) + stat_pair("eng.", str(ig[9]))
+        cards.append(net_mini_card("bg-gradient-to-b from-pink-500 to-rose-600", "Instagram", u, stats))
 
     tt = panel_row_by_briefing(tt_rows, 1, handles.get("tiktok"))
     if tt and len(tt) >= 4:
         raw_tool = str(tt[0] or "").strip()
         raw_brief_tt = str(tt[1] or "").strip()
         tt_user = raw_tool if raw_tool and " " not in raw_tool else raw_brief_tt
-        u = esc(tt_user.lstrip("@"))
+        u = tt_user.lstrip("@")
         eng_raw = str(tt[2] or "").strip()
-        eng_bit = f" · eng. {esc(eng_raw)}" if eng_raw and eng_raw != "—" else ""
-        segs.append(
-            "<span class='whitespace-nowrap'>"
-            f"<span class='font-semibold text-slate-800'>TT</span> "
-            f"<span class='font-mono text-slate-600'>@{u}</span> "
-            f"<span class='text-slate-500'>·</span> {esc(tt[3])} seg{eng_bit}"
-            "</span>"
-        )
+        stats = stat_pair("seg.", str(tt[3]))
+        if eng_raw and eng_raw != "—":
+            stats += stat_pair("eng.", eng_raw)
+        cards.append(net_mini_card("bg-slate-800", "TikTok", u, stats))
 
     yt = panel_row_by_briefing(yt_rows, 1, handles.get("youtube"))
     if yt and len(yt) >= 5:
-        ch = esc(clip_txt(yt[0], 28))
-        yu = esc(str(yt[1]).lstrip("@"))
-        segs.append(
-            "<span class='whitespace-nowrap'>"
-            f"<span class='font-semibold text-slate-800'>YT</span> "
-            f"<span class='font-mono text-slate-600'>@{yu}</span> "
-            f"<span class='text-slate-500'>·</span> {esc(yt[2])} insc "
-            f"<span class='text-slate-500'>·</span> {esc(yt[3])} views "
-            f"<span class='text-slate-500'>·</span> {esc(yt[4])} víd."
-            f"<span class='text-slate-400' title='{esc(str(yt[0] or ''))}'> ({ch})</span>"
-            "</span>"
+        yu = str(yt[1]).lstrip("@")
+        ch_full = str(yt[0] or "").strip()
+        ch_short = clip_txt(ch_full, 22)
+        stats = (
+            stat_pair("insc.", str(yt[2]))
+            + stat_pair("views", str(yt[3]))
+            + stat_pair("víd.", str(yt[4]))
         )
+        footer = (
+            f"<p class='mt-1.5 pt-1 border-t border-slate-100 text-[9px] text-slate-500 truncate' "
+            f"title='{esc(ch_full)}'><span class='text-slate-400'>Canal · </span>{esc(ch_short)}</p>"
+        )
+        cards.append(net_mini_card("bg-red-600", "YouTube", yu, stats, footer))
 
     xr = panel_row_x(x_rows, name, handles.get("x"))
     if xr and len(xr) >= 5:
-        xv = esc(str(xr[1]).lstrip("@"))
-        act = esc(x_ativo_compact(xr[3]))
-        teor = esc(clip_txt(xr[4], 36))
-        segs.append(
-            "<span class='whitespace-nowrap max-w-full'>"
-            f"<span class='font-semibold text-slate-800'>X</span> "
-            f"<span class='font-mono text-slate-600'>@{xv}</span> "
-            f"<span class='text-slate-500'>·</span> {esc(xr[2])} seg "
-            f"<span class='text-slate-500'>·</span> <span class='text-slate-600'>{act}</span>"
-            f"<span class='text-slate-500'> · </span><span class='text-slate-500 italic'>{teor}</span>"
-            "</span>"
+        xv = str(xr[1]).lstrip("@")
+        act_txt, act_cls = humanize_x_ativo(xr[3])
+        short_act = "Com posts" if str(xr[3] or "").strip().lower() in ("sim", "s", "yes") else (
+            "Sem posts" if str(xr[3] or "").strip().lower() in ("não", "nao") else clip_txt(xr[3], 10)
         )
+        teor_full = str(xr[4] or "").strip()
+        teor_vis = clip_txt(teor_full, 40)
+        stats = stat_pair("seg.", str(xr[2]))
+        footer = (
+            "<div class='mt-1.5 pt-1 border-t border-slate-100 space-y-1'>"
+            f"<span class='inline-flex max-w-full rounded px-1.5 py-0.5 text-[9px] font-semibold leading-none {act_cls}' "
+            f"title='{esc(act_txt)}'>{esc(short_act)}</span>"
+            f"<p class='text-[9px] text-slate-500 leading-snug truncate' title='{esc(teor_full)}'>{esc(teor_vis)}</p>"
+            "</div>"
+        )
+        cards.append(net_mini_card("bg-slate-900", "X", xv, stats, footer))
 
-    if not segs:
+    if not cards:
         return (
-            "<p class='text-[11px] text-slate-500 mb-3 py-1.5 px-2 rounded border border-dashed border-slate-200 bg-slate-50'>"
-            "Sem linha nos painéis para este nome (IG / TT / YT / X).</p>"
+            "<p class='text-[11px] text-slate-500 mb-4 py-2 px-2.5 rounded-lg border border-dashed border-slate-200 "
+            "bg-slate-50/90'>Sem linha nos painéis para este nome (Instagram / TikTok / YouTube / X).</p>"
         )
-    inner = "<span class='text-slate-300 select-none px-0.5' aria-hidden='true'>|</span>".join(segs)
+    n = len(cards)
+    if n == 1:
+        grid_cls = "grid-cols-1 max-w-[14rem] sm:max-w-[15rem]"
+    elif n == 2:
+        grid_cls = "grid-cols-2"
+    else:
+        grid_cls = "grid-cols-2 md:grid-cols-3"
+
     return (
-        "<div class='mb-3 rounded border border-slate-200 bg-slate-50/90 px-2 py-1.5'>"
-        "<p class='text-[9px] font-bold uppercase tracking-wider text-slate-400 mb-1'>Redes · snapshot</p>"
-        f"<div class='flex flex-wrap items-baseline gap-x-1 gap-y-0.5 text-[11px] leading-tight text-slate-700'>{inner}</div>"
+        "<div class='mb-4'>"
+        "<p class='text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-2'>Redes · snapshot dos painéis</p>"
+        f"<div class='grid {grid_cls} gap-2'>{''.join(cards)}</div>"
         "</div>"
     )
 
