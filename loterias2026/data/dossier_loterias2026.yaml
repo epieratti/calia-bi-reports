@@ -40,9 +40,10 @@ methodology:
 
 panels:
   intro_note: "Números na data da coleta; conferir de novo na data do ar."
+  missing_rows_note: "Quem não aparece na tabela: a ferramenta não devolveu linha para esse perfil nesta exportação. O perfil pode existir normalmente na rede; só faltou captura no painel."
 
   instagram:
-    footnote: "Fonte: Social Blade."
+    footnote: "Social Blade."
     headers:
       - "Nome"
       - "Usuário"
@@ -71,7 +72,7 @@ panels:
       - ["Cristian Wariu", "cristianwariu", "77.218", "-109", "-7", "-4", "85", "2,7K", "50", "3,50%", "Alta taxa; base menor"]
 
   tiktok:
-    footnote: "Fonte: Upfluence."
+    footnote: "Upfluence."
     headers:
       - "Nome (painel)"
       - "Usuário"
@@ -102,7 +103,7 @@ panels:
       - ["nocasomila", "nocasomila", "4,05%", "44,4K", "26", "1,8K", "192,8", "21,4K", "73,0", "1,2M", "151", "86,42%", "13,58%"]
 
   youtube:
-    footnote: "Fonte: Social Blade."
+    footnote: "Social Blade."
     headers:
       - "Canal (painel)"
       - "Usuário"
@@ -122,7 +123,7 @@ panels:
       - ["Megh Melry", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    footnote: "Perfil do X na data da coleta. “Posts recentes” = se tinha post novo na checagem (não é número de alcance)."
+    footnote: "Leitura no X na data da coleta."
     headers:
       - "Nome"
       - "Usuário"

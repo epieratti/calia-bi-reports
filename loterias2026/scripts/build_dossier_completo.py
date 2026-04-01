@@ -450,13 +450,19 @@ def main() -> None:
             "Números das ferramentas (alcance, engajamento). Só ajudam a ver tamanho de público; o risco da campanha segue os três critérios acima.",
         )
     )
+    _pn_all = bundle.get("panels") or {}
+    missing_rows_note = (_pn_all.get("missing_rows_note") or "").strip()
     panels_html = (
         f"<p class='text-sm text-slate-600 mb-6'>{panels_intro}</p>"
-        + panel_section("instagram", "Instagram", bundle.get("panels", {}).get("instagram", {}).get("footnote", ""))
-        + panel_section("tiktok", "TikTok", bundle.get("panels", {}).get("tiktok", {}).get("footnote", ""))
-        + panel_section("youtube", "YouTube", bundle.get("panels", {}).get("youtube", {}).get("footnote", ""))
-        + panel_section("x", "X", bundle.get("panels", {}).get("x", {}).get("footnote", ""))
+        + panel_section("instagram", "Instagram", _pn_all.get("instagram", {}).get("footnote", ""))
+        + panel_section("tiktok", "TikTok", _pn_all.get("tiktok", {}).get("footnote", ""))
+        + panel_section("youtube", "YouTube", _pn_all.get("youtube", {}).get("footnote", ""))
+        + panel_section("x", "X", _pn_all.get("x", {}).get("footnote", ""))
     )
+    if missing_rows_note:
+        panels_html += (
+            f"<p class='text-xs text-slate-500 mt-8 max-w-prose leading-relaxed'>{esc(missing_rows_note)}</p>"
+        )
 
     cons = bundle.get("consolidated_narrative") or {}
     cons_title = esc(cons.get("title", "Síntese adicional do squad"))
