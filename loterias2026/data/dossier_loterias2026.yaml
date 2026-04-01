@@ -141,7 +141,7 @@ panels:
 consolidated_narrative:
   title: "Síntese adicional do squad"
   subtitle: "__Abril/2026__ — cruzar com **Perfis**, **Tabela resumo** e **métricas**."
-  tagline: "Decisão de __campanha__ e **governança**: o que muda o go/no-go além do detalhe por nome."
+  tagline: "Decisão de __campanha__: o que pesa no go/no-go além do detalhe por nome."
   blocks:
     - title: "Leitura estratégica"
       items:
@@ -152,10 +152,6 @@ consolidated_narrative:
         - "Pessoas físicas: **sem garoto-propaganda** de bet ou loteria concorrente à CAIXA na amostra."
         - "Separar: **“bet”** só em nome de curso/plataforma **≠** parceria com __operador de jogo__."
         - "**Catraca Livre**: conteúdo com **encaminhamento a operador**. **Gratta**: evento bolsa/corretora (**educação financeira**; **não** publi de bet)."
-    - title: "Governança"
-      items:
-        - "Apostas sob **escrutínio** (Congresso/mídia) → **contrato claro** e monitorar **novas peças** nas redes pós-contratação."
-        - "__Próximo passo__: roteiro com **compliance**; pedir **declaração** ou material atualizado aos talentos se necessário."
 
 executive_summary:
   tagline: "**13 nomes** — visão __sintética__; detalhe nos perfis e na tabela matricial."
