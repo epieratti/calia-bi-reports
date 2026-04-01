@@ -469,6 +469,47 @@ def format_profile_networks_html(
     )
 
 
+def risco_badge_shell_classes(text: object) -> str:
+    """Classes Tailwind do selo conforme palavras-chave no texto de risco."""
+    low = str(text or "").lower()
+    if re.search(r"\balto\b", low):
+        return (
+            "bg-red-50 text-red-900 ring-1 ring-red-200/90 border border-red-100 "
+            "shadow-sm"
+        )
+    if "moderado" in low or "pouca prova" in low:
+        return (
+            "bg-amber-50 text-amber-950 ring-1 ring-amber-200/90 border border-amber-100 "
+            "shadow-sm"
+        )
+    if "baixo" in low:
+        return (
+            "bg-emerald-50 text-emerald-900 ring-1 ring-emerald-200/90 border border-emerald-100 "
+            "shadow-sm"
+        )
+    return "bg-slate-100 text-slate-800 ring-1 ring-slate-200 border border-slate-200 shadow-sm"
+
+
+def risco_badge_block_html(body: object, *, compact: bool = False) -> str:
+    """Selo visível para síntese de risco (perfil ou tabela)."""
+    txt = str(body or "—").strip() or "—"
+    shell = risco_badge_shell_classes(txt)
+    inner = esc(txt)
+    if compact:
+        return (
+            f"<span class='inline-flex max-w-[16rem] rounded-lg px-2.5 py-1.5 text-xs font-bold "
+            f"leading-snug {shell}'>{inner}</span>"
+        )
+    return (
+        "<span class='inline-flex flex-col items-end gap-1 shrink-0 max-w-full sm:max-w-[min(100%,30rem)]'>"
+        "<span class='text-[9px] font-black uppercase tracking-wider text-calia-navy'>"
+        "Síntese de risco</span>"
+        f"<span class='inline-flex rounded-lg px-3 py-2 text-xs sm:text-sm font-bold leading-snug text-right "
+        f"{shell}'>{inner}</span>"
+        "</span>"
+    )
+
+
 def render_table(
     headers: list[str],
     rows: list[list[str]],
@@ -660,13 +701,14 @@ def main() -> None:
         )
         eixos = pc.get("eixos") or {}
         narr = esc(pc.get("narrativa", ""))
-        risco = esc(pc.get("risco_geral", "—"))
+        risco_raw = pc.get("risco_geral", "—")
+        risco_badge = risco_badge_block_html(risco_raw, compact=False)
         tier_l = esc(pc.get("tier", "—"))
         return (
             f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
-            f"<div class='flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-3 mb-4'>"
+            f"<div class='flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-3 mb-4'>"
             f"<h2 class='text-xl font-black text-calia-navy'>{idx}. {esc(name)}</h2>"
-            f"<span class='text-sm font-semibold text-slate-600'>Síntese de risco: {risco}</span></div>"
+            f"{risco_badge}</div>"
             f"<p class='text-xs text-slate-600 mb-2'><span class='font-bold text-calia-navy'>{tier_l}</span></p>"
             f"{networks_html}"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
@@ -696,10 +738,13 @@ def main() -> None:
             toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
             blocks.append(render_profile(global_idx, pc))
             rt = pc.get("resumo_tabela") or {}
+            risco_cell = risco_badge_block_html(
+                rt.get("risco") or pc.get("risco_geral", "—"), compact=True
+            )
             summary_rows.append(
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{esc(pc.get('tier', '—'))}</span>",
-                    esc(rt.get("risco") or pc.get("risco_geral", "—")),
+                    risco_cell,
                     esc(rt.get("concorrencia", "—")),
                     esc(rt.get("polemicas", "—")),
                     esc(rt.get("politica", "—")),
@@ -738,10 +783,13 @@ def main() -> None:
             toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
             obl.append(render_profile(global_idx, pc))
             rt = pc.get("resumo_tabela") or {}
+            risco_cell_o = risco_badge_block_html(
+                rt.get("risco") or pc.get("risco_geral", "—"), compact=True
+            )
             summary_rows.append(
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>—</span>",
-                    esc(rt.get("risco") or pc.get("risco_geral", "—")),
+                    risco_cell_o,
                     esc(rt.get("concorrencia", "—")),
                     esc(rt.get("polemicas", "—")),
                     esc(rt.get("politica", "—")),
@@ -757,7 +805,7 @@ def main() -> None:
     sum_table = render_table(
         ["Nome / camada", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
         summary_rows,
-        html_safe_columns=frozenset({0}),
+        html_safe_columns=frozenset({0, 1}),
     )
 
     doc = f"""<!DOCTYPE html>
