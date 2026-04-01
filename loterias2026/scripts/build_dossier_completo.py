@@ -316,7 +316,7 @@ def format_profile_networks_html(
     if xr and len(xr) >= 5:
         xv = str(xr[1]).lstrip("@")
         act_txt, act_cls = humanize_x_ativo(xr[3])
-        short_act = "Com posts" if str(xr[3] or "").strip().lower() in ("sim", "s", "yes") else (
+        short_act = "posts recentes" if str(xr[3] or "").strip().lower() in ("sim", "s", "yes") else (
             "Sem posts" if str(xr[3] or "").strip().lower() in ("não", "nao") else clip_txt(xr[3], 10)
         )
         teor_full = str(xr[4] or "").strip()
