@@ -227,7 +227,7 @@ profiles:
     eixos:
       concorrencia: "Sem ligação com casa de aposta ou outra loteria no que buscamos. Título de show ou roteiro com a palavra “loteria” entra como **humor/arte**, não como publi de jogo."
       polemicas: "Imprensa de entretenimento cobre o trabalho de forma positiva ou neutra. Não achamos episódio grave ou recorrente de cancelamento nas fontes abertas que usamos."
-      politica: "O humor pode cutucar política e classe média, sem filiação partidária clara. No X, perfil com pouca atividade na data da checagem — menor exposição política **naquela** rede."
+      politica: "O humor pode cutucar política e classe média, sem filiação partidária clara."
 
   - name: "Megh Melry"
     tier: "Mezzos"
