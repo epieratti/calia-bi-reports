@@ -176,7 +176,7 @@ profiles:
     tier: "Tier 1"
     risco_geral: "Baixo a moderado — alta visibilidade na mídia"
     resumo_tabela:
-      risco: "Baixo a moderado (alta visibilidade)."
+      risco: "Baixo a moderado — alta visibilidade na mídia"
       concorrencia: "Sem bet/loteria concorrente no que vimos."
       polemicas: "BBB e mídia; pautas que polarizam."
       politica: "Causas sociais; sem partido explícito."
@@ -195,7 +195,7 @@ profiles:
     tier: "Tier 2"
     risco_geral: "Moderado — reputação em conteúdo de saúde e vendas"
     resumo_tabela:
-      risco: "Moderado."
+      risco: "Moderado — reputação em conteúdo de saúde e vendas"
       concorrencia: "Sem publi de bet; evento educação financeira (bolsa)."
       polemicas: "Debate sobre método, venda e plágio (redes e imprensa)."
       politica: "Sem partido; em alguns vídeos, tom próximo à direita."
@@ -214,7 +214,7 @@ profiles:
     tier: "Mezzos"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem bet/loteria concorrente."
       polemicas: "Sem alerta grave no que vimos."
       politica: "Humor pode cutucar política; sem partido claro."
@@ -233,7 +233,7 @@ profiles:
     tier: "Mezzos"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem bet no que vimos."
       polemicas: "Sem alerta no que vimos."
       politica: "Sem agenda partidária clara."
@@ -252,7 +252,7 @@ profiles:
     tier: "Mezzos"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem casa de aposta."
       polemicas: "Pouca polêmica grande na imprensa consultada."
       politica: "Sem política explícita recorrente; uso Nordeste sem viés forte."
@@ -271,7 +271,7 @@ profiles:
     tier: "Mezzos"
     risco_geral: "Moderado — política e causas explícitas"
     resumo_tabela:
-      risco: "Moderado."
+      risco: "Moderado — política e causas explícitas"
       concorrencia: "Sem bet; checar política de álcool na peça."
       polemicas: "Cinema: discriminação; vitória na Justiça (vítima). Sofre críticas por defender inclusão."
       politica: "Progressista; checar filiação se a peça exigir neutralidade."
@@ -290,7 +290,7 @@ profiles:
     tier: "Micros"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem bet."
       polemicas: "Conta hackeada (segurança), não conduta."
       politica: "Falou em não polarizar; alinhar neutralidade no contrato."
@@ -309,7 +309,7 @@ profiles:
     tier: "Micros"
     risco_geral: "Baixo a moderado — pauta indígena e ambiental"
     resumo_tabela:
-      risco: "Baixo a moderado."
+      risco: "Baixo a moderado — pauta indígena e ambiental"
       concorrencia: "Sem bet."
       polemicas: "Comentários hostis online (tema da pauta dele)."
       politica: "Território e ambiente; direitos humanos."
@@ -328,7 +328,7 @@ profiles:
     tier: "Micros"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem casa de aposta."
       polemicas: "Baixo ruído midiático."
       politica: "Sem pauta política recorrente na busca."
@@ -347,7 +347,7 @@ profiles:
     tier: "Micros"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem bet."
       polemicas: "Pouco na imprensa tradicional."
       politica: "Sem pauta política clara na busca."
@@ -366,7 +366,7 @@ profiles:
     tier: "Micros"
     risco_geral: "Poucas matérias na imprensa aberta; risco documentado parece baixo"
     resumo_tabela:
-      risco: "Baixo no que documentamos; pouca matéria na imprensa."
+      risco: "Poucas matérias na imprensa aberta; risco documentado parece baixo"
       concorrencia: "Sem bet no que vimos."
       polemicas: "Sem notícia negativa clara na busca; arquivo de imprensa fino."
       politica: "Não achamos no que vimos."
@@ -385,7 +385,7 @@ profiles:
     tier: "Micros"
     risco_geral: "Baixo"
     resumo_tabela:
-      risco: "Baixo."
+      risco: "Baixo"
       concorrencia: "Sem bet; ruído de busca genérica."
       polemicas: "Baixa exposição negativa."
       politica: "Neutra no que vimos."
@@ -404,7 +404,7 @@ profiles:
     tier: "Página"
     risco_geral: "Moderado a alto"
     resumo_tabela:
-      risco: "Moderado a alto."
+      risco: "Moderado a alto"
       concorrencia: "[Guia no Catraca](https://catracalivre.com.br/noticias/uplinko-fashion-tv-guia-completo-2025/) encaminha a site de aposta; ver regras internas."
       polemicas: "Histórico de crises editoriais."
       politica: "Linha progressista explícita."

@@ -4,7 +4,7 @@
 
 - O HTML publicado **não** menciona repositório, `.md`, `.yaml` nem ferramentas internas — só o pedido da campanha, os três critérios, leitura clara e métricas como contexto.
 - **Ordem das seções no HTML:** após metodologia, vem **Perfis por camada**; depois **Síntese**; em seguida **Tabela resumo** (matriz executiva); por último **Métricas** (tabelas por rede).
-- **Edição interna:** `data/dossier_loterias2026.yaml` (textos, tabelas, **`tier`** e **`resumo_tabela`** por perfil — linhas curtas para a matriz resumo; ordem de camadas em `briefing.tier_order`).
+- **Edição interna:** `data/dossier_loterias2026.yaml` (textos, tabelas, **`tier`** e **`resumo_tabela`** por perfil — colunas Concorrência/Polêmicas/Política; a **Síntese de risco** na tabela usa o mesmo texto que **`risco_geral`** do perfil; ordem em `briefing.tier_order`).
 - **Evidências com URLs:** `research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`
 - **Metodologia:** `research/METODO_BRAND_SAFETY_LOTERIAS2026.md`
 - **Handles do squad:** `data/influencers.yaml`

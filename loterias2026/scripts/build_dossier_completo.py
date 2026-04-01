@@ -816,9 +816,7 @@ def main() -> None:
             toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
             blocks.append(render_profile(global_idx, pc))
             rt = pc.get("resumo_tabela") or {}
-            risco_cell = risco_badge_block_html(
-                rt.get("risco") or pc.get("risco_geral", "—"), compact=True
-            )
+            risco_cell = risco_badge_block_html(pc.get("risco_geral", "—"), compact=True)
             summary_rows.append(
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{esc(pc.get('tier', '—'))}</span>",
@@ -861,9 +859,7 @@ def main() -> None:
             toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
             obl.append(render_profile(global_idx, pc))
             rt = pc.get("resumo_tabela") or {}
-            risco_cell_o = risco_badge_block_html(
-                rt.get("risco") or pc.get("risco_geral", "—"), compact=True
-            )
+            risco_cell_o = risco_badge_block_html(pc.get("risco_geral", "—"), compact=True)
             summary_rows.append(
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>—</span>",
