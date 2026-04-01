@@ -306,10 +306,6 @@ def main() -> None:
     profile_sections = ""
     summary_rows: list[list[str]] = []
 
-    def clip(s: object, n: int = 140) -> str:
-        t = str(s or "—")
-        return esc(t if len(t) <= n else t[: n - 1] + "…")
-
     def box(lab: str, txt: str | None) -> str:
         return (
             f"<div class='rounded border border-slate-200 p-4 bg-white'>"
@@ -361,14 +357,14 @@ def main() -> None:
             slug = slug_id(name)
             toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
             blocks.append(render_profile(global_idx, pc))
-            eixos = pc.get("eixos") or {}
+            rt = pc.get("resumo_tabela") or {}
             summary_rows.append(
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{esc(pc.get('tier', '—'))}</span>",
-                    esc(pc.get("risco_geral", "—")),
-                    clip(eixos.get("concorrencia")),
-                    clip(eixos.get("polemicas")),
-                    clip(eixos.get("politica")),
+                    esc(rt.get("risco") or pc.get("risco_geral", "—")),
+                    esc(rt.get("concorrencia", "—")),
+                    esc(rt.get("polemicas", "—")),
+                    esc(rt.get("politica", "—")),
                 ]
             )
         if people:
@@ -403,14 +399,14 @@ def main() -> None:
             slug = slug_id(name)
             toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
             obl.append(render_profile(global_idx, pc))
-            eixos = pc.get("eixos") or {}
+            rt = pc.get("resumo_tabela") or {}
             summary_rows.append(
                 [
                     f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>—</span>",
-                    esc(pc.get("risco_geral", "—")),
-                    clip(eixos.get("concorrencia")),
-                    clip(eixos.get("polemicas")),
-                    clip(eixos.get("politica")),
+                    esc(rt.get("risco") or pc.get("risco_geral", "—")),
+                    esc(rt.get("concorrencia", "—")),
+                    esc(rt.get("polemicas", "—")),
+                    esc(rt.get("politica", "—")),
                 ]
             )
         toc_items += "</ul></li>"
@@ -490,8 +486,8 @@ def main() -> None:
         <li><a class="toc-link" href="#como">Como foi analisado</a></li>
         <li><a class="toc-link" href="#perfis">Perfis por camada (Tier 1, Tier 2, Mezzos, Micros, Página)</a></li>
         <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
-        <li><a class="toc-link" href="#metricas">Métricas nas redes (contexto)</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
+        <li><a class="toc-link" href="#metricas">Métricas nas redes (contexto)</a></li>
       </ul>
       <p class="text-xs text-slate-500 mt-6 font-semibold uppercase tracking-wide">Perfis</p>
       <ul class="toc-list">{toc_items}</ul>
@@ -523,15 +519,15 @@ def main() -> None:
 
     <section id="sintese" class="scroll-mt-20 mb-6">{cons_html}</section>
 
+    <section id="tabela" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
+      <p class="text-sm text-slate-600 mb-4">Síntese executiva por nome. O detalhe está em Perfis; números de rede vêm na seção seguinte.</p>
+      {sum_table}
+    </section>
+
     <section id="metricas" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes (contexto)</h2></div>
       {panels_html}
-    </section>
-
-    <section id="tabela" class="card-audit scroll-mt-20">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
-      <p class="text-sm text-slate-600 mb-4">Visão única dos três critérios. O detalhe por nome está na seção Perfis; as tabelas numéricas vêm antes desta matriz.</p>
-      {sum_table}
     </section>
 
     <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">

@@ -140,7 +140,7 @@ panels:
 
 consolidated_narrative:
   title: "Síntese adicional do squad"
-  subtitle: "Consolidação interna (abril/2026) — cruzar com o detalhe por perfil na seção anterior."
+  subtitle: "Consolidação (abril/2026) — cruzar com Perfis, Tabela resumo e métricas abaixo."
   paragraphs:
     - "Visão geral: perfil majoritariamente favorável para campanhas de humor, diversidade e impacto social. Dois pontos pedem atenção de quem busca máxima neutralidade política na peça: Ivan Baron (trajetória pública ligada a causas e ao campo progressista) e Catraca Livre (veículo com linha editorial explícita)."
     - "No conjunto das pessoas físicas, não apareceu contrato público ou campanha anunciada como garoto-propaganda de casa de apostas ou loteria concorrente à CAIXA. Menções a “aposta” em entretenimento ou nome comercial (ex.: plataforma de cursos com “bet” no nome) foram tratadas à parte de parceria com operador de jogo."
@@ -162,6 +162,11 @@ profiles:
   - name: "Giovanna Pitel"
     tier: "Tier 1"
     risco_geral: "Baixo a moderado — alta visibilidade na mídia"
+    resumo_tabela:
+      risco: "Baixo a moderado."
+      concorrencia: "Sem bet/loteria concorrente na amostra."
+      polemicas: "Exposição BBB e mídia; pautas sensíveis."
+      politica: "Causas sociais; sem partido explícito."
     handles:
       instagram: pitelgiovanna
       tiktok: pitelgiovanna
@@ -176,6 +181,11 @@ profiles:
   - name: "Rafael Gratta"
     tier: "Tier 2"
     risco_geral: "Moderado — reputação em conteúdo de saúde e vendas"
+    resumo_tabela:
+      risco: "Moderado."
+      concorrencia: "Sem publi de bet; evento educação financeira (bolsa)."
+      polemicas: "Debates sobre método e promessas."
+      politica: "Sem pauta política relevante na amostra."
     handles:
       instagram: rafaelgratta
       tiktok: rafaelgratta
@@ -190,6 +200,11 @@ profiles:
   - name: "Índio Behn"
     tier: "Mezzos"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem bet/loteria concorrente."
+      polemicas: "Sem alerta grave na amostra."
+      politica: "Neutro na amostra; X pouco ativo."
     handles:
       instagram: indio.behn
       tiktok: indio.behn
@@ -204,6 +219,11 @@ profiles:
   - name: "Megh Merly"
     tier: "Mezzos"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem bet; cuidado com homônimos na busca."
+      polemicas: "Sem alerta na amostra."
+      politica: "Sem agenda partidária clara."
     handles:
       instagram: megh_melry
       tiktok: megh_melry
@@ -218,6 +238,11 @@ profiles:
   - name: "Cleane Sampaio"
     tier: "Mezzos"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem operador de jogo."
+      polemicas: "Baixa exposição negativa."
+      politica: "Neutra na amostra."
     handles:
       instagram: cleanesampaioo
       tiktok: cleanesampaioo
@@ -232,6 +257,11 @@ profiles:
   - name: "Ivan Baron"
     tier: "Mezzos"
     risco_geral: "Moderado — política e causas explícitas"
+    resumo_tabela:
+      risco: "Moderado."
+      concorrencia: "Sem bet; checar política de álcool na peça."
+      polemicas: "Caso cinema (vítima); críticas a pautas inclusivas."
+      politica: "Causas progressistas; confirmar neutralidade se exigido."
     handles:
       instagram: ivanbaron
       tiktok: ivanbaron
@@ -246,6 +276,11 @@ profiles:
   - name: "Mila Costa"
     tier: "Micros"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem bet."
+      polemicas: "Conta hackeada (segurança), não conduta."
+      politica: "Evita partido forte na amostra."
     handles:
       instagram: nocasomila
       tiktok: nocasomila
@@ -260,6 +295,11 @@ profiles:
   - name: "Cristian Wariu"
     tier: "Micros"
     risco_geral: "Baixo a moderado — pauta indígena e ambiental"
+    resumo_tabela:
+      risco: "Baixo a moderado."
+      concorrencia: "Sem bet."
+      polemicas: "Hostilidade online (contexto de pauta)."
+      politica: "Território e ambiente; direitos humanos."
     handles:
       instagram: cristianwariu
       tiktok: cristianwariu
@@ -274,6 +314,11 @@ profiles:
   - name: "Cereja"
     tier: "Micros"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem operador de jogo."
+      polemicas: "Pouca matéria negativa."
+      politica: "Não mapeada."
     handles:
       instagram: cerejaaaaaa
       tiktok: cerejaaaaaa
@@ -288,6 +333,11 @@ profiles:
   - name: "Aline Costa"
     tier: "Micros"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem bet."
+      polemicas: "Pouco na imprensa tradicional."
+      politica: "Não identificada."
     handles:
       instagram: comcertezaaline
       tiktok: comcertezaaline
@@ -302,6 +352,11 @@ profiles:
   - name: "Davi"
     tier: "Micros"
     risco_geral: "Incerteza documental — baixo na síntese narrativa"
+    resumo_tabela:
+      risco: "Incerteza documental."
+      concorrencia: "Sem bet na amostra."
+      polemicas: "Sem matéria com @ do briefing."
+      politica: "Não mapeada."
     handles:
       instagram: davizoa
       tiktok: davizoa
@@ -316,6 +371,11 @@ profiles:
   - name: "Paula Mineira"
     tier: "Micros"
     risco_geral: "Baixo"
+    resumo_tabela:
+      risco: "Baixo."
+      concorrencia: "Sem bet; ruído de busca genérica."
+      polemicas: "Baixa exposição negativa."
+      politica: "Neutra na amostra."
     handles:
       instagram: mineira.paula
       tiktok: mineira.paula
@@ -330,6 +390,11 @@ profiles:
   - name: "Catraca Livre"
     tier: "Página"
     risco_geral: "Moderado a alto — veículo, não influenciador individual"
+    resumo_tabela:
+      risco: "Moderado a alto (veículo)."
+      concorrencia: "Conteúdo com CTA a operador de jogo; compliance."
+      polemicas: "Histórico de crises editoriais."
+      politica: "Linha progressista explícita."
     handles:
       instagram: catracalivre
       tiktok: catracalivre
