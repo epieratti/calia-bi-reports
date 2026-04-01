@@ -22,11 +22,6 @@ briefing:
     - "TikTok"
     - "YouTube"
     - "X"
-  limites_paragraphs:
-    - "Métricas: só contexto de alcance; decisão de risco = três critérios acima."
-    - "Se o painel mostrar @ diferente do briefing, prevalece o @ do briefing."
-    - "Apostas: tema sensível na mídia e no Congresso — separar notícia, conteúdo que leva a operador e campanha paga."
-  tiers_nota: "Camadas: Tier 1 e 2 (maior peso de mídia), Mezzos, Micros, Página (veículo). Nesta lista: Tier 1 Giovanna Pitel; Tier 2 Rafael Gratta."
   tier_order:
     - "Tier 1"
     - "Tier 2"

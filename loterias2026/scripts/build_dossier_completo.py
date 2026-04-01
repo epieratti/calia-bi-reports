@@ -87,14 +87,6 @@ def main() -> None:
     redes = bundle.get("briefing", {}).get("redes") or ["Instagram", "TikTok", "YouTube", "X"]
     redes_html = "<p class='text-sm text-slate-700'><strong>Redes de ativação:</strong> " + esc(", ".join(redes)) + ".</p>"
 
-    limites = bundle.get("briefing", {}).get("limites_paragraphs") or []
-    limites_html = "".join(
-        f"<p class='text-sm text-slate-600 leading-relaxed mb-2'>{esc(p)}</p>" for p in limites
-    )
-    tiers_nota = bundle.get("briefing", {}).get("tiers_nota", "")
-    tiers_nota_html = (
-        f"<p class='text-sm text-slate-600 leading-relaxed mt-3'>{esc(tiers_nota)}</p>" if tiers_nota else ""
-    )
     tier_order = bundle.get("briefing", {}).get("tier_order") or [
         "Tier 1",
         "Tier 2",
@@ -366,11 +358,6 @@ def main() -> None:
       <p class="text-sm font-bold text-calia-navy mt-4 mb-2">O que foi verificado para cada nome:</p>
       {crit_html}
       {redes_html}
-      <div class="mt-6 pt-4 border-t border-slate-200">
-        <p class="text-xs font-bold uppercase text-slate-500 mb-2">Leitura dos resultados</p>
-        {limites_html}
-        {tiers_nota_html}
-      </div>
     </section>
 
     <section id="leitura" class="card-audit scroll-mt-20 bg-slate-50">
