@@ -122,7 +122,7 @@ panels:
       - ["Megh Melry", "megh_melry", "133", "2,5K", "6"]
 
   x:
-    footnote: "Leitura direta do perfil no X em data da coleta. “Ativo” = havia postagens recentes na amostra. Usuário = @ visto na coleta."
+    footnote: "Leitura direta do perfil no X na data da coleta. Coluna “Postagens recentes” indica se havia tweets recentes na amostra analisada (não é medida de alcance). Usuário = @ visto na coleta."
     headers:
       - "Nome"
       - "Usuário"

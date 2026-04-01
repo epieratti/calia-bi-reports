@@ -176,6 +176,24 @@ def normalize_panel_for_display(key: str, panel: dict, ig_rows: list) -> tuple[l
             out_rows.append([nome, usuario] + r[2:])
         return out_h, out_rows
 
+    if key == "x" and rows and len(headers) >= 4:
+        out_h = list(headers)
+        ativo_label = "Postagens recentes (amostra)"
+        try:
+            ai = out_h.index("Ativo?")
+        except ValueError:
+            ai = 3
+        if ai < len(out_h):
+            out_h[ai] = ativo_label
+        out_rows = []
+        for r in rows:
+            row = list(r)
+            if len(row) > ai:
+                txt, _ = humanize_x_ativo(row[ai])
+                row[ai] = txt
+            out_rows.append(row)
+        return out_h, out_rows
+
     return headers, rows
 
 
@@ -193,6 +211,53 @@ def panel_row_x(rows: list, profile_name: str, yaml_x: object) -> list[str] | No
     return None
 
 
+def humanize_x_ativo(cell: object) -> tuple[str, str]:
+    """Retorna (texto legível, classe Tailwind do selo)."""
+    raw = str(cell or "").strip()
+    low = raw.lower()
+    if low in ("sim", "s", "yes"):
+        return (
+            "Havia postagens recentes na amostra",
+            "bg-emerald-50 text-emerald-900 ring-1 ring-emerald-200/80",
+        )
+    if low in ("não", "nao"):
+        return (
+            "Sem postagens recentes na amostra",
+            "bg-slate-100 text-slate-700 ring-1 ring-slate-200",
+        )
+    return (raw or "—", "bg-slate-50 text-slate-600 ring-1 ring-slate-200")
+
+
+def net_stat(label: str, value: str) -> str:
+    return (
+        "<div class='flex flex-col gap-0.5 min-w-0'>"
+        f"<span class='text-[10px] font-semibold uppercase tracking-wide text-slate-500'>{esc(label)}</span>"
+        f"<span class='text-sm font-bold text-slate-900 tabular-nums leading-tight'>{esc(value)}</span>"
+        "</div>"
+    )
+
+
+def net_card(
+    platform: str,
+    handle: str,
+    inner_stats_html: str,
+    extra_html: str = "",
+    grid_class: str = "grid-cols-2",
+) -> str:
+    """Card de rede: plataforma, @ e métricas em grade."""
+    return (
+        "<div class='rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 "
+        "p-4 shadow-sm ring-1 ring-slate-100'>"
+        "<div class='flex flex-wrap items-start justify-between gap-2 mb-3'>"
+        f"<span class='text-[11px] font-black uppercase tracking-wider text-calia-navy'>{esc(platform)}</span>"
+        f"<span class='text-xs font-mono text-slate-600 truncate max-w-[58%]' title='@{esc(handle)}'>@{esc(handle)}</span>"
+        "</div>"
+        f"<div class='grid gap-3 {esc(grid_class)}'>{inner_stats_html}</div>"
+        f"{extra_html}"
+        "</div>"
+    )
+
+
 def format_profile_networks_html(
     name: str,
     handles: dict,
@@ -202,48 +267,69 @@ def format_profile_networks_html(
     x_rows: list,
 ) -> str:
     """Handles e números só a partir das tabelas dos painéis; rede sem linha não aparece."""
-    lines: list[str] = []
+    cards: list[str] = []
 
     ig = panel_row_by_briefing(ig_rows, 1, handles.get("instagram"))
     if ig and len(ig) >= 10:
-        u = esc(str(ig[1]).lstrip("@"))
-        lines.append(
-            f"<span class='block'><strong>Instagram</strong> @{u} — {esc(ig[2])} seguidores · engaj. {esc(ig[9])}</span>"
-        )
+        u = str(ig[1]).lstrip("@")
+        stats = net_stat("Seguidores", str(ig[2])) + net_stat("Engajamento", str(ig[9]))
+        cards.append(net_card("Instagram", u, stats))
 
     tt = panel_row_by_briefing(tt_rows, 1, handles.get("tiktok"))
     if tt and len(tt) >= 4:
         raw_tool = str(tt[0] or "").strip()
         raw_brief_tt = str(tt[1] or "").strip()
         tt_user = raw_tool if raw_tool and " " not in raw_tool else raw_brief_tt
-        u_tool = esc(tt_user.lstrip("@"))
-        seg = esc(tt[3])
-        eng = tt[2] if str(tt[2] or "").strip() not in ("", "—") else None
-        if eng:
-            lines.append(
-                f"<span class='block'><strong>TikTok</strong> @{u_tool} — {seg} seguidores · engaj. {esc(eng)}</span>"
-            )
+        u = tt_user.lstrip("@")
+        stats = net_stat("Seguidores", str(tt[3]))
+        eng_raw = str(tt[2] or "").strip()
+        if eng_raw and eng_raw != "—":
+            stats += net_stat("Engajamento", eng_raw)
         else:
-            lines.append(f"<span class='block'><strong>TikTok</strong> @{u_tool} — {seg} seguidores</span>")
+            stats += net_stat("Engajamento", "—")
+        cards.append(net_card("TikTok", u, stats))
 
     yt = panel_row_by_briefing(yt_rows, 1, handles.get("youtube"))
     if yt and len(yt) >= 5:
-        ch = esc(yt[0])
-        yu = esc(str(yt[1]).lstrip("@"))
-        lines.append(
-            f"<span class='block'><strong>YouTube</strong> {ch} (@{yu}) — {esc(yt[2])} inscritos · {esc(yt[3])} views · {esc(yt[4])} vídeos</span>"
+        ch = str(yt[0] or "").strip()
+        yu = str(yt[1]).lstrip("@")
+        stats = (
+            net_stat("Inscritos", str(yt[2]))
+            + net_stat("Visualizações", str(yt[3]))
+            + net_stat("Vídeos", str(yt[4]))
         )
+        extra = (
+            f"<p class='mt-3 text-[11px] text-slate-500 leading-snug border-t border-slate-200/80 pt-2'>"
+            f"<span class='font-semibold text-slate-600'>Canal:</span> {esc(ch)}</p>"
+        )
+        cards.append(net_card("YouTube", yu, stats, extra, grid_class="grid-cols-2 sm:grid-cols-3"))
 
     xr = panel_row_x(x_rows, name, handles.get("x"))
     if xr and len(xr) >= 5:
-        xv = esc(str(xr[1]).lstrip("@"))
-        lines.append(
-            f"<span class='block'><strong>X</strong> @{xv} — {esc(xr[2])} seguidores · {esc(xr[3])}</span>"
+        xv = str(xr[1]).lstrip("@")
+        act_txt, act_cls = humanize_x_ativo(xr[3])
+        stats = net_stat("Seguidores", str(xr[2]))
+        badge = (
+            f"<div class='mt-3 border-t border-slate-200/80 pt-3'>"
+            f"<p class='text-[10px] font-semibold uppercase tracking-wide text-slate-500 mb-1.5'>Atividade na amostra</p>"
+            f"<span class='inline-flex items-center rounded-md px-2.5 py-1 text-xs font-semibold {act_cls}'>"
+            f"{esc(act_txt)}</span>"
+            f"<p class='mt-2 text-[11px] text-slate-500 leading-snug'>{esc(str(xr[4] or '—'))}</p>"
+            "</div>"
         )
+        cards.append(net_card("X", xv, stats, badge))
 
-    if not lines:
-        return "<p class='text-xs text-slate-500 mb-4'>Sem linha nos painéis de métricas para este nome (Instagram / TikTok / YouTube / X).</p>"
-    return f"<div class='text-xs text-slate-600 font-mono mb-4 space-y-1'>{''.join(lines)}</div>"
+    if not cards:
+        return (
+            "<p class='text-xs text-slate-500 mb-4 rounded-lg border border-dashed border-slate-200 bg-slate-50/80 px-3 py-2'>"
+            "Sem linha nos painéis de métricas para este nome (Instagram / TikTok / YouTube / X).</p>"
+        )
+    return (
+        "<div class='mb-6'>"
+        "<p class='text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3'>Redes — snapshot dos painéis</p>"
+        f"<div class='grid sm:grid-cols-2 gap-3'>{''.join(cards)}</div>"
+        "</div>"
+    )
 
 
 def render_table(headers: list[str], rows: list[list[str]]) -> str:
