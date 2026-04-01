@@ -3,7 +3,7 @@
 Gera dossiê HTML único (Brand Safety — Always ON Loterias 2026) a partir de
 `data/dossier_loterias2026.yaml` + `data/influencers.yaml`.
 
-Saída: output/20260401-dossie-brand-safety-loterias-2026-completo.html
+Saída: output/20260401-dossie-squad-always-on-loterias-2026.html
 
 Uso: cd loterias2026 && python scripts/build_dossier_completo.py
 """
@@ -365,7 +365,7 @@ def main() -> None:
 """
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    out_path = OUT_DIR / "20260401-dossie-brand-safety-loterias-2026-completo.html"
+    out_path = OUT_DIR / "20260401-dossie-squad-always-on-loterias-2026.html"
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(doc)
     print(out_path.relative_to(ROOT.parent))

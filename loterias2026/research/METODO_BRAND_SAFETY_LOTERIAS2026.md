@@ -125,4 +125,4 @@ Máquinas de CI/agente costumam levar **403**, **login wall** ou **CAPTCHA** em 
 
 **Execução real (31/03/2026):** `pip install -r loterias2026/research/osint_runs/requirements-osint.txt` — **Instaloader** → **403** no GraphQL do Instagram; **Sherlock** + **yt-dlp** → resultados em `loterias2026/research/osint_runs/20260331/` e resumo em `FONTES_BRAND_SAFETY_LOTERIAS2026.md` (seção **Rodada OSINT**).
 
-**Dossiê HTML (entrega):** dados estruturados em `loterias2026/data/dossier_loterias2026.yaml`; geração: `python scripts/build_dossier_completo.py` → `output/20260401-dossie-brand-safety-loterias-2026-completo.html`. Manter **FONTES** como arquivo de evidências; o YAML como **camada de síntese** reprodutível.
+**Dossiê HTML (entrega):** dados estruturados em `loterias2026/data/dossier_loterias2026.yaml`; geração: `python scripts/build_dossier_completo.py` → `output/20260401-dossie-squad-always-on-loterias-2026.html`. Manter **FONTES** como arquivo de evidências; o YAML como **camada de síntese** reprodutível.

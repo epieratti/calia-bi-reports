@@ -14,10 +14,10 @@ cd loterias2026
 python scripts/build_dossier_completo.py
 ```
 
-Saída: `output/20260401-dossie-brand-safety-loterias-2026-completo.html`
+Saída: `output/20260401-dossie-squad-always-on-loterias-2026.html`
 
 **No ar (GitHub Pages, pasta `caixa/`):** após o deploy em `main`, use  
-https://epieratti.github.io/calia-bi-reports/caixa/20260402-dossie-brand-safety-loterias-2026-completo.html  
+https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html  
 (senha `caixa2026` ou `embratur2026`). Copie o HTML atualizado para `caixa/` ao publicar.
 
 **Acesso:** mesma proteção do dossiê CAIXA — senhas **`caixa2026`** ou **`embratur2026`** (hash SHA-256 no script).
