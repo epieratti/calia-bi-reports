@@ -34,6 +34,91 @@ def load_yaml(path: Path) -> dict:
         return yaml.safe_load(f) or {}
 
 
+def norm_handle(s: object) -> str:
+    t = str(s or "").strip().lower()
+    if t.startswith("@"):
+        t = t[1:]
+    return t
+
+
+def panel_row_by_briefing(rows: list, brief_col: int, yaml_handle: object) -> list[str] | None:
+    key = norm_handle(yaml_handle)
+    if not key:
+        return None
+    for row in rows:
+        if len(row) <= brief_col:
+            continue
+        if norm_handle(row[brief_col]) == key:
+            return row
+    return None
+
+
+def panel_row_x(rows: list, profile_name: str, yaml_x: object) -> list[str] | None:
+    xk = norm_handle(yaml_x)
+    pn = (profile_name or "").strip().lower()
+    for row in rows:
+        if len(row) < 4:
+            continue
+        if xk and norm_handle(row[2]) == xk:
+            return row
+        if pn and str(row[0] or "").strip().lower() == pn:
+            return row
+    return None
+
+
+def format_profile_networks_html(
+    name: str,
+    handles: dict,
+    ig_rows: list,
+    tt_rows: list,
+    yt_rows: list,
+    x_rows: list,
+) -> str:
+    """Handles e números só a partir das tabelas dos painéis; rede sem linha não aparece."""
+    lines: list[str] = []
+
+    ig = panel_row_by_briefing(ig_rows, 1, handles.get("instagram"))
+    if ig and len(ig) >= 10:
+        u = esc(str(ig[1]).lstrip("@"))
+        lines.append(
+            f"<span class='block'><strong>Instagram</strong> @{u} — {esc(ig[2])} seguidores · engaj. {esc(ig[9])}</span>"
+        )
+
+    tt = panel_row_by_briefing(tt_rows, 1, handles.get("tiktok"))
+    if tt and len(tt) >= 4:
+        raw_tool = str(tt[0] or "").strip()
+        raw_brief_tt = str(tt[1] or "").strip()
+        tt_user = raw_tool if raw_tool and " " not in raw_tool else raw_brief_tt
+        u_tool = esc(tt_user.lstrip("@"))
+        seg = esc(tt[3])
+        eng = tt[2] if str(tt[2] or "").strip() not in ("", "—") else None
+        if eng:
+            lines.append(
+                f"<span class='block'><strong>TikTok</strong> @{u_tool} — {seg} seguidores · engaj. {esc(eng)}</span>"
+            )
+        else:
+            lines.append(f"<span class='block'><strong>TikTok</strong> @{u_tool} — {seg} seguidores</span>")
+
+    yt = panel_row_by_briefing(yt_rows, 1, handles.get("youtube"))
+    if yt and len(yt) >= 5:
+        ch = esc(yt[0])
+        yu = esc(str(yt[1]).lstrip("@"))
+        lines.append(
+            f"<span class='block'><strong>YouTube</strong> {ch} (@{yu}) — {esc(yt[2])} inscritos · {esc(yt[3])} views · {esc(yt[4])} vídeos</span>"
+        )
+
+    xr = panel_row_x(x_rows, name, handles.get("x"))
+    if xr and len(xr) >= 5:
+        xv = esc(str(xr[1]).lstrip("@"))
+        lines.append(
+            f"<span class='block'><strong>X</strong> @{xv} — {esc(xr[3])} seguidores · {esc(xr[4])}</span>"
+        )
+
+    if not lines:
+        return "<p class='text-xs text-slate-500 mb-4'>Sem linha nos painéis de métricas para este nome (Instagram / TikTok / YouTube / X).</p>"
+    return f"<div class='text-xs text-slate-600 font-mono mb-4 space-y-1'>{''.join(lines)}</div>"
+
+
 def render_table(headers: list[str], rows: list[list[str]]) -> str:
     th = "".join(
         f"<th class='py-2 px-3 text-left text-xs font-bold text-slate-600 border-b border-slate-200'>{esc(h)}</th>"
@@ -158,6 +243,12 @@ def main() -> None:
         cons_html += "</section>"
 
     profiles_cfg = bundle.get("profiles") or []
+    _pn = bundle.get("panels") or {}
+    ig_panel_rows = (_pn.get("instagram") or {}).get("rows") or []
+    tt_panel_rows = (_pn.get("tiktok") or {}).get("rows") or []
+    yt_panel_rows = (_pn.get("youtube") or {}).get("rows") or []
+    x_panel_rows = (_pn.get("x") or {}).get("rows") or []
+
     toc_items = ""
     profile_sections = ""
     summary_rows: list[list[str]] = []
@@ -177,8 +268,9 @@ def main() -> None:
         name = pc.get("name", "")
         slug = slug_id(name)
         h = pc.get("handles") or {}
-        order = [("Instagram", h.get("instagram")), ("TikTok", h.get("tiktok")), ("YouTube", h.get("youtube")), ("X", h.get("x"))]
-        handles_line = " · ".join(f"{lab} @{esc(str(v).lstrip('@'))}" for lab, v in order if v)
+        networks_html = format_profile_networks_html(
+            name, h, ig_panel_rows, tt_panel_rows, yt_panel_rows, x_panel_rows
+        )
         eixos = pc.get("eixos") or {}
         narr = esc(pc.get("narrativa", ""))
         risco = esc(pc.get("risco_geral", "—"))
@@ -189,7 +281,7 @@ def main() -> None:
             f"<h2 class='text-xl font-black text-calia-navy'>{idx}. {esc(name)}</h2>"
             f"<span class='text-sm font-semibold text-slate-600'>Síntese de risco: {risco}</span></div>"
             f"<p class='text-xs text-slate-600 mb-2'><span class='font-bold text-calia-navy'>{tier_l}</span></p>"
-            f"<p class='text-xs text-slate-500 font-mono mb-4'>{handles_line}</p>"
+            f"{networks_html}"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
             f"<div class='grid md:grid-cols-3 gap-4'>"
             f"{box('1. Concorrência (bets / loterias / jogos)', eixos.get('concorrencia'))}"
