@@ -176,9 +176,9 @@ profiles:
     tier: "Tier 1"
     risco_geral: "Baixo a moderado — alta visibilidade na mídia"
     resumo_tabela:
-      risco: "Baixo a moderado."
+      risco: "Baixo a moderado (alta visibilidade)."
       concorrencia: "Sem bet/loteria concorrente no que vimos."
-      polemicas: "Exposição BBB e mídia; pautas sensíveis."
+      polemicas: "BBB e mídia; pautas que polarizam."
       politica: "Causas sociais; sem partido explícito."
     handles:
       instagram: pitelgiovanna
@@ -197,8 +197,8 @@ profiles:
     resumo_tabela:
       risco: "Moderado."
       concorrencia: "Sem publi de bet; evento educação financeira (bolsa)."
-      polemicas: "Debates sobre método e promessas."
-      politica: "Sem pauta política relevante no que vimos."
+      polemicas: "Debate sobre método, venda e plágio (redes e imprensa)."
+      politica: "Sem partido; em alguns vídeos, tom próximo à direita."
     handles:
       instagram: rafaelgratta
       tiktok: rafaelgratta
@@ -217,7 +217,7 @@ profiles:
       risco: "Baixo."
       concorrencia: "Sem bet/loteria concorrente."
       polemicas: "Sem alerta grave no que vimos."
-      politica: "Neutro no que vimos; X pouco ativo."
+      politica: "Humor pode cutucar política; sem partido claro."
     handles:
       instagram: indio.behn
       tiktok: indio.behn
@@ -254,8 +254,8 @@ profiles:
     resumo_tabela:
       risco: "Baixo."
       concorrencia: "Sem casa de aposta."
-      polemicas: "Baixa exposição negativa."
-      politica: "Neutra no que vimos."
+      polemicas: "Pouca polêmica grande na imprensa consultada."
+      politica: "Sem política explícita recorrente; uso Nordeste sem viés forte."
     handles:
       instagram: cleanesampaioo
       tiktok: cleanesampaioo
@@ -274,7 +274,7 @@ profiles:
       risco: "Moderado."
       concorrencia: "Sem bet; checar política de álcool na peça."
       polemicas: "Cinema: discriminação; vitória na Justiça (vítima). Sofre críticas por defender inclusão."
-      politica: "Causas progressistas; confirmar neutralidade se exigido."
+      politica: "Progressista; checar filiação se a peça exigir neutralidade."
     handles:
       instagram: ivanbaron
       tiktok: ivanbaron
@@ -293,7 +293,7 @@ profiles:
       risco: "Baixo."
       concorrencia: "Sem bet."
       polemicas: "Conta hackeada (segurança), não conduta."
-      politica: "Evita partido forte no que vimos."
+      politica: "Falou em não polarizar; alinhar neutralidade no contrato."
     handles:
       instagram: nocasomila
       tiktok: nocasomila
@@ -330,8 +330,8 @@ profiles:
     resumo_tabela:
       risco: "Baixo."
       concorrencia: "Sem casa de aposta."
-      polemicas: "Pouca matéria negativa."
-      politica: "Não achamos no que vimos."
+      polemicas: "Baixo ruído midiático."
+      politica: "Sem pauta política recorrente na busca."
     handles:
       instagram: cerejaaaaaa
       tiktok: cerejaaaaaa
@@ -350,7 +350,7 @@ profiles:
       risco: "Baixo."
       concorrencia: "Sem bet."
       polemicas: "Pouco na imprensa tradicional."
-      politica: "Não achamos."
+      politica: "Sem pauta política clara na busca."
     handles:
       instagram: comcertezaaline
       tiktok: comcertezaaline
@@ -366,9 +366,9 @@ profiles:
     tier: "Micros"
     risco_geral: "Poucas matérias na imprensa aberta; risco documentado parece baixo"
     resumo_tabela:
-      risco: "Pouca matéria na imprensa aberta."
+      risco: "Baixo no que documentamos; pouca matéria na imprensa."
       concorrencia: "Sem bet no que vimos."
-      polemicas: "Sem matéria na imprensa aberta ligada ao perfil no que vimos."
+      polemicas: "Sem notícia negativa clara na busca; arquivo de imprensa fino."
       politica: "Não achamos no que vimos."
     handles:
       instagram: davizoa
@@ -404,7 +404,7 @@ profiles:
     tier: "Página"
     risco_geral: "Moderado a alto"
     resumo_tabela:
-      risco: "Moderado a alto (veículo)."
+      risco: "Moderado a alto."
       concorrencia: "[Guia no Catraca](https://catracalivre.com.br/noticias/uplinko-fashion-tv-guia-completo-2025/) encaminha a site de aposta; ver regras internas."
       polemicas: "Histórico de crises editoriais."
       politica: "Linha progressista explícita."
