@@ -129,7 +129,7 @@
 
 **Alinhamento:** a coluna **X (`influencers.yaml`)** é o handle oficial do squad. O **@ na tabela** segue o extract; onde for **diferente** do YAML, marcamos **⚠**.
 
-**Perfis do squad sem linha neste extract:** **Aline Costa** (`comcertezaaline`), **Megh Merly** (`megh_melry`), **Mila Costa** (`nocasomila`), **Paula Mineira** (`mineira_paula`), **Davi** (`davizoa`), **Cereja** (`cerejaaaaaa`) — **não constam** na amostra abaixo.
+**Perfis do squad sem linha neste extract:** **Aline Costa** (`comcertezaaline`), **Megh Melry** (`megh_melry`), **Mila Costa** (`nocasomila`), **Paula Mineira** (`mineira_paula`), **Davi** (`davizoa`), **Cereja** (`cerejaaaaaa`) — **não constam** na amostra abaixo.
 
 **Uso no dossiê:** resumo **qualitativo** do teor recente (não é arquivo de tweets); **“Ativo”** = julgamento na data da extração; **não** substitui os três eixos de brand safety.
 
@@ -198,7 +198,7 @@ Este dossiê consolida análises anteriores em um documento estruturado. Verific
 
 3. **Índio Behn** (`@indio.behn`) — Humorista/ator (ex.: Dra. Rosângela); humor leve; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** neutro/leve; política como piada, sem lado. **Risco (texto):** muito baixo.
 
-4. **Megh Merly** (`@megh_melry`) — Humor com pegadinhas (vó Marina), sátira cotidiana; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** satírico/neutro. **Risco (texto):** baixo.
+4. **Megh Melry** (`@megh_melry`) — Humor com pegadinhas (vó Marina), sátira cotidiana; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** satírico/neutro. **Risco (texto):** baixo.
 
 5. **Cleane Sampaio** (`@cleanesampaioo`) — Cantora, ex-The Voice, humor cearense; IG e TikTok. **Marcas:** nenhuma grande parceria identificada. **Polêmicas:** nenhuma. **Política:** neutro. **Risco (texto):** muito baixo.
 
@@ -593,7 +593,7 @@ Feed: `https://news.google.com/rss/search?q=<consulta>&hl=pt-BR&gl=BR&ceid=BR:pt
 | Perfil | Consulta no feed | Amostra (título — veículo) |
 |--------|------------------|----------------------------|
 | **Índio Behn** | `Indio Behn` | São José (prefeitura) — espetáculo Dra. Rosângela; **Portal ABC do ABC** — *Tratamento de Choque*; **Matinal** — Araújo Vianna; **GZH** — cinema POA; **Univates** — teatro; **Sesc/RS** — Natal Alberto Bins; **Prefeitura Americana** — *Tratamento de Choque*; **Jornal da Capital** — POA |
-| **Megh Merly** | `Megh Merly` | **Sem itens** no RSS (grafias da busca não batem com imprensa) |
+| **Megh Melry** | `Megh Melry` | **Sem itens** no RSS (grafias da busca não batem com imprensa) |
 | **Megh Melry** | `Megh Melry` | **GiroGO Notícias** — capa **Revista Adames**; **O POVO+** — série FDR / Rio São Francisco (**ruído** — não cita a influenciadora no título) |
 | **Cleane Sampaio** | `Cleane Sampaio` | **Portal Nosso Meio** — *Todo Mundo Ama*; **Unifor** — colação; **gshow** — The Voice / votação; **O POVO** — álbum Nordeste; **secult.ce** — Festival do Pratinho (checar menção no corpo); **Terra** — semifinalistas TV; **paparazoom** — programa culinário (checar menção) |
 | **Ivan Baron** | `Ivan Baron` | **Diário do RN** — unidade movimento PCD; **Brasil de Fato** — pré-candidatura 2026; **Blog do Barreto** — Lula convida ao PT; **Saiba Mais** — filiação PT deputado estadual; **DeFato.com** — candidatura PT / Janja; **Agora RN** — críticas por filiação MDB; **Tribuna do Norte** — desfiliação MDB; **O POTI** — Lula e Janja pós-Sapucaí; **Diário PcD** — sondagem Planalto |
@@ -611,7 +611,7 @@ Feed: `https://news.google.com/rss/search?q=<consulta>&hl=pt-BR&gl=BR&ceid=BR:pt
 | **Paula Mineira Areado** | **Ruído:** TCE-Areado, acidentes MG, Enem — **sem** menção à influenciadora no título | Não usar como fonte do perfil. |
 | **davizoa** | **Sem itens** no RSS (canal vazio) | Repetido em **31/03/2026** — idem. Consulta **`"davi zoa"`** no RSS: **sem** notícias sobre o apelido (itens irrelevantes/fora do escopo). |
 | **comcertezaaline TikTok** | **Sem itens** | **Aline com certeza** sozinha retorna **Aline Campos**, pets etc. — ruído. |
-| **Megh Merly** | **Sem itens** | Usar **Megh Melry** (linha anterior nesta página). |
+| **Megh Merly** (busca) | **Sem itens** | Grafia correta do nome público: **Megh Melry** — usar essa grafia nas buscas. |
 | **"Ana Thereza" Cereja TikTok** | **Sem itens** | Nome da agregador **Wupper**; confirmação só com **post primário**. |
 | **Catraca Livre Chapecoense** | **Meio & Mensagem** — “Catraca Livre: erros na tragédia”; **Folha Vitória** (desculpas Chape); **DCM** (Kiko Nogueira); **O Dia** (imagem/repercussão) | **URL direta** `meioemensagem.com.br/midia/catraca-livre-erros-na-tragedia` retornou **404** no `curl` (mar/2026); manter **Folha Vitória**, **O Dia**, **DCM** como secundárias fortes. |
 
@@ -1002,7 +1002,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 ---
 
-## 4. Megh Merly (`@megh_melry`)
+## 4. Megh Melry (`@megh_melry`)
 
 ### Critérios — este perfil
 Concorrência · Polêmicas · Política — conclusões na tabela **Achados objetivos** (fim da seção).
@@ -1027,7 +1027,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 | Consulta / foco | Resultado |
 |-----------------|-----------|
-| `Megh Merly` no **Google Notícias (RSS)** | **Zero** itens — usar **`Megh Melry`** (grafia do site e de matérias). |
+| `Megh Melry` no **Google Notícias (RSS)** | **Zero** itens — usar **`Megh Melry`** (grafia do site e de matérias). |
 | `Megh Melry` no **Google Notícias (RSS)** | **GiroGO** — capa **Revista Adames**; **O POVO+** — série FDR (título **sem** o nome no RSS — possível **ruído**). Ver tabela global **Google Notícias** nesta página. |
 | `Megh Melry` + aposta / bet / cassino | **Sem** hit claro ligando a **esta** criadora nesta rodada. |
 | `Megh Melry` + política / Lula / Bolsonaro | **Sem** matéria pertinente indexada na amostra. |
@@ -1045,7 +1045,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | **OSINT — Sherlock** | omg.lol | https://megh_melry.omg.lol | Página “status”/perfil leve — **validar** relevância. |
 | **OSINT — yt-dlp TikTok** | — | `https://www.tiktok.com/@megh_melry` | **Erro do extrator:** privado ou embedding off — **sem** lista de vídeos neste ambiente. Log: `osint_runs/20260331/ytdlp_tiktok_thin3.txt`. |
 
-### Desambiguação — não atribuir a Megh Merly sem confirmação
+### Desambiguação — não atribuir a Megh Melry sem confirmação
 
 | Tema | Fonte | URL | Notas |
 |------|--------|-----|--------|
@@ -1055,7 +1055,7 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 
 **Regra para o relatório:** só vincular a `@megh_melry` se o veículo **nomear o handle ou a pessoa** de forma inequívoca.
 
-### Marcas e parcerias — Megh Merly (web aberta, rodada marcas)
+### Marcas e parcerias — Megh Melry (web aberta, rodada marcas)
 
 | Marca / organização | Tipo de vínculo | Fonte | URL | Confiança |
 |---------------------|-----------------|--------|-----|------------|
@@ -1064,12 +1064,12 @@ Concorrência · Polêmicas · Política — conclusões na tabela **Achados obj
 | *TikTok (amostra OSINT)* | **Indisponível** via **yt-dlp** neste teste | — | — | Repetir no app ou com impersonate |
 | *Lista de publipost* | Exige varredura **Instagram / TikTok / YouTube / X** ou media kit | — | — | — |
 
-### Achados objetivos — Megh Merly (rodada aprofundada)
+### Achados objetivos — Megh Melry (rodada aprofundada)
 
 | Eixo | Conclusão | Confiança |
 |------|-----------|-----------|
 | **Concorrência** | Não encontrada nesta rodada evidência de parceria com loteria concorrente, bet ou cassino **atribuída inequivocamente** a `@megh_melry`. | Baixa a média (pouca imprensa indexada) |
-| **Polêmicas** | Caso judicial / gravidez / ex-atleta em mar/2026 aparece na imprensa ligado a **outra** pessoa (ex.: **Juliana Merhy**); **não** atribuir a Megh Merly sem nomeação explícita do handle ou da pessoa. | Alta (desambiguação) |
+| **Polêmicas** | Caso judicial / gravidez / ex-atleta em mar/2026 aparece na imprensa ligado a **outra** pessoa (ex.: **Juliana Merhy**); **não** atribuir a Megh Melry sem nomeação explícita do handle ou da pessoa. | Alta (desambiguação) |
 | **Política** | Não localizado posicionamento partidário ou pauta política explícita **para este perfil** nesta rodada. | Baixa |
 
 **Checklist de completude (snapshot mar/2026):** (1) **Google Notícias:** `Megh Merly` vazio; `Megh Melry` com **GiroGO** / Adames — URL https://www.girogonoticias.com.br/noticia/50088/megh-melry-a-influenciadora-sera-capa-da-revista-adames (**403** no `curl` aqui). (2) **TikTok:** **yt-dlp** bloqueado (privado/embedding) — usar **app** ou [impersonation](https://github.com/yt-dlp/yt-dlp#impersonation). (3) **Pendências:** inventário **IG/TT**; **Collabstr megreilyy**; números do **site** no app.

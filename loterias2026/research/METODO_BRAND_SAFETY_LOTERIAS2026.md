@@ -73,7 +73,7 @@ Jogo do bicho, banca vs. Mega-Sena/CAIXA informativo.
 
 - [ ] `@comcertezaaline` vs `@aliineza`
 - [ ] `@davizoa` — perfil correto
-- [ ] Megh Merly vs Juliana Merhy
+- [ ] Megh Melry vs Juliana Merhy
 - [ ] Homônimo Giovanna Reis ≠ Pitel
 - [ ] Link cassino spam Rafael Gratta — não usar sem segunda fonte
 

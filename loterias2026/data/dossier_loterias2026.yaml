@@ -63,7 +63,7 @@ panels:
       - ["Índio Behn", "indio.behn", "619.868", "+21.330", "+949", "+1.668", "2.897", "23K", "799", "3,80%", "Forte crescimento"]
       - ["Ivan Baron", "ivanbaron", "550.499", "+882", "+45", "+56", "2.176", "8,3K", "180", "1,50%", "Crescimento positivo"]
       - ["Cleane Sampaio", "cleanesampaioo", "523.359", "+4.010", "+197", "+256", "1.369", "10K", "422", "2%", "Crescimento consistente"]
-      - ["Megh Merly", "megh_melry", "488.455", "0", "0", "0", "0", "0", "0", "0%", "Painel zerado — validar no app; há atividade recente no perfil"]
+      - ["Megh Melry", "megh_melry", "488.455", "0", "0", "0", "0", "0", "0", "0%", "Painel zerado — validar no app; há atividade recente no perfil"]
       - ["Aline Costa", "comcertezaaline", "230.134", "+2.063", "+310", "+203", "637", "5K", "37", "2,20%", "Equilíbrio de métricas"]
       - ["Paula Mineira", "mineira.paula", "176.755", "+771", "+83", "+41", "642", "1,2K", "45", "0,69%", "Ganho regular"]
       - ["Davi", "davizoa", "101.442", "+2.396", "+151", "+342", "344", "125K", "1,5K", "125%", "Taxa atípica — conferir metodologia do painel"]
@@ -119,7 +119,7 @@ panels:
       - ["Cleane Sampaio", "cleanesampaioo", "2,6K", "101K", "32"]
       - ["Paula Helena — Mineira", "mineira.paula", "2K", "950K", "77"]
       - ["Davizoa", "davizoa", "1K", "24K", "18"]
-      - ["Megh Merly", "megh_melry", "133", "2,5K", "6"]
+      - ["Megh Melry", "megh_melry", "133", "2,5K", "6"]
 
   x:
     footnote: "Leitura direta do perfil no X em data da coleta. “Ativo” = havia postagens recentes na amostra. Usuário = @ visto na coleta."
@@ -236,7 +236,7 @@ profiles:
       polemicas: "Nenhum episódio grave recorrente na imprensa analisada."
       politica: "Humor eventualmente toca política sem adesão explícita a partido na amostra. Perfil no X com pouca atividade recente na leitura fechada."
 
-  - name: "Megh Merly"
+  - name: "Megh Melry"
     tier: "Mezzos"
     risco_geral: "Baixo"
     resumo_tabela:
