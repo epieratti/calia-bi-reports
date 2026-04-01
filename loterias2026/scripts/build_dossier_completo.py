@@ -165,6 +165,22 @@ def normalize_panel_for_display(key: str, panel: dict, ig_rows: list) -> tuple[l
 
     if key == "tiktok" and len(headers) >= 2:
         out_h = ["Nome", "Usuário"] + headers[2:]
+        # Remove coluna "Seguindo" se ainda existir em YAML antigo
+        try:
+            si = next(
+                i
+                for i, h in enumerate(out_h)
+                if str(h or "").strip().lower() in ("seguindo", "seguindo.")
+            )
+            out_h = out_h[:si] + out_h[si + 1 :]
+            adj = si - 2  # índice na linha bruta após [tool, brief] = r[0], r[1]
+            for ri, r in enumerate(rows):
+                r = list(r)
+                if len(r) > adj + 2:
+                    del r[adj + 2]
+                rows[ri] = r
+        except StopIteration:
+            pass
         out_rows: list[list] = []
         for r in rows:
             if len(r) < 2:
