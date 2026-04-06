@@ -781,13 +781,11 @@ def main() -> None:
         narr = mini_md(pc.get("narrativa", ""))
         risco_raw = pc.get("risco_geral", "—")
         risco_badge = risco_badge_block_html(risco_raw, compact=False)
-        tier_l = esc(pc.get("tier", "—"))
         return (
             f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
             f"<div class='flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-3 mb-4'>"
             f"<h2 class='text-xl font-black text-calia-navy'>{idx}. {esc(name)}</h2>"
             f"{risco_badge}</div>"
-            f"<p class='text-xs text-slate-600 mb-2'><span class='font-bold text-calia-navy'>{tier_l}</span></p>"
             f"{networks_html}"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
             f"<div class='grid md:grid-cols-3 gap-4'>"
@@ -974,7 +972,6 @@ def main() -> None:
 
     <section id="perfis" class="scroll-mt-20">
       <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise por camada</h2></div>
-      <p class="text-sm text-slate-600 mb-8">Ordem: Tier 1, Tier 2 (se houver nomes), Mezzos, Micros e Página.</p>
       {profile_sections}
     </section>
 
