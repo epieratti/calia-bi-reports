@@ -45,20 +45,19 @@ panels:
       - "Nome"
       - "Usuário"
       - "Seguidores"
-      - "Variação 14 dias (%)"
       - "Posts"
       - "Curtidas méd."
       - "Coment. méd."
       - "Engaj."
     rows:
-      - ["Julia Ferrari", "julia_ferrari", "1.242.283", "—", "642", "94.948", "732", "7,70%"]
-      - ["João Vítor Mello", "joaovitormello", "720.648", "—", "923", "41.974", "858", "5,94%"]
-      - ["Lorena Rufino", "rufislore", "3.525.456", "—", "606", "49.971", "786", "1,44%"]
-      - ["Bárbara Coura", "barbaracoura", "3.475.299", "—", "1.789", "130.205", "930", "3,77%"]
-      - ["Raphael Vicente", "raphaelvicente", "1.087.923", "—", "858", "65.180", "2.125", "6,19%"]
-      - ["Rafael Saraiva", "rafaelsaraiva28", "363.280", "—", "171", "39.135", "979", "11,04%"]
-      - ["Pedro Ottoni", "pedroottoni_", "624.115", "—", "116", "20.340", "318", "3,31%"]
-      - ["Ademara", "ademara", "720.006", "—", "1.127", "109.492", "1.706", "15,44%"]
+      - ["Julia Ferrari", "julia_ferrari", "1.242.283", "642", "94.948", "732", "7,70%"]
+      - ["João Vítor Mello", "joaovitormello", "720.648", "923", "41.974", "858", "5,94%"]
+      - ["Lorena Rufino", "rufislore", "3.525.456", "606", "49.971", "786", "1,44%"]
+      - ["Bárbara Coura", "barbaracoura", "3.475.299", "1.789", "130.205", "930", "3,77%"]
+      - ["Raphael Vicente", "raphaelvicente", "1.087.923", "858", "65.180", "2.125", "6,19%"]
+      - ["Rafael Saraiva", "rafaelsaraiva28", "363.280", "171", "39.135", "979", "11,04%"]
+      - ["Pedro Ottoni", "pedroottoni_", "624.115", "116", "20.340", "318", "3,31%"]
+      - ["Ademara", "ademara", "720.006", "1.127", "109.492", "1.706", "15,44%"]
 
   tiktok:
     footnote: "Upfluence (TikTok) — mesma data de referência."
