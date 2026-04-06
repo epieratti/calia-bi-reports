@@ -260,14 +260,10 @@ def profiles_in_summary_order(profiles_cfg: list, tier_order: list) -> list[dict
     return ordered
 
 
-def name_tier_cell_html(name: object, tier: object) -> str:
-    """Primeira coluna alinhada à Tabela resumo: nome + tier abaixo."""
+def name_tier_cell_html(name: object, _tier: object) -> str:
+    """Primeira coluna dos painéis (Nome): só o nome; camada não é exibida na célula."""
     n = esc(name or "—")
-    t = esc(tier or "—")
-    return (
-        f"<strong class='font-semibold text-slate-900'>{n}</strong>"
-        f"<br><span class='text-xs text-slate-500'>{t}</span>"
-    )
+    return f"<strong class='font-semibold text-slate-900'>{n}</strong>"
 
 
 def panel_row_index_for_profile(panel_key: str, raw_rows: list[list], pc: dict) -> int | None:
@@ -332,7 +328,7 @@ def build_ordered_panel_rows(
 ) -> tuple[list[str], list[list[str]]]:
     """Cabeçalho Nome/camada + métricas; linhas na ordem da tabela resumo.
     Omite criador quando não há perfil na rede (todas as métricas vazias/—)."""
-    h0 = "Nome / camada"
+    h0 = "Nome"
     out_headers = [h0] + list(disp_headers[1:])
     n_rest = max(0, len(disp_headers) - 1)
     out_rows: list[list[str]] = []
@@ -824,7 +820,7 @@ def main() -> None:
             risco_cell = risco_badge_block_html(pc.get("risco_geral", "—"), compact=True)
             summary_rows.append(
                 [
-                    f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>{esc(pc.get('tier', '—'))}</span>",
+                    f"<strong>{esc(name)}</strong>",
                     risco_cell,
                     mini_md(rt.get("concorrencia", "—")),
                     mini_md(rt.get("polemicas", "—")),
@@ -867,7 +863,7 @@ def main() -> None:
             risco_cell_o = risco_badge_block_html(pc.get("risco_geral", "—"), compact=True)
             summary_rows.append(
                 [
-                    f"<strong>{esc(name)}</strong><br><span class='text-xs text-slate-500'>—</span>",
+                    f"<strong>{esc(name)}</strong>",
                     risco_cell_o,
                     mini_md(rt.get("concorrencia", "—")),
                     mini_md(rt.get("polemicas", "—")),
@@ -882,7 +878,7 @@ def main() -> None:
         )
 
     sum_table = render_table(
-        ["Nome / camada", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
+        ["Nome", "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
         summary_rows,
         html_safe_columns=frozenset({0, 1, 2, 3, 4}),
     )
