@@ -2,7 +2,7 @@
 # Campo vazio numa rede = sem perfil público identificado nessa rede (não implica erro de pesquisa).
 # YouTube: ver research/YOUTUBE_CANAIS.md (verificação 2026-04-06)
 # TikTok: ver research/TIKTOK_PERFIS.md (verificação 2026-04-06 — handles podem diferir do Instagram)
-# X: ver research/X_PERFIS.md (verificação 2026-04-06 — contas com poucos seguidores/protegidas não entram como “oficial”)
+# X: contas protegidas, com audiência muito baixa ou sem uso como canal oficial ficam vazias (como se não houvesse X).
 campaign: "Always ON Loterias 2026"
 
 profiles:
@@ -20,7 +20,7 @@ profiles:
     instagram: rufislore
     tiktok: lorerufis
     youtube: "@rufislore"
-    x: lorerufis
+    x: ""
   - name: "bárbara coura"
     instagram: barbaracoura
     tiktok: barbaracoura
@@ -30,7 +30,7 @@ profiles:
     instagram: raphaelvicente
     tiktok: raphaelviicente
     youtube: "@raphaelvicente"
-    x: raphaelviicente
+    x: ""
   - name: "Rafael Saraiva"
     instagram: rafaelsaraiva28
     tiktok: saraivarafael28
@@ -45,4 +45,4 @@ profiles:
     instagram: ademara
     tiktok: ademaravilha
     youtube: "@ademara"
-    x: ademaravilha
+    x: ""

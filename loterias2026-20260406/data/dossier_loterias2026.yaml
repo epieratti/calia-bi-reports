@@ -105,7 +105,7 @@ panels:
       - ["Ademara (@ademara0)", "ademara", "1,65K", "104K", "19"]
 
   x:
-    footnote: "Checagem manual no X na data de referência (06/04/2026)."
+    footnote: "No X, só entram contas públicas com audiência utilizável como canal; protegidas, muito pequenas ou inativas não são tratadas como perfil do creator — consta como sem X no levantamento. Checagem manual em 06/04/2026."
     headers:
       - "Nome"
       - "Usuário"
@@ -113,14 +113,14 @@ panels:
       - "Ativo?"
       - "Teor recente (resumo)"
     rows:
-      - ["Julia Ferrari", "julia_ferrari", "—", "Não", "Conta protegida (~73 seg.); não tratada como perfil oficial."]
-      - ["João Vítor Mello", "joaovitormello", "—", "Não", "~32 seg.; não tratado como perfil oficial."]
-      - ["Lorena Rufino", "lorerufis", "—", "Não", "Post visível ~abr/2024; inativa há ~2 anos."]
-      - ["bárbara coura", "barbaracoura", "—", "Não", "Sem X confirmado para o squad."]
-      - ["Raphael Vicente", "raphaelviicente", "—", "Não", "Post visível ~set/2022; inativa há vários anos."]
-      - ["Rafael Saraiva", "rafaelsaraiva28", "—", "Não", "Sem perfil confirmado no X para o creator."]
-      - ["Pedro Ottoni", "pedroottoni_", "—", "Não", "0 seg.; não tratado como perfil oficial."]
-      - ["Ademara", "ademaravilha", "—", "Não", "Post visível ~ago/2024; pouca atividade (~20 meses)."]
+      - ["Julia Ferrari", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["João Vítor Mello", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["Lorena Rufino", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["bárbara coura", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["Raphael Vicente", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["Rafael Saraiva", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["Pedro Ottoni", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
+      - ["Ademara", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
 
 executive_summary:
   tagline: "8 nomes — leitura rápida; o detalhe está em Perfis e na tabela resumo."
@@ -201,8 +201,8 @@ profiles:
       instagram: rufislore
       tiktok: lorerufis
       youtube: rufislore
-      x: lorerufis
-    narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada em imprensa. X @lorerufis inativo há ~2 anos."
+      x: ""
+    narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada em imprensa."
     eixos:
       concorrencia: "**Não foi encontrada** ligação com publi de apostas ou loteria concorrente."
       polemicas: "Matérias sobre término de relacionamento (contexto privado, nota oficial)."
@@ -237,7 +237,7 @@ profiles:
       instagram: raphaelvicente
       tiktok: raphaelviicente
       youtube: raphaelvicente
-      x: raphaelviicente
+      x: ""
     narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas citadas em matérias de marketing: Garnier, Uber, TIM, Old Spice. YouTube sem página indexada no painel na coleta."
     eixos:
       concorrencia: "**Não foi encontrada** evidência de publi de casa de apostas."
@@ -291,7 +291,7 @@ profiles:
       instagram: ademara
       tiktok: ademaravilha
       youtube: ademara
-      x: ademaravilha
+      x: ""
     narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (ER alto); TikTok ~610k. Dois canais de YouTube no levantamento — consolidar métricas ao preparar peça."
     eixos:
       concorrencia: "**Não foi encontrada** publi de casa de apostas nas fontes desta ronda."

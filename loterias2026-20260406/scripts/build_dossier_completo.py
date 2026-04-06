@@ -463,7 +463,14 @@ def format_profile_networks_html(
         )
         cards.append(net_mini_card("bg-red-600", "YouTube", yu, stats, footer))
 
-    xr = panel_row_x(x_rows, name, handles.get("x"))
+    # X: só mini-card se o YAML trata como canal oficial (handle preenchido).
+    # Contas protegidas, homónimos ou com audiência muito baixa ficam vazias — como se não houvesse X.
+    x_h = handles.get("x")
+    xr = (
+        panel_row_x(x_rows, name, x_h)
+        if (x_h and str(x_h).strip())
+        else None
+    )
     if xr and len(xr) >= 5:
         xv = str(xr[1]).lstrip("@")
         act_txt, act_cls = humanize_x_ativo(xr[3])
