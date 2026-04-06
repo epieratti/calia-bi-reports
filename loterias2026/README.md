@@ -29,3 +29,8 @@ Após alterar métricas ou textos, edite o YAML e **regenere** o HTML para mante
 ## Pipeline opcional (Apify)
 
 Ver `requirements.txt` e `.github/workflows/loterias2026-brand-safety.yml` — exige `APIFY_TOKEN`; gera outro HTML heurístico em `output/dossie-brand-safety-loterias-2026.html`.
+
+### Segredos com 1Password (local ou GitHub Actions)
+
+- **Local:** instale o [1Password CLI](https://developer.1password.com/docs/cli/). Use o arquivo modelo `.env.1password.tpl`: copie para fora do repositório ou crie `.env.local` com referências `op://Cofre/Item/campo` e execute `op run --env-file .env.local -- python scripts/run_pipeline.py` a partir de `loterias2026/`.
+- **CI:** no workflow manual, escolha **secrets_source: 1password**. Defina o repository secret `OP_SERVICE_ACCOUNT_TOKEN` (conta de serviço 1Password) e ajuste `loterias2026/.env.1password.tpl` com as referências reais ao cofre. Guia: [Load secrets from 1Password into GitHub Actions](https://developer.1password.com/docs/ci-cd/github-actions).

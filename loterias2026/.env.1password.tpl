@@ -1,0 +1,11 @@
+# Template para 1Password CLI (`op run`) e GitHub Actions (load-secrets-action).
+# Ajuste vault, item e rótulos de campo ao seu cofre (sem commitar segredos em texto).
+# Sintaxe: https://developer.1password.com/docs/cli/secret-reference-syntax/
+
+APIFY_TOKEN=op://REPLACE_VAULT/REPLACE_ITEM/APIFY_TOKEN
+TWITTER_BEARER_TOKEN=op://REPLACE_VAULT/REPLACE_ITEM/TWITTER_BEARER_TOKEN
+YOUTUBE_API_KEY=op://REPLACE_VAULT/REPLACE_ITEM/YOUTUBE_API_KEY
+
+APIFY_INSTAGRAM_ACTOR_ID=op://REPLACE_VAULT/REPLACE_ITEM/APIFY_INSTAGRAM_ACTOR_ID
+APIFY_TIKTOK_ACTOR_ID=op://REPLACE_VAULT/REPLACE_ITEM/APIFY_TIKTOK_ACTOR_ID
+APIFY_X_ACTOR_ID=op://REPLACE_VAULT/REPLACE_ITEM/APIFY_X_ACTOR_ID
