@@ -460,7 +460,7 @@ def format_profile_networks_html(
         cards.append(net_mini_card("bg-red-600", "YouTube", yu, stats, footer))
 
     # X: só mini-card se o YAML trata como canal oficial (handle preenchido).
-    # Contas protegidas, homónimos ou com audiência muito baixa ficam vazias — como se não houvesse X.
+    # Contas protegidas, homônimos ou com audiência muito baixa ficam vazias — como se não houvesse X.
     x_h = handles.get("x")
     xr = (
         panel_row_x(x_rows, name, x_h)
@@ -987,7 +987,7 @@ def main() -> None:
 
     <section id="tabela" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Tabela resumo</h2></div>
-      <p class="text-sm text-slate-600 mb-4">Um resumo por nome. O texto completo está em Perfis; os números vêm depois.</p>
+      <p class="text-sm text-slate-600 mb-4">Uma linha por nome; o detalhe está em Perfis e nas métricas abaixo.</p>
       {sum_table}
     </section>
 
