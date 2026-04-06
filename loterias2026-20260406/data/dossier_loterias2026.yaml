@@ -11,12 +11,12 @@ password_sha256_hex:
 
 briefing:
   intro_paragraphs:
-    - "Análise de **brand safety** para campanha de loterias (**oito perfis** do squad Always ON 2026). Abaixo: **o que verificamos** em cada eixo; metodologia, na seção **Como foi analisado**."
-    - "**Não encontramos** nas fontes consultadas = sem evidência pública no que analisamos; pode existir fora do levantamento."
+    - "Este dossiê avalia **risco de imagem (brand safety)** para uma campanha de loterias da Caixa, com **oito influenciadores** do squad Always ON 2026. Nas páginas seguintes listamos o que foi verificado em cada eixo; a forma como a análise foi feita está explicada em **Como foi analisado**."
+    - "Quando o texto diz que **não encontramos** algo, significa que não houve evidência pública nas fontes que consultamos — ainda assim, pode existir informação fora desse levantamento."
   criterios:
-    - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui humor com tema de aposta que gere ruído semântico)."
-    - "Polêmicas: falas, episódios ou exposição na mídia com risco de imagem."
-    - "Política: filiação ou posicionamento de campanha quando houver **registro** público; em **2026**, também exposição que terceiros possam **usar em narrativa** (críticos, oposição). Recorte **governo x eleição** no bloco **Política e eleições** (Como foi analisado)."
+    - "Concorrência: buscamos vínculo com outras loterias, casas de apostas, cassino ou jogos de azar, incluindo humor que cite aposta e possa ser lido como associação indevida, mesmo sem publicidade paga."
+    - "Polêmicas: falas, episódios ou exposição na mídia que possam afetar a percepção da marca."
+    - "Política: **filiação partidária** quando houver registro público **e** **proximidade reputacional** com **qualquer polo** — **esquerda / governo federal** (**PT**, **Lula**, **Planalto**, pautas oficiais) **ou** **direita** (**PL**, **Bolsonaro**, aliados, pautas bolsonaristas ou de extrema-direita) — ainda que **sem** filiação formal (eventos, apoios, conteúdo recorrente). Na leitura de **campanha**, **não** tratamos os dois polos como independentes: evidência forte com **um** lado **já** afasta, no mesmo sentido, alinhamento com o **oposto** (não repetimos essa obviedade caso a caso). Em **2026**, também sinais que adversários possam usar em narrativa. Detalhes em **Política e eleições**, em Como foi analisado."
   redes:
     - "Instagram"
     - "TikTok"
@@ -27,13 +27,16 @@ briefing:
 methodology:
   columns:
     - label: "Imprensa e buscas"
-      body: "Consultamos notícias e buscas na web; cruzamos com menções citadas em fonte pública."
+      body: "Partimos de notícias e buscas na internet e cruzamos com menções que já aparecem citadas em fonte pública."
     - label: "Redes sociais"
-      body: "Checamos perfis públicos (Instagram, TikTok, YouTube) na data da coleta."
+      body: "Os perfis públicos do creator no Instagram, TikTok e YouTube foram revisados na data da coleta."
     - label: "Tamanho de público (painéis)"
-      body: "Social Blade (Instagram e YouTube, quando indexado) e Upfluence (TikTok) — só medem alcance; **não** substituem a leitura de risco de imagem."
+      body: "Usamos Social Blade (Instagram e YouTube, quando o canal está na base) e Upfluence (TikTok) só para medir alcance e engajamento; esses números **não substituem** o julgamento de risco de imagem."
     - label: "Política e eleições (2026)"
-      body: "Separar **agenda de governo** (normal para instituição pública) de **filiação**, **campanha explícita** ou **conteúdo reaproveitável** por críticos ou oposição em ano eleitoral. Objetivo: antecipar **o que pode virar crítica**; presença institucional **por si só** não descarta o creator."
+      body: |
+        Além de **filiação** em TSE ou candidatura, mapeamos **proximidade** com **governo federal / PT / Lula / Planalto** ou com **direita / PL / Bolsonaro** (incl. **extrema-direita** quando houver evidência pública) — reuniões, agendas, endossos, conteúdo recorrente. Isso é distinto de mero humor ou menção pontual. O objetivo é antecipar **rotulação** (“petista”, “bolsonarista”, etc.). **Leitura polarizada:** quem está **alinhado** a um lado **não** precisa de linha separada “não está com o outro” — só registramos **exceções** (ex.: crítica ao próprio polo, ou fatos que contrariem o quadro). Nos **perfis**, quando não há achado, usamos a forma curta **sem ligação política documentada**; o rol de partidos e figuras para checagem está em **criterios** (briefing) e neste texto.
+
+        Quando o dossiê citar **matérias** sobre **compromisso oficial** com o presidente no **Palácio do Planalto**, em linguagem de Brasília isso costuma ser chamado de **agenda federal** — **pauta de compromissos do governo**. **Documentado** = **fato noticiado** em matéria **pública** (com link), como evidência de **proximidade reputacional com o governo na mídia**.
 
 panels:
   intro_note: "Números na data da coleta (06/04/2026); validar de novo na data do veículo."
@@ -100,19 +103,20 @@ panels:
       - ["Ademara (@ademara0)", "ademara", "1,65K", "104K", "19"]
 
 executive_summary:
-  tagline: "Destaques por eixo; o detalhe está em **Perfis** e na **tabela resumo**."
+  tagline: "Leitura em duas colunas: o que importa em **concorrência** e o que importa em **política e exposição**. O passo a passo por nome está em **Perfis** e na **tabela resumo**."
   blocks:
     - title: "Concorrência (bets / loterias)"
       items:
-        - "Não encontramos publi paga de casa de apostas ou de loteria concorrente nas fontes consultadas (buscas + imprensa)."
-        - "Bárbara Coura: personagem **\"tia que aposta\"** — **Coletiva** / shorts; é **sátira**, não publi (justificativa: conteúdo de humor, não contrato com operador)."
-        - "Rafael Saraiva: sketch **\"Bet Kids\"** (Porta dos Fundos) — humor; a palavra **Bet** só no título (não é publi de casa de apostas; sensibilidade só de leitura)."
-    - title: "Política e exposição (onde olhar)"
+        - "Nas fontes que consultamos (busca na web e imprensa), não apareceu publicidade paga para casa de apostas nem para loteria concorrente à Caixa."
+        - "Bárbara Coura usa o personagem **\"tia que aposta\"** em vídeos de humor (**sátira**). A **Coletiva** cobriu a creator em [matéria de 2023 (Festival de Gramado)](https://coletiva.net/noticias/so-vi-que-era-publi-no-final-barbara-coura-defende-liberdade-para-criadores/) (contexto de publicidade e criadores; não é a lista de personagens do canal)."
+        - "Rafael Saraiva participou do sketch **\"Bet Kids\"** ([**Porta dos Fundos — vídeo**](https://portadosfundos.com.br/videos/bet-kids/)): humor; **Bet** só no título — sensibilidade de **leitura**."
+    - title: "Política e exposição"
       items:
-        - "Ademara — agenda federal documentada em **UOL Universa** e **Poder360** (2023); não é filiação partidária. Em **2026**, avaliar se o arquivo vira **crítica de campanha** (não se “é de governo”)."
-        - "Raphael Vicente — **Estadão** (2023): operação na Maré e revista em domicílio; fato de **comunidade e segurança pública**, não de publi."
-        - "Rafael Saraiva — **Veja** (posicionamento); relato de assaltos em **Heloísa Tolipan** (entretenimento); risco de **citação fora de contexto**, não de filiação mapeada."
-        - "Pedro Ottoni — homônimo: **Folha** (2026) cobre **Otoni de Paula** (PSD), político; não é o ator (evidência: nome e pauta distintos)."
+        - "**Ademara:** em **2023**, [**UOL Universa**](https://www.uol.com.br/universa/noticias/redacao/2023/02/24/influenciadora-ademara-sobre-encontro-com-lula-nao-foi-viagem-de-ferias.htm) e [**Poder360**](https://www.poder360.com.br/governo/lula-discute-mobilizacao-da-sociedade-digital-com-influenciadores/) publicaram **encontro oficial com o presidente** no **Planalto** — **agenda federal** (compromisso de governo). Evidência: **matérias públicas com link**; leitura de **proximidade reputacional com o governo na mídia**. Em **2026**, risco de **rotulação** e **reação** adversária ao arquivo."
+        - "**Raphael Vicente:** o [**Estadão**](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/) (2023) cobriu **Maré**, operação policial e relato em domicílio; [**YOUPIX**](https://youpix.com.br/vozes-das-comunidades-10-creators-que-amplificam-culturas-e-tradicoes/) lista o perfil entre creators e comunidades. Tema **segurança pública**, recortável em eleição."
+        - "**Rafael Saraiva:** na [**Veja**](https://veja.abril.com.br/coluna/veja-gente/nao-quero-me-tornar-comediante-da-extrema-direita-diz-rafael-saraiva/), posicionamento sobre **humor e extrema-direita** (citação do artista). **Risco em 2026:** **recorte** fora de contexto. [**Heloísa Tolipan**](https://heloisatolipan.com.br/tv/rafael-saraiva-do-porta-dos-fundos-fala-sobre-critica-a-nova-novela-das-6-e-de-ter-sido-vitima-de-11-assaltos/): pauta urbana / entretenimento (assaltos)."
+        - "**Lore Rufis (Lorena Rufino):** em **2022**, [**Bahia Notícias**](https://www.bahianoticias.com.br/noticia/273276-video-lore-rufis-acusa-roberta-roma-de-uso-indevido-de-video-em-campanha) e [**Boca de Forno News**](https://bocadefornonews.com.br/noticia/12557/influenciadora-lore-rufis-acusa-roberta-roma-de-uso-indevido-de-video-em-campanha): **conflito público** com uso de vídeo na campanha de **Roberta Roma (PL)**. Arquivo recortável em **2026**."
+        - "**Pedro Ottoni:** o ator **Pedro Ottoni** (duplo **tt**) **não** é o deputado **Otoni de Paula** (PSD) — [**Folha**](https://www1.folha.uol.com.br/colunas/painel/2026/03/otoni-se-filia-ao-psd-e-diz-que-vai-ajudar-caiado-chegar-aos-evangelicos.shtml)."
 
 consolidated_narrative:
   title: "Síntese do conjunto"
@@ -121,150 +125,150 @@ consolidated_narrative:
   blocks:
     - title: "Leitura para Caixa"
       items:
-        - "O squad é majoritariamente **humor em vídeo**; o risco central não é só “marca errada”, e sim **leitura equivocada** (ex.: aposta citada no conteúdo sem ser publicidade)."
-        - "Métricas de rede são **foto na data**; não substituem compliance contratual nem parecer jurídico."
+        - "Em conjunto, o squad trabalha com **humor em vídeo**; o risco mais relevante para loterias não é só “marca errada”, e sim **leitura equivocada** pelo público (ex.: aposta citada em humor)."
+        - "Os números de alcance nas redes são um **retrato da data** da coleta; não substituem compliance contratual nem parecer jurídico."
 
 profiles:
   - name: "Julia Ferrari"
     tier: "Squad (8)"
-    risco_geral: "Baixo — sem publi de apostas nas fontes checadas"
+    risco_geral: "Baixo"
     resumo_tabela:
-      concorrencia: "Não encontramos (buscas + imprensa)."
-      polemicas: "Sem fato sensível mapeado; pauta humor/entretenimento."
-      politica: "Sem filiação partidária nas buscas."
+      concorrencia: "Nada encontrado em buscas e imprensa sobre publi de apostas ou loteria concorrente."
+      polemicas: "Pauta de humor e entretenimento; nenhum fato sensível mapeado nas fontes."
+      politica: "Sem ligação política documentada nas fontes. **Homônimo em buscas:** matéria sobre outra influencer e convite presidencial **não** é este perfil — [**O TEMPO**](https://www.otempo.com.br/politica/aparte/2026/3/31/a-influencer-de-minas-que-ganhou-convite-especial-de-lula-para-se-filiar-ao-pt-e-disputar-a-camara)."
     handles:
       instagram: julia_ferrari
       tiktok: juliaferraric
       youtube: julia_ferrari
       x: ""
-    narrativa: "Atriz e criadora; humor e cotidiano. Dois canais no YouTube nesta coleta (@julia_ferrari e @juliaferraric); IG ~1,24M; TikTok ~1,7M. Parcerias citadas em matéria agregadora (**Viralizou**), entre outras: Sadia, iFood, Natura, Shopee."
+    narrativa: "Atriz e criadora de conteúdo de humor e cotidiano. Dois canais no YouTube (@julia_ferrari e @juliaferraric). Marcas citadas em matéria agregadora ([**Viralizou**](https://viralizou.net/internet/quem-e-julia-ferrari/)), entre outras: Sadia, iFood, Natura e Shopee."
     eixos:
-      concorrencia: "**Não encontramos** publi paga de casa de apostas ou loteria concorrente (buscas na web + imprensa aberta)."
-      polemicas: "**Sem** polêmica relevante nas mesmas fontes; busca por nome não mostrou escândalo ou exposição delicada além do perfil público de entretenimento."
-      politica: "**Sem** filiação partidária nas fontes consultadas."
+      concorrencia: "Em buscas na web e na imprensa aberta não apareceu publicidade paga ligada a casa de apostas ou a loteria concorrente."
+      polemicas: "A varredura por nome e as fontes consultadas não indicaram polêmica relevante além do perfil público de entretenimento."
+      politica: "Sem ligação política documentada nas fontes analisadas. **Homônimo:** [**O TEMPO**](https://www.otempo.com.br/politica/aparte/2026/3/31/a-influencer-de-minas-que-ganhou-convite-especial-de-lula-para-se-filiar-ao-pt-e-disputar-a-camara) — outra pessoa, não este perfil."
 
   - name: "João Vítor Mello"
     tier: "Squad (8)"
     risco_geral: "Baixo"
     resumo_tabela:
-      concorrencia: "Não encontramos (buscas + imprensa)."
-      polemicas: "Sem fato sensível; **cuidado:** homônimo em poker — não confundir com este creator (humor / Play9)."
-      politica: "Sem filiação; pauta cultural em fontes externas."
+      concorrencia: "Nada encontrado em buscas e imprensa sobre publi de apostas."
+      polemicas: "Nenhum fato sensível; existe **outro** João Vítor Mello no poker online ([**SuperPoker**](https://superpoker.com.br/noticias/joao-vitor-mello-fatura-mini-super-tuesday-pokerstars) — **não** é este creator de humor; perfil [**Play9**](https://play9.eth.link/influenciadores/joao-vitor-mello.html))."
+      politica: "**Porta dos Fundos** (**Porta News**): **sátira** de pauta política (ex.: [**Diário Carioca**](https://www.diariocarioca.com/cultura/joao-vitor-mello-e-macla-tenorio-ironizam-ato-na-paulista-no-jornal-do-porta-dos-fundos/)). Sem ligação política documentada nas fontes."
     handles:
       instagram: joaovitormello
       tiktok: joaovitormello
       youtube: ""
       x: ""
-    narrativa: "Humor e cultura; agenciamento Play9. IG ~720k; TikTok ~1,9M. Sem canal de YouTube oficial nesta coleta. **Atenção:** mesmo nome em outros contextos (ex.: poker) — não cruzar busca sem confirmar identidade."
+    narrativa: "Criador de humor e cultura, com agenciamento [**Play9**](https://play9.eth.link/influenciadores/joao-vitor-mello.html). Nesta coleta não há canal de YouTube oficial mapeado. **Homônimo:** matéria [**SuperPoker**](https://superpoker.com.br/noticias/joao-vitor-mello-fatura-mini-super-tuesday-pokerstars) refere-se a **outro** João Vítor Mello (poker online); não confundir buscas com este perfil."
     eixos:
-      concorrencia: "**Não encontramos** publi bet (buscas + imprensa). **Nota:** homônimo em **esporte/poker** não é este perfil."
-      polemicas: "**Sem** polêmica nas fontes; ruído possível só por **colisão de nome** com figura pública em outro segmento — checar identidade antes de atribuir achado."
-      politica: "**Sem** filiação partidária nas fontes consultadas."
+      concorrencia: "Buscas e imprensa não mostraram publicidade de apostas ligada a este perfil. Resultados sobre **poker** costumam ser o homônimo ([**SuperPoker**](https://superpoker.com.br/noticias/joao-vitor-mello-fatura-mini-super-tuesday-pokerstars)), não este creator."
+      polemicas: "Não há polêmica mapeada nas fontes; o cuidado é não atribuir a este nome resultados de busca do **jogador de poker** homônimo (vide [**SuperPoker**](https://superpoker.com.br/noticias/joao-vitor-mello-fatura-mini-super-tuesday-pokerstars))."
+      politica: "**Porta dos Fundos** (**Porta News**): sátira de pauta política (ex.: [**Diário Carioca**](https://www.diariocarioca.com/cultura/joao-vitor-mello-e-macla-tenorio-ironizam-ato-na-paulista-no-jornal-do-porta-dos-fundos/)). Sem ligação política documentada nas fontes."
 
   - name: "Lorena Rufino"
     tier: "Squad (8)"
     risco_geral: "Baixo"
     resumo_tabela:
-      concorrencia: "Não encontramos (buscas + imprensa)."
-      polemicas: "Término de relação com nota na **BNews** (2023) — vida privada; não é polêmica de consumo."
-      politica: "Sem filiação."
+      concorrencia: "Nada encontrado em buscas e imprensa sobre publi de apostas ou loteria concorrente."
+      polemicas: "Em 2023 o [**BNews**](https://www.bnews.com.br/noticias/entretenimento/lore-rufis-anuncia-fim-do-relacionamento-tudo-tem-um-comeco-meio-e-fim.html) noticiou término de relação com nota pública — vida privada."
+      politica: "Em **2022**, [**Bahia Notícias**](https://www.bahianoticias.com.br/noticia/273276-video-lore-rufis-acusa-roberta-roma-de-uso-indevido-de-video-em-campanha), [**Boca de Forno News**](https://bocadefornonews.com.br/noticia/12557/influenciadora-lore-rufis-acusa-roberta-roma-de-uso-indevido-de-video-em-campanha) — **conflito público** com uso de vídeo na campanha de **Roberta Roma (PL)**."
     handles:
       instagram: rufislore
       tiktok: lorerufis
       youtube: ""
       x: ""
-    narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada na imprensa (**Correio 24 Horas**, entre outras)."
+    narrativa: "Lore Rufis trabalha humor e vida pessoal. A campanha Fanta/Europa foi citada na imprensa ([**Correio 24 Horas**](https://www.correio24horas.com.br/entretenimento/influenciadora-lore-rufis-viaja-para-europa-e-brilha-em-campanha-global-0824), entre outras). Artigo da [**EBAC**](https://ebaconline.com.br/blog/influencers-saude-mental) sobre saúde mental de influencers cita **story** dela como exemplo ilustrativo."
     eixos:
-      concorrencia: "**Não encontramos** publi de apostas ou loteria concorrente (buscas + imprensa)."
-      polemicas: "Exposição na **BNews** (2023) sobre término com nota pública — **justificativa:** fato de imagem/vida privada; **não** classificado como escândalo de consumo."
-      politica: "**Sem** filiação partidária nas fontes consultadas."
+      concorrencia: "Buscas e imprensa não indicaram publicidade de apostas ou de loteria concorrente."
+      polemicas: "[**BNews**](https://www.bnews.com.br/noticias/entretenimento/lore-rufis-anuncia-fim-do-relacionamento-tudo-tem-um-comeco-meio-e-fim.html): término de relacionamento com nota à imprensa; gestão de imagem / vida privada. [**EBAC**](https://ebaconline.com.br/blog/influencers-saude-mental): artigo sobre saúde mental de influencers cita **story** dela como ilustração (ofício e exposição)."
+      politica: "Em **2022**, [**Bahia Notícias**](https://www.bahianoticias.com.br/noticia/273276-video-lore-rufis-acusa-roberta-roma-de-uso-indevido-de-video-em-campanha) e [**Boca de Forno News**](https://bocadefornonews.com.br/noticia/12557/influenciadora-lore-rufis-acusa-roberta-roma-de-uso-indevido-de-video-em-campanha): manifestação contra uso de vídeo na campanha de **Roberta Roma (PL)** — **conflito público** naquele uso eleitoral."
 
   - name: "Bárbara Coura"
     tier: "Squad (8)"
-    risco_geral: "Baixo — atenção a humor com tema de aposta (sátira, não publi)"
+    risco_geral: "Baixo — atenção a humor com tema de aposta (sátira)"
     resumo_tabela:
-      concorrencia: "Sem publi bet; personagem **\"tia que aposta\"** (referência **Coletiva** / shorts)."
-      polemicas: "Sátira, não contrato com casa de apostas; risco de **leitura equivocada** se a peça exigir distância total do tema."
-      politica: "Sátira de política cotidiana em shorts; sem filiação."
+      concorrencia: "Personagem **\"tia que aposta\"** em vídeos de humor; **Coletiva** cobriu a creator em [matéria de 2023](https://coletiva.net/noticias/so-vi-que-era-publi-no-final-barbara-coura-defende-liberdade-para-criadores/) (Gramado — não é lista de personagens). Shorts de formato para conferência: [1](https://www.youtube.com/shorts/7fLHuREDetQ), [2](https://www.youtube.com/shorts/Tfsxos4nk1k), [3](https://www.youtube.com/shorts/ZmrCfj6qUWQ)."
+      polemicas: "Risco de **associação indevida** com publicidade se o briefing da Caixa exigir distância total do tema."
+      politica: "Sátira de política no dia a dia em shorts; sem ligação política documentada além de personagem de humor."
     handles:
       instagram: barbaracoura
       tiktok: barbaracoura
       youtube: barbaracoura
       x: ""
-    narrativa: "Humor e esquetes; alcance muito alto no TikTok (~13,5M). Globoplay, Salon Line, Mercado Livre entre parcerias citadas. YouTube ~4,33M inscritos (métricas na data de referência)."
+    narrativa: "Humor e esquetes; conteúdo em vídeo curto (TikTok e afins). Globoplay, Salon Line e Mercado Livre entre marcas citadas ([**Favikon**](https://www.favikon.com/pt/blog/who-is-barbara-coura))."
     eixos:
-      concorrencia: "**Sem publi** de casa de apostas. Há esquetes com personagem **\"tia que aposta\"** (**Coletiva** / shorts) — **justificativa:** é **sátira**, não campanha de operador."
-      polemicas: "Tema de aposta no humor pode gerar **associação indevida** (leitor confunde com publi). **Não** há evidência de publi; alinhar briefing se o cliente quiser zero menção a aposta."
-      politica: "**Sem** filiação; política aparece como tema de personagem, não como posicionamento de campanha."
+      concorrencia: "Personagem **\"tia que aposta\"** em humor (shorts). **Coletiva:** [matéria 2023](https://coletiva.net/noticias/so-vi-que-era-publi-no-final-barbara-coura-defende-liberdade-para-criadores/) (Gramado). **Favikon:** [perfil agregador](https://www.favikon.com/pt/blog/who-is-barbara-coura). Shorts: [1](https://www.youtube.com/shorts/7fLHuREDetQ), [2](https://www.youtube.com/shorts/Tfsxos4nk1k), [3](https://www.youtube.com/shorts/ZmrCfj6qUWQ)."
+      polemicas: "Humor com aposta: risco de **associação indevida** com publicidade; alinhar briefing se o cliente quiser evitar menção a aposta."
+      politica: "Política em shorts como **tema de personagem**. Sem ligação política documentada nas fontes."
 
   - name: "Raphael Vicente"
     tier: "Squad (8)"
     risco_geral: "Baixo a moderado — exposição em segurança pública / comunidade (mídia)"
     resumo_tabela:
-      concorrencia: "Não encontramos (buscas + imprensa)."
-      polemicas: "**Estadão** (2023): Maré, operação policial e relato de revista em domicílio — tema de comunidade, não publi."
-      politica: "Sem partido; pauta de direitos/comunidade na imprensa."
+      concorrencia: "Nada encontrado em buscas e imprensa sobre publi de apostas."
+      polemicas: "[**Estadão**](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/) (2023): Maré, operação policial e relato de revista em domicílio — comunidade e segurança."
+      politica: "Pauta de **comunidade e segurança pública** na imprensa (ex.: [**Estadão**](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/)). Sem ligação política documentada nas fontes — o tema pode ser **reinterpretado** em campanha."
     handles:
       instagram: raphaelvicente
       tiktok: raphaelviicente
       youtube: ""
       x: ""
-    narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas citadas em reportagens (**Meio e Mensagem**, **Propmark**, entre outras): Garnier, Uber, TIM, Old Spice."
+    narrativa: "Criador de humor audiovisual ligado ao Complexo da Maré. Citado em lista da [**YOUPIX**](https://youpix.com.br/vozes-das-comunidades-10-creators-que-amplificam-culturas-e-tradicoes/) sobre creators e comunidades. Marcas aparecem em reportagens ([**Meio e Mensagem**](https://www.meioemensagem.com.br/eventoproxxima/raphael-vicente-e-a-a-receita-da-publi-perfeita), [**Propmark**](https://propmark.com.br/seria-este-o-melhor-tiktok-feito-para-uma-marca/), entre outras), como Garnier, Uber, TIM e Old Spice."
     eixos:
-      concorrencia: "**Não encontramos** publi de casa de apostas (buscas + imprensa)."
-      polemicas: "Matéria no **Estadão** (2023) sobre crítica a operação policial e revista em domicílio — **justificativa:** fato público de segurança/comunidade; **não** é polêmica de produto ou publi."
-      politica: "**Sem** filiação partidária. Em **2026**, tema polícia/comunidade pode virar **crítica de campanha** (não é o mesmo que “ligação a governo”)."
+      concorrencia: "Buscas e imprensa não mostraram publicidade de casa de apostas."
+      polemicas: "O [**Estadão**](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/) (2023): crítica a operação policial e relato de revista em domicílio — segurança pública e comunidade."
+      politica: "Cobertura de **Maré** e operação policial: [**Estadão**](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/), [**O Liberal**](https://www.oliberal.com/cultura/influenciador-raphael-vicente-teve-a-casa-revistada-durante-operacao-no-complexo-da-mare-1.739773). Tema **segurança pública**, recortável em eleição."
 
   - name: "Rafael Saraiva"
     tier: "Squad (8)"
     risco_geral: "Baixo — atenção ao sketch \"Bet Kids\" (só o título)"
     resumo_tabela:
-      concorrencia: "Sketch **Bet Kids** (PdF); não é publi bet."
-      polemicas: "Assaltos na **Heloísa Tolipan**; **Veja** (posicionamento) — baixo impacto de \"polêmica de produto\"."
-      politica: "Entrevista **Veja** (linha de conteúdo)."
+      concorrencia: "Sketch **Bet Kids** ([**Porta dos Fundos**](https://portadosfundos.com.br/videos/bet-kids/)) — humor."
+      polemicas: "[**Heloísa Tolipan**](https://heloisatolipan.com.br/tv/rafael-saraiva-do-porta-dos-fundos-fala-sobre-critica-a-nova-novela-das-6-e-de-ter-sido-vitima-de-11-assaltos/): entrevista em que relatou **vários assaltos** (pauta urbana / entretenimento)."
+      politica: "[**Veja**](https://veja.abril.com.br/coluna/veja-gente/nao-quero-me-tornar-comediante-da-extrema-direita-diz-rafael-saraiva/): posicionamento sobre **humor e extrema-direita** (citação do artista). Risco de **recorte** em 2026."
     handles:
       instagram: rafaelsaraiva28
       tiktok: saraivarafael28
       youtube: ""
       x: ""
-    narrativa: "Porta dos Fundos; novela Globo. IG ~363k; TikTok ~216k. Sem canal próprio de YouTube nesta coleta."
+    narrativa: "Integrante do [**Porta dos Fundos**](https://portadosfundos.com.br/elenco/rafael-saraiva) e com trabalho em novela da [**Globo**](https://gshow.globo.com/novelas/no-rancho-fundo/noticia/do-porta-dos-fundos-para-no-rancho-fundo-conheca-rafael-saraiva-o-guilherme-tell.ghtml). Nesta coleta não há canal próprio de YouTube mapeado."
     eixos:
-      concorrencia: "Sketch **Bet Kids** (humor). **Justificativa:** não há evidência de contrato com casa de apostas — sensibilidade vem **só** do tema/palavra."
-      polemicas: "Relato de assaltos na **Heloísa Tolipan** — entretenimento; **não** é falha de produto. Conforto do cliente com tema urbano é **editorial**, não \"polêmica de marca\"."
-      politica: "**Veja** traz posicionamento de conteúdo; **sem** filiação nas buscas. Em **2026**, risco é **trecho fora de contexto**, não filiação comprovada."
+      concorrencia: "Sketch [**Bet Kids**](https://portadosfundos.com.br/videos/bet-kids/) — humor; sensibilidade de **leitura** pela palavra e pelo tema."
+      polemicas: "A [**Heloísa Tolipan**](https://heloisatolipan.com.br/tv/rafael-saraiva-do-porta-dos-fundos-fala-sobre-critica-a-nova-novela-das-6-e-de-ter-sido-vitima-de-11-assaltos/): entrevista em que **relatou vários assaltos** (entretenimento / segurança urbana). Avaliar **conforto** com o tema."
+      politica: "Na [**Veja**](https://veja.abril.com.br/coluna/veja-gente/nao-quero-me-tornar-comediante-da-extrema-direita-diz-rafael-saraiva/), sobre humor e **extrema-direita** (citação do artista). **Nota:** matérias sobre voto no grupo costumam citar **Antonio Tabet** ([**DOL**](https://m.diarioonline.com.br/entretenimento/fama/774037/ator-e-roteirista-do-porta-dos-fundos-anuncia-voto-em-lula)), **não** este integrante. Em **2026**, risco de **recorte** fora de contexto."
 
   - name: "Pedro Ottoni"
     tier: "Squad (8)"
     risco_geral: "Baixo"
     resumo_tabela:
-      concorrencia: "Não encontramos (buscas + imprensa)."
-      polemicas: "Caso positivo (**O Tempo**, doação a motorista); sem polêmica negativa mapeada."
-      politica: "**Homônimo:** **Folha** (2026) fala de Otoni de Paula (PSD), não do ator."
+      concorrencia: "Nada encontrado em buscas e imprensa sobre publi de apostas."
+      polemicas: "Caso positivo no [**O Tempo**](https://www.otempo.com.br/entretenimento/2024/9/27/quem-e-pedro-ottoni--ator-que-pagou-r--1-mil-a-motorista-de-apli) (doação a motorista de app)."
+      politica: "Homônimo: [**Folha**](https://www1.folha.uol.com.br/colunas/painel/2026/03/otoni-se-filia-ao-psd-e-diz-que-vai-ajudar-caiado-chegar-aos-evangelicos.shtml) cobre **Otoni de Paula** (PSD), não o ator. **Pedro:** sem ligação política documentada nas fontes."
     handles:
       instagram: pedroottoni_
       tiktok: pedroottoni_
       youtube: ""
       x: ""
-    narrativa: "Ator e humor; trabalhos em streaming (Netflix, Disney+, Prime) citados em matérias. IG ~624k; TikTok ~1,2M."
+    narrativa: "Ator de humor com trabalhos em streaming: [**UOL Splash**](https://www.uol.com.br/splash/noticias/2024/09/27/pedro-ottoni.htm) resume obras em **Netflix**, **Disney+** e outras; [**O Tempo**](https://www.otempo.com.br/entretenimento/2024/6/27/conheca-pedro-ottoni--que-estreia-serie-no-prime-video) cobriu estreia em série no **Prime Video**; [**O Tempo**](https://www.otempo.com.br/entretenimento/2024/9/27/quem-e-pedro-ottoni--ator-que-pagou-r--1-mil-a-motorista-de-apli) (doação a motorista) também menciona filmografia."
     eixos:
-      concorrencia: "**Não encontramos** publi de apostas (buscas + imprensa)."
-      polemicas: "Matéria no **O Tempo** sobre doação a motorista — **justificativa:** fato de imagem positiva; **sem** polêmica negativa nas fontes."
-      politica: "**Sem** filiação. **Folha** e outras cobrem **Otoni de Paula** (político), nome parecido — **não** confundir com Pedro Ottoni (evidência: pauta e biografia distintas)."
+      concorrencia: "Buscas e imprensa não indicaram publicidade de apostas."
+      polemicas: "O [**O Tempo**](https://www.otempo.com.br/entretenimento/2024/9/27/quem-e-pedro-ottoni--ator-que-pagou-r--1-mil-a-motorista-de-apli) noticiou doação a motorista de aplicativo (imagem positiva)."
+      politica: "Sem ligação política documentada nas fontes. A [**Folha**](https://www1.folha.uol.com.br/colunas/painel/2026/03/otoni-se-filia-ao-psd-e-diz-que-vai-ajudar-caiado-chegar-aos-evangelicos.shtml) trata de **Otoni de Paula** (homônimo), não deste ator."
 
   - name: "Ademara"
     tier: "Squad (8)"
-    risco_geral: "Baixo a moderado — agenda federal na mídia (avaliar narrativa em 2026)"
+    risco_geral: "Baixo a moderado — encontro com o presidente em 2023 noticiado na imprensa (avaliar narrativa em 2026)"
     resumo_tabela:
-      concorrencia: "Não encontramos (buscas + imprensa)."
-      polemicas: "Sem escândalo de consumo; sátira social — ruído possível via agenda pública (ver política)."
-      politica: "Evento com presidente (2023) — **UOL Universa**, **Poder360**; não é filiação. Em **2026**: risco de **crítica de campanha**, não de “ser do governo”."
+      concorrencia: "Nada encontrado em buscas e imprensa sobre publi de apostas."
+      polemicas: "Sátira pode gerar ruído quando a pauta pública se mistura com política (ver eixo política)."
+      politica: "Em **2023**, [**UOL Universa**](https://www.uol.com.br/universa/noticias/redacao/2023/02/24/influenciadora-ademara-sobre-encontro-com-lula-nao-foi-viagem-de-ferias.htm) e [**Poder360**](https://www.poder360.com.br/governo/lula-discute-mobilizacao-da-sociedade-digital-com-influenciadores/): **encontro oficial com o presidente** no **Planalto** — **agenda federal**. Evidência: matérias públicas (links). **Proximidade reputacional com o governo** na mídia. Em **2026**, risco de **rotulação** e **reação** adversária ao arquivo."
     handles:
       instagram: ademara
       tiktok: ademaravilha
       youtube: ademara
       x: ""
-    narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (engajamento alto); TikTok ~610k. Dois canais de YouTube — somar métricas ao planejar a peça."
+    narrativa: "Atua com humor e com a série **Sem Filtro** (Netflix). Em **2023**, a [**UOL Universa**](https://www.uol.com.br/universa/noticias/redacao/2023/02/24/influenciadora-ademara-sobre-encontro-com-lula-nao-foi-viagem-de-ferias.htm) noticiou que ela participou de um **encontro oficial com o presidente** no **Planalto** — compromisso de **agenda federal**, não viagem pessoal. Há parceria com [**Globoplay**](https://www.correiobraziliense.com.br/diversao-e-arte/2021/06/4932903-ademaravilha-fecha-parceria--para-producao-de-conteudo-com-a-globoplay.html); marcas também aparecem na lista da [**Play9**](https://play9.eth.link/influenciadores/ademara.html). No **YouTube** há **dois canais** com o mesmo nome; na campanha, vale cravar qual @ usar — os handles e os números estão na tabela de métricas no final do dossiê."
     eixos:
-      concorrencia: "**Não encontramos** publi de casa de apostas (buscas + imprensa)."
-      polemicas: "**Sem** polêmica de consumo nas fontes; personagens de sátira — eventual ruído vem de **pauta pública**, não de produto."
-      politica: "Cobertura em **UOL Universa** e **Poder360** sobre encontro com governo. **Justificativa:** fato público; **não** é filiação. Para instituição pública, presença em agenda federal é **comum**; em **eleições**, checar se o arquivo vira **ataque de terceiros**, não se o creator “é governo”."
+      concorrencia: "Buscas e imprensa não mostraram publicidade de casa de apostas."
+      polemicas: "Sátira pode gerar ruído quando a agenda pública entra em cena."
+      politica: "[**UOL Universa**](https://www.uol.com.br/universa/noticias/redacao/2023/02/24/influenciadora-ademara-sobre-encontro-com-lula-nao-foi-viagem-de-ferias.htm) e [**Poder360**](https://www.poder360.com.br/governo/lula-discute-mobilizacao-da-sociedade-digital-com-influenciadores/) (2023): **encontro oficial com o presidente** no **Planalto** — **proximidade com o governo** na mídia. Registro: matérias públicas (links). Contexto: [**Estado de Minas**](https://www.em.com.br/app/noticia/politica/2023/02/12/interna_politica,1456510/lula-3-0-busca-influencers-e-artistas-para-avancar-nas-redes-sociais.html). Em **2026**, avaliar **reação** adversária ao arquivo."
