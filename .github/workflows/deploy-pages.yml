@@ -7,8 +7,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# actions: read — necessário para o deploy-pages localizar o artefacto "github-pages"
+# na mesma execução (sem isto, a API devolve 0 artefactos e o deploy falha).
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -30,6 +33,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
+      # Evita corrida: o deploy-pages por vezes corre antes do artefacto ficar visível na API.
+      - name: Aguardar índice do artefacto
+        run: sleep 15
 
       - name: Deploy to GitHub Pages
         id: deployment
