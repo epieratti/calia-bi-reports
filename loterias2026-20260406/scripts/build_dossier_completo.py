@@ -473,11 +473,14 @@ def format_profile_networks_html(
     """Handles e números a partir dos painéis — mini-cards em grade, compactos e sem estouro."""
     cards: list[str] = []
 
-    # Mini-cards por perfil: só @handles — métricas ficam nas tabelas de painéis (evita repetir números no texto do creator).
     ig = panel_row_by_briefing(ig_rows, 1, handles.get("instagram"))
     if ig and len(ig) >= 7:
         u = str(ig[1]).lstrip("@")
-        cards.append(net_mini_card("bg-gradient-to-b from-pink-500 to-rose-600", "Instagram", u, ""))
+        ig_stats = (
+            stat_pair("Seg.", str(ig[2]))
+            + stat_pair("Eng.", str(ig[6]))
+        )
+        cards.append(net_mini_card("bg-gradient-to-b from-pink-500 to-rose-600", "Instagram", u, ig_stats))
 
     tt = panel_row_by_briefing(tt_rows, 1, handles.get("tiktok"))
     if tt and len(tt) >= 4:
@@ -485,17 +488,23 @@ def format_profile_networks_html(
         raw_brief_tt = str(tt[1] or "").strip()
         tt_user = raw_tool if raw_tool and " " not in raw_tool else raw_brief_tt
         u = tt_user.lstrip("@")
-        cards.append(net_mini_card("bg-slate-800", "TikTok", u, ""))
+        tt_stats = ""
+        if len(tt) >= 4:
+            tt_stats = stat_pair("Seg.", str(tt[3]))
+        if len(tt) >= 3:
+            tt_stats += stat_pair("Eng.", str(tt[2]))
+        cards.append(net_mini_card("bg-slate-800", "TikTok", u, tt_stats))
 
     yt = panel_row_by_briefing(yt_rows, 1, handles.get("youtube"))
     if yt and len(yt) >= 5:
         yu = str(yt[1]).lstrip("@")
         ch_full = str(yt[0] or "").strip()
+        yt_stats = stat_pair("Insc.", str(yt[2])) + stat_pair("Views", str(yt[3]))
         footer = (
             "<p class='mt-1.5 pt-1 border-t border-slate-100 text-[9px] text-slate-500 break-words leading-snug'>"
             f"<span class='text-slate-400'>Canal · </span>{esc(ch_full)}</p>"
         )
-        cards.append(net_mini_card("bg-red-600", "YouTube", yu, "", footer))
+        cards.append(net_mini_card("bg-red-600", "YouTube", yu, yt_stats, footer))
 
     # X: só mini-card se o YAML trata como canal oficial (handle preenchido).
     # Contas protegidas, homônimos ou com audiência muito baixa ficam vazias — como se não houvesse X.
@@ -507,6 +516,7 @@ def format_profile_networks_html(
     )
     if xr and len(xr) >= 5:
         xv = str(xr[1]).lstrip("@")
+        x_stats = stat_pair("Seg.", str(xr[2])) if len(xr) >= 3 else ""
         act_txt, act_cls = humanize_x_ativo(xr[3])
         raw_act = str(xr[3] or "").strip().lower()
         if raw_act in ("sim", "s", "yes"):
@@ -523,7 +533,7 @@ def format_profile_networks_html(
             f"<p class='text-[9px] text-slate-500 leading-snug break-words'>{esc(teor_full)}</p>"
             "</div>"
         )
-        cards.append(net_mini_card("bg-slate-900", "X", xv, "", footer))
+        cards.append(net_mini_card("bg-slate-900", "X", xv, x_stats, footer))
 
     if not cards:
         return (
@@ -540,7 +550,7 @@ def format_profile_networks_html(
 
     return (
         "<div class='mb-4'>"
-        "<p class='text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-2'>Redes · handles oficiais (métricas nas tabelas abaixo)</p>"
+        "<p class='text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-2'>Redes · handles e números (referência nas tabelas ao fundo)</p>"
         f"<div class='grid {grid_cls} gap-2'>{''.join(cards)}</div>"
         "</div>"
     )
