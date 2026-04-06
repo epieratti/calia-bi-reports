@@ -10,7 +10,7 @@
 | Julia Ferrari | @julia_ferrari | **Sim** | **[@julia_ferrari](https://www.youtube.com/@julia_ferrari)** — *JuliaFerrari* (`UC8nm…`). Existe **outro** canal [@juliaferraric](https://www.youtube.com/@juliaferraric) (`UC3k7…`) — ver nota abaixo. |
 | João Vítor Mello | @joaovitormello | **Não homologado** | Existe [@joaovitormello](https://www.youtube.com/@joaovitormello) (`UC5JCz2…`), mas **não é o creator do squad** — não usar como canal oficial no dossiê. |
 | Lorena Rufino | @rufislore | **Sim** | [@rufislore](https://www.youtube.com/@rufislore) — *Rufis Lore* (não confundir com [@lorerufis](https://www.youtube.com/@lorerufis), canal diferente). |
-| bárbara coura | @barbaracoura | **Sim** | [@barbaracoura](https://www.youtube.com/@barbaracoura) — *Bárbara Coura* |
+| Bárbara Coura | @barbaracoura | **Sim** | [@barbaracoura](https://www.youtube.com/@barbaracoura) — *Bárbara Coura* |
 | Raphael Vicente | @raphaelvicente | **Sim** | [@raphaelvicente](https://www.youtube.com/@raphaelvicente) — *Raphaël Vicente* |
 | Rafael Saraiva | @rafaelsaraiva28 | **Não encontrado** | Não há página válida em `@rafaelsaraiva28` nem variantes óbvias (`@rafaelsaraiva`, `@RafaelSaraiva`, `@rafaelsaraivaoficial`) — HTTP 404. Conteúdo em canais de terceiros (ex.: **Porta dos Fundos**) não conta como “canal próprio”. |
 | Pedro Ottoni | @pedroottoni_ | **Sim** (handle ≠ IG) | [@PedroOttoni](https://www.youtube.com/@PedroOttoni) (= [@pedroottoni](https://www.youtube.com/@pedroottoni), mesmo `UC`). **`@ATORmentado`** é **outro** canal no YouTube. |

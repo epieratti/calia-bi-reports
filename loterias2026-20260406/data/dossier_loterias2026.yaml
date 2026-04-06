@@ -54,7 +54,7 @@ panels:
       - ["Julia Ferrari", "julia_ferrari", "1.242.283", "—", "642", "94.948", "732", "7,70%"]
       - ["João Vítor Mello", "joaovitormello", "720.648", "—", "923", "41.974", "858", "5,94%"]
       - ["Lorena Rufino", "rufislore", "3.525.456", "—", "606", "49.971", "786", "1,44%"]
-      - ["bárbara coura", "barbaracoura", "3.475.299", "—", "1.789", "130.205", "930", "3,77%"]
+      - ["Bárbara Coura", "barbaracoura", "3.475.299", "—", "1.789", "130.205", "930", "3,77%"]
       - ["Raphael Vicente", "raphaelvicente", "1.087.923", "—", "858", "65.180", "2.125", "6,19%"]
       - ["Rafael Saraiva", "rafaelsaraiva28", "363.280", "—", "171", "39.135", "979", "11,04%"]
       - ["Pedro Ottoni", "pedroottoni_", "624.115", "—", "116", "20.340", "318", "3,31%"]
@@ -95,7 +95,7 @@ panels:
       - "Vídeos"
     rows:
       - ["Julia Ferrari (@juliaferraric)", "julia_ferrari", "250K", "63,4M", "156"]
-      - ["bárbara coura", "barbaracoura", "4,33M", "2,43B", "989"]
+      - ["Bárbara Coura", "barbaracoura", "4,33M", "2,43B", "989"]
       - ["Ademara (@ademara0)", "ademara", "1,65K", "104K", "19"]
 
 executive_summary:
@@ -184,7 +184,7 @@ profiles:
       polemicas: "Matérias sobre término de relacionamento (contexto privado, nota oficial)."
       politica: "Sem filiação partidária nas consultas."
 
-  - name: "bárbara coura"
+  - name: "Bárbara Coura"
     tier: "Squad (8)"
     risco_geral: "Baixo — atenção a conteúdo humor com tema de aposta (sátira)"
     resumo_tabela:

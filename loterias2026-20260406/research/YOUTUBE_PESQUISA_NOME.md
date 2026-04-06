@@ -9,7 +9,7 @@
 | Julia Ferrari | **@julia_ferrari** (equiv. **@Julia_Ferrari**) | `UC8nmSfYnqfKQAbyOiAf80cw` | https://www.youtube.com/@julia_ferrari |
 | João Vítor Mello | *(não homologado)* | — | O handle **@joaovitormello** no YouTube **não é** o creator do squad (`UC5JCz2…` — não usar). |
 | Lorena Rufino | **@rufislore** | `UCneghyS1-OOokdr9ycNsi2g` | https://www.youtube.com/@rufislore |
-| bárbara coura | **@barbaracoura** | `UCQ9f8VBJD7sT2ySq0IDtARA` | https://www.youtube.com/@barbaracoura |
+| Bárbara Coura | **@barbaracoura** | `UCQ9f8VBJD7sT2ySq0IDtARA` | https://www.youtube.com/@barbaracoura |
 | Raphael Vicente | **@raphaelvicente** | `UC_Y5JqPqYhgiHNHDWU9Ra5A` | https://www.youtube.com/@raphaelvicente |
 | Rafael Saraiva | *(sem canal)* | — | `@rafaelsaraiva28` → **404** no YouTube |
 | Pedro Ottoni | **@PedroOttoni** (= **@pedroottoni**, mesmo canal) | `UChm7f9q5PDct15UtsjR1rEw` | https://www.youtube.com/@PedroOttoni |

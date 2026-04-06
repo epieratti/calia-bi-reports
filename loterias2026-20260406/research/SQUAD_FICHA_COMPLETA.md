@@ -59,7 +59,7 @@
 
 ---
 
-## bárbara coura (`barbaracoura`)
+## Bárbara Coura (`barbaracoura`)
 
 | Dimensão | Detalhe |
 |----------|---------|
