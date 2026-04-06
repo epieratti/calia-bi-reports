@@ -12,11 +12,12 @@ password_sha256_hex:
 briefing:
   intro_paragraphs:
     - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes analisadas: Instagram, TikTok e YouTube (métricas de alcance quando disponíveis nesta coleta)."
+    - "A Caixa é instituição pública federal: proximidade com agenda de governo ou presença em eventos oficiais **não descarta**, por si só, o uso de um creator. O calendário, porém, é de **eleições municipais em 2026** — o eixo político deste dossiê serve sobretudo a **antecipar críticas** (incluindo de oposição) que possam ser associadas ao casting ou à peça pública."
     - "“Não consta” / “não encontrado” = não achamos evidência pública na ronda; pode existir fora do levantamento."
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui conteúdo humor com tema de aposta que possa gerar ruído semântico)."
     - "Polêmicas: falas, episódios ou exposição midiática com risco de imagem."
-    - "Política: filiação partidária ou posicionamento público recorrente quando houver registro."
+    - "Política: filiação partidária ou posicionamento de campanha quando houver registo público; e, em 2026, exposições que possam ser **reutilizadas em narrativa de ataque** (críticos, oposição, redes) — **à parte** da mera presença em agenda federal, que para a Caixa é contexto habitual."
   redes:
     - "Instagram"
     - "TikTok"
@@ -32,6 +33,8 @@ methodology:
       body: "Análise de perfis públicos e checagem direta nas redes (Instagram, TikTok, YouTube) na data do levantamento."
     - label: "Painéis de mercado"
       body: "Social Blade (Instagram e YouTube, quando o canal está indexado) e Upfluence (TikTok) — indicam tamanho de público; não substituem sozinhos a análise de risco de imagem."
+    - label: "Política e eleições (2026)"
+      body: "Distinguir **agenda de governo** (compatível com instituição pública) de **filiação**, **campanha explícita** ou **material explorável** por terceiros em ano eleitoral. O objetivo é **blindagem reputacional**: saber o que a oposição ou a crítica podem ligar ao nome, não penalizar por contacto institucional em si."
 
 panels:
   intro_note: "Números na data da coleta (06/04/2026); conferir de novo na data do ar."
@@ -105,9 +108,10 @@ executive_summary:
         - "Sem evidência de publi paga para casa de apostas ou loteria concorrente nos achados desta ronda."
         - "Bárbara Coura: esquetes humor com tema «tia que aposta» (**Coletiva** / shorts; sátira, não publi)."
         - "Rafael Saraiva: sketch “Bet Kids” (Porta dos Fundos) — humor; palavra “Bet” no título."
-    - title: "Política e exposição"
+    - title: "Política, governo e ano eleitoral"
       items:
-        - "Ademara: encontro com governo/influenciadores (2023) — **UOL Universa**, **Poder360**; fato público; não é filiação partidária."
+        - "**Enquadramento:** para a Caixa, histórico com agenda federal não é automaticamente “alto risco”. Em **2026**, o que importa é **superfície de crítica** (oposição, redes, imprensa) — mapear o que pode ser associado ao casting."
+        - "Ademara: encontro com governo/influenciadores (2023) — **UOL Universa**, **Poder360**; fato público, não filiação; alinha-se com atuação junto de poder público — avaliar **ângulo de narrativa** em campanha, não “neutralidade” abstracta."
         - "Raphael Vicente: **Estadão** (2023) — operação policial na Maré; relato de revista em domicílio."
         - "Rafael Saraiva: **Veja** (posicionamento); relatos de assaltos em **Heloísa Tolipan**."
         - "Pedro Ottoni: não confundir com Otoni de Paula (PSD) — nome em pauta na **Folha** (2026) é o político, não o ator."
@@ -125,7 +129,7 @@ consolidated_narrative:
     - title: "Leitura para Caixa"
       items:
         - "Risco de **associação semântica**: humor que cita apostas sem ser publi (referência **Coletiva** / Bárbara; **Porta dos Fundos** / Rafael, sketch «Bet Kids»)."
-        - "Risco de **exposição política não partidária**: eventos de governo — **UOL Universa** / **Poder360** (Ademara); segurança pública/comunidade — **Estadão** (Raphael)."
+        - "**Governo vs. eleições:** agenda federal (ex.: **UOL Universa** / **Poder360**, Ademara) é **compatível** com órgão público; o risco em 2026 é **instrumentalização** por críticos. **Estadão** (Raphael, comunidade / segurança) é outro tipo de exposição — antecipar crítica de campanha, não confundir com “problema de governo”."
         - "Métricas nas redes são **retrato na data**; não substituem compliance contratual nem due diligence jurídica."
 
 profiles:
@@ -217,7 +221,7 @@ profiles:
     eixos:
       concorrencia: "**Não foi encontrada** evidência de publi de casa de apostas."
       polemicas: "Crítica a operações policiais e relato de revista em domicílio — **Estadão** (2023); severidade baixa para marca, alta para sensibilidade de tema (comunidade)."
-      politica: "Sem partido; posicionamento de direitos humanos / comunidade com exposição em **Estadão** e outras matérias."
+      politica: "Sem partido; posicionamento de direitos humanos / comunidade com exposição em **Estadão** e outras matérias — não é agenda de governo; em 2026, antecipar **crítica** a polícia/comunidade como risco de narrativa, não de filiação."
 
   - name: "Rafael Saraiva"
     tier: "Squad (8)"
@@ -235,7 +239,7 @@ profiles:
     eixos:
       concorrencia: "Sketch **Bet Kids**: humor; **não** equivale a contrato com operador de apostas (conteúdo classificado como sensível só pelo tema)."
       polemicas: "Relato de múltiplos assaltos em **Heloísa Tolipan**; não é polémica de produto — avaliar conforto do cliente com tema de segurança urbana em biografia."
-      politica: "Matéria Veja sobre posicionamento de conteúdo; sem filiação partidária nas buscas."
+      politica: "Matéria **Veja** sobre posicionamento de conteúdo; sem filiação — em 2026, risco é **citação descontextualizada**, não alinhamento partidário mapeado."
 
   - name: "Pedro Ottoni"
     tier: "Squad (8)"
@@ -257,11 +261,11 @@ profiles:
 
   - name: "Ademara"
     tier: "Squad (8)"
-    risco_geral: "Baixo a moderado — proximidade de agenda de governo (**UOL Universa**, **Poder360**)"
+    risco_geral: "Baixo a moderado — histórico com agenda federal (mapear **narrativa** em ano eleitoral, não “penalizar” contacto institucional)"
     resumo_tabela:
       concorrencia: "Não encontrado."
-      polemicas: "Sem polémica de consumo ou escândalo nas fontes; personagens de sátira social — eventual ruído vem de proximidade de agenda pública (ver política)."
-      politica: "Evento com presidente e influenciadores (2023) — **UOL Universa**, **Poder360**; não é filiação."
+      polemicas: "Sem polémica de consumo ou escândalo nas fontes; personagens de sátira social — eventual ruído vem de agenda pública (ver política)."
+      politica: "Evento com presidente e influenciadores (2023) — **UOL Universa**, **Poder360**; não é filiação; para Caixa, presença institucional é contexto comum — relevância em 2026: **ângulo de ataque** externo, não inelegibilidade por si."
     handles:
       instagram: ademara
       tiktok: ademaravilha
@@ -270,5 +274,5 @@ profiles:
     narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (ER alto); TikTok ~610k. Dois canais de YouTube públicos — tratar métricas em conjunto ao preparar a peça."
     eixos:
       concorrencia: "**Não foi encontrada** publi de casa de apostas nas fontes desta ronda."
-      polemicas: "Sem polémica de consumo ou escândalo nas fontes; personagens de sátira social — eventual ruído vem de proximidade de agenda pública (ver política)."
-      politica: "Encontro com governo e cobertura de agenda digital (**UOL Universa**, **Poder360**) — avaliar sensibilidade institucional do cliente."
+      polemicas: "Sem polémica de consumo ou escândalo nas fontes; personagens de sátira social — eventual ruído vem de agenda pública (ver política)."
+      politica: "Encontro com governo e cobertura digital (**UOL Universa**, **Poder360**). **Leitura:** compatível com missão de instituição pública; em **eleições**, avaliar se o arquivo oferece **gancho** a críticos — não se o creator “é de governo”."
