@@ -1,9 +1,17 @@
-# Opcional: após definir o secret APIFY_TOKEN no repositório (Settings → Secrets),
-# execute manualmente para gerar artefatos de Brand Safety em loterias2026/output/.
+# Opcional: segredos via GitHub (repository secrets) ou via 1Password (Service Account + referências op://).
+# Execute manualmente para gerar artefatos de Brand Safety em loterias2026/output/.
 name: Loterias 2026 — Brand Safety (coleta + relatório)
 
 on:
   workflow_dispatch:
+    inputs:
+      secrets_source:
+        description: "Onde obter APIFY_TOKEN e tokens opcionais"
+        type: choice
+        options:
+          - github
+          - 1password
+        default: github
 
 permissions:
   contents: read
@@ -26,8 +34,9 @@ jobs:
           python -m pip install -U pip
           pip install -r requirements.txt
 
-      # Na nuvem (GitHub) não existe .env no repo: o token vem só de Repository secret.
-      - name: Checar secret APIFY_TOKEN
+      # --- Segredos: GitHub (padrão anterior) ---
+      - name: Checar secret APIFY_TOKEN (GitHub)
+        if: github.event.inputs.secrets_source == 'github'
         run: |
           if [ -z "${{ secrets.APIFY_TOKEN }}" ]; then
             echo "::error::Defina o Repository secret APIFY_TOKEN: Settings → Secrets and variables → Actions → New repository secret"
@@ -35,10 +44,38 @@ jobs:
           fi
           echo "APIFY_TOKEN está definido (valor oculto)."
 
-      - name: Pipeline (redes + Wikipedia/notícias/busca + classificação + HTML)
+      # --- Segredos: 1Password (load-secrets-action v4) ---
+      # Crie uma Service Account e o secret OP_SERVICE_ACCOUNT_TOKEN.
+      # Ajuste loterias2026/.env.1password.tpl com op://Cofre/Item/campo reais.
+      - name: Carregar segredos (1Password)
+        if: github.event.inputs.secrets_source == '1password'
+        uses: 1password/load-secrets-action@v4
+        with:
+          export-env: true
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          OP_ENV_FILE: loterias2026/.env.1password.tpl
+
+      - name: Verificar APIFY_TOKEN após 1Password
+        if: github.event.inputs.secrets_source == '1password'
+        run: |
+          if [ -z "$APIFY_TOKEN" ]; then
+            echo "::error::APIFY_TOKEN vazio após 1Password. Verifique OP_SERVICE_ACCOUNT_TOKEN, permissões da conta de serviço e referências em loterias2026/.env.1password.tpl."
+            exit 1
+          fi
+          echo "APIFY_TOKEN carregado (valor oculto)."
+
+      - name: Pipeline — segredos do GitHub
+        if: github.event.inputs.secrets_source == 'github'
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          cd loterias2026
+          python scripts/run_pipeline.py
+
+      - name: Pipeline — segredos do 1Password
+        if: github.event.inputs.secrets_source == '1password'
         run: |
           cd loterias2026
           python scripts/run_pipeline.py
