@@ -100,7 +100,7 @@ panels:
       - ["Ademara (@ademara0)", "ademara", "1,65K", "104K", "19"]
 
 executive_summary:
-  tagline: ""
+  tagline: "Só o que salta à vista por eixo; o resto está em Perfis e na tabela resumo."
   blocks:
     - title: "Concorrência (bets / loterias)"
       items:
