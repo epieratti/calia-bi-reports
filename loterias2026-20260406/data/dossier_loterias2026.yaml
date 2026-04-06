@@ -11,13 +11,12 @@ password_sha256_hex:
 
 briefing:
   intro_paragraphs:
-    - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes analisadas: Instagram, TikTok e YouTube (métricas de alcance quando disponíveis nesta coleta)."
-    - "A Caixa é instituição pública federal: proximidade com agenda de governo ou presença em eventos oficiais **não descarta**, por si só, o uso de um creator. O calendário, porém, é de **eleições municipais em 2026** — o eixo político deste dossiê serve sobretudo a **antecipar críticas** (incluindo de oposição) que possam ser associadas ao casting ou à peça pública."
-    - "“Não consta” / “não encontrado” = não achamos evidência pública na ronda; pode existir fora do levantamento."
+    - "Brand safety para campanha de loterias — **oito perfis** do squad Always ON 2026. O que se segue lista **o que foi verificado** (três eixos abaixo); o **como** está em «Como foi analisado»; os **destaques por nome** estão na «Leitura rápida» e no detalhe por perfil."
+    - "“Não consta” / “não encontrado” = sem evidência pública nesta ronda; pode existir fora do levantamento."
   criterios:
-    - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui conteúdo humor com tema de aposta que possa gerar ruído semântico)."
+    - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui humor com tema de aposta que gere ruído semântico)."
     - "Polêmicas: falas, episódios ou exposição midiática com risco de imagem."
-    - "Política: filiação partidária ou posicionamento de campanha quando houver registo público; e, em 2026, exposições que possam ser **reutilizadas em narrativa de ataque** (críticos, oposição, redes) — **à parte** da mera presença em agenda federal, que para a Caixa é contexto habitual."
+    - "Política: filiação ou posicionamento de campanha quando houver registo; em **2026**, também exposição que terceiros possam **explorar em narrativa** (críticos, oposição) — o enquadramento **governo vs. eleição** está na metodologia «Política e eleições»."
   redes:
     - "Instagram"
     - "TikTok"
@@ -101,25 +100,19 @@ panels:
       - ["Ademara (@ademara0)", "ademara", "1,65K", "104K", "19"]
 
 executive_summary:
-  tagline: "8 nomes — leitura rápida; o detalhe está em Perfis e na tabela resumo."
+  tagline: ""
   blocks:
     - title: "Concorrência (bets / loterias)"
       items:
-        - "Sem evidência de publi paga para casa de apostas ou loteria concorrente nos achados desta ronda."
-        - "Bárbara Coura: esquetes humor com tema «tia que aposta» (**Coletiva** / shorts; sátira, não publi)."
-        - "Rafael Saraiva: sketch “Bet Kids” (Porta dos Fundos) — humor; palavra “Bet” no título."
-    - title: "Política, governo e ano eleitoral"
+        - "Sem publi paga de casa de apostas ou loteria concorrente mapeada nesta ronda."
+        - "Bárbara Coura: «tia que aposta» (**Coletiva** / shorts; sátira, não publi)."
+        - "Rafael Saraiva: sketch «Bet Kids» (Porta dos Fundos) — humor; «Bet» só no título."
+    - title: "Política e exposição (nomes com fio condutor)"
       items:
-        - "**Enquadramento:** para a Caixa, histórico com agenda federal não é automaticamente “alto risco”. Em **2026**, o que importa é **superfície de crítica** (oposição, redes, imprensa) — mapear o que pode ser associado ao casting."
-        - "Ademara: encontro com governo/influenciadores (2023) — **UOL Universa**, **Poder360**; fato público, não filiação; alinha-se com atuação junto de poder público — avaliar **ângulo de narrativa** em campanha, não “neutralidade” abstracta."
-        - "Raphael Vicente: **Estadão** (2023) — operação policial na Maré; relato de revista em domicílio."
-        - "Rafael Saraiva: **Veja** (posicionamento); relatos de assaltos em **Heloísa Tolipan**."
-        - "Pedro Ottoni: não confundir com Otoni de Paula (PSD) — nome em pauta na **Folha** (2026) é o político, não o ator."
-    - title: "Como ler este documento"
-      items:
-        - "Perfis: análise por nome, com narrativa e três eixos (concorrência, polêmicas, política)."
-        - "Tabela resumo: visão compacta dos mesmos eixos."
-        - "Métricas nas redes: números de alcance e engajamento na data da coleta."
+        - "Ademara — agenda federal: **UOL Universa**, **Poder360** (2023); não filiação; avaliar **ângulo** em ano eleitoral."
+        - "Raphael Vicente — **Estadão** (2023): Maré / revista em domicílio (comunidade e segurança pública)."
+        - "Rafael Saraiva — **Veja** (posicionamento); assaltos em **Heloísa Tolipan**."
+        - "Pedro Ottoni — homónimo: **Folha** (2026) fala de Otoni de Paula (PSD), não do ator."
 
 consolidated_narrative:
   title: "Síntese do conjunto"
@@ -128,9 +121,9 @@ consolidated_narrative:
   blocks:
     - title: "Leitura para Caixa"
       items:
-        - "Risco de **associação semântica**: humor que cita apostas sem ser publi (referência **Coletiva** / Bárbara; **Porta dos Fundos** / Rafael, sketch «Bet Kids»)."
-        - "**Governo vs. eleições:** agenda federal (ex.: **UOL Universa** / **Poder360**, Ademara) é **compatível** com órgão público; o risco em 2026 é **instrumentalização** por críticos. **Estadão** (Raphael, comunidade / segurança) é outro tipo de exposição — antecipar crítica de campanha, não confundir com “problema de governo”."
-        - "Métricas nas redes são **retrato na data**; não substituem compliance contratual nem due diligence jurídica."
+        - "Peso comum do squad: **humor e vídeo** — risco principal é **associação semântica** (apostas no conteúdo sem ser publi), não só concorrência de marca."
+        - "Instituição pública + **eleições 2026**: o dossiê separa **agenda federal** de **material explorável por críticos**; o raciocínio está em «Como foi analisado» → **Política e eleições**."
+        - "Métricas nas redes: **instantâneo na data**; não substituem compliance nem parecer jurídico."
 
 profiles:
   - name: "Julia Ferrari"
