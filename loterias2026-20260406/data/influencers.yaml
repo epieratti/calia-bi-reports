@@ -1,0 +1,48 @@
+# Squad — Always ON Loterias 2026 (lote 06/04/2026)
+# Campo vazio numa rede = sem perfil público identificado nessa rede (não implica erro de pesquisa).
+# YouTube: ver research/YOUTUBE_CANAIS.md (verificação 2026-04-06)
+# TikTok: ver research/TIKTOK_PERFIS.md (verificação 2026-04-06 — handles podem diferir do Instagram)
+# X: ver research/X_PERFIS.md (verificação 2026-04-06 — contas com poucos seguidores/protegidas não entram como “oficial”)
+campaign: "Always ON Loterias 2026"
+
+profiles:
+  - name: "Julia Ferrari"
+    instagram: julia_ferrari
+    tiktok: juliaferraric
+    youtube: "@julia_ferrari"
+    x: ""
+  - name: "João Vítor Mello"
+    instagram: joaovitormello
+    tiktok: joaovitormello
+    youtube: "@joaovitormello"
+    x: ""
+  - name: "Lorena Rufino"
+    instagram: rufislore
+    tiktok: lorerufis
+    youtube: "@rufislore"
+    x: lorerufis
+  - name: "bárbara coura"
+    instagram: barbaracoura
+    tiktok: barbaracoura
+    youtube: "@barbaracoura"
+    x: ""
+  - name: "Raphael Vicente"
+    instagram: raphaelvicente
+    tiktok: raphaelviicente
+    youtube: "@raphaelvicente"
+    x: raphaelviicente
+  - name: "Rafael Saraiva"
+    instagram: rafaelsaraiva28
+    tiktok: saraivarafael28
+    youtube: ""
+    x: ""
+  - name: "Pedro Ottoni"
+    instagram: pedroottoni_
+    tiktok: pedroottoni_
+    youtube: "@PedroOttoni"
+    x: ""
+  - name: "Ademara"
+    instagram: ademara
+    tiktok: ademaravilha
+    youtube: "@ademara"
+    x: ademaravilha

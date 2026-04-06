@@ -1,0 +1,297 @@
+# Dossiê HTML — lote 06/04/2026. Fonte: CSVs em data/ + research (captura 2026-04-06).
+
+meta:
+  title: "Squad Always ON Loterias 2026 — Brand Safety"
+  subtitle: "Risco de imagem para campanha de loterias — 8 nomes (lote 06/04/2026)."
+  client_line: "Agência Calia | Unidade de BI — Cliente CAIXA"
+  periodo: "Abril/2026 · Baseline dados: 06/04/2026"
+
+password_sha256_hex:
+  - "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b"
+
+briefing:
+  intro_paragraphs:
+    - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes: Instagram, TikTok, YouTube e X."
+    - "“Não consta” / “não encontrado” = não achamos evidência pública na ronda; pode existir fora do levantamento."
+  criterios:
+    - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui conteúdo humor com tema de aposta que possa gerar ruído semântico)."
+    - "Polêmicas: falas, episódios ou exposição midiática com risco de imagem."
+    - "Política: filiação partidária ou posicionamento público recorrente quando houver registro."
+  redes:
+    - "Instagram"
+    - "TikTok"
+    - "YouTube"
+    - "X"
+  tier_order:
+    - "Squad (8)"
+
+methodology:
+  columns:
+    - label: "Imprensa e busca aberta"
+      body: "Notícias, matérias e buscas orientadas. Evidências em CSV (brand_safety_evidencias, apostas_loterias_historico, parcerias_marcas)."
+    - label: "Redes sociais"
+      body: "Perfis públicos e notas em research/X_PERFIS.md, TIKTOK_PERFIS.md, YOUTUBE_CANAIS.md."
+    - label: "Painéis de mercado"
+      body: "Social Blade (Instagram/YouTube onde indexado), Upfluence (TikTok) — tamanho de público; não substituem análise de risco sozinha."
+
+panels:
+  intro_note: "Números na data da coleta (06/04/2026); conferir de novo na data do ar."
+  coverage_note: "Fora da tabela: sem perfil nesta rede, SB sem indexação, ou sem dado nesta exportação."
+  coverage_note_cells_dash: |
+    Traço (—) na célula: painel não trouxe aquele número ou rede não tratada como oficial.
+
+  instagram:
+    footnote: "Social Blade — captura 2026-04-06 (ver data/social_blade_instagram.csv)."
+    headers:
+      - "Nome"
+      - "Usuário"
+      - "Seguidores"
+      - "Variação 14 dias (%)"
+      - "Posts"
+      - "Curtidas méd."
+      - "Coment. méd."
+      - "Engaj."
+    rows:
+      - ["Julia Ferrari", "julia_ferrari", "1.242.283", "—", "642", "94.948", "732", "7,70%"]
+      - ["João Vítor Mello", "joaovitormello", "720.648", "—", "923", "41.974", "858", "5,94%"]
+      - ["Lorena Rufino", "rufislore", "3.525.456", "—", "606", "49.971", "786", "1,44%"]
+      - ["bárbara coura", "barbaracoura", "3.475.299", "—", "1.789", "130.205", "930", "3,77%"]
+      - ["Raphael Vicente", "raphaelvicente", "1.087.923", "—", "858", "65.180", "2.125", "6,19%"]
+      - ["Rafael Saraiva", "rafaelsaraiva28", "363.280", "—", "171", "39.135", "979", "11,04%"]
+      - ["Pedro Ottoni", "pedroottoni_", "624.115", "—", "116", "20.340", "318", "3,31%"]
+      - ["Ademara", "ademara", "720.006", "—", "1.127", "109.492", "1.706", "15,44%"]
+
+  tiktok:
+    footnote: "Upfluence TikTok Audit — data/upfluence_tiktok_audit.csv."
+    headers:
+      - "Nome (painel)"
+      - "Usuário"
+      - "Engaj."
+      - "Seguidores"
+      - "Com. méd."
+      - "Curt. méd."
+      - "Comp. méd."
+      - "Repr. méd."
+      - "Total curtidas"
+      - "Vídeos"
+      - "% mulheres"
+      - "% homens"
+    rows:
+      - ["juliaferraric", "juliaferraric", "8,49%", "1,7M", "447", "143,9K", "8,7K", "924,8K", "670", "116,7M", "458", "—", "—"]
+      - ["joaovitormello", "joaovitormello", "0,49%", "1,9M", "93,51", "9,2K", "616,82", "74,7K", "1,2K", "69,2M", "1,1K", "—", "—"]
+      - ["lorerufis", "lorerufis", "1,14%", "3,5M", "77,18", "39,7K", "1,5K", "361,8K", "69", "128,2M", "904", "—", "—"]
+      - ["barbaracoura", "barbaracoura", "1,63%", "13,5M", "1,2K", "219,0K", "12,5K", "1,8M", "645", "682,9M", "2,1K", "80,23%", "19,77%"]
+      - ["raphaelviicente", "raphaelviicente", "1,08%", "3,3M", "153,05", "35,5K", "654,55", "538,9K", "444", "55,9M", "421", "—", "—"]
+      - ["saraivarafael28", "saraivarafael28", "6,10%", "216,1K", "96,58", "13,1K", "1,4K", "107,5K", "122", "8,8M", "361", "61,02%", "38,98%"]
+      - ["pedroottoni_", "pedroottoni_", "1,89%", "1,2M", "186,69", "22,5K", "1,5K", "95,4K", "607", "27,5M", "550", "71,45%", "28,55%"]
+      - ["ademaravilha", "ademaravilha", "0,48%", "609,6K", "11,33", "2,9K", "11,67", "26,2K", "178", "12,7M", "239", "—", "—"]
+
+  youtube:
+    footnote: "Social Blade onde canal indexado — data/social_blade_youtube.csv; demais sem página SB na coleta."
+    headers:
+      - "Canal (painel)"
+      - "Usuário"
+      - "Inscritos"
+      - "Visualizações"
+      - "Vídeos"
+    rows:
+      - ["Julia Ferrari (@juliaferraric — SB)", "julia_ferrari", "250K", "63,4M", "156"]
+      - ["João Vítor Mello", "joaovitormello", "—", "—", "—"]
+      - ["Lore Rufis", "rufislore", "—", "—", "—"]
+      - ["bárbara coura", "barbaracoura", "4,33M", "2,43B", "989"]
+      - ["Raphael Vicente", "raphaelvicente", "—", "—", "—"]
+      - ["Rafael Saraiva", "rafaelsaraiva28", "—", "—", "—"]
+      - ["Pedro Ottoni", "PedroOttoni", "—", "—", "—"]
+      - ["Ademara (@ademara0 — SB)", "ademara", "1,65K", "104K", "19"]
+
+  x:
+    footnote: "Checagem manual — data/x_handles_verificados.csv (ref. 2026-04-06)."
+    headers:
+      - "Nome"
+      - "Usuário"
+      - "Seguidores"
+      - "Ativo?"
+      - "Teor recente (resumo)"
+    rows:
+      - ["Julia Ferrari", "julia_ferrari", "—", "Não", "Conta protegida (~73 seg.); não tratada como perfil oficial."]
+      - ["João Vítor Mello", "joaovitormello", "—", "Não", "~32 seg.; não tratado como perfil oficial."]
+      - ["Lorena Rufino", "lorerufis", "—", "Não", "Post visível ~abr/2024; inativa há ~2 anos."]
+      - ["bárbara coura", "barbaracoura", "—", "Não", "Sem X confirmado para o squad."]
+      - ["Raphael Vicente", "raphaelviicente", "—", "Não", "Post visível ~set/2022; inativa há vários anos."]
+      - ["Rafael Saraiva", "rafaelsaraiva28", "—", "Não", "Sem perfil confirmado no X para o creator."]
+      - ["Pedro Ottoni", "pedroottoni_", "—", "Não", "0 seg.; não tratado como perfil oficial."]
+      - ["Ademara", "ademaravilha", "—", "Não", "Post visível ~ago/2024; pouca atividade (~20 meses)."]
+
+executive_summary:
+  tagline: "8 nomes — baseline 06/04/2026; detalhe em Perfis e CSVs do lote."
+  blocks:
+    - title: "Concorrência (bets / loterias)"
+      items:
+        - "Sem evidência de publi paga para casa de apostas ou loteria concorrente nos achados do lote (apostas_loterias_historico.csv)."
+        - "Bárbara Coura: esquetes humor com tema “tia que aposta” (sátira, não publi)."
+        - "Rafael Saraiva: sketch “Bet Kids” (Porta dos Fundos) — humor; palavra “Bet” no título."
+    - title: "Política e exposição"
+      items:
+        - "Ademara: encontro com governo/influenciadores (2023) — fato público; não é filiação partidária."
+        - "Raphael Vicente: relato em mídia sobre operação policial na Maré (2023)."
+        - "Rafael Saraiva: entrevista Veja (discurso sobre conteúdo e posicionamento)."
+        - "Pedro Ottoni: não confundir com político Otoni de Paula (homónimo)."
+    - title: "Onde está o dado"
+      items:
+        - "Tabelas: data/*.csv · Narrativa: research/SQUAD_FICHA_COMPLETA.md · Brand safety: research/BRAND_SAFETY_CAIXA.md."
+
+consolidated_narrative:
+  title: "Síntese do lote"
+  subtitle: "__06/04/2026__ — oito perfis com forte peso em **humor**, **entretenimento** e **audiovisual**."
+  tagline: "Uso interno Calia; cruzar com evidências antes de apresentação final ao cliente."
+  blocks:
+    - title: "Leitura para Caixa"
+      items:
+        - "Risco de **associação semântica**: conteúdos de humor que citam apostas sem ser publi (Bárbara, Rafael sketch)."
+        - "Risco de **exposição política não partidária**: eventos de governo (Ademara); defesa comunitária (Raphael)."
+        - "Métricas nas redes são **snapshot**; não substituem compliance contratual."
+
+profiles:
+  - name: "Julia Ferrari"
+    tier: "Squad (8)"
+    risco_geral: "Baixo — sem achado de publi bet no lote"
+    resumo_tabela:
+      concorrencia: "Não encontrado (`apostas_loterias_historico`)."
+      polemicas: "Sem alerta mapeado no lote."
+      politica: "Sem filiação nas buscas."
+    handles:
+      instagram: julia_ferrari
+      tiktok: juliaferraric
+      youtube: julia_ferrari
+      x: ""
+    narrativa: "Atriz e criadora; humor e cotidiano. Dois canais no YouTube no levantamento (@julia_ferrari e @juliaferraric); IG ~1,24M; TikTok ~1,7M. Parcerias citadas: Sadia, iFood, Natura, Shopee (`parcerias_marcas.csv`)."
+    eixos:
+      concorrencia: "Busca e CSV: **não encontrada** publi paga para casa de apostas ou loteria concorrente."
+      polemicas: "Sem evidência registrada no lote além do critério geral de busca."
+      politica: "Sem filiação partidária identificada nas fontes do dossiê."
+
+  - name: "João Vítor Mello"
+    tier: "Squad (8)"
+    risco_geral: "Baixo"
+    resumo_tabela:
+      concorrencia: "Não encontrado."
+      polemicas: "Sem alerta."
+      politica: "Sem filiação; pauta cultural/comunitária em fontes externas."
+    handles:
+      instagram: joaovitormello
+      tiktok: joaovitormello
+      youtube: joaovitormello
+      x: ""
+    narrativa: "Humor e cultura; Play9. IG ~720k; TikTok ~1,9M. Atenção: pode existir homónimo em outro segmento (nome parecido) — não atribuir buscas cruzadas sem confirmação."
+    eixos:
+      concorrencia: "**Não encontrada** evidência de publi bet; ver nota de homónimo em `busca_nome_bet.csv`."
+      polemicas: "Sem alerta no lote."
+      politica: "Sem filiação partidária nas consultas do dossiê."
+
+  - name: "Lorena Rufino"
+    tier: "Squad (8)"
+    risco_geral: "Baixo"
+    resumo_tabela:
+      concorrencia: "Não encontrado."
+      polemicas: "Término de relacionamento com nota pública (imprensa) — gestão de imagem."
+      politica: "Sem filiação."
+    handles:
+      instagram: rufislore
+      tiktok: lorerufis
+      youtube: rufislore
+      x: lorerufis
+    narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada em imprensa. X @lorerufis inativo há ~2 anos."
+    eixos:
+      concorrencia: "**Não encontrada** ligação com publi de apostas ou loteria concorrente."
+      polemicas: "Matérias sobre término de relacionamento (contexto privado, nota oficial)."
+      politica: "Sem filiação partidária nas consultas."
+
+  - name: "bárbara coura"
+    tier: "Squad (8)"
+    risco_geral: "Baixo — atenção a conteúdo humor com tema de aposta (sátira)"
+    resumo_tabela:
+      concorrencia: "Sem publi bet; esquetes “tia que aposta” (humor)."
+      polemicas: "Briefing: evitar confusão com promoção real de apostas."
+      politica: "Sátira de política cotidiana em shorts; sem filiação."
+    handles:
+      instagram: barbaracoura
+      tiktok: barbaracoura
+      youtube: barbaracoura
+      x: ""
+    narrativa: "Humor / esquetes; alcance muito alto no TikTok (~13,5M). Globoplay, Salon Line, Mercado Livre entre parcerias citadas. YouTube com SB ~4,33M inscritos na coleta."
+    eixos:
+      concorrencia: "**Sem publi paga** de casa de apostas; existem esquetes de **sátira** com personagem “tia que aposta” — ver `apostas_loterias_historico` (AMBIGUO)."
+      polemicas: "Risco semântico se a peça institucional precisar distância máxima do tema apostas."
+      politica: "Sem filiação; humor pode usar política como tema de personagem."
+
+  - name: "Raphael Vicente"
+    tier: "Squad (8)"
+    risco_geral: "Baixo a moderado — exposição em tema segurança pública / comunidade"
+    resumo_tabela:
+      concorrencia: "Não encontrado."
+      polemicas: "Relato sobre operação na Maré (mídia 2023)."
+      politica: "Sem filiação; defesa comunitária."
+    handles:
+      instagram: raphaelvicente
+      tiktok: raphaelviicente
+      youtube: raphaelvicente
+      x: raphaelviicente
+    narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas em matérias: Garnier, Uber, TIM, Old Spice (`parcerias_marcas.csv`). SB YouTube sem indexação na coleta."
+    eixos:
+      concorrencia: "**Não encontrada** evidência de publi de casa de apostas."
+      polemicas: "Matéria (Estadão) sobre operação policial e relato de revista em domicílio — ver `brand_safety_evidencias.csv`."
+      politica: "Sem partido; posicionamento de direitos humanos / comunidade na imprensa."
+
+  - name: "Rafael Saraiva"
+    tier: "Squad (8)"
+    risco_geral: "Baixo — atenção a sketch com “Bet” no título"
+    resumo_tabela:
+      concorrencia: "Sketch “Bet Kids” (humor PdF); não é publi bet."
+      polemicas: "Relato de assaltos (entretenimento); entrevista Veja."
+      politica: "Declaração sobre linha de conteúdo (Veja)."
+    handles:
+      instagram: rafaelsaraiva28
+      tiktok: saraivarafael28
+      youtube: ""
+      x: ""
+    narrativa: "Porta dos Fundos; novela Globo. IG ~363k; TikTok ~216k. Sem canal YouTube mapeado no `influencers.yaml`."
+    eixos:
+      concorrencia: "Sketch **Bet Kids**: humor; **não** equivale a contrato com operador de apostas (`apostas_loterias_historico` AMBIGUO)."
+      polemicas: "Entrevistas e relatos públicos; severidade baixa no mapeamento para assaltos."
+      politica: "Matéria Veja sobre posicionamento de conteúdo; sem filiação partidária nas buscas."
+
+  - name: "Pedro Ottoni"
+    tier: "Squad (8)"
+    risco_geral: "Baixo"
+    resumo_tabela:
+      concorrencia: "Não encontrado."
+      polemicas: "Caso viral positivo (doação a motorista — O Tempo)."
+      politica: "Não confundir com Otoni de Paula (PSD)."
+    handles:
+      instagram: pedroottoni_
+      tiktok: pedroottoni_
+      youtube: PedroOttoni
+      x: ""
+    narrativa: "Ator / humor; streaming Netflix, Disney+, Prime citados como trabalhos. IG ~624k; TikTok ~1,2M. SB YouTube sem indexação na coleta."
+    eixos:
+      concorrencia: "**Não encontrada** associação com publi de apostas."
+      polemicas: "Notícia positiva (generosidade) — ver imprensa."
+      politica: "Sem filiação; **homónimo** com político de nome parecido — ver evidências."
+
+  - name: "Ademara"
+    tier: "Squad (8)"
+    risco_geral: "Baixo a moderado — proximidade de agenda de governo em mídia"
+    resumo_tabela:
+      concorrencia: "Não encontrado."
+      polemicas: "—"
+      politica: "Evento com presidente / influenciadores (2023); não é filiação."
+    handles:
+      instagram: ademara
+      tiktok: ademaravilha
+      youtube: ademara
+      x: ademaravilha
+    narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (ER alto); TikTok ~610k. Dois canais YT no levantamento — ver `creators_master` / `YOUTUBE_PESQUISA_NOME.md`."
+    eixos:
+      concorrencia: "**Não encontrada** publi de casa de apostas nas fontes do lote."
+      polemicas: "—"
+      politica: "Encontro com governo e cobertura de agenda digital — avaliar sensibilidade institucional do cliente (`brand_safety_evidencias`)."
