@@ -103,14 +103,14 @@ executive_summary:
     - title: "Concorrência (bets / loterias)"
       items:
         - "Sem evidência de publi paga para casa de apostas ou loteria concorrente nos achados desta ronda."
-        - "Bárbara Coura: esquetes humor com tema “tia que aposta” (sátira, não publi)."
+        - "Bárbara Coura: esquetes humor com tema «tia que aposta» (**Coletiva** / shorts; sátira, não publi)."
         - "Rafael Saraiva: sketch “Bet Kids” (Porta dos Fundos) — humor; palavra “Bet” no título."
     - title: "Política e exposição"
       items:
-        - "Ademara: encontro com governo/influenciadores (2023) — fato público; não é filiação partidária."
-        - "Raphael Vicente: relato em mídia sobre operação policial na Maré (2023)."
-        - "Rafael Saraiva: entrevista Veja (discurso sobre conteúdo e posicionamento)."
-        - "Pedro Ottoni: não confundir com político Otoni de Paula (homónimo)."
+        - "Ademara: encontro com governo/influenciadores (2023) — **UOL Universa**, **Poder360**; fato público; não é filiação partidária."
+        - "Raphael Vicente: **Estadão** (2023) — operação policial na Maré; relato de revista em domicílio."
+        - "Rafael Saraiva: **Veja** (posicionamento); relatos de assaltos em **Heloísa Tolipan**."
+        - "Pedro Ottoni: não confundir com Otoni de Paula (PSD) — nome em pauta na **Folha** (2026) é o político, não o ator."
     - title: "Como ler este documento"
       items:
         - "Perfis: análise por nome, com narrativa e três eixos (concorrência, polêmicas, política)."
@@ -124,8 +124,8 @@ consolidated_narrative:
   blocks:
     - title: "Leitura para Caixa"
       items:
-        - "Risco de **associação semântica**: conteúdos de humor que citam apostas sem ser publi (Bárbara, Rafael sketch)."
-        - "Risco de **exposição política não partidária**: eventos de governo (Ademara); defesa comunitária (Raphael)."
+        - "Risco de **associação semântica**: humor que cita apostas sem ser publi (referência **Coletiva** / Bárbara; **Porta dos Fundos** / Rafael, sketch «Bet Kids»)."
+        - "Risco de **exposição política não partidária**: eventos de governo — **UOL Universa** / **Poder360** (Ademara); segurança pública/comunidade — **Estadão** (Raphael)."
         - "Métricas nas redes são **retrato na data**; não substituem compliance contratual nem due diligence jurídica."
 
 profiles:
@@ -141,7 +141,7 @@ profiles:
       tiktok: juliaferraric
       youtube: julia_ferrari
       x: ""
-    narrativa: "Atriz e criadora; humor e cotidiano. Dois canais no YouTube no levantamento (@julia_ferrari e @juliaferraric); IG ~1,24M; TikTok ~1,7M. Parcerias citadas em fontes públicas: Sadia, iFood, Natura, Shopee."
+    narrativa: "Atriz e criadora; humor e cotidiano. Dois canais no YouTube no levantamento (@julia_ferrari e @juliaferraric); IG ~1,24M; TikTok ~1,7M. Parcerias citadas em matérias agregadas (**Viralizou**), entre outras: Sadia, iFood, Natura, Shopee."
     eixos:
       concorrencia: "Na pesquisa realizada, **não foi encontrada** publi paga para casa de apostas ou loteria concorrente."
       polemicas: "Sem achado de polémica relevante nas consultas; critério: imprensa aberta e buscas por nome — nada além do registo geral de exposição."
@@ -170,24 +170,24 @@ profiles:
     risco_geral: "Baixo"
     resumo_tabela:
       concorrencia: "Não encontrado."
-      polemicas: "Término de relação com nota pública na imprensa (2023) — gestão de imagem e vida privada; não mapeado como escândalo nem polémica de consumo."
+      polemicas: "Término de relação com nota pública (**BNews**, 2023) — gestão de imagem e vida privada; não mapeado como escândalo nem polémica de consumo."
       politica: "Sem filiação."
     handles:
       instagram: rufislore
       tiktok: lorerufis
       youtube: ""
       x: ""
-    narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada em imprensa."
+    narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada na imprensa (**Correio 24 Horas**, entre outras)."
     eixos:
       concorrencia: "**Não foi encontrada** ligação com publi de apostas ou loteria concorrente."
-      polemicas: "Término de relação com nota pública na imprensa (2023) — gestão de imagem e vida privada; não mapeado como escândalo nem polémica de consumo."
+      polemicas: "Término de relação com nota pública (**BNews**, 2023) — gestão de imagem e vida privada; não mapeado como escândalo nem polémica de consumo."
       politica: "Sem filiação partidária nas consultas."
 
   - name: "Bárbara Coura"
     tier: "Squad (8)"
     risco_geral: "Baixo — atenção a conteúdo humor com tema de aposta (sátira)"
     resumo_tabela:
-      concorrencia: "Sem publi bet; esquetes “tia que aposta” (humor)."
+      concorrencia: "Sem publi bet; esquetes «tia que aposta» (humor; tema citado em **Coletiva** / shorts)."
       polemicas: "Esquetes com personagem «tia que aposta» (humor e sátira, não publi de casa de apostas); risco de ruído semântico se a peça institucional exigir distância máxima do tema apostas."
       politica: "Sátira de política cotidiana em shorts; sem filiação."
     handles:
@@ -206,25 +206,25 @@ profiles:
     risco_geral: "Baixo a moderado — exposição em tema segurança pública / comunidade"
     resumo_tabela:
       concorrencia: "Não encontrado."
-      polemicas: "Cobertura na imprensa sobre operação policial no Complexo da Maré e relato de revista em domicílio (2023) — exposição em segurança pública/comunidade, não polémica de publi."
+      polemicas: "**Estadão** (2023): operação policial no Complexo da Maré e relato de revista em domicílio — exposição em segurança pública/comunidade, não polémica de publi."
       politica: "Sem filiação; defesa comunitária."
     handles:
       instagram: raphaelvicente
       tiktok: raphaelviicente
       youtube: ""
       x: ""
-    narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas citadas em matérias de marketing: Garnier, Uber, TIM, Old Spice."
+    narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas citadas em matérias (**Meio e Mensagem**, **Propmark**, entre outras): Garnier, Uber, TIM, Old Spice."
     eixos:
       concorrencia: "**Não foi encontrada** evidência de publi de casa de apostas."
-      polemicas: "Exposição midiática ligada a crítica de operações policiais e relato de revista em domicílio (matéria em veículo de referência); severidade baixa para marca, alta para sensibilidade de tema (comunidade)."
-      politica: "Sem partido; posicionamento de direitos humanos / comunidade na imprensa."
+      polemicas: "Crítica a operações policiais e relato de revista em domicílio — **Estadão** (2023); severidade baixa para marca, alta para sensibilidade de tema (comunidade)."
+      politica: "Sem partido; posicionamento de direitos humanos / comunidade com exposição em **Estadão** e outras matérias."
 
   - name: "Rafael Saraiva"
     tier: "Squad (8)"
     risco_geral: "Baixo — atenção a sketch com “Bet” no título"
     resumo_tabela:
       concorrencia: "Sketch “Bet Kids” (humor PdF); não é publi bet."
-      polemicas: "Relatos públicos de assaltos em perfil de entretenimento (severidade baixa no mapeamento); entrevista Veja sobre linha de conteúdo e posicionamento público."
+      polemicas: "Relatos de assaltos (**Heloísa Tolipan**); posicionamento e linha de conteúdo (**Veja**) — severidade baixa no mapeamento para assaltos."
       politica: "Declaração sobre linha de conteúdo (Veja)."
     handles:
       instagram: rafaelsaraiva28
@@ -234,7 +234,7 @@ profiles:
     narrativa: "Porta dos Fundos; novela Globo. IG ~363k; TikTok ~216k. Sem canal próprio de YouTube identificado neste levantamento."
     eixos:
       concorrencia: "Sketch **Bet Kids**: humor; **não** equivale a contrato com operador de apostas (conteúdo classificado como sensível só pelo tema)."
-      polemicas: "Relato de múltiplos assaltos tratado em mídia de entretenimento; não é polémica de produto — avaliar conforto do cliente com tema de segurança urbana em biografia."
+      polemicas: "Relato de múltiplos assaltos em **Heloísa Tolipan**; não é polémica de produto — avaliar conforto do cliente com tema de segurança urbana em biografia."
       politica: "Matéria Veja sobre posicionamento de conteúdo; sem filiação partidária nas buscas."
 
   - name: "Pedro Ottoni"
@@ -243,7 +243,7 @@ profiles:
     resumo_tabela:
       concorrencia: "Não encontrado."
       polemicas: "Caso viral positivo (doação a motorista de app, O Tempo): percepção de conduta — não há polémica negativa mapeada; risco residual só de homónimo com político (outro eixo)."
-      politica: "Não confundir com Otoni de Paula (PSD)."
+      politica: "Não confundir com Otoni de Paula (PSD) — nome em pauta na **Folha** (2026) refere-se ao político, não ao ator."
     handles:
       instagram: pedroottoni_
       tiktok: pedroottoni_
@@ -253,15 +253,15 @@ profiles:
     eixos:
       concorrencia: "**Não foi encontrada** associação com publi de apostas."
       polemicas: "Caso viral positivo (doação a motorista de app, O Tempo): percepção de conduta — não há polémica negativa mapeada; risco residual só de homónimo com político (outro eixo)."
-      politica: "Sem filiação; **homónimo** com político de nome parecido — distinguir nas buscas."
+      politica: "Sem filiação; **homónimo** com político de nome parecido — cobertura na **Folha** e outras é sobre Otoni de Paula, não sobre Pedro Ottoni."
 
   - name: "Ademara"
     tier: "Squad (8)"
-    risco_geral: "Baixo a moderado — proximidade de agenda de governo em mídia"
+    risco_geral: "Baixo a moderado — proximidade de agenda de governo (**UOL Universa**, **Poder360**)"
     resumo_tabela:
       concorrencia: "Não encontrado."
       polemicas: "Sem polémica de consumo ou escândalo nas fontes; personagens de sátira social — eventual ruído vem de proximidade de agenda pública (ver política)."
-      politica: "Evento com presidente / influenciadores (2023); não é filiação."
+      politica: "Evento com presidente e influenciadores (2023) — **UOL Universa**, **Poder360**; não é filiação."
     handles:
       instagram: ademara
       tiktok: ademaravilha
@@ -271,4 +271,4 @@ profiles:
     eixos:
       concorrencia: "**Não foi encontrada** publi de casa de apostas nas fontes desta ronda."
       polemicas: "Sem polémica de consumo ou escândalo nas fontes; personagens de sátira social — eventual ruído vem de proximidade de agenda pública (ver política)."
-      politica: "Encontro com governo e cobertura de agenda digital — avaliar sensibilidade institucional do cliente."
+      politica: "Encontro com governo e cobertura de agenda digital (**UOL Universa**, **Poder360**) — avaliar sensibilidade institucional do cliente."
