@@ -83,7 +83,7 @@ def mini_md(s: object) -> str:
         url = (m.group(2) or "").strip()
         if re.match(r"https?://", url, re.I):
             chunks.append(
-                '<a class="dossier-source-link text-blue-700 hover:text-blue-900 underline '
+                '<a class="dossier-source-link text-slate-700 hover:text-slate-900 underline '
                 'font-semibold decoration-calia-gold/70 hover:decoration-calia-gold underline-offset-2 '
                 'break-words" href="'
                 f'{esc(url)}" target="_blank" rel="noopener noreferrer">'
@@ -969,10 +969,10 @@ def main(*, no_gate: bool = False) -> None:
     .toc-list {{ margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }}
     .toc-list li {{ margin-top: 0.35rem; }}
     .sr-only {{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }}
-    /* Links de fonte: texto azul; sublinhado dourado (calia-gold), como antes do ajuste */
+    /* Links de fonte: mesma família de cor do texto; sublinhado dourado (calia-gold) */
     #dossier-root a.dossier-source-link,
     #dossier-root a[href^="http"] {{
-      color: #1d4ed8 !important;
+      color: inherit !important;
       text-decoration: underline;
       text-decoration-color: rgba(249, 166, 25, 0.75);
       text-underline-offset: 3px;
@@ -980,7 +980,7 @@ def main(*, no_gate: bool = False) -> None:
     }}
     #dossier-root a.dossier-source-link:hover,
     #dossier-root a[href^="http"]:hover {{
-      color: #1e3a8a !important;
+      color: inherit !important;
       text-decoration-color: #f9a619;
     }}
   </style>
