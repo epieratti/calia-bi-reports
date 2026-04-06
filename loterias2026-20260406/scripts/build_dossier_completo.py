@@ -5,11 +5,14 @@ Saída: output/20260401-dossie-squad-always-on-loterias-2026.html
 """
 from __future__ import annotations
 
+import argparse
 import html
 import re
+import subprocess
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import yaml
 
@@ -20,6 +23,31 @@ OUT_DIR = ROOT / "output"
 
 def esc(s: object) -> str:
     return html.escape(str(s or ""), quote=True)
+
+
+def build_revision_label() -> str:
+    """Carimbo único por geração (compare com o HTML ao abrir no navegador)."""
+    now = datetime.now(timezone.utc)
+    br = now.astimezone(ZoneInfo("America/Sao_Paulo"))
+    # Horário visível em pt-BR; UTC mantém comparação técnica.
+    ts = (
+        f"{br.strftime('%d/%m/%Y %H:%M')} Brasília · "
+        f"UTC {now.strftime('%Y-%m-%d %H:%M')} · "
+    )
+    repo = ROOT.parent
+    try:
+        r = subprocess.run(
+            ["git", "-C", str(repo), "rev-parse", "--short", "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=5,
+            check=False,
+        )
+        if r.returncode == 0 and (sha := (r.stdout or "").strip()):
+            return f"{ts}{sha}"
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return f"{ts}(sem git)"
 
 
 def _mini_md_bold_under(text: str) -> str:
@@ -55,15 +83,34 @@ def mini_md(s: object) -> str:
         url = (m.group(2) or "").strip()
         if re.match(r"https?://", url, re.I):
             chunks.append(
-                '<a class="text-calia-navy underline font-semibold decoration-calia-gold/70 '
-                'underline-offset-2" href="'
-                f'{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(lab)}</a>'
+                '<a class="dossier-source-link text-blue-700 hover:text-blue-900 underline '
+                'font-semibold decoration-blue-300 hover:decoration-blue-600 underline-offset-2 '
+                'break-words" href="'
+                f'{esc(url)}" target="_blank" rel="noopener noreferrer">'
+                f"{_mini_md_bold_under(lab)}</a>"
             )
         else:
             chunks.append(esc(m.group(0)))
         pos = m.end()
     chunks.append(_mini_md_bold_under(text[pos:]))
     return "".join(chunks)
+
+
+def methodology_column_body_html(body: object) -> str:
+    """Vários parágrafos no YAML separados por linha em branco (\\n\\n)."""
+    b = str(body or "").strip()
+    if not b:
+        return ""
+    parts = [p.strip() for p in b.split("\n\n") if p.strip()]
+    if len(parts) == 1:
+        return (
+            "<p class='text-sm text-slate-600 mt-2 leading-relaxed'>"
+            f"{mini_md(parts[0])}</p>"
+        )
+    return "".join(
+        f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(p)}</p>"
+        for p in parts
+    )
 
 
 def render_clevel_body(cfg: dict) -> str:
@@ -426,11 +473,11 @@ def format_profile_networks_html(
     """Handles e números a partir dos painéis — mini-cards em grade, compactos e sem estouro."""
     cards: list[str] = []
 
+    # Mini-cards por perfil: só @handles — métricas ficam nas tabelas de painéis (evita repetir números no texto do creator).
     ig = panel_row_by_briefing(ig_rows, 1, handles.get("instagram"))
     if ig and len(ig) >= 7:
         u = str(ig[1]).lstrip("@")
-        stats = stat_pair("seg.", str(ig[2])) + stat_pair("eng.", str(ig[6]))
-        cards.append(net_mini_card("bg-gradient-to-b from-pink-500 to-rose-600", "Instagram", u, stats))
+        cards.append(net_mini_card("bg-gradient-to-b from-pink-500 to-rose-600", "Instagram", u, ""))
 
     tt = panel_row_by_briefing(tt_rows, 1, handles.get("tiktok"))
     if tt and len(tt) >= 4:
@@ -438,26 +485,17 @@ def format_profile_networks_html(
         raw_brief_tt = str(tt[1] or "").strip()
         tt_user = raw_tool if raw_tool and " " not in raw_tool else raw_brief_tt
         u = tt_user.lstrip("@")
-        eng_raw = str(tt[2] or "").strip()
-        stats = stat_pair("seg.", str(tt[3]))
-        if eng_raw and eng_raw != "—":
-            stats += stat_pair("eng.", eng_raw)
-        cards.append(net_mini_card("bg-slate-800", "TikTok", u, stats))
+        cards.append(net_mini_card("bg-slate-800", "TikTok", u, ""))
 
     yt = panel_row_by_briefing(yt_rows, 1, handles.get("youtube"))
     if yt and len(yt) >= 5:
         yu = str(yt[1]).lstrip("@")
         ch_full = str(yt[0] or "").strip()
-        stats = (
-            stat_pair("insc.", str(yt[2]))
-            + stat_pair("views", str(yt[3]))
-            + stat_pair("víd.", str(yt[4]))
-        )
         footer = (
             "<p class='mt-1.5 pt-1 border-t border-slate-100 text-[9px] text-slate-500 break-words leading-snug'>"
             f"<span class='text-slate-400'>Canal · </span>{esc(ch_full)}</p>"
         )
-        cards.append(net_mini_card("bg-red-600", "YouTube", yu, stats, footer))
+        cards.append(net_mini_card("bg-red-600", "YouTube", yu, "", footer))
 
     # X: só mini-card se o YAML trata como canal oficial (handle preenchido).
     # Contas protegidas, homônimos ou com audiência muito baixa ficam vazias — como se não houvesse X.
@@ -478,7 +516,6 @@ def format_profile_networks_html(
         else:
             chip_label = str(xr[3] or "").strip() or "—"
         teor_full = str(xr[4] or "").strip()
-        stats = stat_pair("seg.", str(xr[2]))
         footer = (
             "<div class='mt-1.5 pt-1 border-t border-slate-100 space-y-1'>"
             f"<span class='inline-block max-w-full rounded px-1.5 py-0.5 text-[9px] font-semibold leading-snug break-words {act_cls}' "
@@ -486,7 +523,7 @@ def format_profile_networks_html(
             f"<p class='text-[9px] text-slate-500 leading-snug break-words'>{esc(teor_full)}</p>"
             "</div>"
         )
-        cards.append(net_mini_card("bg-slate-900", "X", xv, stats, footer))
+        cards.append(net_mini_card("bg-slate-900", "X", xv, "", footer))
 
     if not cards:
         return (
@@ -503,7 +540,7 @@ def format_profile_networks_html(
 
     return (
         "<div class='mb-4'>"
-        "<p class='text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-2'>Redes · snapshot dos painéis</p>"
+        "<p class='text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-2'>Redes · handles oficiais (métricas nas tabelas abaixo)</p>"
         f"<div class='grid {grid_cls} gap-2'>{''.join(cards)}</div>"
         "</div>"
     )
@@ -577,10 +614,11 @@ def render_table(
     )
 
 
-def main() -> None:
+def main(*, no_gate: bool = False) -> None:
     bundle = load_yaml(DATA / "dossier_loterias2026.yaml")
     meta = bundle.get("meta") or {}
     generated = datetime.now(timezone.utc).strftime("%d/%m/%Y")
+    build_revision = build_revision_label()
 
     title = esc(meta.get("title", "Squad Always ON Loterias 2026 — Brand Safety"))
     subtitle = esc(meta.get("subtitle", ""))
@@ -591,6 +629,11 @@ def main() -> None:
         "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b",
     ]
     pw_json = ",\n            ".join(f"'{p}'" for p in pw_set)
+
+    gate_wrap_cls = "hidden" if no_gate else (
+        "fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4"
+    )
+    root_wrap_cls = "max-w-4xl mx-auto" if no_gate else "hidden max-w-4xl mx-auto"
 
     # Pedido do briefing (texto fixo + opcional do YAML)
     briefing_intro = bundle.get("briefing", {}).get("intro_paragraphs") or []
@@ -644,7 +687,7 @@ def main() -> None:
         meth_cards += (
             f"<div class='p-4 bg-white border border-slate-200 rounded'>"
             f"<p class='text-xs font-black text-calia-navy uppercase tracking-wide'>{esc(col.get('label', ''))}</p>"
-            f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(col.get('body', ''))}</p></div>"
+            f"{methodology_column_body_html(col.get('body', ''))}</div>"
         )
 
     ig_for_panels = (bundle.get("panels", {}).get("instagram") or {}).get("rows") or []
@@ -886,6 +929,7 @@ def main() -> None:
     tier_order_label = esc(", ".join(tier_order))
 
     doc = f"""<!DOCTYPE html>
+<!-- calia-dossier-build: {esc(build_revision)} -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -915,10 +959,22 @@ def main() -> None:
     .toc-list {{ margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }}
     .toc-list li {{ margin-top: 0.35rem; }}
     .sr-only {{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }}
+    /* Links de fonte: azul explícito (antes: navy = texto normal; parecia não haver link) */
+    #dossier-root a.dossier-source-link,
+    #dossier-root a[href^="http"] {{
+      color: #1d4ed8 !important;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }}
+    #dossier-root a.dossier-source-link:hover,
+    #dossier-root a[href^="http"]:hover {{
+      color: #1e3a8a !important;
+    }}
   </style>
 </head>
 <body class="p-4 md:p-12">
-  <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+  <div id="access-gate" class="{gate_wrap_cls}">
     <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
       <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
       <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
@@ -934,12 +990,12 @@ def main() -> None:
     </div>
   </div>
 
-  <div id="dossier-root" class="hidden max-w-4xl mx-auto">
+  <div id="dossier-root" class="{root_wrap_cls}">
     <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded-lg shadow-lg mb-8">
       <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">{client}</p>
       <h1 class="text-2xl md:text-3xl font-black mt-2 leading-tight">{title}</h1>
       <p class="text-sm opacity-90 mt-3">{subtitle}</p>
-      <p class="text-xs opacity-75 mt-4">Atualização: {periodo} · Documento: {esc(generated)}</p>
+      <p class="text-xs opacity-75 mt-4">Atualização: {periodo} · Documento: {esc(generated)} · Build: <code class="text-[10px] bg-white/10 px-1 rounded">{esc(build_revision)}</code></p>
     </header>
 
     <nav class="card-audit py-6" aria-label="Sumário">
@@ -967,6 +1023,9 @@ def main() -> None:
 
     <section id="leitura" class="card-audit scroll-mt-20 bg-slate-50">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Leitura rápida</h2></div>
+      <p class="text-xs text-blue-800 bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4">
+        <strong>Fontes:</strong> trechos em <span class="text-blue-700 font-semibold underline">azul sublinhado</span> são links para matérias ou páginas (abrem em nova aba).
+      </p>
       {exec_body_html}
     </section>
 
@@ -998,6 +1057,11 @@ def main() -> None:
 
     <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">
       <a class="toc-link" href="#topo">Voltar ao topo</a> · Agência Calia · Uso interno · Always ON Loterias 2026
+      <p class="mt-3 text-[10px] text-slate-500 max-w-prose mx-auto leading-relaxed">
+        <strong>Build:</strong> <code class="text-slate-600">{esc(build_revision)}</code>
+        Se o <strong>GitHub Pages</strong> mostrar um build diferente do arquivo gerado localmente,
+        falta <code class="text-slate-600">git push</code> do HTML em <code class="text-slate-600">caixa/</code>.
+      </p>
     </footer>
   </div>
 
@@ -1045,4 +1109,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser(description="Gera dossiê HTML a partir do YAML.")
+    ap.add_argument(
+        "--no-gate",
+        action="store_true",
+        help="Sem tela de senha (útil para arquivo local / preview; conteúdo visível de imediato).",
+    )
+    args = ap.parse_args()
+    main(no_gate=args.no_gate)
