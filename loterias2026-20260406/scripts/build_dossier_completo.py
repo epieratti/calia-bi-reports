@@ -495,7 +495,7 @@ def format_profile_networks_html(
     if not cards:
         return (
             "<p class='text-[11px] text-slate-500 mb-4 py-2 px-2.5 rounded-lg border border-dashed border-slate-200 "
-            "bg-slate-50/90'>Sem linha nos painéis para este nome (Instagram / TikTok / YouTube / X).</p>"
+            "bg-slate-50/90'>Sem linha nos painéis para este nome (Instagram / TikTok / YouTube).</p>"
         )
     n = len(cards)
     if n == 1:
@@ -615,7 +615,7 @@ def main() -> None:
         f"<li>{esc(c)}</li>" for c in criterios
     ) + "</ol>"
 
-    redes = bundle.get("briefing", {}).get("redes") or ["Instagram", "TikTok", "YouTube", "X"]
+    redes = bundle.get("briefing", {}).get("redes") or ["Instagram", "TikTok", "YouTube"]
     redes_html = "<p class='text-sm text-slate-700'><strong>Redes de ativação:</strong> " + esc(", ".join(redes)) + ".</p>"
 
     tier_order = bundle.get("briefing", {}).get("tier_order") or [

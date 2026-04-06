@@ -11,7 +11,7 @@ password_sha256_hex:
 
 briefing:
   intro_paragraphs:
-    - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes: Instagram, TikTok, YouTube e X."
+    - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes analisadas: Instagram, TikTok e YouTube (painéis com métricas nesta exportação)."
     - "“Não consta” / “não encontrado” = não achamos evidência pública na ronda; pode existir fora do levantamento."
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui conteúdo humor com tema de aposta que possa gerar ruído semântico)."
@@ -21,7 +21,6 @@ briefing:
     - "Instagram"
     - "TikTok"
     - "YouTube"
-    - "X"
   tier_order:
     - "Squad (8)"
 
@@ -30,7 +29,7 @@ methodology:
     - label: "Imprensa e busca aberta"
       body: "Notícias, matérias e buscas orientadas; cruzamento com registo de evidências e parcerias citadas em fonte pública."
     - label: "Redes sociais"
-      body: "Análise de perfis públicos e checagem direta nas redes (Instagram, TikTok, YouTube, X) na data do levantamento."
+      body: "Análise de perfis públicos e checagem direta nas redes (Instagram, TikTok, YouTube) na data do levantamento."
     - label: "Painéis de mercado"
       body: "Social Blade (Instagram e YouTube, quando o canal está indexado) e Upfluence (TikTok) — indicam tamanho de público; não substituem sozinhos a análise de risco de imagem."
 
@@ -87,7 +86,7 @@ panels:
       - ["ademaravilha", "ademaravilha", "0,48%", "609,6K", "11,33", "2,9K", "11,67", "26,2K", "178", "12,7M", "239", "—", "—"]
 
   youtube:
-    footnote: "Social Blade quando o canal está indexado; nos demais casos o painel não exibia página utilizável na coleta."
+    footnote: "Social Blade quando o canal está indexado. Só entram linhas com métricas nesta exportação; os demais nomes ficam de fora até haver página utilizável no painel."
     headers:
       - "Canal (painel)"
       - "Usuário"
@@ -96,30 +95,8 @@ panels:
       - "Vídeos"
     rows:
       - ["Julia Ferrari (@juliaferraric)", "julia_ferrari", "250K", "63,4M", "156"]
-      - ["Lore Rufis", "rufislore", "—", "—", "—"]
       - ["bárbara coura", "barbaracoura", "4,33M", "2,43B", "989"]
-      - ["Raphael Vicente", "raphaelvicente", "—", "—", "—"]
-      - ["Rafael Saraiva", "rafaelsaraiva28", "—", "—", "—"]
-      - ["Pedro Ottoni", "PedroOttoni", "—", "—", "—"]
       - ["Ademara (@ademara0)", "ademara", "1,65K", "104K", "19"]
-
-  x:
-    footnote: "No X, só entram contas públicas com audiência utilizável como canal; protegidas, muito pequenas ou inativas não são tratadas como perfil do creator — consta como sem X no levantamento. Checagem manual em 06/04/2026."
-    headers:
-      - "Nome"
-      - "Usuário"
-      - "Seguidores"
-      - "Ativo?"
-      - "Teor recente (resumo)"
-    rows:
-      - ["Julia Ferrari", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["João Vítor Mello", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["Lorena Rufino", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["bárbara coura", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["Raphael Vicente", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["Rafael Saraiva", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["Pedro Ottoni", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
-      - ["Ademara", "—", "—", "Não", "Sem perfil público no X tratado como canal oficial no levantamento."]
 
 executive_summary:
   tagline: "8 nomes — leitura rápida; o detalhe está em Perfis e na tabela resumo."
@@ -199,7 +176,7 @@ profiles:
     handles:
       instagram: rufislore
       tiktok: lorerufis
-      youtube: rufislore
+      youtube: ""
       x: ""
     narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada em imprensa."
     eixos:
@@ -235,9 +212,9 @@ profiles:
     handles:
       instagram: raphaelvicente
       tiktok: raphaelviicente
-      youtube: raphaelvicente
+      youtube: ""
       x: ""
-    narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas citadas em matérias de marketing: Garnier, Uber, TIM, Old Spice. YouTube sem página indexada no painel na coleta."
+    narrativa: "Humor audiovisual; Complexo da Maré. IG ~1,09M; TikTok ~3,3M. Marcas citadas em matérias de marketing: Garnier, Uber, TIM, Old Spice."
     eixos:
       concorrencia: "**Não foi encontrada** evidência de publi de casa de apostas."
       polemicas: "Matéria em veículo de imprensa (Estadão) sobre operação policial e relato de revista em domicílio."
@@ -271,9 +248,9 @@ profiles:
     handles:
       instagram: pedroottoni_
       tiktok: pedroottoni_
-      youtube: PedroOttoni
+      youtube: ""
       x: ""
-    narrativa: "Ator / humor; trabalhos em streaming Netflix, Disney+, Prime citados em matérias. IG ~624k; TikTok ~1,2M. YouTube sem página indexada no painel na coleta."
+    narrativa: "Ator / humor; trabalhos em streaming Netflix, Disney+, Prime citados em matérias. IG ~624k; TikTok ~1,2M."
     eixos:
       concorrencia: "**Não foi encontrada** associação com publi de apostas."
       polemicas: "Notícia positiva (generosidade) em imprensa."
