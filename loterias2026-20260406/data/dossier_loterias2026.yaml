@@ -12,7 +12,7 @@ password_sha256_hex:
 briefing:
   intro_paragraphs:
     - "Análise de **brand safety** para campanha de loterias (**oito perfis** do squad Always ON 2026). Abaixo: **o que verificamos** em cada eixo; metodologia, na seção **Como foi analisado**."
-    - "**Não encontramos** na rodada = sem evidência pública nas fontes usadas; pode existir fora do levantamento."
+    - "**Não encontramos** nas fontes consultadas = sem evidência pública no que analisamos; pode existir fora do levantamento."
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui humor com tema de aposta que gere ruído semântico)."
     - "Polêmicas: falas, episódios ou exposição na mídia com risco de imagem."
@@ -104,7 +104,7 @@ executive_summary:
   blocks:
     - title: "Concorrência (bets / loterias)"
       items:
-        - "Não encontramos publi paga de casa de apostas ou de loteria concorrente nas fontes desta rodada (buscas + imprensa)."
+        - "Não encontramos publi paga de casa de apostas ou de loteria concorrente nas fontes consultadas (buscas + imprensa)."
         - "Bárbara Coura: personagem **\"tia que aposta\"** — **Coletiva** / shorts; é **sátira**, não publi (justificativa: conteúdo de humor, não contrato com operador)."
         - "Rafael Saraiva: sketch **\"Bet Kids\"** (Porta dos Fundos) — humor; a palavra **Bet** só no título (não é publi de casa de apostas; sensibilidade só de leitura)."
     - title: "Política e exposição (onde olhar)"
@@ -139,7 +139,7 @@ profiles:
       x: ""
     narrativa: "Atriz e criadora; humor e cotidiano. Dois canais no YouTube nesta coleta (@julia_ferrari e @juliaferraric); IG ~1,24M; TikTok ~1,7M. Parcerias citadas em matéria agregadora (**Viralizou**), entre outras: Sadia, iFood, Natura, Shopee."
     eixos:
-      concorrencia: "**Não encontramos** publi paga de casa de apostas ou loteria concorrente (buscas na web + imprensa aberta nesta rodada)."
+      concorrencia: "**Não encontramos** publi paga de casa de apostas ou loteria concorrente (buscas na web + imprensa aberta)."
       polemicas: "**Sem** polêmica relevante nas mesmas fontes; busca por nome não mostrou escândalo ou exposição delicada além do perfil público de entretenimento."
       politica: "**Sem** filiação partidária nas fontes consultadas."
 
@@ -175,7 +175,7 @@ profiles:
       x: ""
     narrativa: "Lore Rufis; humor e vida pessoal. IG ~3,5M; TikTok ~3,5M. Campanha Fanta/Europa citada na imprensa (**Correio 24 Horas**, entre outras)."
     eixos:
-      concorrencia: "**Não encontramos** publi de apostas ou loteria concorrente (buscas + imprensa nesta rodada)."
+      concorrencia: "**Não encontramos** publi de apostas ou loteria concorrente (buscas + imprensa)."
       polemicas: "Exposição na **BNews** (2023) sobre término com nota pública — **justificativa:** fato de imagem/vida privada; **não** classificado como escândalo de consumo."
       politica: "**Sem** filiação partidária nas fontes consultadas."
 
@@ -265,6 +265,6 @@ profiles:
       x: ""
     narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (engajamento alto); TikTok ~610k. Dois canais de YouTube — somar métricas ao planejar a peça."
     eixos:
-      concorrencia: "**Não encontramos** publi de casa de apostas (buscas + imprensa nesta rodada)."
+      concorrencia: "**Não encontramos** publi de casa de apostas (buscas + imprensa)."
       polemicas: "**Sem** polêmica de consumo nas fontes; personagens de sátira — eventual ruído vem de **pauta pública**, não de produto."
       politica: "Cobertura em **UOL Universa** e **Poder360** sobre encontro com governo. **Justificativa:** fato público; **não** é filiação. Para instituição pública, presença em agenda federal é **comum**; em **eleições**, checar se o arquivo vira **ataque de terceiros**, não se o creator “é governo”."
