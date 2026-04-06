@@ -326,7 +326,7 @@ def build_ordered_panel_rows(
     ordered_profiles: list[dict],
     raw_rows: list[list],
 ) -> tuple[list[str], list[list[str]]]:
-    """Cabeçalho Nome/camada + métricas; linhas na ordem da tabela resumo.
+    """Cabeçalho Nome + métricas; linhas na ordem da tabela resumo.
     Omite criador quando não há perfil na rede (todas as métricas vazias/—)."""
     h0 = "Nome"
     out_headers = [h0] + list(disp_headers[1:])
@@ -531,10 +531,10 @@ def risco_badge_shell_classes(text: object) -> str:
 
 
 def risco_badge_block_html(body: object, *, compact: bool = False) -> str:
-    """Selo visível para síntese de risco (perfil ou tabela)."""
+    """Selo visível para síntese de risco (perfil ou tabela). Aceita mini-markdown (**negrito**)."""
     txt = str(body or "—").strip() or "—"
     shell = risco_badge_shell_classes(txt)
-    inner = esc(txt)
+    inner = mini_md(txt)
     if compact:
         return (
             f"<span class='inline-flex max-w-[16rem] rounded-lg px-2.5 py-1.5 text-xs font-bold "
@@ -599,7 +599,7 @@ def main() -> None:
             "Levantamento dos nomes indicados pela criação para compor o squad de entregas ao longo de 2026, com foco em risco de imagem para uma campanha institucional de loterias.",
         ]
     briefing_html = "".join(
-        f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{esc(p)}</p>" for p in briefing_intro
+        f"<p class='text-sm text-slate-700 leading-relaxed mb-3'>{mini_md(p)}</p>" for p in briefing_intro
     )
 
     criterios = bundle.get("briefing", {}).get("criterios") or [
@@ -608,7 +608,7 @@ def main() -> None:
         "Posicionamento político declarado ou inferido (conteúdo recorrente, causas, filiações).",
     ]
     crit_html = "<ol class='list-decimal pl-5 text-sm text-slate-700 space-y-2'>" + "".join(
-        f"<li>{esc(c)}</li>" for c in criterios
+        f"<li>{mini_md(c)}</li>" for c in criterios
     ) + "</ol>"
 
     redes = bundle.get("briefing", {}).get("redes") or ["Instagram", "TikTok", "YouTube"]
@@ -644,7 +644,7 @@ def main() -> None:
         meth_cards += (
             f"<div class='p-4 bg-white border border-slate-200 rounded'>"
             f"<p class='text-xs font-black text-calia-navy uppercase tracking-wide'>{esc(col.get('label', ''))}</p>"
-            f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{esc(col.get('body', ''))}</p></div>"
+            f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(col.get('body', ''))}</p></div>"
         )
 
     ig_for_panels = (bundle.get("panels", {}).get("instagram") or {}).get("rows") or []
