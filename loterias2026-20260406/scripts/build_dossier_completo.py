@@ -1035,9 +1035,6 @@ def main(*, no_gate: bool = False) -> None:
 
     <section id="leitura" class="card-audit scroll-mt-20 bg-slate-50">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Leitura rápida</h2></div>
-      <p class="text-xs text-blue-800 bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4">
-        <strong>Fontes:</strong> trechos em <span class="text-blue-700 font-semibold underline decoration-calia-gold/80">azul com sublinhado dourado</span> são links para matérias ou páginas (abrem em nova aba).
-      </p>
       {exec_body_html}
     </section>
 
