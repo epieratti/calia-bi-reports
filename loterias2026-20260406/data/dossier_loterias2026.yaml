@@ -34,11 +34,9 @@ methodology:
       body: "Social Blade (Instagram e YouTube, quando o canal está indexado) e Upfluence (TikTok) servem só para **tamanho de audiência** e engajamento; **não** substituem o juízo sobre risco de imagem."
     - label: "Política e eleições (2026)"
       body: |
-        Além de **filiação** no TSE ou de **candidatura**, mapeamos **proximidade** com **governo federal / PT / Lula / Planalto** ou com **direita / PL / Bolsonaro** (incluindo **extrema-direita** quando houver evidência pública): reuniões, agendas, endossos, conteúdo recorrente. Isso é diferente de **humor isolado** ou de **menção pontual**. O objetivo é antecipar **rótulos** de campanha (“petista”, “bolsonarista”, etc.).
+        Olhamos **filiação** (TSE), **candidatura** e **proximidade** com **governo / PT / Lula / Planalto** ou **direita / PL / Bolsonaro** (e **extrema-direita**, se houver prova): agendas, apoios, conteúdo recorrente. **Não** entra **humor pontual** nem **menção isolada** — o alvo é **rótulo** de campanha (“petista”, “bolsonarista”). Sem achado: **sem ligação política documentada** (lista de nomes e partidos nos **Critérios**). Se o perfil está **claro** de um lado, **não** repetimos em toda ficha “não é do outro”; só **exceções** que mudem o quadro.
 
-        **Leitura polarizada:** quem está claramente **alinhado** a um polo **não** precisa de uma linha extra “não está com o outro” em cada ficha — só anotamos **exceções** (crítica ao próprio lado, ou fatos que mudem o quadro). Quando não há achado relevante, usamos a forma curta **sem ligação política documentada**. A lista de partidos e figuras para checagem repete o que está em **Critérios** (briefing).
-
-        Matérias sobre **compromisso oficial** com o presidente no **Palácio do Planalto** costumam ser descritas em Brasília como **agenda federal** (compromissos de governo). **Documentado** aqui significa **fato noticiado** em matéria **pública** com link, como evidência de **proximidade com o governo na mídia**.
+        **Agenda federal** = na prática da imprensa, **compromisso oficial** com o presidente no **Planalto**. **Documentado** = **matéria pública com link** que mostre **proximidade com o governo na mídia**.
 
 panels:
   intro_note: "Números referentes à coleta de **06/04/2026**; conferir de novo perto da data de veiculação da campanha."
