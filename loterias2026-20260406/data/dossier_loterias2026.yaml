@@ -2,16 +2,16 @@
 
 meta:
   title: "Squad Always ON Loterias 2026 — Brand Safety"
-  subtitle: "Risco de imagem para campanha de loterias — 8 nomes (lote 06/04/2026)."
+  subtitle: "Risco de imagem para campanha de loterias — oito perfis (referência 06/04/2026)."
   client_line: "Agência Calia | Unidade de BI — Cliente CAIXA"
-  periodo: "Abril/2026 · Baseline dados: 06/04/2026"
+  periodo: "Abril/2026 · Referência dos números: 06/04/2026"
 
 password_sha256_hex:
   - "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b"
 
 briefing:
   intro_paragraphs:
-    - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes analisadas: Instagram, TikTok e YouTube (painéis com métricas nesta exportação)."
+    - "Always ON Loterias 2026 — oito perfis do squad. Critérios: concorrência (bets, jogos, outras loterias), polêmicas e política. Redes analisadas: Instagram, TikTok e YouTube (métricas de alcance quando disponíveis nesta coleta)."
     - "“Não consta” / “não encontrado” = não achamos evidência pública na ronda; pode existir fora do levantamento."
   criterios:
     - "Concorrência: outras loterias, bets, cassino ou jogos de azar (inclui conteúdo humor com tema de aposta que possa gerar ruído semântico)."
@@ -27,7 +27,7 @@ briefing:
 methodology:
   columns:
     - label: "Imprensa e busca aberta"
-      body: "Notícias, matérias e buscas orientadas; cruzamento com registo de evidências e parcerias citadas em fonte pública."
+      body: "Notícias, matérias e buscas orientadas; cruzamento com notícias, parcerias e menções citadas em fonte pública."
     - label: "Redes sociais"
       body: "Análise de perfis públicos e checagem direta nas redes (Instagram, TikTok, YouTube) na data do levantamento."
     - label: "Painéis de mercado"
@@ -35,9 +35,9 @@ methodology:
 
 panels:
   intro_note: "Números na data da coleta (06/04/2026); conferir de novo na data do ar."
-  coverage_note: "Fora da tabela: sem perfil nesta rede, canal sem página no painel de mercado, ou sem dado nesta exportação."
+  coverage_note: "Fora da tabela: sem perfil nesta rede, canal sem página nas ferramentas de métricas, ou número não disponível nesta coleta."
   coverage_note_cells_dash: |
-    Traço (—) na célula: painel não trouxe aquele número ou rede não tratada como oficial.
+    Traço (—) na célula: métrica não disponível ou rede não tratada como oficial do creator.
 
   instagram:
     footnote: "Social Blade — captura 06/04/2026."
@@ -61,9 +61,9 @@ panels:
       - ["Ademara", "ademara", "720.006", "—", "1.127", "109.492", "1.706", "15,44%"]
 
   tiktok:
-    footnote: "Upfluence TikTok Audit — mesma data de referência."
+    footnote: "Upfluence (TikTok) — mesma data de referência."
     headers:
-      - "Nome (painel)"
+      - "Nome"
       - "Usuário"
       - "Engaj."
       - "Seguidores"
@@ -86,9 +86,9 @@ panels:
       - ["ademaravilha", "ademaravilha", "0,48%", "609,6K", "11,33", "2,9K", "11,67", "26,2K", "178", "12,7M", "239", "—", "—"]
 
   youtube:
-    footnote: "Social Blade quando o canal está indexado. Só entram linhas com métricas nesta exportação; os demais nomes ficam de fora até haver página utilizável no painel."
+    footnote: "Social Blade quando o canal está indexado. Só aparecem creators com métricas nesta coleta; os restantes ficam de fora até haver página utilizável na ferramenta."
     headers:
-      - "Canal (painel)"
+      - "Canal"
       - "Usuário"
       - "Inscritos"
       - "Visualizações"
@@ -119,7 +119,7 @@ executive_summary:
         - "Métricas nas redes: números de alcance e engajamento na data da coleta."
 
 consolidated_narrative:
-  title: "Síntese do lote"
+  title: "Síntese do conjunto"
   subtitle: "__06/04/2026__ — oito perfis com forte peso em **humor**, **entretenimento** e **audiovisual**."
   tagline: "Elaborado pela Calia para apoio à decisão de campanha."
   blocks:
@@ -132,7 +132,7 @@ consolidated_narrative:
 profiles:
   - name: "Julia Ferrari"
     tier: "Squad (8)"
-    risco_geral: "Baixo — sem achado de publi bet no lote"
+    risco_geral: "Baixo — sem achado de publi bet nesta análise"
     resumo_tabela:
       concorrencia: "Não encontrado na pesquisa."
       polemicas: "Sem alerta mapeado nesta ronda."
@@ -196,7 +196,7 @@ profiles:
       tiktok: barbaracoura
       youtube: barbaracoura
       x: ""
-    narrativa: "Humor / esquetes; alcance muito alto no TikTok (~13,5M). Globoplay, Salon Line, Mercado Livre entre parcerias citadas. YouTube ~4,33M inscritos no painel de mercado na coleta."
+    narrativa: "Humor / esquetes; alcance muito alto no TikTok (~13,5M). Globoplay, Salon Line, Mercado Livre entre parcerias citadas. YouTube ~4,33M inscritos segundo a leitura de métricas na data de referência."
     eixos:
       concorrencia: "**Sem publi paga** de casa de apostas; existem esquetes de **sátira** com personagem “tia que aposta” — classificação de sensibilidade semântica, não de publi."
       polemicas: "Risco semântico se a peça institucional precisar distância máxima do tema apostas."
@@ -268,7 +268,7 @@ profiles:
       tiktok: ademaravilha
       youtube: ademara
       x: ""
-    narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (ER alto); TikTok ~610k. Dois canais de YouTube no levantamento — consolidar métricas ao preparar peça."
+    narrativa: "Humor, séries e parcerias (Netflix, Globoplay, marcas via agência). IG ~720k (ER alto); TikTok ~610k. Dois canais de YouTube públicos — tratar métricas em conjunto ao preparar a peça."
     eixos:
       concorrencia: "**Não foi encontrada** publi de casa de apostas nas fontes desta ronda."
       polemicas: "—"

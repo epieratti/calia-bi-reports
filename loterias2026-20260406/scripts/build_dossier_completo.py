@@ -705,7 +705,7 @@ def main() -> None:
         if not body_rows:
             empty_msg = (
                 "<p class='text-sm text-slate-500 italic py-2'>Nenhum perfil da lista com dados nesta rede "
-                "nesta exportação.</p>"
+                "nesta coleta.</p>"
             )
             foot_fmt = format_panel_footnote(foot)
             foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
@@ -955,7 +955,7 @@ def main() -> None:
         <li><a class="toc-link" href="#leitura">Leitura rápida</a></li>
         <li><a class="toc-link" href="#como">Como foi analisado</a></li>
         <li><a class="toc-link" href="#perfis">Perfis por camada ({tier_order_label})</a></li>
-        <li><a class="toc-link" href="#sintese">Síntese do squad</a></li>
+        <li><a class="toc-link" href="#sintese">Síntese do conjunto</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
         <li><a class="toc-link" href="#metricas">Métricas nas redes</a></li>
       </ul>
