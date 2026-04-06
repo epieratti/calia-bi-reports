@@ -8,7 +8,7 @@
 | Perfil (Instagram) | Canal YouTube / UC usado no SB | Página SB utilizável? |
 |-------------------|--------------------------------|------------------------|
 | @julia_ferrari | **@juliaferraric** [UC3k7i…](https://socialblade.com/youtube/channel/UC3k7iLd0ZTOQZytXTwheWYQ) | **Sim** |
-| @joaovitormello | @joaovitormello `UC5JCz2…` | **Não** — URL direta só botões “Show Details” / “Reload”; busca sem resultado útil |
+| @joaovitormello | *(não homologado)* | **Não** — o canal `UC5JCz2…` **não é** o creator do squad; não tratar como canal oficial |
 | @rufislore | @rufislore `UCneghy…` | **Não** — idem |
 | @barbaracoura | @barbaracoura [UCQ9f8…](https://socialblade.com/youtube/channel/UCQ9f8VBJD7sT2ySq0IDtARA) | **Sim** |
 | @raphaelvicente | @raphaelvicente `UC_Y5J…` | **Não** — idem |
@@ -89,7 +89,7 @@ Canal [Lore Rufis @lorerufis7731](https://socialblade.com/youtube/channel/UCMcNg
 
 | Situação | UCs / handles |
 |----------|----------------|
-| Página só “Show Details” + “Reload” | João `UC5JCz2…`, Raphael `UC_Y5J…`, Pedro `UChm7f…`, rufislore `UCneghy…`, `@ademara` `UC_wRB…` |
+| Página só “Show Details” + “Reload” | Raphael `UC_Y5J…`, Pedro `UChm7f…`, rufislore `UCneghy…`, `@ademara` `UC_wRB…` *(João: `UC5JCz2…` não homologado — não é o creator)* |
 
 ---
 

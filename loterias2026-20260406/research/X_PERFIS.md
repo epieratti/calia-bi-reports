@@ -34,7 +34,7 @@ Nenhum dos três mostra **publicações recentes** no sentido de rotina nos últ
 | Tentativa | Motivo |
 |-----------|--------|
 | @julia_ferrari | Protegida + audiência muito baixa |
-| @joaovitormello | Audiência muito baixa |
+| @joaovitormello | **Não é o creator do squad** — não usar como perfil oficial (homónimo/outro perfil) |
 | @BarbaraCoura / @barbaracoura | ~36 seg; não bate com IG/TikTok |
 | @rafaelsaraivasp / @rafaelsaraiva28 | Audiência inexistente ou muito baixa |
 | @pedroottoni_ | 0 seguidores |

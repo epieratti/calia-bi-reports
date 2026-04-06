@@ -33,7 +33,7 @@
 
 | Dimensão | Detalhe |
 |----------|---------|
-| **Redes** | IG `joaovitormello`, TikTok `joaovitormello`, YouTube `@joaovitormello`. X: não confirmado. |
+| **Redes** | IG `joaovitormello`, TikTok `joaovitormello`. YouTube: sem canal homologado (o `@joaovitormello` público não é este creator). X: idem. |
 | **Alcance** | IG ~720k; TikTok ~1,9M; ER TikTok baixo no recorte Upfluence. |
 | **Posicionamento** | Humor / cultura; **reconhecimento** em programas de creators (Instagram) e pautas de **comunidade e diversidade** citadas em relatório externo e ANAI; Play9 na base interna. |
 | **Parcerias** | Play9 (`parcerias_marcas.csv`). |

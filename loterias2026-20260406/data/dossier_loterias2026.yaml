@@ -96,7 +96,6 @@ panels:
       - "Vídeos"
     rows:
       - ["Julia Ferrari (@juliaferraric)", "julia_ferrari", "250K", "63,4M", "156"]
-      - ["João Vítor Mello", "joaovitormello", "—", "—", "—"]
       - ["Lore Rufis", "rufislore", "—", "—", "—"]
       - ["bárbara coura", "barbaracoura", "4,33M", "2,43B", "989"]
       - ["Raphael Vicente", "raphaelvicente", "—", "—", "—"]
@@ -182,9 +181,9 @@ profiles:
     handles:
       instagram: joaovitormello
       tiktok: joaovitormello
-      youtube: joaovitormello
+      youtube: ""
       x: ""
-    narrativa: "Humor e cultura; agenciamento Play9. IG ~720k; TikTok ~1,9M. Atenção: pode existir homónimo em outro segmento (nome parecido) — não atribuir buscas cruzadas sem confirmação."
+    narrativa: "Humor e cultura; agenciamento Play9. IG ~720k; TikTok ~1,9M. Sem canal de YouTube do creator identificado neste levantamento. Atenção a homónimos de nome em outros contextos — não atribuir buscas cruzadas sem confirmação."
     eixos:
       concorrencia: "**Não foi encontrada** evidência de publi bet; atenção a homónimo de nome em outros contextos (ex.: desporto)."
       polemicas: "Sem alerta nesta ronda."

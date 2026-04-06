@@ -7,7 +7,7 @@
 | Nome (squad) | Handle principal (oficial p/ relatório) | Channel ID | URL |
 |----------------|------------------------------------------|------------|-----|
 | Julia Ferrari | **@julia_ferrari** (equiv. **@Julia_Ferrari**) | `UC8nmSfYnqfKQAbyOiAf80cw` | https://www.youtube.com/@julia_ferrari |
-| João Vítor Mello | **@joaovitormello** | `UC5JCz2VsZvOpEyADHuDqaOg` | https://www.youtube.com/@joaovitormello |
+| João Vítor Mello | *(não homologado)* | — | O handle **@joaovitormello** no YouTube **não é** o creator do squad (`UC5JCz2…` — não usar). |
 | Lorena Rufino | **@rufislore** | `UCneghyS1-OOokdr9ycNsi2g` | https://www.youtube.com/@rufislore |
 | bárbara coura | **@barbaracoura** | `UCQ9f8VBJD7sT2ySq0IDtARA` | https://www.youtube.com/@barbaracoura |
 | Raphael Vicente | **@raphaelvicente** | `UC_Y5JqPqYhgiHNHDWU9Ra5A` | https://www.youtube.com/@raphaelvicente |
@@ -54,7 +54,7 @@
 ## Pesquisa “nome + youtube” (resumo qualitativo)
 
 - **Bárbara Coura:** ampla menção a canal de comédia desde 2015; alinhado a **@barbaracoura** / UC acima.
-- **João Vítor Mello:** matérias focam TikTok / Porta / Made in BR; canal **@joaovitormello** existe e é distinto de outros “João Vitor” genéricos.
+- **João Vítor Mello:** matérias focam TikTok / Porta / Made in BR; a página **@joaovitormello** no YouTube **não corresponde** ao creator do squad — não homologar como canal oficial.
 - **Raphael Vicente:** biografias citam trajeto Vine → YouTube → TikTok; canal **@raphaelvicente** mantém-se como URL própria.
 - **Lore Rufis / Lorena Rufino:** imprensa centra IG/TikTok; canal **@rufislore** confirmado na API de páginas.
 

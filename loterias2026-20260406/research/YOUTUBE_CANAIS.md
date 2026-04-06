@@ -8,7 +8,7 @@
 | Nome | Instagram | Tem canal próprio? | Handle / URL YouTube |
 |------|-----------|--------------------|----------------------|
 | Julia Ferrari | @julia_ferrari | **Sim** | **[@julia_ferrari](https://www.youtube.com/@julia_ferrari)** — *JuliaFerrari* (`UC8nm…`). Existe **outro** canal [@juliaferraric](https://www.youtube.com/@juliaferraric) (`UC3k7…`) — ver nota abaixo. |
-| João Vítor Mello | @joaovitormello | **Sim** | [@joaovitormello](https://www.youtube.com/@joaovitormello) — *João Vitor Mello* |
+| João Vítor Mello | @joaovitormello | **Não homologado** | Existe [@joaovitormello](https://www.youtube.com/@joaovitormello) (`UC5JCz2…`), mas **não é o creator do squad** — não usar como canal oficial no dossiê. |
 | Lorena Rufino | @rufislore | **Sim** | [@rufislore](https://www.youtube.com/@rufislore) — *Rufis Lore* (não confundir com [@lorerufis](https://www.youtube.com/@lorerufis), canal diferente). |
 | bárbara coura | @barbaracoura | **Sim** | [@barbaracoura](https://www.youtube.com/@barbaracoura) — *Bárbara Coura* |
 | Raphael Vicente | @raphaelvicente | **Sim** | [@raphaelvicente](https://www.youtube.com/@raphaelvicente) — *Raphaël Vicente* |
