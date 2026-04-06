@@ -84,7 +84,7 @@ def mini_md(s: object) -> str:
         if re.match(r"https?://", url, re.I):
             chunks.append(
                 '<a class="dossier-source-link text-blue-700 hover:text-blue-900 underline '
-                'font-semibold decoration-blue-300 hover:decoration-blue-600 underline-offset-2 '
+                'font-semibold decoration-calia-gold/70 hover:decoration-calia-gold underline-offset-2 '
                 'break-words" href="'
                 f'{esc(url)}" target="_blank" rel="noopener noreferrer">'
                 f"{_mini_md_bold_under(lab)}</a>"
@@ -959,17 +959,19 @@ def main(*, no_gate: bool = False) -> None:
     .toc-list {{ margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }}
     .toc-list li {{ margin-top: 0.35rem; }}
     .sr-only {{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }}
-    /* Links de fonte: azul explícito (antes: navy = texto normal; parecia não haver link) */
+    /* Links de fonte: texto azul; sublinhado dourado (calia-gold), como antes do ajuste */
     #dossier-root a.dossier-source-link,
     #dossier-root a[href^="http"] {{
       color: #1d4ed8 !important;
       text-decoration: underline;
+      text-decoration-color: rgba(249, 166, 25, 0.75);
       text-underline-offset: 3px;
       font-weight: 600;
     }}
     #dossier-root a.dossier-source-link:hover,
     #dossier-root a[href^="http"]:hover {{
       color: #1e3a8a !important;
+      text-decoration-color: #f9a619;
     }}
   </style>
 </head>
@@ -1024,7 +1026,7 @@ def main(*, no_gate: bool = False) -> None:
     <section id="leitura" class="card-audit scroll-mt-20 bg-slate-50">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Leitura rápida</h2></div>
       <p class="text-xs text-blue-800 bg-blue-50 border border-blue-200 rounded px-3 py-2 mb-4">
-        <strong>Fontes:</strong> trechos em <span class="text-blue-700 font-semibold underline">azul sublinhado</span> são links para matérias ou páginas (abrem em nova aba).
+        <strong>Fontes:</strong> trechos em <span class="text-blue-700 font-semibold underline decoration-calia-gold/80">azul com sublinhado dourado</span> são links para matérias ou páginas (abrem em nova aba).
       </p>
       {exec_body_html}
     </section>
