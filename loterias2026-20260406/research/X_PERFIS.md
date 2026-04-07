@@ -19,15 +19,15 @@
 
 ## Atividade recente no X (última publicação visível)
 
-Leitura em **página pública** sem login (ordem de posts pode incluir fixados). **Referência:** 2026-04-06.
+Leitura em **página pública** sem login (ordem de posts pode incluir fixados). **Referência:** checagem adicional **2026-04-07** (páginas públicas); arquivo `data/x_handles_verificados.csv` com coluna `seguidores_x_publico_07_04_2026`.
 
-| Perfil | Último post visível (aprox.) | Leitura |
-|--------|------------------------|---------|
-| **@lorerufis** | ~12 abr 2024 | **Sem conteúdo recente** — sem posts no X há ~2 anos; conta **inativa** para efeito de campanha no X. |
-| **@raphaelviicente** | ~set 2022 | **Inativa há vários anos** — timeline sem posts recentes na captura. |
-| **@ademaravilha** | ~5 ago 2024 | **Pouca atividade** — último post há ~1,5–2 anos (em relação a abr 2026); não é canal de publicação frequente. |
+| Perfil | Seguidores (página pública, ~07/04/2026) | Leitura |
+|--------|------------------------------------------|---------|
+| **@lorerufis** | ~24,3K | Timeline com posts em **2025–2026**; X continua **menor** que IG/TikTok para alcance. |
+| **@raphaelviicente** | ~224,3K | **Sem posts recentes** na amostra — atividade visível por volta de **2022**; conta verificada porém **inativa** para campanha no X. |
+| **@ademaravilha** | ~197,1K | **Pouca atividade** — há post **mar/2025** na timeline; intervalos longos; não é canal principal (IG/TikTok). |
 
-Nenhum dos três mostra **publicações recentes** no sentido de rotina nos últimos meses; o **X não é o canal principal** destes creators (frente a TikTok/IG).
+O **X não é o canal principal** destes creators frente a TikTok/IG; Raphael está **parado** no X; Lorena e Ademara publicam com **baixa frequência** em relação às outras redes.
 
 ## Não atribuídos ao creator (descartados na consolidação)
 
