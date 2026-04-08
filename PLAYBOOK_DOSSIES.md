@@ -72,6 +72,64 @@ Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools
 
 **Variante `squad_13` vs `squad_8`:** mesmo inventário; diferem rótulos do sumário, primeira coluna da tabela de métricas (nome+camada vs só nome), índice da coluna “Eng.” no mini-card Instagram, e regra do mini-card X (em `squad_8` só aparece se handle X preenchido no `.md`).
 
+### Esquema de cores (Calia + interface)
+
+Objetivo: **mesma identidade** em modo B (gerado) e modo A (HTML manual), **legibilidade** em ecrã e **impressão/PDF** aceitável. Tipografia padrão do modo B: **Inter** (Google Fonts), com corpo sobre fundo claro.
+
+#### Tokens de marca (Tailwind `extend.colors` no HTML)
+
+Definidos no gerador em `tools/dossier_render.py` (bloco `tailwind.config` inline). **Reutilizar estes hex** em modo A, gráficos e CSS à mão.
+
+| Token | Hex | Uso |
+|-------|-----|-----|
+| `calia-navy` | `#252525` | Cabeçalho principal, títulos de secção, texto de ênfase escura, borda esquerda do `section-header`, foco de formulários no gate. |
+| `calia-gold` | `#f9a619` | Destaques (linha cliente no topo, bordas de tier, títulos das três caixas de análise, bullets da leitura rápida, botão “Entrar”, sublinhado dos links do sumário). |
+| `calia-emerald` | `#009966` | Semântica **positiva** / baixo risco quando o layout usa token de marca (ex.: alguns dossiês manuais). |
+| `calia-crimson` | `#CC0033` | Acento de alerta de marca; pode alinhar com séries ou destaques em gráficos quando fizer sentido. |
+
+#### Neutros (fundo, cartões, texto, tabelas)
+
+| Elemento | Valor típico | Nota |
+|----------|----------------|------|
+| Fundo da página | `#f8fafc` (equiv. `slate-50`) | Corpo global no `<style>` do modo B. |
+| Texto principal | `#1e293b` (equiv. `slate-800`) | Parágrafos corridos. |
+| Bordas / divisores | `#e2e8f0` (`slate-200`), `slate-100` | Cartões (`card-audit`), tabelas, separadores. |
+| Texto secundário | `slate-500` / `slate-600` | Legendas, rodapés, notas. |
+| Fundo de destaque suave | `slate-50`, `bg-slate-50` | Leitura rápida, síntese, células de tabela header. |
+
+#### Semântica de risco (selos no modo B)
+
+O gerador usa **Tailwind** para chips de “Síntese de risco”, não os tokens `calia-emerald` / `calia-crimson` diretamente neste bloco:
+
+- **Baixo:** fundo `emerald-50`, texto `emerald-900`, anel `emerald-200`.
+- **Moderado:** fundo `amber-50`, texto `amber-950`, anel `amber-200`.
+- **Alto:** fundo `red-50`, texto `red-900`, anel `red-200`.
+
+Manter esta **tríade verde / âmbar / vermelho** ao acrescentar selos ou badges noutros sítios para não contradizer o resto do dossiê.
+
+#### Mini-cards por rede (barra vertical do modo B)
+
+Cores **funcionais** para identificar rede à primeira vista (em `dossier_render.py`):
+
+- **Instagram:** gradiente `pink-500` → `rose-600`.
+- **TikTok:** `slate-800`.
+- **YouTube:** `red-600`.
+- **X:** `slate-900`.
+
+Não é obrigatório repetir estas cores fora dos mini-cards; dentro deles, **não** misturar com a paleta de risco acima.
+
+#### Gráficos (Chart.js, ECharts, etc.)
+
+- **Série principal / marca:** `calia-gold` (`#f9a619`) e `calia-navy` (`#252525`) como contraste.
+- **“Outros” / residual:** cinza neutro tipo `#cbd5e1` (`slate-300`) ou equivalente, como no [HTML de referência com charts](embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html).
+- **Paleta curta sugerida** (múltiplas séries): `#f9a619`, `#009966`, `#252525`, `#CC0033` — depois neutros slate se precisares de mais fatias.
+
+#### Modo A ou white-label
+
+- Copiar o bloco `tailwind.config.theme.extend.colors` do modo B (ou as variáveis CSS equivalentes) e **substituir só os hex** se o cliente tiver manual de marca aprovado.
+- Manter **contraste** WCAG em botões e links (texto sobre `calia-gold` → usar `calia-navy`, não branco puro sobre dourado claro sem testar).
+- Evitar **novas cores sem função** (cada cor = hierarquia ou significado: marca, risco, rede, neutro).
+
 ### Gráficos (modo A + catálogo para reutilizar)
 
 O **modo B** gerado por `tools/dossier_render.py` **não inclui gráficos** hoje: métricas vão em **tabelas** e **mini-cards**. Para gráficos use **modo A** (HTML manual) ou evolua o gerador.

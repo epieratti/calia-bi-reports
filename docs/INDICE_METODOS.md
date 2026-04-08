@@ -8,6 +8,7 @@ Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia 
 |-----------------|------|
 | **Guia geral** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
 | **Inventário de todos os blocos HTML** (sumário, pedido, mini-cards redes, eixos, tabelas…) — modo B | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Estrutura do HTML final (modo B) — inventário completo* |
+| **Esquema de cores** — tokens Calia, neutros, risco, redes, gráficos | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Esquema de cores* |
 | **Tipos de gráfico** — qual usar em cada caso; Chart.js; panorama ECharts/Vega-Lite/D3; modo B sem charts | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Gráficos* |
 | **Barra de progresso (%)** — quando usar (score, cobertura); não é Chart.js | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Barras de progresso* |
 | Descobrir IG/TT/YT/X a partir de **só nome** ou **nome + um @** | [`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`](../loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
