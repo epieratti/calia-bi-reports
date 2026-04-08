@@ -4,6 +4,16 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (C
 
 **Isto não é “o guia do projeto Loterias 2026”.** “Loterias 2026” no repo é **um exemplo** onde o **modo B** (fonte `.md` + gerador) já está montado — serve de **referência técnica**, não define todos os dossiês possíveis.
 
+### Para o agente de IA (ler primeiro)
+
+Este ficheiro existe para **orientar o agente** no fluxo certo. **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
+
+- **Narrativa, perfis, links, eixos** → corpo **`dossier_*.md`** (Markdown com `##` / `###`).
+- **Só números em tabela** (IG/TT/YT/X) → **`dossier_*_panels.yaml`**.
+- YAML no topo do `.md` (front matter) = **meta curta** (título, listas de critérios), não o texto dos perfis.
+
+Se encontrares `data/dossier_*_loterias*.yaml` **sem** par `.md` correspondente, trata como **legado** / migração; a fonte operacional do modo B é o **`.md` + `_panels.yaml`**.
+
 ## TL;DR — criar um dossiê novo (qualquer cliente)
 
 1. **Este ficheiro (`PLAYBOOK_DOSSIES.md`)** — escolher **modo A, B ou C** (tabela abaixo). É o guia geral.
@@ -27,7 +37,7 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (C
 | Modo | Quando usar | Onde costuma cair | Fluxo resumido |
 |------|-------------|-------------------|----------------|
 | **A — HTML direto** | Dossiê único, layout já definido, pouca repetição de estrutura | `embratur/*.html`, `caixa/*.html` que não usam gerador | Editar o `.html` (ou duplicar um existente), manter mesmo padrão visual; commit em `main` / pasta servida pelo Pages. |
-| **B — Fonte textual + gerador** | Muitos perfis, mesma “fábrica” (brand safety, squad, auditoria tabular) | `loterias2026/`, `loterias2026-20260406/` | `.md` (narrativa + briefing) + `_panels.yaml` (métricas) → script → HTML → copiar para `caixa/` se for entrega Caixa. |
+| **B — Fonte textual + gerador** | Muitos perfis, mesma “fábrica” (brand safety, squad, auditoria tabular) | `loterias2026/`, `loterias2026-20260406/` | **`.md` = texto humano** (briefing + `##` perfis); **`_panels.yaml` = só métricas** em tabela. **Não** reintroduzir narrativa inteira em YAML. Script → HTML → `caixa/` se for Caixa. |
 | **C — Pesquisa + entrega manual** | Dados em CSV/notas, HTML montado na mão no fim | Varia | Pesquisa em `research/` + planilhas; HTML final na pasta do cliente conforme convenção do repo. |
 
 Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a estrutura for a de “muitos perfis + tabelas + mesmo layout” — use **`loterias2026/`** como **referência de implementação**, não como nome do teu projeto.
