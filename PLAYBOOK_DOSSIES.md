@@ -6,7 +6,9 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (m
 
 ### Para o agente de IA (ler primeiro)
 
-Este ficheiro existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o utilizador passa** (mensagem, ficheiro ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **saltar** passos conforme o briefing; se algo faltar no pedido, **perguntar** ou **assumir o mínimo** e deixar explícito na resposta.
+Este ficheiro existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o utilizador passa** (mensagem, ficheiro ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **saltar** passos conforme o briefing.
+
+**Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao utilizador** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C, senha, âmbito de redes, ou se deve fazer push ao Pages. Só depois de resposta (ou confirmação explícita tipo “usa o padrão do repo para X”) continuar.
 
 **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
 
@@ -25,7 +27,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 | Etapa | Ação | Saída / critério de “feito” |
 |-------|------|-----------------------------|
 | **0 — Modo** | A partir do **briefing**, escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste ficheiro). Se o pedido for ambíguo, propor modo + razão em 1 frase antes de avançar. | Modo escolhido e **coerente com o briefing**. |
-| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. O que o utilizador **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos (mesmo que mental); lacunas assinaladas. |
+| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. O que o utilizador **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos; **perguntar** o que faltar (checklist §1) antes de executar. |
 | **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
 | **3a — Modo B: ficheiros** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de ficheiros consistente; ver [README do modo B](loterias2026/README.md). |
 | **3b — Modo A/C: ficheiros** | Duplicar `.html` de referência ou montar estrutura manual; aplicar secção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
@@ -333,7 +335,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 #### Perguntas que o briefing deve responder (checklist)
 
-Se alguma resposta faltar, o agente **assumir o mínimo** e **dizer o que assumiu**, ou **pedir** só o que bloqueia o trabalho.
+Se alguma resposta faltar face ao checklist abaixo, o agente deve **perguntar ao utilizador** (mensagem objetiva, lista de perguntas) **antes** de montar ficheiros ou publicar — exceto se o utilizador já tiver dito explicitamente *“para o que faltar usa o padrão do playbook / do último dossiê X”*, caso em que se pode seguir esse mandato e **declarar** na resposta o que foi aplicado por defeito.
 
 | Tema | Pergunta | Porquê importa |
 |------|----------|----------------|
@@ -374,7 +376,7 @@ Se alguma resposta faltar, o agente **assumir o mínimo** e **dizer o que assumi
 14. Restrições ou notas: 
 ```
 
-Versão **mínima** se tiver pressa: itens **1, 2, 5, 10** + (se modo B ou publicar) **4** e **12**.
+Versão **mínima** se tiver pressa: itens **1, 2, 5, 10** + (se modo B ou publicar) **4** e **12**. Se o utilizador só enviar um subconjunto, o agente **pergunta** o que falta em vez de inventar.
 
 ### 2. Estrutura e convenções
 

@@ -4,7 +4,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 
 **Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; **Fluxo em etapas (para o agente)** = esqueleto 0→7 **adaptado ao briefing** do utilizador; TL;DR a seguir) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
 
-**Briefing:** o pedido do utilizador define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*.
+**Briefing:** o pedido do utilizador define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. **Se faltar informação** necessária (checklist Pipeline §1), **perguntar** ao utilizador antes de executar ou publicar; não supor pasta, senha ou push em silêncio.
 
 **Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` e `loterias2026-20260406/scripts/build_dossier_completo.py` — **não duplicar** esses ficheiros noutras pastas).
 
