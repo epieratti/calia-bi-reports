@@ -42,16 +42,35 @@ Se encontrares `data/dossier_*_loterias*.yaml` **sem** par `.md` correspondente,
 
 Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a estrutura for a de “muitos perfis + tabelas + mesmo layout” — use **`loterias2026/`** como **referência de implementação**, não como nome do teu projeto.
 
-### Estrutura do HTML final — o que o playbook cobre
+### Estrutura do HTML final (modo B) — inventário completo
 
-| Situação | Onde está “ensinado” |
-|----------|----------------------|
-| **Modo B** (gerador Loterias) | A **ordem e os blocos** da página são **fixos no código** `tools/dossier_render.py` (não se monta o HTML à mão). **Referência visual no ar:** `caixa/20260401-dossie-squad-always-on-loterias-2026.html` (13 perfis / tiers) e `caixa/20260406-dossie-squad-always-on-loterias-2026.html` (8 perfis); equivalentes em `loterias2026/output/` e `loterias2026-20260406/output/` após o build. |
-| **Modo A** (HTML direto) | Não há um único template no playbook: **duplicar o `.html` mais parecido** na mesma pasta do cliente (`caixa/`, `embratur/`) e adaptar conteúdo, mantendo classes/estrutura se quiseres o mesmo “look”. |
+Tudo abaixo já existe **numa versão** gerada por `tools/dossier_render.py`. **Referência no ar:** `caixa/20260401-dossie-squad-always-on-loterias-2026.html` e `caixa/20260406-dossie-squad-always-on-loterias-2026.html` (ou `output/` após build). **Modo A** (outros dossiês): não segue esta lista — duplicar o HTML mais parecido em `caixa/` / `embratur/`.
 
-**Modo B — ordem das secções (de cima a baixo):** cabeçalho (`#topo`) → **Sumário** (links internos) → **Pedido e critérios** (`#pedido`) → **Leitura rápida** (`#leitura`) → **Como foi analisado** (`#como`) → **Perfis por camada** (`#perfis`, com subâncoras por tier e por pessoa) → **Síntese** (`#sintese`) → **Tabela resumo** (`#tabela`) → **Métricas nas redes** (`#metricas`) → rodapé. Tela de senha opcional no início (`#access-gate` / `#dossier-root`). Para **alterar** títulos, ordem ou layout de alto nível, é preciso **editar** `tools/dossier_render.py` (e regenerar o HTML), não só o `.md`.
+Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools/dossier_render.py`**. Para **mudar texto** → `.md` / front matter / `_panels.yaml` conforme a coluna “Fonte”.
 
-**Variante `squad_13` vs `squad_8`:** mesmo esqueleto de secções; mudam detalhes (ex.: texto do sumário “Perfis por camada” vs “Perfis (Squad …)”, colunas da tabela de métricas, mini-cards). Comparar os dois HTML de referência acima.
+| # | Bloco (título visível) | ID / âncora | O que é | Fonte no modo B |
+|---|------------------------|-------------|---------|-----------------|
+| 0 | **Acesso restrito** | `#access-gate` | Caixa escura, formulário senha (SHA-256), mensagens de erro, botão Entrar; ao acertar esconde gate e mostra `#dossier-root`. | `password_sha256_hex` no front matter; texto fixo no código. `--no-gate` no build remove o bloqueio para preview. |
+| 1 | **Cabeçalho** | `#topo` | Faixa navy: linha cliente (dourado), **H1** título, subtítulo, linha “Atualização / Documento / Build” com hash git opcional. | `meta.client_line`, `meta.title`, `meta.subtitle`, `meta.periodo` |
+| 2 | **Sumário** | (nav) | Lista com links: Pedido e critérios, Leitura rápida, Como foi analisado, Perfis…, Síntese, Tabela resumo, Métricas. Segundo bloco **Perfis** com árvore por **camada** (`#tier-1`, `#squad-8`, etc.) e cada nome (`#slug-do-nome`). | `briefing.tier_order` + perfis no corpo `.md` (`## Nome`) |
+| 3 | **Pedido e critérios de análise** | `#pedido` | Parágrafos introdutórios; subtítulo “O que foi verificado…”; **lista numerada** de critérios; linha **Redes de ativação** (IG, TT, …). | `briefing.intro_paragraphs`, `briefing.criterios`, `briefing.redes` |
+| 4 | **Leitura rápida** | `#leitura` | Fundo cinza claro. Opcional: subtítulo + tagline; depois **grelha de cards** (2 colunas em desktop) com título dourado/navy e bullets **•** dourados; ou só bullets/parágrafos. | `executive_summary` no front matter (`blocks` / `items`, ou `tagline` / `subtitle`) |
+| 5 | **Como foi analisado** | `#como` | **Cards** em grelha 2 colunas: cada card = rótulo (uppercase navy) + um ou mais parágrafos (mini-Markdown). | `methodology.columns[]` → `label`, `body` |
+| 6 | **Perfis — análise por camada** | `#perfis` | Por cada **tier**: `h3` com nome da camada + borda dourada. Dentro, **um card por pessoa** (`section.card-audit`, `id` = slug do nome): |
+| 6a | (dentro do perfil) Cabeçalho do perfil | — | **H2** “N. Nome” + à direita **selo “Síntese de risco”** (cores: verde “baixo”, âmbar “moderado”, vermelho “alto” conforme palavras no texto). | `### Síntese de risco` + `risco_geral` implícito no mesmo bloco |
+| 6b | **Redes · snapshot** (mini-cards) | — | Grelha de **cartões compactos** por rede com **barra vertical colorida** (rosa IG, cinza TT, vermelho YT, preto X): plataforma, **@handle**, **números em destaque** (Seg., Eng., Insc., Views…). YouTube pode ter rodapé “Canal · nome longo”. X: chip “posts recentes” / “sem posts recentes” + linha de **teor recente**. Se não houver dados: mensagem tracejada. | Dados vêm das **linhas** em `_panels.yaml` cruzadas com `### Handles` no `.md`. Texto do caption varia (`squad_13` vs `squad_8`). |
+| 6c | **Narrativa** (“sobre” o creator) | — | Parágrafo(s) abaixo dos mini-cards; **mini-Markdown** (negrito, links). É o bloco “quem é / contexto / marcas citadas na imprensa” — **não há caixa separada “Marcas”**; marcas entram aqui ou nos eixos. | `### Narrativa` no `.md` |
+| 6d | **Três caixas de análise** | — | Grelha 3 colunas: **1. Concorrência**, **2. Polêmicas**, **3. Política** — título dourado + texto com mini-Markdown. | `eixos.concorrencia`, `polemicas`, `politica` (corpo do perfil no `.md`) |
+| 7 | **Síntese do squad / do conjunto** | `#sintese` | Título configurável; mesmo padrão de **cards + bullets** que a Leitura rápida (grelha 2 colunas). | `consolidated_narrative` (`title`, `blocks`…) |
+| 8 | **Tabela resumo** | `#tabela` | Introdução curta + **tabela**: Nome (± camada), **Síntese de risco** (selo compacto), Concorrência, Polêmicas, Política (células com links/negrito). | Perfis + `resumo_tabela` + `risco_geral` no `.md` |
+| 9 | **Métricas nas redes** | `#metricas` | Parágrafo intro (nota data/cobertura); subsecções **Instagram**, **TikTok**, **YouTube**, **X** com **tabela larga** + rodapé “Fonte: …” + notas de cobertura/traço (TikTok pode ter texto extra). Linhas ordenadas como na tabela resumo. | `panels` em `_panels.yaml` |
+| 10 | **Rodapé** | — | Link “Voltar ao topo”, texto fixo Calia; parágrafo **Build** + lembrete de push `caixa/`. | Build stamp no código; texto parcialmente fixo (“Always ON Loterias 2026” no template — mudar no `dossier_render.py` se outro produto). |
+
+**Estilo global:** Tailwind via CDN; cores `calia-navy`, `calia-gold`; classes `card-audit`, `section-header`, `toc-link`. Comentário HTML `<!-- calia-dossier-build: … -->` no topo (variante com build).
+
+**O que este template *não* tem (hoje):** secção dedicada só **“Marcas”** ou **“Sobre”** fora da narrativa; **galeria**; **vídeo embutido**. Isso seria modo A ou evolução do `dossier_render.py`.
+
+**Variante `squad_13` vs `squad_8`:** mesmo inventário; diferem rótulos do sumário, primeira coluna da tabela de métricas (nome+camada vs só nome), índice da coluna “Eng.” no mini-card Instagram, e regra do mini-card X (em `squad_8` só aparece se handle X preenchido no `.md`).
 
 ## Princípios (valem para todos os modos)
 

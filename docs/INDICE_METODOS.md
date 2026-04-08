@@ -6,7 +6,8 @@ Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia 
 
 | Se precisas de… | Abre |
 |-----------------|------|
-| **Guia geral** — modos A/B/C, publicação, toolbox, **ordem das secções HTML (modo B)** | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) — secção *Estrutura do HTML final* |
+| **Guia geral** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
+| **Inventário de todos os blocos HTML** (sumário, pedido, mini-cards redes, eixos, tabelas…) — modo B | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Estrutura do HTML final (modo B) — inventário completo* |
 | Descobrir IG/TT/YT/X a partir de **só nome** ou **nome + um @** | [`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`](../loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
 | Brand safety, busca aberta, OSINT (ex.: yt-dlp, Sherlock) | [`loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md`](../loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) |
 | Tabela de evidências e URLs (exemplo de entrega passada) | [`loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`](../loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
