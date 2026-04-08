@@ -72,6 +72,35 @@ Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools
 
 **Variante `squad_13` vs `squad_8`:** mesmo inventário; diferem rótulos do sumário, primeira coluna da tabela de métricas (nome+camada vs só nome), índice da coluna “Eng.” no mini-card Instagram, e regra do mini-card X (em `squad_8` só aparece se handle X preenchido no `.md`).
 
+### Gráficos (modo A / referência Embratur + catálogo para reutilizar)
+
+O **modo B** gerado por `tools/dossier_render.py` **não inclui gráficos** hoje: métricas vão em **tabelas** e **mini-cards**. Para **partes** (rosca, radar, área, etc.) use **modo A** (HTML manual) ou evolua o gerador.
+
+**Referência no repo — Embratur (Chart.js):** `embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html` carrega [Chart.js](https://www.chartjs.org/) por CDN. Lá já existem, por perfil:
+
+| Tipo no Chart.js | Uso no dossiê | Nota |
+|------------------|---------------|------|
+| **`doughnut`** (rosca, `cutout: '70%'`) | Distribuição geográfica da audiência (%) | “Rosca” = doughnut com furo grande. |
+| **`radar`** | Aderência a eixos temáticos (%, mesma escala) | Cinco critérios no eixo radial. |
+
+**Gráfico de área:** nesse ficheiro Embratur **não há** `line`/`area` ainda; é um bom candidato quando houver **série temporal** (ex.: evolução mensal de seguidores, menções, scores). Em Chart.js: `type: 'line'` com `fill: true` no dataset (e opcionalmente `tension` para curva suave).
+
+**Catálogo sugerido para deixar “pronto na cabeça” / snippets reutilizáveis** (todos nativos no Chart.js, sem dependência extra):
+
+| Tipo | Quando usar |
+|------|-------------|
+| **Barra** (`bar`) | Comparar poucas categorias (ex.: engajamento por rede). |
+| **Barra horizontal** | Rótulos longos (países, creators). |
+| **Barras empilhadas** | Composição que soma 100% ou totais por grupo. |
+| **`doughnut` / `pie`** | Partes de um todo; rosca costuma ler melhor que pizza cheia. |
+| **`line` + preenchimento** | Tendência no tempo → efeito “área”. |
+| **`line` sem preenchimento** | Duas ou mais séries no mesmo período (comparar creators ou métricas). |
+| **`radar`** | Vários eixos qualitativos na mesma escala (como no Embratur). |
+| **`polarArea`** | Partes de um todo com ênfase no ângulo (alternativa visual à rosca). |
+| **Dispersão** (`scatter`) / **bolhas** (`bubble`) | Correlação ou “tamanho = volume” (ex.: seguidores × engajamento). |
+
+**Boas práticas rápidas:** um gráfico = uma leitura; bloco **“Leitura do gráfico”** abaixo do canvas (como no Embratur); cores alinhadas à paleta do dossiê; após senha/gate, chamar `initCharts()` com `requestAnimationFrame` duplo para o canvas medir largura corretamente.
+
 ## Princípios (valem para todos os modos)
 
 1. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
