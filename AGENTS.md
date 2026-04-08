@@ -20,6 +20,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 
 | Área | Caminho | Notas |
 |------|---------|--------|
+| Marca (SVG) | `assets/brand/logo-white.svg` | Logo Calia em branco (site oficial); útil em cabeçalhos/rodapés de HTML com fundo escuro. |
 | Dossiê Embratur (referência) | `embratur/` | Página principal do site; `index.html` na raiz redireciona para cá. |
 | Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
