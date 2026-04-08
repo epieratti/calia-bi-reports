@@ -1,6 +1,6 @@
 # Índice de métodos e documentação operacional
 
-Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia geral** para criar qualquer dossiê (modos A/B/C).
+Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia geral** para criar dossiês (modos A/B/C), com foco em **brand safety / vetting / disaster check** de creators; outros formatos usam o mesmo fluxo com adaptação.
 
 **Nota:** `loterias2026/` é a pasta onde o **modo B** (`.md` + gerador) está **implementado de exemplo** — não significa que todo dossiê novo seja “Loterias 2026”. Métodos em `loterias2026/research/` (descoberta de perfis, brand safety) são **reutilizáveis** para outros clientes.
 

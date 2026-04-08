@@ -1,6 +1,6 @@
 # Instruções para agentes (calia-bi-reports)
 
-Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O trabalho típico é editar ou gerar HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
+Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O **modelo principal** documentado no playbook é dossiê de **brand safety / vetting de creators / disaster check**; o trabalho típico é editar ou gerar esse HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
 
 **Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; **Fluxo em etapas (para o agente)** = esqueleto 0→7 **adaptado ao briefing** do utilizador; TL;DR a seguir) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
 

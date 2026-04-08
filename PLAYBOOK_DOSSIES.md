@@ -2,7 +2,9 @@
 
 Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (marcas, campanhas, auditorias). Cada pasta do projeto tem detalhes técnicos; aqui fica o **fluxo comum** e **onde encaixar** cada tipo de entrega.
 
-**Isto não é o guia de um único produto.** No repositório existe **uma implementação de referência** do **modo B** (fonte `.md` + gerador) — ver [README do modo B](loterias2026/README.md) — que **não** define todos os dossiês possíveis.
+**Tipo de produto que este playbook otimiza:** dossiês de **brand safety**, **vetting de creators/influencers** e **disaster check** (avaliação de risco reputacional e de encaixe com a marca **antes** ou **durante** parcerias — histórico público, concorrência, polêmicas, política, snapshot de redes). O **modo B** (`.md` + `_panels.yaml` + `dossier_render.py`) materializa **esse** modelo: perfis, síntese de risco, três eixos de análise, tabela resumo e painéis de métricas. Outros relatórios (ex.: auditorias com outro recorte) podem usar **modo A/C** ou adaptar secções — o fluxo e o briefing continuam válidos, mas o **inventário HTML** do modo B não é obrigatório fora desse tipo de entrega.
+
+**Isto não é o guia de um único produto.** No repositório existe **uma implementação de referência** do **modo B** (fonte `.md` + gerador) — ver [README do modo B](loterias2026/README.md) — que **não** define todos os dossiês possíveis, mas **é** o exemplo canónico de **brand safety / squad de creators**.
 
 ### Para o agente de IA (ler primeiro)
 
