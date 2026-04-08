@@ -42,6 +42,17 @@ Se encontrares `data/dossier_*_loterias*.yaml` **sem** par `.md` correspondente,
 
 Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a estrutura for a de “muitos perfis + tabelas + mesmo layout” — use **`loterias2026/`** como **referência de implementação**, não como nome do teu projeto.
 
+### Estrutura do HTML final — o que o playbook cobre
+
+| Situação | Onde está “ensinado” |
+|----------|----------------------|
+| **Modo B** (gerador Loterias) | A **ordem e os blocos** da página são **fixos no código** `tools/dossier_render.py` (não se monta o HTML à mão). **Referência visual no ar:** `caixa/20260401-dossie-squad-always-on-loterias-2026.html` (13 perfis / tiers) e `caixa/20260406-dossie-squad-always-on-loterias-2026.html` (8 perfis); equivalentes em `loterias2026/output/` e `loterias2026-20260406/output/` após o build. |
+| **Modo A** (HTML direto) | Não há um único template no playbook: **duplicar o `.html` mais parecido** na mesma pasta do cliente (`caixa/`, `embratur/`) e adaptar conteúdo, mantendo classes/estrutura se quiseres o mesmo “look”. |
+
+**Modo B — ordem das secções (de cima a baixo):** cabeçalho (`#topo`) → **Sumário** (links internos) → **Pedido e critérios** (`#pedido`) → **Leitura rápida** (`#leitura`) → **Como foi analisado** (`#como`) → **Perfis por camada** (`#perfis`, com subâncoras por tier e por pessoa) → **Síntese** (`#sintese`) → **Tabela resumo** (`#tabela`) → **Métricas nas redes** (`#metricas`) → rodapé. Tela de senha opcional no início (`#access-gate` / `#dossier-root`). Para **alterar** títulos, ordem ou layout de alto nível, é preciso **editar** `tools/dossier_render.py` (e regenerar o HTML), não só o `.md`.
+
+**Variante `squad_13` vs `squad_8`:** mesmo esqueleto de secções; mudam detalhes (ex.: texto do sumário “Perfis por camada” vs “Perfis (Squad …)”, colunas da tabela de métricas, mini-cards). Comparar os dois HTML de referência acima.
+
 ## Princípios (valem para todos os modos)
 
 1. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.

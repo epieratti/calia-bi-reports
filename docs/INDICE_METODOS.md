@@ -6,7 +6,7 @@ Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia 
 
 | Se precisas de… | Abre |
 |-----------------|------|
-| **Guia geral** — escolher modo de trabalho, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
+| **Guia geral** — modos A/B/C, publicação, toolbox, **ordem das secções HTML (modo B)** | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) — secção *Estrutura do HTML final* |
 | Descobrir IG/TT/YT/X a partir de **só nome** ou **nome + um @** | [`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`](../loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
 | Brand safety, busca aberta, OSINT (ex.: yt-dlp, Sherlock) | [`loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md`](../loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) |
 | Tabela de evidências e URLs (exemplo de entrega passada) | [`loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`](../loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
