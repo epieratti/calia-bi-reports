@@ -335,48 +335,57 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 #### Perguntas que o briefing deve responder (checklist)
 
-Se alguma resposta faltar face ao checklist abaixo, o agente deve **perguntar ao utilizador** (mensagem objetiva, lista de perguntas) **antes** de montar ficheiros ou publicar — exceto se o utilizador já tiver dito explicitamente *“para o que faltar usa o padrão do playbook / do último dossiê X”*, caso em que se pode seguir esse mandato e **declarar** na resposta o que foi aplicado por defeito.
+**Legenda — obrigatoriedade:**
 
-| Tema | Pergunta | Porquê importa |
-|------|----------|----------------|
-| **Cliente e produto** | Para **quem** é o dossiê (marca, unidade, campanha)? | Pasta de publicação (`caixa/`, `caixa/loterias/`, `embratur/`, nova pasta), tom e linha “cliente” no cabeçalho. |
-| **Objetivo** | O que o leitor deve **decidir** ou **entender** ao final? | Define profundidade, riscos a priorizar e o que pode ficar de fora. |
-| **Leitor** | Quem lê (jurídico, marketing, direção)? Nível de detalhe? | Afeta linguagem, tamanho das secções e quantidade de evidência. |
-| **Modo de entrega** | **A** (HTML manual), **B** (`.md` + gerador) ou **C** (pesquisa → HTML na mão)? Ou “igual ao último dossiê X”? | Caminho técnico e ficheiros a tocar. |
-| **Âmbito** | Lista de **nomes / @** ou “descobrir perfis a partir de…”? Quantos perfis? | Etapa 2 (identidade) vs só preencher fonte. |
-| **Redes** | Quais redes entram (IG, TT, YT, X, outras)? Alguma **fora** de âmbito? | Painéis, mini-cards, pesquisa. |
-| **Critérios** | O que conta como **risco alto/médio/baixo**? O que é **concorrência** / **política** / **polêmica** neste pedido? | Eixos e selos alinhados ao cliente. |
-| **Métricas** | Snapshot até **que data**? Usar Social Blade / Upfluence / X manual como no repo, ou só o que o utilizador enviar? | `_panels.yaml` e notas de rodapé. |
-| **Evidência** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Regra “um fato, uma prova”. |
-| **Formato HTML** | Reutilizar **layout** de um ficheiro existente? Gráficos (Chart.js, barras de progresso)? Cores white-label? | Modo A ou evolução do `dossier_render.py`. |
-| **Ficheiro e URL** | **Nome** desejado do `.html` (`YYYYMMDD-dossie-…`) ou “sugerir”? **Pasta** exata: `caixa/`, `caixa/loterias/`, `embratur/`, outra? | §2 Nomenclatura / Pastas. |
-| **Acesso** | **Senha** no gate (texto claro para gerar hash) ou “igual ao dossiê Y”? Preview **sem** gate (`--no-gate`)? | SHA-256 no front matter ou script. |
-| **Publicação** | **Commit + push** até Pages, **só branch**, ou **só ficheiros locais**? | Etapa 7; evita publicar sem ordem. |
-| **Prazo e prioridade** | O que é **MVP** vs “se der tempo”? | Ordem de tarefas quando o tempo aperta. |
-| **Restrições** | Não citar X, não usar OSINT, não tocar em `tools/`… | Evita desvio de âmbito. |
+- **E (essencial):** se faltar → **perguntar** ao utilizador antes de executar trabalho substancial; não inventar.
+- **C (condicional):** torna-se **essencial** só quando a condição na coluna “Quando” se aplica; nesse caso, se faltar → **perguntar**.
+- **O (opcional):** se faltar → o agente pode seguir com **padrão do playbook/repo** e **declarar na resposta** o que assumiu (linguagem, redes padrão, data de métricas “data do trabalho”, etc.). O utilizador pode sempre apertar estes pontos no briefing.
+
+Exceto se o utilizador disser explicitamente *“para o que faltar usa o padrão do playbook / do último dossiê X”* — aí aplicam-se padrões também onde seria **E**, mas o agente **lista** tudo o que ficou por defeito.
+
+| Tema | Obrig. | Pergunta | Quando importa / condição **C** |
+|------|--------|----------|----------------------------------|
+| **Cliente e produto** | **E** | Para **quem** é o dossiê (marca, unidade, campanha)? | Pasta de publicação (`caixa/`, `caixa/loterias/`, `embratur/`, nova pasta), tom e linha “cliente” no cabeçalho. |
+| **Objetivo** | **E** | O que o leitor deve **decidir** ou **entender** ao final? | Profundidade, riscos a priorizar, âmbito do texto. |
+| **Leitor** | **O** | Quem lê (jurídico, marketing, direção)? Nível de detalhe? | Linguagem e extensão; default: executivo/marketing. |
+| **Modo de entrega** | **C** | **A** (HTML manual), **B** (`.md` + gerador) ou **C** (pesquisa → HTML na mão)? Ou “igual ao último dossiê X”? | **Obrigatório perguntar** se o pedido **não** deixar o modo óbvio (ex.: só “atualiza o dossier” sem dizer qual ficheiro). |
+| **Âmbito** | **E** | Lista de **nomes / @** ou “descobrir perfis a partir de…”? Quantos perfis? | Sem isto não há alvo de pesquisa. |
+| **Redes** | **O** | Quais redes entram (IG, TT, YT, X, outras)? Alguma **fora** de âmbito? | Default modo B: as quatro redes do template; ajustar se o briefing disser outra coisa. |
+| **Critérios** | **O** | O que conta como **risco alto/médio/baixo**? O que é **concorrência** / **política** / **polêmica** neste pedido? | Default: critérios do pedido do cliente no `.md` / template. |
+| **Métricas** | **O** | Snapshot até **que data**? Fontes: padrão repo (Social Blade, Upfluence, X manual) ou só dados anexados? | Default: “coleta na data do trabalho” + fontes do playbook. |
+| **Evidência** | **O** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Default: secção **Princípios** mais abaixo neste ficheiro (um fato, uma prova quando sensível). |
+| **Formato HTML** | **O** | Reutilizar **layout** de um ficheiro existente? Gráficos? White-label? | Default: mesmo padrão Calia / ficheiro de referência mais próximo. |
+| **Ficheiro e URL** | **E** | **Pasta** de entrega (`caixa/`, `caixa/loterias/`, `embratur/`, …)? **Nome** do `.html` ou “sugerir”? | Mínimo: **saber o cliente/pasta**; o nome pode ser “sugerir” conforme §2. |
+| **Acesso** | **C** | **Senha** no gate (texto para hash) ou “igual ao dossiê Y”? Preview **sem** gate? | **Obrigatório perguntar** se o HTML tiver **gate** ou o pedido falar em acesso protegido. Se for **preview explícito** sem senha, pode ficar `--no-gate`. |
+| **Publicação** | **C** | **Commit + push** ao Pages, **só branch**, ou **só local**? Qual branch? | **Obrigatório perguntar** se o pedido envolver **alterar repo remoto**, **HTML em pasta servida pelo Pages**, ou **abrir/atualizar PR**. Se for “só editar ficheiro local / rascunho”, não exige. |
+| **Prazo e prioridade** | **O** | O que é **MVP** vs “se der tempo”? | Default: entregar o pedido literal. |
+| **Restrições** | **O** | Não usar OSINT, não tocar em `tools/`, etc.? | Default: sem restrições extra além do playbook. |
 
 #### Modelo de briefing (copiar e preencher)
 
 ```text
 ## Briefing — [título curto]
+# (E) = essencial  (C) = condicional  (O) = opcional — ver tabela acima
 
-1. Cliente / campanha: 
-2. Objetivo (o que o leitor deve conseguir fazer ou entender): 
-3. Leitor-alvo (área + nível de detalhe): 
-4. Modo preferido: [ A | B | C | “igual a <ficheiro ou projeto>” ]
-5. Perfis: [lista Nome + @ quando souber] OU [“descobrir a partir de: …”]
-6. Redes no âmbito: [ IG, TT, YT, X ] — excluir: [ … ]
-7. Critérios de risco / concorrência / política (definições para ESTE pedido): 
-8. Métricas: data do snapshot desejada: ______ — fontes: [ padrão repo | só dados anexados | … ]
-9. Evidências: [ link obrigatório | flexível ] — fontes preferidas: 
-10. HTML: nome sugerido ______ ou “sugerir” — pasta: [ caixa/ | caixa/loterias/ | embratur/ | ______ ]
-11. Senha no gate: [ sim: ______ | não / preview | igual ao dossiê ______ ]
-12. Publicação: [ push Pages | só commit na branch ______ | não publicar ]
-13. Prazo / MVP / fora de âmbito: 
-14. Restrições ou notas: 
+1. (E) Cliente / campanha: 
+2. (E) Objetivo (o que o leitor deve conseguir fazer ou entender): 
+3. (O) Leitor-alvo (área + nível de detalhe): 
+4. (C) Modo preferido: [ A | B | C | “igual a <ficheiro ou projeto>” ] — obrigatório se não for óbvio pelo pedido
+5. (E) Perfis: [lista Nome + @ quando souber] OU [“descobrir a partir de: …”]
+6. (O) Redes no âmbito: [ IG, TT, YT, X ] — excluir: [ … ]
+7. (O) Critérios de risco / concorrência / política (definições para ESTE pedido): 
+8. (O) Métricas: data do snapshot desejada: ______ — fontes: [ padrão repo | só dados anexados | … ]
+9. (O) Evidências: [ link obrigatório | flexível ] — fontes preferidas: 
+10. (E) HTML: pasta [ caixa/ | caixa/loterias/ | embratur/ | ______ ] — nome ______ ou “sugerir”
+11. (C) Senha no gate: [ sim: ______ | não / preview | igual ao dossiê ______ ] — obrigatório se houver gate
+12. (C) Publicação: [ push Pages | só commit na branch ______ | não publicar ] — obrigatório se houver git remoto / Pages
+13. (O) Prazo / MVP / fora de âmbito: 
+14. (O) Restrições ou notas: 
 ```
 
-Versão **mínima** se tiver pressa: itens **1, 2, 5, 10** + (se modo B ou publicar) **4** e **12**. Se o utilizador só enviar um subconjunto, o agente **pergunta** o que falta em vez de inventar.
+**Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** — e **cada (C) que se aplique** (4 se modo não for claro; 11 se houver senha/gate; 12 se houver push/branch). Itens **(O)** podem ficar em aberto com padrão do playbook, desde que o agente **declare** o que assumiu.
+
+Se o utilizador só enviar um subconjunto, o agente **pergunta** tudo o que for **(E)** ou **(C)** aplicável em falta; não inventar.
 
 ### 2. Estrutura e convenções
 
