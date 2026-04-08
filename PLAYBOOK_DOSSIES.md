@@ -2,6 +2,17 @@
 
 Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (Caixa, Loterias, Embratur, campanhas futuras). Cada pasta do projeto tem detalhes técnicos; aqui fica o **fluxo comum** e **onde encaixar** cada tipo de entrega.
 
+## TL;DR — agente ou primeira leitura
+
+1. **Índice de todos os métodos:** [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) (pergunta → ficheiro).
+2. **Dossiê Loterias (modo B):** editar `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (ou o par em `loterias2026-20260406/data/` para o lote de 8) → `cd loterias2026 && python3 scripts/build_dossier_completo.py` → copiar `output/*.html` para `caixa/` se for publicação Caixa.
+3. **Validar fonte:** `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` ou `make validate-dossier-13`.
+4. **Nome só ou nome + um @:** [`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md).
+5. **Motor HTML compartilhado:** um só código em **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** — os `build_dossier_completo.py` em cada pasta Loterias importam daí (não há cópias duplicadas em `scripts/`).
+6. **Lote 8 perfis:** o [`loterias2026-20260406/README.md`](loterias2026-20260406/README.md) é um **inventário grande** (CSVs, pesquisa); para **só gerar o HTML**, basta o par `data/dossier_*` + build como no item 2.
+
+---
+
 ## O que este repositório entrega
 
 - **HTML estático** publicado no **GitHub Pages** (pastas como `caixa/`, `embratur/`).
@@ -63,6 +74,7 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 | Caixa (no ar) | `caixa/` | `caixa/README.md` |
 | Loterias / gerador | `loterias2026/`, `loterias2026-20260406/` | `loterias2026/README.md` |
 | Visão geral + URLs | raiz | `README.md` |
+| Índice métodos → ficheiros | raiz | `docs/INDICE_METODOS.md` |
 | Agentes / automação | raiz | `AGENTS.md` |
 
 ## Toolbox (raiz)

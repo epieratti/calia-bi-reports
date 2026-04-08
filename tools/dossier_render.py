@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-_REPO_ROOT = Path(__file__).resolve().parents[2]
+_REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
@@ -39,7 +39,7 @@ def build_revision_label() -> str:
         f"{br.strftime('%d/%m/%Y %H:%M')} Brasília · "
         f"UTC {now.strftime('%Y-%m-%d %H:%M')} · "
     )
-    repo = Path(__file__).resolve().parents[2]
+    repo = Path(__file__).resolve().parents[1]
     try:
         r = subprocess.run(
             ["git", "-C", str(repo), "rev-parse", "--short", "HEAD"],
@@ -1188,6 +1188,6 @@ def render_loterias_dossier_html(
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(doc)
     try:
-        print(out_path.resolve().relative_to(Path(__file__).resolve().parents[2]))
+        print(out_path.resolve().relative_to(Path(__file__).resolve().parents[1]))
     except ValueError:
         print(out_path)

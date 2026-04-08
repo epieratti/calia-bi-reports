@@ -2,6 +2,8 @@
 
 Novo dossiê no mesmo modelo de **`loterias2026/`**: Brand Safety / squad, com artefatos internos aqui até gerarmos o HTML e publicar em **`caixa/`** (como no dossiê `20260401-dossie-squad-always-on-loterias-2026.html`).
 
+**Só gerar o HTML do cliente?** Basta `data/dossier_loterias2026.md` + `data/dossier_loterias2026_panels.yaml` e `python3 scripts/build_dossier_completo.py` (o motor está em **`tools/dossier_render.py`** na raiz do repo). A **tabela abaixo** é inventário de pesquisa (CSVs, notas); não precisas de a ler toda para o build.
+
 ## Leitura dos dados (redes em falta)
 
 **Ausência de perfil numa rede não é erro de levantamento:** quando um creator não aparece no Instagram, YouTube ou TikTok neste dossiê, significa que **não foi identificado perfil público nessa rede** (ou não existe canal/conta própria), salvo nota explícita em `research/` ou CSV. Não interpretar como falha de pesquisa sem cruzar com as notas de verificação.

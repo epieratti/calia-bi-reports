@@ -16,10 +16,10 @@ import argparse
 import sys
 from pathlib import Path
 
-# Permite importar dossier_render ao rodar da pasta scripts/
 _ROOT = Path(__file__).resolve().parents[1]
-if str(_ROOT / "scripts") not in sys.path:
-    sys.path.insert(0, str(_ROOT / "scripts"))
+_REPO_ROOT = _ROOT.parent
+if str(_REPO_ROOT / "tools") not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT / "tools"))
 
 from dossier_render import render_loterias_dossier_html
 from md_dossier_source import load_dossier_bundle, panels_only_path_for_md

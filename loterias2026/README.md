@@ -1,5 +1,7 @@
 # Always ON Loterias 2026 — Brand Safety
 
+O gerador HTML importa **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** na raiz do repositório (código único; não editar cópias em `scripts/`). Legado Apify: `scripts/README_LEGADO.md`.
+
 ## Linha de produção (novos dossiês de creators)
 
 1. Leia o playbook geral na raiz do repo: **`PLAYBOOK_DOSSIES.md`** (vale para qualquer cliente; aqui só os passos técnicos Loterias).

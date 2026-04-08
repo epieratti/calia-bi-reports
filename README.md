@@ -1,6 +1,6 @@
 # calia-bi-reports
 
-**Linha de produção de dossiês (qualquer cliente):** ver **`PLAYBOOK_DOSSIES.md`**. **Toolbox:** `make help` e `tools/validate_dossier_source.py` (ver secção Toolbox no playbook).
+**Linha de produção de dossiês (qualquer cliente):** **`PLAYBOOK_DOSSIES.md`** (começar pelo TL;DR no topo). **Índice pergunta → documento:** **`docs/INDICE_METODOS.md`**. **Toolbox:** `make help` e `tools/`.
 
 O dossiê principal da Embratur fica em **`embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`**. Relatórios da **Caixa** ficam na pasta **`caixa/`** (mesmo padrão; ver `caixa/README.md`).
 
