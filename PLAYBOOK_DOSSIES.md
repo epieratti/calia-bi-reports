@@ -439,6 +439,8 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 #### Perguntas que o briefing deve responder (checklist)
 
+**Exemplos reais** de como os pedidos costumam chegar (squad com tiers, delta de nomes, casting com métricas, link Google Docs, briefing mínimo): [`docs/EXEMPLOS_BRIEFINGS.md`](docs/EXEMPLOS_BRIEFINGS.md) — use para reconhecer o padrão e saber o que ainda falta perguntar.
+
 **Legenda — obrigatoriedade:**
 
 - **E (essencial):** se faltar → **perguntar** ao usuário antes de executar trabalho substancial; não inventar.

@@ -36,6 +36,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 |-------------|--------|
 | Índice pergunta → arquivo | [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) |
 | Métodos (atalhos na pasta `docs/metodos/`) | [`docs/metodos/README.md`](docs/metodos/README.md) |
+| **Exemplos de briefing** (e-mail / texto bruto) | [`docs/EXEMPLOS_BRIEFINGS.md`](docs/EXEMPLOS_BRIEFINGS.md) |
 | Playbook completo (cores, gráficos, briefing E/C/O, pastas) | [`PLAYBOOK_DOSSIES.md`](PLAYBOOK_DOSSIES.md) |
 | Instruções git / estrutura repo | [`AGENTS.md`](AGENTS.md) |
 | OSINT pip | `pip install -r tools/requirements-osint.txt` |

@@ -16,6 +16,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Disaster check — mapa de ferramentas** (onde está cada coisa no playbook) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Disaster check / brand safety — ferramentas* |
 | **Inventário de pesquisa** + extras sem API (Maigret, News, imagem inversa…) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Coleta de dados* + *Mercado* |
 | **Modelo de briefing** — (E)/(C)/(O) essencial/condicional/opcional + template | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §1 — Perguntas / Modelo* |
+| **Exemplos de briefing reais** (padrões squad, delta, casting, Docs, mínimo) | [`EXEMPLOS_BRIEFINGS.md`](EXEMPLOS_BRIEFINGS.md) |
 | **Nome do `.html` + pasta** (`caixa/` geral, `caixa/loterias/`, `embratur/`, novo cliente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §2 — Nomenclatura / Pastas* |
 | **Etapas para o agente** — 0→7 + **4b síntese crítica** após coleta | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Fluxo em etapas* + *Síntese crítica e arquitetura da entrega* |
 | **Inventário de todos os blocos HTML** (sumário, pedido, mini-cards redes, eixos, tabelas…) — modo B | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Estrutura do HTML final (modo B) — inventário completo* |
