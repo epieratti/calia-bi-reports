@@ -2,7 +2,7 @@
 
 Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O trabalho típico é editar ou gerar HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
 
-**Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; TL;DR no topo) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
+**Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; **Fluxo em etapas (para o agente)** = ordem 0→7; TL;DR a seguir) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
 
 **Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` e `loterias2026-20260406/scripts/build_dossier_completo.py` — **não duplicar** esses ficheiros noutras pastas).
 

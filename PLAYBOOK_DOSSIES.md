@@ -14,6 +14,26 @@ Este ficheiro existe para **orientar o agente** no fluxo certo. **Armadilha:** n
 
 Se encontrares **`dossier_*.yaml` monolítico** (narrativa inteira dentro do YAML) **sem** par `.md` correspondente, trata como **legado** / migração; a fonte operacional do modo B é o **`.md` + `_panels.yaml`**.
 
+## Fluxo em etapas (para o agente) — ordem de execução
+
+Seguir **esta sequência** ao construir ou atualizar um dossiê. Os detalhes estão nas secções indicadas; não saltar etapas de **validação** no modo B.
+
+| Etapa | Ação | Saída / critério de “feito” |
+|-------|------|-----------------------------|
+| **0 — Modo** | Ler pedido do utilizador; escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste ficheiro). | Modo escrito e justificado em 1 frase (internamente). |
+| **1 — Briefing** | Fixar: objetivo, leitor, prazo implícito, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. | Alinhado ao passo **1. Briefing fechado** na secção **Pipeline sugerido** (abaixo). |
+| **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
+| **3a — Modo B: ficheiros** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de ficheiros consistente; ver [README do modo B](loterias2026/README.md). |
+| **3b — Modo A/C: ficheiros** | Duplicar `.html` de referência ou montar estrutura manual; aplicar secção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
+| **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme [Coleta de dados](#coleta-de-dados-ferramentas-já-usadas-no-repo) e [brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) se aplicável. | Afirmações sensíveis com fonte; datas de snapshot. |
+| **5 — Montagem** | **B:** `build_dossier_completo.py --md … --out … --variant …`. **A/C:** editar HTML até fechado. | Artefacto `.html` gerado ou atualizado. |
+| **6 — QA** | **B:** `tools/validate_dossier_source.py` no `.md` (e opcional `check_dossier_links.py`). Revisar links, typos, gate de senha, impressão básica. | Validador sem erros (ou `--strict` conforme política). |
+| **7 — Publicação** | Copiar para pasta servida pelo Pages se necessário; testar URL + senha; `git` conforme [`AGENTS.md`](AGENTS.md) / regras do projeto. | HTML acessível como esperado. |
+
+**Ramificação rápida:** se **modo A** → saltar **3a**, fazer **3b**; após **4** ir direto a **5** no HTML. Se **modo C** → **3b** pode ser mínimo até existir HTML final; **5** é iterativo. Se **modo B** → **3a** obrigatório; **5** sempre via script.
+
+**Mapa do documento (onde aprofundar):** procurar neste ficheiro pelos títulos **Estrutura do HTML final (modo B)**, **Esquema de cores**, **Gráficos**, **Mercado: metodologia típica**, **Pipeline sugerido**, **Toolbox** — estão na ordem em que um agente costuma precisar depois das etapas 0–2.
+
 ## TL;DR — criar um dossiê novo (qualquer cliente)
 
 1. **Este ficheiro (`PLAYBOOK_DOSSIES.md`)** — escolher **modo A, B ou C** (tabela abaixo). É o guia geral.
