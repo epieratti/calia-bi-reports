@@ -1,5 +1,5 @@
 # Toolbox dossiês — na raiz do repositório
-.PHONY: help validate-dossier-13 validate-dossier-8 check-links-13 check-links-8 build-loterias-13 build-loterias-8
+.PHONY: help validate-dossier-13 validate-dossier-8 check-links-13 check-links-8 build-loterias-13 build-loterias-8 collect-loterias-pipeline
 
 PYTHON ?= python3
 ROOT := $(abspath .)
@@ -11,6 +11,7 @@ help:
 	@echo "  make check-links-13        — HTTP check dos links no .md (13)"
 	@echo "  make build-loterias-13     — gera HTML squad 13 em loterias2026/output/"
 	@echo "  make build-loterias-8      — gera HTML squad 8 em loterias2026-20260406/output/"
+	@echo "  make collect-loterias-pipeline — coleta Apify+web (exige APIFY_TOKEN; ver PLAYBOOK)"
 
 validate-dossier-13:
 	cd "$(ROOT)" && $(PYTHON) tools/validate_dossier_source.py loterias2026/data/dossier_loterias2026.md
@@ -32,3 +33,7 @@ build-loterias-13:
 
 build-loterias-8:
 	cd "$(ROOT)/loterias2026-20260406" && $(PYTHON) scripts/build_dossier_completo.py
+
+# Coleta heurística (Apify + web); não gera o dossiê cliente em .md — ver PLAYBOOK_DOSSIES.md → Coleta de dados
+collect-loterias-pipeline:
+	cd "$(ROOT)/loterias2026" && $(PYTHON) scripts/run_pipeline.py

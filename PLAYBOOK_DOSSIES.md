@@ -74,6 +74,20 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 | Makefile | `make help` / `make validate-dossier-13` / `make build-loterias-13` | Atalhos na raiz. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
 
+### Coleta de dados (ferramentas já usadas no repo)
+
+Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquisa** antes de escrever o dossiê. Respeitar ToS das redes e política de dados do cliente.
+
+| Área | O quê | Onde |
+|------|--------|------|
+| **Loterias — pipeline Python (Apify + web)** | Ordem: `collect.py` → `collect_open_web.py` → `classify.py` → `aggregate_profiles.py` → `report_html.py`. Entrada: `config/`, `data/influencers.yaml`. Saída típica: `output/dossie-brand-safety-loterias-2026.html` (relatório **heurístico**, distinto do dossiê cliente gerado por `build_dossier_completo.py`). | `loterias2026/scripts/run_pipeline.py` (orquestra tudo). Requer **`APIFY_TOKEN`** no ambiente para IG/TT/X; YouTube e fontes abertas seguem o script. Ver `loterias2026/README.md` → *Pipeline opcional (Apify)* e `requirements.txt`. |
+| **Loterias — CI manual** | Disparo manual no GitHub Actions com secret `APIFY_TOKEN`. | `.github/workflows/loterias2026-brand-safety.yml` |
+| **Loterias — OSINT open source** | Instaloader, yt-dlp, Sherlock, etc.: quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | `loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md` (secção *Ferramentas open source e fluxo OSINT*), `FONTES_BRAND_SAFETY_LOTERIAS2026.md`, `loterias2026/research/osint_runs/requirements-osint.txt` |
+| **Loterias — lote 06/04** | CSVs, merge de baseline, notas de redes | `loterias2026-20260406/scripts/merge_creators_baseline.py`, `data/*.csv`, `research/*.md` |
+| **Embratur — proxy Trends/Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | `embratur/scripts/penetracao_mercados.py`, `embratur/research/README.md` |
+
+**Resumo:** dossiê **HTML final** para cliente (modo B) = `dossier_*.md` + `_panels.yaml` + `build_dossier_completo.py`. O **pipeline Apify** e o **OSINT** são **apoio à investigação**; cruzar com o método antes de copiar achados para o `.md`.
+
 ### Regra: não copiar Markdown para campos errados
 
 - **Onde pode `**` e links `[x](url)`:** parágrafos do briefing (`intro_paragraphs`, `criterios`), blocos `executive_summary` / `consolidated_narrative`, e no **corpo** do perfil: `### Narrativa`, eixos longos, `### Resumo tabela` e células da matriz — o gerador aplica **mini Markdown** (negrito, links).
