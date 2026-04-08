@@ -40,11 +40,49 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 | **3a — Modo B: arquivos** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de arquivos consistente; ver [README do modo B](loterias2026/README.md). |
 | **3b — Modo A/C: arquivos** | Duplicar `.html` de referência ou montar estrutura manual; aplicar seção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
 | **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme seção **Coleta de dados** (final deste arquivo) e [brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) **só se** o briefing exigir esse nível de profundidade. | Afirmações sensíveis com fonte; datas de snapshot. |
-| **5 — Montagem** | **B:** `build_dossier_completo.py --md … --out … --variant …`. **A/C:** editar HTML até fechado. | Artefacto `.html` gerado ou atualizado. |
+| **4b — Síntese crítica** | **Depois** da coleta: leitura crítica do material, decisão do que entra, ordem, hierarquia e visuais — ver [Síntese crítica e arquitetura da entrega](#síntese-crítica-e-arquitetura-da-entrega-entre-coleta-e-montagem). | Plano explícito (bullet list, 5–20 itens) **antes** de montar HTML ou fechar `.md`; reduz retrabalho. |
+| **5 — Montagem** | **B:** `build_dossier_completo.py --md … --out … --variant …`. **A/C:** editar HTML até fechado. | Artefato `.html` gerado ou atualizado. |
 | **6 — QA** | **B:** `tools/validate_dossier_source.py` no `.md` (e opcional `check_dossier_links.py`). Revisar links, typos, gate de senha, impressão básica. | Validador sem erros (ou `--strict` conforme política). |
 | **7 — Publicação** | Copiar para pasta servida pelo Pages se necessário; testar URL + senha; `git` conforme [`AGENTS.md`](AGENTS.md) / regras do projeto. | HTML acessível como esperado. |
 
-**Ramificação rápida:** se **modo A** → pular **3a**, fazer **3b**; após **4** ir direto a **5** no HTML. Se **modo C** → **3b** pode ser mínimo até existir HTML final; **5** é iterativo. Se **modo B** → **3a** obrigatório; **5** sempre via script.
+**Ramificação rápida:** se **modo A** → pular **3a**, fazer **3b**; após **4** + **4b** ir a **5** no HTML. Se **modo C** → **3b** pode ser mínimo; **5** iterativo. Se **modo B** → **3a** obrigatório; **5** via script. Ajustes rápidos só métricas: **4b** pode ser só “painéis + ordem da tabela”; dossiê completo: **4b** completo.
+
+### Síntese crítica e arquitetura da entrega (entre coleta e montagem)
+
+**Quando:** sempre **após** a coleta (etapa **4**) e **antes** de fechar narrativa em massa ou rodar o build final (**5**). Objetivo: **editar** em vez de **acumular** — o leitor executivo não precisa de tudo que foi encontrado.
+
+#### O que fazer nesta fase
+
+1. **Inventário** — listar o que existe: por perfil (fatos, riscos, lacunas, URLs) e transversal (comparativos possíveis, outliers).
+2. **Confronto com o briefing** — o que sustenta a **decisão** pedida? O que é ruído ou fora de escopo?
+3. **Credibilidade** — marcar cada afirmação sensível: **forte** (fonte + data) / **média** / **fraca**; fraca → reescrever com ressalva, mover para nota ou cortar.
+4. **Contradições** — redes vs imprensa, números inconsistentes, homônimo mal resolvido: **resolver no texto** ou declarar limitação.
+5. **Hierarquia da leitura** — o que vai para **leitura rápida**, o que só no **perfil**, o que só na **tabela resumo** ou **métricas**? Evitar repetir o mesmo parágrafo em três lugares.
+6. **Modo B vs A** — se **B**: encaixar no inventário de blocos já definido (`#pedido`, perfis, `#sintese`, `#tabela`, `#metricas`); se **A**: decidir seções extras (gráficos, caixas) sem quebrar identidade visual.
+7. **Visuais** — precisa de gráfico, rosca, barra de progresso ou **só tabela/número**? Consultar seção **Gráficos** e **Barras de progresso**; um gráfico = uma pergunta; não adornar sem função.
+8. **Ordem narrativa dentro do perfil** — snapshot de redes → narrativa → eixos costuma ser o mais legível; ajustar se o briefing pedir “risco primeiro”.
+9. **Tom e compressão** — cortar adjetivos, unificar duplicatas; manter **pt-BR** e linguagem do cliente.
+
+#### Saída obrigatória (para o agente)
+
+Produzir um **plano em texto** (pode ser comentário interno na resposta ao usuário ou nota em `research/`), com por exemplo:
+
+- **3 decisões principais** (o que destacar / o que omitir e por quê).
+- **Riscos ou lacunas** aceitos explicitamente.
+- **Lista de gráficos ou visuais** (tipo + pergunta que responde) ou “nenhum — tabelas bastam”.
+- **Checagem final:** “Leitura rápida cobre X; síntese cobre Y; nada crítico ficou só na pesquisa bruta”.
+
+#### O que mais pode entrar nesta reflexão (expansão)
+
+| Ângulo | Perguntas úteis |
+|--------|------------------|
+| **Leitor** | Direção quer **sim/não** ou **matriz de risco**? Jurídico precisa de **citação** por frase? |
+| **Comparabilidade** | Perfis na **mesma régua** (mesmas colunas, mesma data de snapshot)? Onde um outlier distorce a leitura? |
+| **Temporalidade** | O que **envelhece** em 30 dias? Vale um box “até DD/MM/AAAA” na leitura rápida? |
+| **Sensibilidade** | Política/aposta/marca: cada bloco tem **âncora** (link ou “declaração pública”)? |
+| **Acessibilidade / impressão** | Muito gráfico escuro? Quebra de página no PDF? |
+| **Gate e anexos** | Conteúdo que não cabe no HTML vai para **anexo** referenciado ou fica só em `research/`? |
+| **Dupla leitura** | Simular: “só li a leitura rápida + tabela” — ainda consigo decidir? |
 
 #### Briefing do usuário → plano customizado (checklist)
 
@@ -57,7 +95,7 @@ Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem
 | “HTML novo estilo X” | **0** = A; **3b** primeiro (estrutura + cores); **4** encaixa conteúdo depois. |
 | “Não publiques / só branch” | **7** = commit na branch; **sem** copiar para pasta Pages até ordem. |
 | “Sem TikTok” / “só IG e YT” | **4** e painéis: omitir rede; não seguir checklist completo de coleta. |
-| “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4** para não pesquisar o homônimo errado. |
+| “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4**; **4b** completo antes de **5**; não pular síntese crítica. |
 | (implícito) entrega **Caixa** tema geral (não Loterias) | Publicar em **`caixa/`** (raiz); ver **Pastas onde o HTML deve ficar**. |
 | (implícito) entrega **Caixa** + linha Loterias | Publicar em **`caixa/loterias/`** (novos); mesma seção. |
 | (implícito) entrega **Embratur** | Publicar em **`embratur/`**; mesma seção. |
@@ -65,7 +103,7 @@ Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem
 
 Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YAML), **avisar** o usuário e preferir **`.md` + `_panels.yaml`** no modo B.
 
-**Mapa do documento (onde aprofundar):** começar por [`PLAYBOOK_AGENTES.md`](PLAYBOOK_AGENTES.md) (visão curta); neste arquivo, procurar pelos títulos **Estrutura do HTML final (modo B)**, **Esquema de cores**, **Gráficos**, **Mercado: metodologia típica**, **Pipeline sugerido**, **Toolbox** — estão na ordem em que um agente costuma precisar depois das etapas 0–2. Exemplo mínimo 1 perfil: [`examples/minimo/`](examples/minimo/).
+**Mapa do documento (onde aprofundar):** começar por [`PLAYBOOK_AGENTES.md`](PLAYBOOK_AGENTES.md) (visão curta); neste arquivo, procurar pelos títulos **Síntese crítica e arquitetura da entrega**, **Estrutura do HTML final (modo B)**, **Esquema de cores**, **Gráficos**, **Mercado: metodologia típica**, **Pipeline sugerido**, **Toolbox**. Exemplo mínimo 1 perfil: [`examples/minimo/`](examples/minimo/).
 
 ## TL;DR — criar um dossiê novo (qualquer cliente)
 
@@ -382,6 +420,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 | **Prazo e prioridade** | **O** | O que é **MVP** vs “se der tempo”? | Default: entregar o pedido literal. |
 | **Restrições** | **O** | Não usar OSINT, não tocar em `tools/`, etc.? | Default: sem restrições extra além do playbook. |
 | **Idioma** | **O** | Idioma do dossiê **diferente de pt-BR**? | Default: **todo** o entregável em **português (Brasil)** — só perguntar ou mudar se o briefing pedir outro idioma de forma explícita. |
+| **Síntese pós-coleta** | **O** | O usuário quer **revisão explícita** do plano (4b) antes de fechar HTML? | Default: o agente faz **4b** de qualquer forma de forma interna; se “sim”, devolver o plano em bullets **na resposta** antes do build. |
 
 #### Modelo de briefing (copiar e preencher)
 
@@ -404,6 +443,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 13. (O) Prazo / MVP / fora de âmbito: 
 14. (O) Restrições ou notas: 
 15. (O) Idioma: [ PT-BR — padrão; não preencher ] OU [ outro: ______ ] — só se NÃO for português do Brasil
+16. (O) Mostrar plano de síntese (4b) na resposta antes do build: [ sim | não — padrão: agente faz 4b internamente ]
 ```
 
 **Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** — e **cada (C) que se aplique** (4 se modo não for claro; 11 se houver senha/gate; 12 se houver push/branch). Itens **(O)** podem ficar em aberto com padrão do playbook, desde que o agente **declare** o que assumiu.

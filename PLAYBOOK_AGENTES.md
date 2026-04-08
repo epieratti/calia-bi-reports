@@ -8,7 +8,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 2. **Briefing incompleto** — perguntar o que faltar nos itens **(E)** e **(C)** do Pipeline §1 do playbook completo; não supor pasta, senha ou push.
 3. **Anti-vazamento** — no HTML do cliente, **não** citar caminhos do repo (`loterias2026/`, `tools/`, `.md`, `_panels.yaml`). Validar com `python3 tools/check_client_html_leakage.py` antes de publicar.
 
-## Ordem de trabalho (0→7)
+## Ordem de trabalho (0→7, com 4b)
 
 | # | O quê |
 |---|--------|
@@ -17,6 +17,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 | 2 | Identidade / @ — [METODO descoberta](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) (atalhos em [`docs/metodos/README.md`](docs/metodos/README.md)). |
 | 3 | **B:** par `dossier_*.md` + `dossier_*_panels.yaml` — [`loterias2026/README.md`](loterias2026/README.md), [`examples/minimo/`](examples/minimo/) como modelo mínimo. **A/C:** clonar HTML de referência. |
 | 4 | Pesquisa e métricas — [`PLAYBOOK_DOSSIES.md`](PLAYBOOK_DOSSIES.md) (*Coleta de dados*, *Mercado*). |
+| 4b | **Síntese crítica** — após a coleta: o que entra, hierarquia, gráficos (se houver), credibilidade; plano em bullets **antes** do build. Ver *Síntese crítica e arquitetura da entrega* no playbook completo. |
 | 5 | Build ou edição HTML. |
 | 6 | QA — `validate_dossier_source.py` (modo B); opcional `check_dossier_links.py`; **`make qa-dossier-squad-13`** ou `qa-dossier-squad-8`. |
 | 7 | Publicar na pasta correta (`caixa/`, `caixa/loterias/`, `embratur/`, …) — ver Pipeline §2 do playbook completo; git conforme `AGENTS.md`. |

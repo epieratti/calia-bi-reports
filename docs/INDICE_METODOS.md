@@ -15,7 +15,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Inventário de pesquisa** + extras sem API (Maigret, News, imagem inversa…) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Coleta de dados* + *Mercado* |
 | **Modelo de briefing** — (E)/(C)/(O) essencial/condicional/opcional + template | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §1 — Perguntas / Modelo* |
 | **Nome do `.html` + pasta** (`caixa/` geral, `caixa/loterias/`, `embratur/`, novo cliente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §2 — Nomenclatura / Pastas* |
-| **Etapas para o agente** — esqueleto 0→7 **adaptado ao briefing**; checklist briefing→plano | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Fluxo em etapas (para o agente)* |
+| **Etapas para o agente** — 0→7 + **4b síntese crítica** após coleta | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Fluxo em etapas* + *Síntese crítica e arquitetura da entrega* |
 | **Inventário de todos os blocos HTML** (sumário, pedido, mini-cards redes, eixos, tabelas…) — modo B | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Estrutura do HTML final (modo B) — inventário completo* |
 | **Esquema de cores** — tokens Calia, neutros, risco, redes, gráficos | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Esquema de cores* |
 | **Mercado** — metodologia típica BI/creator audit; ferramentas gratuitas/OSINT | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Mercado: metodologia típica* |
