@@ -1,14 +1,16 @@
 # Instruções para agentes (calia-bi-reports)
 
+**Idioma deste guia e da comunicação com o usuário:** **português do Brasil (pt-BR)** — vocabulário e ortografia brasileiros, **não** português de Portugal (pt-PT). Ex.: *usuário*, *arquivo* (não “utilizador”, “ficheiro”).
+
 Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O **modelo principal** documentado no playbook é dossiê de **brand safety / vetting de creators / disaster check**; o trabalho típico é editar ou gerar esse HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
 
-**Idioma (regra primordial):** todo o conteúdo do **dossiê** entregue ao cliente (fonte `.md`, painéis, HTML) deve estar em **português do Brasil (pt-BR)**, salvo o utilizador pedir **explicitamente** outro idioma — ver `PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*.
+**Idioma (regra primordial — dossiê):** todo o conteúdo do **dossiê** entregue ao cliente (fonte `.md`, painéis, HTML) deve estar em **pt-BR**, salvo o **usuário** pedir **explicitamente** outro idioma — ver `PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*.
 
-**Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; **Fluxo em etapas (para o agente)** = esqueleto 0→7 **adaptado ao briefing** do utilizador; TL;DR a seguir) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
+**Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; **Fluxo em etapas (para o agente)** = esqueleto 0→7 **adaptado ao briefing** do usuário; TL;DR a seguir) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
 
-**Briefing:** o pedido do utilizador define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. No Pipeline §1, perguntas marcadas **(E)** são essenciais, **(C)** obrigatórias só quando a condição se aplica, **(O)** podem usar padrão do playbook se declarado. **Se faltar (E) ou (C) aplicável**, **perguntar**; não supor pasta, senha ou push em silêncio.
+**Briefing:** o pedido do **usuário** define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. No Pipeline §1, perguntas marcadas **(E)** são essenciais, **(C)** obrigatórias só quando a condição se aplica, **(O)** podem usar padrão do playbook se declarado. **Se faltar (E) ou (C) aplicável**, **perguntar**; não supor pasta, senha ou push em silêncio.
 
-**Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` e `loterias2026-20260406/scripts/build_dossier_completo.py` — **não duplicar** esses ficheiros noutras pastas).
+**Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` e `loterias2026-20260406/scripts/build_dossier_completo.py` — **não duplicar** esses **arquivos** em outras pastas).
 
 ## Estrutura principal
 
@@ -29,13 +31,13 @@ Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`
 
 - Mensagens de commit em **português do Brasil**, claras (imperativo ou descrição direta do que mudou).
 - Após implementar alterações pedidas: `git status` → `git add` (só o relevante) → `git commit` → push conforme o fluxo do branch em uso.
-- Alterações em **`caixa/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2 (*Nomenclatura do ficheiro* / *Pastas onde o HTML deve ficar*).
+- Alterações em **`caixa/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2 (nomenclatura do **arquivo** `.html` / pastas de publicação).
 
 ## Boas práticas para mudanças
 
 - **Escopo mínimo:** altere só o necessário; evite refatorações amplas não solicitadas.
 - **Consistência:** siga o estilo e o padrão dos HTML e scripts existentes na mesma pasta.
-- **Documentação:** não crie ficheiros `.md` novos por iniciativa própria, exceto quando o pedido pedir documentação **ou** forem notas de pesquisa em `research/` / atualizações a métodos já listados em `docs/INDICE_METODOS.md`.
+- **Documentação:** não crie arquivos `.md` novos por iniciativa própria, exceto quando o pedido pedir documentação **ou** forem notas de pesquisa em `research/` / atualizações a métodos já listados em `docs/INDICE_METODOS.md`.
 
 ## Referência rápida
 
