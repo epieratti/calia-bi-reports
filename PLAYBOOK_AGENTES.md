@@ -5,7 +5,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 ## Regras primordiais
 
 1. **Dossiê entregue ao cliente** — todo o conteúdo visível em **pt-BR**, salvo o **usuário** pedir outro idioma explicitamente (`PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*).
-2. **Redação** — textos finais **humanizados**, **fáceis de entender**, **sucintos** e **completos**: o leitor não pode ficar com dúvida sobre o que foi concluído, com que base e até quando vale (`PLAYBOOK_DOSSIES.md` → *Qualidade da redação*).
+2. **Redação** — textos finais **humanizados**, **fáceis de entender**, **sucintos** e **completos** para **planejamento, atendimento e cliente** (quem lê costuma não ter feito a pesquisa): sem dúvida sobre conclusão, base e vigência (`PLAYBOOK_DOSSIES.md` → *Qualidade da redação*).
 3. **Briefing incompleto** — perguntar o que faltar nos itens **(E)** e **(C)** do Pipeline §1 do playbook completo; não supor pasta, senha ou push.
 4. **Anti-vazamento** — no HTML do cliente, **não** citar caminhos do repo (`loterias2026/`, `tools/`, `.md`, `_panels.yaml`). Validar com `python3 tools/check_client_html_leakage.py` antes de publicar.
 
