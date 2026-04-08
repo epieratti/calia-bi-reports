@@ -46,7 +46,7 @@ consolidated_narrative:
         - Item 1.
 ---
 
-> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. A linha `- **Camada:**` deve coincidir com um valor de `briefing.tier_order`. Gere o HTML com `python3 scripts/build_dossier_completo.py` (ajuste o nome do `.md` no script se criar outro arquivo).
+> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. A linha `- **Camada:**` deve coincidir com um valor de `briefing.tier_order`. Novo lote: `python3 scripts/new_creator_dossier.py SEU_SLUG`. Build: `python3 scripts/build_dossier_completo.py --md data/dossier_SEU_SLUG.md --out output/arquivo.html`. Ver `docs/PLAYBOOK_DOSSIE_CREATORS.md`.
 
 ## Exemplo de perfil (substitua e duplique)
 

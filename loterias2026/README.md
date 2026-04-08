@@ -1,5 +1,12 @@
 # Always ON Loterias 2026 — Brand Safety
 
+## Linha de produção (novos dossiês de creators)
+
+1. Leia o playbook: **`docs/PLAYBOOK_DOSSIE_CREATORS.md`** (fases, checklist, lições dos lotes anteriores).
+2. Crie fonte nova: `python3 scripts/new_creator_dossier.py SEU_SLUG --variant squad_13` (ou `squad_8` para layout do lote de 8 perfis).
+3. Edite `dossier_SEU_SLUG.md` e `dossier_SEU_SLUG_panels.yaml`.
+4. Gere HTML: `python3 scripts/build_dossier_completo.py --md data/dossier_SEU_SLUG.md --out output/....html --variant squad_13`
+
 ## Dossiê HTML (página do cliente)
 
 - O HTML publicado **não** menciona repositório, `.md`, `.yaml` nem ferramentas internas — só o pedido da campanha, os três critérios, leitura clara e métricas como contexto.

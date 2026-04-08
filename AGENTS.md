@@ -9,7 +9,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 | Dossiê Embratur (referência) | `embratur/` | Página principal do site; `index.html` na raiz redireciona para cá. |
 | Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
-| Loterias 2026 (pipeline) | `loterias2026/` | Build: `python scripts/build_dossier_completo.py` a partir de `loterias2026/`. Ver `loterias2026/README.md`. |
+| Loterias 2026 (pipeline) | `loterias2026/` | Playbook: `loterias2026/docs/PLAYBOOK_DOSSIE_CREATORS.md`. Novo lote: `new_creator_dossier.py`. Build: `build_dossier_completo.py`. Ver `loterias2026/README.md`. |
 
 Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` e `loterias2026-20260406/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). Ver `caixa/README.md` e `loterias2026/README.md`.
 
