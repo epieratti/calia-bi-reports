@@ -6,6 +6,10 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (m
 
 **Isto não é o guia de um único produto.** No repositório existe **uma implementação de referência** do **modo B** (fonte `.md` + gerador) — ver [README do modo B](loterias2026/README.md) — que **não** define todos os dossiês possíveis, mas **é** o exemplo canónico de **brand safety / squad de creators**.
 
+### Idioma do dossiê (regra primordial)
+
+**Todo** o conteúdo do dossiê entregue ao cliente deve estar em **português do Brasil (pt-BR)** — incluindo **`.md`**, **`_panels.yaml`** (rótulos, notas, células de texto visíveis no HTML), **HTML** gerado ou manual (títulos, parágrafos, sumário, botões, mensagens do gate), e **metadados de leitura** (título, subtítulo, período no front matter). **Exceto** quando o utilizador pedir **explicitamente** outro idioma no briefing. Podem manter-se **citações**, **nomes de marcas**, **handles** e **trechos de fonte** no idioma original entre aspas ou com tradução entre parênteses, quando a fidelidade à prova for relevante.
+
 ### Para o agente de IA (ler primeiro)
 
 Este ficheiro existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o utilizador passa** (mensagem, ficheiro ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **saltar** passos conforme o briefing.
@@ -326,12 +330,13 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 ## Princípios (valem para todos os modos)
 
-1. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
-2. **Snapshot no tempo** — datas de coleta, “até mês/ano”, e lembrar que métricas de rede envelhecem rápido.
-3. **Desambiguação** — homônimos (nome + @ + contexto); registrar o que foi descartado quando isso já deu ruído em entregas passadas.
-4. **“Não consta” / “não achamos”** — significa *nas fontes e no método deste trabalho*, não “não existe”.
-5. **Linguagem do cliente** no HTML entregue — sem citar ferramentas internas, nomes de arquivos do repo ou processos que não interessam à leitura executiva (salvo pedido explícito).
-6. **Publicação** — pastas servidas pelo Pages estão descritas no [`README.md`](README.md) da raiz; após mudar HTML publicado, **commit + push** alinhado às regras do projeto.
+1. **Português (Brasil)** — o dossiê na íntegra em **pt-BR**, salvo instrução explícita em contrário no briefing (ver [Idioma do dossiê](#idioma-do-dossiê-regra-primordial)).
+2. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
+3. **Snapshot no tempo** — datas de coleta, “até mês/ano”, e lembrar que métricas de rede envelhecem rápido.
+4. **Desambiguação** — homônimos (nome + @ + contexto); registrar o que foi descartado quando isso já deu ruído em entregas passadas.
+5. **“Não consta” / “não achamos”** — significa *nas fontes e no método deste trabalho*, não “não existe”.
+6. **Linguagem do cliente** no HTML entregue — sem citar ferramentas internas, nomes de arquivos do repo ou processos que não interessam à leitura executiva (salvo pedido explícito).
+7. **Publicação** — pastas servidas pelo Pages estão descritas no [`README.md`](README.md) da raiz; após mudar HTML publicado, **commit + push** alinhado às regras do projeto.
 
 ## Pipeline sugerido (adaptar ao modo A, B ou C)
 
@@ -367,6 +372,7 @@ Exceto se o utilizador disser explicitamente *“para o que faltar usa o padrão
 | **Publicação** | **C** | **Commit + push** ao Pages, **só branch**, ou **só local**? Qual branch? | **Obrigatório perguntar** se o pedido envolver **alterar repo remoto**, **HTML em pasta servida pelo Pages**, ou **abrir/atualizar PR**. Se for “só editar ficheiro local / rascunho”, não exige. |
 | **Prazo e prioridade** | **O** | O que é **MVP** vs “se der tempo”? | Default: entregar o pedido literal. |
 | **Restrições** | **O** | Não usar OSINT, não tocar em `tools/`, etc.? | Default: sem restrições extra além do playbook. |
+| **Idioma** | **O** | Idioma do dossiê **diferente de pt-BR**? | Default: **todo** o entregável em **português (Brasil)** — só perguntar ou mudar se o briefing pedir outro idioma de forma explícita. |
 
 #### Modelo de briefing (copiar e preencher)
 
@@ -388,6 +394,7 @@ Exceto se o utilizador disser explicitamente *“para o que faltar usa o padrão
 12. (C) Publicação: [ push Pages | só commit na branch ______ | não publicar ] — obrigatório se houver git remoto / Pages
 13. (O) Prazo / MVP / fora de âmbito: 
 14. (O) Restrições ou notas: 
+15. (O) Idioma: [ PT-BR — padrão; não preencher ] OU [ outro: ______ ] — só se NÃO for português do Brasil
 ```
 
 **Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** — e **cada (C) que se aplique** (4 se modo não for claro; 11 se houver senha/gate; 12 se houver push/branch). Itens **(O)** podem ficar em aberto com padrão do playbook, desde que o agente **declare** o que assumiu.

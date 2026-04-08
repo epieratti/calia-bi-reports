@@ -2,6 +2,8 @@
 
 Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O **modelo principal** documentado no playbook é dossiê de **brand safety / vetting de creators / disaster check**; o trabalho típico é editar ou gerar esse HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
 
+**Idioma (regra primordial):** todo o conteúdo do **dossiê** entregue ao cliente (fonte `.md`, painéis, HTML) deve estar em **português do Brasil (pt-BR)**, salvo o utilizador pedir **explicitamente** outro idioma — ver `PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*.
+
 **Ordem de leitura sugerida:** `PLAYBOOK_DOSSIES.md` (guia geral; **Fluxo em etapas (para o agente)** = esqueleto 0→7 **adaptado ao briefing** do utilizador; TL;DR a seguir) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
 
 **Briefing:** o pedido do utilizador define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. No Pipeline §1, perguntas marcadas **(E)** são essenciais, **(C)** obrigatórias só quando a condição se aplica, **(O)** podem usar padrão do playbook se declarado. **Se faltar (E) ou (C) aplicável**, **perguntar**; não supor pasta, senha ou push em silêncio.
