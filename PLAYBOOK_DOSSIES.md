@@ -6,7 +6,9 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (m
 
 ### Para o agente de IA (ler primeiro)
 
-Este ficheiro existe para **orientar o agente** no fluxo certo. **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
+Este ficheiro existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o utilizador passa** (mensagem, ficheiro ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **saltar** passos conforme o briefing; se algo faltar no pedido, **perguntar** ou **assumir o mínimo** e deixar explícito na resposta.
+
+**Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
 
 - **Narrativa, perfis, links, eixos** → corpo **`dossier_*.md`** (Markdown com `##` / `###`).
 - **Só números em tabela** (IG/TT/YT/X) → **`dossier_*_panels.yaml`**.
@@ -16,21 +18,38 @@ Se encontrares **`dossier_*.yaml` monolítico** (narrativa inteira dentro do YAM
 
 ## Fluxo em etapas (para o agente) — ordem de execução
 
-Seguir **esta sequência** ao construir ou atualizar um dossiê. Os detalhes estão nas secções indicadas; não saltar etapas de **validação** no modo B.
+**Antes de executar:** ler o **briefing do utilizador** e produzir um **plano em 3–7 bullets** (modo, ficheiros a tocar, validações, entrega) **alinhado a esse pedido**. Só depois aplicar a sequência — como **referência**, não como receita fixa.
+
+A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “completo”. Os detalhes estão nas secções indicadas; no **modo B**, não saltar **validação** (etapa 6) salvo se o briefing disser explicitamente *preview só* ou equivalente.
 
 | Etapa | Ação | Saída / critério de “feito” |
 |-------|------|-----------------------------|
-| **0 — Modo** | Ler pedido do utilizador; escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste ficheiro). | Modo escrito e justificado em 1 frase (internamente). |
-| **1 — Briefing** | Fixar: objetivo, leitor, prazo implícito, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. | Alinhado ao passo **1. Briefing fechado** na secção **Pipeline sugerido** (abaixo). |
+| **0 — Modo** | A partir do **briefing**, escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste ficheiro). Se o pedido for ambíguo, propor modo + razão em 1 frase antes de avançar. | Modo escolhido e **coerente com o briefing**. |
+| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. O que o utilizador **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos (mesmo que mental); lacunas assinaladas. |
 | **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
 | **3a — Modo B: ficheiros** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de ficheiros consistente; ver [README do modo B](loterias2026/README.md). |
 | **3b — Modo A/C: ficheiros** | Duplicar `.html` de referência ou montar estrutura manual; aplicar secção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
-| **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme [Coleta de dados](#coleta-de-dados-ferramentas-já-usadas-no-repo) e [brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) se aplicável. | Afirmações sensíveis com fonte; datas de snapshot. |
+| **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme secção **Coleta de dados** (final deste ficheiro) e [brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) **só se** o briefing exigir esse nível de profundidade. | Afirmações sensíveis com fonte; datas de snapshot. |
 | **5 — Montagem** | **B:** `build_dossier_completo.py --md … --out … --variant …`. **A/C:** editar HTML até fechado. | Artefacto `.html` gerado ou atualizado. |
 | **6 — QA** | **B:** `tools/validate_dossier_source.py` no `.md` (e opcional `check_dossier_links.py`). Revisar links, typos, gate de senha, impressão básica. | Validador sem erros (ou `--strict` conforme política). |
 | **7 — Publicação** | Copiar para pasta servida pelo Pages se necessário; testar URL + senha; `git` conforme [`AGENTS.md`](AGENTS.md) / regras do projeto. | HTML acessível como esperado. |
 
 **Ramificação rápida:** se **modo A** → saltar **3a**, fazer **3b**; após **4** ir direto a **5** no HTML. Se **modo C** → **3b** pode ser mínimo até existir HTML final; **5** é iterativo. Se **modo B** → **3a** obrigatório; **5** sempre via script.
+
+#### Briefing do utilizador → plano customizado (checklist)
+
+Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem muda:
+
+| Se o briefing disser… | Ajuste típico |
+|------------------------|----------------|
+| “Só atualiza métricas / painel” | **4** focado em `_panels.yaml` (ou tabelas HTML); **5** build mínimo; **6** validar; narrativa **não** reescrever sem pedido. |
+| “Só texto / um perfil / revisão de risco” | **4** + edição `.md`; **5** só se houver build; pode não haver **2** completo se os `@` já forem dados. |
+| “HTML novo estilo X” | **0** = A; **3b** primeiro (estrutura + cores); **4** encaixa conteúdo depois. |
+| “Não publiques / só branch” | **7** = commit na branch; **sem** copiar para pasta Pages até ordem. |
+| “Sem TikTok” / “só IG e YT” | **4** e painéis: omitir rede; não seguir checklist completo de coleta. |
+| “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4** para não pesquisar o homónimo errado. |
+
+Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YAML), **avisar** o utilizador e preferir **`.md` + `_panels.yaml`** no modo B.
 
 **Mapa do documento (onde aprofundar):** procurar neste ficheiro pelos títulos **Estrutura do HTML final (modo B)**, **Esquema de cores**, **Gráficos**, **Mercado: metodologia típica**, **Pipeline sugerido**, **Toolbox** — estão na ordem em que um agente costuma precisar depois das etapas 0–2.
 
