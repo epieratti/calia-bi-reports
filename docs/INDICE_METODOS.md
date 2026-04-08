@@ -6,7 +6,10 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 
 | Se precisas de… | Abre |
 |-----------------|------|
-| **Guia geral** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
+| **Guia curto para agentes** (ler primeiro) | [`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md) (raiz) |
+| **Guia completo** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
+| **Métodos** — atalhos (descoberta, brand safety, fontes) | [`docs/metodos/README.md`](metodos/README.md) |
+| **Exemplo mínimo** modo B (1 perfil) | [`examples/minimo/README.md`](../examples/minimo/README.md) |
 | **Idioma** — dossiê sempre **pt-BR** (exceto se o **usuário** pedir outro) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Idioma do dossiê* |
 | **Disaster check — mapa de ferramentas** (onde está cada coisa no playbook) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Disaster check / brand safety — ferramentas* |
 | **Inventário de pesquisa** + extras sem API (Maigret, News, imagem inversa…) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Coleta de dados* + *Mercado* |
@@ -31,4 +34,6 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **OSINT pip** (qualquer cliente) | [`tools/requirements-osint.txt`](../tools/requirements-osint.txt) |
 | **Trends + Wikipedia** (qualquer cliente) | [`tools/penetracao_mercados.py`](../tools/penetracao_mercados.py), [`tools/requirements-penetracao.txt`](../tools/requirements-penetracao.txt) |
 | Validação fonte `.md` (formato do gerador) | `tools/validate_dossier_source.py` |
+| **QA** — validate + links + build + vazamento HTML | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
+| **Vazamento** em HTML (caminhos repo no texto visível) | [`tools/check_client_html_leakage.py`](../tools/check_client_html_leakage.py) |
 | Legado Apify / `run_pipeline` | [`loterias2026/scripts/README_LEGADO.md`](../loterias2026/scripts/README_LEGADO.md) |

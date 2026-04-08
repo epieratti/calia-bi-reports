@@ -1,6 +1,6 @@
 # calia-bi-reports
 
-**Como criar / entregar dossiês (qualquer cliente):** **`PLAYBOOK_DOSSIES.md`** — guia geral (modos A/B/C), centrado em dossiês de **brand safety / vetting de creators / disaster check**. **`docs/INDICE_METODOS.md`** — atalhos. *Loterias 2026* no repo é **exemplo** do modo B (mesmo tipo de produto), não o único cliente possível. **Toolbox:** `make help` e `tools/`.
+**Como criar / entregar dossiês (qualquer cliente):** **`PLAYBOOK_AGENTES.md`** (guia curto para agentes) e **`PLAYBOOK_DOSSIES.md`** (referência completa; modos A/B/C), centrados em **brand safety / vetting de creators / disaster check**. **`docs/INDICE_METODOS.md`** — atalhos; **`docs/metodos/README.md`** — ponteiros para métodos reutilizáveis. *Loterias 2026* no repo é **exemplo** do modo B (mesmo tipo de produto), não o único cliente possível. **Toolbox:** `make help` e `tools/`; exemplo mínimo 1 perfil em **`examples/minimo/`**.
 
 O dossiê principal da Embratur fica em **`embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`**. Relatórios da **Caixa** ficam na pasta **`caixa/`** (mesmo padrão; ver `caixa/README.md`).
 

@@ -1,20 +1,22 @@
 # Playbook — linha de produção de dossiês (Calia BI Reports)
 
+**Agentes:** leia primeiro o guia curto [`PLAYBOOK_AGENTES.md`](PLAYBOOK_AGENTES.md); este arquivo é a **referência completa**.
+
 Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (marcas, campanhas, auditorias). Cada pasta do projeto tem detalhes técnicos; aqui fica o **fluxo comum** e **onde encaixar** cada tipo de entrega.
 
-**Tipo de produto que este playbook otimiza:** dossiês de **brand safety**, **vetting de creators/influencers** e **disaster check** (avaliação de risco reputacional e de encaixe com a marca **antes** ou **durante** parcerias — histórico público, concorrência, polêmicas, política, snapshot de redes). O **modo B** (`.md` + `_panels.yaml` + `dossier_render.py`) materializa **esse** modelo: perfis, síntese de risco, três eixos de análise, tabela resumo e painéis de métricas. Outros relatórios (ex.: auditorias com outro recorte) podem usar **modo A/C** ou adaptar secções — o fluxo e o briefing continuam válidos, mas o **inventário HTML** do modo B não é obrigatório fora desse tipo de entrega.
+**Tipo de produto que este playbook otimiza:** dossiês de **brand safety**, **vetting de creators/influencers** e **disaster check** (avaliação de risco reputacional e de encaixe com a marca **antes** ou **durante** parcerias — histórico público, concorrência, polêmicas, política, snapshot de redes). O **modo B** (`.md` + `_panels.yaml` + `dossier_render.py`) materializa **esse** modelo: perfis, síntese de risco, três eixos de análise, tabela resumo e painéis de métricas. Outros relatórios (ex.: auditorias com outro recorte) podem usar **modo A/C** ou adaptar seções — o fluxo e o briefing continuam válidos, mas o **inventário HTML** do modo B não é obrigatório fora desse tipo de entrega.
 
-**Isto não é o guia de um único produto.** No repositório existe **uma implementação de referência** do **modo B** (fonte `.md` + gerador) — ver [README do modo B](loterias2026/README.md) — que **não** define todos os dossiês possíveis, mas **é** o exemplo canónico de **brand safety / squad de creators**.
+**Isto não é o guia de um único produto.** No repositório existe **uma implementação de referência** do **modo B** (fonte `.md` + gerador) — ver [README do modo B](loterias2026/README.md) — que **não** define todos os dossiês possíveis, mas **é** o exemplo canônico de **brand safety / squad de creators**.
 
 ### Idioma do dossiê (regra primordial)
 
-**Todo** o conteúdo do dossiê entregue ao cliente deve estar em **português do Brasil (pt-BR)** — incluindo **`.md`**, **`_panels.yaml`** (rótulos, notas, células de texto visíveis no HTML), **HTML** gerado ou manual (títulos, parágrafos, sumário, botões, mensagens do gate), e **metadados de leitura** (título, subtítulo, período no front matter). **Exceto** quando o utilizador pedir **explicitamente** outro idioma no briefing. Podem manter-se **citações**, **nomes de marcas**, **handles** e **trechos de fonte** no idioma original entre aspas ou com tradução entre parênteses, quando a fidelidade à prova for relevante.
+**Todo** o conteúdo do dossiê entregue ao cliente deve estar em **português do Brasil (pt-BR)** — incluindo **`.md`**, **`_panels.yaml`** (rótulos, notas, células de texto visíveis no HTML), **HTML** gerado ou manual (títulos, parágrafos, sumário, botões, mensagens do gate), e **metadados de leitura** (título, subtítulo, período no front matter). **Exceto** quando o usuário pedir **explicitamente** outro idioma no briefing. Podem manter-se **citações**, **nomes de marcas**, **handles** e **trechos de fonte** no idioma original entre aspas ou com tradução entre parênteses, quando a fidelidade à prova for relevante.
 
 ### Para o agente de IA (ler primeiro)
 
-Este ficheiro existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o utilizador passa** (mensagem, ficheiro ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **saltar** passos conforme o briefing.
+Este arquivo existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o usuário passa** (mensagem, arquivo ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **pular** passos conforme o briefing.
 
-**Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao utilizador** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C, senha, âmbito de redes, ou se deve fazer push ao Pages. Só depois de resposta (ou confirmação explícita tipo “usa o padrão do repo para X”) continuar.
+**Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao usuário** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C, senha, âmbito de redes, ou se deve fazer push ao Pages. Só depois de resposta (ou confirmação explícita tipo “usa o padrão do repo para X”) continuar.
 
 **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
 
@@ -22,29 +24,29 @@ Este ficheiro existe para **orientar o agente** no fluxo certo. **Regra principa
 - **Só números em tabela** (IG/TT/YT/X) → **`dossier_*_panels.yaml`**.
 - YAML no topo do `.md` (front matter) = **meta curta** (título, listas de critérios), não o texto dos perfis.
 
-Se encontrares **`dossier_*.yaml` monolítico** (narrativa inteira dentro do YAML) **sem** par `.md` correspondente, trata como **legado** / migração; a fonte operacional do modo B é o **`.md` + `_panels.yaml`**.
+Se encontrar **`dossier_*.yaml` monolítico** (narrativa inteira dentro do YAML) **sem** par `.md` correspondente, trata como **legado** / migração; a fonte operacional do modo B é o **`.md` + `_panels.yaml`**.
 
 ## Fluxo em etapas (para o agente) — ordem de execução
 
-**Antes de executar:** ler o **briefing do utilizador** e produzir um **plano em 3–7 bullets** (modo, ficheiros a tocar, validações, entrega) **alinhado a esse pedido**. Só depois aplicar a sequência — como **referência**, não como receita fixa.
+**Antes de executar:** ler o **briefing do usuário** e produzir um **plano em 3–7 bullets** (modo, arquivos a tocar, validações, entrega) **alinhado a esse pedido**. Só depois aplicar a sequência — como **referência**, não como receita fixa.
 
-A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “completo”. Os detalhes estão nas secções indicadas; no **modo B**, não saltar **validação** (etapa 6) salvo se o briefing disser explicitamente *preview só* ou equivalente.
+A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “completo”. Os detalhes estão nas seções indicadas; no **modo B**, não pular **validação** (etapa 6) salvo se o briefing disser explicitamente *preview só* ou equivalente.
 
 | Etapa | Ação | Saída / critério de “feito” |
 |-------|------|-----------------------------|
-| **0 — Modo** | A partir do **briefing**, escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste ficheiro). Se o pedido for ambíguo, propor modo + razão em 1 frase antes de avançar. | Modo escolhido e **coerente com o briefing**. |
-| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. O que o utilizador **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos; **perguntar** o que faltar (checklist §1) antes de executar. |
+| **0 — Modo** | A partir do **briefing**, escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste arquivo). Se o pedido for ambíguo, propor modo + razão em 1 frase antes de avançar. | Modo escolhido e **coerente com o briefing**. |
+| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. O que o usuário **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos; **perguntar** o que faltar (checklist §1) antes de executar. |
 | **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
-| **3a — Modo B: ficheiros** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de ficheiros consistente; ver [README do modo B](loterias2026/README.md). |
-| **3b — Modo A/C: ficheiros** | Duplicar `.html` de referência ou montar estrutura manual; aplicar secção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
-| **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme secção **Coleta de dados** (final deste ficheiro) e [brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) **só se** o briefing exigir esse nível de profundidade. | Afirmações sensíveis com fonte; datas de snapshot. |
+| **3a — Modo B: arquivos** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de arquivos consistente; ver [README do modo B](loterias2026/README.md). |
+| **3b — Modo A/C: arquivos** | Duplicar `.html` de referência ou montar estrutura manual; aplicar seção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
+| **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme seção **Coleta de dados** (final deste arquivo) e [brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) **só se** o briefing exigir esse nível de profundidade. | Afirmações sensíveis com fonte; datas de snapshot. |
 | **5 — Montagem** | **B:** `build_dossier_completo.py --md … --out … --variant …`. **A/C:** editar HTML até fechado. | Artefacto `.html` gerado ou atualizado. |
 | **6 — QA** | **B:** `tools/validate_dossier_source.py` no `.md` (e opcional `check_dossier_links.py`). Revisar links, typos, gate de senha, impressão básica. | Validador sem erros (ou `--strict` conforme política). |
 | **7 — Publicação** | Copiar para pasta servida pelo Pages se necessário; testar URL + senha; `git` conforme [`AGENTS.md`](AGENTS.md) / regras do projeto. | HTML acessível como esperado. |
 
-**Ramificação rápida:** se **modo A** → saltar **3a**, fazer **3b**; após **4** ir direto a **5** no HTML. Se **modo C** → **3b** pode ser mínimo até existir HTML final; **5** é iterativo. Se **modo B** → **3a** obrigatório; **5** sempre via script.
+**Ramificação rápida:** se **modo A** → pular **3a**, fazer **3b**; após **4** ir direto a **5** no HTML. Se **modo C** → **3b** pode ser mínimo até existir HTML final; **5** é iterativo. Se **modo B** → **3a** obrigatório; **5** sempre via script.
 
-#### Briefing do utilizador → plano customizado (checklist)
+#### Briefing do usuário → plano customizado (checklist)
 
 Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem muda:
 
@@ -55,24 +57,24 @@ Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem
 | “HTML novo estilo X” | **0** = A; **3b** primeiro (estrutura + cores); **4** encaixa conteúdo depois. |
 | “Não publiques / só branch” | **7** = commit na branch; **sem** copiar para pasta Pages até ordem. |
 | “Sem TikTok” / “só IG e YT” | **4** e painéis: omitir rede; não seguir checklist completo de coleta. |
-| “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4** para não pesquisar o homónimo errado. |
+| “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4** para não pesquisar o homônimo errado. |
 | (implícito) entrega **Caixa** tema geral (não Loterias) | Publicar em **`caixa/`** (raiz); ver **Pastas onde o HTML deve ficar**. |
-| (implícito) entrega **Caixa** + linha Loterias | Publicar em **`caixa/loterias/`** (novos); mesma secção. |
-| (implícito) entrega **Embratur** | Publicar em **`embratur/`**; mesma secção. |
+| (implícito) entrega **Caixa** + linha Loterias | Publicar em **`caixa/loterias/`** (novos); mesma seção. |
+| (implícito) entrega **Embratur** | Publicar em **`embratur/`**; mesma seção. |
 | Novo cliente sem pasta | Criar `/<slug>/` na raiz + `README.md`; HTML dentro dessa pasta. |
 
-Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YAML), **avisar** o utilizador e preferir **`.md` + `_panels.yaml`** no modo B.
+Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YAML), **avisar** o usuário e preferir **`.md` + `_panels.yaml`** no modo B.
 
-**Mapa do documento (onde aprofundar):** procurar neste ficheiro pelos títulos **Estrutura do HTML final (modo B)**, **Esquema de cores**, **Gráficos**, **Mercado: metodologia típica**, **Pipeline sugerido**, **Toolbox** — estão na ordem em que um agente costuma precisar depois das etapas 0–2.
+**Mapa do documento (onde aprofundar):** começar por [`PLAYBOOK_AGENTES.md`](PLAYBOOK_AGENTES.md) (visão curta); neste arquivo, procurar pelos títulos **Estrutura do HTML final (modo B)**, **Esquema de cores**, **Gráficos**, **Mercado: metodologia típica**, **Pipeline sugerido**, **Toolbox** — estão na ordem em que um agente costuma precisar depois das etapas 0–2. Exemplo mínimo 1 perfil: [`examples/minimo/`](examples/minimo/).
 
 ## TL;DR — criar um dossiê novo (qualquer cliente)
 
-1. **Este ficheiro (`PLAYBOOK_DOSSIES.md`)** — escolher **modo A, B ou C** (tabela abaixo). É o guia geral.
-2. **Índice** — [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) para saltar a métodos concretos (pesquisa, métricas, publicação).
+1. **Este arquivo (`PLAYBOOK_DOSSIES.md`)** — escolher **modo A, B ou C** (tabela abaixo). É o guia geral.
+2. **Índice** — [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) para pular a métodos concretos (pesquisa, métricas, publicação).
 3. **Modo A (mais comum para one-off):** HTML direto na **pasta de entrega** servida pelo site — duplicar um `.html` existente ou seguir [`README.md`](README.md) na raiz e o README da pasta em causa (quando existir).
 4. **Modo B (fábrica com muitos perfis):** o **exemplo implementado** está descrito no [README do modo B](loterias2026/README.md). Dentro da pasta desse projeto: `python3 scripts/new_creator_dossier.py SLUG` cria `dossier_SLUG.md` + painéis; `build_dossier_completo.py --md … --out …` gera HTML. O caminho da pasta no repo é **histórico**; o tooling pode mudar de sítio no futuro.
-5. **Validar** (se usares fonte `.md` no formato do gerador): `python3 tools/validate_dossier_source.py <teu/dossier_*.md>` — `make validate-dossier-squad-13` só aponta para o **ficheiro de exemplo** do repo.
-6. **Descobrir @** (nome ou nome + uma rede): [metodologia passo a passo](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) (localização do ficheiro = histórico do primeiro lote com este fluxo).
+5. **Validar** (se usares fonte `.md` no formato do gerador): `python3 tools/validate_dossier_source.py <teu/dossier_*.md>` — `make validate-dossier-squad-13` só aponta para o **arquivo de exemplo** do repo.
+6. **Descobrir @** (nome ou nome + uma rede): [metodologia passo a passo](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) (localização do arquivo = histórico do primeiro lote com este fluxo).
 7. **Motor HTML** (modo B): código único em **`tools/dossier_render.py`** + **`tools/md_dossier_source.py`**.
 
 ---
@@ -119,7 +121,7 @@ Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools
 
 **Estilo global:** Tailwind via CDN; cores `calia-navy`, `calia-gold`; classes `card-audit`, `section-header`, `toc-link`. Comentário HTML `<!-- calia-dossier-build: … -->` no topo (variante com build).
 
-**O que este template *não* tem (hoje):** secção dedicada só **“Marcas”** ou **“Sobre”** fora da narrativa; **galeria**; **vídeo embutido**. Isso seria modo A ou evolução do `dossier_render.py`.
+**O que este template *não* tem (hoje):** seção dedicada só **“Marcas”** ou **“Sobre”** fora da narrativa; **galeria**; **vídeo embutido**. Isso seria modo A ou evolução do `dossier_render.py`.
 
 **Variante `squad_13` vs `squad_8`:** mesmo inventário; diferem rótulos do sumário, primeira coluna da tabela de métricas (nome+camada vs só nome), índice da coluna “Eng.” no mini-card Instagram, e regra do mini-card X (em `squad_8` só aparece se handle X preenchido no `.md`).
 
@@ -133,7 +135,7 @@ Definidos no gerador em `tools/dossier_render.py` (bloco `tailwind.config` inlin
 
 | Token | Hex | Uso |
 |-------|-----|-----|
-| `calia-navy` | `#252525` | Cabeçalho principal, títulos de secção, texto de ênfase escura, borda esquerda do `section-header`, foco de formulários no gate. |
+| `calia-navy` | `#252525` | Cabeçalho principal, títulos de seção, texto de ênfase escura, borda esquerda do `section-header`, foco de formulários no gate. |
 | `calia-gold` | `#f9a619` | Destaques (linha cliente no topo, bordas de tier, títulos das três caixas de análise, bullets da leitura rápida, botão “Entrar”, sublinhado dos links do sumário). |
 | `calia-emerald` | `#009966` | Semântica **positiva** / baixo risco quando o layout usa token de marca (ex.: alguns dossiês manuais). |
 | `calia-crimson` | `#CC0033` | Acento de alerta de marca; pode alinhar com séries ou destaques em gráficos quando fizer sentido. |
@@ -246,7 +248,7 @@ Responda primeiro: **a pergunta é “partes de um todo”, “comparar categori
 | Abordagem | O que traz de moderno | Encaixa quando… | Atenção para dossiê |
 |-----------|----------------------|-----------------|---------------------|
 | **[Apache ECharts](https://echarts.apache.org/)** | Muitos tipos prontos, **mapas** (choropleth, geo), **brush**, tooltips ricos, séries longas em canvas | Precisas de **mapa**, várias séries, ou painel “denso” dentro de um capítulo HTML | Bundle **maior** que Chart.js; alinhar tema às cores do relatório; testar após mostrar o conteúdo (gate), como com qualquer canvas. |
-| **[Vega-Lite](https://vega.github.io/vega-lite/)** + [Vega-Embed](https://github.com/vega/vega-embed) | **Gramática** (JSON): facetas, camadas, agregações declaradas; bom para **pequenos múltiplos** e encadear gráficos coerentes | Queres **um ficheiro de spec** versionável ao lado do HTML ou pipeline “dados → spec → embed” | Dependência extra no `<head>`; validar spec com dados reais; export/impressão pode precisar de captura estática. |
+| **[Vega-Lite](https://vega.github.io/vega-lite/)** + [Vega-Embed](https://github.com/vega/vega-embed) | **Gramática** (JSON): facetas, camadas, agregações declaradas; bom para **pequenos múltiplos** e encadear gráficos coerentes | Queres **um arquivo de spec** versionável ao lado do HTML ou pipeline “dados → spec → embed” | Dependência extra no `<head>`; validar spec com dados reais; export/impressão pode precisar de captura estática. |
 | **[Observable Plot](https://observablehq.com/plot/)** | API de alto nível sobre ideias D3; rápido para protótipos e gráficos estatísticos limpos | Exploração e **protótipo** antes de fixar no HTML final, ou geração de SVG via build | Menos habitual como “um script CDN” isolado no mesmo padrão do [exemplo Chart.js no repo](embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html); pode integrar-se em bundler ou notebook. |
 | **[Plotly.js](https://plotly.com/javascript/)** | Interatividade “científica”, alguns modos **3D**, violino, contour | Relatórios com **distribuições** ou exploração mais analítica (menos comum em brand safety puro) | **Peso** e tempo de carga; 3D raramente melhora leitura executiva. |
 | **D3.js** | Controlo total: **layouts** custom (sankey, rede, calendário), animações finas | Um gráfico **é** o diferencial da entrega (ex.: rede de citações, fluxo marca→tema) | Custo de manutenção alto; só quando Chart.js/ECharts não chegam. |
@@ -326,7 +328,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 - **Método de descoberta de perfis:** [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md).
 - **Brand safety, busca aberta, OSINT:** [METODO_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) e [FONTES_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md).
-- **Coleta operacional** (métricas nos painéis): secção **Coleta de dados** mais abaixo neste playbook (Social Blade, Upfluence, X manual).
+- **Coleta operacional** (métricas nos painéis): seção **Coleta de dados** mais abaixo neste playbook (Social Blade, Upfluence, X manual).
 
 ## Princípios (valem para todos os modos)
 
@@ -338,38 +340,45 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 6. **Linguagem do cliente** no HTML entregue — sem citar ferramentas internas, nomes de arquivos do repo ou processos que não interessam à leitura executiva (salvo pedido explícito).
 7. **Publicação** — pastas servidas pelo Pages estão descritas no [`README.md`](README.md) da raiz; após mudar HTML publicado, **commit + push** alinhado às regras do projeto.
 
+### Limites operacionais (agentes e automação)
+
+- **Login e paywall:** o agente **não** substitui acesso humano a Social Blade, Upfluence, bases de imprensa pagas ou redes com login obrigatório.
+- **ToS e escala:** não contornar paywall, geo-bloqueio abusivo nem fazer coleta em massa que viole termos das plataformas ou LGPD.
+- **Bloqueios:** se a API ou o site **bloquear** (403, captcha, conta necessária), documentar no dossiê a **limitação** e a **data** — não inventar métricas.
+- **OSINT** (Instaloader, etc.): **opcional**; falhas são comuns — usar como suplemento com evidência, não como única prova de um fato sensível.
+
 ## Pipeline sugerido (adaptar ao modo A, B ou C)
 
 ### 1. Briefing fechado
 
 - Cliente, objetivo do dossiê, público-leitor, prazo, **critérios** de análise (o que é “risco”, o que é concorrência, etc.).
-- Onde o ficheiro vai morar no site (URL esperada) e se haverá **senha** (qual política de hash, alinhada a outros dossiês do mesmo cliente).
+- Onde o arquivo vai morar no site (URL esperada) e se haverá **senha** (qual política de hash, alinhada a outros dossiês do mesmo cliente).
 
 #### Perguntas que o briefing deve responder (checklist)
 
 **Legenda — obrigatoriedade:**
 
-- **E (essencial):** se faltar → **perguntar** ao utilizador antes de executar trabalho substancial; não inventar.
+- **E (essencial):** se faltar → **perguntar** ao usuário antes de executar trabalho substancial; não inventar.
 - **C (condicional):** torna-se **essencial** só quando a condição na coluna “Quando” se aplica; nesse caso, se faltar → **perguntar**.
-- **O (opcional):** se faltar → o agente pode seguir com **padrão do playbook/repo** e **declarar na resposta** o que assumiu (linguagem, redes padrão, data de métricas “data do trabalho”, etc.). O utilizador pode sempre apertar estes pontos no briefing.
+- **O (opcional):** se faltar → o agente pode seguir com **padrão do playbook/repo** e **declarar na resposta** o que assumiu (linguagem, redes padrão, data de métricas “data do trabalho”, etc.). O usuário pode sempre apertar estes pontos no briefing.
 
-Exceto se o utilizador disser explicitamente *“para o que faltar usa o padrão do playbook / do último dossiê X”* — aí aplicam-se padrões também onde seria **E**, mas o agente **lista** tudo o que ficou por defeito.
+Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão do playbook / do último dossiê X”* — aí aplicam-se padrões também onde seria **E**, mas o agente **lista** tudo o que ficou por defeito.
 
 | Tema | Obrig. | Pergunta | Quando importa / condição **C** |
 |------|--------|----------|----------------------------------|
 | **Cliente e produto** | **E** | Para **quem** é o dossiê (marca, unidade, campanha)? | Pasta de publicação (`caixa/`, `caixa/loterias/`, `embratur/`, nova pasta), tom e linha “cliente” no cabeçalho. |
 | **Objetivo** | **E** | O que o leitor deve **decidir** ou **entender** ao final? | Profundidade, riscos a priorizar, âmbito do texto. |
 | **Leitor** | **O** | Quem lê (jurídico, marketing, direção)? Nível de detalhe? | Linguagem e extensão; default: executivo/marketing. |
-| **Modo de entrega** | **C** | **A** (HTML manual), **B** (`.md` + gerador) ou **C** (pesquisa → HTML na mão)? Ou “igual ao último dossiê X”? | **Obrigatório perguntar** se o pedido **não** deixar o modo óbvio (ex.: só “atualiza o dossier” sem dizer qual ficheiro). |
+| **Modo de entrega** | **C** | **A** (HTML manual), **B** (`.md` + gerador) ou **C** (pesquisa → HTML na mão)? Ou “igual ao último dossiê X”? | **Obrigatório perguntar** se o pedido **não** deixar o modo óbvio (ex.: só “atualiza o dossier” sem dizer qual arquivo). |
 | **Âmbito** | **E** | Lista de **nomes / @** ou “descobrir perfis a partir de…”? Quantos perfis? | Sem isto não há alvo de pesquisa. |
 | **Redes** | **O** | Quais redes entram (IG, TT, YT, X, outras)? Alguma **fora** de âmbito? | Default modo B: as quatro redes do template; ajustar se o briefing disser outra coisa. |
 | **Critérios** | **O** | O que conta como **risco alto/médio/baixo**? O que é **concorrência** / **política** / **polêmica** neste pedido? | Default: critérios do pedido do cliente no `.md` / template. |
 | **Métricas** | **O** | Snapshot até **que data**? Fontes: padrão repo (Social Blade, Upfluence, X manual) ou só dados anexados? | Default: “coleta na data do trabalho” + fontes do playbook. |
-| **Evidência** | **O** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Default: secção **Princípios** mais abaixo neste ficheiro (um fato, uma prova quando sensível). |
-| **Formato HTML** | **O** | Reutilizar **layout** de um ficheiro existente? Gráficos? White-label? | Default: mesmo padrão Calia / ficheiro de referência mais próximo. |
-| **Ficheiro e URL** | **E** | **Pasta** de entrega (`caixa/`, `caixa/loterias/`, `embratur/`, …)? **Nome** do `.html` ou “sugerir”? | Mínimo: **saber o cliente/pasta**; o nome pode ser “sugerir” conforme §2. |
+| **Evidência** | **O** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Default: seção **Princípios** mais abaixo neste arquivo (um fato, uma prova quando sensível). |
+| **Formato HTML** | **O** | Reutilizar **layout** de um arquivo existente? Gráficos? White-label? | Default: mesmo padrão Calia / arquivo de referência mais próximo. |
+| **Arquivo e URL** | **E** | **Pasta** de entrega (`caixa/`, `caixa/loterias/`, `embratur/`, …)? **Nome** do `.html` ou “sugerir”? | Mínimo: **saber o cliente/pasta**; o nome pode ser “sugerir” conforme §2. |
 | **Acesso** | **C** | **Senha** no gate (texto para hash) ou “igual ao dossiê Y”? Preview **sem** gate? | **Obrigatório perguntar** se o HTML tiver **gate** ou o pedido falar em acesso protegido. Se for **preview explícito** sem senha, pode ficar `--no-gate`. |
-| **Publicação** | **C** | **Commit + push** ao Pages, **só branch**, ou **só local**? Qual branch? | **Obrigatório perguntar** se o pedido envolver **alterar repo remoto**, **HTML em pasta servida pelo Pages**, ou **abrir/atualizar PR**. Se for “só editar ficheiro local / rascunho”, não exige. |
+| **Publicação** | **C** | **Commit + push** ao Pages, **só branch**, ou **só local**? Qual branch? | **Obrigatório perguntar** se o pedido envolver **alterar repo remoto**, **HTML em pasta servida pelo Pages**, ou **abrir/atualizar PR**. Se for “só editar arquivo local / rascunho”, não exige. |
 | **Prazo e prioridade** | **O** | O que é **MVP** vs “se der tempo”? | Default: entregar o pedido literal. |
 | **Restrições** | **O** | Não usar OSINT, não tocar em `tools/`, etc.? | Default: sem restrições extra além do playbook. |
 | **Idioma** | **O** | Idioma do dossiê **diferente de pt-BR**? | Default: **todo** o entregável em **português (Brasil)** — só perguntar ou mudar se o briefing pedir outro idioma de forma explícita. |
@@ -383,7 +392,7 @@ Exceto se o utilizador disser explicitamente *“para o que faltar usa o padrão
 1. (E) Cliente / campanha: 
 2. (E) Objetivo (o que o leitor deve conseguir fazer ou entender): 
 3. (O) Leitor-alvo (área + nível de detalhe): 
-4. (C) Modo preferido: [ A | B | C | “igual a <ficheiro ou projeto>” ] — obrigatório se não for óbvio pelo pedido
+4. (C) Modo preferido: [ A | B | C | “igual a <arquivo ou projeto>” ] — obrigatório se não for óbvio pelo pedido
 5. (E) Perfis: [lista Nome + @ quando souber] OU [“descobrir a partir de: …”]
 6. (O) Redes no âmbito: [ IG, TT, YT, X ] — excluir: [ … ]
 7. (O) Critérios de risco / concorrência / política (definições para ESTE pedido): 
@@ -399,11 +408,11 @@ Exceto se o utilizador disser explicitamente *“para o que faltar usa o padrão
 
 **Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** — e **cada (C) que se aplique** (4 se modo não for claro; 11 se houver senha/gate; 12 se houver push/branch). Itens **(O)** podem ficar em aberto com padrão do playbook, desde que o agente **declare** o que assumiu.
 
-Se o utilizador só enviar um subconjunto, o agente **pergunta** tudo o que for **(E)** ou **(C)** aplicável em falta; não inventar.
+Se o usuário só enviar um subconjunto, o agente **pergunta** tudo o que for **(E)** ou **(C)** aplicável em falta; não inventar.
 
 ### 2. Estrutura e convenções
 
-#### Nomenclatura do ficheiro `.html` (publicado)
+#### Nomenclatura do arquivo `.html` (publicado)
 
 Padrão obrigatório salvo **briefing explícito** em contrário:
 
@@ -429,7 +438,7 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 | Cliente / âmbito | Pasta de publicação | Exemplo no repo (referência) |
 |------------------|---------------------|------------------------------|
 | **Caixa — temas gerais** (auditorias, personalidades, produtos que **não** sejam a linha Loterias/Always ON) | **`caixa/`** (raiz desta pasta) | `20260326-dossie-auditoria-personalidades-caixa-2026.html` — ver [`caixa/README.md`](caixa/README.md). |
-| **Caixa — linha Loterias / Always ON** (e campanhas equivalentes do mesmo “pacote”) | **`caixa/loterias/`** | Novos ficheiros aqui (URL `…/caixa/loterias/<ficheiro>.html`). No histórico: `20260401-dossie-squad-always-on-loterias-2026.html` ainda em `caixa/` na raiz. |
+| **Caixa — linha Loterias / Always ON** (e campanhas equivalentes do mesmo “pacote”) | **`caixa/loterias/`** | Novos arquivos aqui (URL `…/caixa/loterias/<arquivo>.html`). No histórico: `20260401-dossie-squad-always-on-loterias-2026.html` ainda em `caixa/` na raiz. |
 | **Embratur** | **`embratur/`** | `20260323-dossie-auditoria-personalidades-embratur-2026.html` — ver [`embratur/research/README.md`](embratur/research/README.md) para contexto. |
 | **Cliente sem pasta ainda** | **Criar** `/<slug>/` na raiz | `slug` em minúsculas, sem espaços (hífen ok); adicionar **`README.md`** com URL base do Pages e lista de relatórios. |
 
@@ -437,13 +446,13 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 
 **Fonte editável (modo B)** continua na pasta do **projeto** (ex.: `loterias2026/data/`, `loterias2026-20260406/data/`) — não confundir com a pasta de **publicação**. O fluxo é: build → copiar o `.html` gerado para `caixa/`, `caixa/loterias/`, `embratur/` ou outra pasta de cliente → commit.
 
-**Histórico:** alguns dossiês Loterias já publicados estão **diretamente** em `caixa/*.html`; **novos** da mesma linha devem preferir **`caixa/loterias/`**. Migrar ficheiros antigos para a subpasta é **opcional** (exige atualizar links em `index.html` e referências).
+**Histórico:** alguns dossiês Loterias já publicados estão **diretamente** em `caixa/*.html`; **novos** da mesma linha devem preferir **`caixa/loterias/`**. Migrar arquivos antigos para a subpasta é **opcional** (exige atualizar links em `index.html` e referências).
 
 **`index.html`:** recomendado em `caixa/`, em `caixa/loterias/` (quando existir) e em qualquer pasta com **vários** relatórios — listar links para cada `.html` (evita 404 por URL digitada errada). Ao acrescentar relatório novo, **atualizar** o `index.html` dessa pasta.
 
 - Modo **B:** criar par `dossier_<slug>.md` + `dossier_<slug>_panels.yaml` — comandos e template na [documentação do modo B](loterias2026/README.md) e em [`new_creator_dossier.py`](loterias2026/scripts/new_creator_dossier.py) (referência atual; o tooling pode viver noutra pasta no futuro).
 
-### 3. Pesquisa e registo
+### 3. Pesquisa e registro
 
 - Notas e evidências: `research/` da pasta do projeto, ou `.md` dedicado; seguir metodologia local quando existir (ex.: [metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md)).
 - Manter rastreio do que foi consultado (queries, datas) para replicação.
@@ -466,7 +475,7 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 | Pasta entrega B (HTML no ar) | [`caixa/`](caixa/) | [README da pasta](caixa/README.md) |
 | Modo B — referência + segundo lote | [`loterias2026/`](loterias2026/), [`loterias2026-20260406/`](loterias2026-20260406/) | [README modo B](loterias2026/README.md) |
 | Visão geral + URLs | raiz | [`README.md`](README.md) |
-| Índice métodos → ficheiros | raiz | [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) |
+| Índice métodos → arquivos | raiz | [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) |
 | Agentes / automação | raiz | [`AGENTS.md`](AGENTS.md) |
 
 ### Disaster check / brand safety — ferramentas (onde está no playbook)
@@ -475,22 +484,22 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 
 | Necessidade no disaster check | Onde no playbook / repo |
 |-------------------------------|-------------------------|
-| **Quem é o perfil certo** (homónimos, @ em cada rede) | Secção **Descoberta de perfis** (neste ficheiro, após a tabela Toolbox) + [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
+| **Quem é o perfil certo** (homônimos, @ em cada rede) | Secção **Descoberta de perfis** (neste arquivo, após a tabela Toolbox) + [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
 | **Métricas públicas** (IG/YT, TT, X ativo/teor) | Secção **Coleta de dados** (a seguir a Descoberta) — Social Blade, Upfluence, X manual |
 | **Busca aberta, OSINT, fontes de evidência** | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), tabela OSINT em **Coleta de dados** |
-| **Sinais de mercado** (engagement, bots, frameworks de vetting) | Secção **Mercado: metodologia típica** (mais acima neste ficheiro) + tabela de ferramentas gratuitas/OSINT |
-| **Arquivo / histórico** (Wayback, etc.) | Na secção **Mercado** (sinais típicos) |
+| **Sinais de mercado** (engagement, bots, frameworks de vetting) | Secção **Mercado: metodologia típica** (mais acima neste arquivo) + tabela de ferramentas gratuitas/OSINT |
+| **Arquivo / histórico** (Wayback, etc.) | Na seção **Mercado** (sinais típicos) |
 | **Geo / proxy Trends** (quando o dossiê precisar) | Linha **Proxy Trends / Wikipedia** em **Coleta de dados** + [`embratur/scripts/`](embratur/scripts/) |
-| **Qualidade do entregável** (estrutura `.md`, links quebrados) | Tabela **Toolbox** (imediatamente abaixo desta subsecção) — `validate_dossier_source.py`, `check_dossier_links.py` |
+| **Qualidade do entregável** (estrutura `.md`, links quebrados) | Tabela **Toolbox** (imediatamente abaixo desta subseção) — `validate_dossier_source.py`, `check_dossier_links.py` |
 
-**Limitação honesta:** não há integração automática tipo “API de brand safety” no fluxo; é **manual + planilhas + OSINT opcional**, alinhado ao que o repositório já usa. Ferramentas **pagas** de mercado ficam fora do toolbox — só referência na secção **Mercado**.
+**Limitação honesta:** não há integração automática tipo “API de brand safety” no fluxo; é **manual + planilhas + OSINT opcional**, alinhado ao que o repositório já usa. Ferramentas **pagas** de mercado ficam fora do toolbox — só referência na seção **Mercado**.
 
 ## Toolbox (raiz)
 
 | Ferramenta | Comando | Função |
 |------------|---------|--------|
 | Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos. [Exemplo de `dossier_*.md`](loterias2026/data/dossier_loterias2026.md). |
-| Checagem de links (opcional) | `python3 tools/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do ficheiro (pode falhar por bloqueio de bot). |
+| Checagem de links (opcional) | `python3 tools/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do arquivo (pode falhar por bloqueio de bot). |
 | Makefile | `make help` / `make validate-dossier-squad-13` / `make build-dossier-squad-13` | Atalhos na raiz; alvos com `squad-13` / `squad-8` apontam para os lotes de referência do modo B no repo. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
 
@@ -509,10 +518,10 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 | Categoria | Ferramentas / métodos |
 |-----------|------------------------|
 | **Métricas em painel** | Social Blade (IG/YT, browser), Upfluence (TT, dados que envias), X manual (seguidores + ativo + teor) |
-| **OSINT no repo** | Instaloader, yt-dlp, Sherlock — [`tools/requirements-osint.txt`](tools/requirements-osint.txt) (canónico; cópia espelhada em `loterias2026/research/osint_runs/`) |
+| **OSINT no repo** | Instaloader, yt-dlp, Sherlock — [`tools/requirements-osint.txt`](tools/requirements-osint.txt) (canônico; cópia espelhada em `loterias2026/research/osint_runs/`) |
 | **Descoberta de @** | Metodologia em [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
 | **Narrativa / fontes** | [METODO_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md), [FONTES_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
-| **Arquivo e mercado** | Wayback, tabela ampliada na secção **Mercado** (Sherlock, gallery-dl, Maigret, Google News/Alerts, etc.) |
+| **Arquivo e mercado** | Wayback, tabela ampliada na seção **Mercado** (Sherlock, gallery-dl, Maigret, Google News/Alerts, etc.) |
 | **Geo / tendências (proxy Trends + Wikipedia)** | [`tools/penetracao_mercados.py`](tools/penetracao_mercados.py) + JSON de entidades (ex.: [`embratur/research/penetracao_entities_embratur_2026.json`](embratur/research/penetracao_entities_embratur_2026.json)); *wrapper* [`embratur/scripts/penetracao_mercados.py`](embratur/scripts/penetracao_mercados.py) chama o de `tools/`. |
 
 | Área | O quê | Onde / como |
@@ -520,7 +529,7 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 | **Métricas Instagram e YouTube** | **Social Blade** — consulta manual no site (navegador); copiar números para o painel do dossiê. | Preencher `instagram` e `youtube` em **`dossier_*_panels.yaml`** (estrutura como nos [dados de exemplo](loterias2026/data/)). Rodapés do HTML já citam “Social Blade” onde aplicável. |
 | **Métricas TikTok** | **Upfluence (TikTok Audit)** — exportação ou captura que **você** faz; enviar os dados (CSV, print estruturado ou tabela) para **organizar no repositório** (inserção nas `rows` do bloco `tiktok` do `_panels.yaml`, alinhado aos cabeçalhos do template). | Coordenação humana + edição de `dossier_*_panels.yaml`; não há integração API automática no fluxo atual. |
 | **Métricas X (Twitter)** | **Plataforma X**, consulta **manual** no perfil público (navegador ou app). O essencial para o painel: **número de seguidores** e se a conta está **ativa** — ou seja, se a pessoa **ainda usa** o X (posts recentes visíveis) ou se está **parada há muito tempo** (sem uso relevante / última atividade antiga). Não é preciso inventariar todo o conteúdo; basta o que sustenta essas duas leituras + uma **linha de teor recente** (resumo objetivo) na tabela, como nos dossiês já publicados. | Preencher o bloco `x` em **`dossier_*_panels.yaml`** (`headers` + `rows`: costuma haver colunas para seguidores, atividade Sim/Não e resumo do teor). Rodapé do HTML: checagem na data da coleta. |
-| **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock (+ na secção **Mercado**: Maigret, Google News/Alerts, imagem inversa, archive.today, holehe se aplicável). Quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) (secção *Ferramentas open source e fluxo OSINT*), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`tools/requirements-osint.txt`](tools/requirements-osint.txt) |
+| **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock (+ na seção **Mercado**: Maigret, Google News/Alerts, imagem inversa, archive.today, holehe se aplicável). Quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) (seção *Ferramentas open source e fluxo OSINT*), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`tools/requirements-osint.txt`](tools/requirements-osint.txt) |
 | **Segundo lote (merge / CSV)** | CSVs, merge de baseline, notas de redes | [`merge_creators_baseline.py`](loterias2026-20260406/scripts/merge_creators_baseline.py), [`data/`](loterias2026-20260406/data/), [`research/`](loterias2026-20260406/research/) |
 | **Proxy Trends / Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | [`tools/penetracao_mercados.py`](tools/penetracao_mercados.py), deps em [`tools/requirements-penetracao.txt`](tools/requirements-penetracao.txt), modelo JSON em [`tools/penetracao_entities_example.json`](tools/penetracao_entities_example.json); [README research Embratur](embratur/research/README.md) para o lote de exemplo. |
 
@@ -529,7 +538,7 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 ### Regra: não copiar Markdown para campos errados
 
 - **Onde pode `**` e links `[x](url)`:** parágrafos do briefing (`intro_paragraphs`, `criterios`), blocos `executive_summary` / `consolidated_narrative`, e no **corpo** do perfil: `### Narrativa`, eixos longos, `### Resumo tabela` e células da matriz — o gerador aplica **mini Markdown** (negrito, links).
-- **Onde deve ser texto plano:** `meta.title`, `meta.subtitle`, `meta.client_line`, `meta.periodo`, nomes em `briefing.redes`, rótulos `methodology.columns[].label`, **tabelas de painéis** (`_panels.yaml`), e identificadores estruturais (`## Nome`, `- **Camada:**`, handles). Não colar linhas com `##` ou `**` vindas de outras secções para esses campos.
+- **Onde deve ser texto plano:** `meta.title`, `meta.subtitle`, `meta.client_line`, `meta.periodo`, nomes em `briefing.redes`, rótulos `methodology.columns[].label`, **tabelas de painéis** (`_panels.yaml`), e identificadores estruturais (`## Nome`, `- **Camada:**`, handles). Não colar linhas com `##` ou `**` vindas de outras seções para esses campos.
 - **Defesa no código:** `tools/dossier_plain.strip_markdown_to_plain()` remove `**`, cabeçalhos `#` e converte links em “texto (URL)” nos campos que são só escape HTML, e normaliza nome/camada/handles ao ler o `.md`, para o HTML do cliente não mostrar lixo literal se alguém colar errado.
 
 ## Evolução do método

@@ -1,3 +1,5 @@
 __pycache__/
 *.py[cod]
 tools/__pycache__/
+# Preview local do exemplo mínimo (regenerar com build)
+examples/minimo/output-preview.html

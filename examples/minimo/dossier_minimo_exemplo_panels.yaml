@@ -1,0 +1,51 @@
+# Painéis mínimos — 1 linha por rede para "Creator Exemplo"
+panels:
+  intro_note: Números ilustrativos; substituir na coleta real.
+  coverage_note: Fora da tabela quando não houver dado.
+  coverage_note_cells_dash: Traço (—) quando o painel não trouxe o número.
+  instagram:
+    footnote: Social Blade (exemplo).
+    headers:
+      - Nome
+      - Usuário
+      - Seguidores
+      - Engaj.
+    rows:
+      - - Creator Exemplo
+        - exemplo
+        - "10.000"
+        - 1%
+  tiktok:
+    footnote: Upfluence ou dado manual (exemplo).
+    headers:
+      - Nome
+      - Usuário
+      - Seguidores
+    rows:
+      - - Creator Exemplo
+        - exemplo
+        - "5.000"
+  youtube:
+    footnote: Social Blade (exemplo).
+    headers:
+      - Nome
+      - Usuário
+      - Inscritos
+    rows:
+      - - Creator Exemplo
+        - exemplo
+        - "2.000"
+  x:
+    footnote: Checagem no X na data da coleta (exemplo).
+    headers:
+      - Nome
+      - Usuário
+      - Seguidores
+      - Ativo?
+      - Teor recente (resumo)
+    rows:
+      - - Creator Exemplo
+        - exemplo
+        - "1.000"
+        - Sim
+        - Resumo objetivo em pt-BR.
