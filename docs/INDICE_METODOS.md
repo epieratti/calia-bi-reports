@@ -7,6 +7,7 @@ Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia 
 | Se precisas de… | Abre |
 |-----------------|------|
 | **Guia geral** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
+| **Nome do `.html` + pasta** (`caixa/`, `caixa/loterias/`, `embratur/`, novo cliente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §2 — Nomenclatura / Pastas* |
 | **Etapas para o agente** — esqueleto 0→7 **adaptado ao briefing**; checklist briefing→plano | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Fluxo em etapas (para o agente)* |
 | **Inventário de todos os blocos HTML** (sumário, pedido, mini-cards redes, eixos, tabelas…) — modo B | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Estrutura do HTML final (modo B) — inventário completo* |
 | **Esquema de cores** — tokens Calia, neutros, risco, redes, gráficos | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Esquema de cores* |

@@ -27,7 +27,7 @@ Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`
 
 - Mensagens de commit em **português do Brasil**, claras (imperativo ou descrição direta do que mudou).
 - Após implementar alterações pedidas: `git status` → `git add` (só o relevante) → `git commit` → push conforme o fluxo do branch em uso.
-- Alterações em **`caixa/*.html`**, **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`).
+- Alterações em **`caixa/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2 (*Nomenclatura do ficheiro* / *Pastas onde o HTML deve ficar*).
 
 ## Boas práticas para mudanças
 

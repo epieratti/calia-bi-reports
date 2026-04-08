@@ -48,6 +48,8 @@ Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem
 | “Não publiques / só branch” | **7** = commit na branch; **sem** copiar para pasta Pages até ordem. |
 | “Sem TikTok” / “só IG e YT” | **4** e painéis: omitir rede; não seguir checklist completo de coleta. |
 | “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4** para não pesquisar o homónimo errado. |
+| (implícito) entrega Caixa + tema Loterias | Publicar em **`caixa/loterias/`** (novos); ver **Pastas onde o HTML deve ficar** no pipeline. |
+| Novo cliente sem pasta | Criar `/<slug>/` na raiz + `README.md`; HTML dentro dessa pasta. |
 
 Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YAML), **avisar** o utilizador e preferir **`.md` + `_panels.yaml`** no modo B.
 
@@ -329,8 +331,38 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 ### 2. Estrutura e convenções
 
-- **Nome do ficheiro:** preferir `YYYYMMDD-tema-cliente.html` (ou prefixo já usado na pasta).
-- **Índice:** se a pasta de entrega tiver `index.html`, incluir link para o novo relatório.
+#### Nomenclatura do ficheiro `.html` (publicado)
+
+Padrão obrigatório salvo **briefing explícito** em contrário:
+
+| Parte | Regra | Exemplo |
+|-------|--------|---------|
+| **Prefixo de data** | `YYYYMMDD` — data de **entrega**, **revisão** ou fecho do conteúdo relevante (não uma data arbitrária). | `20260406` |
+| **Corpo** | `dossie-` + **slug** em **minúsculas**, **ASCII**, **hífens** entre palavras, sem espaços. | `dossie-squad-always-on-loterias-2026` |
+| **Extensão** | `.html` | — |
+
+**Nome completo:** `YYYYMMDD-dossie-<slug>.html`  
+Exemplos reais no repo: `20260326-dossie-auditoria-personalidades-caixa-2026.html`, `20260401-dossie-squad-always-on-loterias-2026.html`.
+
+**Evitar:** `relatorio-final.html`, `Dossie_Loterias.HTML`, underscores se o repositório já usa hífens no mesmo cliente, nomes sem data quando há várias revisões do mesmo tema (a data no nome desambigua URLs).
+
+#### Pastas onde o HTML deve ficar (GitHub Pages)
+
+Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **segmento de URL** em `https://<org>.github.io/calia-bi-reports/<pasta>/…`.
+
+| Cliente / âmbito | Pasta de publicação | Nota |
+|------------------|---------------------|------|
+| **Caixa** (entregas desse cliente no site) | `caixa/` | Base: ver [`caixa/README.md`](caixa/README.md). |
+| **Caixa — linha/campanha Loterias** (Always ON e similares) | **`caixa/loterias/`** | Subpasta **recomendada** para novos HTML dessa linha (URL `…/caixa/loterias/<ficheiro>.html`). Evita acumular dezenas de ficheiros soltos na raiz de `caixa/`. |
+| **Embratur** | `embratur/` | |
+| **Cliente sem pasta ainda** | **Criar** `/<slug>/` na raiz | `slug` em minúsculas, sem espaços (hífen ok); adicionar **`README.md`** com URL base do Pages e lista de relatórios. |
+
+**Fonte editável (modo B)** continua na pasta do **projeto** (ex.: `loterias2026/data/`, `loterias2026-20260406/data/`) — não confundir com a pasta de **publicação**. O fluxo é: build → copiar o `.html` gerado para `caixa/` ou `caixa/loterias/` (ou outra pasta de cliente) → commit.
+
+**Histórico:** alguns dossiês Loterias já publicados estão **diretamente** em `caixa/*.html`; **novos** da mesma linha devem preferir **`caixa/loterias/`**. Migrar ficheiros antigos para a subpasta é **opcional** (exige atualizar links em `index.html` e referências).
+
+**`index.html`:** recomendado em `caixa/`, em `caixa/loterias/` (quando existir) e em qualquer pasta com **vários** relatórios — listar links para cada `.html` (evita 404 por URL digitada errada). Ao acrescentar relatório novo, **atualizar** o `index.html` dessa pasta.
+
 - Modo **B:** criar par `dossier_<slug>.md` + `dossier_<slug>_panels.yaml` — comandos e template na [documentação do modo B](loterias2026/README.md) e em [`new_creator_dossier.py`](loterias2026/scripts/new_creator_dossier.py) (referência atual; o tooling pode viver noutra pasta no futuro).
 
 ### 3. Pesquisa e registo

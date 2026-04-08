@@ -4,7 +4,9 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 `https://epieratti.github.io/calia-bi-reports/caixa/<arquivo>.html`
 
-**Índice:** https://epieratti.github.io/calia-bi-reports/caixa/ — lista os `.html` com links corretos (evita 404 por digitação).
+**Convenção (playbook):** novos dossiês da **linha Loterias / Always ON** (e similares) devem publicar-se em **`caixa/loterias/`** (criar a subpasta se ainda não existir), com nome `YYYYMMDD-dossie-….html`. Os ficheiros já na **raiz** de `caixa/` mantêm-se por histórico; migração para `loterias/` é opcional.
+
+**Índice:** https://epieratti.github.io/calia-bi-reports/caixa/ — lista os `.html` com links corretos (evita 404 por digitação). Se existir `caixa/loterias/index.html`, linkar a partir daqui também.
 
 ## Dossiê atual (mar/2026)
 
