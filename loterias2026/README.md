@@ -1,6 +1,8 @@
 # Always ON Loterias 2026 — Brand Safety
 
-O gerador HTML importa **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** na raiz do repositório (código único; não editar cópias em `scripts/`). Legado Apify: `scripts/README_LEGADO.md`.
+Esta pasta documenta **um produto concreto** (Always ON Loterias) e concentra o **exemplo implementado** do **modo B** do [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (fonte `.md` + gerador). Para **outro cliente** com o mesmo tipo de fábrica, o fluxo é o mesmo conceito; o tooling pode continuar aqui até haver outra pasta.
+
+O gerador importa **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** na raiz (código único). Legado Apify: `scripts/README_LEGADO.md`.
 
 ## Linha de produção (novos dossiês de creators)
 

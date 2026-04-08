@@ -2,14 +2,17 @@
 
 Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (Caixa, Loterias, Embratur, campanhas futuras). Cada pasta do projeto tem detalhes técnicos; aqui fica o **fluxo comum** e **onde encaixar** cada tipo de entrega.
 
-## TL;DR — agente ou primeira leitura
+**Isto não é “o guia do projeto Loterias 2026”.** “Loterias 2026” no repo é **um exemplo** onde o **modo B** (fonte `.md` + gerador) já está montado — serve de **referência técnica**, não define todos os dossiês possíveis.
 
-1. **Índice de todos os métodos:** [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) (pergunta → ficheiro).
-2. **Dossiê Loterias (modo B):** editar `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (ou o par em `loterias2026-20260406/data/` para o lote de 8) → `cd loterias2026 && python3 scripts/build_dossier_completo.py` → copiar `output/*.html` para `caixa/` se for publicação Caixa.
-3. **Validar fonte:** `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` ou `make validate-dossier-13`.
-4. **Nome só ou nome + um @:** [`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md).
-5. **Motor HTML compartilhado:** um só código em **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** — os `build_dossier_completo.py` em cada pasta Loterias importam daí (não há cópias duplicadas em `scripts/`).
-6. **Lote 8 perfis:** o [`loterias2026-20260406/README.md`](loterias2026-20260406/README.md) é um **inventário grande** (CSVs, pesquisa); para **só gerar o HTML**, basta o par `data/dossier_*` + build como no item 2.
+## TL;DR — criar um dossiê novo (qualquer cliente)
+
+1. **Este ficheiro (`PLAYBOOK_DOSSIES.md`)** — escolher **modo A, B ou C** (tabela abaixo). É o guia geral.
+2. **Índice** — [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) para saltar a métodos concretos (pesquisa, métricas, publicação).
+3. **Modo A (mais comum para one-off):** HTML direto em `caixa/`, `embratur/`, etc. — duplicar um `.html` existente ou seguir `caixa/README.md` / `README.md` raiz.
+4. **Modo B (fábrica com muitos perfis):** hoje o **exemplo implementado** está em `loterias2026/` — `python3 loterias2026/scripts/new_creator_dossier.py SLUG` cria `dossier_SLUG.md` + painéis; `build_dossier_completo.py --md … --out …` gera HTML. Ver [`loterias2026/README.md`](loterias2026/README.md). Não é obrigatório o nome conter “loterias”; é só a pasta onde o tooling vive **por agora**.
+5. **Validar** (se usares fonte `.md` no formato do gerador): `python3 tools/validate_dossier_source.py <teu/dossier_*.md>` — `make validate-dossier-13` só aponta para o **ficheiro de exemplo** do repo.
+6. **Descobrir @** (nome ou nome + uma rede): [`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) — método reutilizável; o caminho é histórico do primeiro lote.
+7. **Motor HTML** (modo B): código único em **`tools/dossier_render.py`** + **`tools/md_dossier_source.py`**.
 
 ---
 
@@ -27,7 +30,7 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (C
 | **B — Fonte textual + gerador** | Muitos perfis, mesma “fábrica” (brand safety, squad, auditoria tabular) | `loterias2026/`, `loterias2026-20260406/` | `.md` (narrativa + briefing) + `_panels.yaml` (métricas) → script → HTML → copiar para `caixa/` se for entrega Caixa. |
 | **C — Pesquisa + entrega manual** | Dados em CSV/notas, HTML montado na mão no fim | Varia | Pesquisa em `research/` + planilhas; HTML final na pasta do cliente conforme convenção do repo. |
 
-Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a estrutura for a mesma dos dossiês Loterias (perfis, tabelas, eixos).
+Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a estrutura for a de “muitos perfis + tabelas + mesmo layout” — use **`loterias2026/`** como **referência de implementação**, não como nome do teu projeto.
 
 ## Princípios (valem para todos os modos)
 
@@ -49,7 +52,7 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 
 - **Nome do ficheiro:** preferir `YYYYMMDD-tema-cliente.html` (ou prefixo já usado na pasta).
 - **Índice:** se a pasta tiver `index.html` (ex.: `caixa/`), incluir link para o novo relatório.
-- Modo **B:** criar par `dossier_<slug>.md` + `dossier_<slug>_panels.yaml` (ver comandos em `loterias2026/README.md` e `scripts/new_creator_dossier.py`).
+- Modo **B:** criar par `dossier_<slug>.md` + `dossier_<slug>_panels.yaml` — comandos e template em **`loterias2026/README.md`** e `loterias2026/scripts/new_creator_dossier.py` (referência atual; outro cliente pode usar o mesmo tooling noutra pasta no futuro).
 
 ### 3. Pesquisa e registo
 
@@ -59,7 +62,7 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 ### 4. Montagem e revisão
 
 - Modo **A/C:** revisar HTML (acessibilidade básica, links, typos, senha).
-- Modo **B:** `python3 scripts/build_dossier_completo.py` com `--md` / `--out` / `--variant` conforme `loterias2026/README.md`.
+- Modo **B:** `python3 scripts/build_dossier_completo.py` com `--md` / `--out` / `--variant` (executar dentro da pasta do lote; ver `loterias2026/README.md` como exemplo).
 
 ### 5. Publicação
 
@@ -81,7 +84,7 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 
 | Ferramenta | Comando | Função |
 |------------|---------|--------|
-| Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py loterias2026/data/dossier_loterias2026.md` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos. |
+| Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos. Exemplo no repo: `loterias2026/data/dossier_loterias2026.md`. |
 | Checagem de links (opcional) | `python3 tools/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do ficheiro (pode falhar por bloqueio de bot). |
 | Makefile | `make help` / `make validate-dossier-13` / `make build-loterias-13` | Atalhos na raiz. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
@@ -105,7 +108,7 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 | **Loterias — lote 06/04** | CSVs, merge de baseline, notas de redes | `loterias2026-20260406/scripts/merge_creators_baseline.py`, `data/*.csv`, `research/*.md` |
 | **Embratur — proxy Trends/Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | `embratur/scripts/penetracao_mercados.py`, `embratur/research/README.md` |
 
-**Resumo:** dossiê **HTML final** para cliente (modo B) = `dossier_*.md` + `_panels.yaml` + `build_dossier_completo.py`. **Apify não faz parte do fluxo operacional** (foi descontinuado por não funcionar bem). Métricas: **Social Blade** (IG/YT, manual) + **Upfluence** (TT, dados que você envia e organizamos no YAML) + **X na própria plataforma** (seguidores + conta ativa vs parada há muito tempo + resumo curto do teor). **OSINT** continua como apoio opcional à narrativa.
+**Resumo (modo B — qualquer campanha com esta fábrica):** HTML final = `dossier_*.md` + `_panels.yaml` + `build_dossier_completo.py`. **Apify não faz parte do fluxo operacional.** Métricas típicas neste modelo: **Social Blade** (IG/YT) + **Upfluence** (TT) + **X manual**. **OSINT** opcional para narrativa. O nome “Loterias 2026” nos caminhos é só o **primeiro produto** que usou este pipeline.
 
 ### Regra: não copiar Markdown para campos errados
 
