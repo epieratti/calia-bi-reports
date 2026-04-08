@@ -6,10 +6,17 @@ Painéis de métricas ficam em arquivo YAML à parte (ex.: dossier_loterias2026_
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from tools.dossier_plain import strip_markdown_to_plain
 
 _FM_BOUNDARY = re.compile(r"^---\s*$", re.M)
 
@@ -38,7 +45,7 @@ def _slug_handles_block(block: str) -> dict[str, str]:
             continue
         key, val = line.split(":", 1)
         k = key.strip().lower().replace("**", "").strip()
-        v = val.strip().strip("`\"'")
+        v = strip_markdown_to_plain(val.strip().strip("`\"'"))
         if k in ("instagram", "tiktok", "youtube", "x"):
             out[k] = v
     return out
@@ -95,14 +102,16 @@ def parse_profiles_markdown(body: str) -> list[dict[str, Any]]:
     profiles: list[dict[str, Any]] = []
     # chunks[0] ignorado (texto antes do primeiro perfil)
     for i in range(1, len(chunks), 2):
-        name = chunks[i].strip()
+        name = strip_markdown_to_plain(chunks[i].strip()).strip()
         pbody = chunks[i + 1] if i + 1 < len(chunks) else ""
-        tier = _field_line(pbody, "Camada") or _field_line(pbody, "Tier") or ""
+        tier = strip_markdown_to_plain(
+            _field_line(pbody, "Camada") or _field_line(pbody, "Tier") or ""
+        ).strip()
         risco_block = _subsection(pbody, "Síntese de risco")
         if risco_block.strip():
-            risco = risco_block.strip()
+            risco = strip_markdown_to_plain(risco_block.strip())
         else:
-            risco = _field_line(pbody, "Síntese de risco") or "—"
+            risco = strip_markdown_to_plain(_field_line(pbody, "Síntese de risco") or "—")
 
         handles_block = _subsection(pbody, "Handles")
         handles = _slug_handles_block(handles_block)

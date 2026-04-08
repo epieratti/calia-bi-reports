@@ -65,6 +65,21 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 | Visão geral + URLs | raiz | `README.md` |
 | Agentes / automação | raiz | `AGENTS.md` |
 
+## Toolbox (raiz)
+
+| Ferramenta | Comando | Função |
+|------------|---------|--------|
+| Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py loterias2026/data/dossier_loterias2026.md` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos. |
+| Checagem de links (opcional) | `python3 tools/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do ficheiro (pode falhar por bloqueio de bot). |
+| Makefile | `make help` / `make validate-dossier-13` / `make build-loterias-13` | Atalhos na raiz. |
+| CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
+
+### Regra: não copiar Markdown para campos errados
+
+- **Onde pode `**` e links `[x](url)`:** parágrafos do briefing (`intro_paragraphs`, `criterios`), blocos `executive_summary` / `consolidated_narrative`, e no **corpo** do perfil: `### Narrativa`, eixos longos, `### Resumo tabela` e células da matriz — o gerador aplica **mini Markdown** (negrito, links).
+- **Onde deve ser texto plano:** `meta.title`, `meta.subtitle`, `meta.client_line`, `meta.periodo`, nomes em `briefing.redes`, rótulos `methodology.columns[].label`, **tabelas de painéis** (`_panels.yaml`), e identificadores estruturais (`## Nome`, `- **Camada:**`, handles). Não colar linhas com `##` ou `**` vindas de outras secções para esses campos.
+- **Defesa no código:** `tools/dossier_plain.strip_markdown_to_plain()` remove `**`, cabeçalhos `#` e converte links em “texto (URL)” nos campos que são só escape HTML, e normaliza nome/camada/handles ao ler o `.md`, para o HTML do cliente não mostrar lixo literal se alguém colar errado.
+
 ## Evolução do método
 
 - **Novo tipo de dossiê** que vá se repetir: considere extrair **template HTML** ou **script de build** para `loterias2026/scripts/` (ou uma futura pasta `tools/`) e acrescente uma linha na tabela acima.

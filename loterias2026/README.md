@@ -6,6 +6,7 @@
 2. Crie fonte nova: `python3 scripts/new_creator_dossier.py SEU_SLUG --variant squad_13` (ou `squad_8` para layout do lote de 8 perfis).
 3. Edite `dossier_SEU_SLUG.md` e `dossier_SEU_SLUG_panels.yaml`.
 4. Gere HTML: `python3 scripts/build_dossier_completo.py --md data/dossier_SEU_SLUG.md --out output/....html --variant squad_13`
+5. Na raiz do repo: `python3 tools/validate_dossier_source.py loterias2026/data/dossier_SEU_SLUG.md` (ou `make validate-dossier-13` para o ficheiro atual). Ver regras de Markdown em **`PLAYBOOK_DOSSIES.md`** → Toolbox.
 
 ## Dossiê HTML (página do cliente)
 

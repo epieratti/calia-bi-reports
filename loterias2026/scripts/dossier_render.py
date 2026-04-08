@@ -8,14 +8,26 @@ from __future__ import annotations
 import html
 import re
 import subprocess
+import sys
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from tools.dossier_plain import strip_markdown_to_plain
+
 
 def esc(s: object) -> str:
     return html.escape(str(s or ""), quote=True)
+
+
+def esc_plain(s: object) -> str:
+    """Texto que não passa por mini_md: remove ** # etc. colados do MD, depois escapa."""
+    return esc(strip_markdown_to_plain(s))
 
 
 def build_revision_label() -> str:
@@ -161,7 +173,7 @@ def render_clevel_body(cfg: dict) -> str:
 
 
 def slug_id(name: str) -> str:
-    n = unicodedata.normalize("NFKD", name or "")
+    n = unicodedata.normalize("NFKD", strip_markdown_to_plain(name or ""))
     n = "".join(c for c in n if not unicodedata.combining(c))
     s = re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-")
     return s or "perfil"
@@ -299,10 +311,10 @@ def name_tier_cell_html(
     name: object, tier: object, *, show_tier_in_panel: bool
 ) -> str:
     """Primeira coluna dos painéis: nome; opcionalmente tier abaixo (variante squad_13)."""
-    n = esc(name or "—")
+    n = esc_plain(name or "—")
     if not show_tier_in_panel:
         return f"<strong class='font-semibold text-slate-900'>{n}</strong>"
-    t = esc(tier or "—")
+    t = esc_plain(tier or "—")
     return (
         f"<strong class='font-semibold text-slate-900'>{n}</strong>"
         f"<br><span class='text-xs text-slate-500'>{t}</span>"
@@ -312,7 +324,7 @@ def name_tier_cell_html(
 def panel_row_index_for_profile(panel_key: str, raw_rows: list[list], pc: dict) -> int | None:
     """Índice da linha no painel YAML: coluna 1 = @ do briefing (IG/TT/YT); X por nome ou @."""
     h = pc.get("handles") or {}
-    name_l = str(pc.get("name") or "").strip().lower()
+    name_l = strip_markdown_to_plain(str(pc.get("name") or "")).strip().lower()
     if panel_key == "instagram":
         k = norm_handle(h.get("instagram"))
         if not k:
@@ -342,7 +354,7 @@ def panel_row_index_for_profile(panel_key: str, raw_rows: list[list], pc: dict) 
         for i, r in enumerate(raw_rows):
             if len(r) < 2:
                 continue
-            if name_l and str(r[0] or "").strip().lower() == name_l:
+            if name_l and strip_markdown_to_plain(str(r[0] or "")).strip().lower() == name_l:
                 return i
             if xk and norm_handle(r[1]) == xk:
                 return i
@@ -393,7 +405,7 @@ def build_ordered_panel_rows(
         rest_raw = rest_raw[:n_rest]
         if _metric_cells_all_empty(rest_raw):
             continue
-        rest = [esc(str(x)) for x in rest_raw]
+        rest = [esc_plain(str(x)) for x in rest_raw]
         out_rows.append([first] + rest)
     return out_headers, out_rows
 
@@ -401,11 +413,11 @@ def build_ordered_panel_rows(
 def panel_row_x(rows: list, profile_name: str, yaml_x: object) -> list[str] | None:
     """Linha X: Nome, Usuário, Seguidores, Ativo?, Teor."""
     xk = norm_handle(yaml_x)
-    pn = (profile_name or "").strip().lower()
+    pn = strip_markdown_to_plain(str(profile_name or "")).strip().lower()
     for row in rows:
         if len(row) < 5:
             continue
-        if pn and str(row[0] or "").strip().lower() == pn:
+        if pn and strip_markdown_to_plain(str(row[0] or "")).strip().lower() == pn:
             return row
         if xk and norm_handle(row[1]) == xk:
             return row
@@ -532,8 +544,8 @@ def format_profile_networks_html(
         footer = (
             "<div class='mt-1.5 pt-1 border-t border-slate-100 space-y-1'>"
             f"<span class='inline-block max-w-full rounded px-1.5 py-0.5 text-[9px] font-semibold leading-snug break-words {act_cls}' "
-            f"title='{esc(act_txt)}'>{esc(chip_label)}</span>"
-            f"<p class='text-[9px] text-slate-500 leading-snug break-words'>{esc(teor_full)}</p>"
+            f"title='{esc_plain(act_txt)}'>{esc_plain(chip_label)}</span>"
+            f"<p class='text-[9px] text-slate-500 leading-snug break-words'>{esc_plain(teor_full)}</p>"
             "</div>"
         )
         cards.append(net_mini_card("bg-slate-900", "X", xv, x_stats, footer))
@@ -607,14 +619,14 @@ def render_table(
     html_safe_columns: frozenset[int] | None = None,
 ) -> str:
     th = "".join(
-        f"<th class='py-2 px-3 text-left text-xs font-bold text-slate-600 border-b border-slate-200'>{esc(h)}</th>"
+        f"<th class='py-2 px-3 text-left text-xs font-bold text-slate-600 border-b border-slate-200'>{esc_plain(h)}</th>"
         for h in headers
     )
     trs = []
     for row in rows:
         tds_l: list[str] = []
         for j, c in enumerate(row):
-            cell = c if (html_safe_columns is not None and j in html_safe_columns) else esc(c)
+            cell = c if (html_safe_columns is not None and j in html_safe_columns) else esc_plain(c)
             tds_l.append(
                 f"<td class='py-2 px-3 border-b border-slate-100 text-sm align-top'>{cell}</td>"
             )
@@ -650,10 +662,10 @@ def render_loterias_dossier_html(
     generated = datetime.now(timezone.utc).strftime("%d/%m/%Y")
     build_revision = build_revision_label()
 
-    title = esc(meta.get("title", "Squad Always ON Loterias 2026 — Brand Safety"))
-    subtitle = esc(meta.get("subtitle", ""))
-    client = esc(meta.get("client_line", ""))
-    periodo = esc(meta.get("periodo", "Março–abril de 2026"))
+    title = esc_plain(meta.get("title", "Squad Always ON Loterias 2026 — Brand Safety"))
+    subtitle = esc_plain(meta.get("subtitle", ""))
+    client = esc_plain(meta.get("client_line", ""))
+    periodo = esc_plain(meta.get("periodo", "Março–abril de 2026"))
 
     pw_set = bundle.get("password_sha256_hex") or [
         "992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b",
@@ -685,7 +697,11 @@ def render_loterias_dossier_html(
     ) + "</ol>"
 
     redes = bundle.get("briefing", {}).get("redes") or ["Instagram", "TikTok", "YouTube"]
-    redes_html = "<p class='text-sm text-slate-700'><strong>Redes de ativação:</strong> " + esc(", ".join(redes)) + ".</p>"
+    redes_html = (
+        "<p class='text-sm text-slate-700'><strong>Redes de ativação:</strong> "
+        + esc_plain(", ".join(str(r) for r in redes))
+        + ".</p>"
+    )
 
     tier_order = bundle.get("briefing", {}).get("tier_order") or [
         "Tier 1",
@@ -716,7 +732,7 @@ def render_loterias_dossier_html(
     for col in meth:
         meth_cards += (
             f"<div class='p-4 bg-white border border-slate-200 rounded'>"
-            f"<p class='text-xs font-black text-calia-navy uppercase tracking-wide'>{esc(col.get('label', ''))}</p>"
+            f"<p class='text-xs font-black text-calia-navy uppercase tracking-wide'>{esc_plain(col.get('label', ''))}</p>"
             f"{methodology_column_body_html(col.get('body', ''))}</div>"
         )
 
@@ -735,7 +751,7 @@ def render_loterias_dossier_html(
     def esc_lines_br(s: str) -> str:
         """Quebras de linha no YAML viram <br> (texto escapado por linha)."""
         lines = (s or "").strip().splitlines()
-        return "<br />".join(esc(line.strip()) for line in lines if line.strip())
+        return "<br />".join(esc_plain(line.strip()) for line in lines if line.strip())
 
     def coverage_block_html(base: str, cells_dash: str) -> str:
         b = (base or "").strip()
@@ -745,7 +761,7 @@ def render_loterias_dossier_html(
         paras: list[str] = []
         if b:
             paras.append(
-                f"<p class='text-xs text-slate-500 mt-3 max-w-prose leading-relaxed'>{esc(b)}</p>"
+                f"<p class='text-xs text-slate-500 mt-3 max-w-prose leading-relaxed'>{esc_plain(b)}</p>"
             )
         if d:
             paras.append(
@@ -782,20 +798,20 @@ def render_loterias_dossier_html(
                 "nesta coleta.</p>"
             )
             foot_fmt = format_panel_footnote(foot)
-            foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
+            foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc_plain(foot_fmt)}</p>" if foot_fmt else ""
             return (
                 f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
                 f"{empty_msg}{foot_p}{coverage_suffix}</section>"
             )
         tbl = render_table(oh, body_rows, html_safe_columns=frozenset({0}))
         foot_fmt = format_panel_footnote(foot)
-        foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc(foot_fmt)}</p>" if foot_fmt else ""
+        foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc_plain(foot_fmt)}</p>" if foot_fmt else ""
         return (
             f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
             f"{tbl}{foot_p}{coverage_suffix}</section>"
         )
 
-    panels_intro = esc(
+    panels_intro = esc_plain(
         bundle.get("panels", {}).get(
             "intro_note",
             "Números das ferramentas (alcance, engajamento). Só ajudam a ver tamanho de público; o risco da campanha segue os três critérios acima.",
@@ -831,7 +847,7 @@ def render_loterias_dossier_html(
     )
 
     cons = bundle.get("consolidated_narrative") or {}
-    cons_title = esc(cons.get("title", "Síntese adicional do squad"))
+    cons_title = esc_plain(cons.get("title", "Síntese adicional do squad"))
     cons_body_html = render_clevel_body(cons) if (cons.get("blocks") or cons.get("bullets") or cons.get("paragraphs")) else ""
 
     _pn = bundle.get("panels") or {}
@@ -873,7 +889,7 @@ def render_loterias_dossier_html(
         return (
             f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
             f"<div class='flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-3 mb-4'>"
-            f"<h2 class='text-xl font-black text-calia-navy'>{idx}. {esc(name)}</h2>"
+            f"<h2 class='text-xl font-black text-calia-navy'>{idx}. {esc_plain(name)}</h2>"
             f"{risco_badge}</div>"
             f"{networks_html}"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
@@ -891,7 +907,7 @@ def render_loterias_dossier_html(
         mt = "" if ti == 0 else " mt-4"
         toc_items += (
             f"<li class='{mt.strip()}'>"
-            f"<a class='toc-link font-bold text-calia-navy' href='#{esc(tslug)}'>{esc(tier_name)}</a>"
+            f"<a class='toc-link font-bold text-calia-navy' href='#{esc(tslug)}'>{esc_plain(tier_name)}</a>"
         )
         if people:
             toc_items += "<ul class='mt-1 space-y-0.5 pl-0 list-none'>"
@@ -900,14 +916,14 @@ def render_loterias_dossier_html(
             global_idx += 1
             name = pc.get("name", "")
             slug = slug_id(name)
-            toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
+            toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc_plain(name)}</a></li>"
             blocks.append(render_profile(global_idx, pc))
             rt = pc.get("resumo_tabela") or {}
             risco_cell = risco_badge_block_html(pc.get("risco_geral", "—"), compact=True)
             name_cell = (
                 name_tier_cell_html(name, pc.get("tier"), show_tier_in_panel=True)
                 if show_tier_in_panel
-                else f"<strong>{esc(name)}</strong>"
+                else f"<strong>{esc_plain(name)}</strong>"
             )
             summary_rows.append(
                 [
@@ -925,13 +941,13 @@ def render_loterias_dossier_html(
         if people:
             profile_sections += (
                 f"<div id='{esc(tslug)}' class='scroll-mt-20 mb-10'>"
-                f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-6'>{esc(tier_name)}</h3>"
+                f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-6'>{esc_plain(tier_name)}</h3>"
                 f"{''.join(blocks)}</div>"
             )
         elif tier_name == "Tier 2" and show_tier_in_panel:
             profile_sections += (
                 f"<div id='{esc(tslug)}' class='scroll-mt-20 mb-10'>"
-                f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-4'>{esc(tier_name)}</h3>"
+                f"<h3 class='text-lg font-black text-calia-navy border-b-2 border-calia-gold pb-2 mb-4'>{esc_plain(tier_name)}</h3>"
                 f"<p class='text-sm text-slate-500 italic'>Nenhum nome nesta camada nesta versão do squad. Espaço reservado para inclusões futuras.</p></div>"
             )
 
@@ -948,14 +964,14 @@ def render_loterias_dossier_html(
             global_idx += 1
             name = pc.get("name", "")
             slug = slug_id(name)
-            toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc(name)}</a></li>"
+            toc_items += f"<li><a class='toc-link' href='#{esc(slug)}'>{global_idx}. {esc_plain(name)}</a></li>"
             obl.append(render_profile(global_idx, pc))
             rt = pc.get("resumo_tabela") or {}
             risco_cell_o = risco_badge_block_html(pc.get("risco_geral", "—"), compact=True)
             name_cell_o = (
                 name_tier_cell_html(name, pc.get("tier"), show_tier_in_panel=True)
                 if show_tier_in_panel
-                else f"<strong>{esc(name)}</strong>"
+                else f"<strong>{esc_plain(name)}</strong>"
             )
             summary_rows.append(
                 [
@@ -982,7 +998,7 @@ def render_loterias_dossier_html(
         html_safe_columns=frozenset({0, 1, 2, 3, 4}),
     )
 
-    tier_order_label = esc(", ".join(tier_order))
+    tier_order_label = esc_plain(", ".join(str(t) for t in tier_order))
     if show_tier_in_panel:
         toc_perfis_label = f"Perfis por camada ({tier_order_label})"
         tabela_intro_p = (
