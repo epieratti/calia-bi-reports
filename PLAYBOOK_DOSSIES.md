@@ -27,6 +27,20 @@ Todo **texto que o cliente lê** (briefing no HTML, leitura rápida, metodologia
 
 **Teste rápido antes de fechar:** alguém de **planejamento ou atendimento** que **não** fez a pesquisa consegue usar o trecho numa **call com o cliente** (responder **sim/não**, **baixo/médio/alto** ou explicar o risco) sem improvisar? Se surgir “mas e se…?”, completar o texto.
 
+#### Documento autocontido e links de fonte
+
+**Regra:** o leitor deve **entender a conclusão e o raciocínio só lendo o HTML**, sem ser obrigado a **abrir** um link. Toda informação **necessária** para a decisão (o que aconteceu, o que foi verificado, qual o risco, qual o número relevante, qual a limitação) deve estar **escrita no corpo** do dossiê em frases completas.
+
+| Uso do link | Permitido? |
+|-------------|------------|
+| **Complemento / prova** — quem quiser ver a matéria, o post ou o documento original | Sim (sempre que houver URL estável). |
+| **Substituir** o texto (“ver detalhes aqui”, “conforme link”, afirmação que só faz sentido depois do clique) | **Não** — incorpore o essencial no parágrafo; o link fica **ao lado** como apoio. |
+
+**Exemplo ruim:** “Há menções negativas na imprensa” + só um hyperlink.  
+**Exemplo bom:** “Em DD/MM/AAAA, o veículo X publicou que… (resumo objetivo em uma ou duas frases).” + link para a matéria.
+
+Esta regra aplica-se a **narrativa, eixos, leitura rápida, síntese, células da tabela resumo** e notas que forem texto; **não** exige copiar artigo inteiro — basta o **núcleo informativo** que remove a dúvida.
+
 Esta revisão entra naturalmente na etapa **4b — Síntese crítica** e de novo no **6 — QA** (reler em voz alta mentalmente os blocos executivos).
 
 ### Para o agente de IA (ler primeiro)
@@ -80,6 +94,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 8. **Ordem narrativa dentro do perfil** — snapshot de redes → narrativa → eixos costuma ser o mais legível; ajustar se o briefing pedir “risco primeiro”.
 9. **Tom e compressão** — cortar adjetivos, unificar duplicatas; manter **pt-BR** e linguagem do cliente.
 10. **Redação** — passar cada bloco executivo pelo critério [humanizado / claro / sucinto / completo](#qualidade-da-redação-dos-textos-finais); remover tom de “relatório de máquina”.
+11. **Autocontido** — nenhuma conclusão importante depende de **abrir** link; conferir [Documento autocontido e links](#documento-autocontido-e-links-de-fonte).
 
 #### Saída obrigatória (para o agente)
 
@@ -390,7 +405,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 1. **Português (Brasil)** — o dossiê na íntegra em **pt-BR**, salvo instrução explícita em contrário no briefing (ver [Idioma do dossiê](#idioma-do-dossiê-regra-primordial)).
 2. **Redação final** — textos **humanizados**, de **fácil compreensão**, **sucintos** e **completos** para a decisão: sem deixar dúvida sobre o que foi verificado, o que falta e o que isso implica (ver [Qualidade da redação dos textos finais](#qualidade-da-redação-dos-textos-finais)).
-3. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
+3. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): o **fato e a leitura** vão **no texto** do dossiê; o **link** é **evidência e complemento** — nunca o único lugar onde a informação existe (ver [Documento autocontido e links](#documento-autocontido-e-links-de-fonte)).
 4. **Snapshot no tempo** — datas de coleta, “até mês/ano”, e lembrar que métricas de rede envelhecem rápido.
 5. **Desambiguação** — homônimos (nome + @ + contexto); registrar o que foi descartado quando isso já deu ruído em entregas passadas.
 6. **“Não consta” / “não achamos”** — significa *nas fontes e no método deste trabalho*, não “não existe”.
