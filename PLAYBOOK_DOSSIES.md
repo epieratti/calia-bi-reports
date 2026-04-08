@@ -48,7 +48,9 @@ Usar o briefing para decidir **o passo a passo ideal**. Exemplos de como a ordem
 | “Não publiques / só branch” | **7** = commit na branch; **sem** copiar para pasta Pages até ordem. |
 | “Sem TikTok” / “só IG e YT” | **4** e painéis: omitir rede; não seguir checklist completo de coleta. |
 | “Dossiê completo N perfis” | Seguir **0→7** completo; **2** antes de **4** para não pesquisar o homónimo errado. |
-| (implícito) entrega Caixa + tema Loterias | Publicar em **`caixa/loterias/`** (novos); ver **Pastas onde o HTML deve ficar** no pipeline. |
+| (implícito) entrega **Caixa** tema geral (não Loterias) | Publicar em **`caixa/`** (raiz); ver **Pastas onde o HTML deve ficar**. |
+| (implícito) entrega **Caixa** + linha Loterias | Publicar em **`caixa/loterias/`** (novos); mesma secção. |
+| (implícito) entrega **Embratur** | Publicar em **`embratur/`**; mesma secção. |
 | Novo cliente sem pasta | Criar `/<slug>/` na raiz + `README.md`; HTML dentro dessa pasta. |
 
 Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YAML), **avisar** o utilizador e preferir **`.md` + `_panels.yaml`** no modo B.
@@ -342,7 +344,11 @@ Padrão obrigatório salvo **briefing explícito** em contrário:
 | **Extensão** | `.html` | — |
 
 **Nome completo:** `YYYYMMDD-dossie-<slug>.html`  
-Exemplos reais no repo: `20260326-dossie-auditoria-personalidades-caixa-2026.html`, `20260401-dossie-squad-always-on-loterias-2026.html`.
+Exemplos reais no repo (mesmo padrão de nome em **todos** os clientes):
+
+- **Caixa (tema geral, sem ser Loterias):** `20260326-dossie-auditoria-personalidades-caixa-2026.html` em [`caixa/`](caixa/).
+- **Caixa (linha Loterias / Always ON):** `20260401-dossie-squad-always-on-loterias-2026.html` (histórico na raiz de `caixa/`; novos → preferir [`caixa/loterias/`](caixa/loterias/) quando existir).
+- **Embratur:** `20260323-dossie-auditoria-personalidades-embratur-2026.html` em [`embratur/`](embratur/).
 
 **Evitar:** `relatorio-final.html`, `Dossie_Loterias.HTML`, underscores se o repositório já usa hífens no mesmo cliente, nomes sem data quando há várias revisões do mesmo tema (a data no nome desambigua URLs).
 
@@ -350,14 +356,16 @@ Exemplos reais no repo: `20260326-dossie-auditoria-personalidades-caixa-2026.htm
 
 Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **segmento de URL** em `https://<org>.github.io/calia-bi-reports/<pasta>/…`.
 
-| Cliente / âmbito | Pasta de publicação | Nota |
-|------------------|---------------------|------|
-| **Caixa** (entregas desse cliente no site) | `caixa/` | Base: ver [`caixa/README.md`](caixa/README.md). |
-| **Caixa — linha/campanha Loterias** (Always ON e similares) | **`caixa/loterias/`** | Subpasta **recomendada** para novos HTML dessa linha (URL `…/caixa/loterias/<ficheiro>.html`). Evita acumular dezenas de ficheiros soltos na raiz de `caixa/`. |
-| **Embratur** | `embratur/` | |
+| Cliente / âmbito | Pasta de publicação | Exemplo no repo (referência) |
+|------------------|---------------------|------------------------------|
+| **Caixa — temas gerais** (auditorias, personalidades, produtos que **não** sejam a linha Loterias/Always ON) | **`caixa/`** (raiz desta pasta) | `20260326-dossie-auditoria-personalidades-caixa-2026.html` — ver [`caixa/README.md`](caixa/README.md). |
+| **Caixa — linha Loterias / Always ON** (e campanhas equivalentes do mesmo “pacote”) | **`caixa/loterias/`** | Novos ficheiros aqui (URL `…/caixa/loterias/<ficheiro>.html`). No histórico: `20260401-dossie-squad-always-on-loterias-2026.html` ainda em `caixa/` na raiz. |
+| **Embratur** | **`embratur/`** | `20260323-dossie-auditoria-personalidades-embratur-2026.html` — ver [`embratur/research/README.md`](embratur/research/README.md) para contexto. |
 | **Cliente sem pasta ainda** | **Criar** `/<slug>/` na raiz | `slug` em minúsculas, sem espaços (hífen ok); adicionar **`README.md`** com URL base do Pages e lista de relatórios. |
 
-**Fonte editável (modo B)** continua na pasta do **projeto** (ex.: `loterias2026/data/`, `loterias2026-20260406/data/`) — não confundir com a pasta de **publicação**. O fluxo é: build → copiar o `.html` gerado para `caixa/` ou `caixa/loterias/` (ou outra pasta de cliente) → commit.
+**Resumo:** **Caixa “puro”** (outros temas) → **`caixa/`**. **Caixa + Loterias** (linha dedicada) → **`caixa/loterias/`** para entregas novas. **Embratur** → **`embratur/`** (nunca dentro de `caixa/`).
+
+**Fonte editável (modo B)** continua na pasta do **projeto** (ex.: `loterias2026/data/`, `loterias2026-20260406/data/`) — não confundir com a pasta de **publicação**. O fluxo é: build → copiar o `.html` gerado para `caixa/`, `caixa/loterias/`, `embratur/` ou outra pasta de cliente → commit.
 
 **Histórico:** alguns dossiês Loterias já publicados estão **diretamente** em `caixa/*.html`; **novos** da mesma linha devem preferir **`caixa/loterias/`**. Migrar ficheiros antigos para a subpasta é **opcional** (exige atualizar links em `index.html` e referências).
 

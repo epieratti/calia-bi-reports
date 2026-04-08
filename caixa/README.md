@@ -4,7 +4,12 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 `https://epieratti.github.io/calia-bi-reports/caixa/<arquivo>.html`
 
-**Convenção (playbook):** novos dossiês da **linha Loterias / Always ON** (e similares) devem publicar-se em **`caixa/loterias/`** (criar a subpasta se ainda não existir), com nome `YYYYMMDD-dossie-….html`. Os ficheiros já na **raiz** de `caixa/` mantêm-se por histórico; migração para `loterias/` é opcional.
+**Convenção (playbook):**
+
+- **Caixa — temas gerais** (ex.: auditoria de personalidades **sem** ser Loterias): HTML na **raiz** desta pasta — exemplo `20260326-dossie-auditoria-personalidades-caixa-2026.html`.
+- **Caixa — linha Loterias / Always ON** (e similares): novos relatórios em **`caixa/loterias/`** (criar a subpasta se ainda não existir), nome `YYYYMMDD-dossie-….html`. Os ficheiros Loterias já na raiz de `caixa/` mantêm-se por histórico; migração para `loterias/` é opcional.
+
+**Embratur** não usa esta pasta — relatórios ficam em **`embratur/`** na raiz do repo (ex.: `20260323-dossie-auditoria-personalidades-embratur-2026.html`).
 
 **Índice:** https://epieratti.github.io/calia-bi-reports/caixa/ — lista os `.html` com links corretos (evita 404 por digitação). Se existir `caixa/loterias/index.html`, linkar a partir daqui também.
 
