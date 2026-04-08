@@ -130,6 +130,24 @@ Responda primeiro: **a pergunta é “partes de um todo”, “comparar categori
 
 **Boas práticas:** um gráfico = **uma** pergunta; título ou primeira frase da leitura diz essa pergunta; cores alinhadas à paleta do dossiê; indicar **fonte e data** junto ao gráfico ou na leitura.
 
+#### Panorama mais recente (ferramentas “de ponta”) e encaixe neste tipo de trabalho
+
+“Vanguarda” em visualização hoje mistura **gramáticas declarativas** (descreves o gráfico em JSON/spec), **canvas/WebGL** para muitos pontos, **mapas e pequenos múltiplos** (facetas), e **geração assistida** (LLM → spec). Para **dossiês em HTML estático**, com **gate de senha**, leitura **executiva** e por vezes **PDF/impressão**, o critério não é o máximo de efeito — é **clareza, reprodutibilidade e peso da página**.
+
+| Abordagem | O que traz de moderno | Encaixa quando… | Atenção para dossiê |
+|-----------|----------------------|-----------------|---------------------|
+| **[Apache ECharts](https://echarts.apache.org/)** | Muitos tipos prontos, **mapas** (choropleth, geo), **brush**, tooltips ricos, séries longas em canvas | Precisas de **mapa**, várias séries, ou painel “denso” dentro de um capítulo HTML | Bundle **maior** que Chart.js; alinhar tema às cores do relatório; testar após mostrar o conteúdo (gate), como com qualquer canvas. |
+| **[Vega-Lite](https://vega.github.io/vega-lite/)** + [Vega-Embed](https://github.com/vega/vega-embed) | **Gramática** (JSON): facetas, camadas, agregações declaradas; bom para **pequenos múltiplos** e encadear gráficos coerentes | Queres **um ficheiro de spec** versionável ao lado do HTML ou pipeline “dados → spec → embed” | Dependência extra no `<head>`; validar spec com dados reais; export/impressão pode precisar de captura estática. |
+| **[Observable Plot](https://observablehq.com/plot/)** | API de alto nível sobre ideias D3; rápido para protótipos e gráficos estatísticos limpos | Exploração e **protótipo** antes de fixar no HTML final, ou geração de SVG via build | Menos habitual como “um script CDN” isolado no mesmo padrão do [exemplo Chart.js no repo](embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html); pode integrar-se em bundler ou notebook. |
+| **[Plotly.js](https://plotly.com/javascript/)** | Interatividade “científica”, alguns modos **3D**, violino, contour | Relatórios com **distribuições** ou exploração mais analítica (menos comum em brand safety puro) | **Peso** e tempo de carga; 3D raramente melhora leitura executiva. |
+| **D3.js** | Controlo total: **layouts** custom (sankey, rede, calendário), animações finas | Um gráfico **é** o diferencial da entrega (ex.: rede de citações, fluxo marca→tema) | Custo de manutenção alto; só quando Chart.js/ECharts não chegam. |
+| **deck.gl** / **[Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/guides/)** | **WebGL**, milhões de pontos, mapas grandes | Dados **geo** pesados (não é o caso típico de perfil/redes) | Overkill para a maioria dos dossiês; acessibilidade e PDF são piores. |
+| **AntV [G2](https://g2.antv.antgroup.com/) / [G2Plot](https://g2plot.antv.antgroup.com/)** | Gramática tipo “The Grammar of Graphics”, ecossistema forte em produtos enterprise | Equipa já usa AntV ou queres estética/behaviour semelhantes a dashboards asiáticos | Documentação mais dispersa em inglês; mesmo trade-off de bundle que ECharts. |
+
+**Tendência útil com IA:** gerar ou iterar **especificações** (sobretudo **Vega-Lite** ou options JSON estilo ECharts) a partir de uma tabela e de um pedido — acelera o rascunho; **sempre** rever escalas, cores, rótulos e unidades antes de publicar (alucinação de dados ou de tipo de gráfico é comum).
+
+**Regra prática para este repositório:** mantém **[Chart.js](https://www.chartjs.org/)** como **padrão** (já alinhado a exemplos no repo). Sobe para **ECharts** ou **Vega-Lite** quando o capítulo precisar de **mapa**, **facetas**, **muitas séries** ou spec versionável. Reserva **D3 / WebGL** a entregas onde o gráfico custom é **central** e há tempo de QA.
+
 #### Barras de progresso (porcentagem “preenchida”) — não é gráfico
 
 É um **indicador linear**: faixa de fundo + preenchimento com largura proporcional a um valor (muitas vezes **0–100%**). **Não usa Chart.js** — basta **HTML + CSS** (opcionalmente `aria-valuenow` / `role="progressbar"` para leitores de ecrã). Útil quando queres **um único número** com **impacto visual rápido**, sem eixos nem legenda de gráfico.
