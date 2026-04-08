@@ -7,6 +7,7 @@ Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia 
 | Se precisas de… | Abre |
 |-----------------|------|
 | **Guia geral** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
+| **Disaster check — mapa de ferramentas** (onde está cada coisa no playbook) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Disaster check / brand safety — ferramentas* |
 | **Modelo de briefing** — (E)/(C)/(O) essencial/condicional/opcional + template | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §1 — Perguntas / Modelo* |
 | **Nome do `.html` + pasta** (`caixa/` geral, `caixa/loterias/`, `embratur/`, novo cliente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §2 — Nomenclatura / Pastas* |
 | **Etapas para o agente** — esqueleto 0→7 **adaptado ao briefing**; checklist briefing→plano | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Fluxo em etapas (para o agente)* |

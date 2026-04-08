@@ -457,6 +457,22 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 | Índice métodos → ficheiros | raiz | [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) |
 | Agentes / automação | raiz | [`AGENTS.md`](AGENTS.md) |
 
+### Disaster check / brand safety — ferramentas (onde está no playbook)
+
+**Sim, está coberto** — não como um único capítulo com esse nome, mas reunido nestes pontos:
+
+| Necessidade no disaster check | Onde no playbook / repo |
+|-------------------------------|-------------------------|
+| **Quem é o perfil certo** (homónimos, @ em cada rede) | Secção **Descoberta de perfis** (neste ficheiro, após a tabela Toolbox) + [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
+| **Métricas públicas** (IG/YT, TT, X ativo/teor) | Secção **Coleta de dados** (a seguir a Descoberta) — Social Blade, Upfluence, X manual |
+| **Busca aberta, OSINT, fontes de evidência** | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), tabela OSINT em **Coleta de dados** |
+| **Sinais de mercado** (engagement, bots, frameworks de vetting) | Secção **Mercado: metodologia típica** (mais acima neste ficheiro) + tabela de ferramentas gratuitas/OSINT |
+| **Arquivo / histórico** (Wayback, etc.) | Na secção **Mercado** (sinais típicos) |
+| **Geo / proxy Trends** (quando o dossiê precisar) | Linha **Proxy Trends / Wikipedia** em **Coleta de dados** + [`embratur/scripts/`](embratur/scripts/) |
+| **Qualidade do entregável** (estrutura `.md`, links quebrados) | Tabela **Toolbox** (imediatamente abaixo desta subsecção) — `validate_dossier_source.py`, `check_dossier_links.py` |
+
+**Limitação honesta:** não há integração automática tipo “API de brand safety” no fluxo; é **manual + planilhas + OSINT opcional**, alinhado ao que o repositório já usa. Ferramentas **pagas** de mercado ficam fora do toolbox — só referência na secção **Mercado**.
+
 ## Toolbox (raiz)
 
 | Ferramenta | Comando | Função |
