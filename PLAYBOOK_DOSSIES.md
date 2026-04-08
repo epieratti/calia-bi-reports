@@ -74,6 +74,12 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 | Makefile | `make help` / `make validate-dossier-13` / `make build-loterias-13` | Atalhos na raiz. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
 
+### Descoberta de perfis (nome ou nome + um @)
+
+Quando a entrada for **só o nome do creator** ou **nome + um único user** de uma rede, seguir a metodologia passo a passo para achar **Instagram, TikTok, YouTube e X** com confirmação e desambiguação de homônimos:
+
+**`loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`**
+
 ### Coleta de dados (ferramentas já usadas no repo)
 
 Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquisa** e **métricas** antes de escrever o dossiê. Respeitar ToS das redes e política de dados do cliente.

@@ -22,6 +22,7 @@
 
 ### Pesquisa e referências
 
+- **Descobrir todos os @ a partir de só nome ou nome + uma rede:** `research/METODO_DESCOBERTA_PERFIS_CREATORS.md`
 - **Evidências com URLs:** `research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`
 - **Metodologia:** `research/METODO_BRAND_SAFETY_LOTERIAS2026.md`
 - **Handles do squad:** `data/influencers.yaml`
