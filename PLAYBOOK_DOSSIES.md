@@ -308,6 +308,11 @@ Respeitar **ToS** das redes, **LGPD/GDPR** e uso **legítimo** (pesquisa, due di
 | **Arquivo web** | [Internet Archive](https://web.archive.org/), *snapshots* | Recuperar páginas ou *posts* já indexados. |
 | **Métricas públicas agregadas (freemium)** | Social Blade, páginas públicas de perfil | Social Blade: consulta manual no browser (já no fluxo operacional deste repo). |
 | **Plataforma X** | Perfil público no browser | API paga ou scraping agressivo fogem do “gratuito e estável”; o playbook assume **leitura manual** para atividade e seguidores. |
+| **Pesquisa web / imprensa (sem API)** | [Google News](https://news.google.com/), [Google Alerts](https://www.google.com/alerts), pesquisa no navegador com **operadores** (`site:`, aspas, `-termo`) | Menções, polêmicas, entrevistas; tudo manual e gratuito. |
+| **Enumeração de @ (ampliada)** | [Maigret](https://github.com/soxoj/maigret) (open source, sem API keys) | Semelhante ao Sherlock, cobre **muitos** sites; gerar ruído — **validar cada URL**; pode instalar com `pip install maigret`. |
+| **Foto de perfil suspeita** | [Google Imagens](https://images.google.com/) “pesquisar por imagem”, [TinEye](https://tineye.com/) (uso gratuito limitado) | Detetar stock, celebridade ou reutilização de avatar. |
+| **Arquivo (além do IA)** | [archive.today](https://archive.today/) e espelhos | Quando `web.archive.org` não tem snapshot da URL. |
+| **Email público no briefing** | [holehe](https://github.com/megadose/holehe) (open source) | Lista **em que sites** um email costuma estar registado (sinal fraco); **só** com email que o cliente autorizou analisar e dentro de base legal. |
 
 Ferramentas históricas tipo **TWINT** (Twitter sem API) perderam relevância com as mudanças na rede X — tratar como **legado** e não como recomendação atual.
 
@@ -492,12 +497,23 @@ Quando a entrada for **só o nome do creator** ou **nome + um único user** de u
 
 Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquisa** e **métricas** antes de escrever o dossiê. Respeitar ToS das redes e política de dados do cliente.
 
+#### Inventário — o que o guia já contempla para pesquisa / disaster check
+
+| Categoria | Ferramentas / métodos |
+|-----------|------------------------|
+| **Métricas em painel** | Social Blade (IG/YT, browser), Upfluence (TT, dados que envias), X manual (seguidores + ativo + teor) |
+| **OSINT no repo** | Instaloader, yt-dlp, Sherlock — ver [`requirements-osint.txt`](loterias2026/research/osint_runs/requirements-osint.txt) |
+| **Descoberta de @** | Metodologia em [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
+| **Narrativa / fontes** | [METODO_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md), [FONTES_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
+| **Arquivo e mercado** | Wayback, tabela ampliada na secção **Mercado** (Sherlock, gallery-dl, Maigret, Google News/Alerts, etc.) |
+| **Geo / tendências (caso Embratur)** | [`penetracao_mercados.py`](embratur/scripts/penetracao_mercados.py) |
+
 | Área | O quê | Onde / como |
 |------|--------|-------------|
 | **Métricas Instagram e YouTube** | **Social Blade** — consulta manual no site (navegador); copiar números para o painel do dossiê. | Preencher `instagram` e `youtube` em **`dossier_*_panels.yaml`** (estrutura como nos [dados de exemplo](loterias2026/data/)). Rodapés do HTML já citam “Social Blade” onde aplicável. |
 | **Métricas TikTok** | **Upfluence (TikTok Audit)** — exportação ou captura que **você** faz; enviar os dados (CSV, print estruturado ou tabela) para **organizar no repositório** (inserção nas `rows` do bloco `tiktok` do `_panels.yaml`, alinhado aos cabeçalhos do template). | Coordenação humana + edição de `dossier_*_panels.yaml`; não há integração API automática no fluxo atual. |
 | **Métricas X (Twitter)** | **Plataforma X**, consulta **manual** no perfil público (navegador ou app). O essencial para o painel: **número de seguidores** e se a conta está **ativa** — ou seja, se a pessoa **ainda usa** o X (posts recentes visíveis) ou se está **parada há muito tempo** (sem uso relevante / última atividade antiga). Não é preciso inventariar todo o conteúdo; basta o que sustenta essas duas leituras + uma **linha de teor recente** (resumo objetivo) na tabela, como nos dossiês já publicados. | Preencher o bloco `x` em **`dossier_*_panels.yaml`** (`headers` + `rows`: costuma haver colunas para seguidores, atividade Sim/Não e resumo do teor). Rodapé do HTML: checagem na data da coleta. |
-| **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock, etc.: quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) (secção *Ferramentas open source e fluxo OSINT*), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`requirements-osint.txt`](loterias2026/research/osint_runs/requirements-osint.txt) |
+| **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock (+ na secção **Mercado**: Maigret, Google News/Alerts, imagem inversa, archive.today, holehe se aplicável). Quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) (secção *Ferramentas open source e fluxo OSINT*), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`requirements-osint.txt`](loterias2026/research/osint_runs/requirements-osint.txt) |
 | **Segundo lote (merge / CSV)** | CSVs, merge de baseline, notas de redes | [`merge_creators_baseline.py`](loterias2026-20260406/scripts/merge_creators_baseline.py), [`data/`](loterias2026-20260406/data/), [`research/`](loterias2026-20260406/research/) |
 | **Proxy Trends / Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | [`penetracao_mercados.py`](embratur/scripts/penetracao_mercados.py), [README research](embratur/research/README.md) |
 
