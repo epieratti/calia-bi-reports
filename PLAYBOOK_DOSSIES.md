@@ -130,6 +130,23 @@ Responda primeiro: **a pergunta é “partes de um todo”, “comparar categori
 
 **Boas práticas:** um gráfico = **uma** pergunta; título ou primeira frase da leitura diz essa pergunta; cores alinhadas à paleta do dossiê; indicar **fonte e data** junto ao gráfico ou na leitura.
 
+#### Barras de progresso (porcentagem “preenchida”) — não é gráfico
+
+É um **indicador linear**: faixa de fundo + preenchimento com largura proporcional a um valor (muitas vezes **0–100%**). **Não usa Chart.js** — basta **HTML + CSS** (opcionalmente `aria-valuenow` / `role="progressbar"` para leitores de ecrã). Útil quando queres **um único número** com **impacto visual rápido**, sem eixos nem legenda de gráfico.
+
+| Caso no dossiê | Faz sentido? | Nota |
+|----------------|-------------|------|
+| **Score ou aderência** numa escala fechada (ex.: 0–100% de aderência a um eixo, “completude” de checklist metodológico) | Sim | Mostrar o **valor ao lado** ou por cima (“72%”) para não forçar o leitor a adivinhar. |
+| **Cobertura de pesquisa** (ex.: “% de redes com dados validados”, “períodos com histórico disponível”) | Sim | Deixar claro **o que** soma 100% (ex.: “das 4 redes pedidas”). |
+| **Quota ou teto** (ex.: participação estimada vs. mercado, **share** numa única fatia destacada) | Às vezes | Se houver **várias fatias comparáveis**, preferir **barra horizontal** ou **rosca**; a barrinha serve sobretudo para **um** indicador protagonista. |
+| **Comparar muitos creators na mesma métrica** | Melhor outra coisa | Lista de 10 barrinhas pode funcionar, mas **barras horizontais** ordenadas costumam escalar melhor. |
+| **Dados incertos ou ordens de grandeza discutíveis** | Evitar | A barra sugere **precisão**; se o número é estimativa, dizê-lo no texto e evitar falso detalhe (ex.: não mostrar “73,4%” se a fonte é grosso modo). |
+| **Duplicar o que o radar já mostra** | Redundante | Radar já compara vários eixos; barrinha entra quando queres **destacar um** eixo no texto ou num card. |
+
+**Como fazer (mínimo):** contentor `position: relative`, fundo neutro, cantos arredondados; filho interno com `width: NN%` (inline style ou classe), cor de destaque da marca; altura fixa pequena (ex. 8–12px) ou maior se quiseres área clicável. Opcional: `aria-valuemin="0" aria-valuemax="100" aria-valuenow="72"` no contentor com `role="progressbar"`.
+
+**Boas práticas:** rótulo à esquerda ou por cima (**o quê** é essa %); **nunca** apresentar como “progresso real” de algo que é só um **índice** — chamar de “indicador” ou “estimativa” quando aplicável; mesma paleta do resto do dossiê.
+
 ## Princípios (valem para todos os modos)
 
 1. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
