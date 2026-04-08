@@ -1,13 +1,13 @@
 # Índice de métodos e documentação operacional
 
-Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia geral** para criar dossiês (modos A/B/C), com foco em **brand safety / vetting / disaster check** de creators; outros formatos usam o mesmo fluxo com adaptação.
+Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia geral** para criar dossiês (modos A/B/C), com foco em **brand safety / vetting / disaster check** de creators; outros formatos usam o mesmo fluxo com adaptação. Texto deste índice em **pt-BR** (alinhado a `AGENTS.md`).
 
 **Nota:** `loterias2026/` é a pasta onde o **modo B** (`.md` + gerador) está **implementado de exemplo** — não significa que todo dossiê novo seja “Loterias 2026”. Métodos em `loterias2026/research/` (descoberta de perfis, brand safety) são **reutilizáveis** para outros clientes.
 
 | Se precisas de… | Abre |
 |-----------------|------|
 | **Guia geral** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
-| **Idioma** — dossiê sempre **pt-BR** (exceto se o utilizador pedir outro) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Idioma do dossiê* |
+| **Idioma** — dossiê sempre **pt-BR** (exceto se o **usuário** pedir outro) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Idioma do dossiê* |
 | **Disaster check — mapa de ferramentas** (onde está cada coisa no playbook) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Disaster check / brand safety — ferramentas* |
 | **Inventário de pesquisa** + extras sem API (Maigret, News, imagem inversa…) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Coleta de dados* + *Mercado* |
 | **Modelo de briefing** — (E)/(C)/(O) essencial/condicional/opcional + template | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §1 — Perguntas / Modelo* |
