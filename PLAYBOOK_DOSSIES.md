@@ -223,6 +223,55 @@ Responda primeiro: **a pergunta é “partes de um todo”, “comparar categori
 
 **Boas práticas:** rótulo à esquerda ou por cima (**o quê** é essa %); **nunca** apresentar como “progresso real” de algo que é só um **índice** — chamar de “indicador” ou “estimativa” quando aplicável; mesma paleta do resto do dossiê.
 
+### Mercado: metodologia típica em auditorias de creators (BI / influencer intelligence)
+
+Síntese do que **guias do setor**, fornecedores de *vetting* e relatórios de *creator fraud* costumam descrever — útil para alinhar o dossiê ao que clientes e concorrentes já esperam ouvir. Não substitui o **briefing** do teu projeto; adapta pesos e critérios ao pedido.
+
+#### Como costuma estar organizado o trabalho
+
+| Fase | O que fazem | Ligação ao nosso fluxo |
+|------|-------------|-------------------------|
+| **Enquadramento** | Definir objetivo (brand safety, parceria, licitação), público-leitor, risco aceitável, redes no âmbito. | Playbook → briefing fechado; critérios no `.md` / pedido. |
+| **Inventário de identidade** | Confirmar **handles corretos** por rede, homônimos, contas oficiais vs fã. | [Descoberta de perfis](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md). |
+| **Snapshot de métricas** | Seguidores, engagement onde existir, atividade recente, alcance só se houver fonte estável. | Painéis `_panels.yaml`; Social Blade / Upfluence / X manual (toolbox abaixo). |
+| **Avaliação de conteúdo e reputação** | Temas sensíveis, parcerias passadas, menções na imprensa, concorrência, política — com **fonte** por afirmação forte. | Narrativa + eixos no `.md`; evidências em `research/`. |
+| **Síntese e classificação** | Matriz de risco / recomendação, linguagem executiva, data de corte. | Tabela resumo, selos, HTML final. |
+
+Muitos frameworks comerciais falam em **dimensões** parecidas: **risco de conteúdo** (O que a pessoa publica?), **qualidade/autenticidade de audiência** (bots, pods, padrões estranhos), **brand safety / compliance** (disclosure, categorias proibidas), **fit com a marca** (valores, tom, histórico de colabs). Há também tendência a **reavaliar** creators ao longo do tempo em campanhas longas; o dossiê em HTML costuma ser **fotografia** numa data — deixar isso explícito.
+
+#### Sinais que o mercado costuma olhar (além do “número grande”)
+
+- **Engagement vs. seguidores** — faixas de referência variam por rede, tamanho de conta e *niche*; usar como **alerta**, não como prova única. Guias técnicos sugerem cruzar com qualidade de comentários e estabilidade no tempo.
+- **Picos abruptos** de seguidores ou *engagement* sem evento plausível.
+- **Comentários** repetitivos, genéricos ou padrão de *engagement pod*.
+- **Coerência multi-plataforma** (presença, identidade, datas).
+- **Arquivo** de páginas ou *posts* removidos ([Wayback Machine](https://web.archive.org/), etc.) quando a decisão depende do histórico.
+- **Exports oficiais** (quando o creator ou a marca os partilham) — ouro para campanhas, nem sempre disponíveis em pré-auditoria.
+
+#### Ferramentas gratuitas, freemium ou open source (e ressalvas)
+
+Respeitar **ToS** das redes, **LGPD/GDPR** e uso **legítimo** (pesquisa, due diligence contratual). Muitas ferramentas OSINT **não** são “neutras” perante as plataformas — risco de bloqueio ou violação de termos; documentar o método no dossiê quando for relevante.
+
+| Tipo | Exemplos frequentes no ecossistema OSINT / BI | Nota |
+|------|-----------------------------------------------|------|
+| **Enumeração de @ em muitos sites** | [Sherlock](https://github.com/sherlock-project/sherlock) (open source) | A partir de um *username*; validar cada hit manualmente. |
+| **Vídeo / áudio público** | [yt-dlp](https://github.com/yt-dlp/yt-dlp) (open source) | Arquivar ou transcrever conteúdo **público**; não contornar paywalls nem geo-bloqueios de forma abusiva. |
+| **Galerias / outras plataformas** | [gallery-dl](https://github.com/mikf/gallery-dl) (open source) | Mesmas ressalvas de ToS. |
+| **Instagram (ecossistema Python)** | [Instaloader](https://github.com/instaloader/instaloader) (open source) | Uso intensivo pode violar ToS do Instagram; preferir no nosso fluxo como **suplemento** documentado, não como única prova. |
+| **Arquivo web** | [Internet Archive](https://web.archive.org/), *snapshots* | Recuperar páginas ou *posts* já indexados. |
+| **Métricas públicas agregadas (freemium)** | Social Blade, páginas públicas de perfil | Social Blade: consulta manual no browser (já no fluxo operacional deste repo). |
+| **Plataforma X** | Perfil público no browser | API paga ou scraping agressivo fogem do “gratuito e estável”; o playbook assume **leitura manual** para atividade e seguidores. |
+
+Ferramentas históricas tipo **TWINT** (Twitter sem API) perderam relevância com as mudanças na rede X — tratar como **legado** e não como recomendação atual.
+
+Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com IA, bases de imprensa) são comuns em agências grandes; o quadro acima cobre sobretudo o que equipas pequenas ou *open source* combinam.
+
+#### Alinhamento com este repositório
+
+- **Método de descoberta de perfis:** [METODO_DESCOBERTA_PERFIS_CREATORS.md](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md).
+- **Brand safety, busca aberta, OSINT:** [METODO_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) e [FONTES_BRAND_SAFETY_LOTERIAS2026.md](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md).
+- **Coleta operacional** (métricas nos painéis): secção **Coleta de dados** mais abaixo neste playbook (Social Blade, Upfluence, X manual).
+
 ## Princípios (valem para todos os modos)
 
 1. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
