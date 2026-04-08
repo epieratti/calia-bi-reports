@@ -74,32 +74,61 @@ Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools
 
 ### Gráficos (modo A / referência Embratur + catálogo para reutilizar)
 
-O **modo B** gerado por `tools/dossier_render.py` **não inclui gráficos** hoje: métricas vão em **tabelas** e **mini-cards**. Para **partes** (rosca, radar, área, etc.) use **modo A** (HTML manual) ou evolua o gerador.
+O **modo B** gerado por `tools/dossier_render.py` **não inclui gráficos** hoje: métricas vão em **tabelas** e **mini-cards**. Para gráficos use **modo A** (HTML manual, como o Embratur) ou evolua o gerador.
 
-**Referência no repo — Embratur (Chart.js):** `embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html` carrega [Chart.js](https://www.chartjs.org/) por CDN. Lá já existem, por perfil:
+Stack recomendada nos dossiês já feitos: **[Chart.js](https://www.chartjs.org/)** via CDN (um `<script>`, `<canvas id="…">`, um bloco JS que instancia `new Chart(...)`). Referência completa no repo: `embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`.
 
-| Tipo no Chart.js | Uso no dossiê | Nota |
-|------------------|---------------|------|
-| **`doughnut`** (rosca, `cutout: '70%'`) | Distribuição geográfica da audiência (%) | “Rosca” = doughnut com furo grande. |
-| **`radar`** | Aderência a eixos temáticos (%, mesma escala) | Cinco critérios no eixo radial. |
+#### Qual gráfico usar em cada caso (decisão rápida)
 
-**Gráfico de área:** nesse ficheiro Embratur **não há** `line`/`area` ainda; é um bom candidato quando houver **série temporal** (ex.: evolução mensal de seguidores, menções, scores). Em Chart.js: `type: 'line'` com `fill: true` no dataset (e opcionalmente `tension` para curva suave).
+Responda primeiro: **a pergunta é “partes de um todo”, “comparar categorias”, “evolução no tempo” ou “vários eixos na mesma escala”?**
 
-**Catálogo sugerido para deixar “pronto na cabeça” / snippets reutilizáveis** (todos nativos no Chart.js, sem dependência extra):
+| Pergunta / cenário típico no dossiê | Gráfico | Tipo Chart.js | Porquê |
+|-------------------------------------|---------|---------------|--------|
+| “De onde é a audiência?” / mix % país ou região | **Rosca** | `doughnut` + `cutout` alto (~60–75%) | Poucas fatias, leitura imediata de participação; “outros” como última fatia neutra. |
+| “Qual a fatia de cada rede / canal no alcance?” (partes que somam ~100%) | Rosca ou **polarArea** | `doughnut` ou `polarArea` | Rosca para executivo; polarArea se quiseres ênfase angular diferente. Evitar `pie` cheia se o cliente já usa rosca no resto do relatório. |
+| “Quem tem mais X entre 5–15 categorias?” (uma métrica) | **Barras verticais** | `bar` | Comparação direta de magnitude; ordenar barras ajuda. |
+| “Comparar países / creators com nomes longos” | **Barras horizontais** | `indexAxis: 'y'` no `bar` | Rótulos legíveis sem cortar texto. |
+| “Como cada grupo se divide em subpartes?” (ex.: alcance por rede *e* tipo de conteúdo) | **Barras empilhadas** | `bar` com `stacked: true` nas escalas | Mostra total *e* composição; legenda clara por cor. |
+| “Como evoluiu ao longo dos meses?” (uma série) | **Área** | `line` com `fill: true` no dataset | Ênfase no volume acumulado no tempo; `tension` leve (ex. 0.25) suaviza sem distorcer. |
+| “Comparar 2–3 séries no mesmo período” (ex.: IG vs TT) | **Linhas** (sem preenchimento ou só uma com fill) | `line`, `fill: false` (ou uma série com fill) | Evita sobreposição de áreas ilegível; limitar número de linhas. |
+| “Quão forte é este perfil em critérios A, B, C… **na mesma escala**?” | **Radar** | `radar` | Ex.: aderência 0–100% em vários eixos temáticos (padrão Embratur). |
+| “Há relação entre seguidores e engajamento?” / posicionar creators num plano | **Dispersão** ou **bolhas** | `scatter` / `bubble` | Eixo X e Y numéricos; em `bubble`, `r` (raio) = terceira dimensão (ex. volume de posts). |
 
-| Tipo | Quando usar |
-|------|-------------|
-| **Barra** (`bar`) | Comparar poucas categorias (ex.: engajamento por rede). |
-| **Barra horizontal** | Rótulos longos (países, creators). |
-| **Barras empilhadas** | Composição que soma 100% ou totais por grupo. |
-| **`doughnut` / `pie`** | Partes de um todo; rosca costuma ler melhor que pizza cheia. |
-| **`line` + preenchimento** | Tendência no tempo → efeito “área”. |
-| **`line` sem preenchimento** | Duas ou mais séries no mesmo período (comparar creators ou métricas). |
-| **`radar`** | Vários eixos qualitativos na mesma escala (como no Embratur). |
-| **`polarArea`** | Partes de um todo com ênfase no ângulo (alternativa visual à rosca). |
-| **Dispersão** (`scatter`) / **bolhas** (`bubble`) | Correlação ou “tamanho = volume” (ex.: seguidores × engajamento). |
+**Quando *não* usar gráfico:** poucos números (1–3), tabela já resolve, ou risco de dados frágeis — preferir **número + texto** ou **tabela** (como no modo B).
 
-**Boas práticas rápidas:** um gráfico = uma leitura; bloco **“Leitura do gráfico”** abaixo do canvas (como no Embratur); cores alinhadas à paleta do dossiê; após senha/gate, chamar `initCharts()` com `requestAnimationFrame` duplo para o canvas medir largura corretamente.
+#### Como implementar (checklist)
+
+1. **No `<head>`:** `<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>` (ou pin de versão se quiseres reprodutibilidade).
+2. **No HTML:** envolver o canvas num contentor com altura fixa ou `aspect-ratio`, por exemplo classe `chart-container` com `height: 320px` e `position: relative` (Chart.js usa `responsive: true`, `maintainAspectRatio: false`).
+3. **Dados:** arrays alinhados — `labels: [...]` e `datasets: [{ data: [...], backgroundColor / borderColor, ... }]`. Percentagens: garantir que somam 100% (ou declarar no texto que “outros” fecha o total).
+4. **Instanciar:** `new Chart(document.getElementById('idDoCanvas'), { type: '…', data: { … }, options: { … } })`.
+5. **Depois do gate de senha:** o canvas começa oculto — chamar a função que cria os charts **só depois** de mostrar o conteúdo, com **dois** `requestAnimationFrame` em sequência (padrão no Embratur) para o layout medir largura corretamente.
+6. **Leitura executiva:** abaixo de cada gráfico, um parágrafo **“Leitura do gráfico”** (o que ver, limitação da fonte, data de corte) — copiar o padrão `.chart-reading` do Embratur.
+
+#### Referência no repo — Embratur (já implementado)
+
+| Tipo | Uso no dossiê | Opções que importam |
+|------|---------------|---------------------|
+| **`doughnut`** | Distribuição geográfica (%) | `cutout: '70%'`, legenda em baixo, cores da marca + cinza para “outros”. |
+| **`radar`** | Aderência a eixos temáticos (mesma escala, ex. 0–100) | `scales.r.beginAtZero`, `max: 100`, ticks discretos se quiseres menos ruído. |
+
+**Área / linha:** ainda não estão nesse HTML; para série temporal seguir o checklist acima com `type: 'line'` e `fill: true` na série principal.
+
+#### Catálogo resumido (mesma família Chart.js)
+
+| Tipo | `type` | Uso |
+|------|--------|-----|
+| Barra | `bar` | Comparação entre categorias. |
+| Barra horizontal | `bar` + `indexAxis: 'y'` | Rótulos longos. |
+| Empilhada | `bar` + escalas `stacked: true` | Composição por grupo. |
+| Rosca / pizza | `doughnut` / `pie` | Partes de um todo (preferir rosca). |
+| Área | `line` + `fill: true` | Tendência temporal, uma série destacada. |
+| Linhas múltiplas | `line`, `fill: false` | Comparar séries no tempo. |
+| Radar | `radar` | Vários critérios, mesma escala. |
+| Polar area | `polarArea` | Alternativa à rosca. |
+| Dispersão / bolha | `scatter` / `bubble` | Duas (ou três) dimensões numéricas. |
+
+**Boas práticas:** um gráfico = **uma** pergunta; título ou primeira frase da leitura diz essa pergunta; cores alinhadas à paleta do dossiê; indicar **fonte e data** junto ao gráfico ou na leitura.
 
 ## Princípios (valem para todos os modos)
 
