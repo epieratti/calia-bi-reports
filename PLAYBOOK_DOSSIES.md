@@ -76,17 +76,17 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 
 ### Coleta de dados (ferramentas já usadas no repo)
 
-Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquisa** antes de escrever o dossiê. Respeitar ToS das redes e política de dados do cliente.
+Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquisa** e **métricas** antes de escrever o dossiê. Respeitar ToS das redes e política de dados do cliente.
 
-| Área | O quê | Onde |
-|------|--------|------|
-| **Loterias — pipeline Python (Apify + web)** | Ordem: `collect.py` → `collect_open_web.py` → `classify.py` → `aggregate_profiles.py` → `report_html.py`. Entrada: `config/`, `data/influencers.yaml`. Saída típica: `output/dossie-brand-safety-loterias-2026.html` (relatório **heurístico**, distinto do dossiê cliente gerado por `build_dossier_completo.py`). | `loterias2026/scripts/run_pipeline.py` (orquestra tudo). Requer **`APIFY_TOKEN`** no ambiente para IG/TT/X; YouTube e fontes abertas seguem o script. Ver `loterias2026/README.md` → *Pipeline opcional (Apify)* e `requirements.txt`. |
-| **Loterias — CI manual** | Disparo manual no GitHub Actions com secret `APIFY_TOKEN`. | `.github/workflows/loterias2026-brand-safety.yml` |
-| **Loterias — OSINT open source** | Instaloader, yt-dlp, Sherlock, etc.: quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | `loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md` (secção *Ferramentas open source e fluxo OSINT*), `FONTES_BRAND_SAFETY_LOTERIAS2026.md`, `loterias2026/research/osint_runs/requirements-osint.txt` |
+| Área | O quê | Onde / como |
+|------|--------|-------------|
+| **Métricas Instagram e YouTube** | **Social Blade** — consulta manual no site (navegador); copiar números para o painel do dossiê. | Preencher `instagram` e `youtube` em **`dossier_*_panels.yaml`** (mesma estrutura dos lotes em `loterias2026/data/`). Rodapés do HTML já citam “Social Blade” onde aplicável. |
+| **Métricas TikTok** | **Upfluence (TikTok Audit)** — exportação ou captura que **você** faz; enviar os dados (CSV, print estruturado ou tabela) para **organizar no repositório** (inserção nas `rows` do bloco `tiktok` do `_panels.yaml`, alinhado aos cabeçalhos do template). | Coordenação humana + edição de `dossier_*_panels.yaml`; não há integração API automática no fluxo atual. |
+| **Loterias — OSINT open source** | Instaloader, yt-dlp, Sherlock, etc.: suplemento quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | `loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md` (secção *Ferramentas open source e fluxo OSINT*), `FONTES_BRAND_SAFETY_LOTERIAS2026.md`, `loterias2026/research/osint_runs/requirements-osint.txt` |
 | **Loterias — lote 06/04** | CSVs, merge de baseline, notas de redes | `loterias2026-20260406/scripts/merge_creators_baseline.py`, `data/*.csv`, `research/*.md` |
 | **Embratur — proxy Trends/Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | `embratur/scripts/penetracao_mercados.py`, `embratur/research/README.md` |
 
-**Resumo:** dossiê **HTML final** para cliente (modo B) = `dossier_*.md` + `_panels.yaml` + `build_dossier_completo.py`. O **pipeline Apify** e o **OSINT** são **apoio à investigação**; cruzar com o método antes de copiar achados para o `.md`.
+**Resumo:** dossiê **HTML final** para cliente (modo B) = `dossier_*.md` + `_panels.yaml` + `build_dossier_completo.py`. **Apify não faz parte do fluxo operacional** (foi descontinuado por não funcionar bem); métricas = **Social Blade** (IG/YT, manual) + **Upfluence** (TT, dados que você envia e organizamos no YAML). **OSINT** continua como apoio opcional à narrativa.
 
 ### Regra: não copiar Markdown para campos errados
 

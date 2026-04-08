@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-Orquestra o fluxo completo do briefing: coleta → classificação → agregação → HTML.
+Orquestra o fluxo legado: coleta (incl. Apify) → classificação → agregação → HTML.
 
-Uso:
+Não faz parte do fluxo operacional de entrega: métricas no dossiê cliente vêm de
+Social Blade + Upfluence → dossier_*_panels.yaml (ver PLAYBOOK_DOSSIES.md).
+
+Uso (opcional / experimentação):
   python scripts/run_pipeline.py
 
-Requer APIFY_TOKEN no ambiente para Instagram/TikTok/X. YouTube funciona sem Apify.
-Wikipedia, Google News (RSS) e DuckDuckGo não exigem token.
+Requer APIFY_TOKEN para IG/TT/X na coleta Apify. YouTube e web aberta seguem os scripts.
 """
 from __future__ import annotations
 

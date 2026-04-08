@@ -16,7 +16,7 @@
 ### Fonte da verdade (conteúdo + narrativa)
 
 - **`data/dossier_loterias2026.md`** — front matter YAML (meta, briefing, metodologia, sínteses) + **corpo em Markdown** com um bloco `## Nome` por perfil (handles, narrativa, eixos, resumo da tabela). Formato pensado para **anotar pesquisa** sem editar YAML profundo.
-- **`data/dossier_loterias2026_panels.yaml`** — só as **tabelas de métricas** (Instagram, TikTok, YouTube, X) e notas de cobertura. Colar/atualizar exportações aqui.
+- **`data/dossier_loterias2026_panels.yaml`** — só as **tabelas de métricas** (Instagram, TikTok, YouTube, X) e notas de cobertura. **Instagram e YouTube:** dados do **Social Blade** (consulta manual no navegador, copiar para as `rows`). **TikTok:** dados do **Upfluence** — você exporta/envia e a equipe organiza nas `rows` (cabeçalhos iguais ao exemplo neste repo).
 - **`data/dossier_TEMPLATE.md`** — modelo para **novos dossiês** (copiar e renomear; ajustar `build_dossier_completo.py` se usar outro stem).
 - **`data/dossier_loterias2026.yaml`** — snapshot **legado** (monolítico). O build usa **primeiro** o `.md` se existir; sem o `.md`, cai no YAML. Para regenerar `.md` + `_panels.yaml` a partir do YAML: `python3 scripts/migrate_yaml_to_md_source.py`.
 
@@ -43,6 +43,9 @@ https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-
 
 Fluxo recomendado: editar **`dossier_loterias2026.md`** (texto) e **`dossier_loterias2026_panels.yaml`** (números) → rodar o build → copiar o HTML para **`caixa/`**.
 
-## Pipeline opcional (Apify)
+## Métricas (produção atual)
 
-Ver `requirements.txt` e `.github/workflows/loterias2026-brand-safety.yml` — exige `APIFY_TOKEN`; gera outro HTML heurístico em `output/dossie-brand-safety-loterias-2026.html`.
+- **Social Blade** — uso manual no browser para Instagram e YouTube; preencher `dossier_*_panels.yaml`.
+- **Upfluence** — exportação enviada por quem tem acesso; organização das linhas TikTok no mesmo YAML.
+
+Scripts em `scripts/collect.py`, `run_pipeline.py`, etc. que mencionam **Apify** são **legado** e **não** entram no fluxo de entrega ao cliente; não há workflow de Actions para isso.
