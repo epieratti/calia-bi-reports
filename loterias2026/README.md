@@ -4,7 +4,16 @@
 
 - O HTML publicado **não** menciona repositório, `.md`, `.yaml` nem ferramentas internas — só o pedido da campanha, os três critérios, leitura clara e métricas como contexto.
 - **Ordem das seções no HTML:** após metodologia, vem **Perfis por camada**; depois **Síntese**; em seguida **Tabela resumo** (matriz executiva); por último **Métricas** (tabelas por rede).
-- **Edição interna:** `data/dossier_loterias2026.yaml` (textos, tabelas, **`tier`** e **`resumo_tabela`** por perfil — colunas Concorrência/Polêmicas/Política; a **Síntese de risco** na tabela usa o mesmo texto que **`risco_geral`** do perfil; ordem em `briefing.tier_order`).
+
+### Fonte da verdade (conteúdo + narrativa)
+
+- **`data/dossier_loterias2026.md`** — front matter YAML (meta, briefing, metodologia, sínteses) + **corpo em Markdown** com um bloco `## Nome` por perfil (handles, narrativa, eixos, resumo da tabela). Formato pensado para **anotar pesquisa** sem editar YAML profundo.
+- **`data/dossier_loterias2026_panels.yaml`** — só as **tabelas de métricas** (Instagram, TikTok, YouTube, X) e notas de cobertura. Colar/atualizar exportações aqui.
+- **`data/dossier_TEMPLATE.md`** — modelo para **novos dossiês** (copiar e renomear; ajustar `build_dossier_completo.py` se usar outro stem).
+- **`data/dossier_loterias2026.yaml`** — snapshot **legado** (monolítico). O build usa **primeiro** o `.md` se existir; sem o `.md`, cai no YAML. Para regenerar `.md` + `_panels.yaml` a partir do YAML: `python3 scripts/migrate_yaml_to_md_source.py`.
+
+### Pesquisa e referências
+
 - **Evidências com URLs:** `research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`
 - **Metodologia:** `research/METODO_BRAND_SAFETY_LOTERIAS2026.md`
 - **Handles do squad:** `data/influencers.yaml`
@@ -13,18 +22,18 @@
 
 ```bash
 cd loterias2026
-python scripts/build_dossier_completo.py
+python3 scripts/build_dossier_completo.py
 ```
 
 Saída: `output/20260401-dossie-squad-always-on-loterias-2026.html`
 
 **No ar (GitHub Pages, pasta `caixa/`):** após o deploy em `main`, use  
 https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html  
-(senha **apenas** `caixa2026`). Copie o HTML atualizado para `caixa/` ao publicar.
+(senha **apenas** `caixa2026`). Copie o HTML de `output/` para `caixa/` com o mesmo nome ao publicar.
 
 **Acesso:** proteção client-side — somente **`caixa2026`** (SHA-256 no script), alinhado ao box do dossiê 20260326, sem alias.
 
-Após alterar métricas ou textos, edite o YAML e **regenere** o HTML para manter uma única fonte da verdade estruturada.
+Fluxo recomendado: editar **`dossier_loterias2026.md`** (texto) e **`dossier_loterias2026_panels.yaml`** (números) → rodar o build → copiar o HTML para **`caixa/`**.
 
 ## Pipeline opcional (Apify)
 

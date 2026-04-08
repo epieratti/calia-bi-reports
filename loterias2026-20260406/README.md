@@ -38,8 +38,10 @@ Novo dossiê no mesmo modelo de **`loterias2026/`**: Brand Safety / squad, com a
 | `scripts/merge_creators_baseline.py` | Merge IG + TikTok + YT + X + SB em CSV único. |
 | `research/google_alerts_sugestoes.md` | Queries sugeridas para Google Alerts (configuração manual). |
 | `research/fontes_referencia_gemini.md` | Índice rápido de URLs; detalhe narrativo em `SQUAD_FICHA_COMPLETA.md`. |
-| `data/dossier_loterias2026.yaml` | Fonte do **HTML** do dossiê (8 perfis, painéis IG/TT/YT/X, textos Brand Safety). |
-| `scripts/build_dossier_completo.py` | Gera `output/20260406-dossie-squad-always-on-loterias-2026.html` (mesmo modelo que `loterias2026/`). |
+| `data/dossier_loterias2026.md` | Fonte principal do dossiê (front matter + perfis em Markdown). |
+| `data/dossier_loterias2026_panels.yaml` | Tabelas de métricas (IG/TT/YT/X) e notas de cobertura. |
+| `data/dossier_loterias2026.yaml` | Legado monolítico; o build usa `.md` quando existe. |
+| `scripts/build_dossier_completo.py` | Gera `output/20260406-dossie-squad-always-on-loterias-2026.html` (mesmo motor que `loterias2026/`). |
 | `output/20260406-dossie-squad-always-on-loterias-2026.html` | Dossiê gerado; cópia publicada em `caixa/` com o mesmo nome. |
 
 ## HTML do dossiê (cliente)
@@ -52,12 +54,12 @@ Na **raiz do repositório** `calia-bi-reports`:
 
 (Equivale a `python3 scripts/build_dossier_completo.py` + cópia para `caixa/`.)
 
-**Senha:** `caixa2026` (SHA-256 no YAML, igual ao dossiê 20260401).
+**Senha:** `caixa2026` (SHA-256 no front matter do `.md`, igual ao dossiê 20260401).
 
 ## Próximos passos (quando for fechar o dossiê)
 
 1. Redes em `data/influencers.yaml`: YouTube e TikTok conferidos nos `research/`; X ainda pode ser cruzado com bios oficiais.
-2. Após editar `data/dossier_loterias2026.yaml`, voltar a gerar o HTML e copiar para `caixa/`.
+2. Após editar `data/dossier_loterias2026.md` e/ou `data/dossier_loterias2026_panels.yaml`, gerar o HTML e copiar para `caixa/`.
 
 ## Referência
 

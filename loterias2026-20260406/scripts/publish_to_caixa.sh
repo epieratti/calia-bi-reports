@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Gera o dossiê do lote 06/04/2026 a partir do YAML e copia para caixa/ (fonte → publicação GitHub Pages).
+# Gera o dossiê do lote 06/04/2026 a partir do .md + _panels.yaml e copia para caixa/.
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"

@@ -1,0 +1,399 @@
+panels:
+  intro_note: Números na data da coleta; conferir de novo na data do ar.
+  coverage_note: 'Fora da tabela: sem perfil nesta rede ou sem dado nesta exportação.'
+  coverage_note_cells_dash: 'Traço (—) na célula:
+
+    o painel não trouxe aquele número.
+
+    '
+  instagram:
+    footnote: Social Blade.
+    headers:
+    - Nome
+    - Usuário
+    - Seguidores
+    - Variação 14 dias (%)
+    - Posts
+    - Curtidas méd.
+    - Coment. méd.
+    - Engaj.
+    rows:
+    - - Rafael Gratta
+      - rafaelgratta
+      - 3.547.067
+      - -0,37%
+      - '1.110'
+      - 16K
+      - '271'
+      - 0,46%
+    - - Catraca Livre
+      - catracalivre
+      - 1.463.093
+      - -0,06%
+      - '12.545'
+      - '609'
+      - '12'
+      - 0,04%
+    - - Giovanna Pitel
+      - pitelgiovanna
+      - 1.269.480
+      - -0,14%
+      - '838'
+      - 4,3K
+      - '91'
+      - 0,35%
+    - - Mila Costa
+      - nocasomila
+      - '724.674'
+      - -0,01%
+      - '1.425'
+      - 26K
+      - 1,3K
+      - 3,80%
+    - - Índio Behn
+      - indio.behn
+      - '619.868'
+      - +3,44%
+      - '2.897'
+      - 23K
+      - '799'
+      - 3,80%
+    - - Ivan Baron
+      - ivanbaron
+      - '550.499'
+      - +0,16%
+      - '2.176'
+      - 8,3K
+      - '180'
+      - 1,50%
+    - - Cleane Sampaio
+      - cleanesampaioo
+      - '523.359'
+      - +0,77%
+      - '1.369'
+      - 10K
+      - '422'
+      - 2%
+    - - Megh Melry
+      - megh_melry
+      - '488.455'
+      - 0%
+      - '0'
+      - '0'
+      - '0'
+      - 0%
+    - - Aline Costa
+      - comcertezaaline
+      - '230.134'
+      - +0,90%
+      - '637'
+      - 5K
+      - '37'
+      - 2,20%
+    - - Paula Mineira
+      - mineira.paula
+      - '176.755'
+      - +0,44%
+      - '642'
+      - 1,2K
+      - '45'
+      - 0,69%
+    - - Davi
+      - davizoa
+      - '101.442'
+      - +2,36%
+      - '344'
+      - 125K
+      - 1,5K
+      - 125%
+    - - Cereja
+      - cerejaaaaaa
+      - '92.175'
+      - -0,08%
+      - '365'
+      - '580'
+      - '51'
+      - 0,69%
+    - - Cristian Wariu
+      - cristianwariu
+      - '77.218'
+      - -0,14%
+      - '85'
+      - 2,7K
+      - '50'
+      - 3,50%
+  tiktok:
+    footnote: Upfluence.
+    headers:
+    - Nome (painel)
+    - Usuário
+    - Engaj.
+    - Seguidores
+    - Com. méd.
+    - Curt. méd.
+    - Comp. méd.
+    - Repr. méd.
+    - Total curtidas
+    - Vídeos
+    - '% mulheres'
+    - '% homens'
+    rows:
+    - - ivanvbaron
+      - ivanbaron
+      - 0,12%
+      - 671,5K
+      - 83,62
+      - 720,64
+      - 42,09
+      - 14,6K
+      - 12,9M
+      - 1,4K
+      - —
+      - —
+    - - cleane_sampaioo
+      - cleanesampaioo
+      - 0,41%
+      - 190,7K
+      - 19,6
+      - 754,84
+      - 45,16
+      - 255,7K
+      - 4,3M
+      - '0'
+      - —
+      - —
+    - - meghmelry
+      - megh_melry
+      - 0,18%
+      - 1,4M
+      - 94,15
+      - 2,4K
+      - 82,85
+      - 50,9K
+      - 24,7M
+      - '0'
+      - —
+      - —
+    - - indio.behn
+      - indio.behn
+      - 0,44%
+      - 263,5K
+      - 49,52
+      - 1,1K
+      - 178,83
+      - 12,4K
+      - 5,9M
+      - 1,2K
+      - 76,44%
+      - 23,56%
+    - - rafaelgrattap
+      - rafaelgratta
+      - 0,35%
+      - 1,3M
+      - 53,67
+      - 4,5K
+      - 444,75
+      - 38,2K
+      - 36,7M
+      - '983'
+      - 57,44%
+      - 42,56%
+    - - giovannapiteloficial
+      - pitelgiovanna
+      - 2,00%
+      - 110,3K
+      - 15,4
+      - 2,2K
+      - 29,17
+      - 17,9K
+      - 3,4M
+      - '461'
+      - —
+      - —
+    - - Catraca Livre
+      - catracalivre
+      - —
+      - 204,1K
+      - —
+      - —
+      - —
+      - —
+      - 4,8M
+      - '923'
+      - —
+      - —
+    - - mineira.paula
+      - mineira.paula
+      - 0,07%
+      - 345,1K
+      - 8,5
+      - 240,07
+      - 12,86
+      - 3,7K
+      - 8,0M
+      - 1,2K
+      - —
+      - —
+    - - Davizoa
+      - davizoa
+      - —
+      - 220,7K
+      - —
+      - —
+      - —
+      - —
+      - 4,6M
+      - '208'
+      - —
+      - —
+    - - comcertezaaline
+      - comcertezaaline
+      - 0,16%
+      - 5,1M
+      - 46,07
+      - 8,2K
+      - '123'
+      - 613,9K
+      - 55,7M
+      - '614'
+      - 75,28%
+      - 24,72%
+    - - cerejaaaaaaaa
+      - cerejaaaaaa
+      - 0,40%
+      - 9,8K
+      - 1,75
+      - '38'
+      - 3,25
+      - 639,25
+      - 53,3K
+      - '0'
+      - 68,17%
+      - 31,83%
+    - - cristianwariu
+      - cristianwariu
+      - —
+      - 110,6K
+      - —
+      - —
+      - —
+      - —
+      - 1,5M
+      - '97'
+      - —
+      - —
+    - - nocasomila
+      - nocasomila
+      - 4,05%
+      - 44,4K
+      - '26'
+      - 1,8K
+      - 192,8
+      - 21,4K
+      - 1,2M
+      - '151'
+      - 86,42%
+      - 13,58%
+  youtube:
+    footnote: Social Blade.
+    headers:
+    - Canal (painel)
+    - Usuário
+    - Inscritos
+    - Visualizações
+    - Vídeos
+    rows:
+    - - Aline com Certeza
+      - comcertezaaline
+      - 2M
+      - 1,1B
+      - '563'
+    - - Rafael Gratta
+      - rafaelgratta
+      - 1,2M
+      - 178M
+      - 1,1K
+    - - Catraca Livre
+      - catracalivre
+      - 308K
+      - 48M
+      - 3,3K
+    - - Índio Behn
+      - indio.behn
+      - 76K
+      - 15M
+      - 1,6K
+    - - WARIU — povos indígenas
+      - cristianwariu
+      - 55K
+      - 1,8M
+      - '48'
+    - - No caso Mila
+      - nocasomila
+      - 15K
+      - 176K
+      - '14'
+    - - Cleane Sampaio
+      - cleanesampaioo
+      - 2,6K
+      - 101K
+      - '32'
+    - - Paula Helena — Mineira
+      - mineira.paula
+      - 2K
+      - 950K
+      - '77'
+    - - Davizoa
+      - davizoa
+      - 1K
+      - 24K
+      - '18'
+    - - Megh Melry
+      - megh_melry
+      - '133'
+      - 2,5K
+      - '6'
+  x:
+    footnote: Checagem direta no X na data da coleta.
+    headers:
+    - Nome
+    - Usuário
+    - Seguidores
+    - Ativo?
+    - Teor recente (resumo)
+    rows:
+    - - Catraca Livre
+      - CatracaLivre
+      - 1,5M
+      - Sim
+      - Conteúdo patrocinado e cultura
+    - - Cristian Wariu
+      - cristianwariu
+      - 11,8K
+      - Sim
+      - Cotidiano, humor, esporte
+    - - Ivan Baron
+      - ivanbaron
+      - 47,8K
+      - Sim
+      - Inclusão, política, entretenimento
+    - - Cleane Sampaio
+      - cleane_sampaio
+      - '223'
+      - Não
+      - Última atividade antiga; foco musical
+    - - Índio Behn
+      - indiobehn
+      - '187'
+      - Não
+      - Retorno esporádico ao X
+    - - Rafael Gratta
+      - RafaGratta
+      - '534'
+      - Não
+      - Desenvolvimento pessoal e hábitos
+    - - Giovanna Pitel
+      - giovannapitel
+      - 70,2K
+      - Sim
+      - Rio de Janeiro, realities

@@ -15,13 +15,20 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 ## Fonte da verdade (dossiês Loterias)
 
-**O conteúdo publicado destes relatórios é o HTML nesta pasta (`caixa/*.html`).** Edições de texto, tabelas e riscos devem ser feitas **direto no arquivo `.html` servido pelo GitHub Pages**.
+Para **`20260401-dossie-squad-always-on-loterias-2026.html`** e **`20260406-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
 
-Os diretórios `loterias2026/` e `loterias2026-20260406/` (YAML + scripts de build) são **legado**: rodar o gerador pode **sobrescrever** alterações feitas à mão no HTML. Não use mais o YAML como referência operacional para o que está no ar.
+- `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 13)
+- `loterias2026-20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
+
+Rode o build na pasta correspondente e **copie** o HTML gerado em `output/` para este diretório (`caixa/`) para publicar no GitHub Pages. O `.html` em `caixa/` é o artefato servido; mantê-lo alinhado ao build evita divergência.
+
+Modelo para **novos** dossiês no mesmo formato: `loterias2026/data/dossier_TEMPLATE.md`.
+
+Para outros relatórios em `caixa/` que **não** usem esse pipeline, o HTML nesta pasta continua sendo a referência direta.
 
 ## Uso
 
-- **Always ON Loterias — 13 e 8 perfis** (`20260401-…`, `20260406-…`): editar **somente** o `.html` correspondente em `caixa/`. Commit e push para publicar.
+- **Always ON Loterias — 13 e 8 perfis** (`20260401-…`, `20260406-…`): editar **`.md` + `_panels.yaml`** nas pastas `loterias2026/` ou `loterias2026-20260406/`, gerar o HTML, copiar para `caixa/` e commitar.
 - Adicione outros relatórios como `.html` diretamente em `caixa/` (ou em subpastas, se preferir organizar por data/tema).
 - Não é obrigatório ter `index.html` aqui; cada relatório pode ter sua própria URL.
 - Se quiser uma página inicial em `/caixa/`, crie opcionalmente `caixa/index.html` com links para os relatórios.

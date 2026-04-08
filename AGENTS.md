@@ -11,7 +11,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
 | Loterias 2026 (pipeline) | `loterias2026/` | Build: `python scripts/build_dossier_completo.py` a partir de `loterias2026/`. Ver `loterias2026/README.md`. |
 
-Para **dossiês Loterias já publicados em `caixa/*.html`**, trate o **HTML em `caixa/`** como fonte da verdade operacional: edições de conteúdo no que está no ar devem ser feitas nesses arquivos (rodar geradores em `loterias2026/` pode sobrescrever trabalho manual — confira `caixa/README.md`).
+Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` e `loterias2026-20260406/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). Ver `caixa/README.md` e `loterias2026/README.md`.
 
 ## Proteção por senha (client-side)
 

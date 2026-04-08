@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Gera o dossiê Loterias a partir do YAML e copia para caixa/ (única fonte → publicação).
+# Gera o dossiê a partir de data/dossier_loterias2026.md + _panels.yaml e copia para caixa/.
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
