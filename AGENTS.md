@@ -6,6 +6,8 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 
 **Idioma (regra primordial — dossiê):** todo o conteúdo do **dossiê** entregue ao cliente (fonte `.md`, painéis, HTML) deve estar em **pt-BR**, salvo o **usuário** pedir **explicitamente** outro idioma — ver `PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*.
 
+**Redação:** textos finais **humanizados**, **claros**, **sucintos** e **completos** (sem lacunas que gerem dúvida na decisão) — ver `PLAYBOOK_DOSSIES.md` → *Qualidade da redação*.
+
 **Ordem de leitura sugerida:** `PLAYBOOK_AGENTES.md` (camada curta: regras, 0→7, links) → `PLAYBOOK_DOSSIES.md` (referência completa; fluxo 0→7 **adaptado ao briefing** do usuário) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
 
 **Briefing:** o pedido do **usuário** define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. No Pipeline §1, perguntas marcadas **(E)** são essenciais, **(C)** obrigatórias só quando a condição se aplica, **(O)** podem usar padrão do playbook se declarado. **Se faltar (E) ou (C) aplicável**, **perguntar**; não supor pasta, senha ou push em silêncio.

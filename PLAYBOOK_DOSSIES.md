@@ -12,6 +12,21 @@ Documento na **raiz do repositório**: vale para **qualquer cliente ou tema** (m
 
 **Todo** o conteúdo do dossiê entregue ao cliente deve estar em **português do Brasil (pt-BR)** — incluindo **`.md`**, **`_panels.yaml`** (rótulos, notas, células de texto visíveis no HTML), **HTML** gerado ou manual (títulos, parágrafos, sumário, botões, mensagens do gate), e **metadados de leitura** (título, subtítulo, período no front matter). **Exceto** quando o usuário pedir **explicitamente** outro idioma no briefing. Podem manter-se **citações**, **nomes de marcas**, **handles** e **trechos de fonte** no idioma original entre aspas ou com tradução entre parênteses, quando a fidelidade à prova for relevante.
 
+### Qualidade da redação dos textos finais
+
+Todo **texto que o cliente lê** (briefing no HTML, leitura rápida, metodologia, perfis, eixos, tabela resumo, notas de rodapé, rótulos de tabela quando forem frases) deve ser:
+
+| Objetivo | O que significa na prática |
+|----------|----------------------------|
+| **Humanizado** | Soar como **análise humana** clara, não como extrato de robô ou lista de tags; frases completas; evitar jargão vazio (“sinergia”, “robusto”) e **bulletese** sem contexto. |
+| **Fácil compreensão** | Leitor **não técnico** entende à primeira leitura; definir siglas na primeira vez; preferir **ordem** sujeito → verbo → complemento; uma ideia principal por parágrafo. |
+| **Sucinto** | Cortar repetição entre seções (o mesmo fato não precisa aparecer idêntico em narrativa, resumo e tabela sem valor agregado); preferir **menos palavras** mantendo o sentido. |
+| **Completo — sem deixar dúvida** | Para cada afirmação que importa para **decisão** ou **risco**: o leitor sabe **o quê**, **em que base** (fonte ou “neste método não localizamos”), **até quando** vale (data) e, se aplicável, **o que não foi possível** verificar. Ambiguidade (“pode ser problemático”) só com **por quê** na mesma frase ou no parágrafo seguinte. |
+
+**Teste rápido antes de fechar:** um colega que **não** fez a pesquisa consegue responder **sim/não** ou **baixo/médio/alto** com segurança só lendo aquele bloco? Se surgir “mas e se…?”, completar o texto.
+
+Esta revisão entra naturalmente na etapa **4b — Síntese crítica** e de novo no **6 — QA** (reler em voz alta mentalmente os blocos executivos).
+
 ### Para o agente de IA (ler primeiro)
 
 Este arquivo existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o usuário passa** (mensagem, arquivo ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **pular** passos conforme o briefing.
@@ -62,6 +77,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 7. **Visuais** — precisa de gráfico, rosca, barra de progresso ou **só tabela/número**? Consultar seção **Gráficos** e **Barras de progresso**; um gráfico = uma pergunta; não adornar sem função.
 8. **Ordem narrativa dentro do perfil** — snapshot de redes → narrativa → eixos costuma ser o mais legível; ajustar se o briefing pedir “risco primeiro”.
 9. **Tom e compressão** — cortar adjetivos, unificar duplicatas; manter **pt-BR** e linguagem do cliente.
+10. **Redação** — passar cada bloco executivo pelo critério [humanizado / claro / sucinto / completo](#qualidade-da-redação-dos-textos-finais); remover tom de “relatório de máquina”.
 
 #### Saída obrigatória (para o agente)
 
@@ -371,12 +387,13 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 ## Princípios (valem para todos os modos)
 
 1. **Português (Brasil)** — o dossiê na íntegra em **pt-BR**, salvo instrução explícita em contrário no briefing (ver [Idioma do dossiê](#idioma-do-dossiê-regra-primordial)).
-2. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
-3. **Snapshot no tempo** — datas de coleta, “até mês/ano”, e lembrar que métricas de rede envelhecem rápido.
-4. **Desambiguação** — homônimos (nome + @ + contexto); registrar o que foi descartado quando isso já deu ruído em entregas passadas.
-5. **“Não consta” / “não achamos”** — significa *nas fontes e no método deste trabalho*, não “não existe”.
-6. **Linguagem do cliente** no HTML entregue — sem citar ferramentas internas, nomes de arquivos do repo ou processos que não interessam à leitura executiva (salvo pedido explícito).
-7. **Publicação** — pastas servidas pelo Pages estão descritas no [`README.md`](README.md) da raiz; após mudar HTML publicado, **commit + push** alinhado às regras do projeto.
+2. **Redação final** — textos **humanizados**, de **fácil compreensão**, **sucintos** e **completos** para a decisão: sem deixar dúvida sobre o que foi verificado, o que falta e o que isso implica (ver [Qualidade da redação dos textos finais](#qualidade-da-redação-dos-textos-finais)).
+3. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): preferir link para matéria, post arquivável ou documento oficial.
+4. **Snapshot no tempo** — datas de coleta, “até mês/ano”, e lembrar que métricas de rede envelhecem rápido.
+5. **Desambiguação** — homônimos (nome + @ + contexto); registrar o que foi descartado quando isso já deu ruído em entregas passadas.
+6. **“Não consta” / “não achamos”** — significa *nas fontes e no método deste trabalho*, não “não existe”.
+7. **Linguagem do cliente** no HTML entregue — sem citar ferramentas internas, nomes de arquivos do repo ou processos que não interessam à leitura executiva (salvo pedido explícito).
+8. **Publicação** — pastas servidas pelo Pages estão descritas no [`README.md`](README.md) da raiz; após mudar HTML publicado, **commit + push** alinhado às regras do projeto.
 
 ### Limites operacionais (agentes e automação)
 
@@ -406,7 +423,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 |------|--------|----------|----------------------------------|
 | **Cliente e produto** | **E** | Para **quem** é o dossiê (marca, unidade, campanha)? | Pasta de publicação (`caixa/`, `caixa/loterias/`, `embratur/`, nova pasta), tom e linha “cliente” no cabeçalho. |
 | **Objetivo** | **E** | O que o leitor deve **decidir** ou **entender** ao final? | Profundidade, riscos a priorizar, âmbito do texto. |
-| **Leitor** | **O** | Quem lê (jurídico, marketing, direção)? Nível de detalhe? | Linguagem e extensão; default: executivo/marketing. |
+| **Leitor** | **O** | Quem lê (jurídico, marketing, direção)? Nível de detalhe? | Linguagem e extensão; default: executivo/marketing; textos finais devem ser **humanizados, claros, sucintos e completos** (playbook — *Qualidade da redação*). |
 | **Modo de entrega** | **C** | **A** (HTML manual), **B** (`.md` + gerador) ou **C** (pesquisa → HTML na mão)? Ou “igual ao último dossiê X”? | **Obrigatório perguntar** se o pedido **não** deixar o modo óbvio (ex.: só “atualiza o dossier” sem dizer qual arquivo). |
 | **Âmbito** | **E** | Lista de **nomes / @** ou “descobrir perfis a partir de…”? Quantos perfis? | Sem isto não há alvo de pesquisa. |
 | **Redes** | **O** | Quais redes entram (IG, TT, YT, X, outras)? Alguma **fora** de âmbito? | Default modo B: as quatro redes do template; ajustar se o briefing disser outra coisa. |
