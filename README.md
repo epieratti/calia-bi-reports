@@ -1,5 +1,7 @@
 # calia-bi-reports
 
+**Linha de produção de dossiês (qualquer cliente):** ver **`PLAYBOOK_DOSSIES.md`** na raiz.
+
 O dossiê principal da Embratur fica em **`embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html`**. Relatórios da **Caixa** ficam na pasta **`caixa/`** (mesmo padrão; ver `caixa/README.md`).
 
 - **URL direta do dossiê Embratur:** https://epieratti.github.io/calia-bi-reports/embratur/20260323-dossie-auditoria-personalidades-embratur-2026.html  

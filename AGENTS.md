@@ -1,6 +1,6 @@
 # Instruções para agentes (calia-bi-reports)
 
-Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O trabalho típico é editar ou gerar HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
+Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O trabalho típico é editar ou gerar HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz. **Método comum para novas entregas:** `PLAYBOOK_DOSSIES.md` (raiz).
 
 ## Estrutura principal
 
@@ -9,7 +9,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 | Dossiê Embratur (referência) | `embratur/` | Página principal do site; `index.html` na raiz redireciona para cá. |
 | Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
-| Loterias 2026 (pipeline) | `loterias2026/` | Playbook: `loterias2026/docs/PLAYBOOK_DOSSIE_CREATORS.md`. Novo lote: `new_creator_dossier.py`. Build: `build_dossier_completo.py`. Ver `loterias2026/README.md`. |
+| Loterias 2026 (pipeline) | `loterias2026/` | Playbook geral: `PLAYBOOK_DOSSIES.md`. Novo lote: `new_creator_dossier.py`. Build: `build_dossier_completo.py`. Ver `loterias2026/README.md`. |
 
 Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` e `loterias2026-20260406/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). Ver `caixa/README.md` e `loterias2026/README.md`.
 
@@ -31,6 +31,7 @@ Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`
 
 ## Referência rápida
 
+- Playbook de dossiês (raiz): `PLAYBOOK_DOSSIES.md`
 - Visão geral e URLs: `README.md`
 - Caixa (índice, senhas, dossiês): `caixa/README.md`
 - Pipeline Loterias 2026: `loterias2026/README.md`

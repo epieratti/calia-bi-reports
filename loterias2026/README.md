@@ -2,7 +2,7 @@
 
 ## Linha de produção (novos dossiês de creators)
 
-1. Leia o playbook: **`docs/PLAYBOOK_DOSSIE_CREATORS.md`** (fases, checklist, lições dos lotes anteriores).
+1. Leia o playbook geral na raiz do repo: **`PLAYBOOK_DOSSIES.md`** (vale para qualquer cliente; aqui só os passos técnicos Loterias).
 2. Crie fonte nova: `python3 scripts/new_creator_dossier.py SEU_SLUG --variant squad_13` (ou `squad_8` para layout do lote de 8 perfis).
 3. Edite `dossier_SEU_SLUG.md` e `dossier_SEU_SLUG_panels.yaml`.
 4. Gere HTML: `python3 scripts/build_dossier_completo.py --md data/dossier_SEU_SLUG.md --out output/....html --variant squad_13`
