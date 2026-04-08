@@ -331,6 +331,51 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 - Cliente, objetivo do dossiê, público-leitor, prazo, **critérios** de análise (o que é “risco”, o que é concorrência, etc.).
 - Onde o ficheiro vai morar no site (URL esperada) e se haverá **senha** (qual política de hash, alinhada a outros dossiês do mesmo cliente).
 
+#### Perguntas que o briefing deve responder (checklist)
+
+Se alguma resposta faltar, o agente **assumir o mínimo** e **dizer o que assumiu**, ou **pedir** só o que bloqueia o trabalho.
+
+| Tema | Pergunta | Porquê importa |
+|------|----------|----------------|
+| **Cliente e produto** | Para **quem** é o dossiê (marca, unidade, campanha)? | Pasta de publicação (`caixa/`, `caixa/loterias/`, `embratur/`, nova pasta), tom e linha “cliente” no cabeçalho. |
+| **Objetivo** | O que o leitor deve **decidir** ou **entender** ao final? | Define profundidade, riscos a priorizar e o que pode ficar de fora. |
+| **Leitor** | Quem lê (jurídico, marketing, direção)? Nível de detalhe? | Afeta linguagem, tamanho das secções e quantidade de evidência. |
+| **Modo de entrega** | **A** (HTML manual), **B** (`.md` + gerador) ou **C** (pesquisa → HTML na mão)? Ou “igual ao último dossiê X”? | Caminho técnico e ficheiros a tocar. |
+| **Âmbito** | Lista de **nomes / @** ou “descobrir perfis a partir de…”? Quantos perfis? | Etapa 2 (identidade) vs só preencher fonte. |
+| **Redes** | Quais redes entram (IG, TT, YT, X, outras)? Alguma **fora** de âmbito? | Painéis, mini-cards, pesquisa. |
+| **Critérios** | O que conta como **risco alto/médio/baixo**? O que é **concorrência** / **política** / **polêmica** neste pedido? | Eixos e selos alinhados ao cliente. |
+| **Métricas** | Snapshot até **que data**? Usar Social Blade / Upfluence / X manual como no repo, ou só o que o utilizador enviar? | `_panels.yaml` e notas de rodapé. |
+| **Evidência** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Regra “um fato, uma prova”. |
+| **Formato HTML** | Reutilizar **layout** de um ficheiro existente? Gráficos (Chart.js, barras de progresso)? Cores white-label? | Modo A ou evolução do `dossier_render.py`. |
+| **Ficheiro e URL** | **Nome** desejado do `.html` (`YYYYMMDD-dossie-…`) ou “sugerir”? **Pasta** exata: `caixa/`, `caixa/loterias/`, `embratur/`, outra? | §2 Nomenclatura / Pastas. |
+| **Acesso** | **Senha** no gate (texto claro para gerar hash) ou “igual ao dossiê Y”? Preview **sem** gate (`--no-gate`)? | SHA-256 no front matter ou script. |
+| **Publicação** | **Commit + push** até Pages, **só branch**, ou **só ficheiros locais**? | Etapa 7; evita publicar sem ordem. |
+| **Prazo e prioridade** | O que é **MVP** vs “se der tempo”? | Ordem de tarefas quando o tempo aperta. |
+| **Restrições** | Não citar X, não usar OSINT, não tocar em `tools/`… | Evita desvio de âmbito. |
+
+#### Modelo de briefing (copiar e preencher)
+
+```text
+## Briefing — [título curto]
+
+1. Cliente / campanha: 
+2. Objetivo (o que o leitor deve conseguir fazer ou entender): 
+3. Leitor-alvo (área + nível de detalhe): 
+4. Modo preferido: [ A | B | C | “igual a <ficheiro ou projeto>” ]
+5. Perfis: [lista Nome + @ quando souber] OU [“descobrir a partir de: …”]
+6. Redes no âmbito: [ IG, TT, YT, X ] — excluir: [ … ]
+7. Critérios de risco / concorrência / política (definições para ESTE pedido): 
+8. Métricas: data do snapshot desejada: ______ — fontes: [ padrão repo | só dados anexados | … ]
+9. Evidências: [ link obrigatório | flexível ] — fontes preferidas: 
+10. HTML: nome sugerido ______ ou “sugerir” — pasta: [ caixa/ | caixa/loterias/ | embratur/ | ______ ]
+11. Senha no gate: [ sim: ______ | não / preview | igual ao dossiê ______ ]
+12. Publicação: [ push Pages | só commit na branch ______ | não publicar ]
+13. Prazo / MVP / fora de âmbito: 
+14. Restrições ou notas: 
+```
+
+Versão **mínima** se tiver pressa: itens **1, 2, 5, 10** + (se modo B ou publicar) **4** e **12**.
+
 ### 2. Estrutura e convenções
 
 #### Nomenclatura do ficheiro `.html` (publicado)
