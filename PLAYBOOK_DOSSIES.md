@@ -39,6 +39,16 @@ Todo **texto que o cliente lê** (briefing no HTML, leitura rápida, metodologia
 **Exemplo ruim:** “Há menções negativas na imprensa” + só um hyperlink.  
 **Exemplo bom:** “Em DD/MM/AAAA, o veículo X publicou que… (resumo objetivo em uma ou duas frases).” + link para a matéria.
 
+**Citação com link (obrigatório quando houver URL):** **Fonte é prioridade.** Sempre que a evidência tiver endereço **http(s)** estável (matéria, post, ficha oficial, arquivo), o dossiê deve incluir **link clicável** (`[rótulo](url)` no `.md`, que vira link no HTML) **além** do resumo no texto. **Não** basta escrever “conforme Veículo X” ou “post no Instagram” sem URL se essa URL existir e for acessível ao leitor. O parágrafo continua **autocontido** (quem não abre o link já entende); o link **comprova** e permite auditoria.
+
+| Situação | Link obrigatório? |
+|----------|-------------------|
+| Matéria, post, fio, página pública com URL | **Sim** |
+| Perfil público como fonte de “o que diz a bio / último post visto” | **Sim** — preferir URL do **perfil** ou do **post** específico citado |
+| Métricas agregadas (Social Blade, etc.) | Rodapé “Fonte: …” já usado nos painéis; se no **texto** citar um número tirado de uma **página** específica, incluir **link** para essa página |
+| Consulta só no app / print / reunião / documento sem URL pública | Indicar tipo e data; **sem** link inventado |
+| Wayback / archive para URL que mudou | Link para o **snapshot** quando for a evidência usada |
+
 Esta regra aplica-se a **narrativa, eixos, leitura rápida, síntese, células da tabela resumo** e notas que forem texto; **não** exige copiar artigo inteiro — basta o **núcleo informativo** que remove a dúvida.
 
 Esta revisão entra naturalmente na etapa **4b — Síntese crítica** e de novo no **6 — QA** (reler em voz alta mentalmente os blocos executivos).
@@ -95,6 +105,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 9. **Tom e compressão** — cortar adjetivos, unificar duplicatas; manter **pt-BR** e linguagem do cliente.
 10. **Redação** — passar cada bloco executivo pelo critério [humanizado / claro / sucinto / completo](#qualidade-da-redação-dos-textos-finais); remover tom de “relatório de máquina”.
 11. **Autocontido** — nenhuma conclusão importante depende de **abrir** link; conferir [Documento autocontido e links](#documento-autocontido-e-links-de-fonte).
+12. **Links de fonte** — toda afirmação ancorada na web com URL conhecida tem **hyperlink** no `.md`; no **6 — QA**, reler trechos sensíveis e confirmar que não faltou `[]()`.
 
 #### Saída obrigatória (para o agente)
 
@@ -405,7 +416,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 1. **Português (Brasil)** — o dossiê na íntegra em **pt-BR**, salvo instrução explícita em contrário no briefing (ver [Idioma do dossiê](#idioma-do-dossiê-regra-primordial)).
 2. **Redação final** — textos **humanizados**, de **fácil compreensão**, **sucintos** e **completos** para a decisão: sem deixar dúvida sobre o que foi verificado, o que falta e o que isso implica (ver [Qualidade da redação dos textos finais](#qualidade-da-redação-dos-textos-finais)).
-3. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): o **fato e a leitura** vão **no texto** do dossiê; o **link** é **evidência e complemento** — nunca o único lugar onde a informação existe (ver [Documento autocontido e links](#documento-autocontido-e-links-de-fonte)).
+3. **Um fato, uma prova pública** quando a afirmação for sensível (marca, política, aposta, polêmica): o **fato e a leitura** vão **no texto** do dossiê (**autocontido**); se existir **URL** da evidência, incluir **sempre** o **link** — nunca só o nome do veículo/plataforma sem hyperlink quando a URL estiver disponível (ver [Documento autocontido e links](#documento-autocontido-e-links-de-fonte)).
 4. **Snapshot no tempo** — datas de coleta, “até mês/ano”, e lembrar que métricas de rede envelhecem rápido.
 5. **Desambiguação** — homônimos (nome + @ + contexto); registrar o que foi descartado quando isso já deu ruído em entregas passadas.
 6. **“Não consta” / “não achamos”** — significa *nas fontes e no método deste trabalho*, não “não existe”.

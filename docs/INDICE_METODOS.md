@@ -12,7 +12,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Exemplo mínimo** modo B (1 perfil) | [`examples/minimo/README.md`](../examples/minimo/README.md) |
 | **Idioma** — dossiê sempre **pt-BR** (exceto se o **usuário** pedir outro) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Idioma do dossiê* |
 | **Redação** — humanizado, claro, sucinto, completo (público: planejamento, atendimento, cliente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Qualidade da redação* |
-| **Links** — dossiê autocontido; URL só como evidência/complemento | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Documento autocontido e links* |
+| **Links** — autocontido + **hyperlink obrigatório** quando houver URL da fonte | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Documento autocontido e links* |
 | **Disaster check — mapa de ferramentas** (onde está cada coisa no playbook) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Disaster check / brand safety — ferramentas* |
 | **Inventário de pesquisa** + extras sem API (Maigret, News, imagem inversa…) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Coleta de dados* + *Mercado* |
 | **Modelo de briefing** — (E)/(C)/(O) essencial/condicional/opcional + template | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §1 — Perguntas / Modelo* |

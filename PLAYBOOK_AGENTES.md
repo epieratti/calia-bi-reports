@@ -6,7 +6,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 
 1. **Dossiê entregue ao cliente** — todo o conteúdo visível em **pt-BR**, salvo o **usuário** pedir outro idioma explicitamente (`PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*).
 2. **Redação** — textos finais **humanizados**, **fáceis de entender**, **sucintos** e **completos** para **planejamento, atendimento e cliente** (quem lê costuma não ter feito a pesquisa): sem dúvida sobre conclusão, base e vigência (`PLAYBOOK_DOSSIES.md` → *Qualidade da redação*).
-3. **Autocontido** — **não** exigir clique em link para entender; links são **evidência/complemento**; o essencial da informação vai no parágrafo (`PLAYBOOK_DOSSIES.md` → *Documento autocontido e links*).
+3. **Autocontido + links** — texto completo **sem** precisar abrir o link para entender; **e**, quando houver URL da fonte, **sempre** citar com **hyperlink** (evidência); ver *Documento autocontido e links* no playbook completo.
 4. **Briefing incompleto** — perguntar o que faltar nos itens **(E)** e **(C)** do Pipeline §1 do playbook completo; não supor pasta, senha ou push.
 5. **Anti-vazamento** — no HTML do cliente, **não** citar caminhos do repo (`loterias2026/`, `tools/`, `.md`, `_panels.yaml`). Validar com `python3 tools/check_client_html_leakage.py` antes de publicar.
 
