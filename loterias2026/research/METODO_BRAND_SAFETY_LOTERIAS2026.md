@@ -123,6 +123,6 @@ Jogo do bicho, banca vs. Mega-Sena/CAIXA informativo.
 
 Máquinas de CI/agente costumam levar **403**, **login wall** ou **CAPTCHA** em Instagram/TikTok. O playbook acima funciona melhor em **máquina local** ou VM com **navegador humano** quando a automação falhar.
 
-**Execução real (31/03/2026):** `pip install -r loterias2026/research/osint_runs/requirements-osint.txt` — **Instaloader** → **403** no GraphQL do Instagram; **Sherlock** + **yt-dlp** → resultados em `loterias2026/research/osint_runs/20260331/` e resumo em `FONTES_BRAND_SAFETY_LOTERIAS2026.md` (seção **Rodada OSINT**).
+**Execução real (31/03/2026):** `pip install -r tools/requirements-osint.txt` (canónico na raiz; espelho em `loterias2026/research/osint_runs/requirements-osint.txt`) — **Instaloader** → **403** no GraphQL do Instagram; **Sherlock** + **yt-dlp** → resultados em `loterias2026/research/osint_runs/20260331/` e resumo em `FONTES_BRAND_SAFETY_LOTERIAS2026.md` (seção **Rodada OSINT**).
 
 **Dossiê HTML (entrega ao cliente):** gerado por `scripts/build_dossier_completo.py` a partir de `data/dossier_loterias2026.yaml`. O texto **na página** não deve citar arquivos internos — só linguagem de briefing. Evidências com URLs permanecem em **FONTES** (uso interno).

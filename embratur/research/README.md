@@ -2,7 +2,7 @@
 
 ## O que foi gerado
 
-- `penetracao_trends_wiki_2026.csv` / `.json` — saída do script em `../scripts/penetracao_mercados.py`.
+- `penetracao_trends_wiki_2026.csv` / `.json` — saída do script genérico [`tools/penetracao_mercados.py`](../../tools/penetracao_mercados.py) (entidades em `penetracao_entities_embratur_2026.json`). O ficheiro `embratur/scripts/penetracao_mercados.py` é *wrapper* que chama o de `tools/`.
 
 ## Metodologia (resumo)
 
@@ -22,8 +22,16 @@
 ## Como rodar de novo
 
 ```bash
-pip install pytrends requests
+# Na raiz do repositório (recomendado — válido para qualquer cliente):
+pip install -r tools/requirements-penetracao.txt
+python3 tools/penetracao_mercados.py \
+  --entities-json embratur/research/penetracao_entities_embratur_2026.json \
+  --output-prefix embratur/research/penetracao_trends_wiki_2026
+
+# Atalho (mesmo resultado — delega para tools/):
 python3 embratur/scripts/penetracao_mercados.py
 ```
+
+Para **outro dossiê**, copiar [`tools/penetracao_entities_example.json`](../../tools/penetracao_entities_example.json), preencher `label`, `trend_term`, `wiki_title` e passar `--entities-json` / `--output-prefix` adequados.
 
 Data da última execução no ambiente de desenvolvimento: ver commit / timestamp do arquivo.

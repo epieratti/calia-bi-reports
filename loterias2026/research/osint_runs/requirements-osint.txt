@@ -1,4 +1,6 @@
-# Rodada OSINT (opcional) — pip install -r requirements-osint.txt
+# Fonte canónica (qualquer cliente): ../../tools/requirements-osint.txt
+# Da raiz do repo: pip install -r tools/requirements-osint.txt
+# Este ficheiro mantém as mesmas linhas para não partir comandos antigos na documentação.
 instaloader>=4.14
 yt-dlp>=2025.1.26
 sherlock-project>=0.14.0

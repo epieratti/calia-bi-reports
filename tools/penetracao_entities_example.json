@@ -1,0 +1,12 @@
+[
+  {
+    "label": "Nome para o relatório",
+    "trend_term": "Termo exato no Google Trends",
+    "wiki_title": "Título do artigo na Wikipédia EN (ou texto para pesquisa)"
+  },
+  {
+    "label": "Segundo exemplo",
+    "trend_term": "outro termo",
+    "wiki_title": "Article Title English Wikipedia"
+  }
+]

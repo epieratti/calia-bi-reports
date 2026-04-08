@@ -1,0 +1,5 @@
+# OSINT opcional — válido para qualquer dossiê / cliente.
+# Na raiz do repo: pip install -r tools/requirements-osint.txt
+instaloader>=4.14
+yt-dlp>=2025.1.26
+sherlock-project>=0.14.0

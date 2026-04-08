@@ -27,5 +27,7 @@ Mapa **pergunta → ficheiro**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia 
 | URLs do site e Pages | [`README.md`](../README.md) (raiz) |
 | Instruções para agentes / git | [`AGENTS.md`](../AGENTS.md) |
 | Motor HTML + parser `.md` (modo B) | `tools/dossier_render.py`, `tools/md_dossier_source.py` |
+| **OSINT pip** (qualquer cliente) | [`tools/requirements-osint.txt`](../tools/requirements-osint.txt) |
+| **Trends + Wikipedia** (qualquer cliente) | [`tools/penetracao_mercados.py`](../tools/penetracao_mercados.py), [`tools/requirements-penetracao.txt`](../tools/requirements-penetracao.txt) |
 | Validação fonte `.md` (formato do gerador) | `tools/validate_dossier_source.py` |
 | Legado Apify / `run_pipeline` | [`loterias2026/scripts/README_LEGADO.md`](../loterias2026/scripts/README_LEGADO.md) |
