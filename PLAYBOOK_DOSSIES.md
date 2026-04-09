@@ -57,7 +57,7 @@ Esta revisão entra naturalmente na etapa **4b — Síntese crítica** e de novo
 
 Este arquivo existe para **orientar o agente** no fluxo certo. **Regra principal:** o **briefing que o usuário passa** (mensagem, arquivo ou lista de requisitos) é a **fonte de verdade** para **modo** (A/B/C), **ordem das tarefas**, **o que incluir ou omitir** e **quando parar**. A tabela **Fluxo em etapas (0→7)** abaixo é um **esqueleto** — o agente deve **adaptar**, **fundir** ou **pular** passos conforme o briefing.
 
-**Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao usuário** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C, senha, âmbito de redes, ou se deve fazer push ao Pages. Só depois de resposta (ou confirmação explícita tipo “usa o padrão do repo para X”) continuar.
+**Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao usuário** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C ou âmbito de redes. **Padrão operacional Calia (salvo pedido explícito em contrário):** o HTML **sempre** sai **com gate/senha** e o fluxo **sempre** inclui **commit + push** ao remoto (GitHub Pages) conforme [`AGENTS.md`](AGENTS.md) / branch em uso — não é preciso “perguntar se vai publicar” nem “se tem senha”; só **perguntar o valor da senha** (ou “igual ao dossiê X”) quando isso não vier no briefing, e respeitar **exceções explícitas** (ex.: preview sem senha, rascunho só local).
 
 **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
 
@@ -76,7 +76,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 | Etapa | Ação | Saída / critério de “feito” |
 |-------|------|-----------------------------|
 | **0 — Modo** | A partir do **briefing**, escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste arquivo). Se o pedido for ambíguo, propor modo + razão em 1 frase antes de avançar. | Modo escolhido e **coerente com o briefing**. |
-| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, senha se houver. O que o usuário **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos; **perguntar** o que faltar (checklist §1) antes de executar. |
+| **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, **texto da senha** (ou referência a outro dossiê). **Padrão:** gate **sempre**; publicação **sempre** (push), salvo exceção explícita no pedido. O que o usuário **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos; **perguntar** o que faltar (checklist §1) antes de executar. |
 | **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
 | **3a — Modo B: arquivos** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de arquivos consistente; ver [README do modo B](loterias2026/README.md). |
 | **3b — Modo A/C: arquivos** | Duplicar `.html` de referência ou montar estrutura manual; aplicar seção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
@@ -435,7 +435,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 ### 1. Briefing fechado
 
 - Cliente, objetivo do dossiê, público-leitor, prazo, **critérios** de análise (o que é “risco”, o que é concorrência, etc.).
-- Onde o arquivo vai morar no site (URL esperada) e se haverá **senha** (qual política de hash, alinhada a outros dossiês do mesmo cliente).
+- Onde o arquivo vai morar no site (URL esperada) e o **texto da senha** do gate (ou “igual ao dossiê X”) — **padrão:** sempre com senha; publicação **sempre** com commit + push, salvo exceção explícita no pedido.
 
 #### Perguntas que o briefing deve responder (checklist)
 
@@ -462,8 +462,8 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 | **Evidência** | **O** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Default: seção **Princípios** mais abaixo neste arquivo (um fato, uma prova quando sensível). |
 | **Formato HTML** | **O** | Reutilizar **layout** de um arquivo existente? Gráficos? White-label? | Default: mesmo padrão Calia / arquivo de referência mais próximo. |
 | **Arquivo e URL** | **E** | **Pasta** de entrega (`caixa/`, `caixa/loterias/`, `embratur/`, …)? **Nome** do `.html` ou “sugerir”? | Mínimo: **saber o cliente/pasta**; o nome pode ser “sugerir” conforme §2. |
-| **Acesso** | **C** | **Senha** no gate (texto para hash) ou “igual ao dossiê Y”? Preview **sem** gate? | **Obrigatório perguntar** se o HTML tiver **gate** ou o pedido falar em acesso protegido. Se for **preview explícito** sem senha, pode ficar `--no-gate`. |
-| **Publicação** | **C** | **Commit + push** ao Pages, **só branch**, ou **só local**? Qual branch? | **Obrigatório perguntar** se o pedido envolver **alterar repo remoto**, **HTML em pasta servida pelo Pages**, ou **abrir/atualizar PR**. Se for “só editar arquivo local / rascunho”, não exige. |
+| **Acesso (senha)** | **E** | **Texto da senha** (para gerar o hash do gate) ou **“igual ao dossiê / arquivo: …”**? | **Padrão:** **sempre** HTML **com** gate/senha. **Só** usar `--no-gate` / preview aberto se o usuário pedir **explicitamente**. Se faltar o **valor** da senha (ou a referência), **perguntar**. |
+| **Publicação (git)** | **O** | O usuário pediu **explicitamente** não publicar ou só rascunho local? | **Padrão:** **sempre** **commit + push** ao remoto (fluxo do branch / GitHub Pages), alinhado a [`AGENTS.md`](AGENTS.md). **Não** perguntar “se vai publicar” no fluxo normal. |
 | **Prazo e prioridade** | **O** | O que é **MVP** vs “se der tempo”? | Default: entregar o pedido literal. |
 | **Restrições** | **O** | Não usar OSINT, não tocar em `tools/`, etc.? | Default: sem restrições extra além do playbook. |
 | **Idioma** | **O** | Idioma do dossiê **diferente de pt-BR**? | Default: **todo** o entregável em **português (Brasil)** — só perguntar ou mudar se o briefing pedir outro idioma de forma explícita. |
@@ -485,15 +485,15 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 8. (O) Métricas: data do snapshot desejada: ______ — fontes: [ padrão repo | só dados anexados | … ]
 9. (O) Evidências: [ link obrigatório | flexível ] — fontes preferidas: 
 10. (E) HTML: pasta [ caixa/ | caixa/loterias/ | embratur/ | ______ ] — nome ______ ou “sugerir”
-11. (C) Senha no gate: [ sim: ______ | não / preview | igual ao dossiê ______ ] — obrigatório se houver gate
-12. (C) Publicação: [ push Pages | só commit na branch ______ | não publicar ] — obrigatório se houver git remoto / Pages
+11. (E) Senha do gate (texto para hash): ______ OU “igual ao dossiê / arquivo: ______” — padrão: **sempre** com senha; só sem gate se pedires **explicitamente** preview aberto
+12. (O) Publicação: [ padrão: commit + push ao remoto / Pages ] — só preencher se for **exceção** explícita (ex.: “não publicar”, “só local”)
 13. (O) Prazo / MVP / fora de âmbito: 
 14. (O) Restrições ou notas: 
 15. (O) Idioma: [ PT-BR — padrão; não preencher ] OU [ outro: ______ ] — só se NÃO for português do Brasil
 16. (O) Mostrar plano de síntese (4b) na resposta antes do build: [ sim | não — padrão: agente faz 4b internamente ]
 ```
 
-**Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** — e **cada (C) que se aplique** (4 se modo não for claro; 11 se houver senha/gate; 12 se houver push/branch). Itens **(O)** podem ficar em aberto com padrão do playbook, desde que o agente **declare** o que assumiu.
+**Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10, 11** (senha ou referência a outro dossiê) — e **cada (C) que se aplique** (4 se modo não for claro). Itens **(O)** podem ficar em aberto com padrão do playbook (**publicar sempre**, salvo exceção no item 12), desde que o agente **declare** o que assumiu.
 
 Se o usuário só enviar um subconjunto, o agente **pergunta** tudo o que for **(E)** ou **(C)** aplicável em falta; não inventar.
 
@@ -503,7 +503,7 @@ Lista de nomes **não** substitui um briefing fechado. O repo já cobre **como**
 
 | Lacuna | Por que importa | Ação do agente |
 |--------|-----------------|----------------|
-| **(E) Cliente, objetivo, pasta/nome do HTML** | Sem isso não há critério de risco alinhado ao projeto nem lugar de publicação | **Perguntar** — itens 1, 2 e 10 do modelo acima |
+| **(E) Cliente, objetivo, pasta/nome do HTML, senha** | Sem isso não há critério de risco alinhado ao projeto, lugar de publicação nem hash do gate | **Perguntar** — itens 1, 2, 10 e **11** do modelo acima |
 | **Contexto para homônimos** | Nome comum ou vários talentos parecidos → risco de amarrar **perfil errado** | Pedir: nicho, obra/programa, cidade, agência, “é o mesmo do item X”, ou link de referência mínima |
 | **O que significa “profundo” aqui** | “Profundo” sem definição vira achismo ou escopo infinito | Confirmar ou declarar: janela de tempo (imprensa/histórico), **lista de concorrentes** a cruzar, recorte político/polêmico; se o pedido for decisório, **perguntar** o que é inaceitável |
 | **Critérios explícitos** | Brand safety depende do que a **marca** chama de risco | Se o briefing não listar (concorrência, política, polêmica), usar template padrão **e** resumir na entrega o que foi assumido |
@@ -566,8 +566,8 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 
 ### 5. Publicação
 
-- Colocar o HTML na pasta servida pelo Pages; **testar URL** e gate de senha em HTTPS.
-- Commit com mensagem clara em português; push conforme fluxo do branch / `main`.
+- Colocar o HTML na pasta servida pelo Pages; **testar URL** e gate de senha em HTTPS (**padrão:** sempre com senha).
+- Commit com mensagem clara em português; **push ao remoto** conforme fluxo do branch em uso (**padrão:** sempre publicar), salvo o briefing pedir **explicitamente** o contrário.
 
 ## Mapa rápido do repositório
 

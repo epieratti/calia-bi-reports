@@ -10,7 +10,7 @@ Textos abaixo são **resumos** de pedidos que já chegaram — servem para recon
 
 **O que já vem fechado:** objetivo, critérios, redes, elenco com handles (às vezes com **espaço** no meio do @ — normalizar para o `.md`, ex.: `@indio.behn`).
 
-**O que o agente ainda deve confirmar (se não vier):** cliente/pasta de publicação, senha, push ou não, data do snapshot; se “P - 54 conteúdos” entra no HTML ou só contexto interno.
+**O que o agente ainda deve confirmar (se não vier):** cliente/pasta de publicação, **texto da senha** (ou “igual ao dossiê X”) — push/publicação é **padrão**; data do snapshot; se “P - 54 conteúdos” entra no HTML ou só contexto interno.
 
 **Modo:** em geral **B** (`dossier_*.md` + `_panels.yaml`) quando há muitos perfis e o mesmo layout.
 
@@ -52,7 +52,7 @@ Textos abaixo são **resumos** de pedidos que já chegaram — servem para recon
 
 **Forma típica:** uma linha de campanha + bullet com **poucos nomes** (às vezes sem @).
 
-**O que falta quase sempre:** critérios explícitos, redes, pasta, senha, formato — aplicar checklist **(E)/(C)** do `PLAYBOOK_DOSSIES.md` §1.
+**O que falta quase sempre:** critérios explícitos, redes, pasta, **valor da senha** (gate é padrão), formato — aplicar checklist **(E)/(C)** do `PLAYBOOK_DOSSIES.md` §1. Publicação com push é **padrão**; não precisa “perguntar se publica” salvo exceção explícita.
 
 **Modo:** descoberta de @ pesada ([`METODO_DESCOBERTA_PERFIS_CREATORS.md`](../loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md)); depois A, B ou C conforme quantidade de perfis e profundidade.
 
