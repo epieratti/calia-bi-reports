@@ -435,7 +435,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 ### 1. Briefing fechado
 
 - Cliente, objetivo do dossiê, público-leitor, prazo, **critérios** de análise (o que é “risco”, o que é concorrência, etc.).
-- Onde o arquivo vai morar no site (URL esperada) e o **texto da senha** do gate (ou “igual ao dossiê X”) — **padrão:** sempre com senha; publicação **sempre** com commit + push, salvo exceção explícita no pedido.
+- **Pasta** de publicação no site (URL esperada) e o **texto da senha** do gate (ou “igual ao dossiê X”) — **padrão:** sempre com senha; publicação **sempre** com commit + push, salvo exceção explícita no pedido. O **nome do arquivo `.html`** o **agente define** pelo padrão deste playbook (**§2 — Nomenclatura**); o usuário **não** precisa enviar o nome, salvo pedido explícito de um nome fixo.
 
 #### Perguntas que o briefing deve responder (checklist)
 
@@ -461,7 +461,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 | **Métricas** | **O** | Snapshot até **que data**? Fontes: padrão repo (Social Blade, Upfluence, X manual) ou só dados anexados? | Default: “coleta na data do trabalho” + fontes do playbook. |
 | **Evidência** | **O** | Obrigatório **link** por afirmação sensível? Imprensa, arquivo, só plataforma? | Default: seção **Princípios** mais abaixo neste arquivo (um fato, uma prova quando sensível). |
 | **Formato HTML** | **O** | Reutilizar **layout** de um arquivo existente? Gráficos? White-label? | Default: mesmo padrão Calia / arquivo de referência mais próximo. |
-| **Arquivo e URL** | **E** | **Pasta** de entrega (`caixa/`, `caixa/loterias/`, `embratur/`, …)? **Nome** do `.html` ou “sugerir”? | Mínimo: **saber o cliente/pasta**; o nome pode ser “sugerir” conforme §2. |
+| **Pasta de publicação** | **E** | **Pasta** de entrega (`caixa/`, `caixa/loterias/`, `embratur/`, …)? | Mínimo: **saber o cliente/pasta**. O **nome** do `.html` **não** precisa vir no briefing: o agente aplica **`YYYYMMDD-dossie-<slug>.html`** (§2) e **declara** o nome escolhido na resposta / commit. **Exceção:** se o usuário pedir um nome **específico**, seguir o pedido. |
 | **Acesso (senha)** | **E** | **Texto da senha** (para gerar o hash do gate) ou **“igual ao dossiê / arquivo: …”**? | **Padrão:** **sempre** HTML **com** gate/senha. **Só** usar `--no-gate` / preview aberto se o usuário pedir **explicitamente**. Se faltar o **valor** da senha (ou a referência), **perguntar**. |
 | **Publicação (git)** | **O** | O usuário pediu **explicitamente** não publicar ou só rascunho local? | **Padrão:** **sempre** **commit + push** ao remoto (fluxo do branch / GitHub Pages), alinhado a [`AGENTS.md`](AGENTS.md). **Não** perguntar “se vai publicar” no fluxo normal. |
 | **Prazo e prioridade** | **O** | O que é **MVP** vs “se der tempo”? | Default: entregar o pedido literal. |
@@ -484,7 +484,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 7. (O) Critérios de risco / concorrência / política (definições para ESTE pedido): 
 8. (O) Métricas: data do snapshot desejada: ______ — fontes: [ padrão repo | só dados anexados | … ]
 9. (O) Evidências: [ link obrigatório | flexível ] — fontes preferidas: 
-10. (E) HTML: pasta [ caixa/ | caixa/loterias/ | embratur/ | ______ ] — nome ______ ou “sugerir”
+10. (E) HTML: pasta [ caixa/ | caixa/loterias/ | embratur/ | ______ ] — o agente nomeia o `.html` com o padrão §2 (`YYYYMMDD-dossie-<slug>.html`); só preencher aqui se quiseres **impor** um nome exato
 11. (E) Senha do gate (texto para hash): ______ OU “igual ao dossiê / arquivo: ______” — padrão: **sempre** com senha; só sem gate se pedires **explicitamente** preview aberto
 12. (O) Publicação: [ padrão: commit + push ao remoto / Pages ] — só preencher se for **exceção** explícita (ex.: “não publicar”, “só local”)
 13. (O) Prazo / MVP / fora de âmbito: 
@@ -493,7 +493,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 16. (O) Mostrar plano de síntese (4b) na resposta antes do build: [ sim | não — padrão: agente faz 4b internamente ]
 ```
 
-**Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10, 11** (senha ou referência a outro dossiê) — e **cada (C) que se aplique** (4 se modo não for claro). Itens **(O)** podem ficar em aberto com padrão do playbook (**publicar sempre**, salvo exceção no item 12), desde que o agente **declare** o que assumiu.
+**Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** (só **pasta**; nome do `.html` é do agente), **11** (senha ou referência a outro dossiê) — e **cada (C) que se aplique** (4 se modo não for claro). Itens **(O)** podem ficar em aberto com padrão do playbook (**publicar sempre**, salvo exceção no item 12), desde que o agente **declare** o que assumiu (incluindo o **nome final** do `.html` gerado).
 
 Se o usuário só enviar um subconjunto, o agente **pergunta** tudo o que for **(E)** ou **(C)** aplicável em falta; não inventar.
 
@@ -503,7 +503,7 @@ Lista de nomes **não** substitui um briefing fechado. O repo já cobre **como**
 
 | Lacuna | Por que importa | Ação do agente |
 |--------|-----------------|----------------|
-| **(E) Cliente, objetivo, pasta/nome do HTML, senha** | Sem isso não há critério de risco alinhado ao projeto, lugar de publicação nem hash do gate | **Perguntar** — itens 1, 2, 10 e **11** do modelo acima |
+| **(E) Cliente, objetivo, pasta de publicação, senha** | Sem isso não há critério de risco alinhado ao projeto, lugar de publicação nem hash do gate | **Perguntar** — itens 1, 2, 10 e **11** do modelo acima (nome do `.html` = agente, §2) |
 | **Contexto para homônimos** | Nome comum ou vários talentos parecidos → risco de amarrar **perfil errado** | Pedir: nicho, obra/programa, cidade, agência, “é o mesmo do item X”, ou link de referência mínima |
 | **O que significa “profundo” aqui** | “Profundo” sem definição vira achismo ou escopo infinito | Confirmar ou declarar: janela de tempo (imprensa/histórico), **lista de concorrentes** a cruzar, recorte político/polêmico; se o pedido for decisório, **perguntar** o que é inaceitável |
 | **Critérios explícitos** | Brand safety depende do que a **marca** chama de risco | Se o briefing não listar (concorrência, política, polêmica), usar template padrão **e** resumir na entrega o que foi assumido |
@@ -515,6 +515,10 @@ Lista de nomes **não** substitui um briefing fechado. O repo já cobre **como**
 ### 2. Estrutura e convenções
 
 #### Nomenclatura do arquivo `.html` (publicado)
+
+**Quem define o nome:** o **agente**, ao publicar — **não** é necessário o usuário mandar o nome no briefing. Aplicar este padrão e **anunciar** o nome escolhido (resposta, mensagem de commit ou nota curta). **Exceção:** briefing que **exija** um nome de arquivo literal (raro).
+
+**Como escolher o `<slug>` (corpo após `dossie-`):** curto, **minúsculas**, **ASCII**, **hífens**; preferir **cliente** + **tema/campanha** + **ano** ou **recorte** (ex.: `squad-always-on-loterias-2026`, `auditoria-personalidades-caixa-2026`). Evitar lista de 13 nomes no nome do arquivo; se for revisão do **mesmo** tema, mudar o **`YYYYMMDD`** ou acrescentar sufixo claro (`-rev2`, `-delta-8`).
 
 Padrão obrigatório salvo **briefing explícito** em contrário:
 

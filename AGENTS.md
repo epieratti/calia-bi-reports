@@ -36,7 +36,7 @@ Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`
 
 - Mensagens de commit em **português do Brasil**, claras (imperativo ou descrição direta do que mudou).
 - Após implementar alterações pedidas: `git status` → `git add` (só o relevante) → `git commit` → push conforme o fluxo do branch em uso.
-- Alterações em **`caixa/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2 (nomenclatura do **arquivo** `.html` / pastas de publicação).
+- Alterações em **`caixa/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2. O **nome** do `.html` publicado segue **`YYYYMMDD-dossie-<slug>.html`** e é **definido pelo agente** (o briefing só precisa da **pasta** de cliente, salvo pedido explícito de nome fixo).
 
 ## Boas práticas para mudanças
 

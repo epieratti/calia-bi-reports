@@ -22,7 +22,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 | 4b | **Síntese crítica** — após a coleta: o que entra, hierarquia, gráficos (se houver), credibilidade; plano em bullets **antes** do build. Ver *Síntese crítica e arquitetura da entrega* no playbook completo. |
 | 5 | Build ou edição HTML. |
 | 6 | QA — `validate_dossier_source.py` (modo B); opcional `check_dossier_links.py`; **`make qa-dossier-squad-13`** ou `qa-dossier-squad-8`. |
-| 7 | Publicar na pasta correta (`caixa/`, `caixa/loterias/`, `embratur/`, …) — ver Pipeline §2 do playbook completo; git conforme `AGENTS.md`. |
+| 7 | Publicar na pasta correta (`caixa/`, `caixa/loterias/`, `embratur/`, …); **nome do `.html`** = padrão `YYYYMMDD-dossie-<slug>.html` (Pipeline §2) — **definido pelo agente**; git conforme `AGENTS.md`. |
 
 ## Limites do que o agente faz
 

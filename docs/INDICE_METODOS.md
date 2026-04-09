@@ -19,7 +19,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Padrão Calia** — **sempre** senha no gate + **sempre** commit/push (Pages); só perguntar o **valor** da senha se faltar | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Para o agente de IA* (lacunas) + *Acesso (senha)* / *Publicação (git)* na tabela §1 |
 | **Só nomes na lista** — o que ainda falta além de descobrir @ (cliente, profundidade, métricas, homônimos) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Briefing só com nomes de creators ou artistas* |
 | **Exemplos de briefing reais** (padrões squad, delta, casting, Docs, mínimo) | [`EXEMPLOS_BRIEFINGS.md`](EXEMPLOS_BRIEFINGS.md) |
-| **Nome do `.html` + pasta** (`caixa/` geral, `caixa/loterias/`, `embratur/`, novo cliente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §2 — Nomenclatura / Pastas* |
+| **Pasta** de publicação + **padrão de nome** do `.html` (`YYYYMMDD-dossie-<slug>.html`, nome definido pelo agente) | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Pipeline §2 — Nomenclatura / Pastas* |
 | **Etapas para o agente** — 0→7 + **4b síntese crítica** após coleta | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Fluxo em etapas* + *Síntese crítica e arquitetura da entrega* |
 | **Inventário de todos os blocos HTML** (sumário, pedido, mini-cards redes, eixos, tabelas…) — modo B | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Estrutura do HTML final (modo B) — inventário completo* |
 | **Esquema de cores** — tokens Calia, neutros, risco, redes, gráficos | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) — *Esquema de cores* |
