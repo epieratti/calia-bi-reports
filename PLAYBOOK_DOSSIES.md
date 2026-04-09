@@ -497,6 +497,21 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 
 Se o usuário só enviar um subconjunto, o agente **pergunta** tudo o que for **(E)** ou **(C)** aplicável em falta; não inventar.
 
+#### Briefing só com nomes de creators ou artistas
+
+Lista de nomes **não** substitui um briefing fechado. O repo já cobre **como** descobrir @ e redes ([`METODO_DESCOBERTA_PERFIS_CREATORS.md`](loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md) e a secção **Descoberta de perfis** mais abaixo neste arquivo), **como** montar o HTML (modo B), brand safety e síntese (4b). O que **ainda precisa** existir (por pergunta ao usuário ou por padrão explícito) para um dossiê **completo, profundo e bem estruturado**:
+
+| Lacuna | Por que importa | Ação do agente |
+|--------|-----------------|----------------|
+| **(E) Cliente, objetivo, pasta/nome do HTML** | Sem isso não há critério de risco alinhado ao projeto nem lugar de publicação | **Perguntar** — itens 1, 2 e 10 do modelo acima |
+| **Contexto para homônimos** | Nome comum ou vários talentos parecidos → risco de amarrar **perfil errado** | Pedir: nicho, obra/programa, cidade, agência, “é o mesmo do item X”, ou link de referência mínima |
+| **O que significa “profundo” aqui** | “Profundo” sem definição vira achismo ou escopo infinito | Confirmar ou declarar: janela de tempo (imprensa/histórico), **lista de concorrentes** a cruzar, recorte político/polêmico; se o pedido for decisório, **perguntar** o que é inaceitável |
+| **Critérios explícitos** | Brand safety depende do que a **marca** chama de risco | Se o briefing não listar (concorrência, política, polêmica), usar template padrão **e** resumir na entrega o que foi assumido |
+| **Métricas “de painel”** | Social Blade, Upfluence e X costumam exigir **browser/login** ou arquivo do time | Preencher o que for **público + evidência**; marcar **lacunas** com data; não inventar números |
+| **Modo A/B/C e referência visual** | Estrutura e profundidade mudam | Se só vier lista de nomes, **perguntar** modo ou “igual ao dossiê X” (item 4 **C**) |
+
+**Limites que nenhum nome sozinho resolve:** conta privada, paywall, mídia só dentro do app, bloqueio da plataforma, ou falta de pegada digital — registrar no texto como **limitação da coleta** com data, sem preencher vazio com suposição.
+
 ### 2. Estrutura e convenções
 
 #### Nomenclatura do arquivo `.html` (publicado)

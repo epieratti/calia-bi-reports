@@ -2,7 +2,7 @@
 
 Uso quando a entrada é **só o nome** da pessoa ou **nome + um único @** (Instagram, TikTok, YouTube ou X). Objetivo: mapear **todos os perfis públicos relevantes** para o dossiê (IG, TikTok, YouTube, X), com **confiança documentada** e **homônimos descartados**.
 
-Este ficheiro é **processo**; anotar handles confirmados e dúvidas no `dossier_*.md` (handles) e, se preciso, em nota de `research/`.
+Este arquivo é **processo**; anotar handles confirmados e dúvidas no `dossier_*.md` (handles) e, se preciso, em nota de `research/`.
 
 ---
 
@@ -37,7 +37,7 @@ Entrada (nome OU nome + 1 @)
    - **Link na bio** (Linktree, Beacons, “meu Instagram”, canal, site) — seguir e anotar cada destino.
 2. Procurar **nos próprios posts/fixados** menções explícitas: “me segue no TikTok @…”, “YouTube: …”.
 3. **Inverter busca:** no Google/Bing, `"@handle"` ou `site:instagram.com` + parte do nome (para achar **outras** contas do mesmo humano, não só clones).
-4. Repetir o **checklist de confirmação** (secção abaixo) para cada nova rede encontrada.
+4. Repetir o **checklist de confirmação** (seção abaixo) para cada nova rede encontrada.
 
 ---
 
@@ -89,15 +89,15 @@ Handles vazios no `### Handles` do `.md` são aceitáveis se a nota no perfil ou
 
 ---
 
-## Registo no repositório
+## Registro no repositório
 
 - **`dossier_*.md`** → `### Handles` com os @ **confirmados**; na **Narrativa** ou **eixo**, uma frase sobre **homônimos** ou **lacunas** se for relevante para o cliente.
-- **`research/`** (opcional) → ficheiro curto `HANDLES_NOME_creator.md` com URLs visitadas e data, para auditoria interna.
+- **`research/`** (opcional) → arquivo curto `HANDLES_NOME_creator.md` com URLs visitadas e data, para auditoria interna.
 
 ---
 
 ## Relação com outros documentos
 
 - **Brand safety e busca aberta:** `METODO_BRAND_SAFETY_LOTERIAS2026.md`
-- **OSINT suplementar** (yt-dlp, Sherlock, etc.): mesma pasta, secção *Ferramentas open source* no método Brand Safety
+- **OSINT suplementar** (yt-dlp, Sherlock, etc.): mesma pasta, seção *Ferramentas open source* no método Brand Safety
 - **Playbook geral:** `PLAYBOOK_DOSSIES.md` (raiz) — fluxo de entrega e métricas (SB, Upfluence, X manual)
