@@ -41,4 +41,5 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | Validação fonte `.md` (formato do gerador) | `tools/validate_dossier_source.py` |
 | **QA** — validate + links + build + vazamento HTML | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
 | **Vazamento** em HTML (caminhos repo no texto visível) | [`tools/check_client_html_leakage.py`](../tools/check_client_html_leakage.py) |
+| **Nome automático** `YYYYMMDD-dossie-<slug>.html` + **pipeline** validar→build→pasta Pages | [`tools/dossier_html_filename.py`](../tools/dossier_html_filename.py), [`tools/dossier_publish.py`](../tools/dossier_publish.py), `make dossie-filename` / `make dossie-entregar` |
 | Legado Apify / `run_pipeline` | [`loterias2026/scripts/README_LEGADO.md`](../loterias2026/scripts/README_LEGADO.md) |

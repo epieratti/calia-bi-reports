@@ -604,9 +604,11 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 
 | Ferramenta | Comando | Função |
 |------------|---------|--------|
+| Nome do arquivo publicado | `python3 tools/dossier_html_filename.py --md <dossier_*.md>` | Imprime `YYYYMMDD-dossie-<slug>.html` a partir de `meta.title` (usa hoje se omitir `--date`). |
+| Pipeline até a pasta Pages | `python3 tools/dossier_publish.py --md <…> --dest <pasta ou .html>` | Valida → links → `build_dossier_completo.py` → grava HTML em `DEST` → `check_client_html_leakage` na pasta cliente. `make dossie-entregar MD=… DEST=…` na raiz. |
 | Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos. [Exemplo de `dossier_*.md`](loterias2026/data/dossier_loterias2026.md). |
 | Checagem de links (opcional) | `python3 tools/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do arquivo (pode falhar por bloqueio de bot). |
-| Makefile | `make help` / `make validate-dossier-squad-13` / `make build-dossier-squad-13` | Atalhos na raiz; alvos com `squad-13` / `squad-8` apontam para os lotes de referência do modo B no repo. |
+| Makefile | `make help` / `make dossie-filename` / `make dossie-entregar` / `make validate-dossier-squad-13` / `make build-dossier-squad-13` | Atalhos na raiz; `squad-13` / `squad-8` = lotes de referência do modo B. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
 
 ### Descoberta de perfis (nome ou nome + um @)

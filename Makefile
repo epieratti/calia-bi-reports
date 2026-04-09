@@ -7,13 +7,17 @@
 	qa-dossier-squad-13 qa-dossier-squad-8 check-html-leakage \
 	validate-dossier-13 validate-dossier-8 validate-dossier-strict-13 \
 	check-links-13 check-links-8 \
-	build-loterias-13 build-loterias-8
+	build-loterias-13 build-loterias-8 \
+	dossie-filename dossie-entregar
 
 PYTHON ?= python3
 ROOT := $(abspath .)
 
 help:
 	@echo "Alvos úteis:"
+	@echo "  make dossie-filename MD=<dossier.md> [DATE=YYYYMMDD] [SUFFIX=...] — imprime YYYYMMDD-dossie-<slug>.html"
+	@echo "  make dossie-entregar MD=<dossier.md> DEST=<pasta|arquivo.html> [VARIANT=...] [DATE=...] [SUFFIX=...] [SKIP_LINKS=1]"
+	@echo "       — valida + links + build + cópia em DEST + vazamento na pasta cliente"
 	@echo "  make validate-dossier-squad-13   — valida loterias2026/data/dossier_loterias2026.md"
 	@echo "  make validate-dossier-squad-8   — valida loterias2026-20260406/data/dossier_loterias2026.md"
 	@echo "  make validate-dossier-minimo    — valida examples/minimo/dossier_minimo_exemplo.md"
@@ -72,3 +76,20 @@ check-links-13: check-links-squad-13
 check-links-8: check-links-squad-8
 build-loterias-13: build-dossier-squad-13
 build-loterias-8: build-dossier-squad-8
+
+# Pipeline completo até pasta Pages (ver tools/dossier_publish.py).
+# Ex.: make dossie-entregar MD=loterias2026/data/dossier_loterias2026.md DEST=caixa/loterias
+dossie-filename:
+	@test -n "$(MD)" || (echo "Defina MD= caminho/dossier_*.md"; exit 1)
+	cd "$(ROOT)" && $(PYTHON) tools/dossier_html_filename.py --md "$(MD)" \
+		$(if $(DATE),--date $(DATE),) \
+		$(if $(SUFFIX),--suffix "$(SUFFIX)",)
+
+dossie-entregar:
+	@test -n "$(MD)" || (echo "Defina MD= e DEST= — ex.: make dossie-entregar MD=.../dossier_x.md DEST=caixa/loterias"; exit 1)
+	@test -n "$(DEST)" || (echo "Defina MD= e DEST= — ex.: make dossie-entregar MD=.../dossier_x.md DEST=caixa/loterias"; exit 1)
+	cd "$(ROOT)" && $(PYTHON) tools/dossier_publish.py --md "$(MD)" --dest "$(DEST)" \
+		$(if $(VARIANT),--variant $(VARIANT),) \
+		$(if $(DATE),--date $(DATE),) \
+		$(if $(SUFFIX),--suffix "$(SUFFIX)",) \
+		$(if $(SKIP_LINKS),--skip-links,)

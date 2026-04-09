@@ -41,4 +41,5 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 | Instruções git / estrutura repo | [`AGENTS.md`](AGENTS.md) |
 | OSINT pip | `pip install -r tools/requirements-osint.txt` |
 | QA pós-build (referência squad) | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
+| Nome `.html` + entrega num comando | `make dossie-filename MD=…` / `make dossie-entregar MD=… DEST=…` (ver `make help`) |
 | Vazamento em HTML publicado | `python3 tools/check_client_html_leakage.py` |
