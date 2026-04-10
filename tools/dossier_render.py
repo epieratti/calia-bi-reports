@@ -649,10 +649,12 @@ def executive_dashboard_html(
         "<section id='painel-executivo' class='card-audit scroll-mt-20 bg-gradient-to-br from-slate-50 to-white border-calia-gold/30'>"
         "<div class='section-header'><h2 class='text-xl font-black text-calia-navy'>Painel executivo</h2></div>"
         "<p class='text-sm text-slate-600 mb-4 max-w-prose'>Visão rápida por nome (semáforo + duas linhas). O detalhe está em <strong>Perfis</strong> e na <strong>Tabela resumo</strong>.</p>"
+        "<div class='dossier-pdf-hide-print'>"
         "<label class='sr-only' for='dossier-filter-input'>Filtrar perfis por nome ou camada</label>"
         "<input type='search' id='dossier-filter-input' autocomplete='off' "
         "placeholder='Filtrar por nome ou camada…' "
         "class='mb-4 w-full max-w-md rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy' />"
+        "</div>"
         f"<div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'>{''.join(cards)}</div>"
         "</section>"
     )
@@ -1154,6 +1156,24 @@ def render_loterias_dossier_html(
     #dossier-root a[href^="http"]:hover {{
       color: inherit !important;
       text-decoration-color: #f9a619;
+    }}
+    /* PDF / impressão: layout limpo, links com URL visível, sem gate nem filtro interativo */
+    @media print {{
+      @page {{ margin: 14mm 12mm; size: A4; }}
+      body {{ background: #fff !important; color: #1e293b !important; padding: 0 !important; }}
+      #access-gate {{ display: none !important; }}
+      #dossier-root {{ display: block !important; visibility: visible !important; max-width: 100% !important; }}
+      #dossier-root header {{ break-after: avoid; box-shadow: none !important; border: 1px solid #e2e8f0; }}
+      .card-audit, section.card-audit {{ break-inside: avoid; box-shadow: none !important; border-color: #cbd5e1 !important; }}
+      #painel-executivo .dossier-pdf-hide-print {{ display: none !important; }}
+      table {{ font-size: 9pt; }}
+      #dossier-root a[href^="http"]::after {{
+        content: " (" attr(href) ")";
+        font-size: 7.5pt;
+        font-weight: 400;
+        color: #64748b;
+        word-break: break-all;
+      }}
     }}
   </style>
 </head>

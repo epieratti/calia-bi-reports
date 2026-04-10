@@ -1,0 +1,3 @@
+# Exportação PDF do dossiê (Playwright + Chromium)
+# pip install -r tools/requirements-pdf.txt && playwright install chromium
+playwright>=1.40.0

@@ -4,6 +4,7 @@
 - **Entrega em um comando:** `dossier_publish.py` — valida → links → build → grava em `DEST` com nome automático → vazamento na pasta cliente  
   `python3 tools/dossier_publish.py --md loterias2026/data/dossier_loterias2026.md --dest caixa/loterias`  
   Atalho: `make dossie-entregar MD=... DEST=...` e `make dossie-filename MD=...` (ver `make help`).
+- **PDF (UI preservada):** `dossier_export_pdf.py` — Playwright imprime o HTML **após** o gate (servidor local). `pip install -r tools/requirements-pdf.txt && playwright install chromium`. Senha: `--password` ou `DOSSIER_PDF_PASSWORD`. Ver `docs/GOVERNANCA_ENTREGA.md`.
 - **HTML modo B:** `dossier_render.py`, `md_dossier_source.py`, `dossier_plain.py`, `validate_dossier_source.py` (`--hints`, `--strict-hints`), `check_dossier_links.py`
 - **HTML publicado (anti-vazamento):** `check_client_html_leakage.py` — `python3 tools/check_client_html_leakage.py caixa embratur`
 - **OSINT (pip):** `requirements-osint.txt` — `pip install -r tools/requirements-osint.txt` na raiz do repositório

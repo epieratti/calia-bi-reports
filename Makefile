@@ -8,7 +8,7 @@
 	validate-dossier-13 validate-dossier-8 validate-dossier-strict-13 \
 	check-links-13 check-links-8 \
 	build-loterias-13 build-loterias-8 \
-	dossie-filename dossie-entregar
+	dossie-filename dossie-entregar dossie-pdf
 
 PYTHON ?= python3
 ROOT := $(abspath .)
@@ -18,6 +18,7 @@ help:
 	@echo "  make dossie-filename MD=<dossier.md> [DATE=YYYYMMDD] [SUFFIX=...] — imprime YYYYMMDD-dossie-<slug>.html"
 	@echo "  make dossie-entregar MD=<dossier.md> DEST=<pasta|arquivo.html> [VARIANT=...] [DATE=...] [SUFFIX=...] [SKIP_LINKS=1]"
 	@echo "       — valida + links + build + cópia em DEST + vazamento na pasta cliente"
+	@echo "  make dossie-pdf HTML=<caixa/....html> OUT=<saida.pdf> — PDF após gate (precisa Playwright + chromium; senha em DOSSIER_PDF_PASSWORD)"
 	@echo "  make validate-dossier-squad-13   — valida loterias2026/data/dossier_loterias2026.md"
 	@echo "  make validate-dossier-squad-8   — valida loterias2026-20260406/data/dossier_loterias2026.md"
 	@echo "  make validate-dossier-minimo    — valida examples/minimo/dossier_minimo_exemplo.md"
@@ -94,3 +95,9 @@ dossie-entregar:
 		$(if $(DATE),--date $(DATE),) \
 		$(if $(SUFFIX),--suffix "$(SUFFIX)",) \
 		$(if $(SKIP_LINKS),--skip-links,)
+
+dossie-pdf:
+	@test -n "$(HTML)" || (echo "Defina HTML= caminho/arquivo.html e OUT= arquivo.pdf"; exit 1)
+	@test -n "$(OUT)" || (echo "Defina OUT= arquivo.pdf"; exit 1)
+	@test -n "$$DOSSIER_PDF_PASSWORD" || (echo "Exporte DOSSIER_PDF_PASSWORD=... (senha do gate) antes do make"; exit 1)
+	cd "$(ROOT)" && $(PYTHON) tools/dossier_export_pdf.py --html "$(HTML)" --out "$(OUT)"

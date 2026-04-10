@@ -8,6 +8,7 @@ body:
       value: |
         **Guia:** `PLAYBOOK_AGENTES.md` → `PLAYBOOK_DOSSIES.md` (Pipeline §1). Idioma do entregável: **pt-BR**.
         O **nome do arquivo `.html`** é gerado pelo agente (`YYYYMMDD-dossie-<slug>.html`). Informe a **pasta** de publicação.
+        **Senha:** **não** colar a senha em texto aqui se a issue for **pública** — use **referência** ou “envio por DM/Slack/cofre”. Ver `docs/GOVERNANCA_ENTREGA.md` no repo.
 
   - type: textarea
     id: cliente
@@ -45,11 +46,13 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: senha
+  - type: textarea
+    id: senha_ref
     attributes:
-      label: (E) Senha do gate (texto) ou referência
-      description: Ex. “igual ao dossiê 20260401-…” ou o texto da senha para gerar o hash.
+      label: (E) Senha do gate — referência (não colar segredo em issue pública)
+      description: |
+        Exemplos: “Mesmo `password_sha256_hex` que `caixa/20260401-dossie-….html`” · “Senha nova — te envio no Slack” · “Hash já está no branch, combinar por DM”.
+        Se a issue for **privada** e a política do time permitir, pode colar o texto da senha **só** nesse caso.
     validations:
       required: true
 

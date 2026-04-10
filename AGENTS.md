@@ -47,6 +47,7 @@ Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`
 ## Referência rápida
 
 - Entrega automatizada (nome `YYYYMMDD-dossie-<slug>.html` + pipeline): `tools/dossier_publish.py`, `make dossie-entregar` — ver `tools/README.md` e `make help`.
+- PDF com layout próximo ao HTML: `tools/dossier_export_pdf.py` / `make dossie-pdf` + `docs/GOVERNANCA_ENTREGA.md` (senha por env, não em issue pública).
 - Playbook de dossiês (raiz): `PLAYBOOK_DOSSIES.md`
 - Índice métodos: `docs/INDICE_METODOS.md`
 - Visão geral e URLs: `README.md`
