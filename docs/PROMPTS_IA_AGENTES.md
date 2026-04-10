@@ -2,7 +2,7 @@
 
 Use com o repositório aberto. Idioma da **resposta ao usuário:** **pt-BR**. **Conteúdo do dossiê:** **pt-BR** salvo pedido explícito em contrário.
 
-**Coordenação entre agentes:** ver [`MULTI_AGENTES.md`](MULTI_AGENTES.md).
+**Coordenação entre agentes:** ver [`MULTI_AGENTES.md`](MULTI_AGENTES.md). **Calibragem de qualidade:** [`CALIBRAGEM_QUALIDADE.md`](CALIBRAGEM_QUALIDADE.md).
 
 ---
 
@@ -66,4 +66,39 @@ que é a mesma pessoa? Que perguntas devo fazer ao usuário?
 Gere o comando exato: make dossie-entregar MD=... DEST=...
 a partir do briefing (caminhos relativos à raiz do repo calia-bi-reports).
 Inclua VARIANT squad_13 ou squad_8 se aplicável.
+```
+
+---
+
+## 7. Preencher calibragem no front matter (modo B)
+
+```
+Com base no briefing abaixo, escreva o bloco YAML `quality_calibration` e `briefing.perfis_institucionais`
+conforme docs/CALIBRAGEM_QUALIDADE.md. Texto plano nas strings. Se for revisão, inclua delta_vs_entrega_anterior.
+
+[Briefing ou bullet points do cliente]
+```
+
+---
+
+## 8. Advogado do diabo (QA por perfil)
+
+```
+Para o perfil «NOME» neste trecho do dossiê:
+[Colar síntese de risco + os 3 eixos]
+
+Liste 3 argumentos que um crítico usaria CONTRA contratar esta pessoa.
+Para cada um, diga se o texto atual sustenta o risco (sim/não) e o que falta (fonte, data, nuance).
+Idioma: pt-BR.
+```
+
+---
+
+## 9. Reconciliar painel (métricas) com narrativa
+
+```
+Instagram (ou outra rede) mostra: [colar linha do painel ou números].
+A narrativa diz: [colar frase].
+
+Escreva UMA frase de reconciliação para o eixo ou nota de rodapé, ou diga qual texto está errado e como corrigir.
 ```

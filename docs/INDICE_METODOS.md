@@ -11,6 +11,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Prompts** para agentes de IA | [`docs/PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md) |
 | **Vários agentes** — papéis, paralelo seguro, anti-merda | [`docs/MULTI_AGENTES.md`](MULTI_AGENTES.md) |
 | **Governança** — senha, validar vendo no Pages, PDF, escalação | [`docs/GOVERNANCA_ENTREGA.md`](GOVERNANCA_ENTREGA.md) |
+| **Calibragem de qualidade** — prova por eixo, confiança, delta, institucional | [`docs/CALIBRAGEM_QUALIDADE.md`](CALIBRAGEM_QUALIDADE.md) |
 | **PDF do dossiê** (Playwright, pós-gate) | [`tools/dossier_export_pdf.py`](../tools/dossier_export_pdf.py), `make dossie-pdf` |
 | **Template GitHub** — issue de briefing | [`.github/ISSUE_TEMPLATE/dossier-briefing.yml`](../.github/ISSUE_TEMPLATE/dossier-briefing.yml) |
 | **Guia completo** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |

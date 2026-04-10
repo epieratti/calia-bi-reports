@@ -6,7 +6,16 @@ meta:
   periodo: Março–abril de 2026
 password_sha256_hex:
 - 992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b
+quality_calibration:
+  data_corte_coleta: Coleta alinhada a meta.periodo (março–abril/2026); métricas painéis na data do trabalho.
+  delta_vs_entrega_anterior: N/A — entrega squad 13 (lista base Always ON).
+  definicoes_prova:
+    concorrencia: Publi paga ou parceria explícita com casa de aposta, cassino ou outra loteria concorrente à CAIXA; menção casual ou curso com “bet” no nome ≠ publi de bet. Evento educativo sobre mercado ≠ endosso de operador.
+    polemicas: Episódio com risco de imagem documentado (imprensa séria, decisão judicial, padrão recorrente nas redes); opinião de fórum isolada = baixa confiança.
+    politica: Filiação partidária declarada ou posicionamento político recorrente e explícito; pauta social/causa sem partido = sensibilidade, não “política partidária” automática.
 briefing:
+  perfis_institucionais:
+  - Catraca Livre
   intro_paragraphs:
   - 'Always ON Loterias 2026 — 13 nomes da lista. O que foi olhado: concorrência (bets, jogos, outras
     loterias), polêmicas e política. Redes: Instagram, TikTok, YouTube e X.'

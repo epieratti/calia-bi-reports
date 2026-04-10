@@ -76,10 +76,22 @@ def _has_url(s: str) -> bool:
     return bool(re.search(r"https?://", s or ""))
 
 
-def collect_semantic_hints(md_path: Path, body: str) -> list[str]:
+def collect_semantic_hints(md_path: Path, body: str, fm: dict) -> list[str]:
     """Avisos de lacunas comuns (heurística). Não bloqueiam salvo --strict-hints."""
     hints: list[str] = []
     profiles = parse_profiles_markdown(body)
+
+    if len(profiles) >= 2:
+        qc = fm.get("quality_calibration") or {}
+        if not (qc.get("definicoes_prova") or {}).get("concorrencia"):
+            hints.append(
+                "Calibragem: falta `quality_calibration.definicoes_prova` (concorrência/polêmicas/política) "
+                "no front matter — ver docs/CALIBRAGEM_QUALIDADE.md."
+            )
+        if not (str(qc.get("data_corte_coleta") or "").strip() or str((fm.get("meta") or {}).get("periodo") or "").strip()):
+            hints.append(
+                "Calibragem: defina `meta.periodo` ou `quality_calibration.data_corte_coleta` para ancorar o snapshot."
+            )
     names_in_panels: set[str] = set()
 
     panels_path = panels_only_path_for_md(md_path)
@@ -125,6 +137,13 @@ def collect_semantic_hints(md_path: Path, body: str) -> list[str]:
             ("politica", "Política"),
         ):
             txt = (eixos.get(axis) or "").strip()
+            if _plain_len(txt) > 25 and re.search(
+                r"\b(parece|talvez|pode ser|possivelmente)\b", txt, re.I
+            ):
+                hints.append(
+                    f"«{name}»: eixo «{label}» com linguagem vaga (parece/talvez/pode ser) — "
+                    "substituir por fato + base ou marcar confiança (ver CALIBRAGEM_QUALIDADE.md)."
+                )
             if txt in ("", "—", "-") or _plain_len(txt) < 12:
                 hints.append(
                     f"«{name}»: eixo «{label}» muito vazio — preencher ou explicitar «não consta» com contexto."
@@ -213,7 +232,7 @@ def main() -> int:
 
     hint_list: list[str] = []
     if args.hints or args.strict_hints:
-        hint_list = collect_semantic_hints(md_path, body)
+        hint_list = collect_semantic_hints(md_path, body, fm)
 
     for w in warnings:
         print(f"Aviso: {w}")

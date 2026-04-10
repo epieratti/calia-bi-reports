@@ -6,7 +6,15 @@ meta:
   periodo: 'Abril/2026 · Referência dos números: 06/04/2026'
 password_sha256_hex:
 - 992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b
+quality_calibration:
+  data_corte_coleta: "06/04/2026 (referência painéis; ver meta.periodo)"
+  delta_vs_entrega_anterior: Subconjunto de oito perfis em relação ao squad de 13; critérios alinhados ao lote anterior com ênfase explícita em política/eleições no texto de metodologia.
+  definicoes_prova:
+    concorrencia: Vínculo com outras loterias, casas de apostas, cassino ou jogos de azar; humor que cite aposta de forma que possa ser lido como associação indevida; distinguir publi paga de menção educativa (ver critérios no pedido).
+    polemicas: Falas ou episódios com risco de imagem com evidência em imprensa ou padrão recorrente nas redes.
+    politica: Filiação, candidatura, proximidade com figuras/partidos com prova documentada; ver coluna Política e eleições na metodologia deste dossiê.
 briefing:
+  perfis_institucionais: []
   intro_paragraphs:
   - Este dossiê avalia **risco de imagem (brand safety)** para uma campanha de loterias da Caixa com **oito
     influenciadores** do squad Always ON 2026. Nas páginas seguintes, o que foi verificado em cada eixo;

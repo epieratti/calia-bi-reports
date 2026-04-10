@@ -71,3 +71,23 @@ body:
     attributes:
       label: (O) Critérios / redes / notas
       description: Concorrência, política, polêmica; redes no âmbito; delta vs lote anterior; MVP.
+
+  - type: textarea
+    id: definicoes_prova
+    attributes:
+      label: (O) Calibragem — o que conta como prova (recomendado se 2+ perfis)
+      description: |
+        Em 3 frases curtas: **concorrência** (publi vs menção?), **polêmicas** (o que é relevante?), **política** (filiação vs pauta?).
+        O agente copiará para `quality_calibration.definicoes_prova` no `.md`. Guia: `docs/CALIBRAGEM_QUALIDADE.md`.
+
+  - type: textarea
+    id: delta
+    attributes:
+      label: (O) Revisão — o que mudou vs entrega anterior?
+      description: "N/A" se for primeira versão; senão liste delta (nomes, fatos, só métricas).
+
+  - type: textarea
+    id: institucionais
+    attributes:
+      label: (O) Perfis institucionais (página/marca, não pessoa física)
+      description: Nomes separados por linha; vão para `briefing.perfis_institucionais` no front matter.

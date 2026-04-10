@@ -27,6 +27,36 @@ Todo **texto que o cliente lê** (briefing no HTML, leitura rápida, metodologia
 
 **Teste rápido antes de fechar:** alguém de **planejamento ou atendimento** que **não** fez a pesquisa consegue usar o trecho numa **call com o cliente** (responder **sim/não**, **baixo/médio/alto** ou explicar o risco) sem improvisar? Se surgir “mas e se…?”, completar o texto.
 
+#### Calibragem de qualidade (prova, tempo, confiança)
+
+Guia expandido com checklists copiáveis: [`docs/CALIBRAGEM_QUALIDADE.md`](docs/CALIBRAGEM_QUALIDADE.md). Resumo:
+
+| Pilar | O que fazer |
+|-------|-------------|
+| **Prova por eixo** | No briefing (ou `quality_calibration.definicoes_prova` no front matter), deixar explícito o que conta como evidência **suficiente** para **concorrência**, **polêmica** e **política** neste cliente (ex.: publi paga vs menção; filiação partidária vs pauta sensível). Evita dois redatores calibrarem diferente. |
+| **Janela temporal e delta** | `meta.periodo` +, se revisão, um parágrafo **“O que mudou desde a versão anterior”** (`executive_summary` ou `consolidated_narrative` ou `briefing.intro_paragraphs`). Diz **até quando** a leitura vale. |
+| **Segunda leitura (advogado do diabo)** | Na etapa **6 — QA** (ou 4b): *“Se eu defendesse **contra** contratar este nome, o que citaria?”* — preenche vieses e frases vagas. |
+| **Confiança** | Em afirmações sensíveis, indicar **Alta / Média / Baixa** ou *“duas fontes independentes / uma matéria / só redes”* — uma frase curta no eixo ou na síntese. |
+| **Institucional vs pessoa** | Perfis de **página/marca** não usam o mesmo critério de “política pessoal”; declarar no briefing (`briefing.perfis_institucionais: [Nomes]`) ou na narrativa do perfil. |
+| **Limitação no corpo** | “Não consta” com **o que foi tentado** (redes, queries, datas) em **uma linha** quando o vazio for sensível — não só rodapé genérico. |
+| **Painéis vs narrativa** | Se métrica e texto **discordam**, **uma frase** reconcilia ou explica (ex.: engajamento alto mas “quieto” no eixo = definir o que “quieto” significa). |
+| **Tom por bloco** | **Leitura rápida** = decisão em ~60 s; **Perfis** = prova + nuance. Não uniformizar tudo como “relatório longo”. |
+| **Pós-entrega** | Periodicamente perguntar ao cliente/atendimento: *“Qual frase quase foi mal interpretada?”* — alimenta glossário (“bet”, “aposta”, “loteria”). |
+
+**Front matter opcional (modo B):**
+
+```yaml
+quality_calibration:
+  data_corte_coleta: "DD/MM/AAAA"   # snapshot explícito
+  delta_vs_entrega_anterior: "N/A ou texto curto"
+  definicoes_prova:
+    concorrencia: "O que conta como conflito real para ESTE cliente (texto plano)."
+    polemicas: "O que conta como polêmica relevante vs ruído."
+    politica: "Filiação vs pauta vs rumor."
+briefing:
+  perfis_institucionais: []   # ex.: ["Nome da página"] — critérios diferentes de pessoa física
+```
+
 #### Documento autocontido e links de fonte
 
 **Regra:** o leitor deve **entender a conclusão e o raciocínio só lendo o HTML**, sem ser obrigado a **abrir** um link. Toda informação **necessária** para a decisão (o que aconteceu, o que foi verificado, qual o risco, qual o número relevante, qual a limitação) deve estar **escrita no corpo** do dossiê em frases completas.
@@ -504,6 +534,10 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 14. (O) Restrições ou notas: 
 15. (O) Idioma: [ PT-BR — padrão; não preencher ] OU [ outro: ______ ] — só se NÃO for português do Brasil
 16. (O) Mostrar plano de síntese (4b) na resposta antes do build: [ sim | não — padrão: agente faz 4b internamente ]
+17. (O) **Data de corte** explícita da coleta: ______ (ou confiar em `meta.periodo` + `quality_calibration.data_corte_coleta`)
+18. (O) **Definições de prova** por eixo (concorrência / polêmicas / política) para ESTE cliente — ver [`docs/CALIBRAGEM_QUALIDADE.md`](docs/CALIBRAGEM_QUALIDADE.md); no `.md`: `quality_calibration.definicoes_prova`
+19. (O) **Delta** vs versão anterior: [ N/A | texto curto ] → `quality_calibration.delta_vs_entrega_anterior`
+20. (O) **Perfis institucionais** (páginas/marcas): [ lista | nenhum ] → `briefing.perfis_institucionais`
 ```
 
 **Versão mínima (pressa):** responder **todos os (E)** — itens **1, 2, 5, 10** (só **pasta**; nome do `.html` é do agente), **11** (senha ou referência a outro dossiê) — e **cada (C) que se aplique** (4 se modo não for claro). Itens **(O)** podem ficar em aberto com padrão do playbook (**publicar sempre**, salvo exceção no item 12), desde que o agente **declare** o que assumiu (incluindo o **nome final** do `.html` gerado).
