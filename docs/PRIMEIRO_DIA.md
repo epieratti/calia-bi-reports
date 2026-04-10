@@ -9,3 +9,5 @@
 6. **Publicar:** `make dossie-entregar MD=… DEST=caixa/loterias` (ou `caixa/`, `embratur/`) — gera nome `YYYYMMDD-dossie-<slug>.html`, roda links e anti-vazamento.
 7. **Git:** `git add` → `commit` em pt-BR → **`git push origin main`** (Pages).
 8. **Índice:** se a pasta do cliente tiver **`index.html`**, acrescente o link do novo `.html`.
+
+**Mais de um agente no mesmo projeto:** leia [`MULTI_AGENTES.md`](MULTI_AGENTES.md) antes de dividir tarefas.

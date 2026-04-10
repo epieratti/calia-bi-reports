@@ -1,6 +1,6 @@
 # Playbook — camada curta para agentes (Calia BI Reports)
 
-Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/PRIMEIRO_DIA.md`](docs/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/PROMPTS_IA_AGENTES.md`](docs/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê**.
+Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/PRIMEIRO_DIA.md`](docs/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/PROMPTS_IA_AGENTES.md`](docs/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê**. **Vários agentes no mesmo pedido:** [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md) — briefing único, um integrador, contrato entre etapas.
 
 ## Regras primordiais
 
@@ -9,6 +9,7 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 3. **Autocontido + links** — texto completo **sem** precisar abrir o link para entender; **e**, quando houver URL da fonte, **sempre** citar com **hyperlink** (evidência); ver *Documento autocontido e links* no playbook completo.
 4. **Briefing incompleto** — perguntar o que faltar nos itens **(E)** e **(C)** do Pipeline §1 do playbook completo; não supor pasta ou modo. **Padrão:** **sempre** gate/senha + **sempre** publicar (commit + push), salvo pedido explícito em contrário — se faltar o **texto da senha** (ou “igual ao dossiê X”), **perguntar**. **Só uma lista de nomes** não basta: ver *Briefing só com nomes de creators ou artistas* em `PLAYBOOK_DOSSIES.md` (após o modelo de briefing).
 5. **Anti-vazamento** — no HTML do cliente, **não** citar caminhos do repo (`loterias2026/`, `tools/`, `.md`, `_panels.yaml`). Validar com `python3 tools/check_client_html_leakage.py` antes de publicar.
+6. **Multiagente** — se mais de um agente atuar no mesmo dossiê: **não** editar o mesmo `dossier_*.md` em paralelo sem acordo; **um** integrador junta notas → fonte canônica; ver [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md).
 
 ## Ordem de trabalho (0→7, com 4b)
 
@@ -43,3 +44,4 @@ Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`
 | QA pós-build (referência squad) | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
 | Nome `.html` + entrega num comando | `make dossie-filename MD=…` / `make dossie-entregar MD=… DEST=…` (ver `make help`) |
 | Vazamento em HTML publicado | `python3 tools/check_client_html_leakage.py` |
+| Vários agentes sem conflito | [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md) |

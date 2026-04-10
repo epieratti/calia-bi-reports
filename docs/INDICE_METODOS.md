@@ -9,6 +9,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Guia curto para agentes** (ler primeiro) | [`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md) (raiz) |
 | **Primeiro dia** — checklist modo B | [`docs/PRIMEIRO_DIA.md`](PRIMEIRO_DIA.md) |
 | **Prompts** para agentes de IA | [`docs/PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md) |
+| **Vários agentes** — papéis, paralelo seguro, anti-merda | [`docs/MULTI_AGENTES.md`](MULTI_AGENTES.md) |
 | **Template GitHub** — issue de briefing | [`.github/ISSUE_TEMPLATE/dossier-briefing.yml`](../.github/ISSUE_TEMPLATE/dossier-briefing.yml) |
 | **Guia completo** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
 | **Métodos** — atalhos (descoberta, brand safety, fontes) | [`docs/metodos/README.md`](metodos/README.md) |

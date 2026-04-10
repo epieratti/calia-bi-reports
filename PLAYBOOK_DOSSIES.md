@@ -59,6 +59,8 @@ Este arquivo existe para **orientar o agente** no fluxo certo. **Regra principal
 
 **Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao usuário** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C ou âmbito de redes. **Padrão operacional Calia (salvo pedido explícito em contrário):** o HTML **sempre** sai **com gate/senha** e o fluxo **sempre** inclui **commit + push** ao remoto (GitHub Pages) conforme [`AGENTS.md`](AGENTS.md) / branch em uso — não é preciso “perguntar se vai publicar” nem “se tem senha”; só **perguntar o valor da senha** (ou “igual ao dossiê X”) quando isso não vier no briefing, e respeitar **exceções explícitas** (ex.: preview sem senha, rascunho só local).
 
+**Vários agentes de IA no mesmo dossiê:** usar **briefing único**, **fonte canônica** (`dossier_*.md` + `_panels.yaml`), **um integrador** e **contrato entre etapas** — detalhes e armadilhas em [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md).
+
 **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
 
 - **Narrativa, perfis, links, eixos** → corpo **`dossier_*.md`** (Markdown com `##` / `###`).

@@ -2,6 +2,8 @@
 
 Use com o repositório aberto. Idioma da **resposta ao usuário:** **pt-BR**. **Conteúdo do dossiê:** **pt-BR** salvo pedido explícito em contrário.
 
+**Coordenação entre agentes:** ver [`MULTI_AGENTES.md`](MULTI_AGENTES.md).
+
 ---
 
 ## 1. Fechar briefing a partir de texto solto
