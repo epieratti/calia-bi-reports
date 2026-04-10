@@ -29,6 +29,8 @@ Tarefas:
 1. Dizer se o briefing está completo nos itens (E)/(C); se faltar, perguntar antes de pesquisar pesado.
 2. Propor modo A, B ou C e o plano em 5–7 bullets (arquivos que vai tocar).
 3. Só depois executar: descoberta de @ se preciso → fonte .md + _panels.yaml (modo B) → validar → build → publicação conforme AGENTS.md.
+
+Para blindagem forte, use também o bloco **CONTRATO** da seção 7 deste arquivo.
 ```
 
 Se **não houver briefing**, o agente deve **pedir** cliente, objetivo, lista de perfis, pasta de publicação e **referência de senha** (não inventar) — ver issue template **Briefing — novo dossiê** no GitHub.
@@ -66,3 +68,43 @@ python3 tools/check_client_html_leakage.py caixa embratur
 - Git e estrutura: **[`AGENTS.md`](../AGENTS.md)**
 
 **Resumo de uma linha:** abra **`PLAYBOOK_AGENTES.md`**, cole o briefing com o template da seção 2, e siga o plano que o agente devolver antes de build pesado.
+
+---
+
+## 6. Briefing sozinho: o agente “starta” o pipeline?
+
+**Sim**, desde que o briefing venha **acompanhado do contrato** (seção 7 ou 2). Sem isso, o modelo pode **pular** checagem de (E)/(C) ou ir direto para pesquisa/HTML.
+
+**Blindagem (o que funciona de verdade):**
+
+| Medida | Efeito |
+|--------|--------|
+| **Colar o bloco CONTRATO** (abaixo) **antes ou depois** do briefing em toda mensagem de pedido | O agente tem instrução explícita de **fases** e **proibições** até fechar o plano. |
+| **Duas mensagens** (opcional) | 1ª: briefing + contrato → o agente só devolve **lacunas + plano**. 2ª: *“Executa o plano.”* → aí sim edita arquivos / pesquisa pesada. |
+| **Regra no `AGENTS.md` / `PLAYBOOK_AGENTES.md`** | Agentes do Cursor costumam ler — reforça o mesmo contrato. |
+
+Não existe garantia **técnica** 100% (LLM pode desobedecer); o contrato + duas mensagens reduz muito o desvio.
+
+---
+
+## 7. CONTRATO DE EXECUÇÃO — colar junto ao briefing (modo estrito)
+
+Cole **este bloco inteiro** imediatamente antes ou depois do texto do briefing:
+
+```text
+=== CONTRATO calia-bi-reports (obrigatório) ===
+Repositório: calia-bi-reports. Idioma com o usuário: pt-BR.
+Seguir nesta ORDEM. Não pular fases. Não substituir o playbook por “atalho” próprio.
+
+FASE 1 — Abrir mentalmente: docs/INICIO_AGENTE.md + PLAYBOOK_AGENTES.md.
+FASE 2 — Briefing: checar itens (E) e (C) de PLAYBOOK_DOSSIES.md §1. Se faltar algo essencial, LISTAR perguntas e PARAR (sem pesquisa pesada, sem criar dossier_*.md novo substancial, sem build).
+FASE 3 — Na MESMA conversa, PRIMEIRO output visível: (a) “Briefing: fechado OU lacunas: …” (b) Modo A/B/C (c) Plano em 5–7 bullets com caminhos de arquivo previstos.
+FASE 4 — Só depois do bloco (a)(b)(c): executar pesquisa, descoberta de @, edição de .md / _panels.yaml, validate, build, leakage, git conforme AGENTS.md.
+
+PROIBIDO antes de entregar (a)(b)(c): inventar pasta de publicação ou senha; publicar HTML sem plano visível; migrar tudo para YAML monolítico; ignorar validate_dossier_source no modo B.
+
+Se o usuário escrever só “executa” numa segunda mensagem, retomar a partir da FASE 4 usando o plano já acordado.
+=== fim do contrato ===
+```
+
+**Briefing do cliente:** (cole abaixo do contrato)

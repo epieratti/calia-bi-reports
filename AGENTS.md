@@ -1,6 +1,8 @@
 # Instruções para agentes (calia-bi-reports)
 
-**Novo agente / primeiro uso neste repo:** leia **[`docs/INICIO_AGENTE.md`](docs/INICIO_AGENTE.md)** — como dar start no pipeline e primeira mensagem pronta.
+**Novo agente / primeiro uso neste repo:** leia **[`docs/INICIO_AGENTE.md`](docs/INICIO_AGENTE.md)** — start do pipeline, primeira mensagem e **CONTRATO** (§7) para colar junto ao briefing e reduzir desvio do fluxo.
+
+**Ao receber briefing:** seguir **`PLAYBOOK_AGENTES.md`** regra **0** — checar (E)/(C), plano visível, **depois** executar (não pular para pesquisa/build sem isso).
 
 **Idioma deste guia e da comunicação com o usuário:** **português do Brasil (pt-BR)** — vocabulário e ortografia brasileiros, **não** português de Portugal (pt-PT). Ex.: *usuário*, *arquivo* (não “utilizador”, “ficheiro”).
 

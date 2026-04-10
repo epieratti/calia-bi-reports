@@ -6,6 +6,8 @@ Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.m
 
 ## Regras primordiais
 
+0. **Ao receber um briefing (texto do usuário):** **não** iniciar pesquisa pesada, **não** criar `dossier_*.md` substancial **nem** build até (1) checar **(E)/(C)** em `PLAYBOOK_DOSSIES.md` §1 — se faltar, **perguntar**; (2) devolver **modo A/B/C** + **plano em 5–7 bullets** com arquivos; (3) **só então** executar. O usuário pode reforçar com o bloco **CONTRATO** em [`docs/INICIO_AGENTE.md`](docs/INICIO_AGENTE.md) §7. **Proibido** inventar pasta, senha ou “atalho” que ignore o playbook.
+
 1. **Dossiê entregue ao cliente** — todo o conteúdo visível em **pt-BR**, salvo o **usuário** pedir outro idioma explicitamente (`PLAYBOOK_DOSSIES.md` → *Idioma do dossiê*).
 2. **Redação** — textos finais **humanizados**, **fáceis de entender**, **sucintos** e **completos** para **planejamento, atendimento e cliente** (quem lê costuma não ter feito a pesquisa): sem dúvida sobre conclusão, base e vigência (`PLAYBOOK_DOSSIES.md` → *Qualidade da redação*).
 3. **Autocontido + links** — texto completo **sem** precisar abrir o link para entender; **e**, quando houver URL da fonte, **sempre** citar com **hyperlink** (evidência); ver *Documento autocontido e links* no playbook completo.

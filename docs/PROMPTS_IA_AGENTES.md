@@ -6,12 +6,22 @@ Use com o repositório aberto. Idioma da **resposta ao usuário:** **pt-BR**. **
 
 ---
 
+## 0. Briefing do cliente + pipeline obrigatório (colar no início)
+
+```
+[Cole aqui o bloco CONTRATO completo de docs/INICIO_AGENTE.md §7]
+
+[Briefing bruto do cliente abaixo]
+```
+
+---
+
 ## 1. Fechar briefing a partir de texto solto
 
 ```
 Com base no PLAYBOOK_DOSSIES.md §1, extraia um briefing estruturado desta mensagem.
 Marque o que falta nos itens (E) e (C) e faça as perguntas mínimas ao usuário.
-Não invente pasta, senha ou modo A/B/C.
+Não invente pasta, senha ou modo A/B/C. Não execute pesquisa pesada antes disso.
 ```
 
 ---
