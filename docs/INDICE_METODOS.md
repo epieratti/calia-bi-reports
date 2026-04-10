@@ -6,7 +6,8 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 
 | Se você precisa de… | Abre |
 |-----------------|------|
-| **Guia curto para agentes** (ler primeiro) | [`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md) (raiz) |
+| **Início / start do pipeline** (novo agente no repo) | [`docs/INICIO_AGENTE.md`](INICIO_AGENTE.md) |
+| **Guia curto para agentes** (ler em seguida) | [`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md) (raiz) |
 | **Primeiro dia** — checklist modo B | [`docs/PRIMEIRO_DIA.md`](PRIMEIRO_DIA.md) |
 | **Prompts** para agentes de IA | [`docs/PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md) |
 | **Vários agentes** — papéis, paralelo seguro, anti-merda | [`docs/MULTI_AGENTES.md`](MULTI_AGENTES.md) |

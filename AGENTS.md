@@ -1,5 +1,7 @@
 # Instruções para agentes (calia-bi-reports)
 
+**Novo agente / primeiro uso neste repo:** leia **[`docs/INICIO_AGENTE.md`](docs/INICIO_AGENTE.md)** — como dar start no pipeline e primeira mensagem pronta.
+
 **Idioma deste guia e da comunicação com o usuário:** **português do Brasil (pt-BR)** — vocabulário e ortografia brasileiros, **não** português de Portugal (pt-PT). Ex.: *usuário*, *arquivo* (não “utilizador”, “ficheiro”).
 
 Este repositório contém **relatórios e dossiês em HTML** publicados via **GitHub Pages** (`https://epieratti.github.io/calia-bi-reports/`). O **modelo principal** documentado no playbook é dossiê de **brand safety / vetting de creators / disaster check**; o trabalho típico é editar ou gerar esse HTML, scripts Python auxiliares e notas de pesquisa — não é uma aplicação web com build único na raiz.
