@@ -7,6 +7,9 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | Se você precisa de… | Abre |
 |-----------------|------|
 | **Guia curto para agentes** (ler primeiro) | [`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md) (raiz) |
+| **Primeiro dia** — checklist modo B | [`docs/PRIMEIRO_DIA.md`](PRIMEIRO_DIA.md) |
+| **Prompts** para agentes de IA | [`docs/PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md) |
+| **Template GitHub** — issue de briefing | [`.github/ISSUE_TEMPLATE/dossier-briefing.yml`](../.github/ISSUE_TEMPLATE/dossier-briefing.yml) |
 | **Guia completo** — modos A/B/C, publicação, toolbox | [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (raiz) |
 | **Métodos** — atalhos (descoberta, brand safety, fontes) | [`docs/metodos/README.md`](metodos/README.md) |
 | **Exemplo mínimo** modo B (1 perfil) | [`examples/minimo/README.md`](../examples/minimo/README.md) |
@@ -39,6 +42,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **OSINT pip** (qualquer cliente) | [`tools/requirements-osint.txt`](../tools/requirements-osint.txt) |
 | **Trends + Wikipedia** (qualquer cliente) | [`tools/penetracao_mercados.py`](../tools/penetracao_mercados.py), [`tools/requirements-penetracao.txt`](../tools/requirements-penetracao.txt) |
 | Validação fonte `.md` (formato do gerador) | `tools/validate_dossier_source.py` |
+| **Dicas semânticas** (lacunas, painéis, links) — `--hints` / `--strict-hints` | `python3 tools/validate_dossier_source.py --hints <dossier.md>` |
 | **QA** — validate + links + build + vazamento HTML | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
 | **Vazamento** em HTML (caminhos repo no texto visível) | [`tools/check_client_html_leakage.py`](../tools/check_client_html_leakage.py) |
 | **Nome automático** `YYYYMMDD-dossie-<slug>.html` + **pipeline** validar→build→pasta Pages | [`tools/dossier_html_filename.py`](../tools/dossier_html_filename.py), [`tools/dossier_publish.py`](../tools/dossier_publish.py), `make dossie-filename` / `make dossie-entregar` |

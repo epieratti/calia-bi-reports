@@ -7,6 +7,11 @@ meta:
   periodo: Mês/ano da coleta
 password_sha256_hex:
   - "0000000000000000000000000000000000000000000000000000000000000000"
+# Opcional — aparência do HTML (ver PLAYBOOK_DOSSIES.md → *presentation* no modo B)
+# presentation:
+#   executive_dashboard: true
+#   product_tagline: "Uso interno — brand safety / vetting"
+#   footer_note: "Texto legal ou disclaimer curto (texto plano)."
 briefing:
   intro_paragraphs:
     - Parágrafo 1 do pedido (**negrito**, [links](https://exemplo.com)).

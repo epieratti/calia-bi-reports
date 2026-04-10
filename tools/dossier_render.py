@@ -592,6 +592,72 @@ def risco_badge_shell_classes(text: object) -> str:
     return "bg-slate-100 text-slate-800 ring-1 ring-slate-200 border border-slate-200 shadow-sm"
 
 
+def risco_semaphore_html(body: object) -> str:
+    """Indicador visual (semáforo) alinhado às palavras-chave da síntese de risco."""
+    txt = str(body or "—").strip() or "—"
+    low = txt.lower()
+    if re.search(r"\balto\b", low):
+        color = "bg-red-500"
+        label = "Alto"
+    elif "moderado" in low or "pouca prova" in low:
+        color = "bg-amber-500"
+        label = "Moderado"
+    elif "baixo" in low:
+        color = "bg-emerald-500"
+        label = "Baixo"
+    else:
+        color = "bg-slate-400"
+        label = "A definir"
+    return (
+        f'<span class="inline-flex items-center gap-2 shrink-0" title="{esc_plain(label)}">'
+        f'<span class="h-3 w-3 rounded-full {color} shrink-0 ring-2 ring-white shadow" '
+        f'aria-hidden="true"></span>'
+        f'<span class="text-xs font-black text-slate-600 uppercase tracking-wide">{esc_plain(label)}</span>'
+        f"</span>"
+    )
+
+
+def executive_dashboard_html(
+    rows: list[tuple[str, str, object, str, str]],
+    *,
+    show_tier: bool,
+) -> str:
+    """Painel executivo: cards compactos antes dos perfis completos."""
+    if not rows:
+        return ""
+    cards: list[str] = []
+    for name, tier, risco_raw, conc_snip, pole_snip in rows:
+        tier_b = (
+            f"<p class='text-[10px] font-bold uppercase text-slate-400 mb-1'>{esc_plain(tier)}</p>"
+            if show_tier and tier
+            else ""
+        )
+        cards.append(
+            "<article class='rounded-lg border border-slate-200 bg-white p-4 shadow-sm dossier-exec-card' "
+            f"data-profile-name='{esc(name.lower())}' data-profile-tier='{esc((tier or '').lower())}'>"
+            "<div class='flex flex-wrap items-start justify-between gap-2 mb-2'>"
+            f"<h3 class='text-sm font-black text-calia-navy leading-tight'>{esc_plain(name)}</h3>"
+            f"{risco_semaphore_html(risco_raw)}</div>"
+            f"{tier_b}"
+            "<p class='text-xs text-slate-600 leading-snug mt-2'><span class='font-bold text-calia-navy'>Concorrência:</span> "
+            f"{esc_plain(conc_snip)}</p>"
+            "<p class='text-xs text-slate-600 leading-snug mt-1'><span class='font-bold text-calia-navy'>Polêmicas:</span> "
+            f"{esc_plain(pole_snip)}</p>"
+            "</article>"
+        )
+    return (
+        "<section id='painel-executivo' class='card-audit scroll-mt-20 bg-gradient-to-br from-slate-50 to-white border-calia-gold/30'>"
+        "<div class='section-header'><h2 class='text-xl font-black text-calia-navy'>Painel executivo</h2></div>"
+        "<p class='text-sm text-slate-600 mb-4 max-w-prose'>Visão rápida por nome (semáforo + duas linhas). O detalhe está em <strong>Perfis</strong> e na <strong>Tabela resumo</strong>.</p>"
+        "<label class='sr-only' for='dossier-filter-input'>Filtrar perfis por nome ou camada</label>"
+        "<input type='search' id='dossier-filter-input' autocomplete='off' "
+        "placeholder='Filtrar por nome ou camada…' "
+        "class='mb-4 w-full max-w-md rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy' />"
+        f"<div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'>{''.join(cards)}</div>"
+        "</section>"
+    )
+
+
 def risco_badge_block_html(body: object, *, compact: bool = False) -> str:
     """Selo visível para síntese de risco (perfil ou tabela). Aceita mini-markdown (**negrito**)."""
     txt = str(body or "—").strip() or "—"
@@ -702,6 +768,11 @@ def render_loterias_dossier_html(
         + esc_plain(", ".join(str(r) for r in redes))
         + ".</p>"
     )
+
+    presentation = bundle.get("presentation") or {}
+    show_executive_dashboard = presentation.get("executive_dashboard", True)
+    product_tagline = presentation.get("product_tagline") or "Uso interno — brand safety / vetting"
+    footer_note = (presentation.get("footer_note") or "").strip()
 
     tier_order = bundle.get("briefing", {}).get("tier_order") or [
         "Tier 1",
@@ -998,6 +1069,33 @@ def render_loterias_dossier_html(
         html_safe_columns=frozenset({0, 1, 2, 3, 4}),
     )
 
+    def _axis_snip(s: object, n: int = 120) -> str:
+        t = strip_markdown_to_plain(str(s or "")).strip().replace("\n", " ")
+        if len(t) > n:
+            cut = t[: n - 1]
+            if " " in cut:
+                cut = cut.rsplit(" ", 1)[0]
+            return cut + "…"
+        return t or "—"
+
+    exec_rows: list[tuple[str, str, object, str, str]] = []
+    for pc in ordered_profiles:
+        ex = pc.get("eixos") or {}
+        exec_rows.append(
+            (
+                str(pc.get("name", "")).strip(),
+                str(pc.get("tier") or "").strip(),
+                pc.get("risco_geral", "—"),
+                _axis_snip(ex.get("concorrencia")),
+                _axis_snip(ex.get("polemicas")),
+            )
+        )
+    exec_section_html = (
+        executive_dashboard_html(exec_rows, show_tier=show_tier_in_panel)
+        if show_executive_dashboard and exec_rows
+        else ""
+    )
+
     tier_order_label = esc_plain(", ".join(str(t) for t in tier_order))
     if show_tier_in_panel:
         toc_perfis_label = f"Perfis por camada ({tier_order_label})"
@@ -1072,7 +1170,7 @@ def render_loterias_dossier_html(
           <button type="submit" class="w-full rounded-md bg-calia-gold py-3.5 text-sm font-black uppercase tracking-widest text-calia-navy shadow-md shadow-black/15 ring-1 ring-black/5 transition hover:brightness-105 active:brightness-95">Entrar</button>
         </div>
       </form>
-      <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+      <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">{client}</p>
     </div>
   </div>
 
@@ -1090,6 +1188,7 @@ def render_loterias_dossier_html(
         <li><a class="toc-link" href="#pedido">Pedido e critérios</a></li>
         <li><a class="toc-link" href="#leitura">Leitura rápida</a></li>
         <li><a class="toc-link" href="#como">Como foi analisado</a></li>
+        {f'<li><a class="toc-link" href="#painel-executivo">Painel executivo</a></li>' if exec_section_html else ''}
         <li><a class="toc-link" href="#perfis">{toc_perfis_label}</a></li>
         <li><a class="toc-link" href="#sintese">{esc(sintese_nav_label)}</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
@@ -1117,6 +1216,8 @@ def render_loterias_dossier_html(
       <div class="grid sm:grid-cols-2 gap-3">{meth_cards}</div>
     </section>
 
+    {exec_section_html}
+
     <section id="perfis" class="scroll-mt-20">
       <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise por camada</h2></div>
       {profile_sections}
@@ -1139,11 +1240,12 @@ def render_loterias_dossier_html(
     </section>
 
     <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">
-      <a class="toc-link" href="#topo">Voltar ao topo</a> · Agência Calia · Uso interno · Always ON Loterias 2026
+      <a class="toc-link" href="#topo">Voltar ao topo</a> · Agência Calia · {esc_plain(product_tagline)}
+      {f'<p class="mt-2 text-[10px] text-slate-500 max-w-prose mx-auto">{esc_plain(footer_note)}</p>' if footer_note else ''}
       <p class="mt-3 text-[10px] text-slate-500 max-w-prose mx-auto leading-relaxed">
         <strong>Build:</strong> <code class="text-slate-600">{esc(build_revision)}</code>
         Se o <strong>GitHub Pages</strong> mostrar um build diferente do arquivo gerado localmente,
-        falta <code class="text-slate-600">git push</code> do HTML em <code class="text-slate-600">caixa/</code>.
+        falta <code class="text-slate-600">git push</code> do HTML na pasta de publicação do cliente.
       </p>
     </footer>
   </div>
@@ -1179,6 +1281,31 @@ def render_loterias_dossier_html(
       document.getElementById('access-gate').classList.add('hidden');
       document.getElementById('dossier-root').classList.remove('hidden');
     }});
+    (function () {{
+      const input = document.getElementById('dossier-filter-input');
+      if (!input) return;
+      const cards = Array.from(document.querySelectorAll('.dossier-exec-card'));
+      const sections = Array.from(document.querySelectorAll('#perfis section.card-audit'));
+      function norm(s) {{
+        return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }}
+      function apply() {{
+        const q = norm(input.value.trim());
+        cards.forEach((c) => {{
+          const n = norm(c.dataset.profileName || '');
+          const t = norm(c.dataset.profileTier || '');
+          const ok = !q || n.includes(q) || t.includes(q);
+          c.classList.toggle('hidden', !ok);
+        }});
+        sections.forEach((s) => {{
+          const h = s.querySelector('h2');
+          const title = norm(h ? h.textContent : '');
+          const ok = !q || title.includes(q);
+          s.classList.toggle('hidden', !ok);
+        }});
+      }}
+      input.addEventListener('input', apply);
+    }})();
   </script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+name: Briefing — novo dossiê (brand safety)
+description: Pedido para criar ou atualizar um dossiê modo B. Preencha os itens essenciais (E).
+title: "[Dossiê] "
+labels: ["dossier", "briefing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Guia:** `PLAYBOOK_AGENTES.md` → `PLAYBOOK_DOSSIES.md` (Pipeline §1). Idioma do entregável: **pt-BR**.
+        O **nome do arquivo `.html`** é gerado pelo agente (`YYYYMMDD-dossie-<slug>.html`). Informe a **pasta** de publicação.
+
+  - type: textarea
+    id: cliente
+    attributes:
+      label: (E) Cliente / campanha / produto
+      description: Para quem é o dossiê; unidade; contexto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: (E) Objetivo
+      description: O que o leitor deve decidir ou entender ao final.
+    validations:
+      required: true
+
+  - type: textarea
+    id: perfis
+    attributes:
+      label: (E) Perfis
+      description: Lista Nome + @ quando souber, ou “descobrir a partir de …”.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pasta
+    attributes:
+      label: (E) Pasta de publicação (HTML no Pages)
+      options:
+        - caixa/
+        - caixa/loterias/
+        - embratur/
+        - outra (descrever no campo “Notas”)
+    validations:
+      required: true
+
+  - type: input
+    id: senha
+    attributes:
+      label: (E) Senha do gate (texto) ou referência
+      description: Ex. “igual ao dossiê 20260401-…” ou o texto da senha para gerar o hash.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modo
+    attributes:
+      label: (C) Modo de entrega
+      options:
+        - B — .md + gerador (padrão squad)
+        - A — HTML manual
+        - C — pesquisa → HTML na mão
+        - igual ao último dossiê (descrever qual)
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: (O) Critérios / redes / notas
+      description: Concorrência, política, polêmica; redes no âmbito; delta vs lote anterior; MVP.

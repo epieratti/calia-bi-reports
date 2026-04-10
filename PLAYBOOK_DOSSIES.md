@@ -187,10 +187,11 @@ Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools
 |---|------------------------|-------------|---------|-----------------|
 | 0 | **Acesso restrito** | `#access-gate` | Overlay escuro, formulário senha (SHA-256), mensagens de erro, botão Entrar; ao acertar esconde gate e mostra `#dossier-root`. | `password_sha256_hex` no front matter; texto fixo no código. `--no-gate` no build remove o bloqueio para preview. |
 | 1 | **Cabeçalho** | `#topo` | Faixa navy: linha cliente (dourado), **H1** título, subtítulo, linha “Atualização / Documento / Build” com hash git opcional. | `meta.client_line`, `meta.title`, `meta.subtitle`, `meta.periodo` |
-| 2 | **Sumário** | (nav) | Lista com links: Pedido e critérios, Leitura rápida, Como foi analisado, Perfis…, Síntese, Tabela resumo, Métricas. Segundo bloco **Perfis** com árvore por **camada** (`#tier-1`, `#squad-8`, etc.) e cada nome (`#slug-do-nome`). | `briefing.tier_order` + perfis no corpo `.md` (`## Nome`) |
+| 2 | **Sumário** | (nav) | Lista com links: Pedido e critérios, Leitura rápida, Como foi analisado, **Painel executivo** (se ativo), Perfis…, Síntese, Tabela resumo, Métricas. Segundo bloco **Perfis** com árvore por **camada** (`#tier-1`, `#squad-8`, etc.) e cada nome (`#slug-do-nome`). | `briefing.tier_order` + perfis no corpo `.md` (`## Nome`) |
 | 3 | **Pedido e critérios de análise** | `#pedido` | Parágrafos introdutórios; subtítulo “O que foi verificado…”; **lista numerada** de critérios; linha **Redes de ativação** (IG, TT, …). | `briefing.intro_paragraphs`, `briefing.criterios`, `briefing.redes` |
 | 4 | **Leitura rápida** | `#leitura` | Fundo cinza claro. Opcional: subtítulo + tagline; depois **grelha de cards** (2 colunas em desktop) com título dourado/navy e bullets **•** dourados; ou só bullets/parágrafos. | `executive_summary` no front matter (`blocks` / `items`, ou `tagline` / `subtitle`) |
 | 5 | **Como foi analisado** | `#como` | **Cards** em grelha 2 colunas: cada card = rótulo (uppercase navy) + um ou mais parágrafos (mini-Markdown). | `methodology.columns[]` → `label`, `body` |
+| 5b | **Painel executivo** | `#painel-executivo` | **Cards** por perfil (ordem = tabela resumo): nome, **semáforo** (Alto / Moderado / Baixo / A definir) derivado da síntese de risco, trechos curtos de **Concorrência** e **Polêmicas**; **campo de filtro** (nome ou camada) que esconde cards e **seções de perfil** abaixo. | Gerado automaticamente; desligar com `presentation.executive_dashboard: false` no front matter (ver subsecção *presentation* abaixo). |
 | 6 | **Perfis — análise por camada** | `#perfis` | Por cada **tier**: `h3` com nome da camada + borda dourada. Dentro, **um card por pessoa** (`section.card-audit`, `id` = slug do nome): |
 | 6a | (dentro do perfil) Cabeçalho do perfil | — | **H2** “N. Nome” + à direita **selo “Síntese de risco”** (cores: verde “baixo”, âmbar “moderado”, vermelho “alto” conforme palavras no texto). | `### Síntese de risco` + `risco_geral` implícito no mesmo bloco |
 | 6b | **Redes · snapshot** (mini-cards) | — | Grelha de **cartões compactos** por rede com **barra vertical colorida** (rosa IG, cinza TT, vermelho YT, preto X): plataforma, **@handle**, **números em destaque** (Seg., Eng., Insc., Views…). YouTube pode ter rodapé “Canal · nome longo”. X: chip “posts recentes” / “sem posts recentes” + linha de **teor recente**. Se não houver dados: mensagem tracejada. | Dados vêm das **linhas** em `_panels.yaml` cruzadas com `### Handles` no `.md`. Texto do caption varia (`squad_13` vs `squad_8`). |
@@ -199,7 +200,17 @@ Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools
 | 7 | **Síntese do squad / do conjunto** | `#sintese` | Título configurável; mesmo padrão de **cards + bullets** que a Leitura rápida (grelha 2 colunas). | `consolidated_narrative` (`title`, `blocks`…) |
 | 8 | **Tabela resumo** | `#tabela` | Introdução curta + **tabela**: Nome (± camada), **Síntese de risco** (selo compacto), Concorrência, Polêmicas, Política (células com links/negrito). | Perfis + `resumo_tabela` + `risco_geral` no `.md` |
 | 9 | **Métricas nas redes** | `#metricas` | Parágrafo intro (nota data/cobertura); subsecções **Instagram**, **TikTok**, **YouTube**, **X** com **tabela larga** + rodapé “Fonte: …” + notas de cobertura/traço (TikTok pode ter texto extra). Linhas ordenadas como na tabela resumo. | `panels` em `_panels.yaml` |
-| 10 | **Rodapé** | — | Link “Voltar ao topo”, texto fixo Calia; parágrafo **Build** + lembrete de push da pasta publicada. | Build stamp no código; texto parcialmente fixo (título do produto no template — mudar no `dossier_render.py` para outro produto). |
+| 10 | **Rodapé** | — | Link “Voltar ao topo”, “Agência Calia” + linha de produto configurável; parágrafo **Build** + lembrete de push na pasta do cliente; nota legal opcional. | `presentation.product_tagline`, `presentation.footer_note`; build stamp no código. |
+
+#### Bloco opcional `presentation` (front matter do `.md`)
+
+Chaves no **mesmo nível** que `meta` / `briefing` (não dentro de `meta`):
+
+| Chave | Tipo | Default | Efeito |
+|-------|------|---------|--------|
+| `executive_dashboard` | bool | `true` | Mostra ou oculta o **Painel executivo** e o link no sumário. |
+| `product_tagline` | string | `Uso interno — brand safety / vetting` | Texto curto após “Agência Calia ·” no rodapé. |
+| `footer_note` | string | vazio | Parágrafo extra no rodapé (texto plano; disclaimer jurídico, etc.). |
 
 **Estilo global:** Tailwind via CDN; cores `calia-navy`, `calia-gold`; classes `card-audit`, `section-header`, `toc-link`. Comentário HTML `<!-- calia-dossier-build: … -->` no topo (variante com build).
 
@@ -606,7 +617,7 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 |------------|---------|--------|
 | Nome do arquivo publicado | `python3 tools/dossier_html_filename.py --md <dossier_*.md>` | Imprime `YYYYMMDD-dossie-<slug>.html` a partir de `meta.title` (usa hoje se omitir `--date`). |
 | Pipeline até a pasta Pages | `python3 tools/dossier_publish.py --md <…> --dest <pasta ou .html>` | Valida → links → `build_dossier_completo.py` → grava HTML em `DEST` → `check_client_html_leakage` na pasta cliente. `make dossie-entregar MD=… DEST=…` na raiz. |
-| Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos. [Exemplo de `dossier_*.md`](loterias2026/data/dossier_loterias2026.md). |
+| Validação estrutura + regra texto plano | `python3 tools/validate_dossier_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos de texto plano. **`--hints`** imprime dicas semânticas (lacunas, painéis, URLs); **`--strict-hints`** falha (exit 3) se houver dica — opcional em CI. [Exemplo de `dossier_*.md`](loterias2026/data/dossier_loterias2026.md). |
 | Checagem de links (opcional) | `python3 tools/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do arquivo (pode falhar por bloqueio de bot). |
 | Makefile | `make help` / `make dossie-filename` / `make dossie-entregar` / `make validate-dossier-squad-13` / `make build-dossier-squad-13` | Atalhos na raiz; `squad-13` / `squad-8` = lotes de referência do modo B. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |

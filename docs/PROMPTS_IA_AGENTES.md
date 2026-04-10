@@ -1,0 +1,67 @@
+# Prompts para agentes de IA (Calia BI Reports)
+
+Use com o repositório aberto. Idioma da **resposta ao usuário:** **pt-BR**. **Conteúdo do dossiê:** **pt-BR** salvo pedido explícito em contrário.
+
+---
+
+## 1. Fechar briefing a partir de texto solto
+
+```
+Com base no PLAYBOOK_DOSSIES.md §1, extraia um briefing estruturado desta mensagem.
+Marque o que falta nos itens (E) e (C) e faça as perguntas mínimas ao usuário.
+Não invente pasta, senha ou modo A/B/C.
+```
+
+---
+
+## 2. Síntese crítica pós-coleta (etapa 4b)
+
+```
+Leia o material que coletei (colar ou caminhos dos arquivos). Segundo PLAYBOOK_DOSSIES.md
+«Síntese crítica e arquitetura da entrega», devolva:
+(1) o que entra no dossiê vs fora de escopo,
+(2) ordem das seções,
+(3) se precisa gráfico ou painel executivo,
+(4) riscos de credibilidade ou homônimo.
+Em bullets, antes de escrever o .md final.
+```
+
+---
+
+## 3. Humanizar parágrafo sem perder fatos
+
+```
+Reescreva o parágrafo abaixo para o público planejamento/atendimento/cliente:
+humanizado, sucinto, completo e autocontido (sem exigir clique em link).
+Mantenha todos os fatos e datas; se houver URL, mantenha como markdown [rótulo](url).
+```
+
+---
+
+## 4. Checagem de evidência
+
+```
+Para cada afirmação sensível abaixo, diga se falta (a) data (b) fonte nomeada (c) hyperlink
+quando existir URL. Liste só o que estiver incompleto segundo PLAYBOOK_DOSSIES.md
+«Documento autocontido e links».
+```
+
+---
+
+## 5. Desambiguação de homônimo
+
+```
+Nome: [X]. Handles candidatos: [lista]. Briefing: [contexto].
+Segundo METODO_DESCOBERTA_PERFIS_CREATORS.md, quais checks faltam para confirmar
+que é a mesma pessoa? Que perguntas devo fazer ao usuário?
+```
+
+---
+
+## 6. Montar comando de entrega
+
+```
+Gere o comando exato: make dossie-entregar MD=... DEST=...
+a partir do briefing (caminhos relativos à raiz do repo calia-bi-reports).
+Inclua VARIANT squad_13 ou squad_8 se aplicável.
+```

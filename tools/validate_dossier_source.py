@@ -18,6 +18,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from tools.dossier_plain import strip_markdown_to_plain  # noqa: E402
+from tools.md_dossier_source import panels_only_path_for_md, parse_profiles_markdown  # noqa: E402
 
 try:
     import yaml
@@ -67,6 +68,93 @@ def check_front_matter_plain(fm: dict, warnings: list[str]) -> None:
             check_plain_field(f"methodology.columns[{i}].label", col.get("label"), warnings)
 
 
+def _plain_len(s: str) -> int:
+    return len((s or "").strip())
+
+
+def _has_url(s: str) -> bool:
+    return bool(re.search(r"https?://", s or ""))
+
+
+def collect_semantic_hints(md_path: Path, body: str) -> list[str]:
+    """Avisos de lacunas comuns (heurística). Não bloqueiam salvo --strict-hints."""
+    hints: list[str] = []
+    profiles = parse_profiles_markdown(body)
+    names_in_panels: set[str] = set()
+
+    panels_path = panels_only_path_for_md(md_path)
+    if panels_path.is_file():
+        try:
+            doc = yaml.safe_load(panels_path.read_text(encoding="utf-8")) or {}
+            panels = doc.get("panels") or doc
+            ig = (panels.get("instagram") or {}).get("rows") or []
+            for row in ig:
+                if row and len(row) > 0:
+                    cell0 = str(row[0]).strip()
+                    base = re.split(r"\s*[—–-]\s*", cell0, maxsplit=1)[0].strip().lower()
+                    if base:
+                        names_in_panels.add(base)
+        except Exception:
+            hints.append(
+                f"Dica: não foi possível ler {panels_path.name} para cruzar nomes com os painéis."
+            )
+
+    for pc in profiles:
+        name = (pc.get("name") or "").strip() or "?"
+        slug = name.lower()
+        handles = pc.get("handles") or {}
+        if not any((handles.get(k) or "").strip() for k in ("instagram", "tiktok", "youtube", "x")):
+            hints.append(
+                f"«{name}»: nenhum handle em ### Handles — confirmar se é intencional (ex.: página só site)."
+            )
+
+        risco = (pc.get("risco_geral") or "").strip()
+        if risco in ("", "—", "-"):
+            hints.append(f"«{name}»: ### Síntese de risco vazia ou só traço.")
+
+        narr = (pc.get("narrativa") or "").strip()
+        if _plain_len(narr) < 50:
+            hints.append(
+                f"«{name}»: narrativa muito curta — o playbook pede texto autocontido; expandir se possível."
+            )
+
+        eixos = pc.get("eixos") or {}
+        for axis, label in (
+            ("concorrencia", "Concorrência"),
+            ("polemicas", "Polêmicas"),
+            ("politica", "Política"),
+        ):
+            txt = (eixos.get(axis) or "").strip()
+            if txt in ("", "—", "-") or _plain_len(txt) < 12:
+                hints.append(
+                    f"«{name}»: eixo «{label}» muito vazio — preencher ou explicitar «não consta» com contexto."
+                )
+            elif (
+                axis == "polemicas"
+                and not _has_url(txt)
+                and _plain_len(txt) > 40
+                and not re.search(
+                    r"imprensa|matéria|materia|veículo|veiculo|http|reddit|youtube\.com|instagram\.com",
+                    txt,
+                    re.I,
+                )
+            ):
+                hints.append(
+                    f"«{name}»: Polêmicas sem URL — se existir matéria/post estável, incluir link (playbook)."
+                )
+
+        if names_in_panels:
+            matched = slug in names_in_panels or any(
+                slug in n or n.startswith(slug) for n in names_in_panels
+            )
+            if not matched:
+                hints.append(
+                    f"«{name}»: nome não bate com a 1ª coluna do painel Instagram — conferir _panels.yaml."
+                )
+
+    return hints
+
+
 def validate_profiles(body: str, errors: list[str]) -> None:
     chunks = re.split(r"(?m)^##\s+(.+)$", body)
     if len(chunks) < 2:
@@ -95,6 +183,16 @@ def main() -> int:
         action="store_true",
         help="Tratar avisos de texto plano como erro (exit 2).",
     )
+    ap.add_argument(
+        "--hints",
+        action="store_true",
+        help="Mostrar dicas semânticas (lacunas, links, painéis).",
+    )
+    ap.add_argument(
+        "--strict-hints",
+        action="store_true",
+        help="Com --hints: exit 3 se houver qualquer dica (CI opcional).",
+    )
     args = ap.parse_args()
     md_path = args.md.resolve()
     if not md_path.is_file():
@@ -113,15 +211,23 @@ def main() -> int:
     check_front_matter_plain(fm, warnings)
     validate_profiles(body, errors)
 
+    hint_list: list[str] = []
+    if args.hints or args.strict_hints:
+        hint_list = collect_semantic_hints(md_path, body)
+
     for w in warnings:
         print(f"Aviso: {w}")
     for e in errors:
         print(f"Erro: {e}", file=sys.stderr)
+    for h in hint_list:
+        print(f"Dica: {h}")
 
     if errors:
         return 1
     if args.strict and warnings:
         return 2
+    if args.strict_hints and hint_list:
+        return 3
     if warnings:
         print("(Avisos não bloqueiam; use --strict para falhar.)")
     try:

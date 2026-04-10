@@ -25,6 +25,7 @@ help:
 	@echo "  make qa-dossier-squad-13        — validate + links + build 13 + check vazamento HTML"
 	@echo "  make qa-dossier-squad-8         — idem para lote 8"
 	@echo "  make check-html-leakage         — vazamento em caixa/, embratur/, outputs modo B"
+	@echo "  Dicas semânticas: python3 tools/validate_dossier_source.py --hints <dossier.md>"
 	@echo "  make check-links-squad-13        — HTTP check dos links no .md (13)"
 	@echo "  make build-dossier-squad-13     — gera HTML squad 13 em loterias2026/output/"
 	@echo "  make build-dossier-squad-8      — gera HTML squad 8 em loterias2026-20260406/output/"

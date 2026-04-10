@@ -1,6 +1,6 @@
 # Playbook — camada curta para agentes (Calia BI Reports)
 
-Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`).
+Leia **este arquivo primeiro**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/PRIMEIRO_DIA.md`](docs/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/PROMPTS_IA_AGENTES.md`](docs/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê**.
 
 ## Regras primordiais
 
