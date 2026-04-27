@@ -15,7 +15,7 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 ## Dossiês em `caixa/` (atualizado em abr/2026)
 
-- **Febraban:** os HTML deste cliente ficam em **`febraban/`** na raiz do repo (não em `caixa/`). Ver **`febraban/README.md`** e https://epieratti.github.io/calia-bi-reports/febraban/ — senha **`febraban2026`**.
+- **Febraban:** os HTML deste cliente ficam em **`febraban/`** na raiz do repo (não em `caixa/`). Ver **`febraban/README.md`** e https://epieratti.github.io/calia-bi-reports/febraban/ — senha **`febraban2026`**. Há **redirecionamento** de `caixa/20260427-dossie-febraban-concorrencia-creators-2026.html` para a URL em `febraban/` (links antigos).
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
 - **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **URL:** https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html — **senha `caixa2026`**.
 - **`20260406-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **8** perfis (lote 06/04/2026), mesma estrutura (painéis IG/TT/YT/X + Brand Safety). **Senha:** `caixa2026`.

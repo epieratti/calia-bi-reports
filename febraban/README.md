@@ -8,6 +8,11 @@ HTML publicados no GitHub Pages em:
 
 - **`20260427-dossie-febraban-concorrencia-creators-2026.html`** — Brand safety / vetting de **8 creators** (concorrência publicitária). **Senha:** `febraban2026` (sem espaços; sensível a maiúsculas/minúsculas).
 
+**URL (copiar inteira — tudo minúsculo, pasta `febraban` com “n”):**  
+https://epieratti.github.io/calia-bi-reports/febraban/20260427-dossie-febraban-concorrencia-creators-2026.html
+
+**Se aparecer 404:** confira se não digitou `febra**b**an` (com “b”), `/caixa/` no lugar de `/febraban/`, ou `dossier` em vez de `dossie`. Aguarde **2–5 min** após o último push em `main` (Actions → **Deploy GitHub Pages**). Quem ainda tiver link antigo em `/caixa/` com o **mesmo nome de arquivo** será redirecionado para a URL acima.
+
 **Índice com links:** https://epieratti.github.io/calia-bi-reports/febraban/
 
 ## Fonte editável (modo B)
