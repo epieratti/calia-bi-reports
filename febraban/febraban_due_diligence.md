@@ -39,6 +39,23 @@ Este relatório consolida dois levantamentos independentes: pesquisa primária c
 
 ---
 
+## Matriz publi × associado Febraban (elenco deste relatório)
+
+**Fonte da lista:** [Associados — portal Febraban](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/) (exportável). **Regra:** “**Sim**” = banco/instituição que consta na lista **ou** marca cuja publi é **claramente** do ecossistema de associados (ex.: **Elo** com sócios BB, Bradesco, Caixa). “**Não**” = fora da lista ou, no caso **Mercado Pago**, tratamento público da Febraban como **credenciadora** em representação ao BC, não como associada no mesmo polo ([Valor Investe, 07/12/2023](https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2023/12/07/febraban-acusa-stone-mercado-pago-pagseguro-e-picpay-de-oferecerem-parcelado-sem-juros-pirata.ghtml)) — **confirmar** no export se o cliente quiser classificação estritamente nominal.
+
+| @ | Marca / produto (coleta) | Associado? |
+| --- | --- | --- |
+| @gildovigor | Banco **Santander** (2021) | **Sim** |
+| @gildovigor | **Mercado Pago** (2023) | **Não** (ver nota acima) |
+| @nathfinancas | Sem publi paga de banco; conteúdo educativo | — |
+| @faveladoinvestidor | **Hotmart** / **RSA** (próprio) | **Não** |
+| @raphaelvicente | **Elo** | **Sim** |
+| @raphaelvicente | **Itaú** (Rock in Rio / mídia) | **Sim** se publi paga; checar contrato |
+| @jaciradoce, @ajuvichagas, @rafachalub | Sem publi de banco no recorte | — |
+| @anapaulaxongani | **Bradesco** | **Sim** |
+
+---
+
 ## Dossiê dos Influenciadores
 
 ---

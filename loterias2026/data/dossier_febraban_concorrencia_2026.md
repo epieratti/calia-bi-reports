@@ -14,6 +14,7 @@ quality_calibration:
     institucional: "A **Febraban** (Federação Brasileira de Bancos) **não** é **órgão do governo** nem parte da **administração pública** — é **associação privada** que **reúne** instituições financeiras, **defende** interesses do setor, **dialoga** com poder público e **promove** boas práticas (segurança, educação financeira etc.), **sem** poder **regulatório** sobre o sistema. **Regulação e supervisão** dos bancos cabem a órgãos públicos como o **Banco Central do Brasil** e o **Conselho Monetário Nacional**."
     polemicas: Episódio com risco de imagem em veículo sério, decisão judicial, plataforma de reclamação corporativa (ex. Reclame AQUI) ou padrão recorrente nas redes; briga entre influencers = sensibilidade de mídia, não automático “risco jurídico”.
     politica: "Cargo, conselho consultivo, filiação ou posicionamento político **explícito** — **não** implica, **por si só**, **incompatibilidade** com a Febraban (que **não** é governo). Tratamos como **sinalização** para **comunicação** e **percepção** de stakeholders, com **atenção redobrada** em **ano eleitoral** (captura narrativa / polarização)."
+    associado_febraban: "Cada **marca** de publi citada no dossiê foi classificada em **associado** (consta na [lista oficial](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/) na data da análise) ou **não associado** (fora dessa lista ou instituição não listada). **Mercado Pago** e similares: a Febraban tratou **Mercado Pago** como parte de um conjunto de **credenciadoras / carteiras** em representação ao **BC** ([Valor Investe, 07/12/2023](https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2023/12/07/febraban-acusa-stone-mercado-pago-pagseguro-e-picpay-de-oferecerem-parcelado-sem-juros-pirata.ghtml)) — na prática de **due diligence**, tratar **publi** com **Mercado Pago** como **não filiado** à Febraban até **confirmação** na planilha exportável do portal. **Hotmart** e **RSA** (produto próprio): **não** são bancos da lista de associados."
 briefing:
   perfis_institucionais: []
   intro_paragraphs:
@@ -42,6 +43,23 @@ methodology:
     - label: Métricas
       body: |
         Tabelas **Instagram / YouTube** = **Social Blade** (captura **27/04/2026**; tabela de referência técnica com links SB no repositório do projeto). **Não** substitui media kit nem audiência declarada pelo creator. Outros números (ex. “7,53” de engajamento em relatório paralelo) podem usar **outra fórmula** — comparar só com a mesma metodologia.
+
+    - label: Publi × associado Febraban
+      body: |
+        Referência: [lista oficial de associados](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/) (exportável no portal). Para cada creator, cruzamos só **marcas com publi ou contrato citado** na coleta.
+
+        | Creator | Marca / produto (coleta) | Associado Febraban? |
+        | --- | --- | --- |
+        | Gil do Vigor | Banco **Santander** (Open Banking, 2021) | **Sim** (banco associado típico) |
+        | Gil do Vigor | **Mercado Pago** (embaixador, 2023) | **Não** (não tratado como membro da federação; posição institucional da Febraban vs. credenciadoras — [Valor Investe](https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2023/12/07/febraban-acusa-stone-mercado-pago-pagseguro-e-picpay-de-oferecerem-parcelado-sem-juros-pirata.ghtml)) |
+        | Nath Finanças | **Sem publi paga** de banco mapeada; conteúdo educativo CDB/bancos | — (só menção genérica / comparativo) |
+        | Favelado Investidor | **Hotmart** / cursos (**RSA**); sem publi de banco | **Não** (marketplace / produto próprio) |
+        | Raphael Vicente | **Elo** (bandeira; sócios BB, Bradesco, Caixa) | **Sim** (ecossistema de associados) |
+        | Raphael Vicente | **Itaú** em contexto **Rock in Rio** (matéria) | **Sim** se for **publi paga** com Itaú; **checar** contrato — [Poder360](https://www.poder360.com.br/tag/raphael-vicente/) |
+        | Jacira Doce, Juvi Chagas, Rafa Chalub | Sem publi de banco/financeira no recorte | — |
+        | Ana Paula Xongani | **Bradesco** (campanha / portfólio) | **Sim** |
+
+        **Regra:** “**Associado**” = instituição na **lista do portal**; “**Não**” = fora da lista ou **conflito de papel** (ex.: credenciadora citada em ação da Febraban no BC). Atualizar se o **export** de associados mudar.
 executive_summary:
   tagline: "**8 nomes** — o que pode pesar antes de levar o elenco para a mesa."
   blocks:
@@ -49,7 +67,7 @@ executive_summary:
       items:
         - "**Febraban e Estado:** associação **privada** dos bancos — **não** governa, **não** regula o sistema (papel do **BCB** e do **CMN**); pode **influenciar** debates e **dialogar** com o poder público."
         - "**Enquadramento:** publi com **bancos que integram a Febraban** ([lista completa de associados](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/) — exemplos Santander, Bradesco, BB, Caixa, Itaú) é **informação útil**, **não** mancha automática — indica que o talento já passou por **compliance** de grandes instituições. O que exige **jurídico** é **exclusividade / non-compete** **vigente** que **barre** esta campanha, não o fato histórico em si."
-        - "**Gil do Vigor:** **Santander** (Open Banking, **2021** — [Exame](https://exame.com/marketing/gil-do-vigor-faz-propaganda-sobre-open-banking-para-o-santander/), [Metrópoles](https://www.metropoles.com/colunas/leo-dias/saiba-o-valor-do-contrato-de-gil-do-vigor-com-o-banco-santander)); **Mercado Pago** (**2023** — [Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)) — **sinalizar**; checar só se há **cláusula residual** ativa para **esta** contratação."
+        - "**Gil do Vigor:** **Santander** = **associado** típico ([lista](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/)); **Mercado Pago** = **não associado** à Febraban nesta leitura (ver matriz na **metodologia** e [Valor Investe](https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2023/12/07/febraban-acusa-stone-mercado-pago-pagseguro-e-picpay-de-oferecerem-parcelado-sem-juros-pirata.ghtml)). **Sinalizar** contratos; checar **cláusula residual**."
         - "**Ana Paula Xongani:** **Bradesco** ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios), site e LinkedIn no due diligence) — **sinalizar**; checar **non-compete** se existir."
         - "**Raphael Vicente:** **Elo** (sócios **BB, Bradesco, Caixa**) — [Pulola](https://pulola.com/news/quem-e-raphael-vicente-influenciador-d41991/) — **sinalizar** positivamente (bandeira de **bancos associados**); confirmar **contrato** da **nova** peça."
         - "Demais nomes: **não achamos** publi explícita de **casa de apostas** no recorte (ver perfis)."
@@ -69,7 +87,7 @@ executive_summary:
 consolidated_narrative:
   title: Leitura para a apresentação
   subtitle: Abril/2026
-  tagline: "Cruzar com febraban/febraban_due_diligence.md — **contratos** (exclusividade/non-compete), **política** como **sinalização** (eleições 2026; Febraban **não** é governo) e **produto/consumidor** (Favelado / RSA no RA)."
+  tagline: "Cruzar com febraban/febraban_due_diligence.md — **matriz publi × associado** ([lista oficial](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/)), **contratos**, **política** (eleições 2026) e **produto/consumidor** (Favelado / RSA no RA)."
   blocks:
     - title: Onde apertar com jurídico / agência
       items:
@@ -103,6 +121,11 @@ consolidated_narrative:
 No **YouTube**, o handle **`@gildovigor`** não resolve para canal público (404 na URL padrão); o talento pode **não manter YouTube** como eixo ou usar outro @ — tratar **audiência YouTube** como **não aplicável** até a assessoria confirmar.
 
 Economista e ex-BBB com alcance massivo no Instagram. **Santander:** campanha **Open Banking** em **2021** ([ISTOÉ](https://istoe.com.br/gil-do-vigor-e-o-novo-garoto-propaganda-do-santander), [Exame](https://exame.com/marketing/gil-do-vigor-faz-propaganda-sobre-open-banking-para-o-santander/), [Metrópoles](https://www.metropoles.com/colunas/leo-dias/saiba-o-valor-do-contrato-de-gil-do-vigor-com-o-banco-santander) sobre **contrato/cachê** e janela **18 meses** citada na imprensa). **Mercado Pago:** **embaixador** anunciado em **jul/2023** ([Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)). **Política:** declarações sobre **Presidência** e contexto familiar no **PT** — ver links na **leitura rápida** e no **due diligence** interno. **Mídia:** planilha de agências citando desempenho em campanhas ([Jornal Opção](https://www.jornalopcao.com.br/ultimas-noticias/chay-suede-gil-do-vigor-e-caio-castro-planilha-de-agencias-de-publicidade-avalia-desempenho-dos-influenciadores-em-campanhas-674031/)) — tratar como **não conclusivo** sem confirmação da agência.
+
+### Publi × associado Febraban (lista oficial)
+
+- **Santander** (publi 2021): **associado** típico — [lista Febraban](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
+- **Mercado Pago** (contrato/embajador 2023): **não filiado** à Febraban nesta leitura operacional — a própria Febraban colocou **Mercado Pago** entre **credenciadoras** em representação ao **BC**, não como “associada” no mesmo polo ([Valor Investe](https://valorinveste.globo.com/produtos/servicos-financeiros/noticia/2023/12/07/febraban-acusa-stone-mercado-pago-pagseguro-e-picpay-de-oferecerem-parcelado-sem-juros-pirata.ghtml)); **confirmar** no **export** do portal se a política de classificação do cliente for estrita.
 
 ### Resumo tabela
 
@@ -141,6 +164,10 @@ Moderado a alto para briefings que exijam **distância visual do Executivo** —
 
 Educadora financeira com foco em **público de baixa renda** e empreendedorismo; canal **Nath Play** e produtos próprios ([nathfinancas.com.br](https://www.nathfinancas.com.br/)). Em **maio de 2023** entrou no **CDESS (“Conselhão”)** do governo **Lula** ([Exame](https://exame.com/brasil/nath-financas-bela-gil-e-padre-julio-lancelotti-entram-para-conselhao-veja-nomes/)). **Bets:** recusou **publi** de casas de apostas em matéria documentada ([InfoMoney](https://www.infomoney.com.br/minhas-financas/influencers-de-financas-recusam-milhoes-das-bets-por-ideais-nao-e-investimento/)). **Caixa e apostas:** crítica pública ao anúncio de **plataforma de apostas** pela Caixa ([Pleno.news](https://pleno.news/entretenimento/nath-financas-apoiadora-de-lula-critica-o-governo-chega.html)). Disputa de **marca** com Nathalia Arcuri ([Extra](https://extra.globo.com/economia/financas/noticia/2024/01/nath-financas-e-nathalia-arcuri-disputam-registro-de-marca-e-trocam-farpas-nas-redes-sociais.ghtml)). **Métricas:** taxa de engajamento no **Social Blade** (**~1%** na captura do painel) pode divergir de **outras ferramentas** ou janelas — não comparar sem a mesma metodologia.
 
+### Publi × associado Febraban (lista oficial)
+
+- **Sem publi paga** de banco identificada nesta coleta; menções a **CDB**, **poupança** e comparativos = **conteúdo educativo**, não contrato de associado — [lista](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
+
 ### Resumo tabela
 
 - **Concorrência:** Conteúdo sobre **CDB e bancos** (educativo); **sem publi de bet** ([InfoMoney](https://www.infomoney.com.br/minhas-financas/influencers-de-financas-recusam-milhoes-das-bets-por-ideais-nao-e-investimento/)); criticou **política de apostas** ligada à **Caixa** ([Pleno.news](https://pleno.news/entretenimento/nath-financas-apoiadora-de-lula-critica-o-governo-chega.html)).
@@ -178,6 +205,10 @@ Moderado a **alto** para **Febraban / Desenrola** — o [Reclame AQUI](https://w
 
 Creator de finanças focado em **periferia e bolsa**; histórico na imprensa econômica ([Valor Investe](https://valorinveste.globo.com/educacao-financeira/noticia/2020/07/02/murilo-duarte-do-favelado-investidor-fala-sobre-mercado-financeiro-em-live.ghtml), [E-Investidor/Estadão](https://einvestidor.estadao.com.br/investimentos/e-preciso-ter-educacao-financeira-antes-de-investir-diz-murilo-duarte/)). Vende **Money Club** e formações na **Hotmart** ([Hotmart](https://hotmart.com/pt-br/marketplace/produtos/money-club/K84737116J)). **Reclame AQUI:** [lista de reclamações](https://www.reclameaqui.com.br/empresa/favelado-investidor/lista-reclamacoes/) com casos sobre **RSA** (ex.: [cancelamento RSA 2.0](https://www.reclameaqui.com.br/favelado-investidor/cancelamento-indevido-do-curso-renda-sem-aparecer-rsa-20-e-falta-de-estorno_6ahagkCEmQXCfNsR/), [cobrança indevida RSA](https://www.reclameaqui.com.br/favelado-investidor/cobranca-indevida-de-curso_VtuGRmlfT6JUmGol/)). **Tom institucional:** entrevista no **Provoca** (TV Cultura, **2022**) com crítica a **taxas/juros** do sistema bancário ([YouTube](https://www.youtube.com/watch?v=E4F4cY_LUik)). **Conteúdo de promessa rápida** citado no due diligence ([vídeo “6 em 7”](https://www.youtube.com/watch?v=ShpuSf0EgbY)) — avaliar **compatibilidade** com tom **Desenrola**.
 
+### Publi × associado Febraban (lista oficial)
+
+- **Hotmart** / **RSA** (produtos próprios): **não** são instituições da [lista de associados](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/) — classificação **não filiado** para fins de “publi de banco associado”.
+
 ### Resumo tabela
 
 - **Concorrência:** Conteúdo e cursos de investimento; sem publi de **bet** localizada.
@@ -214,6 +245,11 @@ Moderado — **pauta política explícita** em entrevista (**sinalização** em 
 ### Narrativa
 
 Humor e família no TikTok/Instagram, cenário no **Complexo da Maré**; parcerias com marcas de massa citadas na imprensa de marketing ([PEGN](https://revistapegn.globo.com/ideias-de-negocios/noticia/2022/12/quem-e-raphael-vicente-criador-de-conteudo-da-mare-que-foi-notado-por-shakira.ghtml)). **Elo:** publi com a **bandeira Elo** (sócios **BB, Bradesco e Caixa**) — [Pulola](https://pulola.com/news/quem-e-raphael-vicente-influenciador-d41991/). **Mercado:** em **2024**, matéria cita **3º lugar** entre influenciadores mais **admirados** por agências e anunciantes no **Influence Marketing Scope** ([Meio e Mensagem](https://www.meioemensagem.com.br/eventoproxxima/raphael-vicente-e-a-receita-da-publi-perfeita)). Em entrevista à **Elástica**, declarou **não apoiar** o governo Bolsonaro e ligou seu posicionamento a identidade de **periferia, racialidade e orientação sexual** ([Elástica/Abril](https://elastica.abril.com.br/especiais/raphael-vicente-tiktok-familia-entrevista/)). **2023:** relato de **revista em casa** durante operação policial — [Estadão](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/), [O Liberal](https://www.oliberal.com/cultura/influenciador-raphael-vicente-teve-a-casa-revistada-durante-operacao-no-complexo-da-mare-1.739773).
+
+### Publi × associado Febraban (lista oficial)
+
+- **Elo** (publi documentada): **sim** — bandeira cujos **sócios** (BB, Bradesco, Caixa) são **bancos associados** típicos na [lista Febraban](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
+- **Itaú** (Rock in Rio / mídia): **provável associado** se houver **publi paga** com Itaú — **validar** brief do evento ([Poder360](https://www.poder360.com.br/tag/raphael-vicente/)).
 
 ### Resumo tabela
 
@@ -254,6 +290,10 @@ Canal no YouTube existe em **`@JaciraDoce`** (confirmar com a creator). Métrica
 
 Influenciadora de **humor** e **“sincerona”**; quadros como **Conselhos** e **Denúncia Fashion** ([Marie Claire](https://revistamarieclaire.globo.com/moda/noticia/2024/10/denuncia-fashion-com-deboche-influenciadora-aborda-tendencias-polemicas-em-videos-virais.ghtml)). Perfil **@jaciradoce** citado em reportagens sobre alcance ([Terra](https://www.terra.com.br/vida-e-estilo/comportamento/influenciadora-viraliza-como-sincerona-da-web-cansada-da-cultura-do-sucesso,dd13e3300d563b01bc0b8c76d431fe9a86de86k4.html)). **2024:** troca de farpas com **Jade Seba** — [Terra](https://www.terra.com.br/diversao/gente/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta,4a173f3476ed9a5991a3337a383c3334eaoe7xhe.html), [Purepeople](https://www.purepeople.com.br/galeria/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta_a400803/1).
 
+### Publi × associado Febraban (lista oficial)
+
+- **Não consta** publi de banco/financeira mapeada — [lista](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
+
 ### Resumo tabela
 
 - **Concorrência:** Não consta publi de banco concorrente nem de bet no recorte.
@@ -290,6 +330,10 @@ Moderado — pautas **identitárias** e **crítica à internet**; sem banco/bet 
 ### Narrativa
 
 **“Webnamorada do Brasil”** — humor, música e **não-bináriedade** ([NESS](https://www.nessmgt.com/casting/juvi)); entrevista no **Capricho** sobre trajetória, **ateísmo** e álbum **Cultura do Ódio** ([Capricho](https://capricho.abril.com.br/comportamento/juvi-chagas-ensina-a-nos-levar-menos-a-serio-e-entender-que-a-vida-e-longa)). **Anti-bets:** matéria sobre vídeo **demonstrativo** em plataforma de apostas ([Banda B](https://www.bandab.com.br/variedades/internet/influencer-perde-salario-minimo-40-minutos-jogo-azar/)). Acadêmicos citam o perfil em debate de gênero e colonialidade ([artigo acadêmico](https://publicacoes.softaliza.com.br/compos2025/article/download/11319/7723/6761)).
+
+### Publi × associado Febraban (lista oficial)
+
+- **Não consta** publi de banco/financeira mapeada — [lista](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
 
 ### Resumo tabela
 
@@ -328,6 +372,10 @@ Moderado — **histórico público com Bradesco**; diversas marcas de massa.
 
 Multiempresária (**Ateliê Xongani**, comunicação), apresentadora (**GNT**), **Creators for Change** e colunas. **Bradesco** em campanha de **microempreendedorismo** descrita na imprensa ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios)); site próprio lista **Bradesco** entre clientes ([anapaulaxongani.com](https://anapaulaxongani.com/multi-empresaria/)); **balanço público no LinkedIn** (2021) citado no **due diligence** interno como lista de parceiros incluindo Bradesco — **validar** post/arquivo. **GrisLab** resume parcerias com **Natura**, **Bradesco**, etc. ([GrisLab](https://grislab.com.br/celebridades/ana-paula-xongani/)).
 
+### Publi × associado Febraban (lista oficial)
+
+- **Bradesco** (campanha / portfólio): **associado** — [lista Febraban](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
+
 ### Resumo tabela
 
 - **Concorrência:** **Bradesco** (campanha/série sobre MEI e conteúdo).
@@ -364,6 +412,10 @@ Moderado — **humor político contínuo**; viralização com **Pfizer vs. Bolso
 ### Narrativa
 
 Humorista, ator e roteirista; também conhecido como **Esse Menino**. O **Social Blade** indexa o Instagram em **[@rafachalub](https://socialblade.com/instagram/user/rafachalub)** (o briefing citou **@raphachalub** — pode ser handle alternativo ou troca de @; conferir no perfil oficial). No **YouTube**, a busca do SB em **“rafa chalub”** retornou card com **~112K** inscritos e **~7,96M** views ([busca](https://socialblade.com/youtube/search?query=rafa+chalub)); o canal público **`@rafachalub`** existe no YouTube — **validar** se é o mesmo creator antes de usar métricas em contrato. Imprensa e agência: [Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html), [Fernanda Ribas](https://fernandaribas.com/talento/rafa-chalub). Declara **crítica** a Bolsonaro e **atenção** a erros do governo **Lula** na mesma entrevista; vê **humor como ferramenta política**. Cobertura sobre **enchentes no RS** e recado ao governador **Eduardo Leite** ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml)).
+
+### Publi × associado Febraban (lista oficial)
+
+- **Não consta** publi de banco/financeira mapeada — [lista](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/).
 
 ### Resumo tabela
 
