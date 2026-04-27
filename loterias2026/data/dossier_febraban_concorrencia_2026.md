@@ -16,8 +16,9 @@ quality_calibration:
 briefing:
   perfis_institucionais: []
   intro_paragraphs:
-    - '**Pedido:** checagem pré-apresentação de **8 creators** indicados para concorrência publicitária **Febraban**. Eixos: **métricas** (ordem de grandeza), **publi com bancos/financeiras concorrentes**, **publi com bets**, **política**, **polêmicas/reputação**.'
-    - "**Alertas prioritários:** Santander + Gil (2021); Nath Finanças no **Conselhão** (governo federal, 2023); Reclame AQUI **FAVELADO INVESTIDOR**; Bradesco + Ana Paula Xongani. **“Não consta”** = não localizamos na busca desta coleta; pode existir fora do recorte."
+    - '**Pedido:** checagem pré-apresentação de **8 creators** para a **Febraban** no contexto da campanha **Desenrola 2.0** (continuidade do programa federal de renegociação de dívidas — ver [portal Febraban](https://portal.febraban.org.br/noticia/4429/pt-br/)). Eixos: **métricas** (painéis Social Blade neste repo), **publi com bancos/financeiras**, **bets**, **política** (ano eleitoral 2026), **polêmicas/reputação**.'
+    - "**Fonte adicional interna:** relatório consolidado **febraban/febraban_due_diligence.md** (Calia, 27/04/2026), com links de imprensa e Reclame AQUI. Onde **métricas** divergiam (ex.: seguidores), prevaleceu **Social Blade** na data do painel; onde o **due diligence** trazia **fato com URL** ausente do dossiê anterior, incorporamos e citamos."
+    - "**Alertas prioritários:** Santander + Gil (2021); **Mercado Pago** (Gil, 2023); Nath no **Conselhão**; **RSA** / Reclame AQUI **Favelado Investidor**; Bradesco + Ana Paula. **“Não consta”** = não localizamos na busca desta coleta."
   criterios:
     - "Bancos / financeiras: Santander, Bradesco, Itaú, Nubank, corretoras, campanhas Open Banking, etc."
     - "Bets: casas de apostas, patrocínio de odds, rifas promocionais ligadas a jogo — não confundir com sketch cujo título contenha a palavra “bet”."
@@ -31,38 +32,40 @@ briefing:
     - Squad Febraban (8)
 methodology:
   columns:
-    - label: Imprensa e busca aberta
+    - label: Imprensa, due diligence e busca aberta
       body: |
-        Matérias, releases e páginas públicas (incl. Reclame AQUI). Separamos fato documentado de rumor.
+        Matérias, releases, **Reclame AQUI** e o relatório interno **`febraban/febraban_due_diligence.md`** (mesmo elenco e contexto Desenrola 2.0). Separamos fato com **URL** de rumor. Em conflito numérico com painéis, vale a **fonte datada** do Social Blade para tabela e o **texto com link** para narrativa institucional.
     - label: Redes e biografias
       body: |
         Handles indicados no briefing; conteúdo público de marca costuma aparecer em #publi ou mídia especializada.
     - label: Métricas
       body: |
-        Tabela de Instagram neste HTML usa **referências públicas** na data de nota dos painéis (ordem de grandeza). **Não** substitui relatório de audiência do próprio creator nem painel pago — pedir à agência/creator se a decisão depender de demo precisa.
+        Tabelas **Instagram / YouTube** = **Social Blade** (captura **27/04/2026**; tabela de referência técnica com links SB no repositório do projeto). **Não** substitui media kit nem audiência declarada pelo creator. Outros números (ex. “7,53” de engajamento em relatório paralelo) podem usar **outra fórmula** — comparar só com a mesma metodologia.
 executive_summary:
   tagline: "**8 nomes** — o que pode pesar antes de levar o elenco para a mesa."
   blocks:
     - title: Concorrência bancária e exclusividade
       items:
-        - "**Gil do Vigor:** campanha **Santander** / **Open Banking** em **2021** ([ISTOÉ](https://istoe.com.br/gil-do-vigor-e-o-novo-garoto-propaganda-do-santander), [Buzzmonitor](https://buzzmonitor.com/blog/campanha-de-open-banking-do-santander-com-gil-do-vigor-alimenta-debates-nas-redes-sociais/)) — **checar contrato** (exclusividade, cláusula residual, conflito com narrativa de **associação de bancos**)."
-        - "**Ana Paula Xongani:** **Bradesco** em campanha de **microempreendedorismo** ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios)); também cita Bradesco no site da creator ([anapaulaxongani.com](https://anapaulaxongani.com/multi-empresaria/))."
-        - "Demais nomes: **não achamos** publi explícita de **casa de apostas** nem de **banco concorrente** no recorte desta coleta (ver perfis)."
+        - "**Gil do Vigor:** **Santander** (Open Banking, **2021** — [Exame](https://exame.com/marketing/gil-do-vigor-faz-propaganda-sobre-open-banking-para-o-santander/), [Metrópoles/Leo Dias](https://www.metropoles.com/colunas/leo-dias/saiba-o-valor-do-contrato-de-gil-do-vigor-com-o-banco-santander) sobre contrato/cachê); **Mercado Pago** como **embaixador** a partir de **jul/2023** ([Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)) — **checar** residual de **non-compete** e encaixe com **associação de bancos**."
+        - "**Ana Paula Xongani:** **Bradesco** em campanha de **microempreendedorismo** ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios)); menção a parceiros incluindo Bradesco em **balanço público no LinkedIn** (2021, citado no due diligence interno)."
+        - "**Raphael Vicente:** publi com **Elo** (bandeira com sócios **BB, Bradesco e Caixa**) — [Pulola](https://pulola.com/news/quem-e-raphael-vicente-influenciador-d41991/); **confirmar** cláusulas com agência."
+        - "Demais nomes: **não achamos** publi explícita de **casa de apostas** no recorte (ver perfis)."
     - title: Política e institucional
       items:
-        - "**Nath Finanças (Nathália Rodrigues):** integrante do **CDESS (“Conselhão”)** recriado no governo **Lula** em **maio/2023** ([Estadão](https://www.estadao.com.br/politica/conselhao-governo-lula-nath-financas-nprp/)) — exposição **institucional** visível para quem precisa de **neutralidade** forte."
-        - "**Rafa Chalub:** humor com **política explícita** ([Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html)); crítica a gestões federal e estadual em veículos ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml))."
+        - "**Gil do Vigor:** **risco político elevado** em **2026** — declarações sobre **candidatura à Presidência** ([Metrópoles dez/2024](https://www.metropoles.com/colunas/fabia-oliveira/gil-do-vigor-fala-sobre-entrar-na-politica-concorrer-a-presidente), [O Tempo](https://www.otempo.com.br/entretenimento/2024/12/15/gil-do-vigor-revela-desejo-de-ingressar-na-politica-liderar-o-brasil)); **mãe filiada ao PT** e pré-candidaturas cobertas ([Congresso em Foco](https://www.congressoemfoco.com.br/noticia/12247/mae-de-gil-do-vigor-e-pre-candidata-a-deputada-federal-pelo-pt)); participação em **lançamento de candidatura Lula 2022** (mesmas fontes no due diligence). **Relatório interno** sugere **veto** por neutralidade — decisão do **cliente**."
+        - "**Nath Finanças (Nathália Rodrigues):** integrante do **CDESS (“Conselhão”)** em **mai/2023** ([Exame](https://exame.com/brasil/nath-financas-bela-gil-e-padre-julio-lancelotti-entram-para-conselhao-veja-nomes/)); crítica pública ao **anúncio de apostas pela Caixa** ([Pleno.news](https://pleno.news/entretenimento/nath-financas-apoiadora-de-lula-critica-o-governo-chega.html)) — sensível para **Febraban** se a narrativa tocar em **bets** ou **banco público**."
+        - "**Rafa Chalub:** humor com **política explícita** ([Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html)); crítica a gestões federal e estadual ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml))."
         - "**Raphael Vicente:** em entrevista, posicionamento **anti-governo Bolsonaro** e pauta de **comunidade** ([Elástica/Abril](https://elastica.abril.com.br/especiais/raphael-vicente-tiktok-familia-entrevista/)) — não é cargo público, mas pode polarizar."
         - "**Juvi Chagas:** pautas **LGBTQIA+** e artístico-social ([Capricho](https://capricho.abril.com.br/comportamento/juvi-chagas-ensina-a-nos-levar-menos-a-serio-e-entender-que-a-vida-e-longa)); sem cargo em governo no que vimos."
     - title: Curso, consumidor e mídia
       items:
-        - "**Favelado Investidor:** empresa **verificada** no [Reclame AQUI](https://www.reclameaqui.com.br/empresa/favelado-investidor/) com **volume baixo** de reclamações no período exibido na página (**2** no recorte out/2025–mar/2026); **não** localizamos menção ao nome **“RSA”** nessa página — vale **print** e **checagem de produto** se o briefing interno apontar curso com essa sigla."
-        - "**Nath Finanças:** disputa de **marca** com Nathalia Arcuri na imprensa ([Extra](https://extra.globo.com/economia/financas/noticia/2024/01/nath-financas-e-nathalia-arcuri-disputam-registro-de-marca-e-trocam-farpas-nas-redes-sociais.ghtml)) — ruído de **marca**, não de produto bancário."
-        - "**Jacira Doce:** polêmica de **relacionamento com outra creator** (mídia) ([Purepeople](https://www.purepeople.com.br/galeria/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta_a400803/1))."
+        - "**Favelado Investidor:** [lista de reclamações](https://www.reclameaqui.com.br/empresa/favelado-investidor/lista-reclamacoes/) com **dezenas** de casos ativos e vários sobre **curso RSA** (cobrança/estorno/cancelamento) — **conflita** com resumo “2 reclamações” do **bloco de reputação** da empresa (janela **out/2025–mar/2026**); para **due diligence**, usar a **lista** e os **links** das reclamações. **Relatório interno** sugere **veto** institucional — decisão do **cliente**."
+        - "**Nath Finanças:** posicionamento **documentado** contra **publi de bets** ([InfoMoney](https://www.infomoney.com.br/minhas-financas/influencers-de-financas-recusam-milhoes-das-bets-por-ideais-nao-e-investimento/)); disputa de **marca** com Nathalia Arcuri ([Extra](https://extra.globo.com/economia/financas/noticia/2024/01/nath-financas-e-nathalia-arcuri-disputam-registro-de-marca-e-trocam-farpas-nas-redes-sociais.ghtml))."
+        - "**Jacira Doce:** polêmica com **Jade Seba** — [Terra](https://www.terra.com.br/diversao/gente/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta,4a173f3476ed9a5991a3337a383c3334eaoe7xhe.html) (dez/2024); [Purepeople](https://www.purepeople.com.br/galeria/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta_a400803/1)."
 consolidated_narrative:
   title: Leitura para a apresentação
   subtitle: Abril/2026
-  tagline: Priorize **contratos** (Gil, Ana Paula), **governança política** (Nath, Rafa, Raphael) e **due diligence** de produto (Favelado).
+  tagline: "Cruzar este HTML com febraban/febraban_due_diligence.md (Desenrola 2.0) — contratos (Gil, Ana Paula, Raphael/Elo), política (Gil, Nath) e produto/consumidor (Favelado / RSA no RA)."
   blocks:
     - title: Onde apertar com jurídico / agência
       items:
@@ -82,7 +85,7 @@ consolidated_narrative:
 
 ### Síntese de risco
 
-Moderado — **histórico forte com banco privado** (Santander); checar exclusividade e narrativa para **associação bancária**.
+Alto para **neutralidade política** em **2026** — além de **Santander** (Open Banking, **2021**) e **Mercado Pago** (**embaixador** desde **jul/2023**, [Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)), há **declarações de ambição eleitoral** e **vínculos familiares/partidários** documentados no **due diligence** ([Metrópoles](https://www.metropoles.com/colunas/fabia-oliveira/gil-do-vigor-fala-sobre-entrar-na-politica-concorrer-a-presidente), [Congresso em Foco](https://www.congressoemfoco.com.br/noticia/12247/mae-de-gil-do-vigor-e-pre-candidata-a-deputada-federal-pelo-pt)). **Relatório interno** recomenda **veto** — decisão do **cliente**.
 
 ### Handles
 
@@ -95,17 +98,17 @@ Moderado — **histórico forte com banco privado** (Santander); checar exclusiv
 
 No **YouTube**, o handle **`@gildovigor`** não resolve para canal público (404 na URL padrão); o talento pode **não manter YouTube** como eixo ou usar outro @ — tratar **audiência YouTube** como **não aplicável** até a assessoria confirmar.
 
-Economista e ex-BBB com alcance massivo no Instagram. Em **2021** virou **garoto-propaganda do Santander** em campanha de **Open Banking** veiculada na TV aberta ([ISTOÉ](https://istoe.com.br/gil-do-vigor-e-o-novo-garoto-propaganda-do-santander)); a ação gerou **debate em redes** e picos de menção ao tema ([Buzzmonitor](https://buzzmonitor.com/blog/campanha-de-open-banking-do-santander-com-gil-do-vigor-alimenta-debates-nas-redes-sociais/)). Há ainda menções recentes a conteúdo de **empregabilidade** ligado à marca Santander no LinkedIn (ex.: [#TemVagaNaFirma](https://pt.linkedin.com/posts/gildovigor_temvaganafirma-activity-6857752294818160640-lgZn)) — reforça **associação de longa data** com o banco na percepção pública.
+Economista e ex-BBB com alcance massivo no Instagram. **Santander:** campanha **Open Banking** em **2021** ([ISTOÉ](https://istoe.com.br/gil-do-vigor-e-o-novo-garoto-propaganda-do-santander), [Exame](https://exame.com/marketing/gil-do-vigor-faz-propaganda-sobre-open-banking-para-o-santander/), [Metrópoles](https://www.metropoles.com/colunas/leo-dias/saiba-o-valor-do-contrato-de-gil-do-vigor-com-o-banco-santander) sobre **contrato/cachê** e janela **18 meses** citada na imprensa). **Mercado Pago:** **embaixador** anunciado em **jul/2023** ([Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)). **Política:** declarações sobre **Presidência** e contexto familiar no **PT** — ver links na **leitura rápida** e no **due diligence** interno. **Mídia:** planilha de agências citando desempenho em campanhas ([Jornal Opção](https://www.jornalopcao.com.br/ultimas-noticias/chay-suede-gil-do-vigor-e-caio-castro-planilha-de-agencias-de-publicidade-avalia-desempenho-dos-influenciadores-em-campanhas-674031/)) — tratar como **não conclusivo** sem confirmação da agência.
 
 ### Resumo tabela
 
-- **Concorrência:** Santander (campanha institucional 2021; Open Banking); checar **residual** e outras financeiras.
+- **Concorrência:** Santander (**2021**); **Mercado Pago** (**2023**); checar **residual** / **non-compete** e encaixe com **associação de bancos**.
 - **Polêmicas:** Baixo no recorte — fama pós-reality e exposição midiática habitual.
 - **Política:** Sem cargo público localizado; foco costuma ser entretenimento e pautas de diversidade.
 
 ### Concorrência (bets / loterias / jogos)
 
-Não localizamos publicidade de **casa de apostas** no recorte. **Banco:** Santander (2021 e menções recentes de marca).
+Não localizamos publicidade de **casa de apostas** no recorte. **Bancos / financeiras:** Santander (**2021**); **Mercado Pago** (**embaixador**, **2023** — [Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)).
 
 ### Polêmicas e situações delicadas
 
@@ -132,11 +135,11 @@ Moderado a alto para briefings que exijam **distância do Executivo federal** �
 
 ### Narrativa
 
-Educadora financeira com foco em **público de baixa renda** e empreendedorismo; canal **Nath Play** e produtos próprios. Em **maio de 2023** foi anunciada como integrante do **Conselho de Desenvolvimento Econômico Social Sustentável (CDESS)** do governo **Lula** ([Estadão](https://www.estadao.com.br/politica/conselhao-governo-lula-nath-financas-nprp/), [Money Times](https://www.moneytimes.com.br/nath-financas-ceo-da-b3-e-leila-pereira-confira-integrantes-do-conselhao-de-lula/)). Há cobertura de **disputa de marca** com Nathalia Arcuri ([Extra](https://extra.globo.com/economia/financas/noticia/2024/01/nath-financas-e-nathalia-arcuri-disputam-registro-de-marca-e-trocam-farpas-nas-redes-sociais.ghtml)).
+Educadora financeira com foco em **público de baixa renda** e empreendedorismo; canal **Nath Play** e produtos próprios ([nathfinancas.com.br](https://www.nathfinancas.com.br/)). Em **maio de 2023** entrou no **CDESS (“Conselhão”)** do governo **Lula** ([Exame](https://exame.com/brasil/nath-financas-bela-gil-e-padre-julio-lancelotti-entram-para-conselhao-veja-nomes/)). **Bets:** recusou **publi** de casas de apostas em matéria documentada ([InfoMoney](https://www.infomoney.com.br/minhas-financas/influencers-de-financas-recusam-milhoes-das-bets-por-ideais-nao-e-investimento/)). **Caixa e apostas:** crítica pública ao anúncio de **plataforma de apostas** pela Caixa ([Pleno.news](https://pleno.news/entretenimento/nath-financas-apoiadora-de-lula-critica-o-governo-chega.html)). Disputa de **marca** com Nathalia Arcuri ([Extra](https://extra.globo.com/economia/financas/noticia/2024/01/nath-financas-e-nathalia-arcuri-disputam-registro-de-marca-e-trocam-farpas-nas-redes-sociais.ghtml)). **Métricas:** taxa de engajamento no **Social Blade** (**~1%** na captura do painel) pode divergir de **outras ferramentas** ou janelas — não comparar sem a mesma metodologia.
 
 ### Resumo tabela
 
-- **Concorrência:** Conteúdo sobre **CDB e bancos** no dia a dia (educativo); sem publi de **bet** localizada.
+- **Concorrência:** Conteúdo sobre **CDB e bancos** (educativo); **sem publi de bet** ([InfoMoney](https://www.infomoney.com.br/minhas-financas/influencers-de-financas-recusam-milhoes-das-bets-por-ideais-nao-e-investimento/)); criticou **política de apostas** ligada à **Caixa** ([Pleno.news](https://pleno.news/entretenimento/nath-financas-apoiadora-de-lula-critica-o-governo-chega.html)).
 - **Polêmicas:** Disputa de marca com outra influencer financeira (mídia 2024).
 - **Política:** **Alta visibilidade institucional** — conselheira do **governo federal** (2023).
 
@@ -158,7 +161,7 @@ Conflito público de **registro de marca** com Nathalia Arcuri, com troca de acu
 
 ### Síntese de risco
 
-Baixo a moderado — **reputação digital de empresa** (cursos) com baixo volume de reclamações no RA; validar produto **RSA** se existir no portfólio.
+Moderado a **alto** para **Febraban / Desenrola** — o [Reclame AQUI](https://www.reclameaqui.com.br/empresa/favelado-investidor/lista-reclamacoes/) exibe **múltiplas** reclamações ativas sobre **curso RSA** (cobrança, renovação, estorno), além de matérias e vídeos citados no **due diligence** interno. O **bloco de reputação** da empresa pode mostrar **poucos casos** numa **janela** — usar a **lista completa** para decisão.
 
 ### Handles
 
@@ -169,12 +172,12 @@ Baixo a moderado — **reputação digital de empresa** (cursos) com baixo volum
 
 ### Narrativa
 
-Creator de finanças focado em **periferia e bolsa**; histórico na imprensa econômica ([Valor Investe](https://valorinveste.globo.com/educacao-financeira/noticia/2020/07/02/murilo-duarte-do-favelado-investidor-fala-sobre-mercado-financeiro-em-live.ghtml), [E-Investidor/Estadão](https://einvestidor.estadao.com.br/investimentos/e-preciso-ter-educacao-financeira-antes-de-investir-diz-murilo-duarte/)). Vende **Money Club** e formações na **Hotmart** ([Hotmart](https://hotmart.com/pt-br/marketplace/produtos/money-club/K84737116J)). A empresa **FAVELADO INVESTIDOR** está no [Reclame AQUI](https://www.reclameaqui.com.br/empresa/favelado-investidor/) como **verificada**; a página indicava **2 reclamações** no período **out/2025–mar/2026** e **100% respondidas** na data de consulta deste dossiê.
+Creator de finanças focado em **periferia e bolsa**; histórico na imprensa econômica ([Valor Investe](https://valorinveste.globo.com/educacao-financeira/noticia/2020/07/02/murilo-duarte-do-favelado-investidor-fala-sobre-mercado-financeiro-em-live.ghtml), [E-Investidor/Estadão](https://einvestidor.estadao.com.br/investimentos/e-preciso-ter-educacao-financeira-antes-de-investir-diz-murilo-duarte/)). Vende **Money Club** e formações na **Hotmart** ([Hotmart](https://hotmart.com/pt-br/marketplace/produtos/money-club/K84737116J)). **Reclame AQUI:** [lista de reclamações](https://www.reclameaqui.com.br/empresa/favelado-investidor/lista-reclamacoes/) com casos sobre **RSA** (ex.: [cancelamento RSA 2.0](https://www.reclameaqui.com.br/favelado-investidor/cancelamento-indevido-do-curso-renda-sem-aparecer-rsa-20-e-falta-de-estorno_6ahagkCEmQXCfNsR/), [cobrança indevida RSA](https://www.reclameaqui.com.br/favelado-investidor/cobranca-indevida-de-curso_VtuGRmlfT6JUmGol/)). **Tom institucional:** entrevista no **Provoca** (TV Cultura, **2022**) com crítica a **taxas/juros** do sistema bancário ([YouTube](https://www.youtube.com/watch?v=E4F4cY_LUik)). **Conteúdo de promessa rápida** citado no due diligence ([vídeo “6 em 7”](https://www.youtube.com/watch?v=ShpuSf0EgbY)) — avaliar **compatibilidade** com tom **Desenrola**.
 
 ### Resumo tabela
 
 - **Concorrência:** Conteúdo e cursos de investimento; sem publi de **bet** localizada.
-- **Polêmicas:** **Reclame AQUI** com poucos casos no recorte; briefing citou **RSA** — **não** apareceu na página corporativa consultada; confirmar produto e eventual página específica.
+- **Polêmicas:** **RSA** e **Hotmart** — várias reclamações **abertas** na [lista do RA](https://www.reclameaqui.com.br/empresa/favelado-investidor/lista-reclamacoes/); crítica forte ao **sistema bancário** na **TV Cultura** ([YouTube](https://www.youtube.com/watch?v=E4F4cY_LUik)).
 - **Política:** Sem cargo público localizado; pauta de **inclusão financeira**.
 
 ### Concorrência (bets / loterias / jogos)
@@ -183,7 +186,7 @@ Não consta publicidade de casa de apostas. Oferta de **educação financeira** 
 
 ### Polêmicas e situações delicadas
 
-Expor **CNPJ** e reclamações em plataforma pública é sensível para **institucional**. Página da empresa no [Reclame AQUI](https://www.reclameaqui.com.br/empresa/favelado-investidor/) mostrava **volume baixo** de casos no recorte consultado — ainda assim exige **monitoramento** se a campanha citar **educação financeira** ou **cursos**.
+**Reclame AQUI:** a [lista de reclamações](https://www.reclameaqui.com.br/empresa/favelado-investidor/lista-reclamacoes/) mostra **volume relevante** de casos sobre **RSA** e cobrança — **due diligence interno** recomenda **veto** para campanha de **alívio de dívidas**; jurídico deve **ler** os tickets e respostas da empresa. **Mídia:** entrevista **Provoca** ([YouTube](https://www.youtube.com/watch?v=E4F4cY_LUik)).
 
 ### Política e pautas sensíveis
 
@@ -206,11 +209,11 @@ Moderado — **pauta política explícita** em entrevista; histórico de **mídi
 
 ### Narrativa
 
-Humor e família no TikTok/Instagram, cenário no **Complexo da Maré**; parcerias com marcas de massa citadas na imprensa de marketing ([PEGN](https://revistapegn.globo.com/ideias-de-negocios/noticia/2022/12/quem-e-raphael-vicente-criador-de-conteudo-da-mare-que-foi-notado-por-shakira.ghtml)). Em entrevista à **Elástica**, declarou **não apoiar** o governo Bolsonaro e ligou seu posicionamento a identidade de **periferia, racialidade e orientação sexual** ([Elástica/Abril](https://elastica.abril.com.br/especiais/raphael-vicente-tiktok-familia-entrevista/)). **2023:** relato de **revista em casa** durante operação policial — [Estadão](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/).
+Humor e família no TikTok/Instagram, cenário no **Complexo da Maré**; parcerias com marcas de massa citadas na imprensa de marketing ([PEGN](https://revistapegn.globo.com/ideias-de-negocios/noticia/2022/12/quem-e-raphael-vicente-criador-de-conteudo-da-mare-que-foi-notado-por-shakira.ghtml)). **Elo:** publi com a **bandeira Elo** (sócios **BB, Bradesco e Caixa**) — [Pulola](https://pulola.com/news/quem-e-raphael-vicente-influenciador-d41991/). **Mercado:** em **2024**, matéria cita **3º lugar** entre influenciadores mais **admirados** por agências e anunciantes no **Influence Marketing Scope** ([Meio e Mensagem](https://www.meioemensagem.com.br/eventoproxxima/raphael-vicente-e-a-receita-da-publi-perfeita)). Em entrevista à **Elástica**, declarou **não apoiar** o governo Bolsonaro e ligou seu posicionamento a identidade de **periferia, racialidade e orientação sexual** ([Elástica/Abril](https://elastica.abril.com.br/especiais/raphael-vicente-tiktok-familia-entrevista/)). **2023:** relato de **revista em casa** durante operação policial — [Estadão](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/), [O Liberal](https://www.oliberal.com/cultura/influenciador-raphael-vicente-teve-a-casa-revistada-durante-operacao-no-complexo-da-mare-1.739773).
 
 ### Resumo tabela
 
-- **Concorrência:** Marcas de consumo e telecom; **Rock in Rio** gerou matéria com menção a **Itaú** como marca em festival ([Poder360](https://www.poder360.com.br/tag/raphael-vicente/)) — contexto de **evento**, não necessariamente publi paga do creator.
+- **Concorrência:** **Elo** (BB/Bradesco/Caixa) — [Pulola](https://pulola.com/news/quem-e-raphael-vicente-influenciador-d41991/); marcas de consumo e telecom; **Rock in Rio** / **Itaú** em matéria de evento ([Poder360](https://www.poder360.com.br/tag/raphael-vicente/)) — checar **non-compete** Elo.
 - **Polêmicas:** Operação policial / relato de casa revistada ([Estadão](https://www.estadao.com.br/emais/gente/influencer-diz-que-casa-foi-invadida-em-operacao-policial-na-mare-muito-indignado-nprec/)).
 - **Política:** Posicionamento **explícito** contra governo Bolsonaro na entrevista citada; pauta de **comunidade**.
 
@@ -245,7 +248,7 @@ Baixo a moderado — humor e moda; **ruído de mídia** com outra influencer.
 
 Canal no YouTube existe em **`@JaciraDoce`** (confirmar com a creator). Métricas agregadas do **Social Blade** nesta rodada vieram da **busca interna** do site (número de **vídeos** não exibido no card — painel com **—** na coluna vídeos).
 
-Influenciadora de **humor** e **“sincerona”**; quadros como **Conselhos** e **Denúncia Fashion** ([Marie Claire](https://revistamarieclaire.globo.com/moda/noticia/2024/10/denuncia-fashion-com-deboche-influenciadora-aborda-tendencias-polemicas-em-videos-virais.ghtml)). Perfil **@jaciradoce** citado em reportagens sobre alcance ([Terra](https://www.terra.com.br/vida-e-estilo/comportamento/influenciadora-viraliza-como-sincerona-da-web-cansada-da-cultura-do-sucesso,dd13e3300d563b01bc0b8c76d431fe9a86de86k4.html)). **2024:** troca de farpas com **Jade Seba** após evento ([Purepeople](https://www.purepeople.com.br/galeria/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta_a400803/1)).
+Influenciadora de **humor** e **“sincerona”**; quadros como **Conselhos** e **Denúncia Fashion** ([Marie Claire](https://revistamarieclaire.globo.com/moda/noticia/2024/10/denuncia-fashion-com-deboche-influenciadora-aborda-tendencias-polemicas-em-videos-virais.ghtml)). Perfil **@jaciradoce** citado em reportagens sobre alcance ([Terra](https://www.terra.com.br/vida-e-estilo/comportamento/influenciadora-viraliza-como-sincerona-da-web-cansada-da-cultura-do-sucesso,dd13e3300d563b01bc0b8c76d431fe9a86de86k4.html)). **2024:** troca de farpas com **Jade Seba** — [Terra](https://www.terra.com.br/diversao/gente/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta,4a173f3476ed9a5991a3337a383c3334eaoe7xhe.html), [Purepeople](https://www.purepeople.com.br/galeria/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta_a400803/1).
 
 ### Resumo tabela
 
@@ -282,7 +285,7 @@ Moderado — pautas **identitárias** e **crítica à internet**; sem banco/bet 
 
 ### Narrativa
 
-**“Webnamorada do Brasil”** — humor, música e **não-bináriedade** ([NESS](https://www.nessmgt.com/casting/juvi)); entrevista no **Capricho** sobre trajetória, **ateísmo** e álbum **Cultura do Ódio** ([Capricho](https://capricho.abril.com.br/comportamento/juvi-chagas-ensina-a-nos-levar-menos-a-serio-e-entender-que-a-vida-e-longa)). Acadêmicos citam o perfil em debate de gênero e colonialidade ([artigo acadêmico](https://publicacoes.softaliza.com.br/compos2025/article/download/11319/7723/6761)).
+**“Webnamorada do Brasil”** — humor, música e **não-bináriedade** ([NESS](https://www.nessmgt.com/casting/juvi)); entrevista no **Capricho** sobre trajetória, **ateísmo** e álbum **Cultura do Ódio** ([Capricho](https://capricho.abril.com.br/comportamento/juvi-chagas-ensina-a-nos-levar-menos-a-serio-e-entender-que-a-vida-e-longa)). **Anti-bets:** matéria sobre vídeo **demonstrativo** em plataforma de apostas ([Banda B](https://www.bandab.com.br/variedades/internet/influencer-perde-salario-minimo-40-minutos-jogo-azar/)). Acadêmicos citam o perfil em debate de gênero e colonialidade ([artigo acadêmico](https://publicacoes.softaliza.com.br/compos2025/article/download/11319/7723/6761)).
 
 ### Resumo tabela
 
@@ -319,7 +322,7 @@ Moderado — **histórico público com Bradesco**; diversas marcas de massa.
 
 ### Narrativa
 
-Multiempresária (**Ateliê Xongani**, comunicação), apresentadora (**GNT**), **Creators for Change** e colunas. **Bradesco** em campanha de **microempreendedorismo** descrita na imprensa ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios)); site próprio lista **Bradesco** entre clientes ([anapaulaxongani.com](https://anapaulaxongani.com/multi-empresaria/)). **GrisLab** resume parcerias com **Natura**, **Bradesco**, etc. ([GrisLab](https://grislab.com.br/celebridades/ana-paula-xongani/)).
+Multiempresária (**Ateliê Xongani**, comunicação), apresentadora (**GNT**), **Creators for Change** e colunas. **Bradesco** em campanha de **microempreendedorismo** descrita na imprensa ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios)); site próprio lista **Bradesco** entre clientes ([anapaulaxongani.com](https://anapaulaxongani.com/multi-empresaria/)); **balanço público no LinkedIn** (2021) citado no **due diligence** interno como lista de parceiros incluindo Bradesco — **validar** post/arquivo. **GrisLab** resume parcerias com **Natura**, **Bradesco**, etc. ([GrisLab](https://grislab.com.br/celebridades/ana-paula-xongani/)).
 
 ### Resumo tabela
 
@@ -350,7 +353,7 @@ Moderado — **humor político contínuo**; viralização com **Pfizer vs. Bolso
 ### Handles
 
 - instagram: rafachalub
-- tiktok: rafachalub
+- tiktok: essemenino
 - youtube: rafachalub
 - x: rafachalub
 

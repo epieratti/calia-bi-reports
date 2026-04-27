@@ -3,6 +3,8 @@
 **Fonte:** [Social Blade](https://socialblade.com/) — Instagram `/instagram/user/<handle>`, YouTube `/youtube/@handle` ou `/youtube/handle/<handle>`, **busca** `/youtube/search?query=…`.  
 **Captura:** 2026-04-27. Parte do detalhe pode exigir login no SB.
 
+**Cruzamento:** narrativa executiva e perfis no HTML também incorporam **`febraban/febraban_due_diligence.md`** (conflitos numéricos → prevalece SB na tabela; fatos com URL do due diligence → texto do dossiê).
+
 ## Instagram
 
 | @ | Nome (SB) | Seguidores | Seguindo | Posts | Engaj. | Média curtidas | Média comentários | SB |

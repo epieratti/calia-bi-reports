@@ -20,3 +20,5 @@ https://epieratti.github.io/calia-bi-reports/febraban/20260427-dossie-febraban-c
 O conteúdo é gerado a partir de `loterias2026/data/dossier_febraban_concorrencia_2026.md` + `dossier_febraban_concorrencia_2026_panels.yaml`. Após o build, copie o HTML de `loterias2026/output/` para esta pasta.
 
 **Coleta Social Blade (métricas IG/YT):** `loterias2026/research/SOCIAL_BLADE_FEBRABAN_20260427.md`.
+
+**Due diligence consolidado (contexto Desenrola 2.0, links e recomendações):** `febraban/febraban_due_diligence.md` — o HTML do dossiê incorpora esse material na fonte `.md` em `loterias2026/data/`.
