@@ -11,18 +11,19 @@ quality_calibration:
   delta_vs_entrega_anterior: N/A — primeira entrega deste lote Febraban.
   definicoes_prova:
     concorrencia: "A **Febraban** é **associação** que representa o setor (não é um banco). **Publi com bancos associados** (ex.: BB, Caixa, Itaú, Bradesco, Santander e demais membros) **não é**, por si só, ponto negativo — **sinalizamos** para transparência e eventual **cláusula contratual** (exclusividade / non-compete) da **nova** campanha. **Conflito real** costuma ser **exclusividade ativa** com **um** banco que **impedir** a peça, **casa de apostas**, ou narrativa **contra** o recado institucional. Menção educativa genérica a “bancos” ≠ publi."
+    institucional: "A **Febraban** (Federação Brasileira de Bancos) **não** é **órgão do governo** nem parte da **administração pública** — é **associação privada** que **reúne** instituições financeiras, **defende** interesses do setor, **dialoga** com poder público e **promove** boas práticas (segurança, educação financeira etc.), **sem** poder **regulatório** sobre o sistema. **Regulação e supervisão** dos bancos cabem a órgãos públicos como o **Banco Central do Brasil** e o **Conselho Monetário Nacional**."
     polemicas: Episódio com risco de imagem em veículo sério, decisão judicial, plataforma de reclamação corporativa (ex. Reclame AQUI) ou padrão recorrente nas redes; briga entre influencers = sensibilidade de mídia, não automático “risco jurídico”.
-    politica: Cargo ou conselho em governo; filiação partidária; posicionamento político recorrente e explícito em entrevistas ou conteúdo; pauta identitária sem partido = sensibilidade de audiência, não “conflito Febraban” automático.
+    politica: "Cargo, conselho consultivo, filiação ou posicionamento político **explícito** — **não** implica, **por si só**, **incompatibilidade** com a Febraban (que **não** é governo). Tratamos como **sinalização** para **comunicação** e **percepção** de stakeholders, com **atenção redobrada** em **ano eleitoral** (captura narrativa / polarização)."
 briefing:
   perfis_institucionais: []
   intro_paragraphs:
-    - '**Pedido:** checagem pré-apresentação de **8 creators** para a **Febraban** (federação que **representa** o setor bancário — associação de bancos, **não** banco nem governo) no contexto da campanha **Desenrola 2.0** (ver [portal Febraban](https://portal.febraban.org.br/noticia/4429/pt-br/)). Eixos: **métricas** (Social Blade), **histórico com bancos** (entre eles **associados** à própria Febraban — **sinalizar**, sem tratar como falha automática), **bets**, **política** (2026), **polêmicas/reputação**.'
+    - '**Pedido:** checagem pré-apresentação de **8 creators** para a **Febraban** (associação **privada** que **representa** o setor — **não** é banco, **não** é órgão do governo nem administração pública; **regula** bancos o **BCB** e o **CMN**). Campanha **Desenrola 2.0** ([portal Febraban](https://portal.febraban.org.br/noticia/4429/pt-br/)). Eixos: **métricas** (Social Blade), **histórico com bancos** (**sinalizar** membros da associação), **bets**, **política** (**sinalizar**, sobretudo em **ano eleitoral**), **polêmicas/reputação**.'
     - "**Fonte adicional interna:** relatório consolidado **febraban/febraban_due_diligence.md** (Calia, 27/04/2026), com links de imprensa e Reclame AQUI. Onde **métricas** divergiam (ex.: seguidores), prevaleceu **Social Blade** na data do painel; onde o **due diligence** trazia **fato com URL** ausente do dossiê anterior, incorporamos e citamos."
     - "**Alertas prioritários:** Santander + Gil (2021); **Mercado Pago** (Gil, 2023); Nath no **Conselhão**; **RSA** / Reclame AQUI **Favelado Investidor**; Bradesco + Ana Paula. **“Não consta”** = não localizamos na busca desta coleta."
   criterios:
     - "Bancos / financeiras: mapear publi com **bancos membros** (BB, Caixa, Itaú, Bradesco, Santander, etc.) e **outras** financeiras — **sinalização**; só elevamos a alerta se houver **exclusividade** que conflite com a **nova** peça ou posicionamento **incompatível** com o recado."
     - "Bets: casas de apostas, patrocínio de odds, rifas promocionais ligadas a jogo — não confundir com sketch cujo título contenha a palavra “bet”."
-    - "Política: governo, partidos, eleições, posicionamento explícito."
+    - "Política: mapear vínculos e posicionamentos — **sinalização** para narrativa e percepção (eleições 2026); **não** confundir Febraban com governo."
   redes:
     - Instagram
     - TikTok
@@ -34,7 +35,7 @@ methodology:
   columns:
     - label: Imprensa, due diligence e busca aberta
       body: |
-        Matérias, releases, **Reclame AQUI** e o relatório interno **`febraban/febraban_due_diligence.md`** (mesmo elenco e contexto Desenrola 2.0). Separamos fato com **URL** de rumor. Em conflito numérico com painéis, vale a **fonte datada** do Social Blade para tabela e o **texto com link** para narrativa institucional.
+        Matérias, releases, **Reclame AQUI** e o relatório interno **`febraban/febraban_due_diligence.md`** (mesmo elenco e contexto Desenrola 2.0). Separamos fato com **URL** de rumor. **Enquadramento:** Febraban **não** é governo; **política** do creator = **sinalização** (risco de **mídia** / polarização), não “ilegalidade” automática. Em conflito numérico com painéis, vale a **fonte datada** do Social Blade para tabela e o **texto com link** para narrativa institucional.
     - label: Redes e biografias
       body: |
         Handles indicados no briefing; conteúdo público de marca costuma aparecer em #publi ou mídia especializada.
@@ -46,6 +47,7 @@ executive_summary:
   blocks:
     - title: Histórico com bancos (sinalização)
       items:
+        - "**Febraban e Estado:** associação **privada** dos bancos — **não** governa, **não** regula o sistema (papel do **BCB** e do **CMN**); pode **influenciar** debates e **dialogar** com o poder público."
         - "**Enquadramento:** publi com **bancos que integram a Febraban** (ex.: Santander, Bradesco, BB, Caixa, Itaú) é **informação útil**, **não** mancha automática — indica que o talento já passou por **compliance** de grandes instituições. O que exige **jurídico** é **exclusividade / non-compete** **vigente** que **barre** esta campanha, não o fato histórico em si."
         - "**Gil do Vigor:** **Santander** (Open Banking, **2021** — [Exame](https://exame.com/marketing/gil-do-vigor-faz-propaganda-sobre-open-banking-para-o-santander/), [Metrópoles](https://www.metropoles.com/colunas/leo-dias/saiba-o-valor-do-contrato-de-gil-do-vigor-com-o-banco-santander)); **Mercado Pago** (**2023** — [Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)) — **sinalizar**; checar só se há **cláusula residual** ativa para **esta** contratação."
         - "**Ana Paula Xongani:** **Bradesco** ([Meio e Mensagem](https://www.meioemensagem.com.br/midia/marketing-de-influencia-diversidade-racial-e-motor-de-negocios), site e LinkedIn no due diligence) — **sinalizar**; checar **non-compete** se existir."
@@ -53,7 +55,8 @@ executive_summary:
         - "Demais nomes: **não achamos** publi explícita de **casa de apostas** no recorte (ver perfis)."
     - title: Política e institucional
       items:
-        - "**Gil do Vigor:** **risco político elevado** em **2026** — declarações sobre **candidatura à Presidência** ([Metrópoles dez/2024](https://www.metropoles.com/colunas/fabia-oliveira/gil-do-vigor-fala-sobre-entrar-na-politica-concorrer-a-presidente), [O Tempo](https://www.otempo.com.br/entretenimento/2024/12/15/gil-do-vigor-revela-desejo-de-ingressar-na-politica-liderar-o-brasil)); **mãe filiada ao PT** e pré-candidaturas cobertas ([Congresso em Foco](https://www.congressoemfoco.com.br/noticia/12247/mae-de-gil-do-vigor-e-pre-candidata-a-deputada-federal-pelo-pt)); participação em **lançamento de candidatura Lula 2022** (mesmas fontes no due diligence). **Relatório interno** sugere **veto** por neutralidade — decisão do **cliente**."
+        - "**Política ≠ veto automático:** vínculos e falas **políticas** são **sinalização** (comunicação, **percepção** de mercado e **ano eleitoral**); a **Febraban não é governo** — avaliar **risco de mídia** e **briefing** da peça, não “incompatibilidade legal” por si só."
+        - "**Gil do Vigor:** **sinalização política forte** em **2026** — declarações sobre **candidatura à Presidência** ([Metrópoles dez/2024](https://www.metropoles.com/colunas/fabia-oliveira/gil-do-vigor-fala-sobre-entrar-na-politica-concorrer-a-presidente), [O Tempo](https://www.otempo.com.br/entretenimento/2024/12/15/gil-do-vigor-revela-desejo-de-ingressar-na-politica-liderar-o-brasil)); **mãe filiada ao PT** e pré-candidaturas cobertas ([Congresso em Foco](https://www.congressoemfoco.com.br/noticia/12247/mae-de-gil-do-vigor-e-pre-candidata-a-deputada-federal-pelo-pt)); participação em **lançamento de candidatura Lula 2022** (due diligence). **Relatório interno** sugeria **cautela máxima** / **não** uso — **decisão estratégica** do **cliente**."
         - "**Nath Finanças (Nathália Rodrigues):** integrante do **CDESS (“Conselhão”)** em **mai/2023** ([Exame](https://exame.com/brasil/nath-financas-bela-gil-e-padre-julio-lancelotti-entram-para-conselhao-veja-nomes/)); crítica pública ao **anúncio de apostas pela Caixa** ([Pleno.news](https://pleno.news/entretenimento/nath-financas-apoiadora-de-lula-critica-o-governo-chega.html)) — sensível para **Febraban** se a narrativa tocar em **bets** ou **banco público**."
         - "**Rafa Chalub:** humor com **política explícita** ([Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html)); crítica a gestões federal e estadual ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml))."
         - "**Raphael Vicente:** em entrevista, posicionamento **anti-governo Bolsonaro** e pauta de **comunidade** ([Elástica/Abril](https://elastica.abril.com.br/especiais/raphael-vicente-tiktok-familia-entrevista/)) — não é cargo público, mas pode polarizar."
@@ -66,7 +69,7 @@ executive_summary:
 consolidated_narrative:
   title: Leitura para a apresentação
   subtitle: Abril/2026
-  tagline: "Cruzar este HTML com febraban/febraban_due_diligence.md (Desenrola 2.0) — **contratos da nova peça** (exclusividade/non-compete), **política** (Gil, Nath) e **produto/consumidor** (Favelado / RSA no RA)."
+  tagline: "Cruzar com febraban/febraban_due_diligence.md — **contratos** (exclusividade/non-compete), **política** como **sinalização** (eleições 2026; Febraban **não** é governo) e **produto/consumidor** (Favelado / RSA no RA)."
   blocks:
     - title: Onde apertar com jurídico / agência
       items:
@@ -86,7 +89,7 @@ consolidated_narrative:
 
 ### Síntese de risco
 
-Alto para **neutralidade política** em **2026** — além de **Santander** (Open Banking, **2021**) e **Mercado Pago** (**embaixador** desde **jul/2023**, [Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)), há **declarações de ambição eleitoral** e **vínculos familiares/partidários** documentados no **due diligence** ([Metrópoles](https://www.metropoles.com/colunas/fabia-oliveira/gil-do-vigor-fala-sobre-entrar-na-politica-concorrer-a-presidente), [Congresso em Foco](https://www.congressoemfoco.com.br/noticia/12247/mae-de-gil-do-vigor-e-pre-candidata-a-deputada-federal-pelo-pt)). **Relatório interno** recomenda **veto** — decisão do **cliente**.
+**Sinalização política elevada** em **2026** (eleições) — além de **Santander** (Open Banking, **2021**) e **Mercado Pago** (**embaixador** desde **jul/2023**, [Exame](https://exame.com/pop/gil-do-vigor-e-o-novo-embaixador-do-mercado-pago/)), há **declarações de ambição eleitoral** e **vínculos familiares/partidários** documentados ([Metrópoles](https://www.metropoles.com/colunas/fabia-oliveira/gil-do-vigor-fala-sobre-entrar-na-politica-concorrer-a-presidente), [Congresso em Foco](https://www.congressoemfoco.com.br/noticia/12247/mae-de-gil-do-vigor-e-pre-candidata-a-deputada-federal-pelo-pt)). **Não** é, por si só, “ilegal” para a Febraban (associação **privada**, **não** governo); **due diligence interno** sugeria **não** uso por **risco de mídia** / **captura narrativa** — **decisão** do **cliente**.
 
 ### Handles
 
@@ -117,7 +120,7 @@ Exposição típica de celebridade de reality; campanha bancária amplamente com
 
 ### Política e pautas sensíveis
 
-Pauta de representatividade e economia em linguagem popular; sem integração em conselho de governo localizada nesta coleta.
+Pauta de representatividade e economia em linguagem popular; **fatos políticos** citados na narrativa — **sinalizar** em **ano eleitoral**; sem cargo em conselho de governo localizado nesta coleta.
 
 ## Nathália Rodrigues (Nath Finanças)
 
@@ -125,7 +128,7 @@ Pauta de representatividade e economia em linguagem popular; sem integração em
 
 ### Síntese de risco
 
-Moderado a alto para briefings que exijam **distância do Executivo federal** — **Conselhão** (CDESS) desde **2023**.
+Moderado a alto para briefings que exijam **distância visual do Executivo** — **Conselhão** (CDESS) desde **2023** (**sinalização** em **ano eleitoral**; **não** implica, por si só, conflito com a Febraban enquanto **associação privada**).
 
 ### Handles
 
@@ -154,7 +157,7 @@ Conflito público de **registro de marca** com Nathalia Arcuri, com troca de acu
 
 ### Política e pautas sensíveis
 
-**Conselhão** do governo Lula — papel **consultivo**, mas **marca estreita** com agenda do Executivo ([Estadão](https://www.estadao.com.br/politica/conselhao-governo-lula-nath-financas-nprp/)). Para Febraban, avaliar **tolerância a polarização** e possível **questionamento** de stakeholders.
+**Conselhão** do governo Lula — papel **consultivo**, **marca** próxima do Executivo ([Estadão](https://www.estadao.com.br/politica/conselhao-governo-lula-nath-financas-nprp/)). **Sinalizar** para **comunicação** e **percepção** (eleições 2026); avaliar **tolerância a polarização** e **questionamento** de stakeholders — **sem** tratar como “proibido” só por vínculo político.
 
 ## Murilo Duarte (Favelado Investidor)
 
@@ -199,7 +202,7 @@ Discurso de ascensão social e crítica à **elitização** do mercado financeir
 
 ### Síntese de risco
 
-Moderado — **pauta política explícita** em entrevista; histórico de **mídia** sobre **Maré** e segurança.
+Moderado — **pauta política explícita** em entrevista (**sinalização** em ano eleitoral); histórico de **mídia** sobre **Maré** e segurança.
 
 ### Handles
 
@@ -228,7 +231,7 @@ Relato de **revista em casa** na **Maré** em **2023** ([Estadão](https://www.e
 
 ### Política e pautas sensíveis
 
-Fala direta sobre **governo** e **identidade** — útil para diversidade, sensível para campanhas que busquem **neutralidade política** explícita.
+Fala direta sobre **governo** e **identidade** — **sinalizar** em **2026**; útil para diversidade; avaliar **percepção** se o brief pedir **imagem** de **distância** de debates políticos.
 
 ## Jacira Doce
 
@@ -378,4 +381,4 @@ Viralização histórica com **vacina** e **Executivo** — arquivo sensível em
 
 ### Política e pautas sensíveis
 
-**LGBTQIA+** e **crítica a governos** de diferentes matizes — exige alinhamento com **tolerância a posicionamento** da Febraban nesta peça.
+**LGBTQIA+** e **crítica a governos** de diferentes matizes — **sinalização** forte em **ano eleitoral**; alinhar **tolerância a posicionamento** com o **brief** (Febraban **não** é governo — risco é sobretudo de **mídia** / **polarização**).

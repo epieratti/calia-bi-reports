@@ -14,26 +14,26 @@ Este relatório consolida dois levantamentos independentes: pesquisa primária c
 
 ## Contexto da Campanha
 
-**Cliente:** FEBRABAN — Federação Brasileira de Bancos. Entidade privada representante do setor bancário nacional. Não é um banco — é a associação que reúne todos os principais bancos do país, incluindo concorrentes diretos entre si.
+**Cliente:** FEBRABAN — Federação Brasileira de Bancos. **Associação privada** que **representa** interesses do setor bancário no Brasil (**não** é banco, **não** é órgão do governo nem parte da **administração pública**). **Reúne** instituições financeiras (públicas e privadas), **atua** na defesa do setor, **participa** de debates sobre políticas econômicas e regulatórias e **promove** iniciativas (segurança, educação financeira etc.), **sem** poder **oficial** de **regulamentar** ou supervisionar o sistema — papel do **Banco Central** ([BCB](https://www.bcb.gov.br/)) e do **Conselho Monetário Nacional** ([CMN](https://www.gov.br/planalto/pt-br/composicao/conselhos-e-orgaos-colegiados/cmn)).
 
 **Campanha:** Desenrola 2.0 — continuidade do programa federal de renegociação de dívidas bancárias lançado em julho de 2023. O programa original beneficiou 2,7 milhões de consumidores e renegociou R$ 6,5 bilhões em dívidas.  
 > 🔗 [portal.febraban.org.br — Primeiro mutirão de negociação de dívidas bancárias de 2026](https://portal.febraban.org.br/noticia/4429/pt-br/)
 
 **Público-alvo:** População endividada e negativada, majoritariamente classes C e D, periferias urbanas.
 
-**Contexto político:** Ano eleitoral (eleições presidenciais e legislativas em outubro de 2026). Risco de captura partidária de narrativas institucionais é crítico neste momento.
+**Contexto político:** Ano eleitoral (eleições presidenciais e legislativas em outubro de 2026). **Relação política** do creator **não** é, **por si só**, risco jurídico para a Febraban — vale **sinalizar** para **comunicação**, **percepção** de mercado e possível **captura narrativa** em contexto de **polarização**.
 
 ---
 
 ## Sensibilidades Críticas para Este Cliente
 
-**Nota de enquadramento (Febraban):** a Febraban é **associação** que representa o setor (BB, Caixa, Itaú, Bradesco, Santander e demais associados). **Ter feito propaganda para algum desses bancos não é, por si só, negativo** — é **sinalização** útil (inclusive mostra trânsito em **compliance** de grandes instituições). O que exige **atenção jurídica** é **exclusividade ou non-compete vigente** que **impedir** a **nova** campanha, não o histórico isolado de publi com **membro** da federação.
+**Nota de enquadramento (Febraban):** a Febraban é **associação privada** dos bancos (**não** governo; **não** regula o sistema — **BCB** e **CMN**). **Ter feito propaganda para algum desses bancos não é, por si só, negativo** — é **sinalização** útil (inclusive mostra trânsito em **compliance** de grandes instituições). O que exige **atenção jurídica** é **exclusividade ou non-compete vigente** que **impedir** a **nova** campanha, não o histórico isolado de publi com **membro** da federação.
 
 **1. Neutralidade bancária:** a Febraban representa **todos** os bancos associados. **Vínculo ativo de exclusividade** com **um** banco que **bloqueie** a peça ou **assimetria contratual** inaceitável para o **novo** contrato — aí sim é ponto crítico. Histórico de publi com **bancos membros** (sem exclusividade conflitante) deve ser tratado como **informação**, não como veto automático.
 
 **2. Incompatibilidade com bets:** A missão do Desenrola é proteção financeira. Porta-vozes associados a apostas online contradizem radicalmente esse posicionamento.
 
-**3. Polarização política em ano eleitoral:** Influenciadores com ambições eleitorais declaradas, filiação partidária ou vínculos formais com o governo federal criam risco de captura narrativa em momento de alta polarização.
+**3. Política e polarização em ano eleitoral:** Ambição eleitoral declarada, filiação partidária ou vínculo formal com o **governo** (ex.: conselhos) são **sinalização** — úteis para **briefing** e **gestão de percepção**, **não** “proibição” automática por relação com o **Estado**. Em **2026**, ganham peso por risco de **mídia** e **reinterpretação** da campanha.
 
 ---
 
@@ -91,9 +91,9 @@ Planilha interna de agências publicitárias circulada em 2025 incluiu relato ne
 
 > 🔗 [Jornal Opção — "Planilha de agências de publicidade avalia desempenho dos influenciadores em campanhas" (jan/2025)](https://www.jornalopcao.com.br/ultimas-noticias/chay-suede-gil-do-vigor-e-caio-castro-planilha-de-agencias-de-publicidade-avalia-desempenho-dos-influenciadores-em-campanhas-674031/)
 
-#### 🚫 VETO SUGERIDO
+#### ⚠️ CAUTELA MÁXIMA (POLÍTICA + MÍDIA)
 
-Recomendação: veto em razão do **risco político** em ano eleitoral. O vínculo familiar com o PT, a ambição presidencial declarada e a participação ativa no lançamento da candidatura de Lula comprometem a **neutralidade partidária** sensível para a campanha. **Histórico com Santander e Mercado Pago** é **sinalização** de bancos/fintech (não veto por si só — ver nota de enquadramento acima); checar só **exclusividade** **ativa** para a **nova** peça.
+Recomendação: **não** tratar **vínculos políticos** como **incompatibilidade legal** com a Febraban (associação **privada**). Em **ano eleitoral**, a **ambição presidencial** declarada, o vínculo familiar com o PT e a participação no **lançamento** da candidatura Lula são **sinalização forte** para **percepção** e **captura narrativa** — avaliar com **jurídico/comunicação** se o **brief** exige **distância** explícita de **polarização**. **Santander** e **Mercado Pago** seguem como **sinalização** contratual (checar **exclusividade** **ativa** para a **nova** peça — ver nota de enquadramento).
 
 ---
 
@@ -135,7 +135,7 @@ Recusou publicamente contratos milionários de bets, sustentando que "aposta nã
 
 > ⚠️ **ALERTA — Conselheira do governo Lula desde 2023**
 >
-> Em maio de 2023, Nath assumiu cargo voluntário como conselheira do Conselho de Desenvolvimento Econômico e Social da Presidência da República (o "Conselhão"), dividindo espaço com banqueiros como o presidente do conselho do Bradesco e a herdeira do Itaú. Em 2026 — ano eleitoral — esse vínculo formal com o governo federal pode ser lido como partidarização da campanha da Febraban.
+> Em maio de 2023, Nath assumiu cargo voluntário como conselheira do Conselho de Desenvolvimento Econômico e Social da Presidência da República (o "Conselhão"), dividindo espaço com banqueiros como o presidente do conselho do Bradesco e a herdeira do Itaú. Em **2026** (eleições), esse vínculo com o **Executivo** é **sinalização** relevante para **comunicação** e **stakeholders** — **não** equivale, por si só, a “campanha do governo”, pois a **Febraban não é órgão público**.
 
 > 🔗 [Exame — "Nath Finanças, Bela Gil e padre Júlio Lancelotti entram para Conselhão; veja nomes" (mai/2023)](https://exame.com/brasil/nath-financas-bela-gil-e-padre-julio-lancelotti-entram-para-conselhao-veja-nomes/)
 
@@ -414,14 +414,19 @@ Recomendação: maior audiência do casting, maior brand safety e nenhum conflit
 
 | Influenciador | Condição |
 |---|---|
-| @nathfinancas | Maior aderência temática do casting, mas risco político (Conselhão Lula) + risco de fogo amigo |
+| @nathfinancas | Maior aderência temática do casting, mas **sinalização política** (Conselhão Lula) + risco de fogo amigo |
 | @anapaulaxongani | Público-alvo ideal (mulheres negras endividadas), mas verificar non-compete com Bradesco |
+
+### ⚠️ Cautela máxima sugerida (política + mídia em 2026)
+
+| Influenciador | Motivo |
+|---|---|
+| @gildovigor | Ambição presidencial + família ativa no PT + lançamento Lula — **sinalização política** forte (ver seção Gil); **sinalizar** Santander/Mercado Pago e checar **exclusividade** para a **nova** peça. **Veto** só se o **cliente** fixar **zero** tolerância a **percepção** política na campanha |
 
 ### 🚫 Veto institucional sugerido
 
 | Influenciador | Motivo |
 |---|---|
-| @gildovigor | Risco político alto em 2026: ambição presidencial + família ativa no PT + participação no lançamento da candidatura Lula; **sinalizar** Santander/Mercado Pago (publi passada — não é critério de veto por si só) |
 | @faveladoinvestidor | Reclamações abertas de cobranças indevidas — contradição direta com missão da Febraban |
 
 ---
