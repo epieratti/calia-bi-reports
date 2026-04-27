@@ -34,7 +34,7 @@
 
 | Creator | Observação |
 |---------|------------|
-| **Gil do Vigor** | `https://www.youtube.com/@gildovigor` → **404**. Tratar como **sem YouTube público** nesse handle (ou canal não listado); **não** usar canal `@gilbertonogueira` (289 insc.) como proxy sem confirmação da assessoria. |
+| **Gil do Vigor** | [YouTube `@gildovigor`](https://www.youtube.com/@gildovigor) → **404**. Tratar como **sem YouTube público** nesse handle (ou canal não listado); **não** usar canal `@gilbertonogueira` (289 insc.) como proxy sem confirmação da assessoria. |
 
 ## YouTube — resultado de **busca** Social Blade (card sem link direto nem contagem de vídeos)
 
@@ -45,4 +45,4 @@
 
 **Uso no painel:** inscritos e views copiados do card; coluna **vídeos** = **—** até abrir a página do canal no SB (pode exigir login) ou confirmar `UC…` no YouTube e **Import new creator**.
 
-**Canal público YouTube:** `https://www.youtube.com/@JaciraDoce` e `https://www.youtube.com/@rafachalub` existem — cruzar com o card da busca antes de relatório final.
+**Canal público YouTube:** [@JaciraDoce](https://www.youtube.com/@JaciraDoce) e [@rafachalub](https://www.youtube.com/@rafachalub) existem — cruzar com o card da busca antes de relatório final.

@@ -1,8 +1,6 @@
 # Relatórios Caixa
 
-Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/`: arquivos servidos pelo GitHub Pages em:
-
-`https://epieratti.github.io/calia-bi-reports/caixa/<arquivo>.html`
+Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/`: arquivos servidos pelo GitHub Pages na [pasta `caixa/`](https://epieratti.github.io/calia-bi-reports/caixa/) (caminho típico: `…/caixa/<arquivo>.html`).
 
 **Convenção (playbook):**
 
@@ -11,13 +9,13 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 **Embratur** não usa esta pasta — relatórios ficam em **`embratur/`** na raiz do repo (ex.: `20260323-dossie-auditoria-personalidades-embratur-2026.html`).
 
-**Índice:** https://epieratti.github.io/calia-bi-reports/caixa/ — lista os `.html` com links corretos (evita 404 por digitação). Se existir `caixa/loterias/index.html`, linkar a partir daqui também.
+**Índice:** [GitHub Pages — índice `caixa/`](https://epieratti.github.io/calia-bi-reports/caixa/) — lista os `.html` com links corretos (evita 404 por digitação). Se existir `caixa/loterias/index.html`, linkar a partir daqui também.
 
 ## Dossiês em `caixa/` (atualizado em abr/2026)
 
-- **Febraban:** os HTML deste cliente ficam em **`febraban/`** na raiz do repo (não em `caixa/`). Ver **`febraban/README.md`** e https://epieratti.github.io/calia-bi-reports/febraban/ — senha **`febraban2026`**. Há **redirecionamento** de `caixa/20260427-dossie-febraban-concorrencia-creators-2026.html` para a URL em `febraban/` (links antigos).
+- **Febraban:** os HTML deste cliente ficam em **`febraban/`** na raiz do repo (não em `caixa/`). Ver **`febraban/README.md`** e [índice `febraban/` no Pages](https://epieratti.github.io/calia-bi-reports/febraban/) — senha **`febraban2026`**. Há **redirecionamento** de `caixa/20260427-dossie-febraban-concorrencia-creators-2026.html` para a URL em `febraban/` (links antigos).
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
-- **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **URL:** https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html — **senha `caixa2026`**.
+- **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **Abrir no ar:** [dossiê Loterias 20260401](https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html) — **senha `caixa2026`**.
 - **`20260406-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **8** perfis (lote 06/04/2026), mesma estrutura (painéis IG/TT/YT/X + Brand Safety). **Senha:** `caixa2026`.
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`:** **Senha:** `caixa2026` (sem espaços; sensível a maiúsculas/minúsculas). O HTML também aceita `embratur2026` como alias. Para mudar, atualize `PASSWORD_SHA256_HEX_SET` no `<script>`.
 
