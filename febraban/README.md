@@ -22,3 +22,5 @@ O conteúdo é gerado a partir de `loterias2026/data/dossier_febraban_concorrenc
 **Coleta Social Blade (métricas IG/YT):** `loterias2026/research/SOCIAL_BLADE_FEBRABAN_20260427.md`.
 
 **Due diligence consolidado (contexto Desenrola 2.0, links e recomendações):** `febraban/febraban_due_diligence.md` — o HTML do dossiê incorpora esse material na fonte `.md` em `loterias2026/data/`.
+
+**Bancos associados (lista oficial Febraban):** https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/

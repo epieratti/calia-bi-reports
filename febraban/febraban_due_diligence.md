@@ -16,6 +16,8 @@ Este relatório consolida dois levantamentos independentes: pesquisa primária c
 
 **Cliente:** FEBRABAN — Federação Brasileira de Bancos. **Associação privada** que **representa** interesses do setor bancário no Brasil (**não** é banco, **não** é órgão do governo nem parte da **administração pública**). **Reúne** instituições financeiras (públicas e privadas), **atua** na defesa do setor, **participa** de debates sobre políticas econômicas e regulatórias e **promove** iniciativas (segurança, educação financeira etc.), **sem** poder **oficial** de **regulamentar** ou supervisionar o sistema — papel do **Banco Central** ([BCB](https://www.bcb.gov.br/)) e do **Conselho Monetário Nacional** ([CMN](https://www.gov.br/planalto/pt-br/composicao/conselhos-e-orgaos-colegiados/cmn)).
 
+**Lista de associados (oficial):** [portal.febraban.org.br — Associados](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/)
+
 **Campanha:** Desenrola 2.0 — continuidade do programa federal de renegociação de dívidas bancárias lançado em julho de 2023. O programa original beneficiou 2,7 milhões de consumidores e renegociou R$ 6,5 bilhões em dívidas.  
 > 🔗 [portal.febraban.org.br — Primeiro mutirão de negociação de dívidas bancárias de 2026](https://portal.febraban.org.br/noticia/4429/pt-br/)
 
@@ -27,7 +29,7 @@ Este relatório consolida dois levantamentos independentes: pesquisa primária c
 
 ## Sensibilidades Críticas para Este Cliente
 
-**Nota de enquadramento (Febraban):** a Febraban é **associação privada** dos bancos (**não** governo; **não** regula o sistema — **BCB** e **CMN**). **Ter feito propaganda para algum desses bancos não é, por si só, negativo** — é **sinalização** útil (inclusive mostra trânsito em **compliance** de grandes instituições). O que exige **atenção jurídica** é **exclusividade ou non-compete vigente** que **impedir** a **nova** campanha, não o histórico isolado de publi com **membro** da federação.
+**Nota de enquadramento (Febraban):** a Febraban é **associação privada** dos bancos (**não** governo; **não** regula o sistema — **BCB** e **CMN**). Quem está filiado consta na [lista oficial de associados](https://portal.febraban.org.br/pagina/3164/12/pt-br/associados/). **Ter feito propaganda para algum desses bancos não é, por si só, negativo** — é **sinalização** útil (inclusive mostra trânsito em **compliance** de grandes instituições). O que exige **atenção jurídica** é **exclusividade ou non-compete vigente** que **impedir** a **nova** campanha, não o histórico isolado de publi com **membro** da federação.
 
 **1. Neutralidade bancária:** a Febraban representa **todos** os bancos associados. **Vínculo ativo de exclusividade** com **um** banco que **bloqueie** a peça ou **assimetria contratual** inaceitável para o **novo** contrato — aí sim é ponto crítico. Histórico de publi com **bancos membros** (sem exclusividade conflitante) deve ser tratado como **informação**, não como veto automático.
 
