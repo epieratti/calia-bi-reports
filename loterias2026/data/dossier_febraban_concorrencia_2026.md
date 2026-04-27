@@ -88,10 +88,12 @@ Moderado — **histórico forte com banco privado** (Santander); checar exclusiv
 
 - instagram: gildovigor
 - tiktok: gildovigor
-- youtube: gildovigor
+- youtube: 
 - x: gildovigor
 
 ### Narrativa
+
+No **YouTube**, o handle **`@gildovigor`** não resolve para canal público (404 na URL padrão); o talento pode **não manter YouTube** como eixo ou usar outro @ — tratar **audiência YouTube** como **não aplicável** até a assessoria confirmar.
 
 Economista e ex-BBB com alcance massivo no Instagram. Em **2021** virou **garoto-propaganda do Santander** em campanha de **Open Banking** veiculada na TV aberta ([ISTOÉ](https://istoe.com.br/gil-do-vigor-e-o-novo-garoto-propaganda-do-santander)); a ação gerou **debate em redes** e picos de menção ao tema ([Buzzmonitor](https://buzzmonitor.com/blog/campanha-de-open-banking-do-santander-com-gil-do-vigor-alimenta-debates-nas-redes-sociais/)). Há ainda menções recentes a conteúdo de **empregabilidade** ligado à marca Santander no LinkedIn (ex.: [#TemVagaNaFirma](https://pt.linkedin.com/posts/gildovigor_temvaganafirma-activity-6857752294818160640-lgZn)) — reforça **associação de longa data** com o banco na percepção pública.
 
@@ -199,7 +201,7 @@ Moderado — **pauta política explícita** em entrevista; histórico de **mídi
 
 - instagram: raphaelvicente
 - tiktok: raphaelviicente
-- youtube: 
+- youtube: raphaelviicente
 - x: 
 
 ### Narrativa
@@ -236,10 +238,12 @@ Baixo a moderado — humor e moda; **ruído de mídia** com outra influencer.
 
 - instagram: jaciradoce
 - tiktok: jaciradoce
-- youtube: 
+- youtube: jaciradoce
 - x: 
 
 ### Narrativa
+
+Canal no YouTube existe em **`@JaciraDoce`** (confirmar com a creator). Métricas agregadas do **Social Blade** nesta rodada vieram da **busca interna** do site (número de **vídeos** não exibido no card — painel com **—** na coluna vídeos).
 
 Influenciadora de **humor** e **“sincerona”**; quadros como **Conselhos** e **Denúncia Fashion** ([Marie Claire](https://revistamarieclaire.globo.com/moda/noticia/2024/10/denuncia-fashion-com-deboche-influenciadora-aborda-tendencias-polemicas-em-videos-virais.ghtml)). Perfil **@jaciradoce** citado em reportagens sobre alcance ([Terra](https://www.terra.com.br/vida-e-estilo/comportamento/influenciadora-viraliza-como-sincerona-da-web-cansada-da-cultura-do-sucesso,dd13e3300d563b01bc0b8c76d431fe9a86de86k4.html)). **2024:** troca de farpas com **Jade Seba** após evento ([Purepeople](https://www.purepeople.com.br/galeria/jade-seba-x-jacira-doce-criticas-e-trocas-de-farpas-entre-influenciadoras-geram-o-caos-na-web-entenda-a-treta_a400803/1)).
 
@@ -273,7 +277,7 @@ Moderado — pautas **identitárias** e **crítica à internet**; sem banco/bet 
 
 - instagram: ajuvichagas
 - tiktok: ajuvichagas
-- youtube: 
+- youtube: ajuvichagas
 - x: 
 
 ### Narrativa
@@ -310,7 +314,7 @@ Moderado — **histórico público com Bradesco**; diversas marcas de massa.
 
 - instagram: anapaulaxongani
 - tiktok: anapaulaxongani
-- youtube: 
+- youtube: anapaulaxongani
 - x: 
 
 ### Narrativa
@@ -352,7 +356,7 @@ Moderado — **humor político contínuo**; viralização com **Pfizer vs. Bolso
 
 ### Narrativa
 
-Humorista, ator e roteirista; também conhecido como **Esse Menino**. O **Social Blade** indexa o Instagram em **[@rafachalub](https://socialblade.com/instagram/user/rafachalub)** (o briefing citou **@raphachalub** — pode ser handle alternativo ou troca de @; conferir no perfil oficial). Imprensa e agência: [Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html), [Fernanda Ribas](https://fernandaribas.com/talento/rafa-chalub). Declara **crítica** a Bolsonaro e **atenção** a erros do governo **Lula** na mesma entrevista; vê **humor como ferramenta política**. Cobertura sobre **enchentes no RS** e recado ao governador **Eduardo Leite** ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml)).
+Humorista, ator e roteirista; também conhecido como **Esse Menino**. O **Social Blade** indexa o Instagram em **[@rafachalub](https://socialblade.com/instagram/user/rafachalub)** (o briefing citou **@raphachalub** — pode ser handle alternativo ou troca de @; conferir no perfil oficial). No **YouTube**, a busca do SB em **“rafa chalub”** retornou card com **~112K** inscritos e **~7,96M** views ([busca](https://socialblade.com/youtube/search?query=rafa+chalub)); o canal público **`@rafachalub`** existe no YouTube — **validar** se é o mesmo creator antes de usar métricas em contrato. Imprensa e agência: [Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html), [Fernanda Ribas](https://fernandaribas.com/talento/rafa-chalub). Declara **crítica** a Bolsonaro e **atenção** a erros do governo **Lula** na mesma entrevista; vê **humor como ferramenta política**. Cobertura sobre **enchentes no RS** e recado ao governador **Eduardo Leite** ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml)).
 
 ### Resumo tabela
 

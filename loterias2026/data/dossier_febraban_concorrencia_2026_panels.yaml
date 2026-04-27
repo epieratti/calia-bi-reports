@@ -1,5 +1,5 @@
 panels:
-  intro_note: Números **Instagram** e **YouTube** — captura **Social Blade** em **27/04/2026** (America/Los_Angeles, data exibida na página). Conferir de novo perto da veiculação. **@rafachalub:** o SB mostrou **0%** de engajamento e **0** curtidas/comentários médios nesta captura — tratar como **métrica incompleta** e validar no app.
+  intro_note: Números **Instagram** e **YouTube** — captura **Social Blade** em **27/04/2026** (data exibida no SB). **Gil:** sem canal YouTube público no **`@gildovigor`** (404) — coluna YouTube com **—**. **Jacira / Rafa (YT):** totais da **busca** do SB ([jacira doce](https://socialblade.com/youtube/search?query=jacira+doce), [rafa chalub](https://socialblade.com/youtube/search?query=rafa+chalub)); **vídeos** não exibidos no card — **—**; validar canal oficial. **@rafachalub (IG):** SB com **0%** engaj. / médias **0** — validar no app.
   coverage_note: 'Creator **fora** da tabela nesta rede: não há perfil, o canal não aparece na ferramenta, ou o dado não veio
     nesta coleta.'
   coverage_note_cells_dash: 'O traço (—) indica métrica indisponível nesta coleta, ou rede que não tratamos como perfil oficial
@@ -190,9 +190,7 @@ panels:
       - —
       - —
   youtube:
-    footnote: Social Blade — captura 27/04/2026. **Gil:** SB indexa [@gilbertonogueira](https://socialblade.com/youtube/handle/gilbertonogueira)
-      (canal com **289** inscritos — possível canal secundário; validar canal principal). **Jacira / Rafa (YT):** sem página SB
-      estável no handle do briefing nesta coleta — traço (—). Páginas usadas — [nathfinancas](https://socialblade.com/youtube/@nathfinancas),
+    footnote: Social Blade — 27/04/2026. **Gil:** **sem** métrica de canal principal — `youtube.com/@gildovigor` **404**; não forçar canal secundário no painel. **Jacira / Rafa:** inscritos e views do **resultado de busca** do SB (links na intro). Demais canais — [nathfinancas](https://socialblade.com/youtube/@nathfinancas),
       [faveladoinvestidor](https://socialblade.com/youtube/@faveladoinvestidor), [raphaelviicente](https://socialblade.com/youtube/handle/raphaelviicente),
       [ajuvichagas](https://socialblade.com/youtube/@ajuvichagas), [anapaulaxongani](https://socialblade.com/youtube/handle/anapaulaxongani).
     headers:
@@ -202,11 +200,11 @@ panels:
     - Visualizações
     - Vídeos
     rows:
-    - - Gilberto Nogueira (canal SB)
-      - gilbertonogueira
-      - '289'
-      - '24.206'
-      - '12'
+    - - Gilberto Nogueira (Gil do Vigor)
+      - —
+      - —
+      - —
+      - —
     - - Nath Finanças
       - nathfinancas
       - '431.000'
@@ -234,11 +232,11 @@ panels:
       - '348'
     - - Jacira Doce
       - jaciradoce
-      - —
-      - —
+      - '919'
+      - '35.863'
       - —
     - - Rafa Chalub
       - rafachalub
-      - —
-      - —
+      - '112.000'
+      - 7.964.084
       - —
