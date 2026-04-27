@@ -1,0 +1,206 @@
+panels:
+  intro_note: Números de **Instagram** referentes à coleta de **27/04/2026** (referências públicas e painéis de terceiros); **conferir** perto da data da peça. TikTok/YouTube — traço (—) = não consolidado nesta entrega.
+  coverage_note: 'Creator **fora** da tabela nesta rede: não há perfil, o canal não aparece na ferramenta, ou o dado não veio
+    nesta coleta.'
+  coverage_note_cells_dash: 'O traço (—) indica métrica indisponível nesta coleta, ou rede que não tratamos como perfil oficial
+    do creator.
+
+    '
+  instagram:
+    footnote: Referências públicas (Social Blade / imprensa / biografias) — 27/04/2026; não substitui relatório do creator.
+    headers:
+    - Nome
+    - Usuário
+    - Seguidores
+    - Posts
+    - Curtidas méd.
+    - Coment. méd.
+    - Engaj.
+    rows:
+    - - Gilberto Nogueira (Gil do Vigor)
+      - gildovigor
+      - ~16.700.000
+      - —
+      - —
+      - —
+      - ~0,1%
+    - - Nathália Rodrigues (Nath Finanças)
+      - nathfinancas
+      - ~2.100.000
+      - —
+      - —
+      - —
+      - —
+    - - Murilo Duarte (Favelado Investidor)
+      - faveladoinvestidor
+      - ~640.000
+      - —
+      - —
+      - —
+      - —
+    - - Raphael Vicente
+      - raphaelvicente
+      - 1.087.923
+      - '858'
+      - '65.180'
+      - '2.125'
+      - 6,19%
+    - - Jacira Doce
+      - jaciradoce
+      - ~475.000
+      - —
+      - —
+      - —
+      - —
+    - - Juvi Chagas
+      - ajuvichagas
+      - ~941.000
+      - —
+      - —
+      - —
+      - —
+    - - Ana Paula Xongani
+      - anapaulaxongani
+      - ~200.000
+      - —
+      - —
+      - —
+      - —
+    - - Rafa Chalub (Esse Menino)
+      - raphachalub
+      - ~1.500.000
+      - —
+      - —
+      - —
+      - —
+  tiktok:
+    footnote: Não consolidado nesta entrega — conferir Upfluence ou equivalente na versão seguinte.
+    headers:
+    - Nome
+    - Usuário
+    - Engaj.
+    - Seguidores
+    - Com. méd.
+    - Curt. méd.
+    - Comp. méd.
+    - Repr. méd.
+    - Total curtidas
+    - Vídeos
+    - '% mulheres'
+    - '% homens'
+    rows:
+    - - gildovigor
+      - gildovigor
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+    - - nathfinancas
+      - nathfinancas
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+    - - faveladoinvestidor
+      - faveladoinvestidor
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+    - - raphaelviicente
+      - raphaelviicente
+      - 1,08%
+      - 3,3M
+      - 153,05
+      - 35,5K
+      - 654,55
+      - 538,9K
+      - 55,9M
+      - '421'
+      - —
+      - —
+    - - jaciradoce
+      - jaciradoce
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+    - - ajuvichagas
+      - ajuvichagas
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+    - - anapaulaxongani
+      - anapaulaxongani
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+    - - raphachalub
+      - raphachalub
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+      - —
+  youtube:
+    footnote: Onde havia referência pública de ordem de grandeza — demais canais a validar com o creator.
+    headers:
+    - Canal
+    - Usuário
+    - Inscritos
+    - Visualizações
+    - Vídeos
+    rows:
+    - - Nath Finanças
+      - nathfinancas
+      - ~500K+
+      - —
+      - —
+    - - Favelado Investidor
+      - faveladoinvestidor
+      - ~360K+
+      - —
+      - —

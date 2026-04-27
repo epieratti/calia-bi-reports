@@ -13,8 +13,9 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 
 **Índice:** https://epieratti.github.io/calia-bi-reports/caixa/ — lista os `.html` com links corretos (evita 404 por digitação). Se existir `caixa/loterias/index.html`, linkar a partir daqui também.
 
-## Dossiê atual (mar/2026)
+## Dossiês em `caixa/` (atualizado em abr/2026)
 
+- **`20260427-dossie-febraban-concorrencia-creators-2026.html`** — Concorrência publicitária **Febraban**: **8 creators** (métricas IG/TT/YT, bancos concorrentes, bets, política, riscos). **Senhas:** `caixa2026` ou `embratur2026` (mesmo padrão dos demais dossiês Calia em `caixa/`).
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
 - **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **URL:** https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html — **senha `caixa2026`**.
 - **`20260406-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **8** perfis (lote 06/04/2026), mesma estrutura (painéis IG/TT/YT/X + Brand Safety). **Senha:** `caixa2026`.
@@ -28,6 +29,8 @@ Para **`20260401-dossie-squad-always-on-loterias-2026.html`** e **`20260406-doss
 - `loterias2026-20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
 
 Rode o build na pasta correspondente e **copie** o HTML gerado em `output/` para este diretório (`caixa/`) para publicar no GitHub Pages. O `.html` em `caixa/` é o artefato servido; mantê-lo alinhado ao build evita divergência.
+
+**Febraban (abril/2026):** fonte editável em `loterias2026/data/dossier_febraban_concorrencia_2026.md` + `dossier_febraban_concorrencia_2026_panels.yaml`; build com `--variant squad_8`.
 
 Modelo para **novos** dossiês no mesmo formato: `loterias2026/data/dossier_TEMPLATE.md`.
 
