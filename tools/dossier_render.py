@@ -101,21 +101,98 @@ def mini_md(s: object) -> str:
     return "".join(chunks)
 
 
+def _is_md_table_separator_line(line: str) -> bool:
+    s = line.strip()
+    if not s.startswith("|") or "|" not in s[1:]:
+        return False
+    inner = s.strip("|").replace(" ", "")
+    if not inner:
+        return False
+    parts = s.strip("|").split("|")
+    for p in parts:
+        t = p.strip().replace(" ", "")
+        if not t:
+            return False
+        if not re.fullmatch(r":?-{3,}:?", t):
+            return False
+    return True
+
+
+def _split_md_table_row(line: str) -> list[str]:
+    """Uma linha de tabela Markdown | a | b | → células."""
+    raw = line.strip()
+    if raw.startswith("|"):
+        raw = raw[1:]
+    if raw.endswith("|"):
+        raw = raw[:-1]
+    return [c.strip() for c in raw.split("|")]
+
+
+def render_markdown_table_html(block: str) -> str:
+    """Converte um bloco de tabela GFM (| h | … / |---| / | d |) em <table> com mini_md nas células."""
+    lines = [ln.rstrip() for ln in block.strip().splitlines() if ln.strip()]
+    if len(lines) < 2:
+        return f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(block)}</p>"
+    sep_idx = None
+    for i, ln in enumerate(lines[1:], start=1):
+        if _is_md_table_separator_line(ln):
+            sep_idx = i
+            break
+    if sep_idx is None:
+        return f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(block)}</p>"
+    headers = _split_md_table_row(lines[0])
+    body_lines = lines[sep_idx + 1 :]
+    th = "".join(
+        f"<th class='py-2 px-3 text-left text-xs font-bold text-slate-600 border-b border-slate-200 bg-slate-50'>"
+        f"{mini_md(h)}</th>"
+        for h in headers
+    )
+    trs: list[str] = []
+    for ln in body_lines:
+        if not ln.strip().startswith("|"):
+            continue
+        cells = _split_md_table_row(ln)
+        # padding se faltar colunas
+        while len(cells) < len(headers):
+            cells.append("")
+        cells = cells[: len(headers)]
+        tds = "".join(
+            f"<td class='py-2 px-3 border-b border-slate-100 text-sm align-top text-slate-700 leading-snug'>"
+            f"{mini_md(c)}</td>"
+            for c in cells
+        )
+        trs.append(f"<tr>{tds}</tr>")
+    if not trs:
+        return f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(block)}</p>"
+    return (
+        "<div class='overflow-x-auto rounded border border-slate-200 my-3'>"
+        "<table class='min-w-full text-left border-collapse'>"
+        f"<thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table></div>"
+    )
+
+
 def methodology_column_body_html(body: object) -> str:
-    """Vários parágrafos no YAML separados por linha em branco (\\n\\n)."""
+    """Parágrafos no YAML separados por \\n\\n; blocos de tabela Markdown viram <table>."""
     b = str(body or "").strip()
     if not b:
         return ""
     parts = [p.strip() for p in b.split("\n\n") if p.strip()]
-    if len(parts) == 1:
-        return (
-            "<p class='text-sm text-slate-600 mt-2 leading-relaxed'>"
-            f"{mini_md(parts[0])}</p>"
-        )
-    return "".join(
-        f"<p class='text-sm text-slate-600 mt-2 leading-relaxed'>{mini_md(p)}</p>"
-        for p in parts
-    )
+    out: list[str] = []
+    for p in parts:
+        plines = [ln for ln in p.splitlines() if ln.strip()]
+        if (
+            plines
+            and plines[0].lstrip().startswith("|")
+            and len(plines) >= 2
+            and _is_md_table_separator_line(plines[1])
+        ):
+            out.append(render_markdown_table_html(p))
+        else:
+            out.append(
+                "<p class='text-sm text-slate-600 mt-2 leading-relaxed'>"
+                f"{mini_md(p)}</p>"
+            )
+    return "".join(out)
 
 
 def render_clevel_body(cfg: dict) -> str:
@@ -639,16 +716,16 @@ def executive_dashboard_html(
             f"<h3 class='text-sm font-black text-calia-navy leading-tight'>{esc_plain(name)}</h3>"
             f"{risco_semaphore_html(risco_raw)}</div>"
             f"{tier_b}"
-            "<p class='text-xs text-slate-600 leading-snug mt-2'><span class='font-bold text-calia-navy'>Concorrência:</span> "
-            f"{esc_plain(conc_snip)}</p>"
-            "<p class='text-xs text-slate-600 leading-snug mt-1'><span class='font-bold text-calia-navy'>Polêmicas:</span> "
-            f"{esc_plain(pole_snip)}</p>"
+            "<p class='text-xs text-slate-600 leading-relaxed mt-2 break-words'><span class='font-bold text-calia-navy'>Concorrência:</span> "
+            f"{conc_snip}</p>"
+            "<p class='text-xs text-slate-600 leading-relaxed mt-1.5 break-words'><span class='font-bold text-calia-navy'>Polêmicas:</span> "
+            f"{pole_snip}</p>"
             "</article>"
         )
     return (
         "<section id='painel-executivo' class='card-audit scroll-mt-20 bg-gradient-to-br from-slate-50 to-white border-calia-gold/30'>"
         "<div class='section-header'><h2 class='text-xl font-black text-calia-navy'>Painel executivo</h2></div>"
-        "<p class='text-sm text-slate-600 mb-4 max-w-prose'>Visão rápida por nome (semáforo + duas linhas). O detalhe está em <strong>Perfis</strong> e na <strong>Tabela resumo</strong>.</p>"
+        "<p class='text-sm text-slate-600 mb-4'>Visão rápida por nome (semáforo + eixos <strong>Concorrência</strong> e <strong>Polêmicas</strong> sem cortar texto). O detalhe completo está em <strong>Perfis</strong> e na <strong>Tabela resumo</strong>.</p>"
         "<div class='dossier-pdf-hide-print'>"
         "<label class='sr-only' for='dossier-filter-input'>Filtrar perfis por nome ou camada</label>"
         "<input type='search' id='dossier-filter-input' autocomplete='off' "
@@ -667,8 +744,8 @@ def risco_badge_block_html(body: object, *, compact: bool = False) -> str:
     inner = mini_md(txt)
     if compact:
         return (
-            f"<span class='inline-flex max-w-[16rem] rounded-lg px-2.5 py-1.5 text-xs font-bold "
-            f"leading-snug {shell}'>{inner}</span>"
+            f"<span class='inline-flex max-w-full min-w-0 rounded-lg px-2.5 py-1.5 text-xs font-bold "
+            f"leading-snug break-words text-left {shell}'>{inner}</span>"
         )
     return (
         "<span class='inline-flex flex-col items-end gap-1 shrink-0 max-w-full sm:max-w-[min(100%,30rem)]'>"
@@ -871,28 +948,34 @@ def render_loterias_dossier_html(
                 "nesta coleta.</p>"
             )
             foot_fmt = format_panel_footnote(foot)
-            foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc_plain(foot_fmt)}</p>" if foot_fmt else ""
+            foot_p = (
+                f"<p class='text-xs text-slate-500 mt-3 leading-relaxed break-words'>{mini_md(foot_fmt)}</p>"
+                if foot_fmt
+                else ""
+            )
             return (
                 f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
                 f"{empty_msg}{foot_p}{coverage_suffix}</section>"
             )
         tbl = render_table(oh, body_rows, html_safe_columns=frozenset({0}))
         foot_fmt = format_panel_footnote(foot)
-        foot_p = f"<p class='text-xs text-slate-500 mt-3'>{esc_plain(foot_fmt)}</p>" if foot_fmt else ""
+        foot_p = (
+            f"<p class='text-xs text-slate-500 mt-3 leading-relaxed break-words'>{mini_md(foot_fmt)}</p>"
+            if foot_fmt
+            else ""
+        )
         return (
             f"<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>{esc(title_txt)}</h3>"
             f"{tbl}{foot_p}{coverage_suffix}</section>"
         )
 
-    panels_intro = esc_plain(
-        bundle.get("panels", {}).get(
-            "intro_note",
-            "Números das ferramentas (alcance, engajamento). Só ajudam a ver tamanho de público; o risco da campanha segue os três critérios acima.",
-        )
+    panels_intro_raw = bundle.get("panels", {}).get(
+        "intro_note",
+        "Números das ferramentas (alcance, engajamento). Só ajudam a ver tamanho de público; o risco da campanha segue os três critérios acima.",
     )
     _pn_all = bundle.get("panels") or {}
     panels_html = (
-        f"<p class='text-sm text-slate-600 mb-6'>{panels_intro}</p>"
+        f"<p class='text-sm text-slate-600 mb-6 leading-relaxed break-words'>{mini_md(panels_intro_raw)}</p>"
         + panel_section(
             "instagram",
             "Instagram",
@@ -1071,25 +1154,18 @@ def render_loterias_dossier_html(
         html_safe_columns=frozenset({0, 1, 2, 3, 4}),
     )
 
-    def _axis_snip(s: object, n: int = 120) -> str:
-        t = strip_markdown_to_plain(str(s or "")).strip().replace("\n", " ")
-        if len(t) > n:
-            cut = t[: n - 1]
-            if " " in cut:
-                cut = cut.rsplit(" ", 1)[0]
-            return cut + "…"
-        return t or "—"
-
     exec_rows: list[tuple[str, str, object, str, str]] = []
     for pc in ordered_profiles:
         ex = pc.get("eixos") or {}
+        conc_full = (str(ex.get("concorrencia") or "").strip() or "—").replace("\n", " ")
+        pole_full = (str(ex.get("polemicas") or "").strip() or "—").replace("\n", " ")
         exec_rows.append(
             (
                 str(pc.get("name", "")).strip(),
                 str(pc.get("tier") or "").strip(),
                 pc.get("risco_geral", "—"),
-                _axis_snip(ex.get("concorrencia")),
-                _axis_snip(ex.get("polemicas")),
+                mini_md(conc_full),
+                mini_md(pole_full),
             )
         )
     exec_section_html = (
