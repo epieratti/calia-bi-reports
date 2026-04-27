@@ -44,6 +44,8 @@ Saída: `output/20260401-dossie-squad-always-on-loterias-2026.html`
 https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html  
 (senha **apenas** `caixa2026`). Copie o HTML de `output/` para `caixa/` com o mesmo nome ao publicar.
 
+**Dossiê Febraban (mesmo motor, outra pasta):** fonte `data/dossier_febraban_concorrencia_2026.md` + `_panels.yaml` → build → copiar o `.html` para **`febraban/`** na raiz do repo (senha **`febraban2026`**; ver `febraban/README.md`).
+
 **Acesso:** proteção client-side — somente **`caixa2026`** (SHA-256 no script), alinhado ao box do dossiê 20260326, sem alias.
 
 Fluxo recomendado: editar **`dossier_loterias2026.md`** (texto) e **`dossier_loterias2026_panels.yaml`** (números) → rodar o build → copiar o HTML para **`caixa/`**.

@@ -10,7 +10,7 @@ Quando o usuário pedir **qualquer alteração** neste repositório (`calia-bi-r
 1. **`git status`** para ver o que mudou.
 2. **`git add`** nos arquivos relevantes da mudança (não incluir lixo nem alterações não relacionadas).
 3. **`git commit -m "…"`** com mensagem clara em **português do Brasil**, no imperativo ou descrevendo o que mudou.
-4. **`git push origin main`** para o remoto ficar alinhado — **obrigatório** quando tocar em `caixa/*.html`, `loterias*/output/*.html` ou qualquer artefato publicado no GitHub Pages.
+4. **`git push origin main`** para o remoto ficar alinhado — **obrigatório** quando tocar em `caixa/*.html`, `febraban/*.html`, `loterias*/output/*.html` ou qualquer artefato publicado no GitHub Pages.
 
 Se o push falhar (rede, credenciais), avisar o usuário e deixar o commit local pronto.
 

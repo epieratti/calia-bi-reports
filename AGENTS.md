@@ -27,6 +27,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 | Marca (SVG) | `assets/brand/logo-white.svg` | Logo Calia em branco (site oficial); útil em cabeçalhos/rodapés de HTML com fundo escuro. |
 | Dossiê Embratur (referência) | `embratur/` | Página principal do site; `index.html` na raiz redireciona para cá. |
 | Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
+| Dossiês Febraban (no ar) | `febraban/` | HTML do cliente Febraban no Pages. URLs e senha em `febraban/README.md`. |
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
 | Loterias 2026 | `loterias2026/`, `loterias2026-20260406/` | `PLAYBOOK_DOSSIES.md`, `docs/INDICE_METODOS.md`. Build: `scripts/build_dossier_completo.py` (importa `tools/dossier_render.py`). Descoberta de @: `loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`. Novo lote: `loterias2026/scripts/new_creator_dossier.py`. Legado Apify: `loterias2026/scripts/README_LEGADO.md`. |
 
@@ -34,13 +35,13 @@ Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de 
 
 ## Proteção por senha (client-side)
 
-Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`). As senhas de referência estão documentadas em `README.md` e `caixa/README.md` (**não** as exponha em issues públicas desnecessariamente). Ao alterar lógica de acesso, mantenha o comportamento alinhado ao que o cliente já usa.
+Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`). As senhas de referência estão documentadas em `README.md`, `caixa/README.md` e `febraban/README.md` (**não** as exponha em issues públicas desnecessariamente). Ao alterar lógica de acesso, mantenha o comportamento alinhado ao que o cliente já usa.
 
 ## Git e publicação
 
 - Mensagens de commit em **português do Brasil**, claras (imperativo ou descrição direta do que mudou).
 - Após implementar alterações pedidas: `git status` → `git add` (só o relevante) → `git commit` → push conforme o fluxo do branch em uso.
-- Alterações em **`caixa/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2. O **nome** do `.html` publicado segue **`YYYYMMDD-dossie-<slug>.html`** e é **definido pelo agente** (o briefing só precisa da **pasta** de cliente, salvo pedido explícito de nome fixo).
+- Alterações em **`caixa/*.html`**, **`febraban/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2. O **nome** do `.html` publicado segue **`YYYYMMDD-dossie-<slug>.html`** e é **definido pelo agente** (o briefing só precisa da **pasta** de cliente, salvo pedido explícito de nome fixo).
 
 ## Boas práticas para mudanças
 

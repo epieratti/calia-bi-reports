@@ -5,8 +5,7 @@ meta:
   client_line: Agência Calia | Unidade de BI — Cliente Febraban
   periodo: Abril de 2026
 password_sha256_hex:
-  - 992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b
-  - dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5
+  - 66130dc3d7cf9d652e0d431febb78ef60c0b33ca5c628f249c7d14364f0dd530
 quality_calibration:
   data_corte_coleta: 27/04/2026
   delta_vs_entrega_anterior: N/A — primeira entrega deste lote Febraban.
@@ -75,7 +74,7 @@ consolidated_narrative:
         - "Se **RSA** for produto real no portfólio, anexar **link** da página do produto e do **Reclame AQUI** correspondente na versão 1.1 do dossiê."
 ---
 
-> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. Build: `python3 scripts/build_dossier_completo.py --md data/dossier_febraban_concorrencia_2026.md --panels data/dossier_febraban_concorrencia_2026_panels.yaml --out output/20260427-dossie-febraban-concorrencia-creators-2026.html --variant squad_8`.
+> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. Build: `python3 scripts/build_dossier_completo.py --md data/dossier_febraban_concorrencia_2026.md --panels data/dossier_febraban_concorrencia_2026_panels.yaml --out output/20260427-dossie-febraban-concorrencia-creators-2026.html --variant squad_8` — copiar o HTML gerado para **`febraban/`** na raiz do repo (publicação GitHub Pages).
 
 ## Gilberto Nogueira (Gil do Vigor)
 
