@@ -27,7 +27,9 @@ Este relatório consolida dois levantamentos independentes: pesquisa primária c
 
 ## Sensibilidades Críticas para Este Cliente
 
-**1. Neutralidade bancária:** A Febraban representa todos os bancos. Influenciador com vínculo ativo de exclusividade com um banco específico (Santander, Bradesco, Itaú etc.) cria assimetria inaceitável. O público percebe imediatamente esse conflito.
+**Nota de enquadramento (Febraban):** a Febraban é **associação** que representa o setor (BB, Caixa, Itaú, Bradesco, Santander e demais associados). **Ter feito propaganda para algum desses bancos não é, por si só, negativo** — é **sinalização** útil (inclusive mostra trânsito em **compliance** de grandes instituições). O que exige **atenção jurídica** é **exclusividade ou non-compete vigente** que **impedir** a **nova** campanha, não o histórico isolado de publi com **membro** da federação.
+
+**1. Neutralidade bancária:** a Febraban representa **todos** os bancos associados. **Vínculo ativo de exclusividade** com **um** banco que **bloqueie** a peça ou **assimetria contratual** inaceitável para o **novo** contrato — aí sim é ponto crítico. Histórico de publi com **bancos membros** (sem exclusividade conflitante) deve ser tratado como **informação**, não como veto automático.
 
 **2. Incompatibilidade com bets:** A missão do Desenrola é proteção financeira. Porta-vozes associados a apostas online contradizem radicalmente esse posicionamento.
 
@@ -91,7 +93,7 @@ Planilha interna de agências publicitárias circulada em 2025 incluiu relato ne
 
 #### 🚫 VETO SUGERIDO
 
-Recomendação: veto em razão do risco político em ano eleitoral. O vínculo familiar com o PT, a ambição presidencial declarada e a participação ativa no lançamento da candidatura de Lula comprometem a neutralidade partidária exigida pela Febraban. O histórico com Santander e Mercado Pago é secundário, mas reforça a inviabilidade.
+Recomendação: veto em razão do **risco político** em ano eleitoral. O vínculo familiar com o PT, a ambição presidencial declarada e a participação ativa no lançamento da candidatura de Lula comprometem a **neutralidade partidária** sensível para a campanha. **Histórico com Santander e Mercado Pago** é **sinalização** de bancos/fintech (não veto por si só — ver nota de enquadramento acima); checar só **exclusividade** **ativa** para a **nova** peça.
 
 ---
 
@@ -419,7 +421,7 @@ Recomendação: maior audiência do casting, maior brand safety e nenhum conflit
 
 | Influenciador | Motivo |
 |---|---|
-| @gildovigor | Risco político alto em 2026: ambição presidencial + família ativa no PT + participação no lançamento da candidatura Lula + histórico com Santander e Mercado Pago |
+| @gildovigor | Risco político alto em 2026: ambição presidencial + família ativa no PT + participação no lançamento da candidatura Lula; **sinalizar** Santander/Mercado Pago (publi passada — não é critério de veto por si só) |
 | @faveladoinvestidor | Reclamações abertas de cobranças indevidas — contradição direta com missão da Febraban |
 
 ---
