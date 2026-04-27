@@ -1,5 +1,5 @@
 panels:
-  intro_note: Números de **Instagram** referentes à coleta de **27/04/2026** (referências públicas e painéis de terceiros); **conferir** perto da data da peça. TikTok/YouTube — traço (—) = não consolidado nesta entrega.
+  intro_note: Números **Instagram** e **YouTube** — captura **Social Blade** em **27/04/2026** (America/Los_Angeles, data exibida na página). Conferir de novo perto da veiculação. **@rafachalub:** o SB mostrou **0%** de engajamento e **0** curtidas/comentários médios nesta captura — tratar como **métrica incompleta** e validar no app.
   coverage_note: 'Creator **fora** da tabela nesta rede: não há perfil, o canal não aparece na ferramenta, ou o dado não veio
     nesta coleta.'
   coverage_note_cells_dash: 'O traço (—) indica métrica indisponível nesta coleta, ou rede que não tratamos como perfil oficial
@@ -7,7 +7,11 @@ panels:
 
     '
   instagram:
-    footnote: Referências públicas (Social Blade / imprensa / biografias) — 27/04/2026; não substitui relatório do creator.
+    footnote: Social Blade — captura 27/04/2026. Páginas — [gildovigor](https://socialblade.com/instagram/user/gildovigor),
+      [nathfinancas](https://socialblade.com/instagram/user/nathfinancas), [faveladoinvestidor](https://socialblade.com/instagram/user/faveladoinvestidor),
+      [raphaelvicente](https://socialblade.com/instagram/user/raphaelvicente), [jaciradoce](https://socialblade.com/instagram/user/jaciradoce),
+      [ajuvichagas](https://socialblade.com/instagram/user/ajuvichagas), [anapaulaxongani](https://socialblade.com/instagram/user/anapaulaxongani),
+      [rafachalub](https://socialblade.com/instagram/user/rafachalub).
     headers:
     - Nome
     - Usuário
@@ -19,62 +23,62 @@ panels:
     rows:
     - - Gilberto Nogueira (Gil do Vigor)
       - gildovigor
-      - ~16.700.000
-      - —
-      - —
-      - —
-      - ~0,1%
+      - 14.920.679
+      - '1.533'
+      - '228.550'
+      - '7.622'
+      - 1,58%
     - - Nathália Rodrigues (Nath Finanças)
       - nathfinancas
-      - ~2.100.000
-      - —
-      - —
-      - —
-      - —
+      - '938.681'
+      - '1.768'
+      - '9.638'
+      - '155'
+      - 1,04%
     - - Murilo Duarte (Favelado Investidor)
       - faveladoinvestidor
-      - ~640.000
-      - —
-      - —
-      - —
-      - —
+      - '572.069'
+      - '1.277'
+      - '1.247'
+      - '114'
+      - 0,24%
     - - Raphael Vicente
       - raphaelvicente
-      - 1.087.923
-      - '858'
-      - '65.180'
-      - '2.125'
-      - 6,19%
+      - 1.086.352
+      - '864'
+      - '9.878'
+      - '291'
+      - 0,94%
     - - Jacira Doce
       - jaciradoce
-      - ~475.000
-      - —
-      - —
-      - —
-      - —
+      - '618.657'
+      - '1.880'
+      - '36.448'
+      - '1.533'
+      - 6,14%
     - - Juvi Chagas
       - ajuvichagas
-      - ~941.000
-      - —
-      - —
-      - —
-      - —
+      - 1.110.052
+      - '2.678'
+      - '24.180'
+      - '1.209'
+      - 2,29%
     - - Ana Paula Xongani
       - anapaulaxongani
-      - ~200.000
-      - —
-      - —
-      - —
-      - —
+      - '336.713'
+      - '3.367'
+      - '27.811'
+      - '1.817'
+      - 8,8%
     - - Rafa Chalub (Esse Menino)
-      - raphachalub
-      - ~1.500.000
+      - rafachalub
+      - 1.627.738
+      - '563'
       - —
       - —
-      - —
-      - —
+      - 0,00%
   tiktok:
-    footnote: Não consolidado nesta entrega — conferir Upfluence ou equivalente na versão seguinte.
+    footnote: Upfluence (TikTok) — não consolidado nesta entrega.
     headers:
     - Nome
     - Usuário
@@ -173,8 +177,8 @@ panels:
       - —
       - —
       - —
-    - - raphachalub
-      - raphachalub
+    - - rafachalub
+      - rafachalub
       - —
       - —
       - —
@@ -186,7 +190,11 @@ panels:
       - —
       - —
   youtube:
-    footnote: Onde havia referência pública de ordem de grandeza — demais canais a validar com o creator.
+    footnote: Social Blade — captura 27/04/2026. **Gil:** SB indexa [@gilbertonogueira](https://socialblade.com/youtube/handle/gilbertonogueira)
+      (canal com **289** inscritos — possível canal secundário; validar canal principal). **Jacira / Rafa (YT):** sem página SB
+      estável no handle do briefing nesta coleta — traço (—). Páginas usadas — [nathfinancas](https://socialblade.com/youtube/@nathfinancas),
+      [faveladoinvestidor](https://socialblade.com/youtube/@faveladoinvestidor), [raphaelviicente](https://socialblade.com/youtube/handle/raphaelviicente),
+      [ajuvichagas](https://socialblade.com/youtube/@ajuvichagas), [anapaulaxongani](https://socialblade.com/youtube/handle/anapaulaxongani).
     headers:
     - Canal
     - Usuário
@@ -194,13 +202,43 @@ panels:
     - Visualizações
     - Vídeos
     rows:
+    - - Gilberto Nogueira (canal SB)
+      - gilbertonogueira
+      - '289'
+      - '24.206'
+      - '12'
     - - Nath Finanças
       - nathfinancas
-      - ~500K+
-      - —
-      - —
-    - - Favelado Investidor
+      - '431.000'
+      - 51.894.925
+      - '731'
+    - - FAVELADO INVESTIDOR
       - faveladoinvestidor
-      - ~360K+
+      - '345.000'
+      - 10.091.035
+      - '585'
+    - - Raphael Vicente
+      - raphaelviicente
+      - '45.200'
+      - 17.215.260
+      - '123'
+    - - Juvi Chagas
+      - ajuvichagas
+      - '270.000'
+      - '842.378'
+      - '138'
+    - - Ana Paula Xongani
+      - anapaulaxongani
+      - '94.300'
+      - 2.812.345
+      - '348'
+    - - Jacira Doce
+      - jaciradoce
+      - —
+      - —
+      - —
+    - - Rafa Chalub
+      - rafachalub
+      - —
       - —
       - —

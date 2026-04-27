@@ -345,14 +345,14 @@ Moderado — **humor político contínuo**; viralização com **Pfizer vs. Bolso
 
 ### Handles
 
-- instagram: raphachalub
-- tiktok: raphachalub
-- youtube: raphachalub
-- x: raphachalub
+- instagram: rafachalub
+- tiktok: rafachalub
+- youtube: rafachalub
+- x: rafachalub
 
 ### Narrativa
 
-Humorista, ator e roteirista; também conhecido como **Esse Menino**. Perfil **@raphachalub** alinhado ao nome **Rafa Chalub** na imprensa ([Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html), agência [Fernanda Ribas](https://fernandaribas.com/talento/rafa-chalub)). Declara **crítica** a Bolsonaro e **atenção** a erros do governo **Lula** na mesma entrevista; vê **humor como ferramenta política**. Cobertura sobre **enchentes no RS** e recado ao governador **Eduardo Leite** ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml)).
+Humorista, ator e roteirista; também conhecido como **Esse Menino**. O **Social Blade** indexa o Instagram em **[@rafachalub](https://socialblade.com/instagram/user/rafachalub)** (o briefing citou **@raphachalub** — pode ser handle alternativo ou troca de @; conferir no perfil oficial). Imprensa e agência: [Estado de Minas](https://www.em.com.br/politica/2024/03/6821723-humor-e-ferramenta-politica-afirma-humorista-esse-menino.html), [Fernanda Ribas](https://fernandaribas.com/talento/rafa-chalub). Declara **crítica** a Bolsonaro e **atenção** a erros do governo **Lula** na mesma entrevista; vê **humor como ferramenta política**. Cobertura sobre **enchentes no RS** e recado ao governador **Eduardo Leite** ([CARAS](https://caras.com.br/atualidades/rafa-chalub-o-esse-menino-manda-recado-para-governador-do-rs-trabalhar.phtml)).
 
 ### Resumo tabela
 
