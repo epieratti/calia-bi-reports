@@ -65,7 +65,7 @@ executive_summary:
 consolidated_narrative:
   title: Síntese do lote
   subtitle: __04/05/2026__ — **humor**, **lifestyle** e **entretenimento regional**.
-  tagline: Elaborado pela Calia para apoiar a decisão de campanha.
+  tagline: ''
   blocks:
   - title: Leitura para Caixa
     items:
