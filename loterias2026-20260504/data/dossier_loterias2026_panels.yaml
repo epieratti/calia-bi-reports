@@ -1,9 +1,5 @@
 panels:
   intro_note: Números referentes à coleta de **04/05/2026**; conferir de novo perto da data de veiculação da campanha.
-  coverage_note_cells_dash: 'O traço (—) indica métrica indisponível nesta coleta, ou rede que não tratamos como perfil oficial
-    do creator.
-
-    '
   instagram:
     footnote: Social Blade — captura 04/05/2026.
     headers:
