@@ -7,3 +7,4 @@ data/processed/*
 # HTML gerado localmente ignorado, exceto o dossiê completo versionado
 output/*
 !output/20260401-dossie-squad-always-on-loterias-2026.html
+!output/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html

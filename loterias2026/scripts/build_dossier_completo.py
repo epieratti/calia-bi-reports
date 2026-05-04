@@ -5,7 +5,7 @@ Gera o HTML do dossiê a partir da fonte Markdown + painéis YAML.
 Fonte principal: data/dossier_loterias2026.md (front matter + perfis em ## Nome)
 Painéis (métricas): data/dossier_loterias2026_panels.yaml
 
-Saída: output/20260401-dossie-squad-always-on-loterias-2026.html
+Saída padrão: output/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html
 
 Legado: data/dossier_loterias2026.yaml (monolítico) — use migrate_yaml_to_md_source.py
 para gerar .md + _panels.yaml a partir dele.
@@ -28,7 +28,7 @@ DATA = _ROOT / "data"
 OUT_DIR = _ROOT / "output"
 DEFAULT_MD = DATA / "dossier_loterias2026.md"
 LEGACY_YAML = DATA / "dossier_loterias2026.yaml"
-DEFAULT_OUT = OUT_DIR / "20260401-dossie-squad-always-on-loterias-2026.html"
+DEFAULT_OUT = OUT_DIR / "20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html"
 DEFAULT_VARIANT = "squad_13"
 
 

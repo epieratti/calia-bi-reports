@@ -16,12 +16,13 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 - **Febraban:** os HTML deste cliente ficam em **`febraban/`** na raiz do repo (não em `caixa/`). Ver **`febraban/README.md`** e [índice `febraban/` no Pages](https://epieratti.github.io/calia-bi-reports/febraban/) — senha **`febraban2026`**. Há **redirecionamento** de `caixa/20260427-dossie-febraban-concorrencia-creators-2026.html` para a URL em `febraban/` (links antigos).
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
 - **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **Abrir no ar:** [dossiê Loterias 20260401](https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html) — **senha `caixa2026`**.
+- **`20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html`** — mesma base do **20260401** (13 perfis / mesmos @); revisão **mai/2026** com **nomes públicos** alinhados ao pedido (inventário `influencers.yaml` + nota de delta no front matter). **Abrir no ar:** [dossiê Loterias 20260504 — rev. nomes](https://epieratti.github.io/calia-bi-reports/caixa/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html) — **senha `caixa2026`**.
 - **`20260406-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **8** perfis (lote 06/04/2026), mesma estrutura (painéis IG/TT/YT/X + Brand Safety). **Senha:** `caixa2026`.
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`:** **Senha:** `caixa2026` (sem espaços; sensível a maiúsculas/minúsculas). O HTML também aceita `embratur2026` como alias. Para mudar, atualize `PASSWORD_SHA256_HEX_SET` no `<script>`.
 
 ## Fonte da verdade (dossiês Loterias)
 
-Para **`20260401-dossie-squad-always-on-loterias-2026.html`** e **`20260406-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
+Para **`20260401-dossie-squad-always-on-loterias-2026.html`**, **`20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html`** e **`20260406-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
 
 - `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 13)
 - `loterias2026-20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
@@ -36,7 +37,7 @@ Para outros relatórios em `caixa/` que **não** usem esse pipeline, o HTML nest
 
 ## Uso
 
-- **Always ON Loterias — 13 e 8 perfis** (`20260401-…`, `20260406-…`): editar **`.md` + `_panels.yaml`** nas pastas `loterias2026/` ou `loterias2026-20260406/`, gerar o HTML, copiar para `caixa/` e commitar.
+- **Always ON Loterias — 13 e 8 perfis** (`20260401-…`, `20260504-…-rev-nomes`, `20260406-…`): editar **`.md` + `_panels.yaml`** nas pastas `loterias2026/` ou `loterias2026-20260406/`, gerar o HTML, copiar para `caixa/` e commitar.
 - Adicione outros relatórios como `.html` diretamente em `caixa/` (ou em subpastas, se preferir organizar por data/tema).
 - Não é obrigatório ter `index.html` aqui; cada relatório pode ter sua própria URL.
 - Se quiser uma página inicial em `/caixa/`, crie opcionalmente `caixa/index.html` com links para os relatórios.

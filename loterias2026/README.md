@@ -38,11 +38,13 @@ cd loterias2026
 python3 scripts/build_dossier_completo.py
 ```
 
-Saída: `output/20260401-dossie-squad-always-on-loterias-2026.html`
+Saída padrão do build: `output/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html` (entrega atual squad 13). O ficheiro `output/20260401-dossie-squad-always-on-loterias-2026.html` permanece versionado como **snapshot** da primeira publicação.
 
 **No ar (GitHub Pages, pasta `caixa/`):** após o deploy em `main`, use  
+https://epieratti.github.io/calia-bi-reports/caixa/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html  
+(senha **apenas** `caixa2026`). URL histórica do primeiro HTML:  
 https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html  
-(senha **apenas** `caixa2026`). Copie o HTML de `output/` para `caixa/` com o mesmo nome ao publicar.
+Copie o HTML de `output/` para `caixa/` com o mesmo nome ao publicar.
 
 **Dossiê Febraban (mesmo motor, outra pasta):** fonte `data/dossier_febraban_concorrencia_2026.md` + `_panels.yaml` → build → copiar o `.html` para **`febraban/`** na raiz do repo (senha **`febraban2026`**; ver `febraban/README.md`).
 

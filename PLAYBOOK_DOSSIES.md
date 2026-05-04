@@ -211,7 +211,7 @@ Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a
 
 ### Estrutura do HTML final (modo B) — inventário completo
 
-Tudo abaixo já existe **numa versão** gerada por `tools/dossier_render.py`. **Referência no repositório:** [HTML gerado — variante 13 perfis](caixa/20260401-dossie-squad-always-on-loterias-2026.html), [variante 8 perfis](caixa/20260406-dossie-squad-always-on-loterias-2026.html) — ou `output/` após build na pasta do lote. **Modo A** (outros dossiês): não segue esta lista — duplicar o HTML mais parecido na pasta de entrega correspondente.
+Tudo abaixo já existe **numa versão** gerada por `tools/dossier_render.py`. **Referência no repositório:** [HTML gerado — variante 13 perfis (primeira publicação)](caixa/20260401-dossie-squad-always-on-loterias-2026.html), [variante 13 perfis — revisão nomes mai/2026](caixa/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html), [variante 8 perfis](caixa/20260406-dossie-squad-always-on-loterias-2026.html) — ou `output/` após build na pasta do lote. **Modo A** (outros dossiês): não segue esta lista — duplicar o HTML mais parecido na pasta de entrega correspondente.
 
 Para **mudar ordem, títulos fixos ou layout** destes blocos → editar **`tools/dossier_render.py`**. Para **mudar texto** → `.md` / front matter / `_panels.yaml` conforme a coluna “Fonte”.
 

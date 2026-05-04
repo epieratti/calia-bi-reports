@@ -3,7 +3,7 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-DOSSIER="20260401-dossie-squad-always-on-loterias-2026.html"
+DOSSIER="20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html"
 
 cd "$REPO_ROOT/loterias2026"
 python3 scripts/build_dossier_completo.py

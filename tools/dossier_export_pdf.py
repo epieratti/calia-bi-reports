@@ -6,7 +6,7 @@ gate SHA-256 funcionar (crypto.subtle).
 
 Na raiz do repo:
   pip install playwright && playwright install chromium
-  python3 tools/dossier_export_pdf.py --html caixa/20260401-dossie-squad-always-on-loterias-2026.html \\
+  python3 tools/dossier_export_pdf.py --html caixa/20260504-dossie-squad-always-on-loterias-2026-rev-nomes.html \\
     --password 'sua_senha' --out ~/Desktop/dossie.pdf
 
 Senha também pode vir de variável de ambiente DOSSIER_PDF_PASSWORD (evita histórico de shell).
