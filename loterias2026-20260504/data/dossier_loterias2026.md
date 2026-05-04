@@ -182,7 +182,7 @@ Baixo — verificar cláusula de exclusividade com parceria de seguro viagem
 ### Handles
 
 - instagram: julimarasn
-- tiktok: julimaranascimento
+- tiktok: julimaranasciment
 - youtube: omapadaminademinas
 - x: 
 
