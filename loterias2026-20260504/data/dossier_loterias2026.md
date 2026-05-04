@@ -112,25 +112,25 @@ Baixo
 
 ### Narrativa
 
-Comediante e criador de conteúdo com forte presença no TikTok (≈ 1,9 M de seguidores) e no Instagram (1,8 M, 6,65% de engajamento). Faz entrevistas de rua e esquetes com personagens, usando paletó e óculos de sol como marca visual. Começou a postar em abril de 2020 — conforme o [**Famous Birthdays**](https://pt.famousbirthdays.com/people/linnyke-alves.html) — e cresceu principalmente nos formatos curtos. Também faz stand-up; um de seus shows consta na agenda do [**Jornal da Paraíba**](https://jornaldaparaiba.com.br/guia-qualaboa/agenda/linnyke-alves-em-joao-pessoa) como evento em João Pessoa. Em 2024, mobilizou a audiência e arrecadou mais de R$ 400 mil para a casa própria de uma criança carente, segundo o [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/). Não foram localizadas marcas nomeadas em campanhas publicitárias para este perfil nas fontes consultadas.
+Comediante e criador de conteúdo com 1,9 M de seguidores no TikTok e 1,8 M no Instagram (6,65% de engajamento). Faz entrevistas de rua e esquetes com personagens, usando paletó e óculos de sol como marca visual. Começou a postar em abril de 2020, conforme o [**Famous Birthdays**](https://pt.famousbirthdays.com/people/linnyke-alves.html), e cresceu principalmente nos formatos curtos. Também faz stand-up — um de seus shows consta na agenda do [**Jornal da Paraíba**](https://jornaldaparaiba.com.br/guia-qualaboa/agenda/linnyke-alves-em-joao-pessoa) como evento em João Pessoa. Em 2024, mobilizou a audiência e arrecadou mais de R$ 400 mil para a casa própria de uma criança carente, segundo o [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/). Não foram localizadas marcas nomeadas em campanhas nas fontes consultadas.
 
 ### Resumo tabela
 
-- **Concorrência:** Buscas e imprensa: sem publi de apostas, bet ou loteria concorrente. Temática de "sorte" aparece organicamente no humor, sem CTA para operador de aposta.
-- **Polêmicas:** Sem episódio de risco nas fontes consultadas. Ação solidária de 2024 (R$ 400 mil para criança carente) com repercussão positiva.
-- **Política:** Sem filiação, candidatura ou posicionamento político documentado. Conteúdo focado no cotidiano popular, sem agenda político-partidária.
+- **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. "Sorte" aparece no humor organicamente, sem CTA para operador de aposta.
+- **Polêmicas:** Sem episódio de risco. Destaque positivo: ação solidária de 2024 (R$ 400 mil para criança carente).
+- **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 
 ### Concorrência (bets / loterias / jogos)
 
-Nas fontes públicas consultadas (imprensa, buscas abertas, redes), **não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar associada a este creator. Menções a "ficar rico" ou "ganhar na sorte" surgem organicamente no humor — fazem parte do léxico popular, sem CTA para plataformas de iGaming. Nenhum link de afiliado, marcação de publi ou parceria de bet identificada até mai/2026.
+**Não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar. Menções a "ficar rico" ou "ganhar na sorte" fazem parte do léxico do humor popular — sem CTA para plataformas de iGaming, sem link de afiliado ou marcação de publi identificada até mai/2026.
 
 ### Polêmicas e situações delicadas
 
-Sem episódio de risco de imagem nas fontes consultadas. Destaque positivo: em 2024, o creator mobilizou a audiência para arrecadar mais de R$ 400 mil para realizar o sonho da casa própria de uma criança carente, conforme o [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/) — reforça alinhamento de imagem com causas sociais e aspirações do público-alvo das Loterias.
+Sem episódio de risco nas fontes consultadas. A ação de 2024 — arrecadação de R$ 400 mil para criança carente via [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/) — reforça alinhamento com causas sociais.
 
 ### Política e pautas sensíveis
 
-Sem filiação partidária, candidatura ou posicionamento político recorrente e explícito nas fontes consultadas. O conteúdo foca no cotidiano do trabalhador brasileiro, com fundo social orgânico que não se traduz em agenda político-partidária. Recomenda-se monitoramento durante o período de campanha eleitoral de 2026 para garantir que nenhum posicionamento novo contrarie as regras de propaganda institucional.
+Sem filiação, candidatura ou posicionamento político documentado. Monitoramento recomendado durante o período eleitoral de 2026.
 
 
 ## Felipe Hatori
@@ -150,27 +150,25 @@ Baixo — perfil de maior segurança jurídica e institucional do lote
 
 ### Narrativa
 
-Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up, apresenta o solo **"Entra no Clima"**, com temas de infância, família e relacionamentos. Nas redes, faz vídeos curtos de humor sobre situações do cotidiano — estilo sarcástico e espontâneo com alcance consistente: 357 K seguidores no TikTok, 189 K no Instagram (8,82% de engajamento) e 55 K inscritos com 22 M de visualizações no YouTube. Reels como [**Paulista x Manauara**](https://www.instagram.com/p/DQ5VcFlCXfP/) ultrapassaram 3,5 M de views. Segundo a [**Baobá Produções**](https://www.baobashows.com.br/felipehatori), seu portfólio de campanhas inclui **Itaú**, **Nubank**, **Samsung**, **Skol**, **Colchões Emma**, **Growth**, **Insider** e **Xtay**. É parte dos grupos de humor [**Os Japas**](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html) e **Bateu a Nave**. Trabalhar com bancos e fintechs do porte de Itaú e Nubank — que têm processos rigorosos de aprovação de creators — indica familiaridade com as exigências de publicidade regulada.
+Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up apresenta o solo **"Entra no Clima"** (infância, família, relacionamentos). Nas redes, humor curto e sarcástico sobre o cotidiano: 357 K no TikTok, 189 K no Instagram (8,82% de engajamento) e 55 K inscritos com 22 M de views no YouTube. Reels como [**Paulista x Manauara**](https://www.instagram.com/p/DQ5VcFlCXfP/) ultrapassaram 3,5 M de views. Portfólio de campanhas, segundo a [**Baobá Produções**](https://www.baobashows.com.br/felipehatori): **Itaú**, **Nubank**, **Samsung**, **Skol**, **Colchões Emma**, **Growth**, **Insider** e **Xtay**. Integra os grupos [**Os Japas**](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html) e **Bateu a Nave**.
 
 ### Resumo tabela
 
-- **Concorrência:** Sem publi de apostas, bet ou loteria concorrente nas fontes consultadas. Histórico de marcas inclui bancos e fintechs; nenhuma casa de apostas identificada.
-- **Polêmicas:** Sem episódio de risco. Histórico de campanhas institucionais (Itaú, Nubank, Samsung) sem controvérsia pública. Recomenda-se monitoramento dos parceiros do grupo "Os Japas" — eventual polêmica de colega pode transbordar para sua imagem.
-- **Política:** Sem filiação, candidatura ou posicionamento político documentado. Perfil de neutralidade absoluta — favorável para campanha de empresa pública em 2026.
+- **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. Portfólio inclui bancos e fintechs; nenhuma casa de apostas identificada.
+- **Polêmicas:** Sem episódio de risco. **Atenção:** monitorar demais integrantes dos **Os Japas** — polêmica de colega pode gerar associação indireta.
+- **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 
 ### Concorrência (bets / loterias / jogos)
 
-Nas fontes públicas consultadas, **não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar. O portfólio de marcas da [**Baobá Produções**](https://www.baobashows.com.br/felipehatori) inclui bancos, tecnologia e consumo — **nenhuma casa de apostas** identificada. Vale notar que, em 2024–2025, muitos humoristas de alcance similar receberam e aceitaram propostas de afiliação de cassinos online, conforme reportagem da [**Folha de S.Paulo** via BNLData](https://bnldata.com.br/com-propostas-milionarias-bets-viram-dilema-para-influenciadores-em-meio-a-investigacoes/). Hatori não tem registro desse tipo de vínculo.
+**Não** foi localizada publicidade paga de apostas, loteria concorrente ou jogos de azar. O portfólio da [**Baobá Produções**](https://www.baobashows.com.br/felipehatori) inclui bancos, tecnologia e consumo — nenhuma casa de apostas. Em 2024–2025, muitos humoristas de alcance similar aceitaram propostas de afiliação de cassinos, conforme a [**Folha de S.Paulo** via BNLData](https://bnldata.com.br/com-propostas-milionarias-bets-viram-dilema-para-influenciadores-em-meio-a-investigacoes/). Hatori não tem registro desse vínculo.
 
 ### Polêmicas e situações delicadas
 
-Sem polêmica registrada nas fontes consultadas. O histórico público é de criador com múltiplas campanhas institucionais (**Itaú**, **Nubank**, **Samsung**, **Skol**) e shows de stand-up — perfil compatível com publicidade regulada.
-
-**Ponto de atenção (monitoramento preventivo):** Hatori integra o grupo de humor **Os Japas**. Embora seu perfil pessoal seja limpo, uma polêmica envolvendo colegas do grupo pode gerar associação indireta. Recomenda-se monitoramento dos demais integrantes durante a vigência do contrato.
+Sem polêmica nas fontes consultadas. **Ponto de atenção:** como integrante dos **Os Japas**, uma polêmica envolvendo colegas do grupo pode gerar associação indireta — recomenda-se monitoramento durante a vigência do contrato.
 
 ### Política e pautas sensíveis
 
-Sem filiação partidária, candidatura ou posicionamento político explícito e recorrente nas fontes consultadas. Redes focadas em entretenimento e divulgação de trabalho autoral (show "Entra no Clima"). Perfil de neutralidade absoluta, com baixo risco de que o conteúdo seja instrumentalizado em debates eleitorais de 2026.
+Sem filiação, candidatura ou posicionamento político documentado. Conteúdo restrito a entretenimento e divulgação autoral.
 
 
 ## Julimara
@@ -190,24 +188,22 @@ Baixo — verificar cláusula de exclusividade com parceria de seguro viagem
 
 ### Narrativa
 
-Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Sua presença principal está no Instagram (128 K seguidores) e no TikTok (36,7 K), onde o estilo une **lifestyle**, **humor leve** e **vivências locais**. Mantém também o canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube, com foco em turismo e cultura de Minas Gerais. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem — produto financeiro regulado pela SUSEP, o que indica familiaridade com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
+Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas e experiências regionais com linguagem leve. Presença principal no Instagram (128 K) e TikTok (36,7 K). Mantém também o canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem (produto regulado pela SUSEP). Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
 
 ### Resumo tabela
 
-- **Concorrência:** Sem publi de apostas, bet ou loteria concorrente nas fontes consultadas. Conteúdo voltado a turismo e lifestyle sem sobreposição com iGaming.
-- **Polêmicas:** Sem episódio de risco. Imagem pautada pela positividade, autenticidade regional e exaltação da cultura mineira.
-- **Política:** Sem filiação, candidatura ou posicionamento político documentado. Triângulo Mineiro é região politicamente ativa em 2026, mas Julimara mantém postura apolítica nas redes.
+- **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. **Atenção:** parceria ativa com seguro viagem — verificar exclusividade se a campanha incluir produtos de seguro da Caixa Seguradora.
+- **Polêmicas:** Sem episódio de risco. Perfil positivo e aspiracional.
+- **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 
 ### Concorrência (bets / loterias / jogos)
 
-Nas fontes públicas consultadas, **não** foi localizada publicidade de casa de apostas, loteria concorrente ou jogos de azar. O conteúdo da creator é voltado para **turismo**, **trilhas** e **experiências regionais** — sem sobreposição com o universo de bets ou jogos.
-
-**Ponto de atenção (verificar antes do contrato):** Julimara tem parceria ativa com empresa de seguro viagem. Se a campanha da Caixa incluir o produto **Seguro Amparo** ou outro produto de seguro da Caixa Seguradora, checar se há cláusula de exclusividade categorial no contrato de seguro viagem vigente. Se a campanha for exclusivamente de Loterias, o conflito não se aplica.
+**Não** foi localizada publicidade de apostas, loteria concorrente ou jogos de azar. Conteúdo voltado a turismo e lifestyle, sem sobreposição com iGaming. **Ponto de atenção:** há parceria ativa com empresa de seguro viagem — se a campanha incluir o **Seguro Amparo** ou outro produto da Caixa Seguradora, verificar cláusula de exclusividade categorial. Se for campanha exclusiva de Loterias, não há conflito.
 
 ### Polêmicas e situações delicadas
 
-Sem polêmica registrada nas fontes consultadas. Perfil de lifestyle e turismo regional com narrativa positiva e aspiracional. A imagem da creator representa a "vizinha confiável" do Triângulo Mineiro — baixo risco de escândalos ou polarização.
+Sem polêmica nas fontes consultadas. Perfil regional positivo, sem histórico de cancelamento ou polarização.
 
 ### Política e pautas sensíveis
 
-Sem filiação partidária, candidatura ou posicionamento político explícito nas fontes consultadas. Minas Gerais é estado-chave nas eleições de 2026, mas Julimara mantém postura apolítica, focada na valorização do território e do patrimônio cultural mineiro. Esse perfil é estratégico para a Caixa manter neutralidade institucional sem abrir mão da capilaridade regional.
+Sem filiação, candidatura ou posicionamento político documentado. Perfil apolítico em região eleitoralmente relevante em 2026 — favorável para a neutralidade institucional da Caixa.
