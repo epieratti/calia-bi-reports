@@ -86,8 +86,9 @@ consolidated_narrative:
     - Os três têm perfil de **baixo risco** em todos os eixos verificados. A diversidade de estilos garante
       cobertura incremental sem sobreposição de público — Linnyke para a massa, Hatori para o público urbano
       qualificado, Julimara para o nicho regional de confiança.
-    - O squad não tem histórico de parcerias com bets. **Hatori** tem vantagem adicional — aprovação prévia
-      por compliance de Itaú e Nubank, instituições com critérios mais restritivos que a maioria do mercado.
+    - O squad não tem histórico de parcerias com bets. **Hatori** tem vantagem adicional — trabalhar com
+      Itaú e Nubank, que têm processos rigorosos de aprovação de creators, indica familiaridade com as
+      exigências de publicidade regulada.
     - '**Ponto de atenção (Julimara):** se a campanha incluir o produto Seguro Amparo (Caixa), checar
       cláusula de exclusividade com a parceria de seguro viagem já ativa no perfil dela.'
     - Os números de alcance são um **retrato** da data da coleta; **não** substituem contrato, compliance
@@ -149,7 +150,7 @@ Baixo — perfil de maior segurança jurídica e institucional do lote
 
 ### Narrativa
 
-Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up, apresenta o solo **"Entra no Clima"**, com temas de infância, família e relacionamentos. Nas redes, faz vídeos curtos de humor sobre situações do cotidiano — estilo sarcástico e espontâneo com alcance consistente: 189 K seguidores no Instagram (8,82% de engajamento), 55 K inscritos e 22 M de visualizações no YouTube. Reels como [**Paulista x Manauara**](https://www.instagram.com/p/DQ5VcFlCXfP/) ultrapassaram 3,5 M de views. Segundo a [**Baobá Produções**](https://www.baobashows.com.br/felipehatori), seu portfólio de campanhas inclui **Itaú**, **Nubank**, **Samsung**, **Skol**, **Colchões Emma**, **Growth**, **Insider** e **Xtay**. É parte dos grupos de humor [**Os Japas**](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html) e **Bateu a Nave**. Trabalhar com bancos e fintechs do porte de Itaú e Nubank — que têm processos rigorosos de aprovação de creators — indica familiaridade com as exigências de publicidade regulada.
+Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up, apresenta o solo **"Entra no Clima"**, com temas de infância, família e relacionamentos. Nas redes, faz vídeos curtos de humor sobre situações do cotidiano — estilo sarcástico e espontâneo com alcance consistente: 357 K seguidores no TikTok, 189 K no Instagram (8,82% de engajamento) e 55 K inscritos com 22 M de visualizações no YouTube. Reels como [**Paulista x Manauara**](https://www.instagram.com/p/DQ5VcFlCXfP/) ultrapassaram 3,5 M de views. Segundo a [**Baobá Produções**](https://www.baobashows.com.br/felipehatori), seu portfólio de campanhas inclui **Itaú**, **Nubank**, **Samsung**, **Skol**, **Colchões Emma**, **Growth**, **Insider** e **Xtay**. É parte dos grupos de humor [**Os Japas**](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html) e **Bateu a Nave**. Trabalhar com bancos e fintechs do porte de Itaú e Nubank — que têm processos rigorosos de aprovação de creators — indica familiaridade com as exigências de publicidade regulada.
 
 ### Resumo tabela
 
@@ -189,7 +190,7 @@ Baixo — verificar cláusula de exclusividade com parceria de seguro viagem
 
 ### Narrativa
 
-Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Sua presença principal está no Instagram (128 K seguidores) e no TikTok, onde o estilo une **lifestyle**, **humor leve** e **vivências locais**. Mantém também o canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube, com foco em turismo e cultura de Minas Gerais. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem — produto financeiro regulado pela SUSEP, o que indica familiaridade com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
+Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Sua presença principal está no Instagram (128 K seguidores) e no TikTok (36,7 K), onde o estilo une **lifestyle**, **humor leve** e **vivências locais**. Mantém também o canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube, com foco em turismo e cultura de Minas Gerais. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem — produto financeiro regulado pela SUSEP, o que indica familiaridade com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
 
 ### Resumo tabela
 
