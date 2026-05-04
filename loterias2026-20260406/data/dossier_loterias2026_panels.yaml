@@ -1,7 +1,5 @@
 panels:
   intro_note: Números referentes à coleta de **06/04/2026**; conferir de novo perto da data de veiculação da campanha.
-  coverage_note: 'Creator **fora** da tabela nesta rede: não há perfil, o canal não aparece na ferramenta, ou o dado não veio
-    nesta coleta.'
   coverage_note_cells_dash: 'O traço (—) indica métrica indisponível nesta coleta, ou rede que não tratamos como perfil oficial
     do creator.
 
