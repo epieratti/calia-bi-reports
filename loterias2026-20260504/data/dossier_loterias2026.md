@@ -56,12 +56,6 @@ executive_summary:
     items:
     - Sem filiação, candidatura ou proximidade política documentada nos três perfis. Favorável
       para campanha de empresa pública em ano eleitoral.
-  - title: Oportunidades de conteúdo
-    items:
-    - '**Linnyke:** humor de massa, topo de funil — série estilo "O que você faria com o prêmio?".'
-    - '**Hatori:** humor educativo — ideal para produtos diários (Quina, Lotofácil) e para comunicar
-      o destino social das arrecadações.'
-    - '**Julimara:** regionalização em MG — viagens e experiências como realização de sonho.'
 consolidated_narrative:
   title: Síntese do lote
   subtitle: __04/05/2026__ — **humor**, **lifestyle** e **entretenimento regional**.
