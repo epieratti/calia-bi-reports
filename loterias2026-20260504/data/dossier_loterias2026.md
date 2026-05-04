@@ -43,8 +43,8 @@ methodology:
   - label: Redes sociais
     body: Revisamos os perfis **públicos** do creator no Instagram, TikTok, YouTube e X na **data da coleta**.
   - label: Tamanho de público (painéis)
-    body: Social Blade (Instagram e YouTube, quando o canal está indexado) e Free TikTok Profile Audit
-      servem só para **tamanho de audiência** e engajamento.
+    body: Social Blade (Instagram e YouTube, quando o canal está indexado) e Upfluence (TikTok) servem
+      só para **tamanho de audiência** e engajamento.
   - label: Política e eleições (2026)
     body: 'Olhamos **filiação** (TSE), **candidatura** e **proximidade** com **governo / PT / Lula / Planalto**
       ou **direita / PL / Bolsonaro** (e **extrema-direita**, se houver prova): agendas, apoios, conteúdo
