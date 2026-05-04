@@ -19,22 +19,22 @@ panels:
     rows:
     - - Linnyke Alves
       - linnykealves
-      - '—'
-      - '—'
-      - '—'
-      - '—'
-      - '—'
+      - '1.807.052'
+      - '612'
+      - '116.929'
+      - '3.215'
+      - 6,65%
     - - Felipe Hatori
       - felipehatori
-      - '162.700'
-      - '516'
-      - '—'
-      - '—'
-      - '—'
+      - '189.349'
+      - '574'
+      - '16.588'
+      - '121'
+      - 8,82%
     - - Julimara
       - julimarasn
-      - '—'
-      - '—'
+      - '127.544'
+      - '1.099'
       - '—'
       - '—'
       - '—'
@@ -91,8 +91,7 @@ panels:
       - '—'
       - '—'
   youtube:
-    footnote: Social Blade só quando o canal está na base da ferramenta. Na tabela entram apenas creators com **métrica**
-      nesta coleta; os demais ficam sem linha até haver página utilizável.
+    footnote: Social Blade — captura 04/05/2026. Linnyke e Felipe Hatori indexados via handle; Julimara (@omapadaminademinas) nova na base (sem histórico ainda).
     headers:
     - Canal
     - Usuário
@@ -100,8 +99,18 @@ panels:
     - Visualizações
     - Vídeos
     rows:
+    - - Linnyke Alves
+      - linnykealves
+      - 42,6K
+      - 1,7M
+      - '36'
+    - - Felipe Hatori
+      - felipehatori
+      - 55K
+      - 22M
+      - '494'
     - - Julimara (O Mapa da Mina de Minas)
-      - Omapadaminademinas
-      - '—'
-      - '—'
-      - '—'
+      - omapadaminademinas
+      - '381'
+      - 68,7K
+      - '71'
