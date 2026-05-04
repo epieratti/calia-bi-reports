@@ -1283,12 +1283,12 @@ def render_loterias_dossier_html(
       <ul class="toc-list text-sm">
         <li><a class="toc-link" href="#pedido">Pedido e critérios</a></li>
         <li><a class="toc-link" href="#leitura">Leitura rápida</a></li>
-        <li><a class="toc-link" href="#como">Como foi analisado</a></li>
         {f'<li><a class="toc-link" href="#painel-executivo">Painel executivo</a></li>' if exec_section_html else ''}
         <li><a class="toc-link" href="#perfis">{toc_perfis_label}</a></li>
-        <li><a class="toc-link" href="#sintese">{esc(sintese_nav_label)}</a></li>
         <li><a class="toc-link" href="#tabela">Tabela resumo</a></li>
+        <li><a class="toc-link" href="#sintese">{esc(sintese_nav_label)}</a></li>
         <li><a class="toc-link" href="#metricas">Métricas nas redes</a></li>
+        <li><a class="toc-link" href="#como">Como foi analisado</a></li>
       </ul>
       <p class="text-xs text-slate-500 mt-6 font-semibold uppercase tracking-wide">Perfis</p>
       <ul class="toc-list">{toc_items}</ul>
@@ -1307,21 +1307,11 @@ def render_loterias_dossier_html(
       {exec_body_html}
     </section>
 
-    <section id="como" class="card-audit scroll-mt-20">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Como foi analisado</h2></div>
-      <div class="grid sm:grid-cols-2 gap-3">{meth_cards}</div>
-    </section>
-
     {exec_section_html}
 
     <section id="perfis" class="scroll-mt-20">
       <div class="section-header mb-6"><h2 class="text-xl font-black text-calia-navy">Perfis — análise por camada</h2></div>
       {profile_sections}
-    </section>
-
-    <section id="sintese" class="card-audit scroll-mt-20 mb-6 bg-slate-50">
-      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">{cons_title}</h2></div>
-      {cons_body_html}
     </section>
 
     <section id="tabela" class="card-audit scroll-mt-20">
@@ -1330,9 +1320,19 @@ def render_loterias_dossier_html(
       {sum_table}
     </section>
 
+    <section id="sintese" class="card-audit scroll-mt-20 mb-6 bg-slate-50">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">{cons_title}</h2></div>
+      {cons_body_html}
+    </section>
+
     <section id="metricas" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Métricas nas redes</h2></div>
       {panels_html}
+    </section>
+
+    <section id="como" class="card-audit scroll-mt-20">
+      <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Como foi analisado</h2></div>
+      <div class="grid sm:grid-cols-2 gap-3">{meth_cards}</div>
     </section>
 
     <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">

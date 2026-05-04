@@ -6,6 +6,8 @@ meta:
   periodo: 'Maio/2026 · Referência dos números: 04/05/2026'
 password_sha256_hex:
 - 992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b
+presentation:
+  executive_dashboard: false
 quality_calibration:
   data_corte_coleta: "04/05/2026"
   delta_vs_entrega_anterior: Novo lote — creators não presentes nos squads 13 e 8.
