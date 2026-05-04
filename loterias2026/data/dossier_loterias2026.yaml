@@ -40,7 +40,6 @@ methodology:
 
 panels:
   intro_note: "Números na data da coleta; conferir de novo na data do ar."
-  coverage_note: "Fora da tabela: sem perfil nesta rede ou sem dado nesta exportação."
   coverage_note_cells_dash: |
     Traço (—) na célula:
     o painel não trouxe aquele número.
