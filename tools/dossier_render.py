@@ -7,12 +7,10 @@ from __future__ import annotations
 
 import html
 import re
-import subprocess
 import sys
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 _REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(_REPO_ROOT) not in sys.path:
@@ -28,31 +26,6 @@ def esc(s: object) -> str:
 def esc_plain(s: object) -> str:
     """Texto que não passa por mini_md: remove ** # etc. colados do MD, depois escapa."""
     return esc(strip_markdown_to_plain(s))
-
-
-def build_revision_label() -> str:
-    """Carimbo único por geração (compare com o HTML ao abrir no navegador)."""
-    now = datetime.now(timezone.utc)
-    br = now.astimezone(ZoneInfo("America/Sao_Paulo"))
-    # Horário visível em pt-BR; UTC mantém comparação técnica.
-    ts = (
-        f"{br.strftime('%d/%m/%Y %H:%M')} Brasília · "
-        f"UTC {now.strftime('%Y-%m-%d %H:%M')} · "
-    )
-    repo = Path(__file__).resolve().parents[1]
-    try:
-        r = subprocess.run(
-            ["git", "-C", str(repo), "rev-parse", "--short", "HEAD"],
-            capture_output=True,
-            text=True,
-            timeout=5,
-            check=False,
-        )
-        if r.returncode == 0 and (sha := (r.stdout or "").strip()):
-            return f"{ts}{sha}"
-    except (OSError, subprocess.SubprocessError):
-        pass
-    return f"{ts}(sem git)"
 
 
 def _mini_md_bold_under(text: str) -> str:
@@ -805,7 +778,6 @@ def render_loterias_dossier_html(
         )
     meta = bundle.get("meta") or {}
     generated = datetime.now(timezone.utc).strftime("%d/%m/%Y")
-    build_revision = build_revision_label()
 
     title = esc_plain(meta.get("title", "Squad Always ON Loterias 2026 — Brand Safety"))
     subtitle = esc_plain(meta.get("subtitle", ""))
@@ -1189,7 +1161,6 @@ def render_loterias_dossier_html(
         sintese_nav_label = "Síntese do conjunto"
 
     doc = f"""<!DOCTYPE html>
-<!-- calia-dossier-build: {esc(build_revision)} -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -1275,7 +1246,7 @@ def render_loterias_dossier_html(
       <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">{client}</p>
       <h1 class="text-2xl md:text-3xl font-black mt-2 leading-tight">{title}</h1>
       <p class="text-sm opacity-90 mt-3">{subtitle}</p>
-      <p class="text-xs opacity-75 mt-4">Atualização: {periodo} · Documento: {esc(generated)} · Build: <code class="text-[10px] bg-white/10 px-1 rounded">{esc(build_revision)}</code></p>
+      <p class="text-xs opacity-75 mt-4">Atualização: {periodo} · Documento: {esc(generated)}</p>
     </header>
 
     <nav class="card-audit py-6" aria-label="Sumário">
@@ -1338,9 +1309,6 @@ def render_loterias_dossier_html(
     <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">
       <a class="toc-link" href="#topo">Voltar ao topo</a> · Agência Calia · {esc_plain(product_tagline)}
       {f'<p class="mt-2 text-[10px] text-slate-500 max-w-prose mx-auto">{esc_plain(footer_note)}</p>' if footer_note else ''}
-      <p class="mt-3 text-[10px] text-slate-500 max-w-prose mx-auto leading-relaxed">
-        <strong>Build:</strong> <code class="text-slate-600">{esc(build_revision)}</code>
-      </p>
     </footer>
   </div>
 

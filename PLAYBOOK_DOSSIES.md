@@ -244,7 +244,7 @@ Chaves no **mesmo nível** que `meta` / `briefing` (não dentro de `meta`):
 | `product_tagline` | string | `Uso interno — brand safety / vetting` | Texto curto após “Agência Calia ·” no rodapé. |
 | `footer_note` | string | vazio | Parágrafo extra no rodapé (texto plano; disclaimer jurídico, etc.). |
 
-**Estilo global:** Tailwind via CDN; cores `calia-navy`, `calia-gold`; classes `card-audit`, `section-header`, `toc-link`. Comentário HTML `<!-- calia-dossier-build: … -->` no topo (variante com build).
+**Estilo global:** Tailwind via CDN; cores `calia-navy`, `calia-gold`; classes `card-audit`, `section-header`, `toc-link`.
 
 **O que este template *não* tem (hoje):** seção dedicada só **“Marcas”** ou **“Sobre”** fora da narrativa; **galeria**; **vídeo embutido**. Isso seria modo A ou evolução do `dossier_render.py`.
 
