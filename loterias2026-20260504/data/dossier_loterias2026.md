@@ -71,8 +71,6 @@ consolidated_narrative:
     items:
     - Os três têm **baixo risco** em todos os eixos. Coberturas complementares — sem sobreposição
       de público entre Linnyke (massa), Hatori (urbano qualificado) e Julimara (nicho regional).
-    - '**Atenção (Julimara):** parceria ativa com seguro viagem — verificar exclusividade se a
-      campanha incluir produtos da Caixa Seguradora.'
     - Números são retrato da data da coleta; **não** substituem contrato nem parecer jurídico.
 ---
 
@@ -158,7 +156,7 @@ Sem filiação, candidatura ou posicionamento político documentado. Conteúdo r
 
 ### Síntese de risco
 
-Baixo — verificar exclusividade com parceria de seguro viagem
+Baixo
 
 ### Handles
 
@@ -169,17 +167,17 @@ Baixo — verificar exclusividade com parceria de seguro viagem
 
 ### Narrativa
 
-Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lifestyle regional. Presença principal no Instagram (128 K) e TikTok (36,7 K). Canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem (produto regulado pela SUSEP). Sem campanhas com grandes marcas nacionais nas fontes consultadas.
+Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lifestyle regional. Presença principal no Instagram (128 K) e TikTok (36,7 K). Canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube. Sem campanhas com grandes marcas nacionais nas fontes consultadas.
 
 ### Resumo tabela
 
-- **Concorrência:** Sem publi de apostas ou loteria concorrente. **Atenção:** parceria com seguro viagem — verificar exclusividade se a campanha incluir produtos da Caixa Seguradora.
+- **Concorrência:** Sem publi de apostas ou loteria concorrente.
 - **Polêmicas:** Sem episódio de risco. Perfil positivo e aspiracional.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 
 ### Concorrência (bets / loterias / jogos)
 
-**Não** localizada publi de apostas ou loteria concorrente. **Ponto de atenção:** há parceria ativa com seguro viagem — se a campanha incluir o **Seguro Amparo** ou outro produto da Caixa Seguradora, verificar cláusula de exclusividade categorial. Se for campanha exclusiva de Loterias, sem conflito.
+**Não** localizada publi de apostas ou loteria concorrente. Conteúdo voltado a turismo e lifestyle, sem sobreposição com iGaming.
 
 ### Polêmicas e situações delicadas
 
