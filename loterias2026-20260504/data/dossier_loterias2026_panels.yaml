@@ -1,0 +1,107 @@
+panels:
+  intro_note: Números referentes à coleta de **04/05/2026**; conferir de novo perto da data de veiculação da campanha.
+  coverage_note: 'Creator **fora** da tabela nesta rede: não há perfil confirmado, o canal não aparece na ferramenta, ou o dado não veio
+    nesta coleta.'
+  coverage_note_cells_dash: 'O traço (—) indica métrica indisponível nesta coleta, ou rede que não tratamos como perfil oficial
+    do creator.
+
+    '
+  instagram:
+    footnote: Social Blade — captura 04/05/2026.
+    headers:
+    - Nome
+    - Usuário
+    - Seguidores
+    - Posts
+    - Curtidas méd.
+    - Coment. méd.
+    - Engaj.
+    rows:
+    - - Linnyke Alves
+      - linnykealves
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+    - - Felipe Hatori
+      - felipehatori
+      - '162.700'
+      - '516'
+      - '—'
+      - '—'
+      - '—'
+    - - Julimara
+      - julimarasn
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+  tiktok:
+    footnote: Upfluence (TikTok) — mesma data de referência.
+    headers:
+    - Nome
+    - Usuário
+    - Engaj.
+    - Seguidores
+    - Com. méd.
+    - Curt. méd.
+    - Comp. méd.
+    - Repr. méd.
+    - Total curtidas
+    - Vídeos
+    - '% mulheres'
+    - '% homens'
+    rows:
+    - - linnykealves
+      - linnykealves
+      - '—'
+      - 1,9M
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+    - - felipehatori
+      - felipehatori
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+    - - julimaranascimento
+      - julimaranascimento
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+      - '—'
+  youtube:
+    footnote: Social Blade só quando o canal está na base da ferramenta. Na tabela entram apenas creators com **métrica**
+      nesta coleta; os demais ficam sem linha até haver página utilizável.
+    headers:
+    - Canal
+    - Usuário
+    - Inscritos
+    - Visualizações
+    - Vídeos
+    rows:
+    - - Julimara (O Mapa da Mina de Minas)
+      - Omapadaminademinas
+      - '—'
+      - '—'
+      - '—'

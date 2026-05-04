@@ -17,14 +17,16 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
 - **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **Abrir no ar:** [dossiê Loterias 20260401](https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html) — **senha `caixa2026`**.
 - **`20260406-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **8** perfis (lote 06/04/2026), mesma estrutura (painéis IG/TT/YT/X + Brand Safety). **Senha:** `caixa2026`.
+- **`20260504-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: **3 novos nomes** (lote 04/05/2026) — Linnyke Alves, Felipe Hatori e Julimara. **Senha:** `caixa2026`.
 - **`20260326-dossie-auditoria-personalidades-caixa-2026.html`:** **Senha:** `caixa2026` (sem espaços; sensível a maiúsculas/minúsculas). O HTML também aceita `embratur2026` como alias. Para mudar, atualize `PASSWORD_SHA256_HEX_SET` no `<script>`.
 
 ## Fonte da verdade (dossiês Loterias)
 
-Para **`20260401-dossie-squad-always-on-loterias-2026.html`** e **`20260406-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
+Para **`20260401-…`**, **`20260406-…`** e **`20260504-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
 
 - `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 13)
 - `loterias2026-20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
+- `loterias2026-20260504/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 3 — Linnyke Alves, Felipe Hatori, Julimara)
 
 Rode o build na pasta correspondente e **copie** o HTML gerado em `output/` para este diretório (`caixa/`) para publicar no GitHub Pages. O `.html` em `caixa/` é o artefato servido; mantê-lo alinhado ao build evita divergência.
 
