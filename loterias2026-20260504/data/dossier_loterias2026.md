@@ -66,8 +66,6 @@ executive_summary:
     - Nos três creators, **não** encontramos filiação partidária, candidatura ou proximidade declarada com
       governo ou oposição nas fontes públicas consultadas. Perfil favorável para campanha de empresa pública
       em ano eleitoral.
-    - '**Atenção operacional (Linnyke):** entrevistas de rua exigem termos de imagem assinados por entrevistados
-      antes da veiculação. Não é risco de reputação do creator, mas risco jurídico da peça — ver perfil.'
   - title: Oportunidades de conteúdo
     items:
     - '**Linnyke:** "topo de funil" — humor de identificação popular; série estilo "O que você faria com
@@ -89,8 +87,6 @@ consolidated_narrative:
       qualificado, Julimara para o nicho regional de confiança.
     - O squad não tem histórico de parcerias com bets. **Hatori** tem vantagem adicional — aprovação prévia
       por compliance de Itaú e Nubank, instituições com critérios mais restritivos que a maioria do mercado.
-    - '**Ponto de atenção jurídico (Linnyke):** peças com entrevistas de rua exigem cessão de uso de imagem
-      dos entrevistados. Não compromete a aprovação, mas exige protocolo antes da veiculação.'
     - '**Ponto de atenção (Julimara):** se a campanha incluir o produto Seguro Amparo (Caixa), checar
       cláusula de exclusividade com a parceria de seguro viagem já ativa no perfil dela.'
     - Os números de alcance são um **retrato** da data da coleta; **não** substituem contrato, compliance
@@ -103,7 +99,7 @@ consolidated_narrative:
 
 ### Síntese de risco
 
-Baixo — atenção a protocolo de imagem em entrevistas de rua
+Baixo
 
 ### Handles
 
@@ -119,7 +115,7 @@ Comediante e criador de conteúdo com forte presença no TikTok (≈ 1,9 M de se
 ### Resumo tabela
 
 - **Concorrência:** Buscas e imprensa: sem publi de apostas, bet ou loteria concorrente. Temática de "sorte" aparece organicamente no humor, sem CTA para operador de aposta.
-- **Polêmicas:** Sem episódio de risco nas fontes consultadas. Ação solidária de 2024 (R$ 400 mil para criança carente) com repercussão positiva. Ponto de atenção: entrevistas de rua exigem protocolo de imagem — risco jurídico da peça, não do creator.
+- **Polêmicas:** Sem episódio de risco nas fontes consultadas. Ação solidária de 2024 (R$ 400 mil para criança carente) com repercussão positiva.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado. Conteúdo focado no cotidiano popular, sem agenda político-partidária.
 
 ### Concorrência (bets / loterias / jogos)
@@ -129,8 +125,6 @@ Nas fontes públicas consultadas (imprensa, buscas abertas, redes), **não** foi
 ### Polêmicas e situações delicadas
 
 Sem episódio de risco de imagem nas fontes consultadas. Destaque positivo: em 2024, o creator mobilizou a audiência para arrecadar mais de R$ 400 mil para realizar o sonho da casa própria de uma criança carente, conforme o [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/) — reforça alinhamento de imagem com causas sociais e aspirações do público-alvo das Loterias.
-
-**Ponto de atenção (não é risco do creator — é risco da peça):** o formato de entrevista em via pública expõe terceiros. Para veiculação institucional da Caixa, todas as peças com entrevistados devem ter termo de cessão de uso de imagem assinado. Recomenda-se que o briefing criativo preveja figurantes ou autorização prévia, mitigando passivos judiciais.
 
 ### Política e pautas sensíveis
 
