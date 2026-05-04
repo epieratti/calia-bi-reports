@@ -37,14 +37,19 @@ briefing:
 methodology:
   columns:
   - label: Imprensa e buscas
-    body: Notícias e buscas abertas, cruzadas com **fontes públicas**.
+    body: 'Google e DuckDuckGo com nome entre aspas + termos de risco (aposta, bet, polêmica, processo,
+      partido). Veículos consultados: G1, UOL, Folha de S.Paulo, Estadão, portais regionais e agregadores
+      de notícias indexados. Cada afirmação sensível tem fonte com link no corpo do dossiê.'
   - label: Redes sociais
-    body: Perfis públicos no Instagram, TikTok, YouTube e X na **data da coleta**.
+    body: 'Perfis públicos no Instagram, TikTok, YouTube e X na data da coleta (04/05/2026).
+      Verificação de bio, posts recentes e marcações de publi (#publi, #ad, #parceria).'
   - label: Tamanho de público (painéis)
-    body: Social Blade (Instagram e YouTube) e Upfluence (TikTok) — só para **audiência e engajamento**.
+    body: 'Social Blade (Instagram e YouTube) e Upfluence — Free TikTok Profile Audit (TikTok).
+      Dados usados só para **audiência e engajamento** — não são prova de risco.'
   - label: Política e eleições (2026)
-    body: 'Filiação (TSE), candidatura e proximidade com governo/PT/Lula ou oposição/PL/Bolsonaro:
-      agendas, apoios, conteúdo recorrente.'
+    body: 'Consulta a buscas abertas por filiação partidária, candidatura e proximidade com
+      governo/PT/Lula ou oposição/PL/Bolsonaro. Base TSE não foi acessada diretamente nesta coleta —
+      verificação via imprensa e declarações públicas indexadas.'
 executive_summary:
   tagline: 'Brand safety — três creators (mai/2026). Detalhe em **Perfis** e **tabela resumo**.'
   blocks:
