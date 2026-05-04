@@ -189,7 +189,7 @@ Baixo — verificar cláusula de exclusividade com parceria de seguro viagem
 
 ### Narrativa
 
-Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Seu canal no YouTube se chama [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas), com 381 inscritos e foco em turismo e cultura de Minas Gerais. No Instagram (128 K seguidores) e TikTok, o estilo une **lifestyle**, **humor leve** e **vivências locais**. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem — produto financeiro regulado pela SUSEP, o que indica familiaridade com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
+Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Sua presença principal está no Instagram (128 K seguidores) e no TikTok, onde o estilo une **lifestyle**, **humor leve** e **vivências locais**. Mantém também o canal [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas) no YouTube, com foco em turismo e cultura de Minas Gerais. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem — produto financeiro regulado pela SUSEP, o que indica familiaridade com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
 
 ### Resumo tabela
 
