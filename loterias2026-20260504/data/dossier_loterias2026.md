@@ -43,8 +43,8 @@ methodology:
   - label: Redes sociais
     body: Revisamos os perfis **públicos** do creator no Instagram, TikTok, YouTube e X na **data da coleta**.
   - label: Tamanho de público (painéis)
-    body: Social Blade (Instagram e YouTube, quando o canal está indexado) e Upfluence (TikTok) servem
-      só para **tamanho de audiência** e engajamento.
+    body: Social Blade (Instagram e YouTube, quando o canal está indexado) e Free TikTok Profile Audit
+      servem só para **tamanho de audiência** e engajamento.
   - label: Política e eleições (2026)
     body: 'Olhamos **filiação** (TSE), **candidatura** e **proximidade** com **governo / PT / Lula / Planalto**
       ou **direita / PL / Bolsonaro** (e **extrema-direita**, se houver prova): agendas, apoios, conteúdo
@@ -59,8 +59,9 @@ executive_summary:
     items:
     - Nas buscas e na imprensa que usamos, **não** apareceu publicidade paga de casa de apostas nem de
       loteria concorrente da Caixa para nenhum dos três creators deste lote.
-    - Nenhum dos três tem histórico de links de afiliado ou parceria declarada com operadores de iGaming.
-      O risco central é verificar, no contrato, se há parcerias comerciais ativas fora do escopo público.
+    - Nenhum dos três tem histórico de links de afiliado ou parceria declarada com operadores de iGaming
+      nas fontes consultadas. Recomenda-se confirmar, no contrato, se há parcerias comerciais ativas fora
+      do escopo público.
   - title: Política e exposição
     items:
     - Nos três creators, **não** encontramos filiação partidária, candidatura ou proximidade declarada com
@@ -110,7 +111,7 @@ Baixo
 
 ### Narrativa
 
-Comediante e criador de conteúdo com forte presença no TikTok (≈ 1,9 M de seguidores) e no Instagram (1,8 M, engajamento de 6,65%). Faz entrevistas de rua e esquetes com personagens, usando paletó e óculos de sol como marca visual — o "entrevistador de terno" que transita entre diferentes estratos sociais. Começou a postar em abril de 2020 e cresceu principalmente nos formatos curtos, conforme o [**Famous Birthdays**](https://pt.famousbirthdays.com/people/linnyke-alves.html). Em setembro de 2024, um de seus vídeos mais virais mostrava-o num mercado de rua incentivando o público a gritar. Também faz stand-up; um de seus shows é citado no [**Jornal da Paraíba**](https://jornaldaparaiba.com.br/guia-qualaboa/agenda/linnyke-alves-em-joao-pessoa) como evento em João Pessoa. Em 2024, mobilizou redes e arrecadou mais de R$ 400 mil para a casa própria de uma criança carente, segundo o [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/). Não foram localizadas marcas nomeadas em campanhas publicitárias para este perfil nas fontes consultadas.
+Comediante e criador de conteúdo com forte presença no TikTok (≈ 1,9 M de seguidores) e no Instagram (1,8 M, 6,65% de engajamento). Faz entrevistas de rua e esquetes com personagens, usando paletó e óculos de sol como marca visual. Começou a postar em abril de 2020 — conforme o [**Famous Birthdays**](https://pt.famousbirthdays.com/people/linnyke-alves.html) — e cresceu principalmente nos formatos curtos. Também faz stand-up; um de seus shows consta na agenda do [**Jornal da Paraíba**](https://jornaldaparaiba.com.br/guia-qualaboa/agenda/linnyke-alves-em-joao-pessoa) como evento em João Pessoa. Em 2024, mobilizou a audiência e arrecadou mais de R$ 400 mil para a casa própria de uma criança carente, segundo o [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/). Não foram localizadas marcas nomeadas em campanhas publicitárias para este perfil nas fontes consultadas.
 
 ### Resumo tabela
 
@@ -120,7 +121,7 @@ Comediante e criador de conteúdo com forte presença no TikTok (≈ 1,9 M de se
 
 ### Concorrência (bets / loterias / jogos)
 
-Nas fontes públicas consultadas (imprensa, buscas abertas, redes), **não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar associada a este creator. Menções a "ficar rico" ou "ganhar na sorte" surgem organicamente nas entrevistas — são parte do léxico de humor popular, não chamadas para ação de plataformas de iGaming. Nenhum link de afiliado, hashtag `#publi` ou parceria de bet identificada até mai/2026.
+Nas fontes públicas consultadas (imprensa, buscas abertas, redes), **não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar associada a este creator. Menções a "ficar rico" ou "ganhar na sorte" surgem organicamente no humor — fazem parte do léxico popular, sem CTA para plataformas de iGaming. Nenhum link de afiliado, marcação de publi ou parceria de bet identificada até mai/2026.
 
 ### Polêmicas e situações delicadas
 
@@ -148,7 +149,7 @@ Baixo — perfil de maior segurança jurídica e institucional do lote
 
 ### Narrativa
 
-Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up, apresenta o solo **"Entra no Clima"**, com temas de infância, família e relacionamentos. Nas redes, faz vídeos curtos de humor com situações do cotidiano — o estilo sarcástico e espontâneo gera alcance consistente: 189 K seguidores no Instagram (engajamento de 8,82%), canal no YouTube com 55 K inscritos e 22 M de visualizações. Reels como [**Paulista x Manauara**](https://www.instagram.com/p/DQ5VcFlCXfP/) ultrapassaram 3,5 M de views. Trabalhou em campanhas publicitárias com marcas como **Itaú**, **Nubank**, **Samsung**, **Skol**, **Colchões Emma**, **Growth**, **Insider** e **Xtay**, segundo a [**Baobá Produções**](https://www.baobashows.com.br/felipehatori). É parte dos grupos de humor [**Os Japas**](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html) e **Bateu a Nave**. O fato de ter sido aprovado pelo compliance de Itaú e Nubank — instituições financeiras com critérios de brand safety entre os mais restritivos do mercado — indica que ele já conhece o rito de publicidade regulada.
+Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up, apresenta o solo **"Entra no Clima"**, com temas de infância, família e relacionamentos. Nas redes, faz vídeos curtos de humor sobre situações do cotidiano — estilo sarcástico e espontâneo com alcance consistente: 189 K seguidores no Instagram (8,82% de engajamento), 55 K inscritos e 22 M de visualizações no YouTube. Reels como [**Paulista x Manauara**](https://www.instagram.com/p/DQ5VcFlCXfP/) ultrapassaram 3,5 M de views. Segundo a [**Baobá Produções**](https://www.baobashows.com.br/felipehatori), seu portfólio de campanhas inclui **Itaú**, **Nubank**, **Samsung**, **Skol**, **Colchões Emma**, **Growth**, **Insider** e **Xtay**. É parte dos grupos de humor [**Os Japas**](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html) e **Bateu a Nave**. Trabalhar com bancos e fintechs do porte de Itaú e Nubank — que têm processos rigorosos de aprovação de creators — indica familiaridade com as exigências de publicidade regulada.
 
 ### Resumo tabela
 
@@ -158,7 +159,7 @@ Comediante de São Paulo, roteirista e criador de conteúdo. No stand-up, aprese
 
 ### Concorrência (bets / loterias / jogos)
 
-Nas fontes públicas consultadas, **não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar. O humor de Hatori trata de situações do cotidiano, sem temáticas relacionadas a apostas. O portfólio de marcas publicado pela [**Baobá Produções**](https://www.baobashows.com.br/felipehatori) inclui bancos, tecnologia e consumo — **nenhuma casa de apostas** identificada. Diferentemente de muitos humoristas de seu porte que aceitaram monetização via links de afiliado para cassinos online em 2024–2025 — conforme reportagem da [**Folha de S.Paulo** via BNLData](https://bnldata.com.br/com-propostas-milionarias-bets-viram-dilema-para-influenciadores-em-meio-a-investigacoes/) —, Hatori manteve o histórico limpo nesse eixo.
+Nas fontes públicas consultadas, **não** foi localizada publicidade paga de casa de apostas, loteria concorrente ou jogos de azar. O portfólio de marcas da [**Baobá Produções**](https://www.baobashows.com.br/felipehatori) inclui bancos, tecnologia e consumo — **nenhuma casa de apostas** identificada. Vale notar que, em 2024–2025, muitos humoristas de alcance similar receberam e aceitaram propostas de afiliação de cassinos online, conforme reportagem da [**Folha de S.Paulo** via BNLData](https://bnldata.com.br/com-propostas-milionarias-bets-viram-dilema-para-influenciadores-em-meio-a-investigacoes/). Hatori não tem registro desse tipo de vínculo.
 
 ### Polêmicas e situações delicadas
 
@@ -188,7 +189,7 @@ Baixo — verificar cláusula de exclusividade com parceria de seguro viagem
 
 ### Narrativa
 
-Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Seu canal no YouTube se chama [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas), com 381 inscritos e foco em turismo e cultura de Minas Gerais. Mantém presença no TikTok e Instagram (128 K seguidores), onde o estilo de narrativa une **lifestyle**, **humor leve** e **vivências locais**, criando forte identificação com a audiência regional. Tem parceria comercial ativa com empresa de seguro viagem, conforme o [**Linktree**](https://linktr.ee/Julimaranascimento) oficial — o que indica familiaridade com produtos financeiros regulados pela SUSEP e com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas nomeadas com grandes marcas nacionais nas fontes consultadas; atuação predominantemente com marcas regionais e de nicho.
+Criadora de conteúdo do Triângulo Mineiro (MG), conhecida como "Ju". Produz conteúdo sobre destinos, trilhas, experiências e descobertas regionais, com linguagem leve e próxima do público. Seu canal no YouTube se chama [**O Mapa da Mina de Minas**](https://m.youtube.com/@Omapadaminademinas), com 381 inscritos e foco em turismo e cultura de Minas Gerais. No Instagram (128 K seguidores) e TikTok, o estilo une **lifestyle**, **humor leve** e **vivências locais**. No [**Linktree**](https://linktr.ee/Julimaranascimento) oficial consta parceria ativa com empresa de seguro viagem — produto financeiro regulado pela SUSEP, o que indica familiaridade com as exigências de clareza contratual desse tipo de anunciante. Não foram localizadas campanhas com grandes marcas nacionais nas fontes consultadas.
 
 ### Resumo tabela
 
