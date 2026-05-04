@@ -1340,8 +1340,6 @@ def render_loterias_dossier_html(
       {f'<p class="mt-2 text-[10px] text-slate-500 max-w-prose mx-auto">{esc_plain(footer_note)}</p>' if footer_note else ''}
       <p class="mt-3 text-[10px] text-slate-500 max-w-prose mx-auto leading-relaxed">
         <strong>Build:</strong> <code class="text-slate-600">{esc(build_revision)}</code>
-        Se o <strong>GitHub Pages</strong> mostrar um build diferente do arquivo gerado localmente,
-        falta <code class="text-slate-600">git push</code> do HTML na pasta de publicação do cliente.
       </p>
     </footer>
   </div>
