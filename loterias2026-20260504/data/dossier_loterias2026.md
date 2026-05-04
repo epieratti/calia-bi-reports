@@ -106,7 +106,7 @@ Baixo
 - instagram: linnykealves
 - tiktok: linnykealves
 - youtube: linnykealves
-- x: 
+- x: não localizado nesta coleta
 
 ### Narrativa
 
@@ -144,7 +144,7 @@ Baixo — perfil de maior segurança jurídica e institucional do lote
 - instagram: felipehatori
 - tiktok: felipehatori
 - youtube: felipehatori
-- x: 
+- x: não localizado nesta coleta
 
 ### Narrativa
 
@@ -184,7 +184,7 @@ Baixo — verificar cláusula de exclusividade com parceria de seguro viagem
 - instagram: julimarasn
 - tiktok: julimaranasciment
 - youtube: omapadaminademinas
-- x: 
+- x: não localizado nesta coleta
 
 ### Narrativa
 
