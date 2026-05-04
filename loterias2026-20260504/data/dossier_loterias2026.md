@@ -65,7 +65,7 @@ consolidated_narrative:
     items:
     - Os três têm **baixo risco** em todos os eixos. Coberturas complementares — sem sobreposição
       de público entre Linnyke (massa), Hatori (urbano qualificado) e Julimara (nicho regional).
-    - Números são retrato da data da coleta; **não** substituem contrato nem parecer jurídico.
+    - Números são retrato da data da coleta.
 ---
 
 ## Linnyke Alves
