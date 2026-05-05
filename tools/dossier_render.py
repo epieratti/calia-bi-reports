@@ -953,7 +953,7 @@ def render_loterias_dossier_html(
 
     panels_intro_raw = bundle.get("panels", {}).get(
         "intro_note",
-        "Números das ferramentas (alcance, engajamento). Só ajudam a ver tamanho de público; o risco da campanha segue os critérios listados em **Pedido e critérios** acima.",
+        "Painéis mostram alcance e engajamento na data da coleta — servem para dimensionar audiência, não para substituir os critérios de risco em **Pedido e critérios** acima.",
     )
     _pn_all = bundle.get("panels") or {}
     panels_html = (
