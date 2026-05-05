@@ -6,7 +6,7 @@
 
 **Status:** material para **integração futura** no HTML — **não** foi incorporado ao dossiê publicado nesta etapa.
 
-**Última atualização desta nota:** rodada extra de buscas + **consolidação 18+** + observação de **feed com menores** (Linnyke) + **feed TikTok Felipe** (amostra sem menores).
+**Última atualização desta nota:** rodada extra de buscas + **consolidação 18+** + feeds TikTok em captura (**Linnyke** menores recorrentes; **Felipe** sem menores; **Julimara** sem menor em destaque).
 
 ---
 
@@ -28,7 +28,7 @@
 |---------|-------------------------|---------------------------|--------------------------------|
 | **Linnyke Alves** | **Não** estimável aqui | **Alto** uso de **menores no feed** (séries com criança, “ditados”, duplo visual com criança; arte **“LINNYKE BIG PAUL LITTLE PAUL”** no próprio conteúdo — **apelidos de roteiro**, sem nome civil verificado) + pautas sociais com **Paulo** (matérias) + **Vovó Lu** (multigeracional) | **Elevado** — subir para **jurídico/compliance** + **direção de peça** (uso de menor em campanha 18+) |
 | **Felipe Hatori** | **Não** estimável aqui | **Humor adulto** (stand-up, marcas adultas no portfólio); evento **18+** em amostra ([Guia Floripa](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)); **feed TikTok (capturas maio/2026):** **24–30** thumbs **sem** menor aparente — SP, morar sozinho, síndico, “Paulista”, vizinho (comédia urbana jovem-adulto) | **Baixo** neste eixo — foco do dossiê continua **outros riscos** (colegas de grupo, etc.) |
-| **Julimara** | **Não** estimável aqui | **Turismo / lifestyle**; sem achado de “canal kids”; pode haver **família** no público de viagem (**inferência**) | **Baixo a moderado** — temática **aspiracional** alinha com lazer; **não** o mesmo perfil de risco que Linnyke neste ponto |
+| **Julimara** | **Não** estimável aqui | **Turismo / lifestyle** (Triângulo Mineiro, Uberlândia, natureza, esportes); buscas **sem** “canal kids”; **feed TikTok `@julimaranasciment` (capturas maio/2026):** **18–24** thumbs **sem** menor em destaque — alinhado a **público adulto** em conteúdo de viagem | **Baixo a moderado** — temática **aspiracional**; **não** o mesmo perfil de risco que Linnyke no eixo **menor em cena** |
 
 ### Linnyke — detalhe (fontes + observação)
 
@@ -44,7 +44,7 @@
 
 ### Julimara — detalhe (fontes)
 
-- [YouTube O Mapa da Mina](https://www.youtube.com/@Omapadaminademinas), [reel DHyFbDcu_Qo](https://www.instagram.com/julimarasn/reel/DHyFbDcu_Qo/), [Linktree](https://linktr.ee/Julimaranascimento), [Turismo de Minas](https://turismodeminas.com.br/noticias/vemprabh/), [@julimarasn](https://www.instagram.com/julimarasn/).
+- [YouTube O Mapa da Mina](https://www.youtube.com/@Omapadaminademinas), [reel DHyFbDcu_Qo](https://www.instagram.com/julimarasn/reel/DHyFbDcu_Qo/), [Linktree](https://linktr.ee/Julimaranascimento), [Turismo de Minas](https://turismodeminas.com.br/noticias/vemprabh/), [@julimarasn](https://www.instagram.com/julimarasn/), TikTok [@julimaranasciment](https://www.tiktok.com/@julimaranasciment) (perfil; **URLs de posts** opcionais para o dossiê).
 
 ### Limites técnicos (comentários + plataforma)
 
@@ -123,6 +123,7 @@
 
 - **Nicho:** **turismo**, **trilhas**, **lifestyle regional** (Triângulo Mineiro); tom **aspiracional** e **informativo** (dicas de destino, experiências).
 - **Público provável (qualitativo):** interessados em **viagem** e **Minas**; pode incluir **famílias** que planejam passeio — outra vez, **sem** percentual.
+- **Feed TikTok `@julimaranasciment` (amostra visual, maio/2026 — capturas da equipe):** grades de **18–24** thumbnails com **foco em lugares, experiências, esportes** (Uberlândia/MG, cachoeiras, corrida, rota do queijo, Lisboa, etc.); **nenhuma** thumb com **criança em destaque** — reforço **qualitativo** ao eixo **18+** “menor em cena” (**não** varredura de todo o arquivo).
 - **Política / bet:** sem sinal nas fontes abertas; alinhado ao dossiê.
 
 ### Implicação para Loterias (qualitativa)
