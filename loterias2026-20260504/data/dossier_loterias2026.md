@@ -164,7 +164,7 @@ Comediante de São Paulo, roteirista. Stand-up solo **"Entra no Clima"**. Nas re
 
 ### Concorrência (bets / loterias / jogos)
 
-**Não** localizada publi de apostas ou loteria concorrente. Portfólio da [**Baobá Produções**](https://www.baobashows.com.br/felipehatori): bancos, tecnologia e consumo — nenhuma casa de apostas. Vale notar que em 2024–2025 muitos humoristas de alcance similar aceitaram afiliações de cassinos ([**Folha de S.Paulo** via BNLData](https://bnldata.com.br/com-propostas-milionarias-bets-viram-dilema-para-influenciadores-em-meio-a-investigacoes/)) — Hatori não tem esse registro.
+**Não** localizada publi de apostas ou loteria concorrente. Portfólio da [**Baobá Produções**](https://www.baobashows.com.br/felipehatori): bancos, tecnologia e consumo — nenhuma casa de apostas.
 
 ### Polêmicas e situações delicadas
 
