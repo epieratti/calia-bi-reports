@@ -21,8 +21,9 @@ briefing:
   - Levantamento de **brand safety** para o squad Always ON Loterias 2026 — três novos
     nomes (mai/2026). Eixos por perfil e método em **Como foi analisado**.
     "**Não encontramos**" = ausência nas **fontes públicas** desta coleta; pode haver informação fora do escopo.
-  - '**Demografia e faixa etária da audiência** **não** entram neste relatório. Em regra **só** existem nos **painéis
-    privados** do próprio canal (rede + titular do perfil), **fora** do escopo desta coleta.'
+  - '**Dados demográficos e de idade da audiência** costumam ser exibidos pela **plataforma** apenas para o
+    **titular do perfil** (painéis internos / insights). Por isso **não** há como reproduzir esses números nesta
+    coleta **com fontes públicas**.'
   criterios:
   - 'Concorrência: publi ou parceria com apostas, cassino, loterias concorrentes — inclusive humor
     que gere associação indevida, mesmo sem publi paga.'
@@ -56,8 +57,9 @@ methodology:
   loterias_18_note: |
     **Coleta (mai/2026):** bio, amostra de feed e notícias com **link**; foco em **menor de idade em cena** no conteúdo público.
 
-    **Demografia / idade de audiência:** **não** constam neste relatório. **Insights** proprietários do canal **não**
-    foram usados; só entra o que está em **fonte pública** com **link** no corpo.
+    **Demografia / idade de audiência:** as redes costumam mostrar esse recorte **só** para quem **administra** o
+    perfil (insights / painel do criador). **Não** há acesso a isso neste relatório **sem** esses dados **compartilhados**
+    pelo titular ou pela agência; o corpo trata do que está **público**, com **link**.
 executive_summary:
   tagline: 'Brand safety — três creators (mai/2026). Detalhe em **Perfis** e **tabela resumo**.'
   blocks:
