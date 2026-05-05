@@ -27,6 +27,12 @@ briefing:
   - 'Polêmicas: falas ou episódios com risco de imagem documentado.'
   - 'Política: filiação, candidatura ou posicionamento político recorrente e explícito (PT, PL ou
     outros partidos), com prova. Detalhe em **Política e eleições** (Como foi analisado).'
+  - 'Loterias 18+ (jogo 18+): leitura qualitativa da superfície pública sobre **menor de idade em
+    evidência no conteúdo** (feed, capas, séries recorrentes) e menções ligadas a **crianças** em
+    matérias indexadas; **não** há neste dossiê **percentual de crianças entre seguidores** (métrica
+    proprietária das redes e, quando existe, costuma ser **frágil** para “público infantil”). Método
+    em **Jogo 18+ e leitura de público** (Como foi analisado); síntese por perfil em **Loterias 18+
+    (leitura qualitativa)** e colunas na **tabela resumo**.'
   redes:
   - Instagram
   - TikTok
@@ -59,8 +65,8 @@ methodology:
     O que foi feito aqui é **leitura qualitativa da superfície pública**: **bio**, **amostra de grade do feed**
     (capturas em **maio/2026**) e **matérias com link**. Para **compliance** de campanha **18+**, o sinal mais
     útil é **menor de idade em evidência no conteúdo** (vídeo, capa, série recorrente) — não “achismo” de
-    demografia. A **tabela resumo** ganhou colunas **“Menor em cena”** e **“Atenção 18+”** quando preenchidas
-    na fonte; o detalhe narrativo está em **Loterias 18+ (leitura qualitativa)** no perfil em que couber.
+    demografia. A **tabela resumo** traz colunas **“Menor em cena”** e **“Atenção 18+”**; cada perfil tem
+    também a subseção **Loterias 18+ (leitura qualitativa)** — **breve** quando o sinal é uniforme e **mais detalhada** quando o achado exige desdobramento para **jurídico / criação**.
 executive_summary:
   tagline: 'Brand safety — três creators (mai/2026). Detalhe em **Perfis** e **tabela resumo**.'
   blocks:
@@ -82,9 +88,10 @@ consolidated_narrative:
     - "Os três têm **baixo risco** nos eixos **Concorrência · Polêmicas · Política** da tabela. Coberturas
       complementares — sem sobreposição de público entre Linnyke (massa), Hatori (urbano qualificado) e
       Julimara (nicho regional)."
-    - "**Loterias 18+:** ver caixa **“Jogo 18+ e leitura de público”** em Como foi analisado e as colunas
-      novas na **tabela resumo** — **Linnyke** concentra a atenção por **menores recorrentes no feed público**;
-      **Felipe** e **Julimara** não repetem esse padrão na amostra visual (mai/2026)."
+    - "**Loterias 18+** entrou como **quarto critério** em **Pedido e critérios**; ver **“Jogo 18+ e leitura
+      de público”** (Como foi analisado), a **tabela resumo** e a subseção **Loterias 18+** em **cada** perfil.
+      **Linnyke** concentra o desdobramento por **menores recorrentes no feed público**; **Felipe** e **Julimara**
+      seguem **breves** neste eixo na amostra visual (mai/2026)."
     - "Números são retrato da data da coleta."
 ---
 
@@ -117,6 +124,7 @@ Comediante com 1,9 M no TikTok e 1,8 M no Instagram (6,65% de engajamento). Entr
 
 ### Loterias 18+ (leitura qualitativa)
 
+- **Critério (pedido):** **Loterias** = **jogo 18+** — ver **Pedido e critérios de análise** e metodologia em **Como foi analisado**.
 - **Produto:** campanha de **Loterias** trata de **jogo com restrição 18+**. **Não** há neste dossiê **percentual de crianças entre os seguidores** (métrica proprietária das redes + fragilidade do dado “infantil” na base).
 - **O que pesa para a decisão:** **menor de idade em evidência no conteúdo público** (feed, capas, séries) — **independente** de “quem segue” em %.
 - **Achado:** amostra visual (**mai/2026**) + matérias acima mostram **crianças em cena com frequência**; identidade civil / parentesco dos menores **não** foi confirmada na web aberta — no próprio conteúdo aparecem rótulos tipo **“BIG PAUL / LITTLE PAUL”**.
@@ -162,6 +170,13 @@ Comediante de São Paulo, roteirista. Stand-up solo **"Entra no Clima"**. Nas re
 - **Menor em cena (amostra pública):** **Não observado** — grade TikTok (capturas internas, **24–30** thumbnails, **maio/2026**): humor adulto urbano (SP, síndico, vizinho, “morar sozinho”); **sem** criança em destaque nas caps. Show listado como **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). Perfil: [**TikTok @felipehatori**](https://www.tiktok.com/@felipehatori).
 - **Atenção 18+ (Loterias):** **Baixa** neste eixo — alinhado a comédia **adulta** e à amostra **sem menor em cena**; riscos do dossiê seguem nos **outros** eixos (ex.: Os Japas).
 
+### Loterias 18+ (leitura qualitativa)
+
+- **Critério (pedido):** mesmo eixo **18+** dos demais perfis — ver **Pedido e critérios** e **Como foi analisado**.
+- **Produto:** **Loterias** = **jogo 18+**; aqui só **leitura qualitativa** da superfície pública (amostra de grade **mai/2026**), **não** demografia de seguidores.
+- **Achado neste perfil:** **sem menor em destaque** nas caps da amostra; show citado na agenda como **18+** ([**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)).
+- **Implicação:** neste eixo, **sinal confortável** na amostra — **riscos relevantes** do dossiê ficam em **Concorrência / Polêmicas / Política** (ex.: **Os Japas**).
+
 ### Concorrência (bets / loterias / jogos)
 
 **Não** localizada publi de apostas ou loteria concorrente. Portfólio da [**Baobá Produções**](https://www.baobashows.com.br/felipehatori): bancos, tecnologia e consumo — nenhuma casa de apostas. Vale notar que em 2024–2025 muitos humoristas de alcance similar aceitaram afiliações de cassinos ([**Folha de S.Paulo** via BNLData](https://bnldata.com.br/com-propostas-milionarias-bets-viram-dilema-para-influenciadores-em-meio-a-investigacoes/)) — Hatori não tem esse registro.
@@ -201,6 +216,13 @@ Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lif
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 - **Menor em cena (amostra pública):** **Não observado** — grade TikTok (capturas internas, **18–24** thumbnails, **maio/2026**): turismo, natureza, corridas, Uberlândia/MG; **sem** criança em destaque nas caps. Perfil: [**TikTok @julimaranasciment**](https://www.tiktok.com/@julimaranasciment).
 - **Atenção 18+ (Loterias):** **Baixa a moderada** — conteúdo de **viagem / lifestyle**; não o mesmo padrão de risco **“menor em cena”** que Linnyke na amostra.
+
+### Loterias 18+ (leitura qualitativa)
+
+- **Critério (pedido):** mesmo eixo **18+** dos demais perfis — ver **Pedido e critérios** e **Como foi analisado**.
+- **Produto:** **Loterias** = **jogo 18+**; leitura **qualitativa** (amostra de grade **mai/2026**), **não** percentual infantil na base de seguidores.
+- **Achado neste perfil:** **turismo / natureza / lifestyle regional** na amostra visual; **sem menor em destaque** nas caps consultadas ([**TikTok @julimaranasciment**](https://www.tiktok.com/@julimaranasciment)).
+- **Implicação:** **não** o mesmo padrão de **“menor em cena recorrente”** observado em **Linnyke**; manter **governança 18+** padrão de campanha (roteiro, locação, presença de público em eventos).
 
 ### Concorrência (bets / loterias / jogos)
 
