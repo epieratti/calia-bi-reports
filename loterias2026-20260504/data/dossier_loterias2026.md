@@ -201,7 +201,7 @@ Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lif
 - **Concorrência:** Sem publi de apostas ou loteria concorrente.
 - **Polêmicas:** Sem episódio de risco. Perfil positivo e aspiracional.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Baixa a moderada** — turismo/lifestyle; amostra **mai/2026** (**18–24** thumbs) **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment). **Não** confundir com o padrão de **Linnyke** neste eixo.
+- **Loterias 18+:** **Baixa a moderada** — turismo/lifestyle; amostra **mai/2026** (**18–24** thumbs) **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -217,4 +217,4 @@ Sem filiação, candidatura ou posicionamento político documentado. Perfil apol
 
 ### Loterias 18+
 
-Amostra **mai/2026** (**18–24** thumbs): turismo/lifestyle, **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment). **Não** confundir com o padrão de **Linnyke** neste eixo.
+Amostra **mai/2026** (**18–24** thumbs): turismo/lifestyle, **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment).
