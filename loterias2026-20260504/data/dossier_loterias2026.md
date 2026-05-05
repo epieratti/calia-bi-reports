@@ -84,8 +84,9 @@ consolidated_narrative:
   blocks:
   - title: Leitura para Caixa
     items:
-    - "Na tabela, os três com **baixo risco** em **Concorrência**, **Polêmicas** e **Política**; **Loterias 18+** na
-      coluna homônima — Linnyke (massa), Felipe (humor urbano), Julimara (viagem/MG)."
+    - "**Concorrência**, **Polêmicas** e **Política:** **baixo risco** nos três na tabela. **Loterias 18+:** **Linnyke**
+      **elevada**; **Felipe** e **Julimara** **baixa** / **baixa a moderada** — Linnyke (massa), Felipe (humor urbano),
+      Julimara (viagem/MG)."
     - "**18+:** **Linnyke** concentra **menor em cena recorrente** no feed público; **Felipe** e **Julimara** **não**
       repetem o padrão na amostra (**mai/2026**)."
     - "Números são retrato da data da coleta."
@@ -97,7 +98,7 @@ consolidated_narrative:
 
 ### Síntese de risco
 
-Baixo
+Moderado — **Concorrência**, **Polêmicas** e **Política** seguem **baixas** nas fontes; a coluna **Loterias 18+** está **elevada** (menor em cena recorrente na amostra **mai/2026**).
 
 ### Handles
 
