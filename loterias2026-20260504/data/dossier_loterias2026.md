@@ -93,7 +93,7 @@ consolidated_narrative:
 
 ### Síntese de risco
 
-Moderado — três primeiros eixos **baixos** nas fontes; **Loterias 18+** **elevada** (menor em cena recorrente na amostra **mai/2026**).
+Moderado
 
 ### Handles
 
