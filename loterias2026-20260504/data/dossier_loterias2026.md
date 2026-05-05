@@ -117,7 +117,7 @@ Comediante com 1,9 M no TikTok e 1,8 M no Instagram (6,65% de engajamento). Entr
 - **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. "Sorte" aparece no humor organicamente, sem CTA para operador.
 - **Polêmicas:** Sem episódio de risco. Destaque positivo: ação solidária de 2024 (R$ 400 mil).
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Elevada** — **mai/2026**, **~24** miniaturas do TikTok + trecho do feed do Instagram (capturas internas): **menor em cena em vários posts**; séries (ex.: **“ditados populares”**), arte **“BIG PAUL / LITTLE PAUL”**. Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+- **Loterias 18+:** **Elevada** — **mai/2026**, amostra de miniaturas do TikTok + trecho do feed do Instagram (capturas internas): **menor em cena em vários posts**; séries (ex.: **“ditados populares”**), arte **“BIG PAUL / LITTLE PAUL”**. Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -133,7 +133,7 @@ Sem filiação, candidatura ou posicionamento político documentado. **Ano eleit
 
 ### Loterias 18+
 
-**Redes (mai/2026):** amostra com **~24** miniaturas do TikTok + trecho do feed do Instagram (capturas internas) — **menor de idade em várias miniaturas** (vários posts), não um caso isolado; inclui séries (ex.: **“ditados populares”**) e rótulos **“BIG PAUL / LITTLE PAUL”**. Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+**Redes (mai/2026):** amostra de miniaturas do TikTok + trecho do feed do Instagram (capturas internas) — **menor de idade em várias miniaturas** (vários posts), não um caso isolado; inclui séries (ex.: **“ditados populares”**) e rótulos **“BIG PAUL / LITTLE PAUL”**. Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 **Imprensa** com **menor de idade** em pauta social (vaquinha / mobilização): [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/).
 
@@ -161,7 +161,7 @@ Comediante de São Paulo, roteirista. Stand-up solo **"Entra no Clima"**. Nas re
 - **Concorrência:** Sem publi de apostas ou loteria concorrente. Portfólio inclui bancos e fintechs; nenhuma casa de apostas.
 - **Polêmicas:** Sem episódio de risco. **Contexto:** integra **Os Japas**; matérias sobre **outros integrantes** podem citar o grupo.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Baixa** — **mai/2026**, **24–30** miniaturas do TikTok (capturas internas): humor adulto urbano, **sem menor em destaque** nas miniaturas. Show **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). [**TikTok**](https://www.tiktok.com/@felipehatori).
+- **Loterias 18+:** **Baixa** — **mai/2026**, amostra de miniaturas do TikTok (capturas internas): humor adulto urbano, **sem menor em destaque** nas miniaturas. Show **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). [**TikTok**](https://www.tiktok.com/@felipehatori).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -177,7 +177,7 @@ Sem filiação, candidatura ou posicionamento político documentado. Conteúdo r
 
 ### Loterias 18+
 
-Amostra **mai/2026** (**24–30** miniaturas do TikTok, capturas internas): **nenhuma** miniatura com **menor em destaque**; humor adulto urbano. Show listado **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). Perfil: [**TikTok**](https://www.tiktok.com/@felipehatori).
+Amostra **mai/2026** de miniaturas do TikTok (capturas internas): **nenhuma** miniatura com **menor em destaque**; humor adulto urbano. Show listado **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). Perfil: [**TikTok**](https://www.tiktok.com/@felipehatori).
 
 ## Julimara
 
@@ -203,7 +203,7 @@ Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lif
 - **Concorrência:** Sem publi de apostas ou loteria concorrente.
 - **Polêmicas:** Sem episódio de risco. Perfil positivo e aspiracional.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Baixa a moderada** — turismo/lifestyle; **mai/2026**, **18–24** miniaturas do TikTok (capturas internas), **sem menor em destaque** nas miniaturas. [**TikTok**](https://www.tiktok.com/@julimaranasciment).
+- **Loterias 18+:** **Baixa a moderada** — turismo/lifestyle; **mai/2026**, amostra de miniaturas do TikTok (capturas internas), **sem menor em destaque** nas miniaturas. [**TikTok**](https://www.tiktok.com/@julimaranasciment).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -219,4 +219,4 @@ Sem filiação, candidatura ou posicionamento político documentado. Perfil apol
 
 ### Loterias 18+
 
-Amostra **mai/2026** (**18–24** miniaturas do TikTok, capturas internas): turismo/lifestyle; **nenhuma** miniatura com **menor em destaque**. Perfil: [**TikTok**](https://www.tiktok.com/@julimaranasciment).
+Amostra **mai/2026** de miniaturas do TikTok (capturas internas): turismo/lifestyle; **nenhuma** miniatura com **menor em destaque**. Perfil: [**TikTok**](https://www.tiktok.com/@julimaranasciment).
