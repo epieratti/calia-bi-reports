@@ -21,15 +21,17 @@ briefing:
   - Levantamento de **brand safety** para o squad Always ON Loterias 2026 — três novos
     nomes (mai/2026). Eixos verificados em cada perfil; método em **Como foi analisado**.
     "Não encontramos" = não apareceu nas fontes públicas usadas; pode haver dados fora do escopo.
+  - '**Demografia e idade da audiência** ficam nos **insights** ligados ao **próprio perfil** (rede +
+    titular do canal). **Não** há acesso a esses números nesta coleta **salvo** se **creator ou agência**
+    os **informarem**.'
   criterios:
   - 'Concorrência: publi ou parceria com apostas, cassino, loterias concorrentes — inclusive humor
     que gere associação indevida, mesmo sem publi paga.'
   - 'Polêmicas: falas ou episódios com risco de imagem documentado.'
   - 'Política: filiação, candidatura ou posicionamento político recorrente e explícito (PT, PL ou
     outros partidos), com prova. Detalhe em **Política e eleições** (Como foi analisado).'
-  - 'Loterias 18+ (jogo 18+): **menor de idade** em vídeo, capa ou série no material público; **não**
-    há **percentual de seguidores menores de 18 anos** (métrica interna das redes, instável). Síntese
-    na coluna **Loterias 18+** da tabela e no **item 4** de cada perfil.'
+  - 'Loterias 18+ (jogo 18+): **menor de idade** em vídeo, capa ou série no **material público** do perfil.
+    Síntese na coluna **Loterias 18+** da tabela e no **item 4** de cada perfil.'
   redes:
   - Instagram
   - TikTok
@@ -54,8 +56,8 @@ methodology:
       governo/PT/Lula ou oposição/PL/Bolsonaro. Base TSE não foi acessada diretamente nesta coleta —
       verificação via imprensa e declarações públicas indexadas.'
   loterias_18_note: |
-    **Loterias** — produto **18+** (jogo). **Não** estimamos **percentual de seguidores menores de 18 anos**
-    (métrica interna das redes; uso de conta/dispositivo de adulto distorce o recorte).
+    **Loterias** — produto **18+** (jogo). **Demografia e idade da audiência** constam dos **insights** do
+    próprio perfil; **não** entram neste relatório **sem** dado **fornecido** pelo **creator ou agência**.
 
     **Coleta:** bio, amostra de feed (**maio/2026**) e notícias com link; foco em **menor de idade em cena**
     no conteúdo público.
@@ -76,7 +78,6 @@ executive_summary:
       para campanha de empresa pública em ano eleitoral.
   - title: Loterias 18+ (jogo 18+)
     items:
-    - "**Não** há **percentual de seguidores menores de 18 anos** neste dossiê (só fontes abertas)."
     - "**Linnyke:** **menor em cena recorrente** na amostra de feed (**mai/2026**). **Felipe** e **Julimara:** **sem**
       esse padrão na mesma amostra. Detalhe na **tabela** (coluna **Loterias 18+**) e no **item 4** de cada perfil."
 consolidated_narrative:
@@ -117,7 +118,7 @@ Comediante com 1,9 M no TikTok e 1,8 M no Instagram (6,65% de engajamento). Entr
 - **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. "Sorte" aparece no humor organicamente, sem CTA para operador.
 - **Polêmicas:** Sem episódio de risco. Destaque positivo: ação solidária de 2024 (R$ 400 mil).
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Elevada** — produto **18+** (jogo); feed **mai/2026** com **menor em cena recorrente** (séries, “BIG PAUL / LITTLE PAUL”). Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). [**TikTok**](https://www.tiktok.com/@linnykealves). **Não** há percentual de seguidores menores de 18 anos neste relatório.
+- **Loterias 18+:** **Elevada** — produto **18+** (jogo); feed **mai/2026** com **menor em cena recorrente** (séries, “BIG PAUL / LITTLE PAUL”). Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -133,7 +134,7 @@ Sem filiação, candidatura ou posicionamento político documentado. **Ano eleit
 
 ### Loterias 18+
 
-Amostra **mai/2026**: **menor em cena recorrente** no feed; rótulos **“BIG PAUL / LITTLE PAUL”**. **Não** há percentual de seguidores menores de 18 anos neste relatório. Fontes: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/), [**TikTok**](https://www.tiktok.com/@linnykealves).
+Amostra **mai/2026**: **menor em cena recorrente** no feed; rótulos **“BIG PAUL / LITTLE PAUL”**. Fontes: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/), [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ## Felipe Hatori
 
