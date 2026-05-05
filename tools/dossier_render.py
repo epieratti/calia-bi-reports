@@ -857,8 +857,18 @@ def render_loterias_dossier_html(
             f"<p class='text-xs font-black text-calia-navy uppercase tracking-wide'>{esc_plain(col.get('label', ''))}</p>"
             f"{methodology_column_body_html(col.get('body', ''))}</div>"
         )
+    lot_18_note = (bundle.get("methodology") or {}).get("loterias_18_note") or ""
+    if str(lot_18_note).strip():
+        meth_cards += (
+            "<div class='p-4 bg-amber-50/50 border border-amber-200/90 rounded md:col-span-2'>"
+            "<p class='text-xs font-black text-calia-navy uppercase tracking-wide mb-2'>"
+            "Jogo 18+ e leitura de público</p>"
+            f"<div class='text-sm text-slate-700 leading-relaxed'>{mini_md(str(lot_18_note).strip())}</div>"
+            "</div>"
+        )
 
-    ig_for_panels = (bundle.get("panels", {}).get("instagram") or {}).get("rows") or []
+    ig_for_panels = (bundle.get("panels") or {}).get("instagram") or {}
+    ig_for_panels = (ig_for_panels.get("rows") or []) if isinstance(ig_for_panels, dict) else []
 
     def format_panel_footnote(foot: str) -> str:
         t = (foot or "").strip()
@@ -988,6 +998,13 @@ def render_loterias_dossier_html(
     profile_sections = ""
     summary_rows: list[list[str]] = []
 
+    any_18_table_cols = False
+    for _p in ordered_profiles:
+        _rt = (_p.get("resumo_tabela") or {})
+        if (_rt.get("menor_em_cena") or "").strip() or (_rt.get("atencao_18") or "").strip():
+            any_18_table_cols = True
+            break
+
     def box(lab: str, txt: str | None) -> str:
         return (
             f"<div class='rounded border border-slate-200 p-4 bg-white'>"
@@ -1014,6 +1031,16 @@ def render_loterias_dossier_html(
         narr = mini_md(pc.get("narrativa", ""))
         risco_raw = pc.get("risco_geral", "—")
         risco_badge = risco_badge_block_html(risco_raw, compact=False)
+        lot18_txt = (pc.get("loterias_18_plus") or "").strip()
+        lot18_html = ""
+        if lot18_txt:
+            lot18_html = (
+                "<div class='mb-6 rounded border border-amber-200/90 bg-amber-50/40 p-4'>"
+                "<p class='text-xs font-black text-calia-navy uppercase tracking-wide mb-2'>"
+                "Loterias 18+ (leitura qualitativa)</p>"
+                f"<div class='text-sm text-slate-700 leading-relaxed'>{mini_md(lot18_txt)}</div>"
+                "</div>"
+            )
         return (
             f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
             f"<div class='flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-3 mb-4'>"
@@ -1021,6 +1048,7 @@ def render_loterias_dossier_html(
             f"{risco_badge}</div>"
             f"{networks_html}"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
+            f"{lot18_html}"
             f"<div class='grid md:grid-cols-3 gap-4'>"
             f"{box('1. Concorrência (bets / loterias / jogos)', eixos.get('concorrencia'))}"
             f"{box('2. Polêmicas e situações delicadas', eixos.get('polemicas'))}"
@@ -1053,15 +1081,19 @@ def render_loterias_dossier_html(
                 if show_tier_in_panel
                 else f"<strong>{esc_plain(name)}</strong>"
             )
-            summary_rows.append(
-                [
-                    name_cell,
-                    risco_cell,
-                    mini_md(rt.get("concorrencia", "—")),
-                    mini_md(rt.get("polemicas", "—")),
-                    mini_md(rt.get("politica", "—")),
-                ]
-            )
+            row_cells: list[str] = [
+                name_cell,
+                risco_cell,
+                mini_md(rt.get("concorrencia", "—")),
+                mini_md(rt.get("polemicas", "—")),
+                mini_md(rt.get("politica", "—")),
+            ]
+            if any_18_table_cols:
+                m18 = (rt.get("menor_em_cena") or "").strip()
+                a18 = (rt.get("atencao_18") or "").strip()
+                row_cells.append(mini_md(m18) if m18 else "—")
+                row_cells.append(mini_md(a18) if a18 else "—")
+            summary_rows.append(row_cells)
         if people:
             toc_items += "</ul>"
         toc_items += "</li>"
@@ -1101,15 +1133,19 @@ def render_loterias_dossier_html(
                 if show_tier_in_panel
                 else f"<strong>{esc_plain(name)}</strong>"
             )
-            summary_rows.append(
-                [
-                    name_cell_o,
-                    risco_cell_o,
-                    mini_md(rt.get("concorrencia", "—")),
-                    mini_md(rt.get("polemicas", "—")),
-                    mini_md(rt.get("politica", "—")),
-                ]
-            )
+            row_o: list[str] = [
+                name_cell_o,
+                risco_cell_o,
+                mini_md(rt.get("concorrencia", "—")),
+                mini_md(rt.get("polemicas", "—")),
+                mini_md(rt.get("politica", "—")),
+            ]
+            if any_18_table_cols:
+                m18o = (rt.get("menor_em_cena") or "").strip()
+                a18o = (rt.get("atencao_18") or "").strip()
+                row_o.append(mini_md(m18o) if m18o else "—")
+                row_o.append(mini_md(a18o) if a18o else "—")
+            summary_rows.append(row_o)
         toc_items += "</ul></li>"
         profile_sections += (
             f"<div id='{esc(oslug)}' class='scroll-mt-20 mb-10'>"
@@ -1117,13 +1153,20 @@ def render_loterias_dossier_html(
             f"{''.join(obl)}</div>"
         )
 
-    sum_hdr = (
-        "Nome / camada" if show_tier_in_panel else "Nome"
-    )
+    sum_hdr: list[str] = [
+        "Nome / camada" if show_tier_in_panel else "Nome",
+        "Síntese de risco",
+        "Concorrência",
+        "Polêmicas",
+        "Política",
+    ]
+    if any_18_table_cols:
+        sum_hdr.extend(["Menor em cena (amostra pública)", "Atenção 18+ (Loterias)"])
+    n_sum_cols = len(sum_hdr)
     sum_table = render_table(
-        [sum_hdr, "Síntese de risco", "Concorrência", "Polêmicas", "Política"],
+        sum_hdr,
         summary_rows,
-        html_safe_columns=frozenset({0, 1, 2, 3, 4}),
+        html_safe_columns=frozenset(range(n_sum_cols)),
     )
 
     exec_rows: list[tuple[str, str, object, str, str]] = []
@@ -1303,7 +1346,7 @@ def render_loterias_dossier_html(
 
     <section id="como" class="card-audit scroll-mt-20">
       <div class="section-header"><h2 class="text-xl font-black text-calia-navy">Como foi analisado</h2></div>
-      <div class="grid sm:grid-cols-2 gap-3">{meth_cards}</div>
+      <div class="grid sm:grid-cols-2 gap-3 md:grid-cols-2">{meth_cards}</div>
     </section>
 
     <footer class="text-center py-10 text-xs text-slate-400 border-t border-slate-200">

@@ -73,11 +73,23 @@ def _subsection(body: str, title: str) -> str:
 def _resumo_from_body(body: str) -> dict[str, str]:
     block = _subsection(body, "Resumo tabela")
     if not block:
-        return {"concorrencia": "", "polemicas": "", "politica": ""}
-    out = {"concorrencia": "", "polemicas": "", "politica": ""}
+        return {
+            "concorrencia": "",
+            "polemicas": "",
+            "politica": "",
+            "menor_em_cena": "",
+            "atencao_18": "",
+        }
+    out = {
+        "concorrencia": "",
+        "polemicas": "",
+        "politica": "",
+        "menor_em_cena": "",
+        "atencao_18": "",
+    }
     for line in block.splitlines():
         m = re.match(
-            r"^[*-]?\s*\*\*(Concorrência|Polêmicas|Política)\*\*\s*:\s*(.+)$",
+            r"^[*-]?\s*\*\*(Concorrência|Polêmicas|Política|Menor em cena|Atenção 18\+\s*\(Loterias\))\*\*\s*:\s*(.+)$",
             line.strip(),
             re.I,
         )
@@ -91,6 +103,10 @@ def _resumo_from_body(body: str) -> dict[str, str]:
             out["polemicas"] = v
         elif "polít" in k or "polit" in k:
             out["politica"] = v
+        elif "menor" in k:
+            out["menor_em_cena"] = v
+        elif "18" in k or "atenc" in k:
+            out["atencao_18"] = v
     return out
 
 
@@ -118,6 +134,7 @@ def parse_profiles_markdown(body: str) -> list[dict[str, Any]]:
 
         narr = _subsection(pbody, "Narrativa")
         resumo = _resumo_from_body(pbody)
+        lot18 = _subsection(pbody, "Loterias 18+ (leitura qualitativa)")
         conc = _subsection(pbody, "Concorrência") or _subsection(
             pbody, "Concorrência (bets / loterias / jogos)"
         )
@@ -132,25 +149,28 @@ def parse_profiles_markdown(body: str) -> list[dict[str, Any]]:
             v = (resumo.get(key) or "").strip()
             return v if v else (eixo_txt.strip() or "—")
 
-        profiles.append(
-            {
-                "name": name,
-                "tier": tier,
-                "risco_geral": risco or "—",
-                "resumo_tabela": {
-                    "concorrencia": _rt("concorrencia", conc),
-                    "polemicas": _rt("polemicas", pol),
-                    "politica": _rt("politica", poli),
-                },
-                "handles": handles,
-                "narrativa": narr or "—",
-                "eixos": {
-                    "concorrencia": conc.strip() or "—",
-                    "polemicas": pol.strip() or "—",
-                    "politica": poli.strip() or "—",
-                },
-            }
-        )
+        prof: dict[str, Any] = {
+            "name": name,
+            "tier": tier,
+            "risco_geral": risco or "—",
+            "resumo_tabela": {
+                "concorrencia": _rt("concorrencia", conc),
+                "polemicas": _rt("polemicas", pol),
+                "politica": _rt("politica", poli),
+                "menor_em_cena": (resumo.get("menor_em_cena") or "").strip(),
+                "atencao_18": (resumo.get("atencao_18") or "").strip(),
+            },
+            "handles": handles,
+            "narrativa": narr or "—",
+            "eixos": {
+                "concorrencia": conc.strip() or "—",
+                "polemicas": pol.strip() or "—",
+                "politica": poli.strip() or "—",
+            },
+        }
+        if lot18.strip():
+            prof["loterias_18_plus"] = lot18.strip()
+        profiles.append(prof)
     return profiles
 
 
