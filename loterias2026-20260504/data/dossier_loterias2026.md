@@ -22,8 +22,7 @@ briefing:
     nomes (mai/2026). Eixos verificados em cada perfil; método em **Como foi analisado**.
     "Não encontramos" = não apareceu nas fontes públicas usadas; pode haver dados fora do escopo.
   - '**Demografia e idade da audiência** ficam nos **insights** ligados ao **próprio perfil** (rede +
-    titular do canal). **Não** há acesso a esses números nesta coleta **salvo** se **creator ou agência**
-    os **informarem**.'
+    titular do canal).'
   criterios:
   - 'Concorrência: publi ou parceria com apostas, cassino, loterias concorrentes — inclusive humor
     que gere associação indevida, mesmo sem publi paga.'
@@ -56,8 +55,7 @@ methodology:
       governo/PT/Lula ou oposição/PL/Bolsonaro. Base TSE não foi acessada diretamente nesta coleta —
       verificação via imprensa e declarações públicas indexadas.'
   loterias_18_note: |
-    **Demografia e idade da audiência** constam dos **insights** do próprio perfil; **não** entram neste
-    relatório **sem** dado **fornecido** pelo **creator ou agência**.
+    **Demografia e idade da audiência** constam dos **insights** do próprio perfil (rede + titular do canal).
 
     **Coleta:** bio, amostra de feed (**maio/2026**) e notícias com link; foco em **menor de idade em cena**
     no conteúdo público.
