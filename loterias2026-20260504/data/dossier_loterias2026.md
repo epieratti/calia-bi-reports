@@ -131,7 +131,9 @@ Sem filiação, candidatura ou posicionamento político documentado. **Ano eleit
 
 ### Loterias 18+
 
-**Imprensa** com **menor de idade** em pauta social (vaquinha / mobilização): [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+**Redes (mai/2026):** amostra com **~24** miniaturas do TikTok + trecho do feed do Instagram (capturas internas) — **menor de idade em várias miniaturas** (vários posts), não um caso isolado; inclui séries (ex.: **“ditados populares”**) e rótulos **“BIG PAUL / LITTLE PAUL”**. Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+
+**Imprensa** com **menor de idade** em pauta social (vaquinha / mobilização): [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/).
 
 ## Felipe Hatori
 
