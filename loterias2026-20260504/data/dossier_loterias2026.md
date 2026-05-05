@@ -133,7 +133,7 @@ Sem filiação, candidatura ou posicionamento político documentado. **Ano eleit
 
 ### Loterias 18+
 
-Produto **18+** (jogo). Amostra **mai/2026**: **menor em cena recorrente** no feed; rótulos **“BIG PAUL / LITTLE PAUL”**. **Não** há percentual de seguidores menores de 18 anos neste relatório. Fontes: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/), [**TikTok**](https://www.tiktok.com/@linnykealves).
+Amostra **mai/2026**: **menor em cena recorrente** no feed; rótulos **“BIG PAUL / LITTLE PAUL”**. **Não** há percentual de seguidores menores de 18 anos neste relatório. Fontes: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/), [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ## Felipe Hatori
 
@@ -175,7 +175,7 @@ Sem filiação, candidatura ou posicionamento político documentado. Conteúdo r
 
 ### Loterias 18+
 
-Produto **18+** (jogo). Amostra **mai/2026** (**24–30** thumbs): **sem menor em destaque**; show **18+** ([**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)). [**TikTok**](https://www.tiktok.com/@felipehatori).
+Amostra **mai/2026** (**24–30** thumbs): **sem menor em destaque**; show **18+** ([**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)). [**TikTok**](https://www.tiktok.com/@felipehatori).
 
 ## Julimara
 
@@ -217,4 +217,4 @@ Sem filiação, candidatura ou posicionamento político documentado. Perfil apol
 
 ### Loterias 18+
 
-Produto **18+** (jogo). Amostra **mai/2026** (**18–24** thumbs): turismo/lifestyle, **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment). **Não** confundir com o padrão de **Linnyke** neste eixo.
+Amostra **mai/2026** (**18–24** thumbs): turismo/lifestyle, **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment). **Não** confundir com o padrão de **Linnyke** neste eixo.
