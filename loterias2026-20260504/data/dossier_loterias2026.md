@@ -66,21 +66,20 @@ methodology:
     O que fizemos foi **revisar o material público disponível**: **bio**, **trecho do feed** (capturas de
     **maio/2026**) e **notícias com link**. Para campanha **18+**, o que mais pesa na prática é **ver menor de
     idade em cena** no conteúdo (vídeo, capa, série fixa), e não **inferência demográfica** sem base nos dados.
-    A **tabela resumo** traz as colunas **Menor em cena** e **Atenção 18+**; em cada perfil há um texto **Loterias 18+** — curto
-    quando o recorte é **sem alerta relevante**, mais longo quando vale alinhar **jurídico** e **criação** antes de aprovar
-    peça.
+    A **tabela resumo** traz as colunas **Menor em cena** e **Atenção 18+**; em cada perfil há um texto **Loterias 18+** — mais
+    **curto** quando o recorte é **sem alerta relevante**, mais **extenso** quando há **mais elementos** a registrar para o cliente.
 executive_summary:
   tagline: 'Brand safety — três creators (mai/2026). Detalhe em **Perfis** e **tabela resumo**.'
   blocks:
   - title: Concorrência (bets / loterias)
     items:
     - Nenhum dos três tem publi ou parceria com aposta, cassino ou loteria concorrente nas fontes
-      consultadas. Recomenda-se confirmar no contrato se há parcerias ativas fora do escopo público.
+      consultadas. **Parcerias** eventualmente contratuais **fora** do que está público **não** foram objeto desta coleta.
   - title: Polêmicas
     items:
     - "Nas fontes desta coleta, **não** há episódio de risco de imagem **documentado** para os três perfis.
-      Em **Felipe Hatori**, recomenda-se **monitoramento** do coletivo **Os Japas**: eventual polêmica envolvendo
-      outro integrante pode gerar **associação indireta** ao nome do grupo."
+      **Felipe Hatori** integra o coletivo **Os Japas**; polêmica envolvendo **outro integrante** pode aparecer em
+      **matérias** com **associação ao nome do grupo**."
   - title: Política
     items:
     - Sem filiação, candidatura ou proximidade política documentada nos três perfis. Favorável
@@ -105,8 +104,8 @@ consolidated_narrative:
       **Loterias 18+** está nas colunas novas e no texto **Loterias 18+** de cada criador — três estilos bem
       diferentes: Linnyke na massa, Felipe no humor urbano e Julimara no nicho de viagem em Minas."
     - "Para **18+**, a leitura geral está na **Leitura rápida** (os quatro quadros), no bloco **Jogo 18+ e
-      leitura de público** e na **tabela resumo**. O ponto que **exige alinhamento prévio** com **jurídico** e **criação** é o
-      **feed do Linnyke**, com **menores de idade em cena de forma recorrente**; **Felipe** e **Julimara** **não**
+      leitura de público** e na **tabela resumo**. O **destaque** neste eixo é o **feed público do Linnyke**, com
+      **menores de idade em cena de forma recorrente**; **Felipe** e **Julimara** **não**
       reproduzem esse padrão no material analisado em maio/2026."
     - "Números são retrato da data da coleta."
 ---
@@ -136,15 +135,15 @@ Comediante com 1,9 M no TikTok e 1,8 M no Instagram (6,65% de engajamento). Entr
 - **Polêmicas:** Sem episódio de risco. Destaque positivo: ação solidária de 2024 (R$ 400 mil).
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 - **Menor em cena (amostra pública):** **Recorrente** — feed TikTok/Instagram (capturas internas, **maio/2026**): **menores de idade** em séries (ex.: “ditados populares”, mesmo figurino do personagem); arte de conteúdo **“BIG PAUL / LITTLE PAUL”**. **Não** é varredura de todo o histórico do perfil. Matérias em que **menor de idade** é tema de pauta social: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Avó no conteúdo: [**GCMAIS — Vovó Lu**](https://gcmais.com.br/entretenimento/2023/01/08/arrume-se-comigo-avo-de-humorista-viraliza-com-dica-de-look/). Perfil: [**TikTok @linnykealves**](https://www.tiktok.com/@linnykealves).
-- **Atenção 18+ (Loterias):** **Elevada** — Loterias são jogo para **maiores de 18**; como há **menor de idade em cena com frequência** no que está público do perfil, qualquer peça com a marca precisa passar por **jurídico** e **criação** antes de roteirizar **menor de idade**, figurino claramente voltado a **público infantil** ou ambiente doméstico com **menor de idade** ligado a **jogo**.
+- **Atenção 18+ (Loterias):** **Elevada** — **Loterias** referem-se a **produto 18+** (jogo); na **amostra pública** do perfil há **menor de idade em cena com frequência**. **Registro** da **sobreposição** entre esse **recorte visual** e a **classificação etária do produto**; **deliberação** sobre uso em campanha **não** é objeto deste relatório.
 
 ### Loterias 18+ (leitura qualitativa)
 
 - Foi pedido olhar **Loterias 18+** porque o produto é **jogo 18+**; critérios no início do dossiê e método em **Como foi analisado**.
 - **Não** há neste relatório **percentual de seguidores menores de 18 anos** — em geral isso **só aparece** nas ferramentas fechadas da rede, e ainda assim costuma ser dado frágil para **audiência em idade inferior a 18 anos**.
-- O que orienta a decisão é **menor de idade aparecendo no conteúdo** (feed, capas, série), **não** a curva demográfica em %.
+- **Para este relatório**, o indicador privilegiado é **menor de idade no conteúdo público** (feed, capas, série), e **não** a curva demográfica de seguidores em %.
 - Na amostra de **maio/2026** e nas matérias linkadas acima, **menor de idade em cena é recorrente**; no próprio canal aparecem rótulos como **“BIG PAUL / LITTLE PAUL”**. **Não** foi possível cruzar identidade civil ou parentesco na web aberta.
-- Se a campanha envolver **menor de idade**, **figurino claramente voltado a público infantil** ou **ambiente doméstico com menor de idade** em contexto de **jogo**, o tema deve ir para **jurídico** e **criação** antes de aprovar roteiro — **inclusive** na ausência de menção a apostas.
+- **Sobreposição factual** entre (i) **menor de idade em cena de forma recorrente** no material público citado e (ii) **produto classificado como jogo 18+** — **registro** para **uso pela equipe da campanha** no cliente; este relatório **não** substitui **deliberação interna** da contratante.
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -156,7 +155,7 @@ Sem episódio de risco. A arrecadação de R$ 400 mil para **beneficiário menor
 
 ### Política e pautas sensíveis
 
-Sem filiação, candidatura ou posicionamento político documentado. Monitoramento recomendado no período eleitoral de 2026.
+Sem filiação, candidatura ou posicionamento político documentado. **Ano eleitoral de 2026:** as fontes desta coleta **não** acrescentam, até a data do recorte, **posicionamento partidário** explícito nos perfis.
 
 
 ## Felipe Hatori
@@ -181,17 +180,16 @@ Comediante de São Paulo, roteirista. Stand-up solo **"Entra no Clima"**. Nas re
 ### Resumo tabela
 
 - **Concorrência:** Sem publi de apostas ou loteria concorrente. Portfólio inclui bancos e fintechs; nenhuma casa de apostas.
-- **Polêmicas:** Sem episódio de risco. **Atenção:** monitorar integrantes dos **Os Japas** — polêmica de colega pode gerar associação indireta.
+- **Polêmicas:** Sem episódio de risco. **Contexto:** integra o coletivo **Os Japas**; cobertura sobre **outros integrantes** pode **associar o nome do grupo** em matérias.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
 - **Menor em cena (amostra pública):** **Não observado** — grade TikTok (capturas internas, **24–30** thumbnails, **maio/2026**): humor adulto urbano (SP, síndico, vizinho, “morar sozinho”); **sem menor de idade em destaque** nas caps. Show listado como **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). Perfil: [**TikTok @felipehatori**](https://www.tiktok.com/@felipehatori).
-- **Atenção 18+ (Loterias):** **Baixa** neste eixo — humor **adulto** e amostra **sem menor em cena**; os outros pontos do dossiê (por exemplo **Os Japas**) seguem valendo.
+- **Atenção 18+ (Loterias):** **Baixa** neste eixo — humor **adulto** na amostra e **sem menor de idade em destaque** no recorte visual; **observações adicionais** do perfil constam nos eixos **Concorrência**, **Polêmicas** e **Política**.
 
 ### Loterias 18+ (leitura qualitativa)
 
 - Mesmo critério **18+** dos outros nomes; detalhe do pedido em **Pedido e critérios** e método em **Como foi analisado**.
 - Na mesma linha dos demais perfis: a leitura considera o **conteúdo público do feed** (amostra **maio/2026**), e não a distribuição etária da audiência.
-- Na amostra de thumbnails do TikTok, **não há menor de idade em destaque**; agenda cita show **18+** ([**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)).
-- Neste eixo, o recorte analisado é **favorável** ao requisito **18+**; os demais tópicos do dossiê (**concorrência**, **coletivo Os Japas** e **política**) permanecem como foco de monitoramento.
+- Na amostra de thumbnails do TikTok, **não há menor de idade em destaque**; agenda cita show **18+** ([**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)). Os **demais eixos** do dossiê (**concorrência**, **coletivo Os Japas** e **política**) **concentram** as observações **adicionais** deste perfil.
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -199,7 +197,7 @@ Comediante de São Paulo, roteirista. Stand-up solo **"Entra no Clima"**. Nas re
 
 ### Polêmicas e situações delicadas
 
-Sem polêmica nas fontes. **Atenção:** como integrante dos **Os Japas**, polêmica de colega pode gerar associação indireta — monitorar durante a vigência do contrato.
+Sem polêmica nas fontes. **Contexto:** como integrante dos **Os Japas**, matérias sobre **outros integrantes** podem **citar o coletivo** e **aproximar o nome** em **cobertura** de terceiros.
 
 ### Política e pautas sensíveis
 
@@ -238,7 +236,7 @@ Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lif
 - Mesmo eixo **18+** dos demais; critérios no início do dossiê e método em **Como foi analisado**.
 - Como nos outros perfis, a leitura é pelo **conteúdo público** (amostra **maio/2026**), não por percentual de **seguidores menores de 18 anos**.
 - O feed mistura **turismo, natureza e vida regional** em Minas; nas caps que abrimos, **sem menor em evidência** ([**TikTok @julimaranasciment**](https://www.tiktok.com/@julimaranasciment)).
-- **Não** se observa o **padrão recorrente de menor em cena** identificado no material público de **Linnyke**. Para ações presenciais, recomenda-se observar as **exigências de conteúdo 18+** (roteiro, locação, público).
+- **Não** se observa o **padrão recorrente de menor em cena** identificado no material público de **Linnyke**. **Eventos com público presencial** fogem ao recorte de **feed** acima; **controle de acesso por idade** no local, quando aplicável, **não** foi levantado nesta coleta.
 
 ### Concorrência (bets / loterias / jogos)
 
