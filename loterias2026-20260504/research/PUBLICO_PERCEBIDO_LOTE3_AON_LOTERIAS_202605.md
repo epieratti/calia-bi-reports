@@ -6,6 +6,8 @@
 
 **Status:** material para **integração futura** no HTML — **não** foi incorporado ao dossiê publicado nesta etapa.
 
+**Última atualização desta nota:** rodada extra de buscas (`nome` + `infantil` / `crianças` / `público infantil` e variações) + novos links (GCMAIS, Guia Floripa, Manguetown).
+
 ---
 
 ## Metodologia e limites (texto canônico para o cliente)
@@ -34,7 +36,18 @@
 - Mobilização de arrecadação para família/criança (contexto e valores): [Jornal do Rap](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/)
 - Matéria local (vaquinha / criança que viralizou): [Polêmica Paraíba](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/)
 - Agenda cultural / stand-up (Natal): [G1](https://g1.globo.com/rn/rio-grande-do-norte/o-que-fazer-em-natal-e-regiao/noticia/2025/05/08/chico-cesar-roberta-miranda-e-linnyke-alves-veja-agenda-cultural-do-fim-de-semana-em-natal.ghtml)
+- **“Vovó Lu”** (avó) em formato “arrume-se comigo” no perfil do artista — matéria descreve **vídeos no @linnykealves** e **pedido de perfil só da vovó** nos comentários: [GCMAIS](https://gcmais.com.br/entretenimento/2023/01/08/arrume-se-comigo-avo-de-humorista-viraliza-com-dica-de-look/) (fato: **conteúdo multigeracional**; inferência: **não** prova “% infantil”, mas explica **percepção de público amplo**.)
+- Página do show **“Linnykinho é meu nome”** (stand-up): [Manguetown Comedy](https://manguetowncomedy.com.br/linnykinho-e-meu-nome-show-de-stand-up-comedy-de-linnyke-alves/) (fato: **marca de palco**; a página do clube não substitui classificação oficial do ingresso em todas as datas.)
+- Biografia agregadora (TikTok, estilo “entrevistas”): [Famous Birthdays — PT](https://pt.famousbirthdays.com/people/linnyke-alves.html)
 - Perfil / biografia social (primário): [Instagram — @linnykealves](https://www.instagram.com/linnykealves/)
+
+### Rodada extra — buscas na web (queries)
+
+| Query (exemplos) | Resultado | Nota |
+|------------------|-----------|------|
+| `"Linnyke Alves" infantil` / `crianças` / `público infantil` | Volta sobretudo **ação social com criança** (vaquinha), não “canal kids”. | Útil para dizer: **sem flag** de “conteúdo infantil” na imprensa aberta desta rodada. |
+| `Linnyke Alves público seguidores idade` | Famous Birthdays + matérias de agenda. | **Não** entrega % etária. |
+| `Linnyke` + `avó` / `Vovó Lu` / `família` | **GCMAIS** (link acima). | Embasa **multigeracional**. |
 
 ---
 
@@ -55,7 +68,15 @@
 - Ficha e descrição de show / trajetória: [Baobá Produções — Felipe Hatori](https://www.baobashows.com.br/felipehatori)
 - Reportagem sobre dupla carreira / palco: [Terra — Visão do Corre](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html)
 - Reel de alto alcance (amostra de formato): [Instagram — reel DQ5VcFlCXfP](https://www.instagram.com/p/DQ5VcFlCXfP/)
+- **Show em Florianópolis** com Felipe Hatori — texto do guia: **“classificação do evento é de 18 anos”**: [Guia Floripa](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club) (fato: **evento listado como 18+** nesta data/local; **não** generaliza todos os shows.)
 - Perfil: [Instagram — @felipehatori](https://www.instagram.com/felipehatori/)
+
+### Rodada extra — buscas na web (queries)
+
+| Query (exemplos) | Resultado | Nota |
+|------------------|-----------|------|
+| `"Felipe Hatori" infantil` / `crianças` / `público infantil` | Sem achados relevantes além de **fichas** (Baobá, Terra, agendas). | Reforça **ausência de pauta “kids”** na web aberta. |
+| `"Felipe Hatori" criança` | Baobá cita **memórias de infância no palco** (roteiro adulto). | [Baobá](https://www.baobashows.com.br/felipehatori) |
 
 ---
 
@@ -78,6 +99,24 @@
 - Hub de links: [Linktree — Julimara](https://linktr.ee/Julimaranascimento)
 - Matéria de turismo MG (ecossistema de criadores): [Turismo de Minas — #VemPraBH](https://turismodeminas.com.br/noticias/vemprabh/)
 - Perfil: [Instagram — @julimarasn](https://www.instagram.com/julimarasn/)
+
+### Rodada extra — buscas na web (queries)
+
+| Query (exemplos) | Resultado | Nota |
+|------------------|-----------|------|
+| `Julimara Nascimento` + `infantil` / `crianças` | Sem matéria ligando o perfil a **conteúdo infantil** nos snippets. | Volta **turismo / lugares** (Linktree, reel, Turismo de Minas). |
+| `"julimarasn"` turismo | Reel + Linktree + agregadores. | Confirma **nicho**. |
+
+---
+
+## Queries sugeridas (próximas rodadas)
+
+Para aprofundar **sem** prometer demografia:
+
+- `"[Nome]"` + `classificação` / `16 anos` / `18 anos` / `ingresso` / `comedy club`
+- `"[Nome]"` + `entrevista` + `público` / `TikTok` / `viral`
+- `"[Nome]"` + `escola` / `crianças` / `infantil` / `kids` / `family friendly`
+- `"@[handle]"` + `notícia` / `polêmica` (para separar **ação social com criança** de **formato kids**)
 
 ---
 
