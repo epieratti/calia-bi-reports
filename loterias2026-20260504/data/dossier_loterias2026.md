@@ -19,10 +19,9 @@ briefing:
   perfis_institucionais: []
   intro_paragraphs:
   - Levantamento de **brand safety** para o squad Always ON Loterias 2026 — três novos
-    nomes (mai/2026). Eixos verificados em cada perfil; método em **Como foi analisado**.
-    "Não encontramos" = não apareceu nas fontes públicas usadas; pode haver dados fora do escopo.
-  - '**Demografia e idade da audiência** ficam nos **insights** ligados ao **próprio perfil** (rede +
-    titular do canal).'
+    nomes (mai/2026). Eixos por perfil e método em **Como foi analisado**.
+    "**Não encontramos**" = ausência nas **fontes públicas** desta coleta; pode haver informação fora do escopo.
+  - '**Demografia e faixa etária da audiência** constam dos **insights** do próprio canal (rede + titular).'
   criterios:
   - 'Concorrência: publi ou parceria com apostas, cassino, loterias concorrentes — inclusive humor
     que gere associação indevida, mesmo sem publi paga.'
@@ -54,10 +53,9 @@ methodology:
       governo/PT/Lula ou oposição/PL/Bolsonaro. Base TSE não foi acessada diretamente nesta coleta —
       verificação via imprensa e declarações públicas indexadas.'
   loterias_18_note: |
-    **Demografia e idade da audiência** constam dos **insights** do próprio perfil (rede + titular do canal).
+    **Coleta (mai/2026):** bio, amostra de feed e notícias com **link**; foco em **menor de idade em cena** no conteúdo público.
 
-    **Coleta:** bio, amostra de feed (**maio/2026**) e notícias com link; foco em **menor de idade em cena**
-    no conteúdo público.
+    **Demografia / idade de audiência:** métricas proprietárias do canal (**insights**); **não** entram neste relatório, **exceto** quando constam em **fontes públicas** citadas no corpo.
 executive_summary:
   tagline: 'Brand safety — três creators (mai/2026). Detalhe em **Perfis** e **tabela resumo**.'
   blocks:
@@ -71,12 +69,11 @@ executive_summary:
       **outros integrantes** podem citar o **nome do grupo**.
   - title: Política
     items:
-    - Sem filiação, candidatura ou proximidade política documentada nos três perfis. Favorável
-      para campanha de empresa pública em ano eleitoral.
+    - "**Sem** filiação, candidatura ou posicionamento político **documentado** nos três perfis. **Contexto:** ano
+      eleitoral de 2026; achados limitados às **fontes públicas** desta coleta."
   - title: Loterias 18+
     items:
-    - "**Linnyke:** **menor em cena recorrente** na amostra de feed (**mai/2026**). **Felipe** e **Julimara:** **sem**
-      esse padrão na mesma amostra."
+    - "**Loterias 18+ (amostra visual, mai/2026):** **Linnyke** — **menor em cena recorrente**. **Felipe** e **Julimara** — **sem** esse padrão na mesma amostra."
 consolidated_narrative:
   title: Síntese do lote
   subtitle: __04/05/2026__ — **humor**, **lifestyle** e **entretenimento regional**.
@@ -84,12 +81,10 @@ consolidated_narrative:
   blocks:
   - title: Leitura para Caixa
     items:
-    - "**Concorrência**, **Polêmicas** e **Política:** **baixo risco** nos três na tabela. **Loterias 18+:** **Linnyke**
-      **elevada**; **Felipe** e **Julimara** **baixa** / **baixa a moderada** — Linnyke (massa), Felipe (humor urbano),
+    - "**Concorrência**, **Polêmicas** e **Política:** **baixo risco** nos três perfis (tabela). **Loterias 18+:** **Linnyke**
+      **elevada**; **Felipe** **baixa**; **Julimara** **baixa a moderada** — Linnyke (massa), Felipe (humor urbano),
       Julimara (viagem/MG)."
-    - "**18+:** **Linnyke** concentra **menor em cena recorrente** no feed público; **Felipe** e **Julimara** **não**
-      repetem o padrão na amostra (**mai/2026**)."
-    - "Números são retrato da data da coleta."
+    - "Métricas de alcance e engajamento na seção **Métricas nas redes** — **corte 04/05/2026**."
 ---
 
 ## Linnyke Alves
@@ -98,7 +93,7 @@ consolidated_narrative:
 
 ### Síntese de risco
 
-Moderado — **Concorrência**, **Polêmicas** e **Política** seguem **baixas** nas fontes; a coluna **Loterias 18+** está **elevada** (menor em cena recorrente na amostra **mai/2026**).
+Moderado — três primeiros eixos **baixos** nas fontes; **Loterias 18+** **elevada** (menor em cena recorrente na amostra **mai/2026**).
 
 ### Handles
 
@@ -116,7 +111,7 @@ Comediante com 1,9 M no TikTok e 1,8 M no Instagram (6,65% de engajamento). Entr
 - **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. "Sorte" aparece no humor organicamente, sem CTA para operador.
 - **Polêmicas:** Sem episódio de risco. Destaque positivo: ação solidária de 2024 (R$ 400 mil).
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Elevada** — amostra **mai/2026** (**~24** thumbnails do TikTok + trecho do feed do **Instagram**, capturas internas): **menor em cena em vários posts** (não um caso isolado); séries (ex.: **“ditados populares”**) e arte **“BIG PAUL / LITTLE PAUL”**. Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+- **Loterias 18+:** **Elevada** — **mai/2026**, **~24** thumbnails TikTok + trecho do feed Instagram (capturas internas): **menor em cena em vários posts**; séries (ex.: **“ditados populares”**), arte **“BIG PAUL / LITTLE PAUL”**. Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -132,7 +127,7 @@ Sem filiação, candidatura ou posicionamento político documentado. **Ano eleit
 
 ### Loterias 18+
 
-Revisão **mai/2026** (**~24** thumbnails do TikTok + trecho do feed do **Instagram**, capturas internas): **menor de idade em cena em vários posts** (caps distintas), não um único vídeo — inclui séries (ex.: **“ditados populares”**) e rótulos **“BIG PAUL / LITTLE PAUL”**. **Imprensa** com menor em pauta: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+Confere a linha **Loterias 18+** da tabela. **Imprensa** com menor em pauta social: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ## Felipe Hatori
 
@@ -158,7 +153,7 @@ Comediante de São Paulo, roteirista. Stand-up solo **"Entra no Clima"**. Nas re
 - **Concorrência:** Sem publi de apostas ou loteria concorrente. Portfólio inclui bancos e fintechs; nenhuma casa de apostas.
 - **Polêmicas:** Sem episódio de risco. **Contexto:** integra **Os Japas**; matérias sobre **outros integrantes** podem citar o grupo.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Baixa** — amostra **mai/2026** (**24–30** thumbs): humor adulto urbano, **sem menor em destaque** nas caps. Show **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). [**TikTok**](https://www.tiktok.com/@felipehatori).
+- **Loterias 18+:** **Baixa** — **mai/2026**, **24–30** thumbnails TikTok (capturas internas): humor adulto urbano, **sem menor em destaque** nas caps. Show **18+**: [**Guia Floripa**](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club). [**TikTok**](https://www.tiktok.com/@felipehatori).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -200,7 +195,7 @@ Criadora do Triângulo Mineiro (MG), conhecida como "Ju". Turismo, trilhas e lif
 - **Concorrência:** Sem publi de apostas ou loteria concorrente.
 - **Polêmicas:** Sem episódio de risco. Perfil positivo e aspiracional.
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Baixa a moderada** — turismo/lifestyle; amostra **mai/2026** (**18–24** thumbs) **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment).
+- **Loterias 18+:** **Baixa a moderada** — turismo/lifestyle; **mai/2026**, **18–24** thumbnails TikTok (capturas internas), **sem menor em destaque**. [**TikTok**](https://www.tiktok.com/@julimaranasciment).
 
 ### Concorrência (bets / loterias / jogos)
 
