@@ -74,10 +74,21 @@ executive_summary:
     items:
     - Nenhum dos três tem publi ou parceria com aposta, cassino ou loteria concorrente nas fontes
       consultadas. Recomenda-se confirmar no contrato se há parcerias ativas fora do escopo público.
+  - title: Polêmicas
+    items:
+    - Sem episódio de risco de imagem documentado nas fontes consultadas para os três perfis.
+      Em **Felipe Hatori**, monitorar **Os Japas** — polêmica de colega pode gerar **associação indireta**.
   - title: Política
     items:
     - Sem filiação, candidatura ou proximidade política documentada nos três perfis. Favorável
       para campanha de empresa pública em ano eleitoral.
+  - title: Loterias 18+ (jogo 18+)
+    items:
+    - Leitura **qualitativa** da superfície pública (amostra de feed **mai/2026** + matérias com link);
+      **não** há neste dossiê **percentual de crianças entre seguidores**.
+    - "**Linnyke:** atenção **elevada** neste eixo — **menores recorrentes** na amostra pública do feed e em
+      matérias; **Felipe** e **Julimara:** sinal **baixo** / **baixo a moderado** na amostra visual. Detalhe
+      em **Loterias 18+ (leitura qualitativa)** e na **tabela resumo**."
 consolidated_narrative:
   title: Síntese do lote
   subtitle: __04/05/2026__ — **humor**, **lifestyle** e **entretenimento regional**.
@@ -85,13 +96,13 @@ consolidated_narrative:
   blocks:
   - title: Leitura para Caixa
     items:
-    - "Os três têm **baixo risco** nos eixos **Concorrência · Polêmicas · Política** da tabela. Coberturas
+    - "Os três têm **baixo risco** nos eixos **Concorrência · Polêmicas · Política** da tabela; o quarto eixo
+      (**Loterias 18+**) está na **tabela resumo** e na subseção **Loterias 18+** de cada perfil. Coberturas
       complementares — sem sobreposição de público entre Linnyke (massa), Hatori (urbano qualificado) e
       Julimara (nicho regional)."
-    - "**Loterias 18+** entrou como **quarto critério** em **Pedido e critérios**; ver **“Jogo 18+ e leitura
-      de público”** (Como foi analisado), a **tabela resumo** e a subseção **Loterias 18+** em **cada** perfil.
-      **Linnyke** concentra o desdobramento por **menores recorrentes no feed público**; **Felipe** e **Julimara**
-      seguem **breves** neste eixo na amostra visual (mai/2026)."
+    - "**Loterias 18+:** ver **Leitura rápida** (quatro cartões), **“Jogo 18+ e leitura de público”** (Como foi
+      analisado) e a **tabela resumo**. **Linnyke** concentra o desdobramento por **menores recorrentes no feed
+      público**; **Felipe** e **Julimara** seguem **breves** neste eixo na amostra visual (mai/2026)."
     - "Números são retrato da data da coleta."
 ---
 
