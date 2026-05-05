@@ -85,10 +85,12 @@ consolidated_narrative:
   blocks:
   - title: Leitura para Caixa
     items:
-    - "**Concorrência**, **Polêmicas** e **Política:** **baixo risco** nos três perfis (tabela). **Loterias 18+:** **Linnyke**
-      **elevada**; **Felipe** **baixa**; **Julimara** **baixa a moderada** — Linnyke (massa), Felipe (humor urbano),
-      Julimara (viagem/MG)."
-    - "Métricas de alcance e engajamento na seção **Métricas nas redes** — **corte 04/05/2026**."
+    - "Nos eixos **Concorrência**, **Polêmicas** e **Política**, os três criadores aparecem com **baixo risco** nas
+      **fontes públicas** desta coleta. No eixo **Loterias 18+** (amostra visual **mai/2026**), **Linnyke** concentra o
+      achado mais sensível (**menor de idade recorrente nas miniaturas** do feed); **Felipe** e **Julimara** **não**
+      repetem esse padrão na mesma amostra."
+    - "**Estilos:** humor de massa (**Linnyke**), humor urbano (**Felipe**), turismo e lifestyle regional (**Julimara**).
+      **Alcance e engajamento** estão em **Métricas nas redes**, com **corte em 04/05/2026**."
 ---
 
 ## Linnyke Alves
