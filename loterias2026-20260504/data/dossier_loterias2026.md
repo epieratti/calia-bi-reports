@@ -29,8 +29,7 @@ briefing:
   - 'Polêmicas: falas ou episódios com risco de imagem documentado.'
   - 'Política: filiação, candidatura ou posicionamento político recorrente e explícito (PT, PL ou
     outros partidos), com prova. Detalhe em **Política e eleições** (Como foi analisado).'
-  - 'Loterias 18+ (jogo 18+): **menor de idade** em vídeo, capa ou série no **material público** do perfil.
-    Síntese na coluna **Loterias 18+** da tabela e no **item 4** de cada perfil.'
+  - 'Loterias 18+ (jogo 18+): **menor de idade** em vídeo, capa ou série no **material público** do perfil.'
   redes:
   - Instagram
   - TikTok
@@ -77,7 +76,7 @@ executive_summary:
   - title: Loterias 18+ (jogo 18+)
     items:
     - "**Linnyke:** **menor em cena recorrente** na amostra de feed (**mai/2026**). **Felipe** e **Julimara:** **sem**
-      esse padrão na mesma amostra. Detalhe na **tabela** (coluna **Loterias 18+**) e no **item 4** de cada perfil."
+      esse padrão na mesma amostra."
 consolidated_narrative:
   title: Síntese do lote
   subtitle: __04/05/2026__ — **humor**, **lifestyle** e **entretenimento regional**.
@@ -85,8 +84,8 @@ consolidated_narrative:
   blocks:
   - title: Leitura para Caixa
     items:
-    - "Na tabela, os três com **baixo risco** em **Concorrência**, **Polêmicas** e **Política**. **Loterias 18+** na
-      coluna homônima e no **item 4** de cada perfil — Linnyke (massa), Felipe (humor urbano), Julimara (viagem/MG)."
+    - "Na tabela, os três com **baixo risco** em **Concorrência**, **Polêmicas** e **Política**; **Loterias 18+** na
+      coluna homônima — Linnyke (massa), Felipe (humor urbano), Julimara (viagem/MG)."
     - "**18+:** **Linnyke** concentra **menor em cena recorrente** no feed público; **Felipe** e **Julimara** **não**
       repetem o padrão na amostra (**mai/2026**)."
     - "Números são retrato da data da coleta."
