@@ -29,7 +29,7 @@ briefing:
   - 'Polêmicas: falas ou episódios com risco de imagem documentado.'
   - 'Política: filiação, candidatura ou posicionamento político recorrente e explícito (PT, PL ou
     outros partidos), com prova. Detalhe em **Política e eleições** (Como foi analisado).'
-  - 'Loterias 18+ (jogo 18+): **menor de idade** em vídeo, capa ou série no **material público** do perfil.'
+  - 'Loterias 18+: **menor de idade** em vídeo, capa ou série no **material público** do perfil.'
   redes:
   - Instagram
   - TikTok
@@ -73,7 +73,7 @@ executive_summary:
     items:
     - Sem filiação, candidatura ou proximidade política documentada nos três perfis. Favorável
       para campanha de empresa pública em ano eleitoral.
-  - title: Loterias 18+ (jogo 18+)
+  - title: Loterias 18+
     items:
     - "**Linnyke:** **menor em cena recorrente** na amostra de feed (**mai/2026**). **Felipe** e **Julimara:** **sem**
       esse padrão na mesma amostra."
