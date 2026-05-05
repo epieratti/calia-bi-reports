@@ -115,7 +115,7 @@ Comediante com 1,9 M no TikTok e 1,8 M no Instagram (6,65% de engajamento). Entr
 - **Concorrência:** Sem publi de apostas, bet ou loteria concorrente. "Sorte" aparece no humor organicamente, sem CTA para operador.
 - **Polêmicas:** Sem episódio de risco. Destaque positivo: ação solidária de 2024 (R$ 400 mil).
 - **Política:** Sem filiação, candidatura ou posicionamento político documentado.
-- **Loterias 18+:** **Elevada** — amostra **mai/2026** (**~24** thumbnails do TikTok + trecho do feed do **Instagram**, capturas internas): **menor em cena em vários posts** (não um caso isolado); séries (ex.: **“ditados populares”**) e arte **“BIG PAUL / LITTLE PAUL”**. **Não** é varredura do histórico completo do perfil. Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+- **Loterias 18+:** **Elevada** — amostra **mai/2026** (**~24** thumbnails do TikTok + trecho do feed do **Instagram**, capturas internas): **menor em cena em vários posts** (não um caso isolado); séries (ex.: **“ditados populares”**) e arte **“BIG PAUL / LITTLE PAUL”**. Matérias: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ### Concorrência (bets / loterias / jogos)
 
@@ -131,7 +131,7 @@ Sem filiação, candidatura ou posicionamento político documentado. **Ano eleit
 
 ### Loterias 18+
 
-Revisão **mai/2026** (**~24** thumbnails do TikTok + trecho do feed do **Instagram**, capturas internas): **menor de idade em cena em vários posts** (caps distintas), não um único vídeo — inclui séries (ex.: **“ditados populares”**) e rótulos **“BIG PAUL / LITTLE PAUL”**. **Não** cobre 100% do histórico do canal. **Imprensa** com menor em pauta: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
+Revisão **mai/2026** (**~24** thumbnails do TikTok + trecho do feed do **Instagram**, capturas internas): **menor de idade em cena em vários posts** (caps distintas), não um único vídeo — inclui séries (ex.: **“ditados populares”**) e rótulos **“BIG PAUL / LITTLE PAUL”**. **Imprensa** com menor em pauta: [**Jornal do Rap**](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [**Polêmica Paraíba**](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/). Perfil: [**TikTok**](https://www.tiktok.com/@linnykealves).
 
 ## Felipe Hatori
 
