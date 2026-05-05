@@ -6,7 +6,7 @@
 
 **Status:** material para **integração futura** no HTML — **não** foi incorporado ao dossiê publicado nesta etapa.
 
-**Última atualização desta nota:** rodada extra de buscas (`nome` + `infantil` / `crianças` / `público infantil` e variações) + novos links (GCMAIS, Guia Floripa, Manguetown).
+**Última atualização desta nota:** rodada extra de buscas + **consolidação 18+** + observação de **feed com menores** (Linnyke).
 
 ---
 
@@ -14,7 +14,41 @@
 
 - **Demografia por idade (incluindo “% infantil”)** não foi estimada: **sem acesso** aos **insights proprietários** dos perfis (compartilhados pelo creator/agência) **não há** como reproduzir o que só a plataforma vê agregado — e, quando existe, o recorte de **“infantil”** costuma ser **pouco confiável** (idade mínima nas redes, consumo por **conta/dispositivo de adulto**, etc.).
 - Esta rodada é **leitura qualitativa**: **tom** do conteúdo, **temas** recorrentes, **formato** (esquete, stand-up, vlog, entrevista de rua), **marcas** e **ângulo** das matérias — para **sinalizar aderência** ao tema Loterias, **não** para cravar faixa etária.
-- **Amostra:** matérias e páginas listadas abaixo + perfis citados no dossiê (`@linnykealves`, `@felipehatori`, `@julimarasn`, TikTok/YouTube conforme fonte).
+- **Amostra:** matérias e páginas listadas abaixo + perfis citados no dossiê (`@linnykealves`, `@felipehatori`, `@julimarasn`, TikTok/YouTube conforme fonte) + **observação visual do feed** quando indicada (capturas de tela internas — **não** são URL de post).
+
+---
+
+## Consolidação — faixa etária / público e **Loterias (jogo 18+)**
+
+**Por que o tema importa:** **Loterias envolvem jogo** com **restrição de idade (18+)**. A discussão com o cliente não é só “% de criança no público” (que **não** temos sem dados proprietários), mas **risco de percepção e de compliance**: **menores em evidência no conteúdo público** podem ser lidos como **aproximação indevida** do universo de jogo — **mesmo** sem publi de bet.
+
+**O que a pesquisa entrega:** **leitura qualitativa** (formato, presença de menor, tom, matérias) + **links** onde existirem. **O que não entrega:** **demografia** (% por idade, “majoritariamente infantil”).
+
+| Creator | Demografia (seguidores) | Conteúdo público vs. 18+ | Nível de atenção para Loterias |
+|---------|-------------------------|---------------------------|--------------------------------|
+| **Linnyke Alves** | **Não** estimável aqui | **Alto** uso de **menores no feed** (séries com criança, “ditados”, duplo visual com criança; arte **“LINNYKE BIG PAUL LITTLE PAUL”** no próprio conteúdo — **apelidos de roteiro**, sem nome civil verificado) + pautas sociais com **Paulo** (matérias) + **Vovó Lu** (multigeracional) | **Elevado** — subir para **jurídico/compliance** + **direção de peça** (uso de menor em campanha 18+) |
+| **Felipe Hatori** | **Não** estimável aqui | **Humor adulto** (stand-up, marcas adultas no portfólio); evento listado **18+** em amostra (Floripa) | **Baixo** neste eixo — foco do dossiê continua **outros riscos** (colegas de grupo, etc.) |
+| **Julimara** | **Não** estimável aqui | **Turismo / lifestyle**; sem achado de “canal kids”; pode haver **família** no público de viagem (**inferência**) | **Baixo a moderado** — temática **aspiracional** alinha com lazer; **não** o mesmo perfil de risco que Linnyke neste ponto |
+
+### Linnyke — detalhe (fontes + observação)
+
+1. **Imprensa (criança como pauta social, não “canal infantil”):** vaquinha / **Paulo** — [Jornal do Rap](https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/), [Polêmica Paraíba](https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/).
+2. **Multigeracional (avó no conteúdo):** [GCMAIS — Vovó Lu](https://gcmais.com.br/entretenimento/2023/01/08/arrume-se-comigo-avo-de-humorista-viraliza-com-dica-de-look/).
+3. **Palco / marca “Linnykinho”:** [Manguetown](https://manguetowncomedy.com.br/linnykinho-e-meu-nome-show-de-stand-up-comedy-de-linnyke-alves/).
+4. **Feed TikTok/Instagram (amostra visual, maio/2026):** capturas de tela da equipe mostram **grande volume de vídeos com crianças** (incluindo **dois meninos recorrentes** e série tipo **“Ditados populares”**). **Identidade civil das crianças** e **grau de parentesco** **não** foram confirmados na web aberta; no próprio feed aparece texto **“BIG PAUL / LITTLE PAUL”** como **rótulo de conteúdo**. Para o dossiê: anexar **2–3 URLs** de TikTok/Reels concretos na data da análise (substituem/suplementam print).
+
+### Felipe — detalhe (fontes)
+
+- [Baobá](https://www.baobashows.com.br/felipehatori), [Terra](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html), reel [DQ5VcFlCXfP](https://www.instagram.com/p/DQ5VcFlCXfP/), evento **18+** [Guia Floripa](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club), [@felipehatori](https://www.instagram.com/felipehatori/).
+
+### Julimara — detalhe (fontes)
+
+- [YouTube O Mapa da Mina](https://www.youtube.com/@Omapadaminademinas), [reel DHyFbDcu_Qo](https://www.instagram.com/julimarasn/reel/DHyFbDcu_Qo/), [Linktree](https://linktr.ee/Julimaranascimento), [Turismo de Minas](https://turismodeminas.com.br/noticias/vemprabh/), [@julimarasn](https://www.instagram.com/julimarasn/).
+
+### Limites técnicos (comentários + plataforma)
+
+- **Comentários dos posts:** neste ambiente **não** dá para extrair texto de comentários do Instagram/TikTok em massa; **protocolo** = abrir posts no browser/app e colar **5–10** comentários exemplares + URL na nota.
+- **Demografia “infantil” nas plataformas:** mesmo com analytics interno, **menor de idade na base** é **métrica frágil** (idade mínima, uso por conta de adulto); por isso o **eixo 18+** no dossiê deve pousar em **conteúdo com menor visível**, não em %.
 
 ---
 
@@ -23,13 +57,14 @@
 ### Achado (percepção)
 
 - **Formato principal:** humor de **massa** — **entrevistas de rua**, personagens, esquetes; alcance **muito amplo** no TikTok/Instagram (números no dossiê). Esse tipo de formato costuma **atravessar faixas etárias** (adolescente e adulto jovens em massa; **não** dá para afirmar “público infantil majoritário” só com fonte aberta).
+- **Menores no conteúdo (amostra visual do feed, maio/2026):** **alto volume** de vídeos com **crianças** em cena (séries tipo **“Ditados populares”**, criança no **mesmo figurino** do personagem, arte **“LINNYKE BIG PAUL LITTLE PAUL”**). **Quem são** (parentesco / nome civil) **não** foi confirmado na web aberta — tratar como **menores recorrentes no conteúdo público**.
 - **Temas:** cotidiano, **sonho/sorte** no léxico do humor (já mapeado no eixo concorrência do dossiê); **ações solidárias** com **criança** como **personagem de matéria** viral (não é “canal infantil”, mas **criança aparece como tema** em campanha de arrecadação — relevante para **sensibilidade** de marca pública, não como proxy de “só criança segue”).
 - **Tom:** entretenimento **popular**; não há, nas fontes abertas usadas, indício de posicionamento político ou de publi de aposta.
 
 ### Implicação para Loterias (qualitativa)
 
-- **Atenção:** não é “risco de concorrência”, é **risco de percepção de público**: cliente pode associar **hiperviralização** + **humor leve** a **audiência mais jovem**. A resposta útil é **descrever o formato** e **limitar** o que se pode dizer sem analytics — não negar a dúvida, **enquadrar**.
-- **Sinal favorável:** pautas de **solidariedade** alinhadas a “sonho da casa própria” conversam com **universo emocional** de loterias, sem CTA de bet (já descrito no dossiê).
+- **Eixo 18+ (jogo):** além de “percepção de público jovem”, o **volume de conteúdo com menores no feed** sobe o tema para **compliance / jurídico** da Caixa: **não** afirmamos % de criança nos seguidores, mas **afirmamos** presença **recorrente de menor na superfície pública** do canal — **relevante** para **aprovação de peça** Loterias.
+- **Sinal favorável (outro eixo):** pautas de **solidariedade** (“casa”, “sonho”) conversam com **universo emocional** de loterias **no texto social**, sem CTA de bet (já no dossiê) — **não** neutraliza sozinho o ponto **18+** se a criativa **acentuar** criança.
 
 ### Evidências (links)
 
