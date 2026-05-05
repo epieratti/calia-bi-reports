@@ -6,7 +6,7 @@
 
 **Status:** material para **integração futura** no HTML — **não** foi incorporado ao dossiê publicado nesta etapa.
 
-**Última atualização desta nota:** rodada extra de buscas + **consolidação 18+** + observação de **feed com menores** (Linnyke).
+**Última atualização desta nota:** rodada extra de buscas + **consolidação 18+** + observação de **feed com menores** (Linnyke) + **feed TikTok Felipe** (amostra sem menores).
 
 ---
 
@@ -27,7 +27,7 @@
 | Creator | Demografia (seguidores) | Conteúdo público vs. 18+ | Nível de atenção para Loterias |
 |---------|-------------------------|---------------------------|--------------------------------|
 | **Linnyke Alves** | **Não** estimável aqui | **Alto** uso de **menores no feed** (séries com criança, “ditados”, duplo visual com criança; arte **“LINNYKE BIG PAUL LITTLE PAUL”** no próprio conteúdo — **apelidos de roteiro**, sem nome civil verificado) + pautas sociais com **Paulo** (matérias) + **Vovó Lu** (multigeracional) | **Elevado** — subir para **jurídico/compliance** + **direção de peça** (uso de menor em campanha 18+) |
-| **Felipe Hatori** | **Não** estimável aqui | **Humor adulto** (stand-up, marcas adultas no portfólio); evento listado **18+** em amostra (Floripa) | **Baixo** neste eixo — foco do dossiê continua **outros riscos** (colegas de grupo, etc.) |
+| **Felipe Hatori** | **Não** estimável aqui | **Humor adulto** (stand-up, marcas adultas no portfólio); evento **18+** em amostra ([Guia Floripa](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club)); **feed TikTok (capturas maio/2026):** **24–30** thumbs **sem** menor aparente — SP, morar sozinho, síndico, “Paulista”, vizinho (comédia urbana jovem-adulto) | **Baixo** neste eixo — foco do dossiê continua **outros riscos** (colegas de grupo, etc.) |
 | **Julimara** | **Não** estimável aqui | **Turismo / lifestyle**; sem achado de “canal kids”; pode haver **família** no público de viagem (**inferência**) | **Baixo a moderado** — temática **aspiracional** alinha com lazer; **não** o mesmo perfil de risco que Linnyke neste ponto |
 
 ### Linnyke — detalhe (fontes + observação)
@@ -40,6 +40,7 @@
 ### Felipe — detalhe (fontes)
 
 - [Baobá](https://www.baobashows.com.br/felipehatori), [Terra](https://www.terra.com.br/visao-do-corre/role-de-quebrada/comediantes-dividem-o-stand-up-com-outros-trabalhos,2b17bc4210355338def823aa682a17360csl7fks.html), reel [DQ5VcFlCXfP](https://www.instagram.com/p/DQ5VcFlCXfP/), evento **18+** [Guia Floripa](https://guiafloripa.com.br/agenda/shows/vini-santos-felipe-hatori-e-edu-montone-no-floripa-comedy-club), [@felipehatori](https://www.instagram.com/felipehatori/).
+- **Feed TikTok (amostra visual, maio/2026 — capturas da equipe):** grade de **24–30** vídeos; **nenhuma** thumbnail com **criança** visível; eixo **São Paulo** / vida adulta jovem (síndico, vizinho, turista, “morar sozinho”, etc.) — **reforço** ao perfil **18+** no eixo “menor em cena” (**não** substitui classificação de **todos** os vídeos do histórico).
 
 ### Julimara — detalhe (fontes)
 
@@ -93,6 +94,7 @@
 - **Posicionamento:** **humor adulto** de palco e redes — stand-up solo **“Entra no Clima”** (memórias de infância, **relacionamento**, família no sentido de **treta**/história adulta, não desenho infantil), grupos **Os Japas** / **Bateu a Nave**, roteirista.
 - **Conteúdo social:** situações do **dia a dia**, **Paulista x Manauara** (viralização em reel — referência no dossiê), marcas **adultas** de consumo e serviços no portfólio (Itaú, Nubank, Skol, Samsung, etc. na [Baobá Produções](https://www.baobashows.com.br/felipehatori)).
 - **Leitura de público:** combina com **adulto jovem**; **não** há indício, nas fontes abertas, de formato “infantil” como eixo do canal.
+- **Feed TikTok (amostra visual, maio/2026 — capturas da equipe):** grade de **24–30** thumbnails **sem** presença aparente de **menores**; temas **SP**, morar sozinho, “Paulista”, síndico, vizinho etc. — alinhado a **comédia para adulto jovem** (reforço qualitativo ao eixo 18+, **não** é demografia).
 
 ### Implicação para Loterias (qualitativa)
 
