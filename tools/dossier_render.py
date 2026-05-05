@@ -860,7 +860,7 @@ def render_loterias_dossier_html(
     lot_18_note = (bundle.get("methodology") or {}).get("loterias_18_note") or ""
     if str(lot_18_note).strip():
         meth_cards += (
-            "<div class='p-4 bg-amber-50/50 border border-amber-200/90 rounded md:col-span-2'>"
+            "<div class='p-4 bg-white border border-slate-200 rounded md:col-span-2'>"
             "<p class='text-xs font-black text-calia-navy uppercase tracking-wide mb-2'>"
             "Jogo 18+ e leitura de público</p>"
             f"<div class='text-sm text-slate-700 leading-relaxed'>{mini_md(str(lot_18_note).strip())}</div>"
@@ -1001,7 +1001,7 @@ def render_loterias_dossier_html(
     any_18_table_cols = False
     for _p in ordered_profiles:
         _rt = (_p.get("resumo_tabela") or {})
-        if (_rt.get("menor_em_cena") or "").strip() or (_rt.get("atencao_18") or "").strip():
+        if (_rt.get("loterias_18") or "").strip():
             any_18_table_cols = True
             break
 
@@ -1031,16 +1031,6 @@ def render_loterias_dossier_html(
         narr = mini_md(pc.get("narrativa", ""))
         risco_raw = pc.get("risco_geral", "—")
         risco_badge = risco_badge_block_html(risco_raw, compact=False)
-        lot18_txt = (pc.get("loterias_18_plus") or "").strip()
-        lot18_html = ""
-        if lot18_txt:
-            lot18_html = (
-                "<div class='mb-6 rounded border border-amber-200/90 bg-amber-50/40 p-4'>"
-                "<p class='text-xs font-black text-calia-navy uppercase tracking-wide mb-2'>"
-                "Loterias 18+ (leitura qualitativa)</p>"
-                f"<div class='text-sm text-slate-700 leading-relaxed'>{mini_md(lot18_txt)}</div>"
-                "</div>"
-            )
         return (
             f"<section id='{esc(slug)}' class='card-audit scroll-mt-20'>"
             f"<div class='flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-3 mb-4'>"
@@ -1048,11 +1038,11 @@ def render_loterias_dossier_html(
             f"{risco_badge}</div>"
             f"{networks_html}"
             f"<p class='text-sm text-slate-600 mb-6 leading-relaxed'>{narr}</p>"
-            f"{lot18_html}"
-            f"<div class='grid md:grid-cols-3 gap-4'>"
+            f"<div class='grid md:grid-cols-2 gap-4'>"
             f"{box('1. Concorrência (bets / loterias / jogos)', eixos.get('concorrencia'))}"
             f"{box('2. Polêmicas e situações delicadas', eixos.get('polemicas'))}"
             f"{box('3. Política e pautas sensíveis', eixos.get('politica'))}"
+            f"{box('4. Loterias 18+', eixos.get('loterias_18'))}"
             f"</div></section>"
         )
 
@@ -1089,10 +1079,8 @@ def render_loterias_dossier_html(
                 mini_md(rt.get("politica", "—")),
             ]
             if any_18_table_cols:
-                m18 = (rt.get("menor_em_cena") or "").strip()
-                a18 = (rt.get("atencao_18") or "").strip()
-                row_cells.append(mini_md(m18) if m18 else "—")
-                row_cells.append(mini_md(a18) if a18 else "—")
+                l18 = (rt.get("loterias_18") or "").strip()
+                row_cells.append(mini_md(l18) if l18 else "—")
             summary_rows.append(row_cells)
         if people:
             toc_items += "</ul>"
@@ -1141,10 +1129,8 @@ def render_loterias_dossier_html(
                 mini_md(rt.get("politica", "—")),
             ]
             if any_18_table_cols:
-                m18o = (rt.get("menor_em_cena") or "").strip()
-                a18o = (rt.get("atencao_18") or "").strip()
-                row_o.append(mini_md(m18o) if m18o else "—")
-                row_o.append(mini_md(a18o) if a18o else "—")
+                l18o = (rt.get("loterias_18") or "").strip()
+                row_o.append(mini_md(l18o) if l18o else "—")
             summary_rows.append(row_o)
         toc_items += "</ul></li>"
         profile_sections += (
@@ -1161,7 +1147,7 @@ def render_loterias_dossier_html(
         "Política",
     ]
     if any_18_table_cols:
-        sum_hdr.extend(["Menor em cena (amostra pública)", "Atenção 18+ (Loterias)"])
+        sum_hdr.append("Loterias 18+")
     n_sum_cols = len(sum_hdr)
     sum_table = render_table(
         sum_hdr,
