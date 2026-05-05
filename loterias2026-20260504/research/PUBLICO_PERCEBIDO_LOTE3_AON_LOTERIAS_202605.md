@@ -6,7 +6,7 @@
 
 **Status:** material para **integração futura** no HTML — **não** foi incorporado ao dossiê publicado nesta etapa.
 
-**Última atualização desta nota:** rodada extra de buscas + **consolidação 18+** + feeds TikTok em captura (**Linnyke** menores recorrentes; **Felipe** sem menores; **Julimara** sem menor em destaque).
+**Última atualização desta nota:** consolidação executiva Marcella + **recomendação de UX** para o HTML + feeds TikTok em captura (Linnyke / Felipe / Julimara).
 
 ---
 
@@ -158,11 +158,48 @@ Para aprofundar **sem** prometer demografia:
 
 ---
 
-## Próximo passo (quando for para o HTML)
+## Consolidação executiva — pedido Marcella (**público infantil** × **Loterias 18+**)
 
-1. Definir **onde** entra visualmente: box único “**Público percebido**” por perfil **ou** coluna extra na tabela resumo **ou** parágrafo na narrativa — **uma** decisão de UX para não poluir.
-2. Colar o **bloco de limites** (metodologia) **uma vez** no dossiê + **3 parágrafos curtos** (um por nome) com **1–2 links** cada.
-3. Opcional: **re-checar** 2 reels recentes por creator na data de **subida** para citar URLs “quentes” além das amostras acima.
+**O que a Marcella quis saber:** se dá para **levantar o perfil etário dos seguidores** (preocupação com **público infantil** no Linnyke) e como isso pesa para **Loterias** — produto de **jogo com restrição 18+**.
+
+**O que entregamos (e o que não):**
+
+| Entrega | Sim / Não |
+|---------|-----------|
+| **% de crianças nos seguidores** ou **faixa etária demográfica** | **Não** — sem dados proprietários das redes; métricas “infantis” na base são **fracas** (idade mínima, uso por conta de adulto). |
+| **Leitura qualitativa** (tom, formato, **menor em evidência no conteúdo público**, matérias com link) | **Sim** — é o que sustenta o raciocínio para **compliance / criativo**. |
+| **Comparativo dos 3** no mesmo critério | **Sim** — ver tabela na secção **Consolidação — faixa etária / público e Loterias (jogo 18+)** acima. |
+
+**Síntese em uma frase para o cliente:** *Loterias é 18+; não temos percentual de criança na audiência; o que o trabalho público mostra é que **Linnyke coloca menores em cena com frequência no feed**, o que **sobe o tema para jurídico/criação** da peça — **Felipe** e **Julimara**, na **amostra visual** do TikTok (mai/2026), **não** repetem esse padrão.*
+
+**Fontes-chave (links):** na tabela e nas subsecções **Linnyke / Felipe / Julimara** deste documento.
+
+---
+
+## Recomendação — forma mais inteligente de integrar no dossiê (HTML)
+
+**Princípio:** **uma vez** o enquadramento (18+ + limite de método); **comparativo escaneável** para os três; **profundidade só** onde o risco existe (**Linnyke**).
+
+1. **Metodologia (“Como foi analisado”)** — **um único** parágrafo ou **caixa** curta (fundo leve, borda) com título tipo **“Jogo 18+ e leitura de público”**: Loterias = **18+**; **não** estimamos % por idade; analisamos **superfície pública** (feed + imprensa) — **menor em cena** pesa mais que “seguidor infantil” inferido. *(Evita repetir isso em cada perfil.)*
+
+2. **Tabela resumo** — adicionar **uma coluna** (ou duas, se couber) **objetiva**:  
+   - **“Menor em cena (amostra pública)”** — valores sugeridos: **“Recorrente (feed)”** | **“Não observado (amostra)”** | **“Não observado (amostra)”** para Linnyke / Felipe / Julimara.  
+   - Opcional: **“Atenção 18+ (Loterias)”** — **Elevada** | **Baixa** | **Baixa a moderada**.  
+   *Isso responde à Marcella em **10 segundos** de leitura.*
+
+3. **Corpo do perfil** — **só em Linnyke**: subsecção **“Loterias 18+ (leitura qualitativa)”** com **3–5 bullets** + **2–3 links** (TikTok/Reels concretos, não só perfil) + **1 linha** citando matérias (**Paulo**, **Vovó Lu**). **Felipe** e **Julimara**: **não** repetir bloco longo — a tabela já diferencia; no máximo **uma frase** na narrativa se quiserem simetria visual.
+
+4. **Painel executivo** (se estiver ligado no YAML): **um** card ou linha extra só para **Linnyke** no eixo “18+ / menor em cena” — ou **não** usar painel para isso e deixar só na tabela (menos ruído).
+
+5. **O que evitar:** coluna “% infantil”; texto longo igual nos três perfis; prometer que “não há criança no público” para Felipe/Julimara (só **“não observado na amostra de feed na data X”**).
+
+**Ordem de leitura ideal para o cliente:** Metodologia (18+) → **Tabela resumo** (coluna nova) → **Linnyke** (detalhe) → resto inalterado.
+
+### Checklist antes de gerar o HTML
+
+1. Colar **2–3 URLs** de TikTok/Reels do **Linnyke** com menor em cena (substituem/suplementam print).
+2. Confirmar data da **amostra de feed** no texto (“capturas / grade em DD/MM/AAAA”).
+3. Revisar com **jurídico** se a coluna **“Atenção 18+”** deve usar outra nomenclatura interna da Caixa.
 
 ---
 
