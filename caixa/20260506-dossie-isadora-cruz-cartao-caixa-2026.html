@@ -56,6 +56,8 @@
         .fontes-columns a.toc-link { text-underline-offset: 2px; text-decoration-thickness: 1px; }
         .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 280px; }
         @media (min-width: 768px) { .chart-container { height: 320px; } }
+        .chart-container--mini-audiencia { max-width: 100%; height: 260px; margin: 0 auto; }
+        @media (min-width: 768px) { .chart-container--mini-audiencia { height: 300px; max-width: 440px; } }
         .timeline-rail { position: relative; border-left: 2px solid #e2e8f0; padding-left: 1.25rem; margin-left: 0.35rem; }
         .timeline-item { position: relative; padding-bottom: 1.25rem; }
         .timeline-item:last-child { padding-bottom: 0; }
@@ -131,7 +133,7 @@
             <div class="section-header mb-4">
                 <h2 id="painel-visual-titulo" class="text-xl font-black text-calia-navy uppercase tracking-tight">Painel visual (gráficos)</h2>
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed mb-6">Os gráficos abaixo traduzem, de forma sintética, o que já está escrito no corpo do dossiê: são <strong>modelos ilustrativos</strong>, e não painel comercial nem série temporal auditável. Em outras palavras, servem para dar <em>ordem de grandeza relativa</em> aos temas que mais aparecem no conteúdo público e aos vetores de risco que a equipe percebeu ao cruzar as fontes. <strong>Não</strong> devem ser transcritos como dados oficiais sem o mesmo disclaimer.</p>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">Os gráficos abaixo traduzem, de forma sintética, o que já está escrito no corpo do dossiê: são <strong>modelos ilustrativos</strong>, e não painel comercial nem série temporal auditável. Em outras palavras, servem para dar <em>ordem de grandeza relativa</em> aos temas que mais aparecem no conteúdo público e aos vetores de risco que a equipe percebeu ao cruzar as fontes. <strong>Não</strong> devem ser transcritos como dados oficiais sem o mesmo disclaimer. Há ainda um <strong>gráfico polar de afinidade de audiência</strong> (também ilustrativo) na seção <a class="toc-link" href="#mini-perfil-audiencia">Mini perfil de quem acompanha</a>, dentro de <a class="toc-link" href="#perfil-metricas">Perfil e métricas</a>.</p>
             <div class="grid gap-10 md:grid-cols-2 md:gap-8">
                 <div>
                     <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Temas no conteúdo público (IG + TikTok)</p>
@@ -225,6 +227,11 @@
             <div id="mini-perfil-audiencia" class="mt-10 scroll-mt-24 rounded-lg border border-slate-200 bg-slate-50/90 p-5 md:p-6">
                 <h3 class="text-sm font-black uppercase text-calia-navy mb-2">Mini perfil de quem acompanha (fontes abertas)</h3>
                 <p class="text-xs text-slate-600 leading-relaxed mb-4"><strong>Método (o que dá para fazer agora):</strong> cruzamos <strong>matérias linkadas</strong>, <strong>números públicos</strong> do <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz" target="_blank" rel="noopener noreferrer">Social Blade</a> e do <a class="toc-link" href="https://www.upfluence.com/" target="_blank" rel="noopener noreferrer">Upfluence</a>, o recorte qualitativo do <a class="toc-link" href="#x-mencoes">X</a> e <strong>comentários citados em reportagem</strong> — sem acesso a <strong>Instagram Pro</strong>, <strong>Meta Audience Insights</strong> nem pesquisa domiciliar. Por isso o quadro abaixo é uma <strong>hipótese de segmentação por afinidade</strong> (vocabulário usual de <strong>planejamento de mídia</strong> e de <strong>STP</strong> — segmentação, alvo, posicionamento — aplicado aqui só como <strong>organização narrativa</strong>, sem peso estatístico).</p>
+                <div class="mb-6 rounded-lg border border-dashed border-calia-gold/60 bg-white/80 p-4 md:p-5" aria-labelledby="mini-audiencia-chart-titulo">
+                    <p id="mini-audiencia-chart-titulo" class="text-[10px] font-black uppercase text-calia-navy tracking-wide">Mapa visual de afinidade (ilustração para briefing)</p>
+                    <p class="text-xs text-slate-600 mt-1 mb-4 leading-relaxed">O gráfico polar traduz, em <strong>uma página só</strong>, o que os bullets descrevem: cada fatia é um <strong>eixo temático</strong> com peso <strong>relativo</strong> atribuído pela equipe após leitura das fontes (soma <strong>100</strong>). <strong>Não</strong> representa audiômetro, <strong>não</strong> é percentual de seguidores reais e <strong>não</strong> deve ir para mídia como número oficial.</p>
+                    <div class="chart-container chart-container--mini-audiencia"><canvas id="chartMiniAudiencia" aria-label="Gráfico polar — afinidade de audiência ilustrativa"></canvas></div>
+                </div>
                 <ul class="text-sm text-slate-800 list-disc list-inside space-y-2.5 leading-relaxed">
                     <li><strong>Novela + TV aberta / streaming.</strong> A carreira na Globo e o salto para protagonista de <em>Coração Acelerado</em> aproximam o núcleo de afinidade do <strong>público habitual de folhetim</strong> (faixa das 19h) e de quem acompanha <strong>tramas sertanejas</strong> e <strong>duplas femininas</strong> na ficção — linha que a própria imprensa descreve ao comentar o “upgrade” na emissora e o papel na abertura do Fantástico; ver <a class="toc-link" href="https://veja.abril.com.br/coluna/tela-plana/os-fatores-que-explicam-sucesso-de-isadora-cruz-nova-musa-da-globo/" target="_blank" rel="noopener noreferrer">VEJA · Tela Plana (ago/2025)</a>.</li>
                     <li><strong>Instagram · intensidade.</strong> O painel público do Social Blade (captura <strong>06/05/2026</strong> neste dossiê) mostra <strong>engajamento na casa de 9%</strong> sobre uma base de mais de <strong>1,18 milhão</strong> de seguidores — padrão compatível com <strong>comunidade ativa</strong> em torno de rotina de trabalho, beleza e relacionamento, ainda que o painel <strong>não</strong> devolva pirâmide etária nem renda.</li>
@@ -388,7 +395,7 @@
 
 
         <footer class="text-center p-8 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r31-mini-perfil-audiencia | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
+            Rev. 20260506-isadora-cruz-cartao-r32-grafico-polar-audiencia | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
         </footer>
     </div>
 
@@ -411,8 +418,7 @@
             const doughnutColors = ['#252525', '#f9a619', '#009966', '#0f766e', '#94a3b8'];
             const temasEl = document.getElementById('chartTemas');
             const riscoEl = document.getElementById('chartRisco');
-            if (!temasEl || !riscoEl) return;
-
+            if (temasEl && riscoEl) {
             new Chart(temasEl, {
                 type: 'doughnut',
                 data: {
@@ -467,6 +473,68 @@
                     }
                 }
             });
+            }
+
+            const audEl = document.getElementById('chartMiniAudiencia');
+            if (audEl) {
+                new Chart(audEl, {
+                    type: 'polarArea',
+                    data: {
+                        labels: ['Novela / TV', 'Moda e Instagram', 'Nordeste / PB', 'Casal / multi', 'TikTok (niche)', 'X — eco'],
+                        datasets: [{
+                            data: [30, 24, 18, 14, 9, 5],
+                            backgroundColor: [
+                                'rgba(37, 37, 37, 0.78)',
+                                'rgba(249, 166, 25, 0.82)',
+                                'rgba(0, 153, 102, 0.78)',
+                                'rgba(15, 118, 110, 0.72)',
+                                'rgba(148, 163, 184, 0.88)',
+                                'rgba(226, 232, 240, 0.95)'
+                            ],
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { boxWidth: 10, padding: 6, font: { size: 9 }, color: '#334155' }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Afinidade temática (modelo ilustrativo · soma 100)',
+                                font: { size: 11, weight: '700' },
+                                color: '#252525',
+                                padding: { bottom: 8 }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: (ctx) => {
+                                        const v = typeof ctx.raw === 'number' ? ctx.raw : (ctx.parsed?.r ?? ctx.parsed);
+                                        return ` ${ctx.label}: ${v} (índice relativo)`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            r: {
+                                max: 34,
+                                ticks: { display: false, backdropColor: 'transparent' },
+                                grid: { color: 'rgba(37, 37, 37, 0.07)' },
+                                angleLines: { color: 'rgba(37, 37, 37, 0.06)' },
+                                pointLabels: {
+                                    display: true,
+                                    font: { size: 9, weight: '600' },
+                                    color: '#475569'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
         }
 
         document.getElementById('access-form').addEventListener('submit', async (e) => {
