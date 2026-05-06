@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Dossiê — Isadora Cruz · CAIXA 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'calia-navy': '#252525',
+                        'calia-gold': '#f9a619',
+                        'calia-emerald': '#009966',
+                        'calia-crimson': '#CC0033',
+                        'calia-slate': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .card-audit { background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); page-break-after: always; }
+        .section-header { border-left: 6px solid #252525; padding-left: 1.5rem; margin-bottom: 2rem; }
+        .risk-analysis-box { margin-top: 2rem; border-radius: 6px; border: 2px solid #252525; overflow: hidden; box-shadow: 0 4px 16px rgba(37, 37, 37, 0.1); }
+        .risk-analysis-box__head { background: #252525; color: #f9a619; padding: 0.65rem 1.25rem; font-size: 10px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; }
+        .risk-analysis-box__body { background: #f1f5f9; padding: 1.35rem 1.5rem 1.5rem; }
+        .risk-analysis-box__name { font-size: 0.9375rem; font-weight: 900; color: #252525; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #cbd5e1; }
+        .deep-dive-box { background-color: #f1f5f9; border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem; border-left: 4px solid #252525; }
+        .bio-intro { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1.5rem; border-radius: 4px; border-left: 4px solid #f9a619; }
+        .metric-badge { background: #252525; color: white; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .profile-handle { display: inline-block; margin-top: 0.5rem; padding: 0.35rem 0.75rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.02em; color: #252525; background: #f1f5f9; border: 1px solid #cbd5e1; border-left: 3px solid #f9a619; border-radius: 4px; font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace; }
+        .toc-link { font-size: 0.875rem; font-weight: 600; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+        .toc-link:hover { opacity: 0.82; }
+        .toc-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }
+        .toc-list li { margin-top: 0.625rem; }
+        .toc-list li:first-child { margin-top: 0; }
+        .source-list { font-size: 0.8125rem; line-height: 1.6; }
+        .source-list a { color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
+            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
+            <form id="access-form" class="space-y-3">
+                <label class="sr-only" for="access-pw">Senha</label>
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy" placeholder="Senha">
+                <p id="access-err" class="hidden text-sm font-medium text-red-600"></p>
+                <div class="mt-5 border-t border-slate-200 pt-5">
+                    <button type="submit" class="w-full rounded-md bg-calia-gold py-3.5 text-sm font-black uppercase tracking-widest text-calia-navy shadow-md shadow-black/15 ring-1 ring-black/5 transition hover:brightness-105 active:brightness-95">Entrar</button>
+                </div>
+            </form>
+            <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+        </div>
+    </div>
+
+    <div id="dossier-root" class="hidden max-w-6xl mx-auto space-y-16">
+
+        <header id="topo" class="bg-calia-navy text-white p-10 rounded shadow-lg">
+            <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+            <h1 class="text-3xl md:text-4xl font-black mt-2 tracking-normal uppercase">Dossiê de perfil — Isadora Cruz</h1>
+            <p class="text-sm opacity-90 mt-1 font-medium italic">Apoio ao levantamento para ação de cartão de crédito · Maio 2026</p>
+        </header>
+
+        <nav class="card-audit py-8" aria-label="Sumário">
+            <div class="section-header mb-8">
+                <h2 class="text-lg font-black text-calia-navy uppercase tracking-tight">Neste dossiê</h2>
+            </div>
+            <ul class="toc-list">
+                <li><a class="toc-link" href="#leitura-executiva">Leitura executiva</a></li>
+                <li><a class="toc-link" href="#objetivo">Pedido e objetivo</a></li>
+                <li><a class="toc-link" href="#metodologias">Metodologias e limites</a></li>
+                <li><a class="toc-link" href="#perfil-isadora">Perfil e carreira</a></li>
+                <li><a class="toc-link" href="#redes-conteudo">Redes sociais — o que mais aparece</a></li>
+                <li><a class="toc-link" href="#marcas">Marcas e parcerias recentes</a></li>
+                <li><a class="toc-link" href="#polemica">Polêmica e mídia</a></li>
+                <li><a class="toc-link" href="#politica-religiao">Política e religião</a></li>
+                <li><a class="toc-link" href="#riscos">Síntese de risco para marca institucional</a></li>
+                <li><a class="toc-link" href="#fontes">Fontes consultadas</a></li>
+            </ul>
+        </nav>
+
+        <section id="leitura-executiva" class="card-audit scroll-mt-24 border border-slate-200 bg-gradient-to-b from-white to-slate-50 shadow-sm">
+            <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-4 mb-4">
+                <div>
+                    <p class="text-[10px] font-black uppercase tracking-[0.18em] text-calia-gold">C-level · visão rápida</p>
+                    <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight mt-1">Leitura executiva</h2>
+                </div>
+                <a class="toc-link shrink-0 text-sm" href="#riscos">Ir à síntese de risco →</a>
+            </div>
+            <ul class="list-none space-y-3 text-sm text-slate-700 leading-relaxed">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Pedido:</strong> levantamento de <strong>perfil público</strong> da atriz <strong>Isadora Cruz</strong> para apoiar decisões de uma <strong>ação com cartão de crédito</strong> (âmbito Caixa).</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Digital:</strong> Instagram <strong>@isadoracruz</strong> — ordem de grandeza <strong>784 mil+ seguidores</strong> em outubro/2025 (matéria com data explícita); hoje o número pode ser maior. Conteúdo majoritariamente <strong>trabalho (novela, personagens, imprensa)</strong>, <strong>moda e eventos</strong>, <strong>relacionamento</strong> e <strong>viagens/lazer</strong>.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Marcas em evidência na pesquisa:</strong> <strong>Arezzo</strong> (campanha de Natal 2025, calçados e bolsas) e, em arquivo de mídia, <strong>Colorama</strong> (esmaltes, grupo L'Oréal) com campanha nacional veiculada na imprensa em <strong>2021</strong>. Não foi localizada <strong>parceria pública recente</strong> com <strong>banco, fintech ou bandeira de cartão</strong> nos recortes analisados.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Política:</strong> exposição em <strong>fato institucional</strong> — em <strong>fev/2026</strong> acompanhamento ao namorado, o esquiador <strong>Lucas Pinheiro Braathen</strong>, em <strong>recepção no Palácio do Planalto</strong> após ouro olímpico; contexto de <strong>homenagem ao atleta</strong>, não de manifesto partidário da atriz.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Polêmica:</strong> não se identificou, neste recorte, <strong>crise reputacional de grande escala</strong> ou escândalo recorrente em veículos auditados; há cobertura de <strong>carreira</strong>, <strong>namoro</strong> e <strong>novelas</strong>.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Social:</strong> divulgação de voluntariado na <strong>ONG Milagre Sertão</strong> (apoio a famílias no sertão paraibano) — enquadra imagem de <strong>causa social regional</strong>, útil para narrativa de proximidade.</span></li>
+            </ul>
+        </section>
+
+        <section id="objetivo" class="card-audit border-l-4 border-calia-gold">
+            <div class="section-header mb-4">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Pedido e objetivo</h2>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed">Atender ao pedido da Caixa de <strong>levantar o perfil</strong> da atriz <strong>Isadora Cruz</strong> para subsidiar uma <strong>ação de cartão de crédito</strong>, cobrindo: <strong>temas dominantes nas redes</strong>, <strong>polêmica</strong>, <strong>posicionamento político e religioso</strong> (quando houver registro público), <strong>trabalhos com marcas</strong> e demais pontos relevantes para <strong>due diligence</strong> de casting ou contratação.</p>
+            <p class="text-sm text-slate-700 leading-relaxed mt-3">Este documento é <strong>preliminar</strong>, baseado em <strong>fontes abertas</strong> e imprensa; não substitui due diligence jurídica, auditoria de contratos ou relatórios proprietários de redes sociais.</p>
+        </section>
+
+        <section id="metodologias" class="card-audit">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Metodologias e limites</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 bg-slate-50 border-t-2 border-calia-navy">
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Fontes</h3>
+                    <p class="text-[11px] text-slate-600">Biografia e filmografia (<strong>Wikipédia em português</strong>, com referências), matérias em <strong>VEJA</strong>, <strong>Folha/F5</strong>, <strong>O Globo</strong>, <strong>Gshow</strong>, <strong>Portal Pop Notícias</strong>, <strong>iG Gente</strong>, <strong>FFW</strong>, <strong>NaTelinha</strong>, <strong>Revista Quem</strong> e páginas oficiais ligadas a marcas. Lista completa na seção <a class="toc-link font-semibold" href="#fontes">Fontes consultadas</a>.</p>
+                </div>
+                <div class="p-4 bg-slate-50 border-t-2 border-calia-navy">
+                    <h3 class="font-bold text-slate-800 mb-2 uppercase text-xs">Limites</h3>
+                    <p class="text-[11px] text-slate-600">Métricas de seguidores são <strong>ponto no tempo</strong> quando a matéria informa a data. Comportamento no Instagram foi inferido a partir de <strong>pautas jornalísticas sobre o perfil</strong> e descrições públicas, sem acesso ao backend da conta. <strong>Idade, sexo e geografia dos seguidores</strong> exigiriam relatório da própria rede ou da assessoria.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="perfil-isadora" class="card-audit scroll-mt-24">
+            <div class="section-header">
+                <h2 class="text-3xl font-black text-calia-navy uppercase tracking-tight">Isadora Cruz — identificação e carreira</h2>
+                <p class="profile-handle" aria-label="Instagram">@isadoracruz</p>
+            </div>
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Quem é:</strong> <strong>Isadora Cruz Rocha</strong>, nascida em <strong>João Pessoa (PB)</strong> em <strong>4 de fevereiro de 1998</strong>, atriz da TV Globo. Trajetória com passagens por <strong>Miami</strong> na infância e estudos em <strong>Paris</strong>; na biografia pública costuma aparecer a transição entre trabalhos no Brasil e experimentação no exterior (cinema, projetos internacionais).</p>
+                <p class="text-sm text-slate-700 leading-relaxed mt-2"><strong>Estreia na TV:</strong> <em>Haja Coração</em> (2016) como <strong>Cris</strong>. <strong>Projeção nacional forte</strong> como <strong>Candoca</strong> em <em>Mar do Sertão</em> (2022). Em <em>Volta por Cima</em> (2024–2025) viveu <strong>Roxelle</strong>. Na série <em>Guerreiros do Sol</em> (Globoplay) integrou o elenco como <strong>Rosa</strong> (e variações narrativas da trama). Em <strong>2026</strong>, é protagonista na novela das 19h <em>Coração Acelerado</em> como a aspirante a cantora sertaneja <strong>Agrado Garcia</strong> — trama com música e universo sertanejo em destaque.</p>
+                <p class="text-sm text-slate-700 leading-relaxed mt-2"><strong>Visibilidade extra:</strong> participação na <strong>nova abertura do Fantástico</strong> em abril de 2025, em contexto de comemoração dos 60 anos da Globo, reproduzindo referência clássica da história do programa. Fontes: <a class="toc-link" href="https://oglobo.globo.com/play/noticia/2025/04/18/isadora-cruz-participa-da-nova-abertura-do-fantastico-veja-foto-exclusiva.ghtml">O Globo</a>, <a class="toc-link" href="https://f5.folha.uol.com.br/colunistas/outro-canal/2025/05/destaque-de-volta-por-cima-isadora-cruz-vai-protagonizar-novela-sobre-sertanejo-na-globo.shtml">F5</a>.</p>
+            </div>
+            <div class="flex flex-wrap gap-3 mb-2">
+                <div class="metric-badge">IG: 784 mil+ (ref. out/2025)</div>
+                <div class="metric-badge">Momento: protagonista TV Globo 2026</div>
+            </div>
+            <p class="text-xs text-slate-500">Seguidores conforme matéria datada de <strong>20/10/2025</strong> no <a class="toc-link" href="https://gente.ig.com.br/celebridades/2025-10-20/isadora-cruz-ganha-elogios-ao-posar-de-biquini-em-cachoeira.html">iG Gente</a>.</p>
+        </section>
+
+        <section id="redes-conteudo" class="card-audit scroll-mt-24">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Redes sociais — o que mais aparece</h2>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">No <strong>Instagram</strong>, o recorte de imprensa e o próprio fluxo de notícias ligadas ao perfil sugerem prioridade de conteúdo para:</p>
+            <div class="deep-dive-box">
+                <h4 class="font-bold text-xs uppercase text-calia-navy mb-3">Temas dominantes (ordem aproximada)</h4>
+                <ul class="text-sm text-slate-700 space-y-2 list-disc list-inside">
+                    <li><strong>Trabalho e novela:</strong> personagens (<em>Coração Acelerado</em>, <em>Guerreiros do Sol</em>, etc.), chamadas da Globo, entrevistas e making of — reforça <strong>imagem de artista em alta na emissora</strong>.</li>
+                    <li><strong>Moda e eventos:</strong> cobertura de <strong>Rio Fashion Week</strong> e looks em festas de lançamento (ex.: festa de <em>Coração Acelerado</em>) — alinhamento natural a <strong>beleza, estética e consumo</strong>.</li>
+                    <li><strong>Vida pessoal e relacionamento:</strong> namoro público com <strong>Lucas Pinheiro Braathen</strong> desde meados de 2025; posts e matérias sobre convivência, viagens e apoio mútuo (incluindo Olimpíadas de Inverno 2026).</li>
+                    <li><strong>Raízes e causas:</strong> Paraíba e Nordeste aparecem como narrativa de origem; voluntariado na <strong>ONG Milagre Sertão</strong> — mensagem de <strong>ascensão social e retorno à comunidade</strong>.</li>
+                </ul>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed mt-4">Em painéis agregadores de terceiros, alguns perfis listam a conta com <strong>símbolo religioso</strong> junto ao nome exibido; isso <strong>não substitui</strong> declaração doutrinária verificável. Perfil oficial: <a class="toc-link font-semibold" href="https://www.instagram.com/isadoracruz/">instagram.com/isadoracruz</a> — <a class="toc-link" href="https://viralist.ai/instagram/creators/isadoracruz">exemplo de painel público</a>.</p>
+        </section>
+
+        <section id="marcas" class="card-audit scroll-mt-24">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Marcas e parcerias</h2>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-4 leading-relaxed">
+                <li><strong>Arezzo (calçados e bolsas — Grupo Arezzo&amp;Co):</strong> protagonista da campanha de <strong>Natal 2025</strong>, mote <em>“Presença é o Presente Perfeito”</em>, com participação da mãe e da avó na narrativa multigeracional. Estreia divulgada para <strong>2 de dezembro de 2025</strong>. Fontes: <a class="toc-link" href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a>, <a class="toc-link" href="https://www.revistastile.com.br/isadora-cruz-estrela-campanha-de-natal-2025-da-arezzo-que-celebra-a-forca-da-presenca-e-o-protagonismo-feminino/">Revista Stile</a>.</li>
+                <li><strong>Colorama (esmaltes — L'Oréal Brasil):</strong> imprensa de entretenimento e turismo registrou campanha nacional com a atriz como personagem <strong>“Madame Colorama”</strong> (cartomante / humor retrô), com veiculação associada a <strong>2021</strong>. Referência de cobertura: <a class="toc-link" href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a>. Verificar arquivos da marca para vigência exata de contrato e peças.</li>
+                <li><strong>Concorrência com cartão / banco:</strong> no material encontrado, <strong>não há</strong> destaque para acordo público com <strong>instituições financeiras ou bandeiras de cartão</strong>. Arezzo e beleza não são equivalentes diretos de produto cartão, mas reforçam <strong>curadoria de imagem “premium” de consumo</strong>.</li>
+            </ul>
+        </section>
+
+        <section id="polemica" class="card-audit scroll-mt-24">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Polêmica e cobertura de mídia</h2>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed">Nos veículos consultados, o noticiário concentra-se em <strong>audiência de novela</strong> (incluindo recordes de Ibope citados na imprensa especializada), <strong>rotina de gravações</strong>, <strong>relacionamento</strong> e <strong>moda</strong>. A página “tudo sobre” do <strong>NaTelinha</strong> cataloga matérias recentes; não foi identificada, neste recorte, <strong>sequência de crises</strong> do tipo cancelamento prolongado ou investigação jornalística grave com o nome da atriz como foco principal.</p>
+            <p class="text-sm text-slate-700 leading-relaxed mt-3"><strong>Ressalva metodológica:</strong> buscas em aberto podem não capturar processos judiciais em fase inicial, denúncias sem grande repercussão ou conteúdos removidos. Recomenda-se checagem jurídica complementar se o contrato for de alto valor.</p>
+        </section>
+
+        <section id="politica-religiao" class="card-audit scroll-mt-24">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Política e religião</h2>
+            </div>
+            <div class="deep-dive-box">
+                <h4 class="font-bold text-xs uppercase text-calia-navy mb-3">Política</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">O registro mais visível de proximidade com o <strong>poder Executivo federal</strong> no período pesquisado é a <strong>recepção no Palácio do Planalto</strong> (<strong>27/02/2026</strong>), quando a atriz acompanhou <strong>Lucas Pinheiro Braathen</strong> — medalhista olímpico — em cerimônia com o <strong>presidente Luiz Inácio Lula da Silva</strong> e autoridades do esporte. O enquadramento midiático é de <strong>homenagem ao atleta</strong> e celebração do resultado nos Jogos de Inverno; não foi encontrada, neste recorte, <strong>filiação partidária</strong> ou manifesto político sistemático da atriz. Fonte: <a class="toc-link" href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Portal Pop Notícias</a>.</p>
+            </div>
+            <div class="deep-dive-box mt-4">
+                <h4 class="font-bold text-xs uppercase text-calia-navy mb-3">Religião e espiritualidade (registro público)</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">Não há, nas fontes principais deste dossiê, <strong>declaração detalhada de credo</strong> ou filiação religiosa institucional. Há referências de <strong>cenas “místicas”</strong> na ficção (<em>Coração Acelerado</em>) e entrevistas associando simbolicamente trabalho com música sertaneja a um tom espiritual — ver <a class="toc-link" href="https://natelinha.uol.com.br/novelas/2026/01/21/isadora-cruz-sobre-as-cenas-com-paula-fernandes-em-coracao-acelerado-misticas--236838.php">NaTelinha</a>. Campanha antiga da Colorama explorava persona de <strong>cartomante</strong> em tom de <strong>humor publicitário</strong>, não documento de crença.</p>
+            </div>
+        </section>
+
+        <section id="riscos" class="card-audit scroll-mt-24">
+            <div class="risk-analysis-box">
+                <div class="risk-analysis-box__head">Síntese · Brand safety institucional (CAIXA)</div>
+                <div class="risk-analysis-box__body">
+                    <div class="risk-analysis-box__name">Isadora Cruz</div>
+                    <ul class="text-sm text-slate-800 space-y-2 list-disc list-inside leading-relaxed">
+                        <li><strong>Positivo:</strong> forte <strong>penetração em TV aberta</strong> e narrativa de <strong>ascensão e trabalho</strong>; parcerias com <strong>marcas de moda e beleza de massa</strong>; voluntariado documentado; baixo sinal de polêmica nos recortes.</li>
+                        <li><strong>Atenção:</strong> foto ao lado de <strong>autoridades em Brasília</strong> pode ser recortada em redes para leitura política — mitigar com <strong>briefing de uso de imagem</strong> e contexto da campanha (celebração esportiva).</li>
+                        <li><strong>Concorrência:</strong> ausência de vínculo público com outras IFs não elimina checagem contratual de <strong>exclusividade</strong> na categoria.</li>
+                        <li><strong>Métricas:</strong> validar com assessoria <strong>audiência demográfica</strong> do Instagram se a peça depender de conversão digital.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="fontes" class="card-audit scroll-mt-24">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Fontes consultadas (links)</h2>
+            </div>
+            <ol class="source-list text-slate-700 list-decimal list-inside space-y-2">
+                <li><a href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia — Isadora Cruz</a> (biografia, filmografia, referências).</li>
+                <li><a href="https://gente.ig.com.br/celebridades/2025-10-20/isadora-cruz-ganha-elogios-ao-posar-de-biquini-em-cachoeira.html">iG Gente</a> — seguidores e contexto (20/10/2025).</li>
+                <li><a href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a> — campanha Arezzo Natal 2025.</li>
+                <li><a href="https://www.revistastile.com.br/isadora-cruz-estrela-campanha-de-natal-2025-da-arezzo-que-celebra-a-forca-da-presenca-e-o-protagonismo-feminino/">Revista Stile</a> — Arezzo Natal 2025.</li>
+                <li><a href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a> — Colorama / Madame Colorama (2021).</li>
+                <li><a href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Portal Pop Notícias</a> — Planalto, fev/2026.</li>
+                <li><a href="https://f5.folha.uol.com.br/colunistas/outro-canal/2025/05/destaque-de-volta-por-cima-isadora-cruz-vai-protagonizar-novela-sobre-sertanejo-na-globo.shtml">F5 / Folha</a> — protagonismo e sertanejo na Globo.</li>
+                <li><a href="https://oglobo.globo.com/play/noticia/2025/04/18/isadora-cruz-participa-da-nova-abertura-do-fantastico-veja-foto-exclusiva.ghtml">O Globo</a> — abertura do Fantástico (abr/2025).</li>
+                <li><a href="https://natelinha.uol.com.br/famosos/tudo-sobre/isadora-cruz">NaTelinha</a> — biografia e arquivo de notícias.</li>
+                <li><a href="https://natelinha.uol.com.br/novelas/2026/01/21/isadora-cruz-sobre-as-cenas-com-paula-fernandes-em-coracao-acelerado-misticas--236838.php">NaTelinha</a> — nota sobre cenas “místicas” na novela.</li>
+                <li><a href="https://revistaquem.globo.com/noticias/amor-e-sexo/noticia/2025/06/isadora-cruz-assume-namoro-com-esquiador-e-compartilha-fotos-romanticas-na-espanha.ghtml">Revista Quem</a> — namoro com Lucas Braathen (jun/2025).</li>
+                <li><a href="https://www.instagram.com/isadoracruz/">Instagram oficial @isadoracruz</a>.</li>
+            </ol>
+        </section>
+
+        <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
+            Rev. 20260506-isadora-cruz-cartao | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+        </footer>
+    </div>
+
+    <script>
+        /** SHA-256 de senhas aceitas (trim aplicado antes do hash): caixa2026 · embratur2026 (alias por compatibilidade) */
+        const PASSWORD_SHA256_HEX_SET = new Set([
+            '992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b',
+            'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5'
+        ]);
+
+        async function sha256Hex(text) {
+            const buf = new TextEncoder().encode(text);
+            const hash = await crypto.subtle.digest('SHA-256', buf);
+            return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        document.getElementById('access-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const err = document.getElementById('access-err');
+            err.classList.add('hidden');
+            err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha é sensível a maiúsculas/minúsculas.';
+            if (!globalThis.crypto?.subtle) {
+                err.textContent = 'Validação indisponível: abra a página em HTTPS (GitHub Pages) ou em contexto seguro; em arquivo local o navegador pode bloquear crypto.subtle.';
+                err.classList.remove('hidden');
+                return;
+            }
+            const pw = document.getElementById('access-pw').value.trim();
+            try {
+                if (!PASSWORD_SHA256_HEX_SET.has(await sha256Hex(pw))) {
+                    err.classList.remove('hidden');
+                    return;
+                }
+            } catch {
+                err.textContent = 'Não foi possível validar a senha neste ambiente. Tente outro navegador ou a URL publicada no GitHub Pages.';
+                err.classList.remove('hidden');
+                return;
+            }
+            document.getElementById('access-gate').classList.add('hidden');
+            document.getElementById('dossier-root').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
