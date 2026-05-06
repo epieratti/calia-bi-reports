@@ -103,7 +103,7 @@
                 <li><a class="toc-link" href="#leitura-executiva">Leitura executiva</a></li>
                 <li><a class="toc-link" href="#painel-visual">Painel visual (gráficos)</a></li>
                 <li><a class="toc-link" href="#matriz">Matriz (pedido · método · checklist)</a></li>
-                <li><a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a> · <a class="toc-link" href="#mini-perfil-audiencia">Perfil de audiência (ilustrativo)</a></li>
+                <li><a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a> · <a class="toc-link" href="#mini-perfil-audiencia">Perfil de quem acompanha</a></li>
                 <li><a class="toc-link" href="#x-mencoes">X — menções (sem perfil dela)</a></li>
                 <li><a class="toc-link" href="#midia-politica">Mídia, política e brand safety</a></li>
                 <li><a class="toc-link" href="#marcas">Marcas e concorrência</a> · <a class="toc-link" href="#instagram-marcas">Instagram: marcas na plataforma</a></li>
@@ -133,7 +133,7 @@
             <div class="section-header mb-4">
                 <h2 id="painel-visual-titulo" class="text-xl font-black text-calia-navy uppercase tracking-tight">Painel visual (gráficos)</h2>
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed mb-6">Os gráficos sintetizam o texto: <strong>modelos ilustrativos</strong>, não painel comercial nem série auditável — servem para <em>ordem de grandeza relativa</em> de temas e riscos. <strong>Não</strong> reproduzir como dado oficial sem o disclaimer. Há um <strong>polar</strong> ilustrativo no <a class="toc-link" href="#mini-perfil-audiencia">perfil de audiência</a>, em <a class="toc-link" href="#perfil-metricas">Perfil e métricas</a>.</p>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">Os gráficos sintetizam o texto: <strong>modelos ilustrativos</strong>, não painel comercial nem série auditável — servem para <em>ordem de grandeza relativa</em> de temas e riscos. <strong>Não</strong> reproduzir como dado oficial sem o disclaimer. Há um <strong>gráfico polar</strong> no <a class="toc-link" href="#mini-perfil-audiencia">perfil de quem acompanha</a>, em <a class="toc-link" href="#perfil-metricas">Perfil e métricas</a>.</p>
             <div class="grid gap-10 md:grid-cols-2 md:gap-8">
                 <div>
                     <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Temas no conteúdo público (IG + TikTok)</p>
@@ -225,8 +225,7 @@
             </div>
 
             <div id="mini-perfil-audiencia" class="mt-10 scroll-mt-24 rounded-lg border border-slate-200 bg-slate-50/90 p-5 md:p-6">
-                <h3 class="text-sm font-black uppercase text-calia-navy mb-1">Perfil de quem acompanha (ilustrativo)</h3>
-                <p class="text-[10px] font-bold uppercase tracking-wide text-slate-500 mb-3">Hipótese para briefing · não substitui Insights nem pesquisa</p>
+                <h3 class="text-sm font-black uppercase text-calia-navy mb-3">Perfil de quem acompanha</h3>
                 <p class="text-xs text-slate-600 leading-relaxed mb-4">Fontes: matérias, <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz" target="_blank" rel="noopener noreferrer">Social Blade</a>, <a class="toc-link" href="https://www.upfluence.com/" target="_blank" rel="noopener noreferrer">Upfluence</a> e amostra do <a class="toc-link" href="#x-mencoes">X</a>. Sem dados proprietários de plataforma.</p>
 
                 <div class="rounded-lg border-l-4 border-calia-gold bg-white p-4 md:p-5 shadow-sm mb-5">
@@ -236,8 +235,8 @@
                 </div>
 
                 <div class="overflow-x-auto mb-5">
-                    <table class="w-full min-w-[18rem] text-xs border-collapse border border-slate-200" aria-label="Ficha do perfil ilustrativo">
-                        <caption class="sr-only">Dimensões do perfil ilustrativo; hipótese qualitativa.</caption>
+                    <table class="w-full min-w-[18rem] text-xs border-collapse border border-slate-200" aria-label="Ficha do perfil">
+                        <caption class="sr-only">Dimensões do perfil; leitura qualitativa.</caption>
                         <thead><tr class="bg-slate-100 border-b border-slate-200"><th scope="col" class="p-2 text-left font-black text-calia-navy uppercase text-[9px]">Dimensão</th><th scope="col" class="p-2 text-left font-black text-calia-navy uppercase text-[9px]">Leitura</th></tr></thead>
                         <tbody class="text-slate-800">
                             <tr class="border-b border-slate-200"><td class="p-2 font-semibold bg-slate-50/90">Idade</td><td class="p-2 leading-snug"><strong>25–50</strong> (ordem de pauta; não é painel).</td></tr>
@@ -250,9 +249,9 @@
                 </div>
 
                 <div class="mb-5 rounded-lg border border-dashed border-calia-gold/60 bg-white/80 p-4 md:p-5" aria-labelledby="mini-audiencia-chart-titulo">
-                    <p id="mini-audiencia-chart-titulo" class="text-[10px] font-black uppercase text-calia-navy tracking-wide">Polar · radar cultural (ilustrativo)</p>
+                    <p id="mini-audiencia-chart-titulo" class="text-[10px] font-black uppercase text-calia-navy tracking-wide">Polar · radar cultural</p>
                     <p class="text-xs text-slate-600 mt-1 mb-4 leading-relaxed">Pesos somam <strong>100</strong> por convenção; são atribuição editorial após leitura das fontes — <strong>não</strong> são taxa real de seguidores nem dado de mídia.</p>
-                    <div class="chart-container chart-container--mini-audiencia"><canvas id="chartMiniAudiencia" aria-label="Gráfico polar — motivos no radar desse perfil (ilustrativo)"></canvas></div>
+                    <div class="chart-container chart-container--mini-audiencia"><canvas id="chartMiniAudiencia" aria-label="Gráfico polar — motivos no radar desse perfil"></canvas></div>
                 </div>
 
                 <p class="text-xs text-slate-600 leading-relaxed border-t border-slate-200 pt-4"><strong>Limite:</strong> demografia fina e intenção de uso de cartão exigem <strong>Meta Insights</strong>, pesquisa ou material da assessoria/Globo.</p>
@@ -408,7 +407,7 @@
 
 
         <footer class="text-center p-8 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r42-sem-nota-caixa-sicoob | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
+            Rev. 20260506-isadora-cruz-cartao-r43-mini-perfil-sem-rotulos | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
         </footer>
     </div>
 
@@ -518,7 +517,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Motivos no radar desse perfil (ilustrativo · soma 100)',
+                                text: 'Motivos no radar desse perfil (soma 100)',
                                 font: { size: 11, weight: '700' },
                                 color: '#252525',
                                 padding: { bottom: 8 }
