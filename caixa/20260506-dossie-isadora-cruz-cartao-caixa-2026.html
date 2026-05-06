@@ -8,6 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>Dossiê — Isadora Cruz · CAIXA 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -43,6 +44,16 @@
         .toc-list li:first-child { margin-top: 0; }
         .source-list { font-size: 0.8125rem; line-height: 1.6; }
         .source-list a { color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+        .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 280px; }
+        @media (min-width: 768px) { .chart-container { height: 320px; } }
+        .timeline-rail { position: relative; border-left: 2px solid #e2e8f0; padding-left: 1.25rem; margin-left: 0.35rem; }
+        .timeline-item { position: relative; padding-bottom: 1.25rem; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -1.45rem; top: 0.35rem; width: 11px; height: 11px; border-radius: 50%;
+            background-color: #f9a619; border: 2px solid #fff; box-shadow: 0 0 0 1px #cbd5e1;
+        }
+        .timeline-item--ok::before { background-color: #009966; }
     </style>
 </head>
 <body class="p-4 md:p-12 pb-24">
@@ -69,7 +80,7 @@
         <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded shadow-lg">
             <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
             <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-normal uppercase">Dossiê de perfil — Isadora Cruz</h1>
-            <p class="text-sm opacity-90 mt-1">Cartão de crédito · maio/2026 · due diligence</p>
+            <p class="text-sm opacity-90 mt-1">Cartão de crédito · maio/2026 · perfil e risco para marca</p>
         </header>
 
         <nav id="sumario" class="card-audit py-6 scroll-mt-24" aria-label="Sumário">
@@ -78,6 +89,7 @@
             </div>
             <ul class="toc-list text-sm">
                 <li><a class="toc-link" href="#leitura-executiva">Leitura executiva</a></li>
+                <li><a class="toc-link" href="#painel-visual">Painel visual (gráficos)</a></li>
                 <li><a class="toc-link" href="#matriz">Matriz (pedido · método · checklist)</a></li>
                 <li><a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a></li>
                 <li><a class="toc-link" href="#x-mencoes">X — menções (sem perfil dela)</a></li>
@@ -93,26 +105,44 @@
             <h2 class="mt-1 text-xl font-black uppercase text-calia-navy">Leitura executiva</h2>
             <div class="mt-4 flex flex-col gap-6 md:flex-row md:items-start">
                 <div class="min-w-0 flex-1 space-y-3 text-sm leading-relaxed text-slate-700">
-                    <p><strong>Risco reputacional:</strong> <strong>baixo</strong> para marca institucional (TV Globo, moda, relacionamento; sem apostas; sem publi pública de banco/cartão). <strong>Ressalva 2026:</strong> imprensa de <strong>bastidor</strong> em <em>Coração Acelerado</em> — <a class="toc-link" href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a>, <a class="toc-link" href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Lo-Bianco/iG</a> — ver <a class="toc-link font-semibold" href="#midia-politica">Mídia e política</a>.</p>
-                    <p><strong>Digital:</strong> IG <a class="toc-link" href="https://www.instagram.com/isadoracruz/">@isadoracruz</a> <strong>~1,19M</strong> (<a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz">SB 06/05/2026</a>); ref. <strong>784k+</strong> <a class="toc-link" href="https://gente.ig.com.br/celebridades/2025-10-20/isadora-cruz-ganha-elogios-ao-posar-de-biquini-em-cachoeira.html">iG 10/2025</a>. TikTok <a class="toc-link" href="https://www.tiktok.com/@isadoracruzrocha">@isadoracruzrocha</a> <strong>~15,6k</strong>, ER <strong>2,11%</strong> (<a class="toc-link" href="https://www.upfluence.com/">Upfluence</a>). <strong>Sem</strong> perfil no <strong>X</strong> nem canal próprio no <strong>YouTube</strong> (brief).</p>
-                    <p><strong>Marcas / IF:</strong> Arezzo, Colorama, Bebecê, GE Beauty; editorial Glamour/Dior sem prova de embaixada global. <strong>Atenção:</strong> menções no X sobre <strong>Sicoob</strong> em intervalo da novela — <a class="toc-link font-semibold" href="#marcas">Marcas</a>.</p>
-                    <p><strong>Política / espiritualidade:</strong> <a class="toc-link" href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Planalto 02/2026</a> (contexto esportivo); espiritualidade leve em entrevistas — <a class="toc-link font-semibold" href="#midia-politica">detalhe</a>.</p>
+                    <p>Para marca institucional, o <strong>risco reputacional</strong> aparece como <strong>baixo</strong>, porque a imagem pública orbita em torno da TV Globo, de moda e de relacionamento, sem indícios de apostas e sem publicidade aberta de banco ou cartão nas fontes que levantamos. Ainda assim, em <strong>2026</strong> vale acompanhar a onda de <strong>bastidor</strong> sobre <em>Coração Acelerado</em>, registrada por exemplo na <a class="toc-link" href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a> e no <a class="toc-link" href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Lo-Bianco/iG</a>; o recorte analítico está em <a class="toc-link font-semibold" href="#midia-politica">Mídia, política e brand safety</a>.</p>
+                    <p>No <strong>digital</strong>, o Instagram <a class="toc-link" href="https://www.instagram.com/isadoracruz/">@isadoracruz</a> soma cerca de <strong>1,19 milhão</strong> de seguidores no painel do <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz">Social Blade</a> (captura de <strong>06/05/2026</strong>), enquanto a imprensa já citava <strong>784 mil+</strong> em <a class="toc-link" href="https://gente.ig.com.br/celebridades/2025-10-20/isadora-cruz-ganha-elogios-ao-posar-de-biquini-em-cachoeira.html">outubro/2025</a> no <strong>iG</strong>. No TikTok, o perfil <a class="toc-link" href="https://www.tiktok.com/@isadoracruzrocha">@isadoracruzrocha</a> (∼<strong>15,6 mil</strong> seguidores, ER <strong>2,11%</strong>) consta com métricas transcritas do <a class="toc-link" href="https://www.upfluence.com/">Upfluence</a>. Conforme o brief, <strong>não há</strong> perfil próprio no <strong>X</strong> nem canal no <strong>YouTube</strong> tratado como dela neste trabalho.</p>
+                    <p>Em <strong>marcas e instituições financeiras</strong>, o recorte público inclui Arezzo, Colorama, Bebecê e GE Beauty, além de editoriais em Glamour e menções a Dior em contexto de evento, <strong>sem</strong> prova de embaixada global. Já no âmbito da novela <em>Coração Acelerado</em> (19h, 2026), o <strong>Sicoob</strong> figura como <strong>parceiro de merchandising</strong> na trama sertaneja (cidade fictícia de Bom Retorno, em Goiás), o que explica menções em intervalos e em conteúdo publicitário ligado ao horário — e acende a leitura de <strong>concorrência simbólica</strong> com cooperativa/cartão se a Caixa buscar exclusividade absoluta em produto financeiro. O contexto documentado está em <a class="toc-link font-semibold" href="#sicoob-novela">Sicoob na novela</a>, dentro de <a class="toc-link font-semibold" href="#marcas">Marcas e concorrência</a>.</p>
+                    <p>Sobre <strong>política e espiritualidade</strong>, há registro de recepção no <a class="toc-link" href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Planalto em fevereiro/2026</a>, em contexto esportivo de Jogos de Inverno, enquanto entrevistas costumam trazer espiritualidade de forma leve; a leitura fina está na mesma seção de <a class="toc-link font-semibold" href="#midia-politica">mídia e brand safety</a>.</p>
                 </div>
                 <div class="shrink-0 rounded-lg bg-slate-100 px-8 py-6 text-center ring-1 ring-slate-200">
                     <p class="text-[10px] font-black uppercase text-slate-500">Risco global</p>
                     <p class="text-4xl font-black text-calia-emerald">BAIXO</p>
-                    <p class="mt-2 max-w-[11rem] text-[10px] text-slate-500">Bastidor 2026 pesa em marca ultra-conservadora; não é cancelamento viral.</p>
+                    <p class="mt-2 max-w-[13rem] text-[10px] text-slate-500 leading-snug">O clima de bastidor em <strong>2026</strong> pode incomodar narrativas ultraconservadoras, mas <strong>não</strong> se confunde com cancelamento viral em massa.</p>
                 </div>
             </div>
+        </section>
+
+        <section id="painel-visual" class="card-audit scroll-mt-24 border-l-4 border-calia-emerald">
+            <div class="section-header mb-4">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Painel visual (gráficos)</h2>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">Os gráficos abaixo traduzem, de forma sintética, o que já está escrito no corpo do dossiê: são <strong>modelos ilustrativos</strong>, e não painel comercial nem série temporal auditável. Em outras palavras, servem para dar <em>ordem de grandeza relativa</em> aos temas que mais aparecem no conteúdo público e aos vetores de risco que a equipe percebeu ao cruzar as fontes.</p>
+            <div class="grid gap-10 md:grid-cols-2 md:gap-8">
+                <div>
+                    <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Temas no conteúdo público (IG + TikTok)</p>
+                    <div class="chart-container"><canvas id="chartTemas" aria-label="Gráfico de rosca — temas nas redes"></canvas></div>
+                </div>
+                <div>
+                    <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Exposição relativa a vetores de risco (0–10)</p>
+                    <div class="chart-container"><canvas id="chartRisco" aria-label="Gráfico radar — brand safety"></canvas></div>
+                </div>
+            </div>
+            <p class="mt-6 text-xs text-slate-500 leading-relaxed"><strong>Rosca:</strong> os pesos são qualitativos e conversam com o que descrevemos em <a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a> — trabalho na TV, moda, relacionamento, Nordeste e causas. <strong>Radar:</strong> a escala de 0 a 10 é deliberadamente subjetiva, mas coerente com <a class="toc-link" href="#midia-politica">Mídia e brand safety</a>, onde o bastidor de <strong>2026</strong> pesa mais do que qualquer narrativa de cancelamento viral, onde apostas aparecem como eixo fraco e onde a <strong>concorrência institucional</strong> sobe de peso por causa do <a class="toc-link" href="#sicoob-novela">Sicoob patrocinador na mesma novela</a>.</p>
         </section>
 
         <section id="matriz" class="card-audit scroll-mt-24 border-l-4 border-calia-gold">
             <div class="section-header mb-4">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Matriz do pedido</h2>
             </div>
-            <p class="text-sm text-slate-700"><strong>Objetivo:</strong> perfil público da atriz para <strong>ação de cartão Caixa</strong> (temas nas redes, polêmica, política/religião, marcas, riscos).</p>
-            <p class="text-sm text-slate-700 mt-2"><strong>Método:</strong> imprensa + <a class="toc-link" href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a> + <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz">Social Blade</a> (IG) + <a class="toc-link" href="https://www.upfluence.com/">Upfluence</a> (TikTok) + amostra manual de <strong>menções no X</strong> (sem conta dela). Não substitui jurídico, contrato nem Instagram Pro.</p>
-            <p class="text-xs text-slate-600 mt-2">Deep research (IA + checagem) incorporada; Rolex / Dior Beauty como contrato global <strong>não</strong> verificados.</p>
+            <p class="text-sm text-slate-700 leading-relaxed">O <strong>objetivo</strong> é oferecer um retrato público da atriz para apoiar a <strong>ação de cartão da Caixa</strong>, cobrindo o que o e-mail pediu: temas nas redes, polêmica, política e religião quando aparecerem, marcas e demais pontos de risco ou oportunidade úteis à <strong>avaliação de marca</strong>.</p>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">No <strong>método</strong>, combinamos imprensa aberta, <a class="toc-link" href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a>, painel do <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz">Social Blade</a> para Instagram, métricas do <a class="toc-link" href="https://www.upfluence.com/">Upfluence</a> para TikTok e uma <strong>amostra manual de menções no X</strong>, já que ela não mantém perfil próprio na rede. Esse conjunto <strong>não substitui</strong> parecer jurídico, contratos assinados nem dados proprietários do Instagram Pro.</p>
+            <p class="text-xs text-slate-600 mt-3 leading-relaxed">Incorporamos ainda uma rodada de deep research com apoio de IA, sempre passada por checagem humana; em especial, tratativas tipo <strong>Rolex</strong> ou <strong>Dior Beauty</strong> como contrato global <strong>não</strong> foram verificadas nas fontes públicas que usamos.</p>
             <div class="overflow-x-auto mt-4">
                 <table class="w-full min-w-[28rem] border-collapse text-left text-xs text-slate-800">
                     <thead><tr class="border-b-2 border-calia-navy bg-slate-100">
@@ -121,12 +151,12 @@
                         <th class="p-2 font-black uppercase text-[9px] text-calia-navy">Lacuna</th>
                     </tr></thead>
                     <tbody class="divide-y divide-slate-200">
-                        <tr class="align-top"><td class="p-2 font-semibold">Perfil nas redes</td><td class="p-2"><a class="toc-link" href="#perfil-metricas">Perfil e métricas</a></td><td class="p-2 text-slate-600">Threads não mapeado.</td></tr>
-                        <tr class="align-top"><td class="p-2 font-semibold">Polêmica</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Versão oficial Globo/assessoria.</td></tr>
-                        <tr class="align-top"><td class="p-2 font-semibold">Política</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Arquivo de curtidas se exigido.</td></tr>
-                        <tr class="align-top"><td class="p-2 font-semibold">Religião</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Questionário assessoria se necessário.</td></tr>
-                        <tr class="align-top"><td class="p-2 font-semibold">Marcas / concorrência</td><td class="p-2"><a class="toc-link" href="#marcas">Marcas</a></td><td class="p-2 text-slate-600">Contratos; validar Sicoob.</td></tr>
-                        <tr class="align-top"><td class="p-2 font-semibold">Outros</td><td class="p-2"><a class="toc-link" href="#lacunas">Lacunas</a></td><td class="p-2 text-slate-600">Demografia IG Pro; certidões.</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Perfil nas redes</td><td class="p-2"><a class="toc-link" href="#perfil-metricas">Perfil e métricas</a></td><td class="p-2 text-slate-600">Threads ainda não mapeado neste dossiê.</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Polêmica</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Pode faltar ouvir versão oficial da Globo ou da assessoria, se o case exigir.</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Política</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Arquivo de curtidas ou histórico detalhado, se o compliance pedir.</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Religião</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Questionário à assessoria, se a marca quiser formalizar crença ou prática.</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Marcas / concorrência</td><td class="p-2"><a class="toc-link" href="#marcas">Marcas</a></td><td class="p-2 text-slate-600">Contratos da artista e cláusulas de exclusividade frente ao <strong>Sicoob</strong> já contratado pela Globo na novela (ver <a class="toc-link" href="#sicoob-novela">contexto</a>).</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Outros</td><td class="p-2"><a class="toc-link" href="#lacunas">Lacunas</a></td><td class="p-2 text-slate-600">Demografia fina via Instagram Pro; certidões e buscas judiciais.</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -139,7 +169,7 @@
                 <p class="profile-handle mt-2">TikTok @isadoracruzrocha</p>
             </div>
             <div class="bio-intro text-sm text-slate-700 leading-relaxed">
-                <p><strong>Isadora Cruz Rocha</strong> (João Pessoa, 04/02/1998), atriz Globo — <a class="toc-link" href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a>. Destaques: Candoca (<em>Mar do Sertão</em>), Roxelle (<em>Volta por Cima</em>), Rosa (<em>Guerreiros do Sol</em>), Agrado (<em>Coração Acelerado</em>, 2026). <a class="toc-link" href="https://oglobo.globo.com/play/noticia/2025/04/18/isadora-cruz-participa-da-nova-abertura-do-fantastico-veja-foto-exclusiva.ghtml">Fantástico 2025</a>.</p>
+                <p><strong>Isadora Cruz Rocha</strong>, nascida em João Pessoa em 04/02/1998, é atriz da TV Globo segundo a <a class="toc-link" href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a>. Na carreira, ganhou visibilidade com papéis como Candoca em <em>Mar do Sertão</em>, Roxelle em <em>Volta por Cima</em>, Rosa em <em>Guerreiros do Sol</em> e, em 2026, Agrado em <em>Coração Acelerado</em>. Em 2025, também repercutiu ao integrar a abertura do <a class="toc-link" href="https://oglobo.globo.com/play/noticia/2025/04/18/isadora-cruz-participa-da-nova-abertura-do-fantastico-veja-foto-exclusiva.ghtml">Fantástico</a>, conforme o <strong>O Globo</strong>.</p>
             </div>
             <div class="flex flex-wrap gap-2 mb-4">
                 <span class="metric-badge">IG ~1,19M · SB 06/05/26</span>
@@ -148,13 +178,13 @@
             </div>
             <div class="mb-4 rounded border-l-4 border-calia-gold bg-amber-50/50 p-3">
                 <p class="text-[10px] font-black uppercase text-calia-navy">O que mais aparece nas redes</p>
-                <p class="text-sm font-semibold text-slate-800 mt-1">Atriz Globo em evidência: <strong>trabalho</strong> (novela/bastidor), <strong>moda</strong>, <strong>namoro com Lucas Pinheiro Braathen</strong>, <strong>Nordeste</strong>. Tom em geral positivo; não é canal de militância partidária.</p>
+                <p class="text-sm font-semibold text-slate-800 mt-1 leading-relaxed">No recorte que analisamos, ela surge sobretudo como <strong>atriz da Globo em evidência</strong>, misturando <strong>trabalho</strong> (novela e bastidor), <strong>moda</strong>, <strong>namoro com Lucas Pinheiro Braathen</strong> e uma marca forte de <strong>Nordeste</strong>. O tom costuma ser positivo e, ao mesmo tempo, <strong>não</strong> se configura como canal de militância partidária contínua.</p>
             </div>
-            <ul class="text-sm text-slate-700 list-disc list-inside space-y-1 mb-6">
-                <li>Carreira — <a class="toc-link" href="https://gshow.globo.com/artistas/isadora-cruz">Gshow</a></li>
-                <li>Moda — <a class="toc-link" href="https://gshow.globo.com/comportamento/moda/noticia/isadora-cruz-e-lucas-pinheiro-marcam-presenca-no-rio-fashion-week.ghtml">Rio Fashion Week</a></li>
-                <li>ONG Milagre Sertão — <a class="toc-link" href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a></li>
-                <li>Sem perfil próprio no X/YouTube; vitrine: <strong>Instagram</strong> + <strong>TikTok</strong>.</li>
+            <ul class="text-sm text-slate-700 list-disc list-inside space-y-1.5 mb-6 leading-relaxed">
+                <li>A trajetória na emissora está consolidada no hub do <a class="toc-link" href="https://gshow.globo.com/artistas/isadora-cruz">Gshow</a>.</li>
+                <li>Em moda, há registro recente de presença no <a class="toc-link" href="https://gshow.globo.com/comportamento/moda/noticia/isadora-cruz-e-lucas-pinheiro-marcam-presenca-no-rio-fashion-week.ghtml">Rio Fashion Week</a>.</li>
+                <li>A <strong>ONG Milagre Sertão</strong> aparece como referência de causa na <a class="toc-link" href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a>.</li>
+                <li>Como ela <strong>não</strong> mantém perfil próprio no X nem canal no YouTube, tratamos <strong>Instagram</strong> e <strong>TikTok</strong> como vitrines centrais do discurso público dela.</li>
             </ul>
             <h3 class="text-sm font-black uppercase text-calia-navy mb-2">Instagram · Social Blade (06/05/2026)</h3>
             <div class="overflow-x-auto">
@@ -167,10 +197,11 @@
                     </tbody>
                 </table>
             </div>
-            <p class="text-xs text-slate-500 mt-2">Fonte: <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz">socialblade.com/instagram/user/isadoracruz</a>. SB pode bloquear <em>curl</em>; revalidar no browser perto do ar.</p>
-            <p class="text-xs text-slate-600 mt-3"><strong>TikTok SB:</strong> <a class="toc-link" href="https://socialblade.com/tiktok/user/isadoracruzrocha">socialblade.com/tiktok/user/isadoracruzrocha</a>. <strong>YouTube:</strong> sem canal próprio; vídeos em canais de marca/TV.</p>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">A tabela acima replica o painel público do <a class="toc-link" href="https://socialblade.com/instagram/user/isadoracruz">Social Blade</a>. Vale lembrar que o serviço costuma bloquear coleta automatizada (por exemplo via <em>curl</em>), de modo que recomendamos <strong>revalidar no navegador</strong> perto da data em que o material for ao ar.</p>
+            <p class="text-xs text-slate-600 mt-3 leading-relaxed">Para TikTok, o Social Blade também mantém ficha em <a class="toc-link" href="https://socialblade.com/tiktok/user/isadoracruzrocha">socialblade.com/tiktok/user/isadoracruzrocha</a>, em paralelo ao recorte do Upfluence abaixo. No <strong>YouTube</strong>, não há canal próprio dela nas fontes deste dossiê; o que existe são aparições em canais de marcas e de TV.</p>
 
-            <h3 class="text-sm font-black uppercase text-calia-navy mt-8 mb-2">TikTok · Upfluence (mai/2026)</h3>
+            <h3 id="redes-tiktok-upfluence" class="text-sm font-black uppercase text-calia-navy mt-8 mb-2 scroll-mt-24">TikTok · Upfluence (mai/2026)</h3>
+            <p class="text-xs text-slate-600 mb-2 leading-relaxed">Os números seguintes foram transcritos a partir do painel Upfluence em maio/2026; quando algum campo parecer estranho (como contagem de vídeos), o ideal é confrontar direto no aplicativo.</p>
             <div class="overflow-x-auto">
                 <table class="w-full max-w-lg text-sm border-collapse border border-slate-200">
                     <tbody>
@@ -186,11 +217,11 @@
             <div class="section-header">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">X — menções (sem perfil próprio)</h2>
             </div>
-            <p class="text-sm text-slate-700">Amostra manual de <strong>posts de terceiros</strong> (fev–mai/2026). Não é painel comercial completo.</p>
-            <ul class="mt-3 text-sm text-slate-700 list-disc list-inside space-y-1">
-                <li>Tom majoritariamente positivo: novela, Gabz, Olimpíadas.</li>
-                <li>Ruído: críticas a novela/personagem; sem campanha de cancelamento.</li>
-                <li><strong>Sicoob</strong> em intervalo comercial — ver <a class="toc-link font-semibold" href="#marcas">Marcas</a>.</li>
+            <p class="text-sm text-slate-700 leading-relaxed">Montamos uma <strong>amostra manual</strong> de posts de terceiros entre fevereiro e maio de 2026, já que ela não publica diretamente no X. Trata-se, portanto, de um recorte qualitativo, e não de um painel comercial com cobertura total da conversa.</p>
+            <ul class="mt-3 text-sm text-slate-700 list-disc list-inside space-y-1.5 leading-relaxed">
+                <li>O tom costuma ser majoritariamente positivo, puxado por novela, parceria com Gabz e Olimpíadas de Inverno.</li>
+                <li>Há ruído de críticas à trama ou ao personagem, mas <strong>não</strong> identificamos campanha estruturada de cancelamento contra o nome dela.</li>
+                <li>As menções ao <strong>Sicoob</strong> no X dialogam com o fato de a cooperativa ser <strong>patrocinadora com merchandising na trama</strong> de <em>Coração Acelerado</em> (19h, 2026), e não com um rumor isolado; o quadro institucional está em <a class="toc-link font-semibold" href="#sicoob-novela">Sicoob na novela</a> e em <a class="toc-link font-semibold" href="#marcas">Marcas e concorrência</a>.</li>
             </ul>
             <p class="mt-4 text-xs font-bold uppercase text-calia-navy">Âncoras</p>
             <ul class="source-list mt-2 space-y-1">
@@ -207,25 +238,20 @@
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Mídia, política e brand safety</h2>
             </div>
             <h3 class="text-xs font-black uppercase text-slate-600 mt-2">Polêmica / bastidor</h3>
-            <p class="text-sm text-slate-700 mt-1">Buscas por cancelamento não mostraram campanha viral contra o nome. <strong>2026:</strong> matérias de clima de gravação de <em>Coração Acelerado</em> — <a class="toc-link" href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a>, <a class="toc-link" href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Lo-Bianco/iG</a>, <a class="toc-link" href="https://observatoriodatv.com.br/colunas/alex-sampaio/estrela-trava-gravacoes-irrita-direcao-e-afunda-novela-das-sete">Observatório da TV</a>. Risco de <strong>percepção de profissionalismo</strong>, não escândalo moral documentado.</p>
-            <p class="text-sm text-slate-700 mt-2">Outros: <a class="toc-link" href="https://www.youtube.com/watch?v=BkwPigAS6fU">Porchat/GNT</a> (anedota); <a class="toc-link" href="https://g1.globo.com/fantastico/noticia/2025/05/05/isadora-cruz-fala-sobre-repercussao-de-cena-de-pedido-de-ajuda-contra-abuso-em-novela-foi-uma-corrente-de-informacao.ghtml">G1/Fantástico</a> (cena utilidade pública); <a class="toc-link" href="https://resumodasnovelas.ig.com.br/isadora-cruz-toma-partido-critica-joao-raul-em-coracao-acelerado-e-defende-agrado-muito-toxico/">metalinguagem de trama</a>.</p>
+            <p class="text-sm text-slate-700 mt-1 leading-relaxed">As buscas por cancelamento não revelaram campanha viral organizada contra o nome dela. O que existe, sobretudo em <strong>2026</strong>, é fôlego de imprensa sobre <strong>clima de gravação</strong> de <em>Coração Acelerado</em>, com textos na <a class="toc-link" href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a>, no <a class="toc-link" href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Lo-Bianco/iG</a> e no <a class="toc-link" href="https://observatoriodatv.com.br/colunas/alex-sampaio/estrela-trava-gravacoes-irrita-direcao-e-afunda-novela-das-sete">Observatório da TV</a>. Em outras palavras, o risco parece mais ligado a <strong>percepção de profissionalismo</strong> do que a escândalo moral documentado.</p>
+            <p class="text-sm text-slate-700 mt-3 leading-relaxed">Há ainda episódios pontuais, como relato no <a class="toc-link" href="https://www.youtube.com/watch?v=BkwPigAS6fU">Porchat/GNT</a> (anedota de convivência de elenco), repercussão no <a class="toc-link" href="https://g1.globo.com/fantastico/noticia/2025/05/05/isadora-cruz-fala-sobre-repercussao-de-cena-de-pedido-de-ajuda-contra-abuso-em-novela-foi-uma-corrente-de-informacao.ghtml">G1/Fantástico</a> sobre cena com utilidade pública e, no campo da ficção, <a class="toc-link" href="https://resumodasnovelas.ig.com.br/isadora-cruz-toma-partido-critica-joao-raul-em-coracao-acelerado-e-defende-agrado-muito-toxico/">comentários de metalinguagem de trama</a> que não devem ser lidos como posicionamento político.</p>
             <h3 class="text-xs font-black uppercase text-slate-600 mt-6">Política e espiritualidade</h3>
-            <p class="text-sm text-slate-700 mt-1"><strong>Planalto 27/02/2026</strong> com namorado atleta — <a class="toc-link" href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Portal Pop</a>; <a class="toc-link" href="https://www1.folha.uol.com.br/folha-topicos/isadora-cruz/">Folha Tópicos</a>. Sem militância partidária sistemática. Espiritualidade leve / ficção: <a class="toc-link" href="https://natelinha.uol.com.br/famosos/2024/12/31/isadora-cruz-ensina-ritual-para-o-reveillon-ja-tive-provas-220758.php">NaTelinha</a>, <a class="toc-link" href="https://www.clickpb.com.br/arte/isadora-cruz-momento-espiritual-grota-angicos-guerreiros-do-sol.html">ClickPB</a>, <a class="toc-link" href="https://natelinha.uol.com.br/novelas/2026/01/21/isadora-cruz-sobre-as-cenas-com-paula-fernandes-em-coracao-acelerado-misticas--236838.php">cenas místicas</a>.</p>
+            <p class="text-sm text-slate-700 mt-1 leading-relaxed">Em <strong>27/02/2026</strong> ela e o namorado atleta foram recebidos no Planalto, notícia registrada pelo <a class="toc-link" href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Portal Pop</a> e acompanhada pela página de <a class="toc-link" href="https://www1.folha.uol.com.br/folha-topicos/isadora-cruz/">Folha Tópicos</a>. Esse tipo de imagem entra no radar institucional, mas <strong>não</strong> configura, pelas fontes que vimos, militância partidária sistemática. Já a dimensão espiritual aparece de maneira leve em entrevistas e matérias de bastidor, como registros na <a class="toc-link" href="https://natelinha.uol.com.br/famosos/2024/12/31/isadora-cruz-ensina-ritual-para-o-reveillon-ja-tive-provas-220758.php">NaTelinha</a>, no <a class="toc-link" href="https://www.clickpb.com.br/arte/isadora-cruz-momento-espiritual-grota-angicos-guerreiros-do-sol.html">ClickPB</a> ou ao comentar <a class="toc-link" href="https://natelinha.uol.com.br/novelas/2026/01/21/isadora-cruz-sobre-as-cenas-com-paula-fernandes-em-coracao-acelerado-misticas--236838.php">cenas “místicas”</a> da novela.</p>
             <h3 class="text-xs font-black uppercase text-slate-600 mt-6">Brand safety</h3>
-            <ul class="text-sm text-slate-700 mt-2 list-disc list-inside space-y-1">
-                <li>Apostas: sem evidência nas fontes.</li>
-                <li>Conteúdo adulto: sem indício nas fontes.</li>
-                <li>Discurso discriminatório: sem histórico destacado nas fontes.</li>
-                <li>Halo casal / Olimpíadas — positivo; cuidado com recorte político de imagens em Brasília.</li>
-            </ul>
+            <p class="text-sm text-slate-700 mt-2 leading-relaxed">No conjunto das fontes deste dossiê, <strong>não</strong> apareceu evidência de envolvimento com apostas, conteúdo adulto explícito ou histórico relevante de discurso discriminatório. O <strong>halo</strong> do casal e das Olimpíadas tende a ser positivo para marcas, embora qualquer uso futuro de fotos em Brasília exija cuidado com o <strong>recorte político</strong> que a imagem pode carregar.</p>
             <div class="risk-analysis-box mt-6">
                 <div class="risk-analysis-box__head">Síntese CAIXA</div>
                 <div class="risk-analysis-box__body">
                     <div class="risk-analysis-box__name">Isadora Cruz</div>
-                    <ul class="text-sm text-slate-800 space-y-1 list-disc list-inside">
-                        <li>Risco <strong>baixo</strong> (apostas, crime, cancelamento viral).</li>
-                        <li><strong>Atenção</strong> bastidor 2026 e recorte político de fotos.</li>
-                        <li>Confirmar exclusividade e <strong>Sicoob</strong> antes de contrato.</li>
+                    <ul class="text-sm text-slate-800 space-y-2 list-disc list-inside leading-relaxed">
+                        <li>O risco permanece <strong>baixo</strong> nos eixos que mais importam a banco: apostas, crime e cancelamento viral em massa.</li>
+                        <li>Mesmo assim, recomendamos <strong>amadurecer</strong> o clima de bastidor de <strong>2026</strong> e o uso de imagens com carga política antes de peças institucionais sensíveis.</li>
+                        <li>Antes de fechar contrato, alinhar com jurídico e com a assessoria se há <strong>exclusividade financeira</strong> e como ela convive com o <strong>Sicoob</strong> já <a class="toc-link" href="#sicoob-novela">integrado à novela</a> pela Globo (patrocínio de trama, não necessariamente embaixada individual da atriz).</li>
                     </ul>
                 </div>
             </div>
@@ -235,25 +261,43 @@
             <div class="section-header">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Marcas e concorrência</h2>
             </div>
-            <ul class="text-sm text-slate-700 list-disc list-inside space-y-2">
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">Publicamente, ela já aparece associada a campanhas de <strong>Arezzo</strong> (Natal 2025), <strong>Colorama</strong>, <strong>Bebecê</strong> e <strong>GE Beauty</strong>, além de editoriais em <strong>Glamour</strong> e menções a <strong>Dior</strong> em contexto de evento de novela. Esses sinais ajudam a compor o guarda-roupa de marca, mas <strong>não substituem</strong> contrato nem briefing assinado com cada empresa.</p>
+            <ul class="text-sm text-slate-700 list-disc list-inside space-y-2 leading-relaxed">
                 <li><strong>Arezzo</strong> Natal 2025 — <a class="toc-link" href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a></li>
                 <li><strong>Colorama</strong> — <a class="toc-link" href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a></li>
                 <li><strong>Bebecê</strong> — <a class="toc-link" href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube marca</a></li>
                 <li><strong>GE Beauty</strong> — <a class="toc-link" href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">blog</a></li>
                 <li><strong>Editorial</strong> Glamour / Dior em evento — <a class="toc-link" href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour</a>; <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow</a> (não prova embaixada global).</li>
             </ul>
-            <p class="text-sm text-slate-700 mt-4"><strong>IF / cartão:</strong> sem campanha pública de banco/fintech/bandeira nas fontes. <strong>Sicoob</strong> citado em <strong>menções no X</strong> sobre intervalo de <em>Coração Acelerado</em> (abr/2026) — validar peça e exclusividade com assessoria.</p>
+            <div id="sicoob-novela" class="deep-dive-box mt-6 scroll-mt-24 text-sm text-slate-700 leading-relaxed">
+                <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Sicoob na novela (contexto institucional)</p>
+                <p>O <strong>Sicoob</strong> integra, como <strong>marca patrocinadora</strong>, a novela das 19h da TV Globo <em>Coração Acelerado</em> (2026), de pauta <strong>sertaneja</strong> e cenário na cidade fictícia de <strong>Bom Retorno</strong> (GO), conforme descreve o <a class="toc-link" href="https://valor.globo.com/empresas/marketing/noticia/2026/01/08/sicoob-participa-pela-terceira-vez-de-novela-da-globo-com-tematica-rural.ghtml">Valor Econômico</a>. Na prática de merchandising, a cooperativa aparece no cotidiano da trama para falar de <strong>conta digital, crédito, investimentos e cooperativismo financeiro</strong>, além de reforçar atributos como confiança e solidez em narrativas de empreendedorismo e mobilidade social — linha que a própria marca resume em conteúdo publicitário no <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/especial-publicitario/sicoob/noticia/presente-em-coracao-acelerado-sicoob-tambem-transforma-historias-reais.ghtml">Gshow (especial publicitário Sicoob)</a>.</p>
+                <p class="mt-2">O <strong>Valor</strong> ainda posiciona esta como a <strong>terceira</strong> vez que o Sicoob entra em novela rural da Globo, após <em>Terra e Paixão</em> (2023) e <em>No Rancho Fundo</em> (2024) — ou seja, há um <strong>histórico de parceria</strong> entre cooperativa e ficção de horário nobre, com lógica de alcance em massa.</p>
+                <p class="mt-2 text-xs text-slate-600">Para a Caixa, isso <strong>separa</strong> o ruído no X de um suposto endosso pessoal isolado: a presença do Sicoob decorre sobretudo do <strong>contrato Globo × patrocinador</strong>. Mesmo assim, só a documentação comercial e a assessoria da atriz dizem se há qualquer obrigação individual ou conflito com campanha de cartão em paralelo.</p>
+            </div>
+            <div class="mt-8 rounded-lg border border-slate-200 bg-slate-50/80 p-5 md:p-6">
+                <p class="text-[10px] font-black uppercase text-calia-navy mb-4">Linha do tempo (campanhas e destaques citados)</p>
+                <div class="timeline-rail text-sm text-slate-700">
+                    <div class="timeline-item timeline-item--ok"><strong>2021</strong> — <strong>Colorama</strong> — <a class="toc-link" href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a></div>
+                    <div class="timeline-item timeline-item--ok"><strong>2022</strong> — <strong>Glamour</strong> (capa) — <a class="toc-link" href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour</a></div>
+                    <div class="timeline-item timeline-item--ok"><strong>2024</strong> — <strong>Bebecê</strong> — <a class="toc-link" href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube marca</a></div>
+                    <div class="timeline-item timeline-item--ok"><strong>2025</strong> — <strong>Arezzo</strong> Natal — <a class="toc-link" href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a></div>
+                    <div class="timeline-item"><strong>2025–26</strong> — <strong>GE Beauty</strong> — <a class="toc-link" href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">blog</a>; look Dior em evento — <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow</a></div>
+                </div>
+            </div>
+            <p class="text-sm text-slate-700 mt-4 leading-relaxed">No recorte de <strong>instituições financeiras e cartão</strong>, <strong>não</strong> encontramos campanha pública de banco, fintech ou bandeira vinculada ao <strong>nome pessoal</strong> da artista. Por outro lado, como ela protagoniza justamente a novela em que o <strong>Sicoob</strong> é <strong>patrocinador com merchandising na trama</strong>, qualquer análise de exclusividade precisa cruzar o bloco <a class="toc-link font-semibold" href="#sicoob-novela">Sicoob na novela</a> com os contratos da Globo, da cooperativa e da assessoria dela — e não se resolver só pela leitura de posts no X.</p>
         </section>
 
         <section id="lacunas" class="card-audit scroll-mt-24 bg-slate-50 border border-dashed border-slate-300">
             <div class="section-header">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Lacunas</h2>
             </div>
-            <ul class="text-sm text-slate-700 list-disc list-inside space-y-1">
-                <li>Contratos e exclusividade só com documento ou marca.</li>
-                <li>Certidões / judicial: fora do escopo de imprensa aberta.</li>
-                <li>Demografia de seguidores: Instagram Pro / assessoria.</li>
-                <li>TikTok “total vídeos = 0” no Upfluence: conferir no app.</li>
+            <ul class="text-sm text-slate-700 list-disc list-inside space-y-2 leading-relaxed">
+                <li>Contratos vigentes e cláusulas de exclusividade só podem ser cravados com documento da marca ou da assessoria.</li>
+                <li>Certidões negativas e buscas judiciais completas ficam fora do que imprensa aberta consegue provar.</li>
+                <li>A demografia fina de seguidores depende de Instagram Pro ou de dados que a própria equipe da artista compartilhe.</li>
+                <li>O campo “total de vídeos = 0” no export do Upfluence merece conferência direta no aplicativo do TikTok.</li>
+                <li>O encaixe entre <strong>exclusividade de cartão</strong> na campanha da Caixa e o <strong>Sicoob integrado à novela</strong> só se fecha com documentação comercial da Globo e da assessoria da atriz.</li>
             </ul>
         </section>
 
@@ -261,7 +305,7 @@
             <div class="section-header">
                 <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Fontes consultadas (links)</h2>
             </div>
-            <p class="mb-4 text-xs leading-relaxed text-slate-600">Lista consolidada; o corpo repete os links principais.</p>
+            <p class="mb-4 text-xs leading-relaxed text-slate-600">Esta lista consolida as URLs consultadas. Ao longo do texto elas reaparecem sempre que sustentam um fato ou um juízo específico, para que o leitor não precise depender só do rodapé.</p>
             <ol class="source-list text-slate-700 list-decimal list-inside space-y-2">
                 <li><a href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a> — bastidores <em>Coração Acelerado</em> (2026)</li>
                 <li><a href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Alessandro Lo-Bianco / iG</a> — tensão de bastidor (2026)</li>
@@ -301,6 +345,8 @@
                 <li><a href="https://www.metropoles.com/esportes/namorada-de-lucas-pinheiro-isadora-cruz-comemora-ouro-olimpico">Metrópoles</a> — ouro olímpico</li>
                 <li><a href="https://extra.globo.com/entretenimento/tv/noticia/2026/04/as-donas-da-voz-isadora-cruz-e-gabz-celebram-o-sucesso-de-agrado-and-eduarda-em-coracao-acelerado.ghtml">Extra</a> — “As donas da voz” com Gabz</li>
                 <li><a href="https://www.noticiasdatv.uol.com.br/tudo-sobre/isadora-cruz">Notícias da TV</a> — página “tudo sobre”</li>
+                <li><a href="https://valor.globo.com/empresas/marketing/noticia/2026/01/08/sicoob-participa-pela-terceira-vez-de-novela-da-globo-com-tematica-rural.ghtml">Valor Econômico</a> — Sicoob em <em>Coração Acelerado</em> (merchandising novela 19h, 2026; terceira parceria rural na Globo)</li>
+                <li><a href="https://gshow.globo.com/novelas/coracao-acelerado/especial-publicitario/sicoob/noticia/presente-em-coracao-acelerado-sicoob-tambem-transforma-historias-reais.ghtml">Gshow — especial publicitário Sicoob</a> — conteúdo de marca na novela</li>
                 <li><a href="https://www.tiktok.com/@isadoracruzrocha">TikTok @isadoracruzrocha</a> (perfil público)</li>
                 <li><a href="https://www.upfluence.com/">Upfluence</a> — métricas TikTok transcritas em <a class="toc-link" href="#redes-tiktok-upfluence">TikTok — métricas (Upfluence)</a> (captura interna, maio/2026)</li>
                 <li><a href="https://www.instagram.com/isadoracruz/">Instagram @isadoracruz</a></li>
@@ -311,7 +357,7 @@
 
 
         <footer class="text-center p-8 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r13-objetivo-reduzido | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
+            Rev. 20260506-isadora-cruz-cartao-r17-sem-due-diligence | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
         </footer>
     </div>
 
@@ -326,6 +372,70 @@
             const buf = new TextEncoder().encode(text);
             const hash = await crypto.subtle.digest('SHA-256', buf);
             return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function initCharts() {
+            if (typeof Chart === 'undefined') return;
+            const tooltipTitle = (items) => (items[0]?.label ?? '');
+            const doughnutColors = ['#252525', '#f9a619', '#009966', '#0f766e', '#94a3b8'];
+            const temasEl = document.getElementById('chartTemas');
+            const riscoEl = document.getElementById('chartRisco');
+            if (!temasEl || !riscoEl) return;
+
+            new Chart(temasEl, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Trabalho / TV', 'Moda / beleza', 'Relacionamento', 'Nordeste / causas', 'Outros'],
+                    datasets: [{
+                        data: [38, 22, 20, 12, 8],
+                        backgroundColor: doughnutColors,
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
+                        title: { display: true, text: 'Temas (modelo ilustrativo)', font: { size: 12, weight: '700' }, color: '#252525' },
+                        tooltip: { callbacks: { title: tooltipTitle } }
+                    }
+                }
+            });
+
+            new Chart(riscoEl, {
+                type: 'radar',
+                data: {
+                    labels: ['Política / imagem', 'Bastidor / mídia', 'Apostas', 'Concorrência IF', 'Polêmica viral'],
+                    datasets: [{
+                        label: 'Exposição relativa (0–10)',
+                        data: [4, 5, 1, 5, 2],
+                        backgroundColor: 'rgba(249, 166, 25, 0.22)',
+                        borderColor: '#f9a619',
+                        pointBackgroundColor: '#252525',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 10,
+                            ticks: { stepSize: 2, backdropColor: 'transparent' },
+                            grid: { color: 'rgba(37, 37, 37, 0.12)' },
+                            angleLines: { color: 'rgba(37, 37, 37, 0.12)' },
+                            pointLabels: { font: { size: 10 } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: true, text: 'Brand safety — modelo qualitativo', font: { size: 12, weight: '700' }, color: '#252525' }
+                    }
+                }
+            });
         }
 
         document.getElementById('access-form').addEventListener('submit', async (e) => {
@@ -351,7 +461,7 @@
             }
             document.getElementById('access-gate').classList.add('hidden');
             document.getElementById('dossier-root').classList.remove('hidden');
-            
+            requestAnimationFrame(() => requestAnimationFrame(() => initCharts()));
         });
     </script>
 </body>
