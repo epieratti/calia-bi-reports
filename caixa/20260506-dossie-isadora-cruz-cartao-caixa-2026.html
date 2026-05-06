@@ -138,7 +138,7 @@
                     <div class="chart-container"><canvas id="chartRisco" aria-label="Gráfico radar — brand safety"></canvas></div>
                 </div>
             </div>
-            <p class="mt-6 text-xs text-slate-500 leading-relaxed"><strong>Rosca:</strong> os pesos são qualitativos e conversam com o que descrevemos em <a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a> — trabalho na TV, moda, relacionamento, Nordeste e causas. <strong>Radar:</strong> a escala de 0 a 10 é deliberadamente subjetiva, mas coerente com <a class="toc-link" href="#midia-politica">Mídia e brand safety</a>, onde o bastidor de <strong>2026</strong> pesa mais do que qualquer narrativa de cancelamento viral, onde apostas aparecem como eixo fraco e onde a <strong>concorrência institucional</strong> sobe de peso por causa do <a class="toc-link" href="#sicoob-novela">Sicoob patrocinador contratado pela Globo</a> na mesma novela em que ela atua.</p>
+            <p class="mt-6 text-xs text-slate-500 leading-relaxed"><strong>Rosca:</strong> os pesos são qualitativos e conversam com o que descrevemos em <a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a> — trabalho na TV, moda, relacionamento, Nordeste e causas. <strong>Radar:</strong> a escala de 0 a 10 é deliberadamente subjetiva, mas coerente com <a class="toc-link" href="#midia-politica">Mídia e brand safety</a>, onde o bastidor de <strong>2026</strong> pesa mais do que qualquer narrativa de cancelamento viral, onde apostas aparecem como eixo fraco e onde o eixo <strong>“Concorrência financeira”</strong> (outra instituição do setor na mesma trama, ex.: Sicoob por contrato Globo) sobe de peso.</p>
         </section>
 
         <section id="matriz" class="card-audit scroll-mt-24 border-l-4 border-calia-gold">
@@ -348,7 +348,7 @@
 
 
         <footer class="text-center p-8 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r19-sem-lacunas-fontes-compactas | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
+            Rev. 20260506-isadora-cruz-cartao-r20-radar-concorrencia-financeira | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
         </footer>
     </div>
 
@@ -398,7 +398,7 @@
             new Chart(riscoEl, {
                 type: 'radar',
                 data: {
-                    labels: ['Política / imagem', 'Bastidor / mídia', 'Apostas', 'Concorrência IF', 'Polêmica viral'],
+                    labels: ['Política / imagem', 'Bastidor / mídia', 'Apostas', ['Concorrência', 'financeira'], 'Polêmica viral'],
                     datasets: [{
                         label: 'Exposição relativa (0–10)',
                         data: [4, 5, 1, 5, 2],
