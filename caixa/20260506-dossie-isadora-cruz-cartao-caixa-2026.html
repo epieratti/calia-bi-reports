@@ -44,6 +44,12 @@
         .toc-list li:first-child { margin-top: 0; }
         .source-list { font-size: 0.8125rem; line-height: 1.6; }
         .source-list a { color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+        .card-audit--fontes { padding: 0.6rem 0.85rem !important; box-shadow: none; page-break-after: auto !important; }
+        .card-audit--fontes .section-header { margin-bottom: 0.3rem; padding-left: 0.65rem; border-left-width: 4px; }
+        .fontes-columns { column-count: 2; column-gap: 1rem; font-size: 10px; line-height: 1.3; }
+        @media (min-width: 1024px) { .fontes-columns { column-count: 3; column-gap: 1.1rem; } }
+        .fontes-columns p { margin: 0 0 0.1rem; break-inside: avoid; page-break-inside: avoid; }
+        .fontes-columns a { color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; word-break: break-word; }
         .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 280px; }
         @media (min-width: 768px) { .chart-container { height: 320px; } }
         .timeline-rail { position: relative; border-left: 2px solid #e2e8f0; padding-left: 1.25rem; margin-left: 0.35rem; }
@@ -95,7 +101,6 @@
                 <li><a class="toc-link" href="#x-mencoes">X — menções (sem perfil dela)</a></li>
                 <li><a class="toc-link" href="#midia-politica">Mídia, política e brand safety</a></li>
                 <li><a class="toc-link" href="#marcas">Marcas e concorrência</a></li>
-                <li><a class="toc-link" href="#lacunas">Lacunas</a></li>
                 <li><a class="toc-link" href="#fontes">Fontes</a></li>
             </ul>
         </nav>
@@ -156,7 +161,7 @@
                         <tr class="align-top"><td class="p-2 font-semibold">Política</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Arquivo de curtidas ou histórico detalhado, se o compliance pedir.</td></tr>
                         <tr class="align-top"><td class="p-2 font-semibold">Religião</td><td class="p-2"><a class="toc-link" href="#midia-politica">Mídia</a></td><td class="p-2 text-slate-600">Questionário à assessoria, se a marca quiser formalizar crença ou prática.</td></tr>
                         <tr class="align-top"><td class="p-2 font-semibold">Marcas / concorrência</td><td class="p-2"><a class="toc-link" href="#marcas">Marcas</a></td><td class="p-2 text-slate-600">Separar <strong>contrato Caixa × artista</strong> de <strong>contrato Globo × Sicoob</strong> na obra; o segundo <strong>não</strong> vincula a atriz diretamente, salvo cláusula específica no contrato dela com a Globo (ver <a class="toc-link" href="#sicoob-novela">contexto</a>).</td></tr>
-                        <tr class="align-top"><td class="p-2 font-semibold">Outros</td><td class="p-2"><a class="toc-link" href="#lacunas">Lacunas</a></td><td class="p-2 text-slate-600">Demografia fina via Instagram Pro; certidões e buscas judiciais.</td></tr>
+                        <tr class="align-top"><td class="p-2 font-semibold">Outros</td><td class="p-2 text-slate-600">Limites de método</td><td class="p-2 text-slate-600 text-[11px] leading-snug">Contratos/exclusividade: só com documento. Certidões ou busca judicial ampla: fora do escopo de imprensa aberta. Demografia fina de seguidores: Instagram Pro. TikTok “total vídeos = 0” no export Upfluence: conferir no app. Cartão Caixa × patrocínio Globo × Sicoob na novela: ver <a class="toc-link" href="#marcas">Marcas</a>.</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -288,76 +293,62 @@
             <p class="text-sm text-slate-700 mt-4 leading-relaxed">No recorte de <strong>instituições financeiras e cartão</strong>, <strong>não</strong> encontramos campanha pública de banco, fintech ou bandeira vinculada ao <strong>nome pessoal</strong> da artista. Por outro lado, como ela protagoniza a novela em que o <strong>Sicoob</strong> aparece por <strong>patrocínio Globo × Sicoob</strong>, qualquer análise de exclusividade deve cruzar o bloco <a class="toc-link font-semibold" href="#sicoob-novela">Sicoob na novela</a> com o <strong>contrato comercial Globo–Sicoob</strong> (patrocínio do produto) e, em paralelo, com o <strong>contrato Caixa × artista</strong> — <strong>sem</strong> inferir vínculo negocial direto artista × Sicoob a partir da ficção.</p>
         </section>
 
-        <section id="lacunas" class="card-audit scroll-mt-24 bg-slate-50 border border-dashed border-slate-300">
+        <section id="fontes" class="card-audit card-audit--fontes scroll-mt-24 border border-slate-200">
             <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Lacunas</h2>
+                <h2 class="text-xs font-black text-calia-navy uppercase tracking-tight">Fontes</h2>
             </div>
-            <ul class="text-sm text-slate-700 list-disc list-inside space-y-2 leading-relaxed">
-                <li>Contratos vigentes e cláusulas de exclusividade só podem ser cravados com documento da marca ou da assessoria.</li>
-                <li>Certidões negativas e buscas judiciais completas ficam fora do que imprensa aberta consegue provar.</li>
-                <li>A demografia fina de seguidores depende de Instagram Pro ou de dados que a própria equipe da artista compartilhe.</li>
-                <li>O campo “total de vídeos = 0” no export do Upfluence merece conferência direta no aplicativo do TikTok.</li>
-                <li>O encaixe entre <strong>exclusividade de cartão</strong> na campanha da Caixa e o <strong>Sicoob na novela</strong> exige ver o <strong>contrato Globo × Sicoob</strong> (patrocínio da obra) e o <strong>contrato Caixa × artista</strong>; <strong>não</strong> se assume contrato pessoal da atriz com o Sicoob.</li>
-            </ul>
-        </section>
-
-        <section id="fontes" class="card-audit scroll-mt-24">
-            <div class="section-header">
-                <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Fontes consultadas (links)</h2>
+            <div class="fontes-columns text-slate-700">
+                <p><a href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a></p>
+                <p><a href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Lo-Bianco / iG</a></p>
+                <p><a href="https://observatoriodatv.com.br/colunas/alex-sampaio/estrela-trava-gravacoes-irrita-direcao-e-afunda-novela-das-sete">Observatório da TV</a></p>
+                <p><a href="https://resumodasnovelas.ig.com.br/isadora-cruz-toma-partido-critica-joao-raul-em-coracao-acelerado-e-defende-agrado-muito-toxico/">Resumo das Novelas / iG</a></p>
+                <p><a href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia</a></p>
+                <p><a href="https://gente.ig.com.br/celebridades/2025-10-20/isadora-cruz-ganha-elogios-ao-posar-de-biquini-em-cachoeira.html">iG Gente</a></p>
+                <p><a href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a></p>
+                <p><a href="https://www.revistastile.com.br/isadora-cruz-estrela-campanha-de-natal-2025-da-arezzo-que-celebra-a-forca-da-presenca-e-o-protagonismo-feminino/">Revista Stile</a></p>
+                <p><a href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a></p>
+                <p><a href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube Bebecê</a></p>
+                <p><a href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">GE Beauty</a></p>
+                <p><a href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour</a></p>
+                <p><a href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow · look Dior</a></p>
+                <p><a href="https://gshow.globo.com/comportamento/moda/noticia/isadora-cruz-e-lucas-pinheiro-marcam-presenca-no-rio-fashion-week.ghtml">Gshow · RFW</a></p>
+                <p><a href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Portal Pop</a></p>
+                <p><a href="https://www1.folha.uol.com.br/folha-topicos/isadora-cruz/">Folha Tópicos</a></p>
+                <p><a href="https://f5.folha.uol.com.br/colunistas/outro-canal/2025/05/destaque-de-volta-por-cima-isadora-cruz-vai-protagonizar-novela-sobre-sertanejo-na-globo.shtml">F5 / Folha</a></p>
+                <p><a href="https://oglobo.globo.com/play/noticia/2025/04/18/isadora-cruz-participa-da-nova-abertura-do-fantastico-veja-foto-exclusiva.ghtml">O Globo</a></p>
+                <p><a href="https://natelinha.uol.com.br/famosos/tudo-sobre/isadora-cruz">NaTelinha · arquivo</a></p>
+                <p><a href="https://natelinha.uol.com.br/novelas/2026/01/21/isadora-cruz-sobre-as-cenas-com-paula-fernandes-em-coracao-acelerado-misticas--236838.php">NaTelinha · “místicas”</a></p>
+                <p><a href="https://natelinha.uol.com.br/televisao/2025/01/21/isadora-cruz-exalta-trajetoria-feminista-de-roxelle-em-volta-por-cima-tapa-na-cara-221522.php">NaTelinha · Roxelle</a></p>
+                <p><a href="https://natelinha.uol.com.br/famosos/2024/12/31/isadora-cruz-ensina-ritual-para-o-reveillon-ja-tive-provas-220758.php">NaTelinha · Réveillon</a></p>
+                <p><a href="https://www.clickpb.com.br/arte/isadora-cruz-momento-espiritual-grota-angicos-guerreiros-do-sol.html">ClickPB</a></p>
+                <p><a href="https://heloisatolipan.com.br/tv/isadora-cruz-vive-fase-luminosa-na-tv-emociona-com-experiencia-espiritual-e-estreia-guerreiros-do-sol/">Heloisa Tolipan</a></p>
+                <p><a href="https://www.bonsfluidos.com.br/espiritualidade/atriz-vive-experiencias-sobrenaturais-durante-gravacao-de-guerreiros-do-sol-energia-muito-pesada.phtml">Bons Fluidos</a></p>
+                <p><a href="https://g1.globo.com/fantastico/noticia/2025/05/05/isadora-cruz-fala-sobre-repercussao-de-cena-de-pedido-de-ajuda-contra-abuso-em-novela-foi-uma-corrente-de-informacao.ghtml">G1 / Fantástico</a></p>
+                <p><a href="https://www.youtube.com/watch?v=BkwPigAS6fU">YouTube Porchat</a></p>
+                <p><a href="https://revistaquem.globo.com/noticias/amor-e-sexo/noticia/2025/06/isadora-cruz-assume-namoro-com-esquiador-e-compartilha-fotos-romanticas-na-espanha.ghtml">Revista Quem</a></p>
+                <p><a href="https://natelinha.uol.com.br/famosos/2026/02/24/isadora-cruz-sobre-namoro-com-lucas-braathen-desafio-diario-238399.php">NaTelinha · namoro</a></p>
+                <p><a href="https://g1.globo.com/pop-arte/tv-e-series/noticia/2026/02/14/esquiador-lucas-pinheiro-vive-romance-com-protagonista-de-novela-da-globo-isadora-cruz.ghtml">g1 · casal</a></p>
+                <p><a href="https://gshow.globo.com/cultura-pop/famosos/noticia/lucas-pinheiro-ganha-declaracao-de-isadora-cruz.ghtml">Gshow · declaração</a></p>
+                <p><a href="https://ge.globo.com/olimpiadas-de-inverno/noticia/2026/02/16/isadora-cruz-enaltece-feito-de-lucas-pinheiro-apesar-de-queda-dias-de-luta-e-dias-de-gloria.ghtml">ge</a></p>
+                <p><a href="https://gente.ig.com.br/tvenovela/novelas/2026-03-18/isadora-cruz-celebra-fase-da-carreira-e-protagonismo-na-tv.html">iG Gente · mar/2026</a></p>
+                <p><a href="https://gente.ig.com.br/celebridades/2026-04-09/isadora-cruz-surge-em-clima-de-romance-com-atleta---lindos-.html">iG Gente · abr/2026</a></p>
+                <p><a href="https://f5.folha.uol.com.br/celebridades/2026/05/isadora-cruz-diz-que-cresceu-ouvindo-shakira-e-quer-rihanna-no-rio-eu-acampava-um-dia-antes.shtml">F5 / Folha · mai/2026</a></p>
+                <p><a href="https://www.metropoles.com/esportes/namorada-de-lucas-pinheiro-isadora-cruz-comemora-ouro-olimpico">Metrópoles</a></p>
+                <p><a href="https://extra.globo.com/entretenimento/tv/noticia/2026/04/as-donas-da-voz-isadora-cruz-e-gabz-celebram-o-sucesso-de-agrado-and-eduarda-em-coracao-acelerado.ghtml">Extra</a></p>
+                <p><a href="https://www.noticiasdatv.uol.com.br/tudo-sobre/isadora-cruz">Notícias da TV</a></p>
+                <p><a href="https://valor.globo.com/empresas/marketing/noticia/2026/01/08/sicoob-participa-pela-terceira-vez-de-novela-da-globo-com-tematica-rural.ghtml">Valor · Sicoob</a></p>
+                <p><a href="https://gshow.globo.com/novelas/coracao-acelerado/especial-publicitario/sicoob/noticia/presente-em-coracao-acelerado-sicoob-tambem-transforma-historias-reais.ghtml">Gshow · Sicoob</a></p>
+                <p><a href="https://www.tiktok.com/@isadoracruzrocha">TikTok</a></p>
+                <p><a href="https://www.upfluence.com/">Upfluence</a> · <a class="toc-link" href="#redes-tiktok-upfluence">métricas TikTok</a></p>
+                <p><a href="https://www.instagram.com/isadoracruz/">Instagram</a></p>
+                <p><a href="https://www.wikidata.org/wiki/Q114002285">Wikidata</a></p>
+                <p><a href="https://socialblade.com/instagram/user/isadoracruz">Social Blade</a></p>
             </div>
-            <p class="mb-4 text-xs leading-relaxed text-slate-600">Esta lista consolida as URLs consultadas. Ao longo do texto elas reaparecem sempre que sustentam um fato ou um juízo específico, para que o leitor não precise depender só do rodapé.</p>
-            <ol class="source-list text-slate-700 list-decimal list-inside space-y-2">
-                <li><a href="https://veja.abril.com.br/cultura/isadora-cruz-de-coracao-acelerado-da-dor-de-cabeca-a-tv-globo/">VEJA</a> — bastidores <em>Coração Acelerado</em> (2026)</li>
-                <li><a href="https://lobianco.ig.com.br/2026-03-18/tensao-bastidores-coracao-acelerado.html">Alessandro Lo-Bianco / iG</a> — tensão de bastidor (2026)</li>
-                <li><a href="https://observatoriodatv.com.br/colunas/alex-sampaio/estrela-trava-gravacoes-irrita-direcao-e-afunda-novela-das-sete">Observatório da TV</a> — coluna (cita Lo-Bianco)</li>
-                <li><a href="https://resumodasnovelas.ig.com.br/isadora-cruz-toma-partido-critica-joao-raul-em-coracao-acelerado-e-defende-agrado-muito-toxico/">Resumo das Novelas / iG</a> — comentário sobre trama (personagens)</li>
-                <li><a href="https://pt.wikipedia.org/wiki/Isadora_Cruz">Wikipédia — Isadora Cruz</a></li>
-                <li><a href="https://gente.ig.com.br/celebridades/2025-10-20/isadora-cruz-ganha-elogios-ao-posar-de-biquini-em-cachoeira.html">iG Gente</a> — seguidores (20/10/2025)</li>
-                <li><a href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a> — Arezzo Natal 2025</li>
-                <li><a href="https://www.revistastile.com.br/isadora-cruz-estrela-campanha-de-natal-2025-da-arezzo-que-celebra-a-forca-da-presenca-e-o-protagonismo-feminino/">Revista Stile</a> — Arezzo</li>
-                <li><a href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a> — Colorama</li>
-                <li><a href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube — Bebecê</a> (campanha Verão 2024, ver marcas)</li>
-                <li><a href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">GE Beauty</a> — conteúdo de beleza</li>
-                <li><a href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour</a> — capa 2022</li>
-                <li><a href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow</a> — look Dior em evento</li>
-                <li><a href="https://gshow.globo.com/comportamento/moda/noticia/isadora-cruz-e-lucas-pinheiro-marcam-presenca-no-rio-fashion-week.ghtml">Gshow</a> — Rio Fashion Week</li>
-                <li><a href="https://portalpopnoticias.com.br/2026/02/28/atriz-paraibana-e-namorado-medalhista-de-ouro-dos-jogos-de-inverno-sao-recebidos-por-lula/">Portal Pop Notícias</a> — Planalto 2026</li>
-                <li><a href="https://www1.folha.uol.com.br/folha-topicos/isadora-cruz/">Folha — Tópicos Isadora Cruz</a></li>
-                <li><a href="https://f5.folha.uol.com.br/colunistas/outro-canal/2025/05/destaque-de-volta-por-cima-isadora-cruz-vai-protagonizar-novela-sobre-sertanejo-na-globo.shtml">F5 / Folha</a> — protagonismo</li>
-                <li><a href="https://oglobo.globo.com/play/noticia/2025/04/18/isadora-cruz-participa-da-nova-abertura-do-fantastico-veja-foto-exclusiva.ghtml">O Globo</a> — Fantástico</li>
-                <li><a href="https://natelinha.uol.com.br/famosos/tudo-sobre/isadora-cruz">NaTelinha</a> — arquivo</li>
-                <li><a href="https://natelinha.uol.com.br/novelas/2026/01/21/isadora-cruz-sobre-as-cenas-com-paula-fernandes-em-coracao-acelerado-misticas--236838.php">NaTelinha</a> — cenas “místicas”</li>
-                <li><a href="https://natelinha.uol.com.br/televisao/2025/01/21/isadora-cruz-exalta-trajetoria-feminista-de-roxelle-em-volta-por-cima-tapa-na-cara-221522.php">NaTelinha</a> — Roxelle / feminismo</li>
-                <li><a href="https://natelinha.uol.com.br/famosos/2024/12/31/isadora-cruz-ensina-ritual-para-o-reveillon-ja-tive-provas-220758.php">NaTelinha</a> — Réveillon</li>
-                <li><a href="https://www.clickpb.com.br/arte/isadora-cruz-momento-espiritual-grota-angicos-guerreiros-do-sol.html">ClickPB</a> — gravações</li>
-                <li><a href="https://heloisatolipan.com.br/tv/isadora-cruz-vive-fase-luminosa-na-tv-emociona-com-experiencia-espiritual-e-estreia-guerreiros-do-sol/">Heloisa Tolipan</a></li>
-                <li><a href="https://www.bonsfluidos.com.br/espiritualidade/atriz-vive-experiencias-sobrenaturais-durante-gravacao-de-guerreiros-do-sol-energia-muito-pesada.phtml">Bons Fluidos</a></li>
-                <li><a href="https://g1.globo.com/fantastico/noticia/2025/05/05/isadora-cruz-fala-sobre-repercussao-de-cena-de-pedido-de-ajuda-contra-abuso-em-novela-foi-uma-corrente-de-informacao.ghtml">G1</a> — violência doméstica / Fantástico</li>
-                <li><a href="https://www.youtube.com/watch?v=BkwPigAS6fU">YouTube — Que História é Essa, Porchat?</a></li>
-                <li><a href="https://revistaquem.globo.com/noticias/amor-e-sexo/noticia/2025/06/isadora-cruz-assume-namoro-com-esquiador-e-compartilha-fotos-romanticas-na-espanha.ghtml">Revista Quem</a> — namoro</li>
-                <li><a href="https://natelinha.uol.com.br/famosos/2026/02/24/isadora-cruz-sobre-namoro-com-lucas-braathen-desafio-diario-238399.php">NaTelinha</a> — relacionamento à distância</li>
-                <li><a href="https://g1.globo.com/pop-arte/tv-e-series/noticia/2026/02/14/esquiador-lucas-pinheiro-vive-romance-com-protagonista-de-novela-da-globo-isadora-cruz.ghtml">g1</a> — romance com Lucas Pinheiro (Olimpíadas 2026)</li>
-                <li><a href="https://gshow.globo.com/cultura-pop/famosos/noticia/lucas-pinheiro-ganha-declaracao-de-isadora-cruz.ghtml">Gshow</a> — declaração no dia do ouro</li>
-                <li><a href="https://ge.globo.com/olimpiadas-de-inverno/noticia/2026/02/16/isadora-cruz-enaltece-feito-de-lucas-pinheiro-apesar-de-queda-dias-de-luta-e-dias-de-gloria.ghtml">ge</a> — Olimpíadas de Inverno</li>
-                <li><a href="https://gente.ig.com.br/tvenovela/novelas/2026-03-18/isadora-cruz-celebra-fase-da-carreira-e-protagonismo-na-tv.html">iG Gente</a> — protagonismo (mar/2026)</li>
-                <li><a href="https://gente.ig.com.br/celebridades/2026-04-09/isadora-cruz-surge-em-clima-de-romance-com-atleta---lindos-.html">iG Gente</a> — romance (abr/2026)</li>
-                <li><a href="https://f5.folha.uol.com.br/celebridades/2026/05/isadora-cruz-diz-que-cresceu-ouvindo-shakira-e-quer-rihanna-no-rio-eu-acampava-um-dia-antes.shtml">F5 / Folha</a> — Shakira / Todo Mundo no Rio (mai/2026)</li>
-                <li><a href="https://www.metropoles.com/esportes/namorada-de-lucas-pinheiro-isadora-cruz-comemora-ouro-olimpico">Metrópoles</a> — ouro olímpico</li>
-                <li><a href="https://extra.globo.com/entretenimento/tv/noticia/2026/04/as-donas-da-voz-isadora-cruz-e-gabz-celebram-o-sucesso-de-agrado-and-eduarda-em-coracao-acelerado.ghtml">Extra</a> — “As donas da voz” com Gabz</li>
-                <li><a href="https://www.noticiasdatv.uol.com.br/tudo-sobre/isadora-cruz">Notícias da TV</a> — página “tudo sobre”</li>
-                <li><a href="https://valor.globo.com/empresas/marketing/noticia/2026/01/08/sicoob-participa-pela-terceira-vez-de-novela-da-globo-com-tematica-rural.ghtml">Valor Econômico</a> — Sicoob em <em>Coração Acelerado</em> (merchandising novela 19h, 2026; terceira parceria rural na Globo)</li>
-                <li><a href="https://gshow.globo.com/novelas/coracao-acelerado/especial-publicitario/sicoob/noticia/presente-em-coracao-acelerado-sicoob-tambem-transforma-historias-reais.ghtml">Gshow — especial publicitário Sicoob</a> — conteúdo de marca na novela</li>
-                <li><a href="https://www.tiktok.com/@isadoracruzrocha">TikTok @isadoracruzrocha</a> (perfil público)</li>
-                <li><a href="https://www.upfluence.com/">Upfluence</a> — métricas TikTok transcritas em <a class="toc-link" href="#redes-tiktok-upfluence">TikTok — métricas (Upfluence)</a> (captura interna, maio/2026)</li>
-                <li><a href="https://www.instagram.com/isadoracruz/">Instagram @isadoracruz</a></li>
-                <li><a href="https://www.wikidata.org/wiki/Q114002285">Wikidata — item Q114002285</a> (identificador Instagram <code class="text-xs bg-slate-100 px-1 rounded">isadoracruz</code>)</li>
-                <li><a href="https://socialblade.com/instagram/user/isadoracruz">Social Blade — Instagram @isadoracruz</a> (captura transcrita 06/05/2026)</li>
-            </ol>
         </section>
 
 
         <footer class="text-center p-8 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r18-sicoob-contrato-globo | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
+            Rev. 20260506-isadora-cruz-cartao-r19-sem-lacunas-fontes-compactas | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
         </footer>
     </div>
 
