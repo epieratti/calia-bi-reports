@@ -8,6 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>Dossiê — Isadora Cruz · CAIXA 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -43,6 +44,16 @@
         .toc-list li:first-child { margin-top: 0; }
         .source-list { font-size: 0.8125rem; line-height: 1.6; }
         .source-list a { color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+        .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 280px; }
+        @media (min-width: 768px) { .chart-container { height: 320px; } }
+        .timeline-rail { position: relative; border-left: 2px solid #e2e8f0; padding-left: 1.25rem; margin-left: 0.35rem; }
+        .timeline-item { position: relative; padding-bottom: 1.25rem; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -1.45rem; top: 0.35rem; width: 11px; height: 11px; border-radius: 50%;
+            background-color: #f9a619; border: 2px solid #fff; box-shadow: 0 0 0 1px #cbd5e1;
+        }
+        .timeline-item--ok::before { background-color: #009966; }
     </style>
 </head>
 <body class="p-4 md:p-12 pb-24">
@@ -78,6 +89,7 @@
             </div>
             <ul class="toc-list text-sm">
                 <li><a class="toc-link" href="#leitura-executiva">Leitura executiva</a></li>
+                <li><a class="toc-link" href="#painel-visual">Painel visual (gráficos)</a></li>
                 <li><a class="toc-link" href="#matriz">Matriz (pedido · método · checklist)</a></li>
                 <li><a class="toc-link" href="#perfil-metricas">Perfil, redes e métricas</a></li>
                 <li><a class="toc-link" href="#x-mencoes">X — menções (sem perfil dela)</a></li>
@@ -104,6 +116,24 @@
                     <p class="mt-2 max-w-[11rem] text-[10px] text-slate-500">Bastidor 2026 pesa em marca ultra-conservadora; não é cancelamento viral.</p>
                 </div>
             </div>
+        </section>
+
+        <section id="painel-visual" class="card-audit scroll-mt-24 border-l-4 border-calia-emerald">
+            <div class="section-header mb-4">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Painel visual (gráficos)</h2>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">Os gráficos abaixo são <strong>modelos ilustrativos</strong> a partir do texto deste dossiê (não são painel comercial nem série temporal auditável). Servem para comunicar <em>ordem de grandeza relativa</em> de temas e de vetores de risco percebidos.</p>
+            <div class="grid gap-10 md:grid-cols-2 md:gap-8">
+                <div>
+                    <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Temas no conteúdo público (IG + TikTok)</p>
+                    <div class="chart-container"><canvas id="chartTemas" aria-label="Gráfico de rosca — temas nas redes"></canvas></div>
+                </div>
+                <div>
+                    <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Exposição relativa a vetores de risco (0–10)</p>
+                    <div class="chart-container"><canvas id="chartRisco" aria-label="Gráfico radar — brand safety"></canvas></div>
+                </div>
+            </div>
+            <p class="mt-6 text-xs text-slate-500"><strong>Rosca:</strong> pesos qualitativos alinhados a <a class="toc-link" href="#perfil-metricas">Perfil e métricas</a> (trabalho/TV, moda, relacionamento, Nordeste/causas). <strong>Radar:</strong> escala subjetiva coerente com <a class="toc-link" href="#midia-politica">Mídia e brand safety</a> (bastidor 2026 &gt; cancelamento viral; apostas baixas).</p>
         </section>
 
         <section id="matriz" class="card-audit scroll-mt-24 border-l-4 border-calia-gold">
@@ -242,6 +272,16 @@
                 <li><strong>GE Beauty</strong> — <a class="toc-link" href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">blog</a></li>
                 <li><strong>Editorial</strong> Glamour / Dior em evento — <a class="toc-link" href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour</a>; <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow</a> (não prova embaixada global).</li>
             </ul>
+            <div class="mt-8 rounded-lg border border-slate-200 bg-slate-50/80 p-5 md:p-6">
+                <p class="text-[10px] font-black uppercase text-calia-navy mb-4">Linha do tempo (campanhas e destaques citados)</p>
+                <div class="timeline-rail text-sm text-slate-700">
+                    <div class="timeline-item timeline-item--ok"><strong>2021</strong> — <strong>Colorama</strong> — <a class="toc-link" href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a></div>
+                    <div class="timeline-item timeline-item--ok"><strong>2022</strong> — <strong>Glamour</strong> (capa) — <a class="toc-link" href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour</a></div>
+                    <div class="timeline-item timeline-item--ok"><strong>2024</strong> — <strong>Bebecê</strong> — <a class="toc-link" href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube marca</a></div>
+                    <div class="timeline-item timeline-item--ok"><strong>2025</strong> — <strong>Arezzo</strong> Natal — <a class="toc-link" href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a></div>
+                    <div class="timeline-item"><strong>2025–26</strong> — <strong>GE Beauty</strong> — <a class="toc-link" href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">blog</a>; look Dior em evento — <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow</a></div>
+                </div>
+            </div>
             <p class="text-sm text-slate-700 mt-4"><strong>IF / cartão:</strong> sem campanha pública de banco/fintech/bandeira nas fontes. <strong>Sicoob</strong> citado em <strong>menções no X</strong> sobre intervalo de <em>Coração Acelerado</em> (abr/2026) — validar peça e exclusividade com assessoria.</p>
         </section>
 
@@ -311,7 +351,7 @@
 
 
         <footer class="text-center p-8 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r13-objetivo-reduzido | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
+            Rev. 20260506-isadora-cruz-cartao-r14-graficos-restaurados | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> | Calia | CAIXA
         </footer>
     </div>
 
@@ -326,6 +366,70 @@
             const buf = new TextEncoder().encode(text);
             const hash = await crypto.subtle.digest('SHA-256', buf);
             return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function initCharts() {
+            if (typeof Chart === 'undefined') return;
+            const tooltipTitle = (items) => (items[0]?.label ?? '');
+            const doughnutColors = ['#252525', '#f9a619', '#009966', '#0f766e', '#94a3b8'];
+            const temasEl = document.getElementById('chartTemas');
+            const riscoEl = document.getElementById('chartRisco');
+            if (!temasEl || !riscoEl) return;
+
+            new Chart(temasEl, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Trabalho / TV', 'Moda / beleza', 'Relacionamento', 'Nordeste / causas', 'Outros'],
+                    datasets: [{
+                        data: [38, 22, 20, 12, 8],
+                        backgroundColor: doughnutColors,
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
+                        title: { display: true, text: 'Temas (modelo ilustrativo)', font: { size: 12, weight: '700' }, color: '#252525' },
+                        tooltip: { callbacks: { title: tooltipTitle } }
+                    }
+                }
+            });
+
+            new Chart(riscoEl, {
+                type: 'radar',
+                data: {
+                    labels: ['Política / imagem', 'Bastidor / mídia', 'Apostas', 'Concorrência IF', 'Polêmica viral'],
+                    datasets: [{
+                        label: 'Exposição relativa (0–10)',
+                        data: [4, 5, 1, 3, 2],
+                        backgroundColor: 'rgba(249, 166, 25, 0.22)',
+                        borderColor: '#f9a619',
+                        pointBackgroundColor: '#252525',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 10,
+                            ticks: { stepSize: 2, backdropColor: 'transparent' },
+                            grid: { color: 'rgba(37, 37, 37, 0.12)' },
+                            angleLines: { color: 'rgba(37, 37, 37, 0.12)' },
+                            pointLabels: { font: { size: 10 } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: true, text: 'Brand safety — modelo qualitativo', font: { size: 12, weight: '700' }, color: '#252525' }
+                    }
+                }
+            });
         }
 
         document.getElementById('access-form').addEventListener('submit', async (e) => {
@@ -351,7 +455,7 @@
             }
             document.getElementById('access-gate').classList.add('hidden');
             document.getElementById('dossier-root').classList.remove('hidden');
-            
+            requestAnimationFrame(() => requestAnimationFrame(() => initCharts()));
         });
     </script>
 </body>
