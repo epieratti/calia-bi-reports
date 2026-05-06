@@ -8,6 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>Dossiê — Isadora Cruz · CAIXA 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -43,9 +44,19 @@
         .toc-list li:first-child { margin-top: 0; }
         .source-list { font-size: 0.8125rem; line-height: 1.6; }
         .source-list a { color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+        .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 280px; }
+        @media (min-width: 768px) { .chart-container { height: 320px; } }
+        .timeline-rail { position: relative; border-left: 2px solid #e2e8f0; padding-left: 1.25rem; margin-left: 0.35rem; }
+        .timeline-item { position: relative; padding-bottom: 1.25rem; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -1.45rem; top: 0.35rem; width: 11px; height: 11px; border-radius: 50%;
+            background-color: #f9a619; border: 2px solid #fff; box-shadow: 0 0 0 1px #cbd5e1;
+        }
+        .timeline-item--ok::before { background-color: #009966; }
     </style>
 </head>
-<body class="p-4 md:p-12">
+<body class="p-4 md:p-12 pb-24">
 
     <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
         <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
@@ -71,12 +82,22 @@
             <p class="text-sm opacity-90 mt-1 font-medium italic">Apoio ao levantamento para ação de cartão de crédito · Maio 2026</p>
         </header>
 
-        <nav class="card-audit py-8" aria-label="Sumário">
+        <nav class="sticky top-0 z-40 mb-8 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-slate-700 bg-calia-navy px-4 py-3 text-white shadow-lg" aria-label="Contexto do relatório">
+            <div class="flex flex-wrap items-center gap-3">
+                <span class="text-xs font-black uppercase tracking-[0.12em] text-calia-gold">Brand safety</span>
+                <span class="hidden sm:inline h-4 w-px bg-white/20" aria-hidden="true"></span>
+                <span class="text-sm font-bold tracking-tight">Isadora Cruz · Due diligence</span>
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-widest text-white/90 bg-black/30 px-3 py-1.5 rounded-full border border-white/10">Uso interno · confidencial</span>
+        </nav>
+
+        <nav id="sumario" class="card-audit py-8 scroll-mt-28" aria-label="Sumário">
             <div class="section-header mb-8">
                 <h2 class="text-lg font-black text-calia-navy uppercase tracking-tight">Neste dossiê</h2>
             </div>
             <ul class="toc-list">
                 <li><a class="toc-link" href="#leitura-executiva">Leitura executiva</a></li>
+                <li><a class="toc-link" href="#painel-visual">Painel visual (gráficos)</a></li>
                 <li><a class="toc-link" href="#objetivo">Pedido e objetivo</a></li>
                 <li><a class="toc-link" href="#metodologias">Metodologias e limites</a></li>
                 <li><a class="toc-link" href="#pesquisa-complementar">Pesquisa complementar (deep research)</a></li>
@@ -92,16 +113,27 @@
             </ul>
         </nav>
 
-        <section id="leitura-executiva" class="card-audit scroll-mt-24 border border-slate-200 bg-gradient-to-b from-white to-slate-50 shadow-sm">
-            <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 pb-4 mb-4">
-                <div>
+        <section id="leitura-executiva" class="scroll-mt-28 rounded-2xl border border-slate-200 bg-white shadow-lg border-l-[10px] border-l-calia-emerald p-6 md:p-10">
+            <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+                <div class="min-w-0 flex-1">
                     <p class="text-[10px] font-black uppercase tracking-[0.18em] text-calia-gold">C-level · visão rápida</p>
-                    <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight mt-1">Leitura executiva</h2>
+                    <h2 class="mt-1 text-2xl font-black uppercase tracking-tight text-calia-navy md:text-3xl">Leitura executiva</h2>
+                    <p class="mt-4 text-sm leading-relaxed text-slate-700">
+                        A avaliação qualitativa indica <strong>risco reputacional baixo</strong> para associação a marca institucional de grande circulação: presença digital centrada em <strong>trabalho na TV Globo/Globoplay</strong>, <strong>moda</strong> e <strong>relacionamento</strong>, sem histórico destacado de <strong>apostas</strong>, sem campanha pública para <strong>banco ou cartão concorrente</strong> nos recortes. Há <strong>exposição política pontual</strong> (Planalto em contexto esportivo) e falas sobre <strong>espiritualidade</strong> em entrevistas — ver narrativa completa nas seções textuais e <a class="toc-link font-semibold" href="#pesquisa-complementar">pesquisa complementar</a>.
+                    </p>
+                    <ul class="mt-5 space-y-2 text-sm text-slate-600">
+                        <li><span class="text-calia-emerald font-bold">✓</span> Fontes: Instagram @isadoracruz, imprensa e arquivo 2024–2026 (lista em <a class="toc-link" href="#fontes">Fontes</a>).</li>
+                        <li><span class="text-amber-600 font-bold">!</span> Lacunas: exclusividade contratual só com contrato ou marca.</li>
+                    </ul>
+                    <a class="toc-link mt-6 inline-block text-sm font-semibold" href="#riscos">Ir à síntese de risco →</a>
                 </div>
-                <a class="toc-link shrink-0 text-sm" href="#riscos">Ir à síntese de risco →</a>
+                <div class="flex shrink-0 flex-col items-center justify-center rounded-xl bg-gradient-to-b from-slate-50 to-slate-100 px-10 py-8 text-center ring-1 ring-slate-200">
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Risco global</span>
+                    <span class="mt-2 text-5xl font-black leading-none text-calia-emerald md:text-6xl">BAIXO</span>
+                    <span class="mt-3 max-w-[12rem] text-[11px] leading-snug text-slate-500">Escala qualitativa interna · não é scoring estatístico auditável</span>
+                </div>
             </div>
-            <p class="text-sm text-slate-600 border-l-4 border-calia-gold pl-4 py-2 mb-4 bg-amber-50/80 rounded-r"><strong>Síntese de risco (qualitativa):</strong> perfil coerente com <strong>brand safety institucional</strong> — sem evidência forte, nas fontes cruzadas, de polêmica sistêmica, litígio midiático central ou vínculo público com <strong>apostas</strong>. Há <strong>exposição política pontual</strong> (Planalto em contexto esportivo) e narrativa de <strong>espiritualidade</strong> em entrevistas (requer leitura fina em mercados sensíveis a símbolos religiosos). Detalhes nas seções seguintes e em <a class="toc-link font-semibold" href="#pesquisa-complementar">pesquisa complementar</a>.</p>
-            <ul class="list-none space-y-3 text-sm text-slate-700 leading-relaxed">
+            <ul class="mt-10 list-none space-y-3 border-t border-slate-200 pt-8 text-sm leading-relaxed text-slate-700">
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Pedido:</strong> levantamento de <strong>perfil público</strong> da atriz <strong>Isadora Cruz</strong> para apoiar decisões de uma <strong>ação com cartão de crédito</strong> (âmbito Caixa).</span></li>
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Digital:</strong> Instagram <strong>@isadoracruz</strong> — ordem de grandeza <strong>784 mil+ seguidores</strong> em outubro/2025 (matéria com data explícita); hoje o número pode ser maior. A leitura qualitativa (incluindo pesquisa complementar) sugere ênfase em <strong>carreira e obra</strong>, <strong>moda e prestígio midiático</strong>, <strong>Nordeste e representatividade</strong>, <strong>relacionamento</strong> e <strong>causa social</strong> (ONG).</span></li>
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Marcas pagas citadas com cobertura:</strong> <strong>Arezzo</strong> (Natal 2025), <strong>Colorama</strong> (arquivo de mídia, ~2021). Vídeo em canal <strong>Bebecê</strong> no YouTube (ver marcas). Uso de grifes em <strong>capas e eventos</strong> (ex.: peça Dior em festa de novela) é <strong>moda editorial / figurino</strong>, não equivalendo automaticamente a contrato de embaixadora — ver <a class="toc-link font-semibold" href="#marcas">Marcas</a>. <strong>Não</strong> foi localizada <strong>parceria pública</strong> com <strong>banco, fintech ou bandeira de cartão</strong>.</span></li>
@@ -109,6 +141,30 @@
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Polêmica:</strong> ausência de crise de grande escala nos recortes; episódios pontuais narrados em entretenimento (ex.: história de viagem no <em>Que História é Essa, Porchat?</em>) e uso responsável de trama de violência doméstica em novela (entrevista ao <em>Fantástico</em>). Ver <a class="toc-link font-semibold" href="#polemica">Polêmica</a>.</span></li>
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Social:</strong> voluntariado na <strong>ONG Milagre Sertão</strong> — narrativa de <strong>proximidade regional</strong>.</span></li>
             </ul>
+        </section>
+
+        <section id="painel-visual" class="scroll-mt-28 space-y-6">
+            <div class="rounded-lg border-l-4 border-calia-navy bg-slate-50 px-4 py-3 text-sm text-slate-700">
+                <strong class="text-calia-navy">Nota de leitura dos gráficos:</strong> trata-se de <strong>síntese ilustrativa</strong> (modelo qualitativo Calia), não de auditoria de posts nem extração API do Instagram. Percentuais do rosca somam 100% apenas como <strong>aproximação visual</strong> dos pilares narrados na pesquisa. O radar usa escala 0–10 para <strong>exposição aparente ao risco</strong> (valores mais baixos = mais confortável para marca conservadora).
+            </div>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
+                    <h3 class="text-lg font-black uppercase tracking-tight text-calia-navy">Discurso · temas (modelo)</h3>
+                    <p class="mt-2 text-sm text-slate-600">Distribuição aproximada dos pilares que mais aparecem no recorte qualitativo 2024–2026.</p>
+                    <div class="chart-container mt-4">
+                        <canvas id="chartTemas" aria-label="Gráfico rosca temas redes sociais"></canvas>
+                    </div>
+                    <p class="mt-4 text-xs leading-relaxed text-slate-500">“Causas” inclui ONG e pautas sociais ligadas à ficção quando repercutidas na imprensa.</p>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
+                    <h3 class="text-lg font-black uppercase tracking-tight text-calia-navy">Radar · exposição a riscos</h3>
+                    <p class="mt-2 text-sm text-slate-600">Quanto menor o traço, menor o sinal de exposição ao tema no material analisado.</p>
+                    <div class="chart-container mt-4">
+                        <canvas id="chartRisco" aria-label="Gráfico radar riscos reputacionais"></canvas>
+                    </div>
+                    <p class="mt-4 text-xs leading-relaxed text-slate-500">“Concorrência IF” = filmes/contratos públicos com banco, fintech ou bandeira de cartão.</p>
+                </div>
+            </div>
         </section>
 
         <section id="objetivo" class="card-audit border-l-4 border-calia-gold">
@@ -187,19 +243,54 @@
             <div class="section-header">
                 <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Marcas, moda editorial e concorrência</h2>
             </div>
-            <p class="text-sm text-slate-700 leading-relaxed mb-4"><strong>Campanhas pagas ou peças comerciais documentadas na imprensa</strong> incluem, entre outras:</p>
-            <ul class="text-sm text-slate-700 space-y-3 leading-relaxed list-disc list-inside mb-6">
-                <li><strong>Arezzo</strong> (calçados e bolsas — Grupo Arezzo&amp;Co): campanha de <strong>Natal 2025</strong>, mote <em>“Presença é o Presente Perfeito”</em>, com mãe e avó na narrativa. <a class="toc-link" href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a>.</li>
-                <li><strong>Colorama</strong> (esmaltes — L'Oréal Brasil): cobertura de campanha nacional com persona <strong>Madame Colorama</strong> (~2021). <a class="toc-link" href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a>.</li>
-                <li><strong>Bebecê:</strong> vídeo “Beauty Everywhere · Verão 2024” no canal oficial no YouTube — tratar como referência de peça audiovisual; validar vigência com a marca se for relevante para exclusividade. <a class="toc-link" href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube — Bebecê</a>.</li>
-                <li><strong>GE Beauty / uso de produto:</strong> matéria em blog da marca sobre rotina de cabelos — parceria de conteúdo pontual. <a class="toc-link" href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">GE Beauty</a>.</li>
-            </ul>
-            <div class="deep-dive-box">
-                <h4 class="font-bold text-xs uppercase text-calia-navy mb-3">Moda editorial e luxo (não confundir com embaixada)</h4>
-                <p class="text-sm text-slate-700 leading-relaxed">Há registro de <strong>capa da Glamour</strong> e de <strong>uso de vestido Dior</strong> em evento de lançamento de novela — configuram <strong>figurino / styling de alto padrão</strong> e presença em mídia de moda, <strong>não</strong> necessariamente contrato global de beleza. Ex.: <a class="toc-link" href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour — capa 2022</a>; <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow — look Dior em festa</a>.</p>
-                <p class="text-sm text-slate-700 leading-relaxed mt-2"><strong>Ajuste de verificação:</strong> uma pesquisa automatizada sugeriu “embaixadora Rolex”; <strong>não foi encontrada confirmação</strong> em veículos das buscas cruzadas para este dossiê — <strong>não incluir</strong> como fato até haver peça ou release oficial.</p>
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
+                <div>
+                    <p class="text-sm text-slate-700 leading-relaxed mb-4"><strong>Campanhas pagas ou peças comerciais documentadas na imprensa</strong> incluem, entre outras:</p>
+                    <ul class="text-sm text-slate-700 space-y-3 leading-relaxed list-disc list-inside mb-6">
+                        <li><strong>Arezzo</strong> (calçados e bolsas — Grupo Arezzo&amp;Co): campanha de <strong>Natal 2025</strong>, mote <em>“Presença é o Presente Perfeito”</em>, com mãe e avó na narrativa. <a class="toc-link" href="https://ffw.com.br/noticias/moda/isadora-cruz-estrela-campanha-de-natal-da-arezzo-e-celebra-forca-e-protagonismo-feminino/">FFW</a>.</li>
+                        <li><strong>Colorama</strong> (esmaltes — L'Oréal Brasil): cobertura de campanha nacional com persona <strong>Madame Colorama</strong> (~2021). <a class="toc-link" href="https://turismoemfoco.com.br/v1/2021/01/29/paraibana-isadora-cruz-estrela-nova-campanha-nacional-de-esmaltes-colorama/">Turismo em Foco</a>.</li>
+                        <li><strong>Bebecê:</strong> vídeo “Beauty Everywhere · Verão 2024” no canal oficial no YouTube — tratar como referência de peça audiovisual; validar vigência com a marca se for relevante para exclusividade. <a class="toc-link" href="https://www.youtube.com/watch?v=dCIOKKMQ4xg">YouTube — Bebecê</a>.</li>
+                        <li><strong>GE Beauty / uso de produto:</strong> matéria em blog da marca sobre rotina de cabelos — parceria de conteúdo pontual. <a class="toc-link" href="https://www.gebeauty.com.br/blogs/gebeauty/isadora-cruz-com-cachos-ainda-mais-lindos-e-definidos">GE Beauty</a>.</li>
+                    </ul>
+                    <div class="deep-dive-box">
+                        <h4 class="font-bold text-xs uppercase text-calia-navy mb-3">Moda editorial e luxo (não confundir com embaixada)</h4>
+                        <p class="text-sm text-slate-700 leading-relaxed">Há registro de <strong>capa da Glamour</strong> e de <strong>uso de vestido Dior</strong> em evento de lançamento de novela — configuram <strong>figurino / styling de alto padrão</strong> e presença em mídia de moda, <strong>não</strong> necessariamente contrato global de beleza. Ex.: <a class="toc-link" href="https://glamour.globo.com/lifestyle/capas/noticia/2022/09/isadora-cruz-e-capa-da-glamour-de-setembro.ghtml">Glamour — capa 2022</a>; <a class="toc-link" href="https://gshow.globo.com/novelas/coracao-acelerado/noticia/coracao-acelerado-isadora-cruz-usa-look-vintage-avaliado-em-r-16-mil-para-festa-de-lancamento.ghtml">Gshow — look Dior em festa</a>.</p>
+                        <p class="text-sm text-slate-700 leading-relaxed mt-2"><strong>Ajuste de verificação:</strong> uma pesquisa automatizada sugeriu “embaixadora Rolex”; <strong>não foi encontrada confirmação</strong> em veículos das buscas cruzadas para este dossiê — <strong>não incluir</strong> como fato até haver peça ou release oficial.</p>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed mt-4"><strong>Concorrência com cartão / banco:</strong> nos recortes analisados, <strong>não há</strong> campanha pública para <strong>instituição financeira, fintech ou bandeira</strong>. Isso pode favorecer <strong>estreia limpa</strong> no setor, desde que o contrato cubra <strong>exclusividade</strong> e carência.</p>
+                </div>
+                <aside class="rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-6 shadow-inner ring-1 ring-slate-100">
+                    <h3 class="text-sm font-black uppercase tracking-[0.14em] text-calia-navy">Linha do tempo · imagem e contratos públicos</h3>
+                    <p class="mt-2 text-xs text-slate-500">Referência cronológica para leitura rápida; datas seguem imprensa citada no dossiê.</p>
+                    <div class="timeline-rail mt-6">
+                        <div class="timeline-item">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">2021</p>
+                            <p class="font-bold text-slate-800">Beleza · Colorama</p>
+                            <p class="text-sm text-slate-600">Campanha Madame Colorama (L'Oréal) — ver fontes.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">2022</p>
+                            <p class="font-bold text-slate-800">Moda editorial · Glamour</p>
+                            <p class="text-sm text-slate-600">Capa — não implica contrato longo com grife.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">2024</p>
+                            <p class="font-bold text-slate-800">Calçados · Bebecê</p>
+                            <p class="text-sm text-slate-600">Peça “Beauty Everywhere” no YouTube oficial.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">2025</p>
+                            <p class="font-bold text-slate-800">Arezzo · Natal</p>
+                            <p class="text-sm text-slate-600">Campanha multigeracional — narrativa família.</p>
+                        </div>
+                        <div class="timeline-item timeline-item--ok">
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Período analisado</p>
+                            <p class="font-bold text-calia-emerald">Setor financeiro</p>
+                            <p class="text-sm text-slate-600"><strong>Sem conflito público:</strong> não há campanha para banco, fintech ou bandeira.</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <p class="text-sm text-slate-700 leading-relaxed mt-4"><strong>Concorrência com cartão / banco:</strong> nos recortes analisados, <strong>não há</strong> campanha pública para <strong>instituição financeira, fintech ou bandeira</strong>. Isso pode favorecer <strong>estreia limpa</strong> no setor, desde que o contrato cubra <strong>exclusividade</strong> e carência.</p>
         </section>
 
         <section id="polemica" class="card-audit scroll-mt-24">
@@ -234,15 +325,31 @@
             </div>
         </section>
 
-        <section id="brand-safety" class="card-audit scroll-mt-24">
-            <div class="section-header">
+        <section id="brand-safety" class="card-audit scroll-mt-24 rounded-2xl border border-slate-200 shadow-md">
+            <div class="section-header border-l-calia-navy">
                 <h2 class="text-2xl font-black text-calia-navy uppercase tracking-tight">Apostas, conteúdo sensível e critérios</h2>
+                <p class="mt-2 text-sm font-normal normal-case text-slate-600">Checklist compacto para compliance de marca institucional (material analisado neste dossiê).</p>
             </div>
-            <ul class="text-sm text-slate-700 space-y-3 leading-relaxed list-disc list-inside">
-                <li><strong>Apostas (“bets”):</strong> nas fontes deste dossiê, <strong>não aparece</strong> publicidade para casas de apostas, cassinos ou jogos de azar em nome da atriz — critério relevante para marcas financeiras em contexto regulatório sensível.</li>
-                <li><strong>Sexualização e plataformas adultas:</strong> cobertura de moda e praia segue padrão de celebridade em veículos mainstream; <strong>não há indício</strong>, nas referências agregadas, de monetização em plataforma adulta.</li>
-                <li><strong>Efeito halo do núcleo familiar afetivo:</strong> o relacionamento com <strong>Lucas Pinheiro Braathen</strong> é tratado sob ótica de <strong>superação e orgulho nacional</strong> na imprensa — potencial metáfora de disciplina para narrativa de crédito, desde que alinhada a compliance de comunicação.</li>
-            </ul>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center shadow-sm">
+                    <span class="text-2xl text-calia-emerald" aria-hidden="true">✓</span>
+                    <h3 class="mt-2 text-sm font-black uppercase tracking-wide text-calia-navy">Mercado de apostas</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">Sem evidência de publicidade para casas de apostas, cassinos ou jogos de azar.</p>
+                </div>
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center shadow-sm">
+                    <span class="text-2xl text-calia-emerald" aria-hidden="true">✓</span>
+                    <h3 class="mt-2 text-sm font-black uppercase tracking-wide text-calia-navy">Conteúdo sensível</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">Moda e praia em linha com celebridade mainstream; sem indício de plataforma adulta nas fontes.</p>
+                </div>
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center shadow-sm">
+                    <span class="text-2xl text-calia-emerald" aria-hidden="true">✓</span>
+                    <h3 class="mt-2 text-sm font-black uppercase tracking-wide text-calia-navy">Discurso discriminatório</h3>
+                    <p class="mt-2 text-xs leading-relaxed text-slate-600">Sem histórico destacado de falas de ódio ou discriminação nas referências agregadas.</p>
+                </div>
+            </div>
+            <div class="deep-dive-box mt-6 border-l-calia-gold">
+                <p class="text-sm text-slate-700 leading-relaxed"><strong>Efeito halo:</strong> o relacionamento com <strong>Lucas Pinheiro Braathen</strong> aparece na imprensa sob ótica de <strong>superação e orgulho nacional</strong> — pode sustentar narrativa de disciplina e meta, com alinhamento ao compliance da Caixa.</p>
+            </div>
         </section>
 
         <section id="riscos" class="card-audit scroll-mt-24">
@@ -308,7 +415,7 @@
         </section>
 
         <footer class="text-center p-12 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200">
-            Rev. 20260506-isadora-cruz-cartao-r2-gemini | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
+            Rev. 20260506-isadora-cruz-cartao-r3-visual | <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Voltar ao topo</a> | Agência Calia | CAIXA · Uso interno
         </footer>
     </div>
 
@@ -323,6 +430,95 @@
             const buf = new TextEncoder().encode(text);
             const hash = await crypto.subtle.digest('SHA-256', buf);
             return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function initCharts() {
+            const tooltipTitle = {
+                callbacks: {
+                    title(items) {
+                        const item = items[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        return Array.isArray(label) ? label.join(' ') : label;
+                    }
+                }
+            };
+
+            const doughnutColors = ['#252525', '#f9a619', '#009966', '#64748b'];
+
+            const temasEl = document.getElementById('chartTemas');
+            const riscoEl = document.getElementById('chartRisco');
+            if (!temasEl || !riscoEl || typeof Chart === 'undefined') return;
+
+            new Chart(temasEl.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        ['Trabalho &', 'TV / Globo'],
+                        ['Moda &', 'editoriais'],
+                        ['Estilo de vida', '& relacionamento'],
+                        ['Causas &', 'ONG / social']
+                    ],
+                    datasets: [{
+                        data: [42, 26, 18, 14],
+                        backgroundColor: doughnutColors,
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11, weight: '600' } } },
+                        tooltip: tooltipTitle
+                    },
+                    cutout: '62%'
+                }
+            });
+
+            const riskLabels = [
+                ['Polarização', 'política'],
+                ['Tom religioso', 'dogmático'],
+                ['Polêmica', 'midiática'],
+                ['Concorrência', 'IF / cartão'],
+                ['Apostas', '/ bets']
+            ];
+
+            new Chart(riscoEl.getContext('2d'), {
+                type: 'radar',
+                data: {
+                    labels: riskLabels,
+                    datasets: [{
+                        label: 'Exposição ao risco (0–10)',
+                        data: [3.5, 2.5, 2.5, 1, 1],
+                        backgroundColor: 'rgba(249, 166, 25, 0.22)',
+                        borderColor: '#f9a619',
+                        pointBackgroundColor: '#252525',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#252525',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 10,
+                            ticks: { display: false, stepSize: 2 },
+                            angleLines: { color: 'rgba(0, 0, 0, 0.08)' },
+                            grid: { color: 'rgba(0, 0, 0, 0.08)' },
+                            pointLabels: { font: { size: 10, weight: '600' }, color: '#475569' }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: tooltipTitle
+                    }
+                }
+            });
         }
 
         document.getElementById('access-form').addEventListener('submit', async (e) => {
@@ -348,6 +544,7 @@
             }
             document.getElementById('access-gate').classList.add('hidden');
             document.getElementById('dossier-root').classList.remove('hidden');
+            requestAnimationFrame(() => requestAnimationFrame(() => initCharts()));
         });
     </script>
 </body>
