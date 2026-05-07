@@ -70,7 +70,10 @@
 </head>
 <body class="p-4 md:p-12 pb-24">
 
-    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+    <div id="access-gate" class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-[#252525] p-4">
+        <a href="https://calia.com.br/" target="_blank" rel="noopener noreferrer" class="block shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-calia-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#252525] rounded" aria-label="Calia — site oficial">
+            <img src="../assets/brand/logo-white.svg" alt="" class="h-9 w-auto md:h-10" width="142" height="52" decoding="async" aria-hidden="true" />
+        </a>
         <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
             <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
             <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
@@ -90,9 +93,16 @@
 
 
         <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded shadow-lg">
-            <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
-            <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-normal uppercase">Dossiê de perfil — Isadora Cruz</h1>
-            <p class="text-sm opacity-90 mt-1">Cartão de crédito · maio/2026 · perfil e risco para marca</p>
+            <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+                <div class="min-w-0">
+                    <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+                    <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-normal uppercase">Dossiê de perfil — Isadora Cruz</h1>
+                    <p class="text-sm opacity-90 mt-1">Cartão de crédito · maio/2026 · perfil e risco para marca</p>
+                </div>
+                <a href="https://calia.com.br/" target="_blank" rel="noopener noreferrer" class="shrink-0 self-start sm:mt-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-calia-gold focus-visible:ring-offset-2 focus-visible:ring-offset-calia-navy rounded" aria-label="Calia — site oficial">
+                    <img src="../assets/brand/logo-white.svg" alt="" class="h-8 w-auto opacity-95 sm:h-9" width="142" height="52" decoding="async" aria-hidden="true" />
+                </a>
+            </div>
         </header>
 
         <nav id="sumario" class="card-audit py-6 scroll-mt-24" aria-label="Sumário">
