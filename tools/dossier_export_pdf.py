@@ -139,7 +139,7 @@ def main() -> int:
                 path=str(out_path),
                 format="A4",
                 print_background=True,
-                margin={"top": "12mm", "bottom": "14mm", "left": "12mm", "right": "12mm"},
+                margin={"top": "6mm", "bottom": "8mm", "left": "7mm", "right": "7mm"},
             )
             browser.close()
     finally:
