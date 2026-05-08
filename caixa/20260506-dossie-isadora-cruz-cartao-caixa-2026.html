@@ -81,8 +81,9 @@
             text-decoration-thickness: max(1px, 0.055em);
         }
         .fontes-columns a.toc-link { text-underline-offset: max(1px, 0.1em); text-decoration-thickness: max(1px, 0.055em); }
-        .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 280px; }
-        @media (min-width: 768px) { .chart-container { height: 320px; } }
+        .chart-inline-title { font-size: 0.75rem; font-weight: 700; color: #252525; margin-bottom: 0.35rem; line-height: 1.25; }
+        .chart-container { position: relative; width: 100%; max-width: 520px; margin: 0 auto; height: 260px; }
+        @media (min-width: 768px) { .chart-container { height: 300px; } }
         .chart-container--mini-audiencia { max-width: 100%; height: 260px; margin: 0 auto; }
         @media (min-width: 768px) { .chart-container--mini-audiencia { height: 300px; max-width: 440px; } }
         .timeline-rail { position: relative; border-left: 2px solid #e2e8f0; padding-left: 1.25rem; margin-left: 0.35rem; }
@@ -149,10 +150,11 @@
                 align-items: flex-start !important;
                 gap: 1rem !important;
             }
+            /* PDF: uma coluna — evita comprimir radar/rosca e rótulos invadindo o texto ao lado */
             #painel-visual .painel-charts-grid {
                 display: grid !important;
-                grid-template-columns: 1fr 1fr !important;
-                gap: 0.5rem !important;
+                grid-template-columns: 1fr !important;
+                gap: 0.85rem !important;
                 align-items: start !important;
             }
             #painel-visual .painel-charts-grid > div > p:first-of-type {
@@ -165,27 +167,30 @@
             .deep-dive-box { padding: 0.55rem 0.65rem !important; margin-top: 0.5rem !important; }
             .bio-intro { padding: 0.5rem !important; margin-bottom: 0.5rem !important; }
             .metric-badge { padding: 0.2rem 0.45rem !important; font-size: 8px !important; }
-            /* Altura mínima generosa: título Chart.js + área do gráfico + legenda/rótulos —
-               caixas baixas (~175px) truncavam o canvas sobre os rótulos / texto adjacente no PDF */
+            /* Altura só para canvas + legenda (títulos vão em HTML, não no plugin Chart.js) */
             .chart-container {
-                height: 258px !important;
-                min-height: 248px !important;
+                height: 220px !important;
+                min-height: 210px !important;
                 max-width: 100% !important;
                 width: 100% !important;
                 box-sizing: border-box !important;
-                overflow: visible !important;
+                overflow: hidden !important;
                 page-break-inside: avoid;
                 margin-left: auto !important;
                 margin-right: auto !important;
-                margin-top: 0.35rem !important;
+                margin-top: 0.25rem !important;
                 padding-left: 4px !important;
                 padding-right: 4px !important;
             }
             .chart-container--mini-audiencia {
-                height: 300px !important;
-                min-height: 288px !important;
+                height: 280px !important;
+                min-height: 268px !important;
                 max-width: 100% !important;
-                overflow: visible !important;
+                overflow: hidden !important;
+            }
+            .chart-inline-title {
+                margin-bottom: 0.35rem !important;
+                font-size: 9.5pt !important;
             }
             table { font-size: 8pt !important; }
             .fontes-columns {
@@ -292,10 +297,12 @@
             <div class="painel-charts-grid grid gap-10 md:grid-cols-2 md:gap-8">
                 <div class="min-w-0">
                     <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Temas no conteúdo público (IG + TikTok)</p>
+                    <p class="chart-inline-title">Temas (modelo ilustrativo)</p>
                     <div class="chart-container"><canvas id="chartTemas" aria-label="Gráfico de rosca — temas nas redes"></canvas></div>
                 </div>
                 <div class="min-w-0">
                     <p class="text-[10px] font-black uppercase text-calia-navy mb-2">Exposição relativa a vetores de risco (0–10)</p>
+                    <p class="chart-inline-title">Brand safety — modelo qualitativo</p>
                     <div class="chart-container"><canvas id="chartRisco" aria-label="Gráfico radar — brand safety"></canvas></div>
                 </div>
             </div>
@@ -404,6 +411,7 @@
                 <div class="mb-5 rounded-lg border border-dashed border-calia-gold/60 bg-white/80 p-4 md:p-5" aria-labelledby="mini-audiencia-chart-titulo">
                     <p id="mini-audiencia-chart-titulo" class="text-[10px] font-black uppercase text-calia-navy tracking-wide">Polar · radar cultural</p>
                     <p class="text-xs text-slate-600 mt-1 mb-4 leading-relaxed">Pesos somam <strong>100</strong> por convenção; são atribuição editorial após leitura das fontes — <strong>não</strong> são taxa real de seguidores nem dado de mídia.</p>
+                    <p class="chart-inline-title">Motivos no radar desse perfil (soma 100)</p>
                     <div class="chart-container chart-container--mini-audiencia"><canvas id="chartMiniAudiencia" aria-label="Gráfico polar — motivos no radar desse perfil"></canvas></div>
                 </div>
 
@@ -598,20 +606,14 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     layout: {
-                        padding: { left: 14, right: 14, top: 14, bottom: 14 }
+                        padding: { left: 10, right: 10, top: 8, bottom: 10 }
                     },
                     plugins: {
                         legend: {
                             position: 'bottom',
-                            labels: { boxWidth: 12, font: { size: 10 }, padding: 8 }
+                            labels: { boxWidth: 12, font: { size: 10 }, padding: 6 }
                         },
-                        title: {
-                            display: true,
-                            text: 'Temas (modelo ilustrativo)',
-                            font: { size: 12, weight: '700' },
-                            color: '#252525',
-                            padding: { bottom: 10 }
-                        },
+                        title: { display: false },
                         tooltip: { callbacks: { title: tooltipTitle } }
                     }
                 }
@@ -634,7 +636,7 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     layout: {
-                        padding: { left: 18, right: 18, top: 18, bottom: 18 }
+                        padding: { left: 14, right: 14, top: 10, bottom: 14 }
                     },
                     scales: {
                         r: {
@@ -643,18 +645,12 @@
                             ticks: { stepSize: 2, backdropColor: 'transparent' },
                             grid: { color: 'rgba(37, 37, 37, 0.12)' },
                             angleLines: { color: 'rgba(37, 37, 37, 0.12)' },
-                            pointLabels: { font: { size: 10 }, padding: 10 }
+                            pointLabels: { font: { size: 10 }, padding: 12 }
                         }
                     },
                     plugins: {
                         legend: { display: false },
-                        title: {
-                            display: true,
-                            text: 'Brand safety — modelo qualitativo',
-                            font: { size: 12, weight: '700' },
-                            color: '#252525',
-                            padding: { bottom: 12 }
-                        }
+                        title: { display: false }
                     }
                 }
             });
@@ -684,20 +680,14 @@
                         responsive: true,
                         maintainAspectRatio: false,
                         layout: {
-                            padding: { left: 14, right: 14, top: 16, bottom: 18 }
+                            padding: { left: 12, right: 12, top: 10, bottom: 14 }
                         },
                         plugins: {
                             legend: {
                                 position: 'bottom',
-                                labels: { boxWidth: 10, padding: 10, font: { size: 9 }, color: '#334155' }
+                                labels: { boxWidth: 10, padding: 8, font: { size: 9 }, color: '#334155' }
                             },
-                            title: {
-                                display: true,
-                                text: 'Motivos no radar desse perfil (soma 100)',
-                                font: { size: 11, weight: '700' },
-                                color: '#252525',
-                                padding: { bottom: 12 }
-                            },
+                            title: { display: false },
                             tooltip: {
                                 callbacks: {
                                     label: (ctx) => {

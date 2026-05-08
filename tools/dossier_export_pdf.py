@@ -134,7 +134,22 @@ def main() -> int:
                     )
                     return 2
             time.sleep(max(0.8, float(args.post_unlock_wait)))
+            # @media print altera alturas dos .chart-container; Chart.js precisa redimensionar
+            # depois de emulate_media(print), senão o canvas fica com escala errada e sobrepõe texto.
             page.emulate_media(media="print")
+            page.evaluate(
+                """() => {
+                    window.dispatchEvent(new Event('resize'));
+                    if (typeof Chart === 'undefined') return;
+                    document.querySelectorAll('canvas').forEach((canvas) => {
+                        try {
+                            const ch = Chart.getChart && Chart.getChart(canvas);
+                            if (ch && typeof ch.resize === 'function') ch.resize();
+                        } catch (e) { /* ignore */ }
+                    });
+                }"""
+            )
+            time.sleep(0.55)
             page.pdf(
                 path=str(out_path),
                 format="A4",
