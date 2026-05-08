@@ -66,6 +66,40 @@
             background-color: #f9a619; border: 2px solid #fff; box-shadow: 0 0 0 1px #cbd5e1;
         }
         .timeline-item--ok::before { background-color: #009966; }
+        /* PDF / impressão: gate oculto, cores e gráficos preservados (print_background no export) */
+        @media print {
+            @page { margin: 14mm 12mm; size: A4; }
+            body { background: #fff !important; color: #1e293b !important; padding: 0.75rem !important; }
+            #access-gate { display: none !important; }
+            #dossier-root { display: block !important; visibility: visible !important; max-width: 100% !important; }
+            #dossier-root.hidden { display: block !important; }
+            .card-audit {
+                page-break-after: auto !important;
+                break-inside: avoid;
+                box-shadow: none !important;
+                border-color: #cbd5e1 !important;
+            }
+            header { break-after: avoid; box-shadow: none !important; border: 1px solid #e2e8f0; }
+            .chart-container,
+            .chart-container--mini-audiencia {
+                min-height: 240px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            @media (min-width: 768px) {
+                .chart-container { min-height: 280px; }
+                .chart-container--mini-audiencia { min-height: 300px; }
+            }
+            table { font-size: 9pt; }
+            /* URLs das fontes (não é URL do GitHub Pages — só links externos citados no texto) */
+            #dossier-root a[href^="http"]::after {
+                content: " (" attr(href) ")";
+                font-size: 7.5pt;
+                font-weight: 400;
+                color: #64748b;
+                word-break: break-all;
+            }
+        }
     </style>
 </head>
 <body class="p-4 md:p-12 pb-24">

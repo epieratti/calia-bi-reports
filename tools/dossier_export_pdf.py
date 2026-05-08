@@ -9,6 +9,8 @@ Na raiz do repo:
   python3 tools/dossier_export_pdf.py --html caixa/20260401-dossie-squad-always-on-loterias-2026.html \\
     --password 'sua_senha' --out ~/Desktop/dossie.pdf
 
+Dossiês com Chart.js (vários canvas): use `--post-unlock-wait 4` se algum gráfico sair vazio.
+
 Senha também pode vir de variável de ambiente DOSSIER_PDF_PASSWORD (evita histórico de shell).
 """
 from __future__ import annotations
@@ -26,16 +28,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def _serve_file(html_path: Path) -> tuple[str, HTTPServer, threading.Thread]:
+    """Serve o repositório inteiro a partir da raiz para resolver ../assets e outros relativos."""
     html_path = html_path.resolve()
     if not html_path.is_file():
         raise FileNotFoundError(html_path)
-    directory = str(html_path.parent)
-    handler = partial(SimpleHTTPRequestHandler, directory=directory)
+    try:
+        rel_url = html_path.relative_to(ROOT).as_posix()
+    except ValueError:
+        rel_url = html_path.name
+    handler = partial(SimpleHTTPRequestHandler, directory=str(ROOT))
     server = HTTPServer(("127.0.0.1", 0), handler)
     port = server.server_address[1]
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    url = f"http://127.0.0.1:{port}/{html_path.name}"
+    url = f"http://127.0.0.1:{port}/{rel_url}"
     return url, server, thread
 
 
@@ -49,6 +55,12 @@ def main() -> int:
         help="Senha do gate (ou use env DOSSIER_PDF_PASSWORD)",
     )
     ap.add_argument("--wait-ms", type=int, default=8000, help="Timeout para o conteúdo aparecer")
+    ap.add_argument(
+        "--post-unlock-wait",
+        type=float,
+        default=3.0,
+        help="Segundos após desbloquear o gate (Chart.js/canvas; dossiês com gráficos: 3+)",
+    )
     args = ap.parse_args()
 
     pw = (args.password or os.environ.get("DOSSIER_PDF_PASSWORD") or "").strip()
@@ -99,7 +111,7 @@ def main() -> int:
                     file=sys.stderr,
                 )
                 return 2
-            time.sleep(0.8)
+            time.sleep(max(0.8, float(args.post_unlock_wait)))
             page.emulate_media(media="print")
             page.pdf(
                 path=str(out_path),
