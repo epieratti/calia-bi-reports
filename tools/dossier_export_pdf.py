@@ -12,6 +12,8 @@ Na raiz do repo:
 Dossiês com Chart.js (vários canvas): use `--post-unlock-wait 4` se algum gráfico sair vazio.
 
 Senha também pode vir de variável de ambiente DOSSIER_PDF_PASSWORD (evita histórico de shell).
+
+Use `--skip-gate` para gerar o PDF sem digitar senha (abre o conteúdo por script — uso interno).
 """
 from __future__ import annotations
 
@@ -61,12 +63,17 @@ def main() -> int:
         default=3.0,
         help="Segundos após desbloquear o gate (Chart.js/canvas; dossiês com gráficos: 3+)",
     )
+    ap.add_argument(
+        "--skip-gate",
+        action="store_true",
+        help="Não usa senha: exibe o dossiê e chama initCharts() (export interno).",
+    )
     args = ap.parse_args()
 
     pw = (args.password or os.environ.get("DOSSIER_PDF_PASSWORD") or "").strip()
-    if not pw:
+    if not args.skip_gate and not pw:
         print(
-            "Defina --password ou a variável de ambiente DOSSIER_PDF_PASSWORD.",
+            "Defina --password ou DOSSIER_PDF_PASSWORD, ou use --skip-gate.",
             file=sys.stderr,
         )
         return 1
@@ -94,23 +101,38 @@ def main() -> int:
             page = browser.new_page()
             page.set_viewport_size({"width": 1200, "height": 1600})
             page.goto(url, wait_until="domcontentloaded", timeout=60_000)
-            page.fill("#access-pw", pw)
-            page.click("#access-form button[type='submit']")
-            # Espera o root visível (remove classe hidden do Tailwind)
-            try:
+            if args.skip_gate:
+                page.evaluate(
+                    """() => {
+                        const g = document.getElementById('access-gate');
+                        const r = document.getElementById('dossier-root');
+                        if (g) g.classList.add('hidden');
+                        if (r) r.classList.remove('hidden');
+                        if (typeof initCharts === 'function') initCharts();
+                    }"""
+                )
                 page.wait_for_function(
                     "() => { const r = document.getElementById('dossier-root'); "
                     "return r && !r.classList.contains('hidden'); }",
                     timeout=args.wait_ms,
                 )
-            except Exception:
-                err = page.locator("#access-err").inner_text(timeout=500).strip()
-                browser.close()
-                print(
-                    f"Falha ao desbloquear o gate. Mensagem na página: {err or '(vazia)'}",
-                    file=sys.stderr,
-                )
-                return 2
+            else:
+                page.fill("#access-pw", pw)
+                page.click("#access-form button[type='submit']")
+                try:
+                    page.wait_for_function(
+                        "() => { const r = document.getElementById('dossier-root'); "
+                        "return r && !r.classList.contains('hidden'); }",
+                        timeout=args.wait_ms,
+                    )
+                except Exception:
+                    err = page.locator("#access-err").inner_text(timeout=500).strip()
+                    browser.close()
+                    print(
+                        f"Falha ao desbloquear o gate. Mensagem na página: {err or '(vazia)'}",
+                        file=sys.stderr,
+                    )
+                    return 2
             time.sleep(max(0.8, float(args.post_unlock_wait)))
             page.emulate_media(media="print")
             page.pdf(
