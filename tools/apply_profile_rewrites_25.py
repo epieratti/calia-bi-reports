@@ -61,7 +61,7 @@ TEXT_SUBS: list[tuple[str, str]] = [
     (r"Nos painéis de mercado", "Nos painéis"),
     (r"Nos painéis há", "Nos painéis,"),
     (r"Antes de fechar peça institucional, a agência deve entregar", "Para peça institucional, convém reunir"),
-    (r"Qualquer checagem jurídica deve cruzar", "Checagens jurídicas devem cruzar"),
+    (r"Qualquer checagem de identidade deve cruzar", "Checagens jurídicas devem cruzar"),
     (r" — lacuna comum", "; lacuna comum"),
     (r" — o peso real ", "; o peso real "),
     (r" — parceria com anunciante", "; parceria com anunciante"),
