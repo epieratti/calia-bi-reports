@@ -1,4 +1,4 @@
-# Social Blade — Squad Always ON Loterias, lote 3 (11/05/2026)
+# Social Blade e TikTok (Upfluence) — Squad Always ON Loterias, lote 3 (11/05/2026)
 
 **Fonte:** [Social Blade](https://socialblade.com) — páginas públicas por handle (`/instagram/user/<handle>`) e por ID de canal no YouTube (`/youtube/channel/UC…`).
 
@@ -23,3 +23,13 @@
 | Morgana Camila | `@morganacamila` (YouTube) | — | — | — | O canal público [youtube.com/@morganacamila](https://www.youtube.com/@morganacamila) está **vazio** (audiência mínima). O Social Blade responde que o criador **não atinge o mínimo** para constar na base (mensagem do site na coleta). **Não** usar como proxy da narradora citada na imprensa sem outra prova de URL. |
 
 **Data dos números:** **11/05/2026** (conferir de novo na data da veiculação).
+
+## TikTok (Upfluence — Free TikTok Profile Audit)
+
+**Fonte:** [Upfluence](https://www.upfluence.com/) — produto «Free TikTok Profile Audit» (captura manual **11/05/2026**). Estimativas de audiência e engajamento do agregador; não substituem painéis proprietários da plataforma.
+
+| Creator | Handle TikTok | Seguidores | Engaj. | Curtidas totais | Mulheres / homens | Vídeos | Notas |
+| --- | --- | ---:| ---:| ---:| ---:| ---:| --- |
+| Raquel Real | @raqrealoficial | 252,5K | 8,00% | 12,7M | 54,52% / 45,48% | 804 | Médias/vídeo no dossiê: com. 76,72; curt. 20,1K; part. 707,2; reprod. 137,0K; seguindo 310 |
+| Morgana Camila | @morganacamila_ | 108,4K | 0,98% | 2,7M | 44,42% / 55,58% | 88 | O @morganacamila **sem** sublinhado não corresponde à narradora da imprensa |
+| Paulo Victor | @seufreitaz | 297,9K | — | 2,1M | — | — | Audit **not found**; seguidores/curtidas/cabeçalho: **154** seguindo (TikTok) |
