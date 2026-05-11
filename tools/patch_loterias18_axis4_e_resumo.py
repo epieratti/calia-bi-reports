@@ -118,33 +118,33 @@ DATA: list[tuple[str, str, str]] = [
     ),
     (
         "linnyke-alves",
-        "Amostra mai./2026 (miniaturas TikTok + trecho Instagram): menores em várias miniaturas e séries recorrentes; possível tração de atenção juvenil — calibrar criativo e validar demos na veiculação.",
-        "Miniaturas com menores recorrentes (mai./2026); validar demos na veiculação.",
+        "Miniaturas do TikTok e trecho do Instagram (capturas internas): menores em várias miniaturas e séries recorrentes; possível tração de atenção juvenil — calibrar criativo e validar demos na veiculação.",
+        "Miniaturas com menores recorrentes; validar demos na veiculação.",
     ),
     (
         "felipe-hatori",
-        "Amostra mai./2026 (TikTok): sem menor em destaque nas miniaturas; humor adulto urbano; evento listado 18+ (Guia Floripa).",
-        "TikTok mai./2026: sem menor em destaque; humor adulto; show 18+ citado.",
+        "Miniaturas do TikTok (capturas internas): sem menor em destaque; humor adulto urbano; evento listado 18+ (Guia Floripa).",
+        "TikTok: sem menor em destaque; humor adulto; show 18+ citado.",
     ),
     (
         "julimara",
-        "Amostra mai./2026 (TikTok): turismo/lifestyle; sem menor em destaque nas miniaturas.",
-        "TikTok mai./2026: lifestyle; sem menor em destaque nas miniaturas.",
+        "Miniaturas do TikTok (capturas internas): turismo/lifestyle; sem menor em destaque nas miniaturas.",
+        "TikTok: lifestyle; sem menor em destaque nas miniaturas.",
     ),
     (
         "raquel-real",
-        "Humor adulto e podcast familiar no YouTube (não canal infantil). Amostra no X (11/05/2026): tom adulto; sem incentivo a jogo para menores.",
-        "Humor adulto; YouTube familiar não infantil; X 11/05/2026 sem apelo a menores.",
+        "Humor adulto e podcast familiar no YouTube (não canal infantil). No X o tom segue adulto; sem incentivo a jogo para menores.",
+        "Humor adulto; YouTube familiar não infantil; X sem apelo a menores.",
     ),
     (
         "morgana-camila",
-        "Desfile cívico com escolas (O Povo) — menores em material público que viralizou; YouTube com tom familiar. Eixo ganha peso com pista de cenário/audiência — validar demos.",
+        "Desfile cívico com escolas (O Povo) — menores em material público que viralizou; YouTube com tom familiar; X sem achados adicionais nesses eixos. Validar demos na veiculação.",
         "Menores no desfile (O Povo) + tom familiar; validar demos (moderado).",
     ),
     (
         "paulo-victor-freitas",
-        "Humor adulto (g1); parkour/rap (Ness + g1) apontam jovem adulto, não público infantil. Na coleta não houve sinal de parcela relevante de menores na audiência.",
-        "Humor adulto; apelo jovem (parkour/rap); coleta sem público infantil predominante.",
+        "Humor adulto (g1); parkour/rap (Ness + g1) apontam jovem adulto, não público infantil. No X não aparecem publi de apostas nem acusação grave documentada; perfil pouco ativo.",
+        "Humor adulto; apelo jovem (parkour/rap); sem público infantil predominante.",
     ),
 ]
 

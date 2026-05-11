@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Normaliza o título do eixo 4 para '4. Loterias 18+ (audiência)' nos perfis que
-ainda estavam só com '4. Loterias 18+'. Ajusta o parágrafo do eixo 4 de Morgana Camila
-(remoção do preâmbulo metodológico redundante + entrada 'Na coleta, em …'). Idempotente."""
+ainda estavam só com '4. Loterias 18+'. Idempotente."""
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
 
 HTML_PATH = Path(__file__).resolve().parents[1] / "caixa" / "20260511-dossie-squad-always-on-loterias-2026.html"
@@ -45,30 +43,8 @@ PROFILE_IDS = [
 
 
 def trim_morgana_axis4(html: str) -> str:
-    sid = "morgana-camila"
-    start = html.find(f"<section id='{sid}'")
-    if start == -1:
-        raise SystemExit("secção morgana-camila não encontrada")
-    end = html.find("<section id='", start + 10)
-    if end == -1:
-        raise SystemExit("fim de secção morgana não encontrado")
-    sec = html[start:end]
-    m = re.search(
-        r"(4\. Loterias 18\+(?: \(audiência\))?</p><p class='text-sm text-slate-700 leading-relaxed'>)([\s\S]*?)(</p></div></div>)",
-        sec,
-    )
-    if not m:
-        raise SystemExit("bloco Loterias 18+ de Morgana não encontrado")
-    head, body, tail = m.group(1), m.group(2), m.group(3)
-    lb = body.lstrip()
-    if lb.startswith("Na coleta, em <a"):
-        return html
-    if "Em <a" not in body:
-        raise SystemExit("texto esperado com link (Em <a) ausente em Morgana")
-    rest = body.split("Em <a", 1)[1]
-    new_body = "Na coleta, em <a" + rest
-    sec2 = sec.replace(head + body + tail, head + new_body + tail, 1)
-    return html[:start] + sec2 + html[end:]
+    """Mantido por compatibilidade; o texto do eixo 4 de Morgana é editado em patch dedicado."""
+    return html
 
 
 def verify_axis4_titles(html: str) -> None:
