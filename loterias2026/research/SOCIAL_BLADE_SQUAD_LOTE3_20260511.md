@@ -33,3 +33,13 @@
 | Raquel Real | @raqrealoficial | 252,5K | 8,00% | 12,7M | 54,52% / 45,48% | 804 | Médias/vídeo no dossiê: com. 76,72; curt. 20,1K; part. 707,2; reprod. 137,0K; seguindo 310 |
 | Morgana Camila | @morganacamila_ | 108,4K | 0,98% | 2,7M | 44,42% / 55,58% | 88 | O @morganacamila **sem** sublinhado não corresponde à narradora da imprensa |
 | Paulo Victor | @seufreitaz | 297,9K | — | 2,1M | — | — | Audit **not found**; seguidores/curtidas/cabeçalho: **154** seguindo (TikTok) |
+
+## Complemento (imprensa e menções em terceiros — refletido no HTML)
+
+Rastreio adicional com **URL no dossiê** (eixos de brand safety), sem substituir a coleta Social Blade/Upfluence acima:
+
+- **Raquel Real:** [Terra — CPI das Bets / ironia](https://www.terra.com.br/diversao/gente/influenciadora-faz-piada-com-virginia-na-cpi-das-bets-e-bebe-reborn,f6a0354ca294b72240c1e0ee55d005115kla7moz.html); [TikTok — sketch Senado 17/06/2024](https://www.tiktok.com/@raqrealoficial/video/7381957732682747141).
+- **Morgana Camila:** [Diário do Nordeste — desfile Maranguape](https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/arrasa-na-major-morgana-camila-viraliza-desfile-civico-de-maranguape-com-humor-e-originalidade-1.3275714); menções «tigrinho» em **posts de terceiros** (calibragem no HTML: [Instagram](https://www.instagram.com/reel/DXsSOCPjqVw/), [TikTok](https://www.tiktok.com/@aurineidecamurupim/video/7479943335419890949), [TV Brasil no TikTok](https://www.tiktok.com/@tvbrasil/video/7547391274421193989)).
+- **Paulo Victor Freitas:** [Instagram @seufreitaz](https://www.instagram.com/seufreitaz/); [LinkedIn /in/pvfreitaz](https://www.linkedin.com/in/pvfreitaz); [g1 em Reels](https://www.instagram.com/reel/DPjBNmajr50/); menções «tigrinho» em **terceiros** ([reel 1](https://www.instagram.com/reel/DWhaB70jz5t/), [post](https://www.instagram.com/p/DWUqhN2Eetk/), [reel 2](https://www.instagram.com/reel/DVEsSj4kbtI/)).
+
+**Homônimo a não misturar:** matéria sobre outra pessoa (ex.: «Raquel Brito» + tigrinho) não se aplica à Raquel Real deste dossiê.
