@@ -53,7 +53,6 @@ def shrink_resumo_table(html: str) -> str:
 
 def main() -> None:
     html = HTML_PATH.read_text(encoding="utf-8")
-    t0 = html
     for sub in REMOVE_CONTAINS:
         html = remove_note_paragraph(html, sub)
     html = shrink_resumo_table(html)
