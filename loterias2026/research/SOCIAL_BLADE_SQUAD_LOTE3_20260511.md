@@ -43,3 +43,7 @@ Rastreio adicional com **URL no dossiê** (eixos de brand safety), sem substitui
 - **Paulo Victor Freitas:** [Instagram @seufreitaz](https://www.instagram.com/seufreitaz/); [LinkedIn /in/pvfreitaz](https://www.linkedin.com/in/pvfreitaz); [g1 em Reels](https://www.instagram.com/reel/DPjBNmajr50/); menções «tigrinho» em **terceiros** ([reel 1](https://www.instagram.com/reel/DWhaB70jz5t/), [post](https://www.instagram.com/p/DWUqhN2Eetk/), [reel 2](https://www.instagram.com/reel/DVEsSj4kbtI/)).
 
 **Homônimo a não misturar:** matéria sobre outra pessoa (ex.: «Raquel Brito» + tigrinho) não se aplica à Raquel Real deste dossiê.
+
+## Auditoria de URLs do HTML consolidado (11/05/2026)
+
+Checagem automatizada (HTTP HEAD/GET, `User-Agent` de browser) sobre as **89** URLs externas do ficheiro `caixa/20260511-dossie-squad-always-on-loterias-2026.html`: **nenhuma resposta 404** no conjunto; `www.baobashows.com.br` exigiu `-k` no `curl` por cadeia SSL incompleta no ambiente de teste, mas responde **200** em GET. Amostragem de imprensa (Estadão, O TEMPO, SuperPoker, BNews, R7, Terra, TikTok/X listados) alinhada ao texto do dossiê. **Correção editorial:** a matéria do O TEMPO sobre filiação ao PT refere-se a **Ana Elisa** (@anaelisast), não a Julia Ferrari — o HTML do dossiê foi ajustado para nomear explicitamente essa creator e evitar ambiguidade.
