@@ -6,6 +6,9 @@
 - Raquel Real, Morgana Camila e Paulo Victor Freitas: remove rodapés longos
   dos cards do snapshot local (Redes · handles), alinhando ao padrão visual
   dos perfis anteriores (números permanecem; detalhes seguem em Métricas).
+- Raquel Real: substitui o parágrafo longo sob o snapshot (nota do X com
+  “Segunda passagem”, Social Blade etc.) por uma linha com link ao X e à
+  seção Métricas nas redes.
 """
 from __future__ import annotations
 
@@ -72,6 +75,26 @@ REDE_STRIP_SPECS: tuple[tuple[str, str], ...] = (
 )
 
 
+RAQUEL_X_LONG_NOTE = re.compile(
+    r"<p class='text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4 mt-1'>"
+    r'<strong class="font-semibold text-slate-900">Raquel Real \(<a class="dossier-source-link" '
+    r'href="https://x\.com/raquelrealofc"[\s\S]*?</p>'
+)
+
+RAQUEL_X_SHORT_NOTE = (
+    "<p class='text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4 mt-1'>"
+    '<a class="dossier-source-link" href="https://x.com/raquelrealofc" target="_blank" '
+    'rel="noopener noreferrer">@raquelrealofc</a> '
+    "na tabela de <a class='toc-link' href='#metricas'>Métricas nas redes</a>; "
+    "achados de marca e conteúdo nos quatro eixos abaixo.</p>"
+)
+
+
+def trim_raquel_x_long_note_under_redes(html: str) -> tuple[str, int]:
+    """Remove o parágrafo longo de notas do X no snapshot da Raquel (perfil 25)."""
+    return RAQUEL_X_LONG_NOTE.subn(RAQUEL_X_SHORT_NOTE, html, count=1)
+
+
 def strip_redes_footers_lote3(html: str) -> tuple[str, int]:
     """Remove rodapés verbosos dos cards do bloco Redes (snapshot) nos perfis 25–27."""
     total = 0
@@ -96,7 +119,7 @@ def strip_redes_footers_lote3(html: str) -> tuple[str, int]:
     return html, total
 
 
-def apply(html: str) -> tuple[str, int, int]:
+def apply(html: str) -> tuple[str, int, int, int]:
     a = html.find('id="perfis"')
     b = html.find('id="metricas"', a)
     if a == -1 or b == -1:
@@ -117,20 +140,24 @@ def apply(html: str) -> tuple[str, int, int]:
             chunk = chunk2
     merged = head + chunk + tail
     merged2, n_strip = strip_redes_footers_lote3(merged)
-    return merged2, n, n_strip
+    merged3, n_raquel_x = trim_raquel_x_long_note_under_redes(merged2)
+    return merged3, n, n_strip, n_raquel_x
 
 
 def main() -> int:
     path = Path(sys.argv[1]) if len(sys.argv) > 1 else HTML_DEFAULT
     html = path.read_text(encoding="utf-8")
-    html2, n, n_strip = apply(html)
+    html2, n, n_strip, n_rx = apply(html)
     if n != len(INNER_ALL):
         print(f"Aviso: {n} de {len(INNER_ALL)} intros substituídos.", file=sys.stderr)
     if html2 == html:
         print("Nada alterado.")
         return 0
     path.write_text(html2, encoding="utf-8")
-    print(f"OK: {n} intros; {n_strip} rodapés removidos do snapshot Redes (lote 3) em {path}")
+    print(
+        f"OK: {n} intros; {n_strip} rodapés Redes (lote 3); "
+        f"nota longa X Raquel → {n_rx} em {path}"
+    )
     return 0
 
 
