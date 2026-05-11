@@ -24,7 +24,9 @@
     body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
     .card-audit { background: white; border-radius: 6px; border: 1px solid #e2e8f0; padding: 1.75rem; margin-bottom: 1.5rem; }
     .section-header { border-left: 4px solid #252525; padding-left: 1rem; margin-bottom: 1rem; }
-    .toc-link { font-size: 0.875rem; font-weight: 600; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; }
+    /* Herda o tamanho do bloco (evita link gigante dentro de text-[9px] / text-xs) */
+    .toc-link { font-size: inherit; font-weight: inherit; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; }
+    nav.card-audit .toc-list > li > .toc-link { font-size: 0.875rem; font-weight: 600; }
     .toc-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }
     .toc-list li { margin-top: 0.35rem; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
