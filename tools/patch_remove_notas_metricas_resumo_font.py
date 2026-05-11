@@ -57,8 +57,6 @@ def main() -> None:
     for sub in REMOVE_CONTAINS:
         html = remove_note_paragraph(html, sub)
     html = shrink_resumo_table(html)
-    if html == t0:
-        print("nada a alterar")
     HTML_PATH.write_text(html, encoding="utf-8")
     print("OK:", HTML_PATH)
 
