@@ -44,7 +44,7 @@ Se **não houver briefing**, o agente deve **pedir** cliente, objetivo, lista de
 | **Novo dossiê modo B** | `docs/PRIMEIRO_DIA.md` + `loterias2026/scripts/new_creator_dossier.py` ou copiar `dossier_TEMPLATE.md` |
 | **Só texto bruto do cliente** | Prompt §1 em `PROMPTS_IA_AGENTES.md` |
 | **Vários agentes** | `docs/MULTI_AGENTES.md` — um integrador, briefing único |
-| **Senha / PDF / validar no ar** | `docs/GOVERNANCA_ENTREGA.md` |
+| **Senha / PDF / validar no ar** | `docs/GOVERNANCA_ENTREGA.md` · metodologia PDF: `docs/METODO_PDF_DOSSIE.md` |
 | **Qualidade / prova por eixo** | `docs/CALIBRAGEM_QUALIDADE.md` + `quality_calibration` no front matter |
 | **Entrega automatizada** | `make dossie-entregar MD=… DEST=…` (ver `make help`) |
 
