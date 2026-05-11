@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Consolida a secção #metricas: uma tabela por rede (Instagram, TikTok, YouTube, X).
 
-Preserva linhas de cada coleta e acrescenta coluna «Coleta (ref.)».
+Preserva linhas de cada coleta e acrescenta coluna "Coleta (ref.)".
 O bloco de texto do X (lote 3) mantém-se após a tabela unificada do X.
 """
 from __future__ import annotations
@@ -94,9 +94,10 @@ def split_trs(tbody_inner: str) -> list[str]:
 
 def append_cells_before_tr_close(tr: str, cells_html: str) -> str:
     tr = tr.rstrip()
-    if not tr.endswith("</tr>"):
+    m = re.search(r"</tr>\s*$", tr, flags=re.IGNORECASE)
+    if not m:
         raise ValueError("esperado </tr> no fim da linha")
-    return tr[:-5] + cells_html + "</tr>"
+    return tr[: m.start()] + cells_html + m.group(0)
 
 
 def normalize_instagram_tr(tr: str, ref: str) -> str:
@@ -194,12 +195,22 @@ def build_new_metricas(html: str) -> str:
         raise SystemExit("como não encontrada")
     old = html[m_start:m_end]
 
+    if "tabela por rede" in old and "Coleta (ref.)</th>" in old:
+        return html
+
     inner_start = old.find("</div>", old.find("section-header")) + len("</div>")
     intro_end = old.find("<section class='mb-10 rounded-lg", inner_start)
+    if intro_end == -1:
+        intro_end = old.find(
+            "<section class='mb-10'><h3 class='text-lg font-black text-calia-navy mb-2'>Instagram</h3>",
+            inner_start,
+        )
     if intro_end == -1:
         raise SystemExit("estrutura metricas inesperada")
     header_and_intro = old[:intro_end]
     if INTRO_OLD not in header_and_intro:
+        if INTRO_NEW in header_and_intro or "tabela por rede" in header_and_intro:
+            return html
         raise SystemExit("texto intro antigo não encontrado (HTML mudou?)")
     header_and_intro = header_and_intro.replace(INTRO_OLD, INTRO_NEW)
 
@@ -337,7 +348,8 @@ def main() -> None:
     t = HTML_PATH.read_text(encoding="utf-8")
     new_t = build_new_metricas(t)
     if new_t == t:
-        raise SystemExit("nenhuma alteração")
+        print("Sem alterações (já consolidado ou intro inesperada).")
+        return
     HTML_PATH.write_text(new_t, encoding="utf-8")
     print("OK:", HTML_PATH)
 
