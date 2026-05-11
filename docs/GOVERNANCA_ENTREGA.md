@@ -27,9 +27,10 @@ Objetivo: **você precisa abrir o HTML real** (layout, links, gate) antes de dar
 
 ## 3. PDF com UI digna (export local)
 
-- O HTML do modo B já inclui estilos **`@media print`**: fundo branco, **gate oculto**, conteúdo visível, **URLs após links** para auditoria no PDF, filtro do painel executivo oculto na impressão.
-- **Gerar:** `python3 tools/dossier_export_pdf.py --html <caminho>.html --out <saida>.pdf` com senha (ver `tools/README.md`).
-- Depende de **Playwright + Chromium** (`tools/requirements-pdf.txt`). O script sobe um **servidor HTTP local** para o gate funcionar (`crypto.subtle` em contexto seguro).
+- **Metodologia passo a passo** (comando, Chart.js, `check_client_html_leakage`, commit): [`docs/METODO_PDF_DOSSIE.md`](METODO_PDF_DOSSIE.md).
+- O HTML do modo B (e muitos modo A) pode incluir estilos **`@media print`**: fundo branco, **gate oculto** na impressão, conteúdo visível, blocos com `no-print` só na tela.
+- **Gerar:** `python3 tools/dossier_export_pdf.py --html <caminho>.html --out <saida>.pdf` com senha (`--password` ou `DOSSIER_PDF_PASSWORD`) ou `--skip-gate` só **uso interno** — ver `tools/README.md`.
+- Depende de **Playwright + Chromium** (`tools/requirements-pdf.txt`). O script sobe um **servidor HTTP local na raiz do repo** para o gate funcionar (`crypto.subtle` em contexto seguro) e para resolver `../assets` e outros caminhos relativos.
 
 **Não** commitar PDF com dados sensíveis no repo **público** sem alinhamento com política de dados.
 

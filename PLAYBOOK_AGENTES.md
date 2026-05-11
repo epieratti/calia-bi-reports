@@ -2,7 +2,7 @@
 
 **Primeiro contato com o repo:** [`docs/INICIO_AGENTE.md`](docs/INICIO_AGENTE.md) (start do pipeline + texto para colar no chat).
 
-Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/PRIMEIRO_DIA.md`](docs/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/PROMPTS_IA_AGENTES.md`](docs/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê** (senha: ver governança). **Governança / PDF / validação no ar:** [`docs/GOVERNANCA_ENTREGA.md`](docs/GOVERNANCA_ENTREGA.md). **Vários agentes no mesmo pedido:** [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md) — briefing único, um integrador, contrato entre etapas.
+Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/PRIMEIRO_DIA.md`](docs/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/PROMPTS_IA_AGENTES.md`](docs/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê** (senha: ver governança). **Governança / PDF / validação no ar:** [`docs/GOVERNANCA_ENTREGA.md`](docs/GOVERNANCA_ENTREGA.md). **Metodologia PDF (HTML → PDF, Chart.js):** [`docs/METODO_PDF_DOSSIE.md`](docs/METODO_PDF_DOSSIE.md). **Vários agentes no mesmo pedido:** [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md) — briefing único, um integrador, contrato entre etapas.
 
 ## Regras primordiais
 
@@ -49,4 +49,4 @@ Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.m
 | Nome `.html` + entrega num comando | `make dossie-filename MD=…` / `make dossie-entregar MD=… DEST=…` (ver `make help`) |
 | Vazamento em HTML publicado | `python3 tools/check_client_html_leakage.py` |
 | Vários agentes sem conflito | [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md) |
-| PDF após gate | `make dossie-pdf` / [`docs/GOVERNANCA_ENTREGA.md`](docs/GOVERNANCA_ENTREGA.md) |
+| PDF após gate | [`docs/METODO_PDF_DOSSIE.md`](docs/METODO_PDF_DOSSIE.md) · `make dossie-pdf` · [`docs/GOVERNANCA_ENTREGA.md`](docs/GOVERNANCA_ENTREGA.md) |
