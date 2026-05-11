@@ -34,16 +34,16 @@
 | Morgana Camila | @morganacamila_ | 108,4K | 0,98% | 2,7M | 44,42% / 55,58% | 88 | O @morganacamila **sem** sublinhado não corresponde à narradora da imprensa |
 | Paulo Victor | @seufreitaz | 297,9K | — | 2,1M | — | — | Audit **not found**; seguidores/curtidas/cabeçalho: **154** seguindo (TikTok) |
 
-## Complemento (imprensa e menções em terceiros — refletido no HTML)
+## Complemento (imprensa e perfis oficiais — refletido no HTML)
 
-Rastreio adicional com **URL no dossiê** (eixos de brand safety), sem substituir a coleta Social Blade/Upfluence acima:
+Fontes adicionais **sobre** os creators do lote 3 (sem substituir a coleta Social Blade/Upfluence acima):
 
-- **Raquel Real:** [Terra — CPI das Bets / ironia](https://www.terra.com.br/diversao/gente/influenciadora-faz-piada-com-virginia-na-cpi-das-bets-e-bebe-reborn,f6a0354ca294b72240c1e0ee55d005115kla7moz.html); [TikTok — sketch Senado 17/06/2024](https://www.tiktok.com/@raqrealoficial/video/7381957732682747141).
-- **Morgana Camila:** [Diário do Nordeste — desfile Maranguape](https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/arrasa-na-major-morgana-camila-viraliza-desfile-civico-de-maranguape-com-humor-e-originalidade-1.3275714); menções «tigrinho» em **posts de terceiros** (calibragem no HTML: [Instagram](https://www.instagram.com/reel/DXsSOCPjqVw/), [TikTok](https://www.tiktok.com/@aurineidecamurupim/video/7479943335419890949), [TV Brasil no TikTok](https://www.tiktok.com/@tvbrasil/video/7547391274421193989)).
-- **Paulo Victor Freitas:** [Instagram @seufreitaz](https://www.instagram.com/seufreitaz/); [LinkedIn /in/pvfreitaz](https://www.linkedin.com/in/pvfreitaz); [g1 em Reels](https://www.instagram.com/reel/DPjBNmajr50/); menções «tigrinho» em **terceiros** ([reel 1](https://www.instagram.com/reel/DWhaB70jz5t/), [post](https://www.instagram.com/p/DWUqhN2Eetk/), [reel 2](https://www.instagram.com/reel/DVEsSj4kbtI/)).
+- **Raquel Real:** [Terra — CPI das Bets / ironia](https://www.terra.com.br/diversao/gente/influenciadora-faz-piada-com-virginia-na-cpi-das-bets-e-bebe-reborn,f6a0354ca294b72240c1e0ee55d005115kla7moz.html); [TikTok oficial — sketch Senado 17/06/2024](https://www.tiktok.com/@raqrealoficial/video/7381957732682747141).
+- **Morgana Camila:** [Diário do Nordeste — desfile Maranguape](https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/arrasa-na-major-morgana-camila-viraliza-desfile-civico-de-maranguape-com-humor-e-originalidade-1.3275714).
+- **Paulo Victor Freitas:** [Instagram @seufreitaz](https://www.instagram.com/seufreitaz/); [LinkedIn /in/pvfreitaz](https://www.linkedin.com/in/pvfreitaz); [g1 em Reels](https://www.instagram.com/reel/DPjBNmajr50/).
 
 **Homônimo a não misturar:** matéria sobre outra pessoa (ex.: «Raquel Brito» + tigrinho) não se aplica à Raquel Real deste dossiê.
 
 ## Auditoria de URLs do HTML consolidado (11/05/2026)
 
-Checagem automatizada (HTTP HEAD/GET, `User-Agent` de browser) sobre as **89** URLs externas do ficheiro `caixa/20260511-dossie-squad-always-on-loterias-2026.html`: **nenhuma resposta 404** no conjunto; `www.baobashows.com.br` exigiu `-k` no `curl` por cadeia SSL incompleta no ambiente de teste, mas responde **200** em GET. Amostragem de imprensa (Estadão, O TEMPO, SuperPoker, BNews, R7, Terra, TikTok/X listados) alinhada ao texto do dossiê. **Correção editorial:** a matéria do O TEMPO sobre filiação ao PT refere-se a **Ana Elisa** (@anaelisast), não a Julia Ferrari — o HTML do dossiê foi ajustado para nomear explicitamente essa creator e evitar ambiguidade.
+Checagem automatizada (HTTP HEAD/GET, `User-Agent` de browser) sobre as URLs externas do ficheiro `caixa/20260511-dossie-squad-always-on-loterias-2026.html` na data da auditoria: **nenhuma resposta 404** no conjunto testado; `www.baobashows.com.br` exigiu `-k` no `curl` por cadeia SSL incompleta no ambiente de teste, mas responde **200** em GET. **Revisão editorial posterior:** retiraram-se do corpo do HTML links de **contas alheias** e matérias sobre **outras pessoas** (ex.: matéria política não ligada a Julia Ferrari; notícia de póquer homónima; reels/tiktoks de terceiros), mantendo-se só fontes que identificam explicitamente o creator auditado ou o seu perfil oficial.
