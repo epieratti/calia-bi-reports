@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Insere links dossier-source-link nos intros dos perfis 1–21 (fontes públicas)."""
+"""Insere links dossier-source-link nos intros dos perfis 1–27 e alinha o bloco Redes do lote 3.
+
+- Perfis 1–21: textos com duas fontes públicas cada (idempotente).
+- Perfis 22–27: mesma convenção, preenchendo intros que estavam sem links.
+- Raquel Real, Morgana Camila e Paulo Victor Freitas: remove rodapés longos
+  dos cards do snapshot local (Redes · handles), alinhando ao padrão visual
+  dos perfis anteriores (números permanecem; detalhes seguem em Métricas).
+"""
 from __future__ import annotations
 
 import re
@@ -43,15 +50,60 @@ INNER_1_21: dict[str, str] = {
     "ademara": f"{P}Humorista com série <strong class=\"font-semibold text-slate-900\">Sem Filtro</strong> na Netflix; a {L('https://www.uol.com.br/splash/noticias/2023/03/01/ademara-vive-influencer-em-serie-da-netflix-nao-podia-ser-mais-diferente.htm', 'Splash (UOL)')} cobre o papel e a {L('https://pt.wikipedia.org/wiki/Sem_Filtro_(s%C3%A9rie)', 'Wikipédia da série')} resume enredo e elenco. Checar menções políticas recentes na imprensa ao montar o cronograma.</p>",
 }
 
+INNER_22_27: dict[str, str] = {
+    "linnyke-alves": f"{P}Comediante de vídeo curto com personagens de rua e engajamento forte no TikTok e no Instagram; mobilização solidária repercutiu no {L('https://www.jornaldorap.com.br/noticias/linnyke-alves-mobiliza-redes-sociais-e-arrecada-mais-de-r-400-mil-para-realizar-o-sonho-da-casa-propria-de-crianca-carente/', 'Jornal do Rap')} e na {L('https://www.polemicaparaiba.com.br/cidades/em-joao-pessoa-humorista-cria-vaquinha-para-ajudar-crianca-que-encantou-a-internet-assista/', 'Polêmica Paraíba')}. Cuidado se a narrativa envolver menor em situação de vulnerabilidade.</p>",
+    "felipe-hatori": f"{P}Comediante e roteirista representado pela Baobá; a {L('https://www.baobashows.com.br/felipehatori', 'página na Baobá Produções')} lista formatos e o {L('https://www.diariodesuzano.com.br/caderno-d/humorista-suzanense-inicia-carreira-no-stand-up-e-cria-grupo-bateu-a-nave-44211/', 'Diário de Suzano')} contextualiza grupos de humor no interior paulista. Audiência concentrada em TikTok, Instagram e YouTube — validar campanhas em Métricas nas redes.</p>",
+    "julimara": f"{P}Criadora ligada ao Triângulo Mineiro (MG), com turismo e lifestyle regional; o {L('https://linktr.ee/Julimaranascimento', 'Linktree público')} concentra handles e a {L('https://www.flikta.com/influencers/uberlandia/', 'listagem Flikta (Uberlândia)')} descreve nicho e alcance. Confirmar status comercial no briefing.</p>",
+    "raquel-real": f"{P}Comediante e roteirista; perfil agregado no {L('https://www.fashionbubbles.com/influencers/quem-e-raquel-real/', 'Fashion Bubbles')} e tom de humor na {L('https://www.metropoles.com/entretenimento/diaba-do-tiktok-raquel-real-usa-humor-para-criticar-bizarrices-da-web', 'Metrópoles')}. No X há sátira em torno de apostas e política; buscas por nome no estado misturam figura política homônima — homologar por handle e URL do perfil.</p>",
+    "morgana-camila": f"{P}Criadora cearense do bordão <strong class=\"font-semibold text-slate-900\">Arrasa na Major</strong>, conhecida pelos desfiles cívicos; história no {L('https://www.opovo.com.br/noticias/ceara/maranguape/2022/09/14/conheca-morgana-camila-famosa-pela-narracao-dos-desfiles-de-7-de-setembro-em-maranguape.html', 'O Povo')} e no {L('https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/arrasa-na-major-morgana-camila-viraliza-desfile-civico-de-maranguape-com-humor-e-originalidade-1.3275714/leia-tamb%C3%A9m-1.3275734', 'Diário do Nordeste')} cruzam viralização e produto. Pauta mistura humor, maternidade e cotidiano; menores em conteúdo de massa entra no eixo Loterias 18+.</p>",
+    "paulo-victor-freitas": f"{P}Criador potiguar de humor sobre o Nordeste; o {L('https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/10/08/nao-existe-o-brasil-sem-o-nordeste-influenciador-potiguar-viraliza-ao-valorizar-a-cultura-nordestina-e-quebrar-estereotipos.ghtml', 'G1 (RN)')} documenta viralização regional e a {L('https://www.nessmgt.com/casting/seu-freitaz', 'Ness — casting')} reúne dados públicos de agência. Parkour e rap na bio; homologar identidade por handle e por fontes citadas no perfil.</p>",
+}
 
-def apply(html: str) -> tuple[str, int]:
+INNER_ALL = {**INNER_1_21, **INNER_22_27}
+
+REDE_FOOTER_P = re.compile(
+    r"<p class='mt-1\.5 text-\[9px\] text-slate-500(?: leading-snug)?'[^>]*>[\s\S]*?</p>"
+)
+
+REDE_STRIP_SPECS: tuple[tuple[str, str], ...] = (
+    ("raquel-real", "<section id='morgana-camila'"),
+    ("morgana-camila", "<section id='paulo-victor-freitas'"),
+    ("paulo-victor-freitas", '<section id="tabela"'),
+)
+
+
+def strip_redes_footers_lote3(html: str) -> tuple[str, int]:
+    """Remove rodapés verbosos dos cards do bloco Redes (snapshot) nos perfis 25–27."""
+    total = 0
+    for start_slug, end_needle in REDE_STRIP_SPECS:
+        a = html.find(f"<section id='{start_slug}'")
+        if a == -1:
+            continue
+        b = html.find(end_needle, a + 1)
+        if b == -1:
+            continue
+        sec = html[a:b]
+        mb = sec.find("<div class='mb-4'>")
+        intro = sec.find(DIV_MARKER, mb)
+        if mb == -1 or intro == -1:
+            continue
+        redes = sec[mb:intro]
+        redes2, n = REDE_FOOTER_P.subn("", redes)
+        total += n
+        if redes2 != redes:
+            sec2 = sec[:mb] + redes2 + sec[intro:]
+            html = html[:a] + sec2 + html[b:]
+    return html, total
+
+
+def apply(html: str) -> tuple[str, int, int]:
     a = html.find('id="perfis"')
     b = html.find('id="metricas"', a)
     if a == -1 or b == -1:
         raise SystemExit("perfis/metricas não encontrados")
     head, chunk, tail = html[:a], html[a:b], html[b:]
     n = 0
-    for slug, inner in INNER_1_21.items():
+    for slug, inner in INNER_ALL.items():
         pat = re.compile(
             rf"(<section id='{re.escape(slug)}'[\s\S]*?{re.escape(DIV_MARKER)})([\s\S]*?)({re.escape(GRID)})",
         )
@@ -63,20 +115,22 @@ def apply(html: str) -> tuple[str, int]:
         if c:
             n += c
             chunk = chunk2
-    return head + chunk + tail, n
+    merged = head + chunk + tail
+    merged2, n_strip = strip_redes_footers_lote3(merged)
+    return merged2, n, n_strip
 
 
 def main() -> int:
     path = Path(sys.argv[1]) if len(sys.argv) > 1 else HTML_DEFAULT
     html = path.read_text(encoding="utf-8")
-    html2, n = apply(html)
-    if n != len(INNER_1_21):
-        print(f"Aviso: {n} de {len(INNER_1_21)} perfis.", file=sys.stderr)
+    html2, n, n_strip = apply(html)
+    if n != len(INNER_ALL):
+        print(f"Aviso: {n} de {len(INNER_ALL)} intros substituídos.", file=sys.stderr)
     if html2 == html:
         print("Nada alterado.")
         return 0
     path.write_text(html2, encoding="utf-8")
-    print(f"OK: {n} intros com links em {path}")
+    print(f"OK: {n} intros; {n_strip} rodapés removidos do snapshot Redes (lote 3) em {path}")
     return 0
 
 

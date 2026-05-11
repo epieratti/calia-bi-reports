@@ -4,9 +4,9 @@ Substitui o bloco introdutório (texto, não só estrutura) de cada um dos 27
 perfis do dossiê squad por redações manuais alinhadas em tom e extensão.
 Uma única execução esperada; idempotente se o HTML já estiver igual.
 
-Perfis 1–21: após rodar este script e mudar esses intros, execute também
+Após rodar este script e mudar os intros, execute também
 tools/patch_quem_e_fontes_links_perfis_1_21.py para reincorporar links
-de fonte (Gshow, G1, veículos etc.) no parágrafo inicial.
+de fonte nos 27 parágrafos iniciais e alinhar o snapshot “Redes” do lote 3.
 """
 from __future__ import annotations
 
@@ -44,12 +44,12 @@ NEW_INNER: dict[str, str] = {
     "rafael-saraiva": f"{P}Integrante do <strong class=\"font-semibold text-slate-900\">Porta dos Fundos</strong> e com atuação em novela da Globo. O ponto sensível costuma ser humor com jogos/apostas em títulos de sketches — ver eixo Concorrência.</p>",
     "pedro-ottoni": f"{P}Criador de humor com foco em streaming e cultura pop; veículos de entretenimento resumem parcerias com plataformas. Pauta leve; confirmar alinhamento de marca e faixa etária do conteúdo com a peça.</p>",
     "ademara": f"{P}Humorista com série documental <strong class=\"font-semibold text-slate-900\">Sem Filtro</strong> na Netflix e presença em produtos do ecossistema Globoplay/Play9. Alto reconhecimento em entretenimento; checar menções políticas recentes na imprensa ao montar o cronograma.</p>",
-    "linnyke-alves": f"{P}Comediante de vídeo curto com personagens de rua, com forte engajamento no TikTok e no Instagram. Houve destaque na imprensa por mobilização solidária em 2024 — cuidado se a narrativa envolver menor em situação de vulnerabilidade.</p>",
-    "felipe-hatori": f"{P}Comediante e roteirista; audiência concentrada em TikTok, Instagram e YouTube, com stand-up próprio. Portfólio público associa o nome a campanhas com grandes marcas financeiras, tecnologia e bebidas — validar conflitos de categoria e exclusividades no briefing.</p>",
-    "julimara": f"{P}Criadora do <strong class=\"font-semibold text-slate-900\">Triângulo Mineiro</strong> (MG), com foco em turismo, trilhas e lifestyle regional. Alcance maior no Instagram, com TikTok e canal temático no YouTube; perfil regional — confirmar status comercial e janelas de publi no briefing.</p>",
-    "raquel-real": f"{P}Comediante e apresentadora cearense, com trabalhos em humor premium e currículo agregado em listas da moda e entretenimento. No X há sátira sobre apostas e política; buscas por nome no estado misturam figura política homônima — homologar sempre por handle e URL do perfil.</p>",
-    "morgana-camila": f"{P}Criadora cearense conhecida por <strong class=\"font-semibold text-slate-900\">Arrasa na Major</strong>, com crônicas em veículos regionais e entrevistas longas em YouTube. Pauta mistura humor, maternidade e cotidiano; eventual menção a menores em conteúdo de massa entra no eixo Loterias 18+.</p>",
-    "paulo-victor-freitas": f"{P}Criador potiguar de humor sobre o Nordeste; biografia pública associa parkour, rap e publicidade (casting e matérias nacionais). Há menções à sociedade de vigilância eletrônica e variação de grafia do nome na imprensa — consolidar identidade por handle e fontes citadas no perfil.</p>",
+    "linnyke-alves": f"{P}Comediante de vídeo curto com personagens de rua e engajamento forte no TikTok e no Instagram; mobilização solidária repercutiu na imprensa — cuidado se a narrativa envolver menor em situação de vulnerabilidade.</p>",
+    "felipe-hatori": f"{P}Comediante e roteirista representado pela Baobá; matérias descrevem trajetória em stand-up e grupos de humor no interior paulista. Audiência concentrada em TikTok, Instagram e YouTube — validar campanhas em Métricas nas redes.</p>",
+    "julimara": f"{P}Criadora ligada ao Triângulo Mineiro (MG), com turismo e lifestyle regional; listagens de mercado descrevem nicho em Uberlândia. Confirmar status comercial no briefing.</p>",
+    "raquel-real": f"{P}Comediante e roteirista; veículos de moda e imprensa agregam biografia pública e exemplificam o humor de sátira na web. No X há sátira em torno de apostas e política; buscas por nome no estado misturam figura política homônima — homologar por handle e URL do perfil.</p>",
+    "morgana-camila": f"{P}Criadora cearense do bordão <strong class=\"font-semibold text-slate-900\">Arrasa na Major</strong>, conhecida pelos desfiles cívicos com repercussão nacional na imprensa regional. Pauta mistura humor, maternidade e cotidiano; menores em conteúdo de massa entra no eixo Loterias 18+.</p>",
+    "paulo-victor-freitas": f"{P}Criador potiguar de humor sobre o Nordeste; matérias nacionais documentam viralização regional e agências públicas consolidam dados de casting. Parkour e rap na bio; homologar identidade por handle e por fontes citadas no perfil.</p>",
 }
 
 
