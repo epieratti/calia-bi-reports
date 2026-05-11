@@ -3,6 +3,10 @@
 Substitui o bloco introdutório (texto, não só estrutura) de cada um dos 27
 perfis do dossiê squad por redações manuais alinhadas em tom e extensão.
 Uma única execução esperada; idempotente se o HTML já estiver igual.
+
+Perfis 1–21: após rodar este script e mudar esses intros, execute também
+tools/patch_quem_e_fontes_links_perfis_1_21.py para reincorporar links
+de fonte (Gshow, G1, veículos etc.) no parágrafo inicial.
 """
 from __future__ import annotations
 
