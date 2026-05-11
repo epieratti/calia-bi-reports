@@ -4,6 +4,8 @@
 
 **Metodologia (alinhada ao repo):** mesma abordagem descrita em `loterias2026-20260406/research/SOCIAL_BLADE_INSTAGRAM.md` / `SOCIAL_BLADE_YOUTUBE.md`: leitura das estatísticas exibidas no painel público do Social Blade, com **URL por perfil** preservada no dossiê. **Nota operacional:** o IP do ambiente de automação pode receber *Access denied* ou desafio *Just a moment* (Cloudflare) em requisições **headless**; quando necessário, usar **contexto de browser isolado por URL**, **UA de desktop Chrome** (não `HeadlessChrome` no user-agent) e espera de vários segundos após `domcontentloaded` até os campos **Followers / Subscribers** deixarem de mostrar apenas *spinner*. Para YouTube, quando `socialblade.com/youtube/c/<handle>` retorna **Not Found**, obter o **`channelId` `UC…`** a partir da página pública `https://www.youtube.com/@<handle>` e abrir `socialblade.com/youtube/channel/UC…`.
 
+**X (Twitter):** em **mai/2026** o Social Blade exibe mensagem de **descontinuação** das fichas de Twitter/X (HTTP 404 em `/twitter/user/<handle>`). Para **seguidores** e **checagem de atividade** no X, o consolidado `20260511-dossie-squad-always-on-loterias-2026.html` passou a usar **página pública** `https://x.com/<handle>` (Playwright Chromium, `locale=pt-BR`, snapshot **11/05/2026**), alinhado ao cartão de redes de cada perfil.
+
 ## Instagram
 
 | Nome | Usuário | Seguidores | Seguindo | Mídias | Engaj. | Curtidas méd. | Coment. méd. | URL |
