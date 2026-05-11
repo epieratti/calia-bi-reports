@@ -69,7 +69,7 @@ INNERS: list[tuple[str, int, str]] = [
     (
         "paulo-victor-freitas",
         4,
-        f"""Humor adulto (<a {LINK} href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/10/08/nao-existe-o-brasil-sem-o-nordeste-influenciador-potiguar-viraliza-ao-valorizar-a-cultura-nordestina-e-quebrar-estereotipos.ghtml" target="_blank" rel="noopener noreferrer"><strong class="font-semibold text-slate-900">g1</strong></a>). Parkour e rap na bio (<a {LINK} href="https://www.nessmgt.com/casting/seu-freitaz" target="_blank" rel="noopener noreferrer"><strong class="font-semibold text-slate-900">Ness</strong></a>) apontam jovem-adulto — não sustentam leitura de público infantil predominante no critério Loterias 18+; validar criativo na veiculação.""",
+        f"""Humor adulto (<a {LINK} href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/10/08/nao-existe-o-brasil-sem-o-nordeste-influenciador-potiguar-viraliza-ao-valorizar-a-cultura-nordestina-e-quebrar-estereotipos.ghtml" target="_blank" rel="noopener noreferrer"><strong class="font-semibold text-slate-900">g1</strong></a>). Parkour e rap na bio (<a {LINK} href="https://www.nessmgt.com/casting/seu-freitaz" target="_blank" rel="noopener noreferrer"><strong class="font-semibold text-slate-900">Ness</strong></a>) apontam jovem-adulto — não sustentam leitura de público infantil predominante no critério Loterias 18+.""",
     ),
 ]
 
