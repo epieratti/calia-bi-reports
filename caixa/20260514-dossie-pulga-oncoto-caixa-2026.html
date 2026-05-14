@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Levantamento — Pulga (@pulga.oncoto) · CAIXA 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'calia-navy': '#252525',
+                        'calia-gold': '#f9a619',
+                        'calia-emerald': '#009966',
+                        'calia-crimson': '#CC0033',
+                        'calia-slate': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        .card-audit { background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .section-header { border-left: 6px solid #252525; padding-left: 1.25rem; margin-bottom: 1.25rem; }
+        .bio-intro { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; border-left: 4px solid #f9a619; }
+        .profile-handle { display: inline-block; margin-top: 0.5rem; padding: 0.35rem 0.75rem; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.02em; color: #252525; background: #f1f5f9; border: 1px solid #cbd5e1; border-left: 3px solid #f9a619; border-radius: 4px; font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace; }
+        .toc-link { font-size: 0.875rem; font-weight: 600; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+        .toc-link:hover { opacity: 0.82; }
+        .toc-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }
+        .toc-list li { margin-top: 0.5rem; }
+        .toc-list li:first-child { margin-top: 0; }
+        #dossier-root .card-audit a[href] { font-weight: 600; color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+        .risk-box { border-radius: 6px; border: 2px solid #252525; overflow: hidden; margin-top: 1rem; }
+        .risk-box__head { background: #252525; color: #f9a619; padding: 0.5rem 1rem; font-size: 10px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+        .risk-box__body { background: #f1f5f9; padding: 1rem 1.25rem; font-size: 0.875rem; line-height: 1.55; }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
+            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
+            <form id="access-form" class="space-y-3">
+                <label class="sr-only" for="access-pw">Senha</label>
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy" placeholder="Senha">
+                <p id="access-err" class="hidden text-sm font-medium text-red-600"></p>
+                <div class="mt-5 border-t border-slate-200 pt-5">
+                    <button type="submit" class="w-full rounded-md bg-calia-gold py-3.5 text-sm font-black uppercase tracking-widest text-calia-navy shadow-md shadow-black/15 ring-1 ring-black/5 transition hover:brightness-105 active:brightness-95">Entrar</button>
+                </div>
+            </form>
+            <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+        </div>
+    </div>
+
+    <div id="dossier-root" class="hidden max-w-4xl mx-auto space-y-10">
+
+        <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded shadow-lg">
+            <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+            <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-tight uppercase">Levantamento breve — Pulga</h1>
+            <p class="text-sm opacity-90 mt-2 font-medium">Creator e dançarino · Instagram <span class="whitespace-nowrap">@pulga.oncoto</span> · maio/2026</p>
+            <p class="profile-handle mt-3 bg-white/10 border-white/20 text-white" aria-label="Perfil solicitado"><a class="!text-white !no-underline hover:!underline" href="https://www.instagram.com/pulga.oncoto/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/pulga.oncoto/</a></p>
+        </header>
+
+        <nav class="card-audit py-6" aria-label="Sumário">
+            <div class="section-header mb-4">
+                <h2 class="text-lg font-black text-calia-navy uppercase tracking-tight">Neste documento</h2>
+            </div>
+            <ul class="toc-list">
+                <li><a class="toc-link" href="#leitura-executiva">Leitura executiva</a></li>
+                <li><a class="toc-link" href="#identidade">Quem é e qual o nicho</a></li>
+                <li><a class="toc-link" href="#trajetoria">Trajetória e formato de conteúdo</a></li>
+                <li><a class="toc-link" href="#marca-publico">Tom, público e encaixe de marca</a></li>
+                <li><a class="toc-link" href="#atencao">Pontos de atenção (brand safety)</a></li>
+                <li><a class="toc-link" href="#metodologia">Metodologia e limitações</a></li>
+                <li><a class="toc-link" href="#fontes">Fontes</a></li>
+            </ul>
+        </nav>
+
+        <section id="leitura-executiva" class="card-audit scroll-mt-20 border-l-4 border-calia-gold">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Leitura executiva</h2>
+            </div>
+            <ul class="list-none space-y-3 text-sm text-slate-700 leading-relaxed">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Quem é:</strong> <strong>Wallace Santos Soares</strong>, conhecido como <strong>Pulga</strong>, dançarino e presença forte no Instagram no handle <strong>@pulga.oncoto</strong>. A imprensa o descreve como fenômeno de dança e <strong>autoestima</strong> com narrativa popular e acessível.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Formato:</strong> vídeos de dança, energia contagiante e mensagens de <strong>bem-estar e “viver o agora”</strong>; não é retratado como creator de fórmula tradicional de tutorial ou review.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Encaixe institucional (hipótese):</strong> bom alinhamento a campanhas que queiram <strong>alegria, inclusão corporal positiva e proximidade com o cotidiano brasileiro</strong> — desde que a marca aceite um tom espiritual leve (fé citada em reportagens) e monitore comentários de ódio na rede (tema recorrente na imprensa sobre ele).</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Este arquivo é um levantamento enxuto</strong> com base em <strong>perfil público</strong> e <strong>matérias jornalísticas</strong>; não substitui painel de métricas em tempo real nem checagem de posts antigos linha a linha.</span></li>
+            </ul>
+        </section>
+
+        <section id="identidade" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Quem é e qual o nicho</h2>
+            </div>
+            <div class="bio-intro">
+                <p class="text-sm text-slate-700 leading-relaxed">Segundo reportagens, Pulga é <strong>Wallace Santos Soares</strong>, <strong>47 anos</strong>, <strong>natural de Belo Horizonte (MG)</strong>, torcedor declarado do <strong>Cruzeiro</strong>, pai de <strong>Lucca</strong> e <strong>Liz</strong>. O apelido “Pulga” e o bordão <strong>“Chora Boy”</strong> aparecem de forma recorrente na cobertura sobre sua persona nas redes.</p>
+                <p class="text-sm text-slate-700 leading-relaxed mt-2">O nicho percebido na mídia é <strong>entretenimento por dança</strong> com discurso de <strong>autoestima, resistência à crítica de corpo</strong> e <strong>leveza emocional</strong> — público que busca identificação e bem-estar em formato curto (Reels e equivalentes).</p>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed">No Instagram público, o nome exibido costuma aparecer como <strong>Wallace Soares</strong> no handle <strong>@pulga.oncoto</strong> (metadado acessível sem login; o feed completo exige ambiente logado no Instagram). A imprensa costuma citar o nome completo <strong>Wallace Santos Soares</strong>.</p>
+        </section>
+
+        <section id="trajetoria" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Trajetória e formato de conteúdo</h2>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed">As matérias em veículos como o <strong>iG Gente</strong> descrevem uma trajetória de trabalhos diversos (lanchonete, venda de roupas online, aulas em academias) antes do destaque como dançarino, com aprendizado informal da dança desde a juventude e apresentações pelo Brasil e no exterior.</p>
+            <p class="text-sm text-slate-700 leading-relaxed mt-3">O <strong>salto de visibilidade em 2021</strong>, durante a pandemia, é o fato mais citado: relatos de que ele publicou um vídeo após um churrasco em casa (apenas com moradores do imóvel, segundo a reportagem) e que a conta teria saltado de <strong>cerca de 300 para cerca de 50 mil seguidores</strong> em um curto intervalo — números históricos citados pela imprensa, não medidos neste levantamento.</p>
+            <p class="text-sm text-slate-700 leading-relaxed mt-3">O tom costuma ser descrito como <strong>autêntico e espontâneo</strong>, com ênfase em ouvir “o coração” e referências a <strong>fé</strong>, além de respostas públicas a <strong>haters</strong> com mensagem de perseverança (“quanto mais me baterem, mais eu vou dançar”, na transcrição das matérias).</p>
+        </section>
+
+        <section id="marca-publico" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Tom, público e encaixe de marca</h2>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed"><strong>Público provável (inferência):</strong> consumo popular amplo, forte apelo emocional e identificação com <strong>corpo fora do padrão estético tradicional da mídia</strong>, mensagens de superação e humor afetivo. A distribuição geográfica exata de seguidores <strong>não foi levantada aqui</strong>.</p>
+            <p class="text-sm text-slate-700 leading-relaxed mt-3"><strong>Marca:</strong> combina com narrativas de <strong>inclusão, saúde mental leiga (não clínica), movimento, celebração do dia a dia e orgulho de quem se é</strong>. Menos óbvio para posicionamentos ultra-minimalistas ou ultra-“premium frio”, salvo contraponto criativo explícito no roteiro.</p>
+        </section>
+
+        <section id="atencao" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Pontos de atenção (brand safety)</h2>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-2 list-disc list-inside leading-relaxed">
+                <li><strong>Comentários de ódio e desejo de mal / violência</strong> relatados na imprensa; o próprio Pulga comenta o tema de forma pública. Para marca: avaliar <strong>moderação de campanha</strong>, suporte a creator e <strong>cláusulas de segurança</strong> em ativação paga.</li>
+                <li><strong>Religião e fé</strong> aparecem nas reportagens como parte da narrativa pessoal. Instituições com diretriz neutra em religião podem precisar alinhar <strong>briefing de fala</strong> em peça patrocinada.</li>
+                <li><strong>Saúde e autoestima:</strong> discurso motivacional forte; evitar que peças sugiram <strong>promessa de resultado</strong> em saúde mental ou corporal sem compliance jurídico e sem linguagem de “cura”.</li>
+                <li><strong>Métricas atuais</strong> (seguidores, ER, demos) não foram anexadas neste levantamento rápido — ver seção seguinte.</li>
+            </ul>
+            <div class="risk-box">
+                <div class="risk-box__head">Síntese de risco (qualitativa, não numérica)</div>
+                <div class="risk-box__body">
+                    <p><strong>Política partidária explícita:</strong> não identificada neste recorte de imprensa.</p>
+                    <p class="mt-2"><strong>Polêmica de imagem:</strong> baixa a moderada no sentido institucional “clássico”; <strong>exposição a hostilidade de internet</strong> é documentada na mídia como contexto do creator, não como escândalo de conduta dele.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodologia" class="card-audit scroll-mt-20 bg-slate-50 border-dashed border-2 border-slate-300">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Metodologia e limitações</h2>
+            </div>
+            <p class="text-sm text-slate-700 leading-relaxed">Levantamento <strong>rápido</strong> para apoio interno, com base em <strong>matérias de junho/2025</strong> (republicadas ou espelhadas em outros sites) e em <strong>metadados públicos</strong> da URL do Instagram indicada no pedido. <strong>Não</strong> houve varredura exaustiva de todo o histórico de posts, Stories, comentários, TikTok, X ou YouTube.</p>
+            <p class="text-sm text-slate-700 leading-relaxed mt-3">Para decisão de mídia ou contrato: recomenda-se <strong>painel de redes</strong> (ex.: métricas do próprio Meta para parcerias), <strong>due diligence</strong> jurídica e, se necessário, <strong>escuta social</strong> com janela de datas definida pelo time de mídia.</p>
+        </section>
+
+        <section id="fontes" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Fontes (links)</h2>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-2 leading-relaxed list-none">
+                <li><a href="https://www.instagram.com/pulga.oncoto/" target="_blank" rel="noopener noreferrer">Instagram — @pulga.oncoto</a> (perfil solicitado)</li>
+                <li><a href="https://gente.ig.com.br/colunas/thiago-simpatia/2025-06-12/pulga--o-rei-da-autoestima.html" target="_blank" rel="noopener noreferrer">iG Gente — coluna Thiago Simpatia, 12/06/2025 — “Pulga, o rei da autoestima”</a></li>
+                <li><a href="https://acontececg.com.br/pulga-o-rei-da-autoestima/" target="_blank" rel="noopener noreferrer">Acontece CG — 12/06/2025 — mesma coluna (reprodução)</a></li>
+            </ul>
+        </section>
+
+        <footer class="text-center pb-10 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
+            <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · levantamento breve maio/2026
+        </footer>
+    </div>
+
+    <script>
+        const PASSWORD_SHA256_HEX_SET = new Set([
+            '992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b',
+            'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5'
+        ]);
+
+        async function sha256Hex(text) {
+            const buf = new TextEncoder().encode(text);
+            const hash = await crypto.subtle.digest('SHA-256', buf);
+            return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        document.getElementById('access-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const err = document.getElementById('access-err');
+            err.classList.add('hidden');
+            err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha é sensível a maiúsculas/minúsculas.';
+            if (!globalThis.crypto?.subtle) {
+                err.textContent = 'Validação indisponível: abra a página em HTTPS (GitHub Pages) ou em contexto seguro; em arquivo local o navegador pode bloquear crypto.subtle.';
+                err.classList.remove('hidden');
+                return;
+            }
+            const pw = document.getElementById('access-pw').value.trim();
+            try {
+                if (!PASSWORD_SHA256_HEX_SET.has(await sha256Hex(pw))) {
+                    err.classList.remove('hidden');
+                    return;
+                }
+            } catch {
+                err.textContent = 'Não foi possível validar a senha neste ambiente. Tente outro navegador ou a URL publicada no GitHub Pages.';
+                err.classList.remove('hidden');
+                return;
+            }
+            document.getElementById('access-gate').classList.add('hidden');
+            document.getElementById('dossier-root').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
