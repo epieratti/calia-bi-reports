@@ -138,6 +138,33 @@
         .sb-details[open] summary::after { transform: rotate(-180deg); }
         .sb-details__body { padding: 0 1rem 1rem; font-size: 0.8125rem; color: #475569; line-height: 1.55; border-top: 1px solid #e2e8f0; }
         .sb-ref-box { border-radius: 10px; border-left: 4px solid #f9a619; background: linear-gradient(90deg, rgba(249, 166, 25, 0.08), #fff); padding: 1rem 1.1rem; }
+        /* Fontes — bloco final compacto */
+        #fontes.card-audit {
+            padding: 0.85rem 1rem 1rem;
+            background: #fafbfc;
+            border-color: #e2e8f0;
+        }
+        #fontes .section-header { margin-bottom: 0.5rem; padding-left: 0.75rem; border-left-width: 4px; }
+        #fontes .section-header h2 { font-size: 0.8125rem; line-height: 1.2; letter-spacing: 0.04em; }
+        #fontes .fontes-list {
+            margin: 0; padding: 0; list-style: none;
+            font-size: 0.6875rem; line-height: 1.32; color: #475569;
+        }
+        #fontes .fontes-list > li { margin-top: 0.3rem; padding-left: 0.55rem; position: relative; }
+        #fontes .fontes-list > li:first-child { margin-top: 0; }
+        #fontes .fontes-list > li::before {
+            content: ""; position: absolute; left: 0; top: 0.45em;
+            width: 3px; height: 3px; border-radius: 9999px; background: #f9a619;
+        }
+        #fontes .fontes-list a[href] {
+            font-size: inherit !important; font-weight: 500 !important;
+            text-underline-offset: 2px; word-break: break-word;
+        }
+        #fontes .fontes-list a.toc-link { font-size: inherit !important; font-weight: 500 !important; }
+        @media (min-width: 768px) {
+            #fontes .fontes-list { column-count: 2; column-gap: 1.25rem; }
+            #fontes .fontes-list > li { break-inside: avoid; }
+        }
     </style>
 </head>
 <body class="p-4 md:p-10">
@@ -530,11 +557,15 @@
             <p class="text-sm text-slate-700 leading-relaxed mt-3">Inclui leitura qualitativa dos resultados da busca no <strong>X</strong> pelo nome e pelo handle, registrada na subseção <strong>X / Twitter</strong> de <a class="toc-link" href="#outras-plataformas">Redes de ativação</a>.</p>
         </section>
 
+        <footer class="text-center pb-4 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
+            <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · Squad Always ON Loterias — Rodolfo Macedo · maio/2026
+        </footer>
+
         <section id="fontes" class="card-audit scroll-mt-20">
             <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Fontes</h2>
+                <h2 class="font-black text-calia-navy uppercase tracking-tight">Fontes</h2>
             </div>
-            <ul class="text-sm text-slate-700 space-y-2 leading-relaxed list-none">
+            <ul class="fontes-list">
                 <li><a href="https://socialblade.com/instagram/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — Instagram @foiorodolfo</a></li>
                 <li><a href="https://socialblade.com/tiktok/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — TikTok @foiorodolfo</a></li>
                 <li><a href="https://socialblade.com/youtube/handle/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — YouTube @foiorodolfo</a></li>
@@ -552,10 +583,6 @@
                 <li>X (Twitter): buscas exploratórias pelo nome e pelo handle na interface do serviço (resultados variam por data; amostra na subseção <a class="toc-link" href="#outras-plataformas">Redes de ativação</a> · <strong>X / Twitter</strong>).</li>
             </ul>
         </section>
-
-        <footer class="text-center pb-10 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
-            <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · Squad Always ON Loterias — Rodolfo Macedo · maio/2026
-        </footer>
     </div>
 
     <script>
