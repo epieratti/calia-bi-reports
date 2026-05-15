@@ -39,6 +39,8 @@
         .risk-box { border-radius: 6px; border: 2px solid #252525; overflow: hidden; margin-top: 1rem; }
         .risk-box__head { background: #252525; color: #f9a619; padding: 0.5rem 1rem; font-size: 10px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
         .risk-box__body { background: #f1f5f9; padding: 1rem 1.25rem; font-size: 0.875rem; line-height: 1.55; }
+        .timeline-list { margin: 0; padding: 0; list-style: none; }
+        .timeline-list > li:last-child .timeline-down { display: none; }
     </style>
 </head>
 <body class="p-4 md:p-10">
@@ -118,14 +120,47 @@
             </div>
             <p class="text-sm text-slate-700 leading-relaxed">Segundo o <a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial</a>, a carreira digital teria começado em <strong>2008</strong>, com estímulo de uma amiga para produzir no <strong>YouTube</strong>, seguido de migração para <strong>Snapchat</strong> e consolidação no <strong>Instagram</strong>. O texto cita ainda <strong>2020</strong> como momento de <strong>vídeos sobre o Big Brother Brasil no TikTok</strong>, com <strong>reprodução na final do programa</strong> — marco de visibilidade nacional citado pela reportagem.</p>
             <p class="text-sm text-slate-700 leading-relaxed mt-3">O formato é descrito como <strong>humor</strong> e <strong>compartilhamento de vida</strong> com tom alegre; a matéria reforça o esforço de longo prazo (“<strong>luta árdua</strong>”) para manter relevância.</p>
-            <div class="bio-intro mt-4">
-                <h3 class="text-xs font-black uppercase tracking-widest text-calia-navy mb-2">Linha do tempo (fontes com URL)</h3>
-                <ul class="text-sm text-slate-700 space-y-2 list-disc list-inside leading-relaxed">
-                    <li><strong>~2008:</strong> mudança de <strong>Olho d’Água das Cunhãs</strong> para <strong>São Luís</strong> para estudar e início da produção em vídeo no <strong>YouTube</strong> (<a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial, 2020</a>).</li>
-                    <li><strong>2016:</strong> perfil em edição de jornal da banca digital do <a href="https://banca.oimparcial.com.br/fivepress/201610020000/issue16870.pdf" target="_blank" rel="noopener noreferrer"><strong>O Imparcial</strong> (PDF, out/2016)</a> — entrevista / recorte de trajetória regional.</li>
-                    <li><strong>2020:</strong> expansão com <strong>BBB</strong> no <strong>TikTok</strong> e menção à <strong>final do BBB na Globo</strong> (<a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial, 2020</a>).</li>
-                    <li><strong>2025:</strong> consta linha em documento da <strong>Câmara dos Deputados</strong> (RIC 5248/2025) com <strong>Rodolfo Macedo (@foiorodolfo)</strong>, <strong>Instagram</strong>, “<strong>Campanha Nordeste</strong>”, “<strong>2 ações</strong>”, data <strong>24/06/2025</strong> — ver PDF e contexto em <a class="toc-link" href="#checagem-reputacional">Checagem reputacional</a>.</li>
-                </ul>
+            <div class="mt-4 rounded-lg border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-50 p-5 md:p-6 shadow-sm ring-1 ring-black/5">
+                <h3 id="timeline-heading" class="text-xs font-black uppercase tracking-widest text-calia-navy">Linha do tempo (fontes com URL)</h3>
+                <p class="text-xs text-slate-500 mt-1 mb-5 max-w-2xl">Marcos em ordem cronológica; cada item leva à fonte citada.</p>
+                <ol class="timeline-list space-y-0" aria-labelledby="timeline-heading">
+                    <li class="flex gap-4 md:gap-6">
+                        <div class="flex w-[4.25rem] shrink-0 flex-col items-center md:w-24">
+                            <span class="flex min-h-[2.5rem] w-full items-center justify-center rounded-lg bg-calia-navy px-1.5 py-1 text-center text-[10px] font-black uppercase leading-tight tracking-wider text-calia-gold shadow-md ring-1 ring-calia-gold/35">~2008</span>
+                            <div class="timeline-down mt-2.5 w-0.5 flex-1 min-h-[2rem] bg-gradient-to-b from-calia-gold via-calia-gold/65 to-slate-300" aria-hidden="true"></div>
+                        </div>
+                        <div class="min-w-0 flex-1 pb-7 md:pb-8">
+                            <p class="text-sm text-slate-700 leading-relaxed pt-0.5">Mudança de <strong>Olho d’Água das Cunhãs</strong> para <strong>São Luís</strong> para estudar e início da produção em vídeo no <strong>YouTube</strong> (<a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial, 2020</a>).</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 md:gap-6">
+                        <div class="flex w-[4.25rem] shrink-0 flex-col items-center md:w-24">
+                            <span class="flex min-h-[2.5rem] w-full items-center justify-center rounded-lg bg-calia-navy px-1.5 py-1 text-center text-[10px] font-black uppercase leading-tight tracking-wider text-calia-gold shadow-md ring-1 ring-calia-gold/35">2016</span>
+                            <div class="timeline-down mt-2.5 w-0.5 flex-1 min-h-[2rem] bg-gradient-to-b from-calia-gold via-calia-gold/65 to-slate-300" aria-hidden="true"></div>
+                        </div>
+                        <div class="min-w-0 flex-1 pb-7 md:pb-8">
+                            <p class="text-sm text-slate-700 leading-relaxed pt-0.5">Perfil em edição de jornal da banca digital do <a href="https://banca.oimparcial.com.br/fivepress/201610020000/issue16870.pdf" target="_blank" rel="noopener noreferrer"><strong>O Imparcial</strong> (PDF, out/2016)</a> — entrevista / recorte de trajetória regional.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 md:gap-6">
+                        <div class="flex w-[4.25rem] shrink-0 flex-col items-center md:w-24">
+                            <span class="flex min-h-[2.5rem] w-full items-center justify-center rounded-lg bg-calia-navy px-1.5 py-1 text-center text-[10px] font-black uppercase leading-tight tracking-wider text-calia-gold shadow-md ring-1 ring-calia-gold/35">2020</span>
+                            <div class="timeline-down mt-2.5 w-0.5 flex-1 min-h-[2rem] bg-gradient-to-b from-calia-gold via-calia-gold/65 to-slate-300" aria-hidden="true"></div>
+                        </div>
+                        <div class="min-w-0 flex-1 pb-7 md:pb-8">
+                            <p class="text-sm text-slate-700 leading-relaxed pt-0.5">Expansão com <strong>BBB</strong> no <strong>TikTok</strong> e menção à <strong>final do BBB na Globo</strong> (<a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial, 2020</a>).</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 md:gap-6">
+                        <div class="flex w-[4.25rem] shrink-0 flex-col items-center md:w-24">
+                            <span class="flex min-h-[2.5rem] w-full items-center justify-center rounded-lg bg-calia-navy px-1.5 py-1 text-center text-[10px] font-black uppercase leading-tight tracking-wider text-calia-gold shadow-md ring-1 ring-calia-gold/35">2025</span>
+                            <div class="timeline-down mt-2.5 w-0.5 flex-1 min-h-[2rem] bg-gradient-to-b from-calia-gold via-calia-gold/65 to-slate-300" aria-hidden="true"></div>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <p class="text-sm text-slate-700 leading-relaxed pt-0.5">Consta linha em documento da <strong>Câmara dos Deputados</strong> (RIC 5248/2025) com <strong>Rodolfo Macedo (@foiorodolfo)</strong>, <strong>Instagram</strong>, “<strong>Campanha Nordeste</strong>”, “<strong>2 ações</strong>”, data <strong>24/06/2025</strong> — ver PDF e contexto em <a class="toc-link" href="#checagem-reputacional">Checagem reputacional</a>.</p>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </section>
 
