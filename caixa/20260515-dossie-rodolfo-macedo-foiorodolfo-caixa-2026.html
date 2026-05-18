@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Marca e riscos — Rodolfo Macedo (@foiorodolfo) · CAIXA 2026</title>
+    <title>Leitura para planejamento — Rodolfo Macedo (@foiorodolfo) · CAIXA 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,6 +40,23 @@
         .risk-box { border-radius: 6px; border: 2px solid #252525; overflow: hidden; margin-top: 1rem; }
         .risk-box__head { background: #252525; color: #f9a619; padding: 0.5rem 1rem; font-size: 10px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
         .risk-box__body { background: #f1f5f9; padding: 1rem 1.25rem; font-size: 0.875rem; line-height: 1.55; }
+        .veredito-top {
+            border-radius: 8px;
+            border: 2px solid #059669;
+            background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 58%);
+            padding: 1.35rem 1.35rem 1.45rem;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+        }
+        .veredito-top__label { font-size: 0.65rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #047857; margin-bottom: 0.4rem; }
+        .veredito-top__title { font-size: 1.45rem; font-weight: 900; color: #065f46; line-height: 1.2; letter-spacing: -0.02em; }
+        @media (min-width: 768px) { .veredito-top__title { font-size: 1.65rem; } }
+        .veredito-top__table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.8125rem; line-height: 1.5; }
+        .veredito-top__table th { text-align: left; font-weight: 800; color: #0f172a; padding: 0.65rem 0.75rem 0.65rem 0; vertical-align: top; width: 38%; border-bottom: 1px solid #d1fae5; }
+        .veredito-top__table td { padding: 0.65rem 0; vertical-align: top; color: #334155; border-bottom: 1px solid #d1fae5; }
+        .veredito-top__table tr:last-child th, .veredito-top__table tr:last-child td { border-bottom: none; }
+        .veredito-top__nota { margin-top: 1rem; font-size: 0.7rem; line-height: 1.45; color: #64748b; }
+        .evidencias-subhead { font-size: 0.95rem; font-weight: 900; color: #252525; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.75rem; margin-bottom: 0.65rem; padding-bottom: 0.35rem; border-bottom: 3px solid #f9a619; }
+        .evidencias-subhead:first-of-type { margin-top: 0.25rem; }
         .timeline-list { margin: 0; padding: 0; list-style: none; }
         .timeline-list > li:last-child .timeline-down { display: none; }
         /* Painel Social Blade — UI */
@@ -174,46 +191,72 @@
 
         <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded shadow-lg">
             <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
-            <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-tight">Marca e riscos — Rodolfo Macedo</h1>
-            <p class="text-xs text-white/70 mt-1 font-medium">Squad Always ON Loterias · CAIXA</p>
+            <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-tight">Rodolfo Macedo (@foiorodolfo)</h1>
+            <p class="text-xs text-white/70 mt-1 font-medium">Leitura para planejamento · marca e risco · Squad Always ON Loterias · CAIXA</p>
             <p class="text-sm opacity-90 mt-3 font-medium max-w-3xl">@foiorodolfo · Instagram · TikTok · YouTube · Facebook · Kwai · Threads · <a href="https://socialblade.com/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-calia-gold/80 hover:decoration-calia-gold">Social Blade</a> <strong>15/05/2026</strong></p>
         </header>
 
         <nav class="card-audit py-6" aria-label="Sumário">
-            <div class="section-header mb-4">
-                <h2 class="text-lg font-black text-calia-navy uppercase tracking-tight">Neste documento</h2>
+            <div class="section-header mb-3">
+                <h2 class="text-lg font-black text-calia-navy uppercase tracking-tight">Conteúdo</h2>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed max-w-2xl">Ordem sugerida: <strong>conclusão</strong> e <strong>observações</strong> primeiro; em seguida <strong>tabelas</strong> e <strong>fontes</strong>. O restante é apoio ou metodologia.</p>
             </div>
             <ul class="toc-list">
-                <li><a class="toc-link" href="#leitura-executiva">Síntese — o que apareceu na checagem</a></li>
-                <li><a class="toc-link" href="#parcerias-campanhas">Parcerias e campanhas (com link)</a></li>
-                <li><a class="toc-link" href="#checagem-reputacional">Checagem reputacional</a></li>
-                <li><a class="toc-link" href="#atencao">Pontos de atenção</a></li>
-                <li><a class="toc-link" href="#painel-metricas">Painel Social Blade</a></li>
-                <li><a class="toc-link" href="#contexto-ampliado">Material de apoio (perfil, redes, tom)</a></li>
-                <li><a class="toc-link" href="#metodologia">Metodologia (opcional)</a></li>
+                <li><a class="toc-link" href="#veredito-planejamento">Conclusão para o planejamento</a></li>
+                <li><a class="toc-link" href="#observacoes">Observações</a></li>
+                <li><a class="toc-link" href="#evidencias">Evidências (tabelas com link)</a></li>
+                <li><a class="toc-link" href="#painel-metricas">Métricas (Social Blade)</a></li>
+                <li><a class="toc-link" href="#contexto-ampliado">Material de apoio (perfil e redes)</a></li>
                 <li><a class="toc-link" href="#fontes">Fontes</a></li>
+                <li><a class="toc-link" href="#metodologia">Metodologia (opcional)</a></li>
             </ul>
         </nav>
 
-        <section id="leitura-executiva" class="card-audit scroll-mt-20 border-l-4 border-calia-gold">
-            <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Síntese — o que apareceu na checagem</h2>
+        <section id="veredito-planejamento" class="card-audit scroll-mt-20">
+            <div class="veredito-top">
+                <p class="veredito-top__label">Conclusão para o planejamento</p>
+                <p class="veredito-top__title">Nenhum bloqueio na checagem de marca e risco</p>
+                <p class="text-sm text-slate-700 mt-2 leading-relaxed">Na amostra com <strong>URL</strong> até <strong>15/05/2026</strong>, <strong>não há achado</strong> que, por si só, impeça o uso do creator nos temas pesquisados: apostas/cassino, outra loteria, rifa paralela, publi fixa de FMCG nacional no feed, militância partidária clara nem escândalo de conduta em veículo major vinculado a este @.</p>
+                <table class="veredito-top__table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">A checagem barrou o talento?</th>
+                            <td><strong>Não</strong> — com base neste mapeamento. Há <strong>registros públicos com link</strong> (parcerias/presenças); ver <a class="toc-link" href="#parcerias-campanhas">tabela de parcerias</a>. Isso é <strong>informação para o planejamento</strong>, não é “autorização” de peça.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Há ressalvas na peça ou no timing?</th>
+                            <td><strong>Sim</strong> — duas observações objetivas: <a class="toc-link" href="#observacoes">ver seção Observações</a>.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Onde estão as fontes?</th>
+                            <td>Nas <a class="toc-link" href="#evidencias">tabelas abaixo</a> e na lista <a class="toc-link" href="#fontes">Fontes</a> ao final do documento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="veredito-top__nota"><strong>Aprovação final</strong> de casting, contratação e veiculação é <strong>do cliente</strong> (CAIXA) e das áreas internas competentes; este HTML é relatório de checagem com evidência em link.</p>
             </div>
-            <p id="objetivo-documento" class="text-sm text-slate-700 leading-relaxed border-l-4 border-calia-emerald bg-emerald-50/40 pl-3 py-2 pr-3 rounded-r mb-4">Foco em <strong>marca</strong> e <strong>risco</strong> com link: <strong>achou</strong> (o quê) ou <strong>não achou</strong>. Perfil do creator: <a class="toc-link" href="#contexto-ampliado">material de apoio</a>, se precisar.</p>
-            <ul class="list-none space-y-2.5 text-sm text-slate-700 leading-relaxed">
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" aria-hidden="true"></span><span><strong>Achado (marca / veículo):</strong> três linhas com evidência em <a class="toc-link" href="#parcerias-campanhas">tabela</a> — <strong>RIC 5248/2025</strong> (tabela de comunicação institucional na Câmara), <strong>BRK / Lava Pratos</strong> (foto e legenda, 2026), <strong>O Imparcial</strong> jan/2017 (matéria com o creator).</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden="true"></span><span><strong>Não achado:</strong> publi fixa de FMCG nacional no feed com link na amostra; vínculo público com <strong>casa de apostas</strong>, <strong>outra loteria</strong> ou <strong>rifa paralela</strong> nas buscas (15/05/2026 + complementar).</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden="true"></span><span><strong>Não achado:</strong> militância partidária clara nem matéria de grande veículo com escândalo de conduta mapeado para este @, na amostra com link.</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" aria-hidden="true"></span><span><strong>Achado (contexto):</strong> <a id="ref-oimparcial-perfil-2020" href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial ago/2020</a> — <strong>BBB no TikTok</strong> e final na Globo; pode puxar comentários de terceiros (<a class="toc-link" href="#atencao">atenção</a>).</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Métricas:</strong> Social Blade 15/05/2026 — IG ~702 mil (eng. ~1,08%); TT ~66,2 mil; YT ~1,61 mil inscritos — <a class="toc-link" href="#painel-metricas">painel</a>.</span></li>
+        </section>
+
+        <section id="observacoes" class="card-audit scroll-mt-20 border-l-4 border-amber-500 bg-amber-50/25">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Observações</h2>
+            </div>
+            <ul class="text-sm text-slate-800 space-y-2.5 leading-relaxed list-disc list-inside marker:text-amber-600">
+                <li><strong>BBB / reality:</strong> <a id="ref-oimparcial-perfil-2020" href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial ago/2020</a> cita participação em reality e presença no TikTok; em peça institucional, <strong>comentários de terceiros</strong> podem polarizar — avaliar tom e moderação.</li>
+                <li><strong>Documento público (RIC):</strong> o nome <strong>Rodolfo Macedo (@foiorodolfo)</strong> aparece em <strong>tabela</strong> do PDF <strong>RIC 5248/2025</strong> (comunicação institucional) — <a class="toc-link" href="#checagem-ric-5248">resumo na checagem</a> e <a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">link do PDF na Câmara</a>.</li>
+                <li><strong>Métricas públicas:</strong> IG ~702 mil (eng. ~1,08%), TT ~66,2 mil, YT ~1,61 mil inscritos (Social Blade 15/05/2026) — <a class="toc-link" href="#painel-metricas">painel neste documento</a>.</li>
             </ul>
         </section>
 
-        <section id="parcerias-campanhas" class="card-audit scroll-mt-20 border-l-4 border-calia-emerald">
+        <section id="evidencias" class="card-audit scroll-mt-20">
             <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Parcerias com evidência (link)</h2>
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Evidências (com link)</h2>
             </div>
-            <div class="overflow-x-auto mt-4 rounded border border-slate-200 bg-white">
+            <p class="text-sm text-slate-600 leading-relaxed">Tabelas usadas na checagem; cada evidência aponta para URL aberta.</p>
+
+            <div id="parcerias-campanhas" class="scroll-mt-20">
+            <h3 class="evidencias-subhead">Parcerias e campanhas</h3>
+            <div class="overflow-x-auto mt-2 rounded border border-slate-200 bg-white">
                 <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
                     <caption class="sr-only">Parcerias e campanhas com evidência em link</caption>
                     <thead class="bg-slate-100 text-calia-navy font-black uppercase tracking-wider text-[10px]">
@@ -254,16 +297,13 @@
                     </tbody>
                 </table>
             </div>
-        </section>
-
-        <section id="checagem-reputacional" class="card-audit scroll-mt-20 border-l-4 border-calia-crimson">
-            <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Checagem reputacional</h2>
             </div>
 
-            <div class="overflow-x-auto mb-6 rounded border border-slate-200 bg-white">
+            <div id="checagem-reputacional" class="scroll-mt-20">
+            <h3 class="evidencias-subhead">Checagem por tema</h3>
+            <div class="overflow-x-auto mt-2 rounded border border-slate-200 bg-white">
                 <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
-                    <caption class="sr-only">Resumo qualitativo após a pesquisa complementar</caption>
+                    <caption class="sr-only">Checagem por tema com fonte em link</caption>
                     <thead class="bg-slate-100 text-calia-navy font-black uppercase tracking-wider text-[10px]">
                         <tr>
                             <th class="p-2 border border-slate-200">Tema</th>
@@ -295,21 +335,12 @@
                     </tbody>
                 </table>
             </div>
-        </section>
-
-        <section id="atencao" class="card-audit scroll-mt-20">
-            <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Pontos de atenção</h2>
             </div>
-            <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">
-                <li><strong>BBB / reality:</strong> <a class="toc-link" href="#ref-oimparcial-perfil-2020">Matéria ago/2020</a> — comentários de terceiros podem polarizar.</li>
-                <li><strong>RIC:</strong> nome na tabela do PDF — <a class="toc-link" href="#checagem-ric-5248">linha na checagem</a>.</li>
-            </ul>
         </section>
 
         <section id="painel-metricas" class="card-audit scroll-mt-20">
             <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Painel Social Blade</h2>
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Métricas (Social Blade)</h2>
             </div>
 
             <div class="sb-panel-shell" aria-labelledby="sb-panel-heading">
@@ -396,7 +427,7 @@
         <details id="contexto-ampliado" class="card-audit scroll-mt-20 border border-slate-200 rounded shadow-sm bg-white">
             <summary class="cursor-pointer list-none px-4 py-3 md:px-6 md:py-4 font-black text-calia-navy text-sm uppercase tracking-tight border-b border-slate-100 hover:bg-slate-50/80 [&::-webkit-details-marker]:hidden flex flex-wrap items-center justify-between gap-3">
                 <span>Material de apoio (perfil, redes, tom)</span>
-                <span class="text-[10px] font-bold normal-case text-slate-500 max-w-[14rem] text-right">Opcional — perfil e redes</span>
+                <span class="text-[10px] font-bold normal-case text-slate-500 max-w-[14rem] text-right">Só se precisar de contexto</span>
             </summary>
             <div class="px-4 pb-6 pt-2 md:px-6 space-y-10">
                 <section id="identidade" class="card-audit scroll-mt-20">
@@ -423,28 +454,10 @@
             </div>
         </details>
 
-        <details id="metodologia" class="card-audit scroll-mt-20 bg-slate-50 border-dashed border-2 border-slate-300">
-            <summary class="cursor-pointer list-none px-4 py-3 md:px-6 md:py-4 font-black text-calia-navy text-sm uppercase tracking-tight hover:bg-slate-100/80 [&::-webkit-details-marker]:hidden flex flex-wrap items-center justify-between gap-3">
-                <span>Metodologia e limitações</span>
-                <span class="text-[10px] font-bold normal-case text-slate-500">Abrir se precisar</span>
-            </summary>
-            <div class="px-4 pb-5 pt-0 md:px-6 border-t border-slate-200">
-            <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed pt-3">
-                <li>Referência: <strong>15/05/2026</strong> (web, perfis públicos, Social Blade, PDF RIC).</li>
-                <li>Parcerias: linha só com <strong>URL</strong> citando <strong>Rodolfo Macedo</strong> ou <strong>@foiorodolfo</strong>.</li>
-                <li>Limitação: não cobre Stories efêmeros, peça fora do ar nem menção só em imagem.</li>
-                <li>X: busca exploratória; <strong>sem</strong> perfil <strong>@foiorodolfo</strong> mapeado.</li>
-            </ul>
-            </div>
-        </details>
-
-        <footer class="text-center pb-4 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
-            <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · Squad Always ON Loterias — Rodolfo Macedo · maio/2026
-        </footer>
-
         <section id="fontes" class="card-audit scroll-mt-20">
             <div class="section-header">
                 <h2 class="font-black text-calia-navy uppercase tracking-tight">Fontes</h2>
+                <p class="text-xs text-slate-600 mt-1 normal-case font-medium tracking-normal">Links usados na checagem (cada URL abre a evidência).</p>
             </div>
             <ul class="fontes-list">
                 <li><a href="https://socialblade.com/instagram/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — Instagram @foiorodolfo</a></li>
@@ -465,6 +478,25 @@
                 <li>X (Twitter): busca exploratória na interface; <strong>sem</strong> perfil próprio <strong>@foiorodolfo</strong> mapeado — ver <a class="toc-link" href="#outras-plataformas">Redes</a> no material de apoio.</li>
             </ul>
         </section>
+
+        <details id="metodologia" class="card-audit scroll-mt-20 bg-slate-50 border-dashed border-2 border-slate-300">
+            <summary class="cursor-pointer list-none px-4 py-3 md:px-6 md:py-4 font-black text-calia-navy text-sm uppercase tracking-tight hover:bg-slate-100/80 [&::-webkit-details-marker]:hidden flex flex-wrap items-center justify-between gap-3">
+                <span>Metodologia e limitações</span>
+                <span class="text-[10px] font-bold normal-case text-slate-500">Abrir se precisar</span>
+            </summary>
+            <div class="px-4 pb-5 pt-0 md:px-6 border-t border-slate-200">
+            <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed pt-3">
+                <li>Referência: <strong>15/05/2026</strong> (web, perfis públicos, Social Blade, PDF RIC).</li>
+                <li>Parcerias: linha só com <strong>URL</strong> citando <strong>Rodolfo Macedo</strong> ou <strong>@foiorodolfo</strong>.</li>
+                <li>Limitação: não cobre Stories efêmeros, peça fora do ar nem menção só em imagem.</li>
+                <li>X: busca exploratória; <strong>sem</strong> perfil <strong>@foiorodolfo</strong> mapeado.</li>
+            </ul>
+            </div>
+        </details>
+
+        <footer class="text-center pb-4 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
+            <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · Squad Always ON Loterias — Rodolfo Macedo · maio/2026
+        </footer>
     </div>
 
     <script>
