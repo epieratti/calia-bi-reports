@@ -113,11 +113,6 @@
         .sb-dl { display: grid; grid-template-columns: 1fr auto; gap: 0.35rem 0.75rem; font-size: 0.8125rem; color: #334155; }
         .sb-dl dt { color: #64748b; font-weight: 600; }
         .sb-dl dd { margin: 0; text-align: right; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
-        .sb-trend { margin-top: 0.25rem; }
-        .sb-trend__track { height: 6px; border-radius: 9999px; background: #f1f5f9; overflow: hidden; }
-        .sb-trend__fill { height: 100%; border-radius: 9999px; background: linear-gradient(90deg, #f97316, #ef4444); width: 42%; opacity: 0.85; }
-        .sb-trend__fill--neutral { width: 8%; margin-left: 46%; background: #94a3b8; opacity: 0.7; }
-        .sb-note { font-size: 0.7rem; line-height: 1.45; color: #64748b; background: #f8fafc; border-radius: 8px; padding: 0.5rem 0.65rem; border: 1px solid #e2e8f0; }
         .sb-card__foot { margin-top: auto; padding-top: 0.5rem; }
         .sb-btn {
             display: flex; align-items: center; justify-content: center; gap: 0.35rem;
@@ -128,17 +123,6 @@
             transition: background 0.15s ease, color 0.15s ease;
         }
         #dossier-root .card-audit a.sb-btn { text-decoration: none !important; }
-        .sb-details { border-radius: 10px; border: 1px solid #e2e8f0; background: #fafafa; overflow: hidden; margin-bottom: 1.25rem; }
-        .sb-details summary {
-            cursor: pointer; list-style: none; padding: 0.75rem 1rem; font-size: 0.8125rem; font-weight: 700; color: #252525;
-            display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
-            user-select: none;
-        }
-        .sb-details summary::-webkit-details-marker { display: none; }
-        .sb-details summary::after { content: "▼"; font-size: 0.6rem; color: #f9a619; transition: transform 0.2s ease; }
-        .sb-details[open] summary::after { transform: rotate(-180deg); }
-        .sb-details__body { padding: 0 1rem 1rem; font-size: 0.8125rem; color: #475569; line-height: 1.55; border-top: 1px solid #e2e8f0; }
-        .sb-ref-box { border-radius: 10px; border-left: 4px solid #f9a619; background: linear-gradient(90deg, rgba(249, 166, 25, 0.08), #fff); padding: 1rem 1.1rem; }
         /* Fontes — bloco final compacto */
         #fontes.card-audit {
             padding: 0.85rem 1rem 1rem;
@@ -191,7 +175,7 @@
         <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded shadow-lg">
             <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
             <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-tight">Marca e riscos — Rodolfo Macedo</h1>
-            <p class="text-xs text-white/70 mt-1 font-medium">Squad Always ON Loterias · CAIXA · texto curto para planejamento</p>
+            <p class="text-xs text-white/70 mt-1 font-medium">Squad Always ON Loterias · CAIXA</p>
             <p class="text-sm opacity-90 mt-3 font-medium max-w-3xl">@foiorodolfo · Instagram · TikTok · YouTube · Facebook · Kwai · Threads · <a href="https://socialblade.com/" target="_blank" rel="noopener noreferrer" class="text-white underline decoration-calia-gold/80 hover:decoration-calia-gold">Social Blade</a> <strong>15/05/2026</strong></p>
         </header>
 
@@ -205,8 +189,8 @@
                 <li><a class="toc-link" href="#checagem-reputacional">Checagem reputacional</a></li>
                 <li><a class="toc-link" href="#atencao">Pontos de atenção</a></li>
                 <li><a class="toc-link" href="#painel-metricas">Painel Social Blade</a></li>
-                <li><a class="toc-link" href="#contexto-ampliado">Material de apoio (perfil, trajetória, redes, tom)</a></li>
-                <li><a class="toc-link" href="#metodologia">Metodologia e limitações</a></li>
+                <li><a class="toc-link" href="#contexto-ampliado">Material de apoio (perfil, redes, tom)</a></li>
+                <li><a class="toc-link" href="#metodologia">Metodologia (opcional)</a></li>
                 <li><a class="toc-link" href="#fontes">Fontes</a></li>
             </ul>
         </nav>
@@ -220,9 +204,8 @@
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" aria-hidden="true"></span><span><strong>Achado (marca / veículo):</strong> três linhas com evidência em <a class="toc-link" href="#parcerias-campanhas">tabela</a> — <strong>RIC 5248/2025</strong> (tabela de comunicação institucional na Câmara), <strong>BRK / Lava Pratos</strong> (foto e legenda, 2026), <strong>O Imparcial</strong> jan/2017 (matéria com o creator).</span></li>
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden="true"></span><span><strong>Não achado:</strong> publi fixa de FMCG nacional no feed com link na amostra; vínculo público com <strong>casa de apostas</strong>, <strong>outra loteria</strong> ou <strong>rifa paralela</strong> nas buscas (15/05/2026 + complementar).</span></li>
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" aria-hidden="true"></span><span><strong>Não achado:</strong> militância partidária clara nem matéria de grande veículo com escândalo de conduta mapeado para este @, na amostra com link.</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" aria-hidden="true"></span><span><strong>Achado (contexto):</strong> matéria ago/2020 cita <strong>BBB no TikTok</strong> e final na Globo — pode puxar comentários de terceiros (ver <a class="toc-link" href="#atencao">atenção</a>).</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Métricas (referência):</strong> Social Blade 15/05/2026 — IG ~702 mil (eng. ~1,08%); TT ~66,2 mil; YT ~1,61 mil inscritos — <a class="toc-link" href="#painel-metricas">painel</a>.</span></li>
-                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Âncora de perfil:</strong> <a id="ref-oimparcial-perfil-2020" href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial — ago/2020</a> (demais menções no texto apontam para aqui).</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" aria-hidden="true"></span><span><strong>Achado (contexto):</strong> <a id="ref-oimparcial-perfil-2020" href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial ago/2020</a> — <strong>BBB no TikTok</strong> e final na Globo; pode puxar comentários de terceiros (<a class="toc-link" href="#atencao">atenção</a>).</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-calia-gold" aria-hidden="true"></span><span><strong>Métricas:</strong> Social Blade 15/05/2026 — IG ~702 mil (eng. ~1,08%); TT ~66,2 mil; YT ~1,61 mil inscritos — <a class="toc-link" href="#painel-metricas">painel</a>.</span></li>
             </ul>
         </section>
 
@@ -230,8 +213,6 @@
             <div class="section-header">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Parcerias com evidência (link)</h2>
             </div>
-            <p class="text-sm text-slate-700 leading-relaxed">Critério: <strong>URL pública</strong> + menção explícita a <strong>Rodolfo Macedo</strong> ou <strong>@foiorodolfo</strong>. Rodada <strong>15/05/2026</strong> e triagem posterior com reabertura de links.</p>
-
             <div class="overflow-x-auto mt-4 rounded border border-slate-200 bg-white">
                 <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
                     <caption class="sr-only">Parcerias e campanhas com evidência em link</caption>
@@ -250,7 +231,7 @@
                             <td class="p-2 border border-slate-200">Documento público — tabela de planejamento em tramitação parlamentar (RIC)</td>
                             <td class="p-2 border border-slate-200"><strong>Instagram</strong> (coluna da tabela)</td>
                             <td class="p-2 border border-slate-200">Data <strong>24/06/2025</strong> no quadro; processo <strong>RIC 5248/2025</strong></td>
-                            <td class="p-2 border border-slate-200"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — íntegra PDF RIC 5248/2025</a> · <a class="toc-link" href="#checagem-ric-5248">subseção RIC 5248/2025</a></td>
+                            <td class="p-2 border border-slate-200"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — íntegra PDF RIC 5248/2025</a> · <a class="toc-link" href="#checagem-ric-5248">RIC na checagem</a></td>
                         </tr>
                         <tr>
                             <td class="p-2 border border-slate-200 font-semibold"><strong>BRK Ambiental</strong> — patrocínio do evento <strong>Lava Pratos</strong> (São José de Ribamar)</td>
@@ -268,7 +249,7 @@
                         </tr>
                         <tr>
                             <td class="p-2 border border-slate-200 font-semibold">FMCG / varejo (publi fixa #publi)</td>
-                            <td class="p-2 border border-slate-200" colspan="4"><strong>Não localizado</strong> na amostra com link. Triagem exclui menção só ao prenome «Rodolfo» (<a href="https://www.reginaldocazumba.com.br/2022/11/toddy-faz-homenagem-ao-nordeste-com.html" target="_blank" rel="noopener noreferrer">exemplo</a>).</td>
+                            <td class="p-2 border border-slate-200" colspan="4"><strong>Não localizado</strong> na amostra com link.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -279,7 +260,6 @@
             <div class="section-header">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Checagem reputacional</h2>
             </div>
-            <p class="text-sm text-slate-600 leading-relaxed mb-4">Quadro = resumo. Texto = só onde há nuance. Data das buscas: <a class="toc-link" href="#metodologia">metodologia</a>.</p>
 
             <div class="overflow-x-auto mb-6 rounded border border-slate-200 bg-white">
                 <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
@@ -292,34 +272,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="checagem-concorrencia" class="scroll-mt-20">
                             <td class="p-2 border border-slate-200 font-semibold">Apostas / cassino</td>
                             <td class="p-2 border border-slate-200"><strong>Sem</strong> evidência na amostra (buscas 15/05/2026 + complementar).</td>
-                            <td class="p-2 border border-slate-200"><a class="toc-link" href="#checagem-concorrencia">Concorrência / apostas</a></td>
+                            <td class="p-2 border border-slate-200"><a class="toc-link" href="#parcerias-campanhas">Tabela de parcerias</a></td>
                         </tr>
                         <tr>
                             <td class="p-2 border border-slate-200 font-semibold">Política partidária</td>
                             <td class="p-2 border border-slate-200"><strong>Sem</strong> registro claro de militância ou apoio explícito a candidato na amostra com link para fonte.</td>
                             <td class="p-2 border border-slate-200"><a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial (2020)</a></td>
                         </tr>
-                        <tr>
+                        <tr id="checagem-ric-5248" class="scroll-mt-20">
                             <td class="p-2 border border-slate-200 font-semibold">Comunicação pública / mídia institucional</td>
-                            <td class="p-2 border border-slate-200">PDF <strong>RIC 5248/2025</strong>: tabela de planejamento com <strong>Rodolfo Macedo (@foiorodolfo)</strong>, Instagram, Campanha Nordeste, 24/06/2025. <a class="toc-link" href="#checagem-ric-5248">Texto abaixo</a>.</td>
-                            <td class="p-2 border border-slate-200"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — RIC 5248/2025 (íntegra em PDF)</a></td>
+                            <td class="p-2 border border-slate-200">PDF <strong>RIC 5248/2025</strong>: tabela com <strong>Rodolfo Macedo (@foiorodolfo)</strong>, Instagram, Campanha Nordeste, 24/06/2025.</td>
+                            <td class="p-2 border border-slate-200"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — RIC 5248/2025 (PDF)</a></td>
                         </tr>
                         <tr>
                             <td class="p-2 border border-slate-200 font-semibold">Marcas, patrocínio em evento e publi no feed</td>
                             <td class="p-2 border border-slate-200">BRK/Lava Pratos (2026); O Imparcial 2017; <strong>sem</strong> publi FMCG nacional com link. <a class="toc-link" href="#parcerias-campanhas">Tabela</a>.</td>
-                            <td class="p-2 border border-slate-200"><a class="toc-link" href="#parcerias-campanhas">Parcerias (tabela)</a> · <a class="toc-link" href="#metodologia">Método</a></td>
+                            <td class="p-2 border border-slate-200"><a class="toc-link" href="#parcerias-campanhas">Parcerias (tabela)</a></td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-            <div class="space-y-3 text-sm text-slate-700 leading-relaxed">
-                <p id="checagem-concorrencia" class="bio-intro scroll-mt-20 mb-0"><strong>Concorrência / apostas.</strong> Buscas em <strong>15/05/2026</strong> e rodada complementar (nome, @, cassino, marcas de aposta, loteria concorrente, rifa/Pix etc.): <strong>não</strong> apareceu peça pública ligando <strong>este</strong> @foiorodolfo a publi fixa de casa de apostas nem a campanha paga de outra loteria, na amostra reunida com link.</p>
-                <p id="checagem-ric-5248" class="bio-intro scroll-mt-20 mb-0"><strong>RIC 5248/2025.</strong> Requerimento na <a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara</a> sobre comunicação institucional; o PDF traz <strong>tabela de planejamento</strong> com linha <strong>Rodolfo Macedo (@foiorodolfo)</strong>, Instagram, Campanha Nordeste, 2 ações, <strong>24/06/2025</strong>.</p>
-                <p class="bio-intro mb-0"><strong>Política, cancelamento, ódio a minorias.</strong> <strong>Não</strong> achamos, com link na amostra, militância partidária clara, escândalo de conduta em grande veículo, desinformação eleitoral nem humor sistemático de ataque a minorias. Entretenimento + <strong>BBB no TikTok (2020)</strong> na <a class="toc-link" href="#ref-oimparcial-perfil-2020">matéria ago/2020</a> — ver <a class="toc-link" href="#atencao">atenção</a> sobre comentários de terceiros.</p>
             </div>
         </section>
 
@@ -328,15 +302,9 @@
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Pontos de atenção</h2>
             </div>
             <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">
-                <li><strong>BBB / reality:</strong> <a class="toc-link" href="#ref-oimparcial-perfil-2020">Matéria ago/2020</a> — pauta pode atrair comentários polarizados de <strong>terceiros</strong>, fora do controle do creator.</li>
-                <li><strong>RIC:</strong> nome na <strong>tabela de comunicação institucional</strong> do PDF — <a class="toc-link" href="#checagem-ric-5248">trecho acima</a>.</li>
+                <li><strong>BBB / reality:</strong> <a class="toc-link" href="#ref-oimparcial-perfil-2020">Matéria ago/2020</a> — comentários de terceiros podem polarizar.</li>
+                <li><strong>RIC:</strong> nome na tabela do PDF — <a class="toc-link" href="#checagem-ric-5248">linha na checagem</a>.</li>
             </ul>
-            <div class="risk-box">
-                <div class="risk-box__head">Em uma linha</div>
-                <div class="risk-box__body">
-                    <p><strong>Apostas / outra loteria:</strong> não achado na amostra. <strong>Política / escândalo:</strong> não achado na amostra. <strong>RIC + BRK + matéria 2017:</strong> achados com link na <a class="toc-link" href="#parcerias-campanhas">tabela</a>. <strong>FMCG #publi:</strong> não achado.</p>
-                </div>
-            </div>
         </section>
 
         <section id="painel-metricas" class="card-audit scroll-mt-20">
@@ -353,16 +321,8 @@
                     </div>
                     <a href="https://socialblade.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-calia-navy shadow-sm ring-1 ring-black/5 transition hover:border-calia-gold hover:bg-amber-50/80">Site Social Blade<span class="text-calia-gold" aria-hidden="true">↗</span></a>
                 </div>
-                <p class="mt-2 text-xs text-slate-600 leading-relaxed">Números do agregador; mudam com o tempo.</p>
+                <p class="mt-2 text-xs text-slate-600 leading-relaxed">Leitura pública do site em 15/05/2026.</p>
             </div>
-
-            <details class="sb-details">
-                <summary>Metodologia da leitura e observação sobre o YouTube</summary>
-                <div class="sb-details__body">
-                    <p class="mt-2">Consulta em <strong>15/05/2026</strong> às páginas públicas do <a href="https://socialblade.com/" target="_blank" rel="noopener noreferrer">Social Blade</a>; os números mudam com frequência.</p>
-                    <p class="mt-2"><strong>Observação sobre o YouTube:</strong> o <a href="https://socialblade.com/youtube/handle/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade</a> exibe, em inglês, a linha “<strong>Created On September 9, 2024</strong>” (data indicada pelo site para o <strong>@foiorodolfo</strong>) — isso pode refletir <strong>troca ou reassociação do nome de usuário</strong> a outro canal ou ajuste interno do agregador. Os totais de inscritos podem divergir entre o <a href="https://www.youtube.com/channel/UCISvnmAj1NR3hbZbogPFudw" target="_blank" rel="noopener noreferrer">canal no YouTube</a>, o Social Blade e o <a href="https://br.youtubers.me/foi-o-rodolfo/youtuber-estatistica" target="_blank" rel="noopener noreferrer">YouTubers.me</a> (site de terceiros).</p>
-                </div>
-            </details>
 
             <div class="sb-carousel mb-6" role="list" aria-label="Métricas por rede no Social Blade">
                 <!-- Instagram -->
@@ -383,13 +343,6 @@
                             <dt>Média de curtidas</dt><dd>~7&nbsp;342</dd>
                             <dt>Média de comentários</dt><dd>~242</dd>
                         </dl>
-                        <div class="sb-note"><strong>Resumo público:</strong> parte das estatísticas completas exige login no site do Social Blade; os valores acima vêm do trecho público da página.</div>
-                        <div class="sb-trend">
-                            <p class="text-[0.65rem] font-bold uppercase tracking-wider text-slate-500 mb-1">Tendência 14 dias <span class="font-semibold normal-case text-red-600">(queda no resumo)</span></p>
-                            <div class="sb-trend__track" role="img" aria-label="Indicador visual: variação negativa de seguidores no período"><div class="sb-trend__fill"></div></div>
-                            <p class="text-xs text-slate-600 mt-1">Cerca de <strong>−1&nbsp;000</strong> seguidores no intervalo exibido pelo Social Blade.</p>
-                            <p class="text-[0.6rem] text-slate-400 mt-0.5 leading-tight">Barra apenas ilustrativa (não proporcional ao número exato de seguidores).</p>
-                        </div>
                         <div class="sb-card__foot">
                             <a class="sb-btn" href="https://socialblade.com/instagram/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Abrir painel no Social Blade</a>
                         </div>
@@ -411,12 +364,6 @@
                             <dt>Curtidas totais</dt><dd>1,4&nbsp;mi</dd>
                             <dt>Vídeos</dt><dd>990</dd>
                         </dl>
-                        <div class="sb-trend">
-                            <p class="text-[0.65rem] font-bold uppercase tracking-wider text-slate-500 mb-1">Tendência 14 dias <span class="font-semibold normal-case text-slate-600">(estável no resumo)</span></p>
-                            <div class="sb-trend__track" role="img" aria-label="Indicador visual: variação estável de seguidores no período"><div class="sb-trend__fill sb-trend__fill--neutral"></div></div>
-                            <p class="text-xs text-slate-600 mt-1">Variação de seguidores exibida como <strong>0</strong> no trecho consultado.</p>
-                            <p class="text-[0.6rem] text-slate-400 mt-0.5 leading-tight">Barra apenas ilustrativa.</p>
-                        </div>
                         <div class="sb-card__foot">
                             <a class="sb-btn" href="https://socialblade.com/tiktok/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Abrir painel no Social Blade</a>
                         </div>
@@ -438,7 +385,6 @@
                             <dt>Vídeos</dt><dd>100</dd>
                             <dt>Data no Social Blade</dt><dd>9 set 2024</dd>
                         </dl>
-                        <div class="sb-note">O rótulo em inglês no site é “Created On”; observação na seção <em>Metodologia da leitura</em> acima.</div>
                         <div class="sb-card__foot">
                             <a class="sb-btn" href="https://socialblade.com/youtube/handle/foiorodolfo" target="_blank" rel="noopener noreferrer">Abrir painel no Social Blade</a>
                         </div>
@@ -449,7 +395,7 @@
 
         <details id="contexto-ampliado" class="card-audit scroll-mt-20 border border-slate-200 rounded shadow-sm bg-white">
             <summary class="cursor-pointer list-none px-4 py-3 md:px-6 md:py-4 font-black text-calia-navy text-sm uppercase tracking-tight border-b border-slate-100 hover:bg-slate-50/80 [&::-webkit-details-marker]:hidden flex flex-wrap items-center justify-between gap-3">
-                <span>Material de apoio (perfil, trajetória, redes, tom)</span>
+                <span>Material de apoio (perfil, redes, tom)</span>
                 <span class="text-[10px] font-bold normal-case text-slate-500 max-w-[14rem] text-right">Opcional — perfil e redes</span>
             </summary>
             <div class="px-4 pb-6 pt-2 md:px-6 space-y-10">
@@ -458,19 +404,6 @@
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Quem é (resumo)</h2>
             </div>
             <p class="text-sm text-slate-700 leading-relaxed"><strong>Rodolfo Macedo</strong>, «Foi o Rodolfo», humor e conteúdo regional (Maranhão) — <a class="toc-link" href="#ref-oimparcial-perfil-2020">O Imparcial ago/2020</a>. Em 2020, matéria cita <strong>BBB</strong> no <a href="https://www.tiktok.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">TikTok</a>.</p>
-        </section>
-
-        <section id="trajetoria" class="card-audit scroll-mt-20">
-            <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Trajetória (marcos com link)</h2>
-            </div>
-            <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">
-                <li>Início ~2008, YouTube / Snapchat → consolidação no Instagram (<a class="toc-link" href="#ref-oimparcial-perfil-2020">perfil 2020</a>).</li>
-                <li>2016 — <a href="https://banca.oimparcial.com.br/fivepress/201610020000/issue16870.pdf" target="_blank" rel="noopener noreferrer">PDF O Imparcial</a>.</li>
-                <li>2017 — <a href="https://oimparcial.com.br/cidades/2017/01/e-muito-dificil-ser-youtuber-no-maranhao-diz-dono-do-canal-foi-o-rodolfo/" target="_blank" rel="noopener noreferrer">Matéria O Imparcial</a> (também na <a class="toc-link" href="#parcerias-campanhas">tabela</a>).</li>
-                <li>2025 — tabela no <a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">RIC 5248/2025</a>.</li>
-                <li>2026 — <a href="https://www.blogsoestado.com/danielmatos/brk-patrocina-a-80a-edicao-do-lava-pratos-em-sao-jose-de-ribamar/" target="_blank" rel="noopener noreferrer">BRK / Lava Pratos</a> (tabela).</li>
-            </ul>
         </section>
 
         <section id="outras-plataformas" class="card-audit scroll-mt-20">
@@ -484,23 +417,26 @@
             <div class="section-header">
                 <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Tom e formato</h2>
             </div>
-            <p class="text-sm text-slate-700 leading-relaxed">Público provável: MA, humor e cotidiano; às vezes reality (<a class="toc-link" href="#ref-oimparcial-perfil-2020">fonte 2020</a>). Exemplos de Shorts (receita, reação): <a class="toc-link" href="#fontes">lista em Fontes</a>. <strong>Não</strong> achamos, com link na amostra, humor sistemático de ataque a minorias.</p>
+            <p class="text-sm text-slate-700 leading-relaxed">Público provável: MA, humor e cotidiano; às vezes reality (<a class="toc-link" href="#ref-oimparcial-perfil-2020">fonte 2020</a>). Conteúdo público no <a href="https://www.youtube.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">YouTube @foiorodolfo</a> inclui Shorts de receita e reação. <strong>Não</strong> achamos, com link na amostra, humor sistemático de ataque a minorias.</p>
         </section>
 
             </div>
         </details>
 
-        <section id="metodologia" class="card-audit scroll-mt-20 bg-slate-50 border-dashed border-2 border-slate-300">
-            <div class="section-header">
-                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Metodologia e limitações</h2>
-            </div>
-            <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed">
-                <li>Data de referência: <strong>15/05/2026</strong> (buscas web, perfis públicos, Social Blade, PDF RIC, pesquisa complementar maio/2026).</li>
-                <li>Parcerias: só entram linhas com <strong>URL aberta</strong> citando <strong>Rodolfo Macedo</strong> ou <strong>@foiorodolfo</strong>; URLs reabertas manualmente.</li>
-                <li>Limitação: não cobre Stories efêmeros, peça fora do ar nem menção só em imagem sem texto.</li>
-                <li>X: busca exploratória na interface; neste HTML o desdobramento longo foi retirado — permanece o achado <strong>sem perfil @foiorodolfo</strong>.</li>
+        <details id="metodologia" class="card-audit scroll-mt-20 bg-slate-50 border-dashed border-2 border-slate-300">
+            <summary class="cursor-pointer list-none px-4 py-3 md:px-6 md:py-4 font-black text-calia-navy text-sm uppercase tracking-tight hover:bg-slate-100/80 [&::-webkit-details-marker]:hidden flex flex-wrap items-center justify-between gap-3">
+                <span>Metodologia e limitações</span>
+                <span class="text-[10px] font-bold normal-case text-slate-500">Abrir se precisar</span>
+            </summary>
+            <div class="px-4 pb-5 pt-0 md:px-6 border-t border-slate-200">
+            <ul class="text-sm text-slate-700 space-y-1.5 list-disc list-inside leading-relaxed pt-3">
+                <li>Referência: <strong>15/05/2026</strong> (web, perfis públicos, Social Blade, PDF RIC).</li>
+                <li>Parcerias: linha só com <strong>URL</strong> citando <strong>Rodolfo Macedo</strong> ou <strong>@foiorodolfo</strong>.</li>
+                <li>Limitação: não cobre Stories efêmeros, peça fora do ar nem menção só em imagem.</li>
+                <li>X: busca exploratória; <strong>sem</strong> perfil <strong>@foiorodolfo</strong> mapeado.</li>
             </ul>
-        </section>
+            </div>
+        </details>
 
         <footer class="text-center pb-4 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
             <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · Squad Always ON Loterias — Rodolfo Macedo · maio/2026
@@ -516,7 +452,7 @@
                 <li><a href="https://socialblade.com/youtube/handle/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — YouTube @foiorodolfo</a></li>
                 <li><a href="https://www.instagram.com/foiorodolfo/" target="_blank" rel="noopener noreferrer">Instagram — @foiorodolfo</a> (perfil do briefing)</li>
                 <li><a href="https://www.tiktok.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">TikTok — @foiorodolfo</a></li>
-                <li><a href="https://www.youtube.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">YouTube — @foiorodolfo</a> · <a href="https://www.youtube.com/channel/UCISvnmAj1NR3hbZbogPFudw" target="_blank" rel="noopener noreferrer">mesmo canal (outro formato de link no YouTube)</a></li>
+                <li><a href="https://www.youtube.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">YouTube — @foiorodolfo</a> · <a href="https://www.youtube.com/channel/UCISvnmAj1NR3hbZbogPFudw" target="_blank" rel="noopener noreferrer">mesmo canal (link por ID)</a> — Shorts públicos (receita, reação) no canal.</li>
                 <li><a href="https://www.facebook.com/foiorodolfo" target="_blank" rel="noopener noreferrer">Facebook — /foiorodolfo</a></li>
                 <li><a href="https://www.kwai.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">Kwai — @foiorodolfo</a></li>
                 <li><a href="https://www.threads.net/@foiorodolfo" target="_blank" rel="noopener noreferrer">Threads — @foiorodolfo</a></li>
@@ -524,11 +460,8 @@
                 <li><a href="https://oimparcial.com.br/cidades/2017/01/e-muito-dificil-ser-youtuber-no-maranhao-diz-dono-do-canal-foi-o-rodolfo/" target="_blank" rel="noopener noreferrer">O Imparcial — jan/2017 — entrevista com o criador do canal «Foi o Rodolfo»</a> (<a class="toc-link" href="#parcerias-campanhas">tabela de parcerias</a>)</li>
                 <li><a href="https://www.blogsoestado.com/danielmatos/brk-patrocina-a-80a-edicao-do-lava-pratos-em-sao-jose-de-ribamar/" target="_blank" rel="noopener noreferrer">Blog Daniel Matos — BRK patrocina 80.ª edição do Lava Pratos (São José de Ribamar)</a> (legenda com <strong>Rodolfo Macedo</strong> e equipe BRK; <a class="toc-link" href="#parcerias-campanhas">tabela de parcerias</a>)</li>
                 <li><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara dos Deputados — PDF RIC 5248/2025</a> (tabela com <strong>Rodolfo Macedo</strong> <strong>@foiorodolfo</strong>, Instagram, Campanha Nordeste, 2 ações, 24/06/2025 — <a class="toc-link" href="#checagem-ric-5248">RIC 5248/2025 na checagem</a>)</li>
-                <li><a href="https://www.youtube.com/shorts/a447mmYUcbc" target="_blank" rel="noopener noreferrer">YouTube (Shorts) — cuscuz com ovo e queijo</a> · <a href="https://www.youtube.com/shorts/HJRS4TSzSO0" target="_blank" rel="noopener noreferrer">montagem de espaço de trabalho em casa (reação)</a> · <a href="https://www.youtube.com/shorts/NbiGmLpLlDI" target="_blank" rel="noopener noreferrer">refrigerante com amendoim</a> · <a href="https://www.youtube.com/shorts/qhu07J_XlWo" target="_blank" rel="noopener noreferrer">teste de alimentos</a> · <a href="https://www.youtube.com/shorts/H1s7_oK0_tQ" target="_blank" rel="noopener noreferrer">receita no fogão de mármore</a></li>
-                <li><a href="https://www.youtube.com/watch?v=ABwLbgkFCrY" target="_blank" rel="noopener noreferrer">YouTube — vídeo “Minha barba vai crescer?”</a> (exemplo citado em site agregador)</li>
-                <li><a href="https://br.youtubers.me/foi-o-rodolfo/youtuber-estatistica" target="_blank" rel="noopener noreferrer">YouTubers.me — Rodolfo Macedo / foi-o-rodolfo</a> (métricas de terceiros; pode divergir do Social Blade)</li>
-                <li><a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial — ago/2020 — “Conheça 5 influenciadores digitais maranhenses de sucesso”</a> (seção «Foi o Rodolfo»; síntese sobre Big Brother Brasil no TikTok e final na Globo em 2020; ordem de grandeza de seguidores)</li>
-                <li><a href="https://www.reginaldocazumba.com.br/2022/11/toddy-faz-homenagem-ao-nordeste-com.html" target="_blank" rel="noopener noreferrer">Reginaldo Cazumbá (blog, 2022) — nota republicada sobre Vacarreta Toddy em São Luís</a> (triagem de parcerias: cita «Luanne Holanda e Rodolfo» sem sobrenome nem @foiorodolfo; uso explicado na <a class="toc-link" href="#parcerias-campanhas">tabela de parcerias</a>)</li>
+                <li><a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial — ago/2020 — “Conheça 5 influenciadores digitais maranhenses de sucesso”</a> (perfil «Foi o Rodolfo», BBB/TikTok em 2020)</li>
+                <li><a href="https://www.reginaldocazumba.com.br/2022/11/toddy-faz-homenagem-ao-nordeste-com.html" target="_blank" rel="noopener noreferrer">Reginaldo Cazumbá — nota Toddy / Vacarreta (2022)</a> (menção ambígua a “Rodolfo”; ver <a class="toc-link" href="#parcerias-campanhas">parcerias</a>)</li>
                 <li>X (Twitter): busca exploratória na interface; <strong>sem</strong> perfil próprio <strong>@foiorodolfo</strong> mapeado — ver <a class="toc-link" href="#outras-plataformas">Redes</a> no material de apoio.</li>
             </ul>
         </section>
