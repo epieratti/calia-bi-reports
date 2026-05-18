@@ -337,19 +337,37 @@
             .sb-card__badge { width: 1rem !important; height: 1rem !important; font-size: 4px !important; }
             .sb-card__title { font-size: 4.75pt !important; }
             #fontes.card-audit {
-                padding: 0.12rem 0.2rem !important;
+                padding: 0.06rem 0.1rem !important;
                 break-inside: auto !important;
+                page-break-inside: auto !important;
             }
-            #fontes .section-header { margin-bottom: 0.06rem !important; }
-            #fontes .section-header h2 { font-size: 7.25pt !important; }
+            #fontes .section-header { margin-bottom: 0.02rem !important; padding-bottom: 0 !important; }
+            #fontes .section-header h2 { font-size: 6.5pt !important; }
             #fontes .fontes-list {
-                column-count: 2 !important;
-                column-gap: 0.22rem !important;
-                font-size: 4.35pt !important;
-                line-height: 1.06 !important;
+                column-count: 3 !important;
+                column-gap: 0.12rem !important;
+                font-size: 3.55pt !important;
+                line-height: 1.03 !important;
+                orphans: 1 !important;
+                widows: 1 !important;
             }
-            #fontes .fontes-list > li { margin-top: 0.08rem !important; break-inside: avoid; page-break-inside: avoid; }
+            #fontes .fontes-list > li {
+                margin-top: 0.04rem !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
             #fontes .fontes-list > li:first-child { margin-top: 0 !important; }
+            #fontes .fontes-list a[href] {
+                word-break: break-all !important;
+                overflow-wrap: anywhere !important;
+                hyphens: auto !important;
+            }
+            /* PDF: omitir Facebook, Kwai, Threads (itens 8–10); IG/TT/YT diretos e SB permanecem */
+            #fontes .fontes-list > li:nth-child(8),
+            #fontes .fontes-list > li:nth-child(9),
+            #fontes .fontes-list > li:nth-child(10) {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -616,7 +634,7 @@
         <section id="fontes" class="card-audit scroll-mt-20">
             <div class="section-header">
                 <h2 class="font-black text-calia-navy uppercase tracking-tight">Fontes</h2>
-                <p class="text-xs text-slate-600 mt-1 normal-case font-medium tracking-normal">Links usados neste dossiê.</p>
+                <p class="text-xs text-slate-600 mt-1 normal-case font-medium tracking-normal no-print">Links usados neste dossiê.</p>
             </div>
             <ul class="fontes-list">
                 <li><a href="https://socialblade.com/instagram/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — Instagram @foiorodolfo</a></li>
