@@ -167,6 +167,49 @@
             #fontes .fontes-list { column-count: 2; column-gap: 1.25rem; }
             #fontes .fontes-list > li { break-inside: avoid; }
         }
+        /* Tabela compacta — Instagram marcas em publi */
+        #publis-marcas-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.6875rem;
+            line-height: 1.28;
+            text-align: left;
+            color: #334155;
+        }
+        #publis-marcas-table th,
+        #publis-marcas-table td {
+            padding: 0.2rem 0.35rem;
+            border: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        #publis-marcas-table thead th {
+            background: #f1f5f9;
+            color: #252525;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 0.6rem;
+        }
+        #publis-marcas-table .publis-marcas-reg {
+            display: block;
+            margin-top: 0.08rem;
+            color: #64748b;
+            font-size: 0.625rem;
+            font-weight: 500;
+            line-height: 1.22;
+        }
+        @media (min-width: 768px) {
+            #publis-marcas-table { font-size: 0.75rem; }
+            #publis-marcas-table thead th { font-size: 0.65rem; }
+            #publis-marcas-table .publis-marcas-reg { font-size: 0.6875rem; }
+        }
+        #publis-marcas-table th:first-child,
+        #publis-marcas-table td:first-child {
+            width: 1.85rem;
+            max-width: 2.25rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
     </style>
 </head>
 <body class="p-4 md:p-10">
@@ -266,30 +309,29 @@
             <h3 class="evidencias-subhead">Instagram — marcas em publi (2024–2026)</h3>
             <p class="text-sm text-slate-600 leading-relaxed mb-3">Marcas que aparecem como <strong>publi</strong> no perfil <a href="https://www.instagram.com/foiorodolfo/" target="_blank" rel="noopener noreferrer">@foiorodolfo</a>, vistas em <strong>18/05/2026</strong>, entre <strong>2024</strong> e <strong>2026</strong>.</p>
             <div class="overflow-x-auto rounded border border-slate-200 bg-white">
-                <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
+                <table id="publis-marcas-table">
                     <caption class="sr-only">Marcas em publi no Instagram @foiorodolfo, 18 de maio de 2026, de 2024 a 2026</caption>
-                    <thead class="bg-slate-100 text-calia-navy font-black uppercase tracking-wider text-[10px]">
+                    <thead>
                         <tr>
-                            <th class="p-2 border border-slate-200 w-8">#</th>
-                            <th class="p-2 border border-slate-200">Marca</th>
-                            <th class="p-2 border border-slate-200">Segmento</th>
-                            <th class="p-2 border border-slate-200">Região / recorte</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Segmento e região</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">1</td><td class="p-2 border border-slate-200 font-semibold">Minhoto</td><td class="p-2 border border-slate-200">Alimentício — condimentos e temperos (Grupo Raymundo da Fonte, PE)</td><td class="p-2 border border-slate-200">Nacional; forte Nordeste</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">2</td><td class="p-2 border border-slate-200 font-semibold">Guaraná Jeneve</td><td class="p-2 border border-slate-200">Refrigerante regional (Fábrica Psiu)</td><td class="p-2 border border-slate-200">São Luís e interior do MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">3</td><td class="p-2 border border-slate-200 font-semibold">Devassa</td><td class="p-2 border border-slate-200">Cerveja (Heineken Brasil)</td><td class="p-2 border border-slate-200">Nacional</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">4</td><td class="p-2 border border-slate-200 font-semibold">Centro Elétrico Home Center</td><td class="p-2 border border-slate-200">Varejo — materiais elétricos e construção (desde 1923 em São Luís)</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">5</td><td class="p-2 border border-slate-200 font-semibold">BYD Parvi</td><td class="p-2 border border-slate-200">Concessionárias veículos elétricos BYD (Grupo Parvi)</td><td class="p-2 border border-slate-200">Norte e Nordeste (vários estados)</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">6</td><td class="p-2 border border-slate-200 font-semibold">Intercar Mitsubishi</td><td class="p-2 border border-slate-200">Concessionária Mitsubishi</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">7</td><td class="p-2 border border-slate-200 font-semibold">MotoChefe Maranhão</td><td class="p-2 border border-slate-200">Scooters e motos elétricas</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">8</td><td class="p-2 border border-slate-200 font-semibold">Quintal da Vovó</td><td class="p-2 border border-slate-200">Restaurante — culinária nordestina (buffet)</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">9</td><td class="p-2 border border-slate-200 font-semibold">Espetinho do Paulinho</td><td class="p-2 border border-slate-200">Restaurante — frutos do mar e regional</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">10</td><td class="p-2 border border-slate-200 font-semibold">CEAPE Brasil</td><td class="p-2 border border-slate-200">Microcrédito produtivo</td><td class="p-2 border border-slate-200">MA, PA, TO, SP</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">11</td><td class="p-2 border border-slate-200 font-semibold">Festimóveis Maranhão</td><td class="p-2 border border-slate-200">Evento (Shopping da Ilha, nov/2025) — <strong>Caixa</strong> citada na publi</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">12</td><td class="p-2 border border-slate-200 font-semibold">Montreal</td><td class="p-2 border border-slate-200">Mobiliário / decoração</td><td class="p-2 border border-slate-200">São Luís — MA</td></tr>
-                        <tr><td class="p-2 border border-slate-200 font-semibold">13</td><td class="p-2 border border-slate-200 font-semibold">Novo PAC — Governo Federal</td><td class="p-2 border border-slate-200">Publicidade institucional federal</td><td class="p-2 border border-slate-200">Nacional (obras no MA no post)</td></tr>
+                        <tr><td class="font-semibold">1</td><td class="font-semibold">Minhoto</td><td>Alimentício — condimentos e temperos (Grupo Raymundo da Fonte, PE)<span class="publis-marcas-reg">Nacional; forte Nordeste</span></td></tr>
+                        <tr><td class="font-semibold">2</td><td class="font-semibold">Guaraná Jeneve</td><td>Refrigerante regional (Fábrica Psiu)<span class="publis-marcas-reg">São Luís e interior do MA</span></td></tr>
+                        <tr><td class="font-semibold">3</td><td class="font-semibold">Devassa</td><td>Cerveja (Heineken Brasil)<span class="publis-marcas-reg">Nacional</span></td></tr>
+                        <tr><td class="font-semibold">4</td><td class="font-semibold">Centro Elétrico Home Center</td><td>Varejo — materiais elétricos e construção (desde 1923 em São Luís)<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">5</td><td class="font-semibold">BYD Parvi</td><td>Concessionárias veículos elétricos BYD (Grupo Parvi)<span class="publis-marcas-reg">Norte e Nordeste (vários estados)</span></td></tr>
+                        <tr><td class="font-semibold">6</td><td class="font-semibold">Intercar Mitsubishi</td><td>Concessionária Mitsubishi<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">7</td><td class="font-semibold">MotoChefe Maranhão</td><td>Scooters e motos elétricas<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">8</td><td class="font-semibold">Quintal da Vovó</td><td>Restaurante — culinária nordestina (buffet)<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">9</td><td class="font-semibold">Espetinho do Paulinho</td><td>Restaurante — frutos do mar e regional<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">10</td><td class="font-semibold">CEAPE Brasil</td><td>Microcrédito produtivo<span class="publis-marcas-reg">MA, PA, TO, SP</span></td></tr>
+                        <tr><td class="font-semibold">11</td><td class="font-semibold">Festimóveis Maranhão</td><td>Evento (Shopping da Ilha, nov/2025) — <strong>Caixa</strong> citada na publi<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">12</td><td class="font-semibold">Montreal</td><td>Mobiliário / decoração<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">13</td><td class="font-semibold">Novo PAC — Governo Federal</td><td>Publicidade institucional federal<span class="publis-marcas-reg">Nacional (obras no MA no post)</span></td></tr>
                     </tbody>
                 </table>
             </div>
