@@ -18,7 +18,7 @@ help:
 	@echo "  make dossie-filename MD=<dossier.md> [DATE=YYYYMMDD] [SUFFIX=...] — imprime YYYYMMDD-dossie-<slug>.html"
 	@echo "  make dossie-entregar MD=<dossier.md> DEST=<pasta|arquivo.html> [VARIANT=...] [DATE=...] [SUFFIX=...] [SKIP_LINKS=1]"
 	@echo "       — valida + links + build + cópia em DEST + vazamento na pasta cliente"
-	@echo "  make dossie-pdf HTML=<caixa/....html> OUT=<saida.pdf> — PDF (Playwright; DOSSIER_PDF_PASSWORD ou SKIP_GATE=1 interno; opcional POST_UNLOCK_WAIT=5 para Chart.js)"
+	@echo "  make dossie-pdf HTML=<caixa/....html> OUT=<saida.pdf> — PDF (Playwright; DOSSIER_PDF_PASSWORD ou SKIP_GATE=1 interno; opcional POST_UNLOCK_WAIT=5 para Chart.js; PDF_LANDSCAPE=1; PDF_MARGIN_TIGHT=1)"
 	@echo "  make validate-dossier-squad-13   — valida loterias2026/data/dossier_loterias2026.md"
 	@echo "  make validate-dossier-squad-8   — valida loterias2026-20260406/data/dossier_loterias2026.md"
 	@echo "  make validate-dossier-minimo    — valida examples/minimo/dossier_minimo_exemplo.md"
@@ -102,4 +102,6 @@ dossie-pdf:
 	@if [ "$(SKIP_GATE)" != "1" ] && [ -z "$$DOSSIER_PDF_PASSWORD" ]; then echo "Exporte DOSSIER_PDF_PASSWORD=... (senha do gate) ou use SKIP_GATE=1 (uso interno)"; exit 1; fi
 	cd "$(ROOT)" && $(PYTHON) tools/dossier_export_pdf.py --html "$(HTML)" --out "$(OUT)" \
 		$(if $(SKIP_GATE),--skip-gate,) \
-		$(if $(POST_UNLOCK_WAIT),--post-unlock-wait $(POST_UNLOCK_WAIT),)
+		$(if $(POST_UNLOCK_WAIT),--post-unlock-wait $(POST_UNLOCK_WAIT),) \
+		$(if $(PDF_LANDSCAPE),--landscape,) \
+		$(if $(PDF_MARGIN_TIGHT),--margin-tight,)

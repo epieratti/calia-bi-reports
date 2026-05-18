@@ -14,6 +14,7 @@ Dossiês com Chart.js (vários canvas): use `--post-unlock-wait 4` se algum grá
 Senha também pode vir de variável de ambiente DOSSIER_PDF_PASSWORD (evita histórico de shell).
 
 Use `--skip-gate` para gerar o PDF sem digitar senha (abre o conteúdo por script — uso interno).
+Opcional: `--landscape` (A4 paisagem), `--margin-tight` (margens ≈4 mm no Playwright).
 """
 from __future__ import annotations
 
@@ -67,6 +68,16 @@ def main() -> int:
         "--skip-gate",
         action="store_true",
         help="Não usa senha: exibe o dossiê e chama initCharts() (export interno).",
+    )
+    ap.add_argument(
+        "--landscape",
+        action="store_true",
+        help="PDF em A4 paisagem (mais área útil para dossiês densos).",
+    )
+    ap.add_argument(
+        "--margin-tight",
+        action="store_true",
+        help="Margens menores no PDF (≈4 mm) para caber mais conteúdo por página.",
     )
     args = ap.parse_args()
 
@@ -150,11 +161,17 @@ def main() -> int:
                 }"""
             )
             time.sleep(0.55)
+            margin = (
+                {"top": "4mm", "bottom": "4mm", "left": "4mm", "right": "4mm"}
+                if args.margin_tight
+                else {"top": "6mm", "bottom": "8mm", "left": "7mm", "right": "7mm"}
+            )
             page.pdf(
                 path=str(out_path),
                 format="A4",
+                landscape=bool(args.landscape),
                 print_background=True,
-                margin={"top": "6mm", "bottom": "8mm", "left": "7mm", "right": "7mm"},
+                margin=margin,
             )
             browser.close()
     finally:
