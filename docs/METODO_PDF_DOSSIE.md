@@ -65,6 +65,8 @@ python3 tools/dossier_export_pdf.py \
 
 - **`--skip-gate`:** uso **interno**; não expor em issues públicas como substituto de política de acesso. Para fluxo com senha, omitir esta flag e usar `--password` ou `DOSSIER_PDF_PASSWORD` (ver governança).
 - **`--post-unlock-wait`:** segundos a esperar **depois** do conteúdo visível e **antes** de mudar para `print` — dá tempo ao **Chart.js** desenhar os canvas. Para vários gráficos, **4–5 s** é um valor seguro; podes subir se algum canvas sair vazio no PDF.
+- **`--landscape`:** gera **A4 paisagem** no Playwright (mais área útil para tabelas lado a lado).
+- **`--margin-tight`:** margens **≈4 mm** em todos os lados no `page.pdf()` (em conjunto com CSS `@media print` compacto, útil para caber em **2 páginas**).
 
 **Com senha** (sem `--skip-gate`):
 
