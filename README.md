@@ -19,16 +19,16 @@ O dossiê principal da Embratur fica em **`embratur/20260323-dossie-auditoria-pe
 
 No repositório no GitHub: **Settings** → **Pages** → em **Build and deployment**:
 
-### Opção A — mais simples (recomendada)
-
-- **Source:** *Deploy from a branch*
-- **Branch:** `main`, pasta **`/ (root)`**
-- Salve e aguarde alguns minutos.
-
-### Opção B — GitHub Actions
+### Opção A — GitHub Actions (recomendada)
 
 - **Source:** *GitHub Actions*
-- Salve, depois em **Actions** execute de novo o workflow **Deploy GitHub Pages** (ou faça um push em `main`).
+- O workflow **Deploy GitHub Pages** publica **somente** `index.html`, `assets/`, `caixa/`, `febraban/` e `embratur/` — fontes `.md`, `tools/` e pesquisa **não** ficam acessíveis por URL direta no site.
+- Salve, depois em **Actions** execute o workflow (ou faça push em `main`).
+
+### Opção B — branch `main` / raiz (legado)
+
+- **Source:** *Deploy from a branch* → `main` → **`/ (root)`**
+- Publica o **repositório inteiro** (inclui `loterias2026/`, `tools/`, `docs/`). Use só se Actions não estiver disponível; prefira migrar para a Opção A.
 
 Se o Pages foi ativado **depois** de uma execução que falhou, o site só sobe quando houver **pelo menos um deploy com sucesso** (novo push em `main` ou *Re-run* do workflow). Sem isso, a URL pode continuar em 404.
 

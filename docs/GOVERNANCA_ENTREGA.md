@@ -51,7 +51,33 @@ Use como **roteiro**; preencha nomes/canais da tua organização.
 
 ---
 
-## 5. Checklist rápido antes de “fechado”
+## 5. O que é público no GitHub Pages
+
+O workflow **Deploy GitHub Pages** (`.github/workflows/deploy-pages.yml`) publica **apenas**:
+
+| Incluído no site | Não publicado (fica só no repo Git) |
+|------------------|-------------------------------------|
+| `index.html` (raiz) | `loterias2026/`, `loterias2026-*/` (fontes `.md`, CSV, pesquisa) |
+| `assets/` | `tools/` (scripts, validadores) |
+| `caixa/` | `docs/`, `examples/` |
+| `febraban/` | `.github/`, notas internas |
+| `embratur/` | Logs OSINT, `.env` |
+
+**Montagem local do artefato:** `bash tools/prepare_pages_artifact.sh` → pasta `_site/` (gitignored).
+
+**Importante:** o gate por senha protege o **conteúdo do dossiê HTML**; não substitui restringir o que o Pages serve. Com deploy filtrado, URLs como `…/loterias2026/data/dossier_*.md` deixam de responder no site público.
+
+**Smoke test após merge em `main`:**
+
+1. Abrir uma URL de dossiê conhecida (ex. `…/caixa/20260401-dossie-squad-always-on-loterias-2026.html`) — deve abrir com gate.
+2. Tentar `…/loterias2026/data/dossier_loterias2026.md` — deve dar **404** (ou página não encontrada do Pages).
+3. `make check-html-leakage` ou workflow **Verificar vazamento em HTML do cliente** — verde.
+
+Se o repositório ainda usar *Deploy from a branch* → raiz, **todo** o repo continua exposto até migrar para *GitHub Actions* (ver `README.md` → Ativar GitHub Pages).
+
+---
+
+## 6. Checklist rápido antes de “fechado”
 
 - [ ] URL do Pages abre; senha correta; sem vazamento de caminhos do repo no texto visível (`check_client_html_leakage.py`).
 - [ ] `index.html` da pasta atualizado se existir.

@@ -3,3 +3,6 @@ __pycache__/
 tools/__pycache__/
 # Preview local do exemplo mínimo (regenerar com build)
 examples/minimo/output-preview.html
+
+# Artefato local do GitHub Pages (tools/prepare_pages_artifact.sh)
+/_site/

@@ -1,4 +1,4 @@
-# Verifica se HTML publicado (Caixa / Embratur) expõe caminhos do repo no texto visível
+# Verifica se HTML publicado (Caixa / Embratur / Febraban) expõe caminhos do repo no texto visível
 name: Verificar vazamento em HTML do cliente
 
 on:
@@ -6,12 +6,14 @@ on:
     paths:
       - "caixa/**/*.html"
       - "embratur/**/*.html"
+      - "febraban/**/*.html"
       - "tools/check_client_html_leakage.py"
   push:
     branches: [main]
     paths:
       - "caixa/**/*.html"
       - "embratur/**/*.html"
+      - "febraban/**/*.html"
       - "tools/check_client_html_leakage.py"
 
 jobs:
@@ -20,4 +22,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Varredura anti-vazamento
-        run: python3 tools/check_client_html_leakage.py caixa embratur
+        run: python3 tools/check_client_html_leakage.py caixa embratur febraban
