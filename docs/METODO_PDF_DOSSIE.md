@@ -102,7 +102,7 @@ make dossie-pdf HTML=caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html O
 5. Dispara **`resize`** na janela e, em **cada** `<canvas>`, `Chart.getChart(canvas).resize()` — **obrigatório** porque, após o passo 4, as caixas dos gráficos mudam de tamanho; sem este passo o canvas pode **sobrepor texto** no PDF.
 6. Espera **~0,55 s** e gera o **PDF** (A4, `print_background`, margens compactas no script).
 
-Se alterares o CSS de impressão dos gráficos, **regenera** o PDF e reabre o ficheiro para confirmar que não há sobreposição.
+Se você alterar o CSS de impressão dos gráficos, **regenere** o PDF e reabra o arquivo para confirmar que não há sobreposição.
 
 ---
 
@@ -119,9 +119,9 @@ Se alterares o CSS de impressão dos gráficos, **regenera** o PDF e reabre o fi
 
 Quando o PDF (e/ou o HTML) for entregue no **site público**:
 
-1. `git status` → `git add` só os ficheiros relevantes.
+1. `git status` → `git add` só os arquivos relevantes.
 2. `git commit` com mensagem em **pt-BR** (imperativo ou descrição clara).
-3. `git push` ao branch acordado — para artefactos em `caixa/`, `febraban/`, etc., o remoto deve ficar alinhado para o **GitHub Pages** refletir o ficheiro (incluindo URL **raw** do `.pdf` se aplicável).
+3. `git push` ao branch acordado — para artefatos em `caixa/`, `febraban/`, etc., o remoto deve ficar alinhado para o **GitHub Pages** refletir o arquivo (incluindo URL **raw** do `.pdf` se aplicável).
 
 ---
 
@@ -134,12 +134,14 @@ Quando o PDF (e/ou o HTML) for entregue no **site público**:
 
 ---
 
-## 10. Referência de ficheiros (Isadora)
+## 10. Referência de arquivos (Isadora)
 
 | Artefato | Caminho |
 |----------|---------|
 | HTML | `caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html` |
 | PDF | `caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf` |
-| Índice Caixa (link PDF) | `caixa/index.html`, `caixa/README.md` |
+| Índice Caixa (link HTML) | `caixa/index.html`, `caixa/README.md` |
+
+PDFs de Isadora e Rodolfo: regenerar com `make dossie-pdf` antes de publicar link no índice (ver [`docs/INVENTARIO_DOSSIES.md`](INVENTARIO_DOSSIES.md)).
 
 Para outro dossiê, troca os caminhos mantendo o **mesmo fluxo** de comandos e QA.

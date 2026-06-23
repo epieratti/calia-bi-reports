@@ -1,5 +1,16 @@
+# Python
 __pycache__/
+**/__pycache__/
 *.py[cod]
-tools/__pycache__/
+.venv/
+
 # Preview local do exemplo mínimo (regenerar com build)
 examples/minimo/output-preview.html
+
+# PDFs soltos na raiz do repo (artefatos publicados ficam em caixa/, febraban/, etc.)
+/*.pdf
+
+# Logs e saídas OSINT efêmeras (não versionar novos; arquivos já rastreados permanecem até limpeza Épico 6)
+loterias2026/research/osint_runs/**/*.log
+loterias2026/research/osint_runs/**/*.txt
+!loterias2026/research/osint_runs/**/README.txt

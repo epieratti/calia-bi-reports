@@ -151,7 +151,7 @@
 
 ## Arquivos de dados (para atualização)
 
-| Ficheiro | Conteúdo |
+| Arquivo | Conteúdo |
 |----------|-----------|
 | `data/parcerias_marcas.csv` | Marcas e URLs |
 | `data/apostas_loterias_historico.csv` | Classificação apostas/loteria |

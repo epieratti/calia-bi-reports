@@ -2,7 +2,7 @@
 
 **Conteúdo integral por perfil** (identidade, métricas, parcerias, riscos, política, polêmicas): ver **[`SQUAD_FICHA_COMPLETA.md`](SQUAD_FICHA_COMPLETA.md)**.
 
-Este ficheiro mantém apenas **atalhos por URL** para cópia rápida. **Data:** 2026-04-06.
+Este arquivo mantém apenas **atalhos por URL** para cópia rápida. **Data:** 2026-04-06.
 
 ## Contexto CPI / regulatório
 
