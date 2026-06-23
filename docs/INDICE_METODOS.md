@@ -49,6 +49,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **OSINT pip** (qualquer cliente) | [`tools/requirements-osint.txt`](../tools/requirements-osint.txt) |
 | **Trends + Wikipedia** (qualquer cliente) | [`tools/penetracao_mercados.py`](../tools/penetracao_mercados.py), [`tools/requirements-penetracao.txt`](../tools/requirements-penetracao.txt) |
 | Validação fonte `.md` (formato do gerador) | `tools/validate_dossier_source.py` |
+| **Sincronização** build vs `caixa/`/`febraban/` (modo B) | `tools/check_dossier_publish_sync.py`, `make check-dossier-publish-sync` |
 | **Dicas semânticas** (lacunas, painéis, links) — `--hints` / `--strict-hints` | `python3 tools/validate_dossier_source.py --hints <dossier.md>` |
 | **QA** — validate + links + build + vazamento HTML | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
 | **Vazamento** em HTML (caminhos repo no texto visível) | [`tools/check_client_html_leakage.py`](../tools/check_client_html_leakage.py) |

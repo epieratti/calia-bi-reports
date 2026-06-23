@@ -1,0 +1,3 @@
+# Motor dossiê modo B + validação de fontes (raiz do repo)
+# pip install -r requirements.txt
+pyyaml>=6.0

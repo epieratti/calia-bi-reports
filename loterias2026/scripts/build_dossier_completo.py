@@ -2,10 +2,14 @@
 """
 Gera o HTML do dossiê a partir da fonte Markdown + painéis YAML.
 
-Fonte principal: data/dossier_loterias2026.md (front matter + perfis em ## Nome)
-Painéis (métricas): data/dossier_loterias2026_panels.yaml
-
-Saída: output/20260401-dossie-squad-always-on-loterias-2026.html
+Uso (na raiz do repo):
+  python3 loterias2026/scripts/build_dossier_completo.py --project-root loterias2026
+  python3 loterias2026/scripts/build_dossier_completo.py --project-root loterias2026-20260406
+  python3 loterias2026/scripts/build_dossier_completo.py \\
+    --md loterias2026/data/dossier_febraban_concorrencia_2026.md \\
+    --panels loterias2026/data/dossier_febraban_concorrencia_2026_panels.yaml \\
+    --out loterias2026/output/20260427-dossie-febraban-concorrencia-creators-2026.html \\
+    --variant squad_8
 
 Legado: data/dossier_loterias2026.yaml (monolítico) — use migrate_yaml_to_md_source.py
 para gerar .md + _panels.yaml a partir dele.
@@ -16,42 +20,82 @@ import argparse
 import sys
 from pathlib import Path
 
-_ROOT = Path(__file__).resolve().parents[1]
-_REPO_ROOT = _ROOT.parent
+_SCRIPT = Path(__file__).resolve()
+_DEFAULT_PROJECT = _SCRIPT.parents[1]
+_REPO_ROOT = _DEFAULT_PROJECT.parent
 if str(_REPO_ROOT / "tools") not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT / "tools"))
 
 from dossier_render import render_loterias_dossier_html
 from md_dossier_source import load_dossier_bundle, panels_only_path_for_md
 
-DATA = _ROOT / "data"
-OUT_DIR = _ROOT / "output"
-DEFAULT_MD = DATA / "dossier_loterias2026.md"
-LEGACY_YAML = DATA / "dossier_loterias2026.yaml"
-DEFAULT_OUT = OUT_DIR / "20260401-dossie-squad-always-on-loterias-2026.html"
-DEFAULT_VARIANT = "squad_13"
+# Defaults por pasta de lote (nome do diretório --project-root)
+_PROJECT_DEFAULTS: dict[str, dict[str, str]] = {
+    "loterias2026": {
+        "md": "data/dossier_loterias2026.md",
+        "out": "output/20260401-dossie-squad-always-on-loterias-2026.html",
+        "variant": "squad_13",
+    },
+    "loterias2026-20260406": {
+        "md": "data/dossier_loterias2026.md",
+        "out": "output/20260406-dossie-squad-always-on-loterias-2026.html",
+        "variant": "squad_8",
+    },
+    "loterias2026-20260504": {
+        "md": "data/dossier_loterias2026.md",
+        "out": "output/20260504-dossie-squad-always-on-loterias-2026.html",
+        "variant": "squad_8",
+    },
+}
 
 
-def load_bundle(md_path: Path, panels_path: Path | None) -> dict:
+def _resolve_project_root(arg: Path | None) -> Path:
+    return (arg or _DEFAULT_PROJECT).resolve()
+
+
+def _defaults_for_project(project_root: Path) -> dict[str, str]:
+    return _PROJECT_DEFAULTS.get(
+        project_root.name,
+        {"md": "data/dossier_loterias2026.md", "out": "", "variant": "squad_8"},
+    )
+
+
+def load_bundle(
+    md_path: Path,
+    panels_path: Path | None,
+    *,
+    legacy_yaml: Path,
+    default_md: Path,
+) -> dict:
     if md_path.is_file():
         return load_dossier_bundle(md_path, panels_path)
-    if md_path.resolve() == DEFAULT_MD.resolve() and LEGACY_YAML.is_file():
+    if md_path.resolve() == default_md.resolve() and legacy_yaml.is_file():
         import yaml
 
-        with open(LEGACY_YAML, encoding="utf-8") as f:
+        with open(legacy_yaml, encoding="utf-8") as f:
             return yaml.safe_load(f) or {}
     raise SystemExit(f"Arquivo fonte não encontrado: {md_path}")
 
 
-def main(
+def build_dossier(
     *,
+    project_root: Path,
     md_path: Path,
     panels_path: Path | None,
     out_path: Path,
     variant: str,
     no_gate: bool = False,
 ) -> None:
-    bundle = load_bundle(md_path, panels_path)
+    defaults = _defaults_for_project(project_root)
+    default_md = (project_root / defaults["md"]).resolve()
+    legacy_yaml = project_root / "data" / "dossier_loterias2026.yaml"
+    bundle = load_bundle(
+        md_path,
+        panels_path,
+        legacy_yaml=legacy_yaml,
+        default_md=default_md,
+    )
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     render_loterias_dossier_html(
         bundle,
         variant=variant,
@@ -60,12 +104,18 @@ def main(
     )
 
 
-if __name__ == "__main__":
+def main() -> None:
     ap = argparse.ArgumentParser(description="Gera dossiê HTML (fonte .md + painéis YAML).")
+    ap.add_argument(
+        "--project-root",
+        type=Path,
+        default=None,
+        help="Pasta do lote (ex.: loterias2026, loterias2026-20260406). Default: loterias2026/",
+    )
     ap.add_argument(
         "--md",
         type=Path,
-        default=DEFAULT_MD,
+        default=None,
         help="Arquivo fonte .md (front matter + perfis).",
     )
     ap.add_argument(
@@ -77,13 +127,13 @@ if __name__ == "__main__":
     ap.add_argument(
         "--out",
         type=Path,
-        default=DEFAULT_OUT,
+        default=None,
         help="Caminho do HTML gerado.",
     )
     ap.add_argument(
         "--variant",
         choices=("squad_13", "squad_8"),
-        default=DEFAULT_VARIANT,
+        default=None,
         help="Layout IG/tabela resumo (squad_13 = tiers 13; squad_8 = lote 8 perfis).",
     )
     ap.add_argument(
@@ -92,19 +142,37 @@ if __name__ == "__main__":
         help="Sem tela de senha (preview local).",
     )
     args = ap.parse_args()
-    md_path: Path = args.md.resolve()
+
+    project_root = _resolve_project_root(args.project_root)
+    preset = _defaults_for_project(project_root)
+
+    md_path = args.md or (project_root / preset["md"])
+    md_path = md_path.resolve() if md_path.is_absolute() else (project_root / md_path).resolve()
+
+    out_rel = args.out or preset.get("out")
+    if not out_rel:
+        raise SystemExit("Defina --out ou use --project-root de um lote conhecido.")
+    out_path = Path(out_rel)
+    if not out_path.is_absolute():
+        out_path = (project_root / out_path).resolve()
+
+    variant = args.variant or preset["variant"]
+
     panels_path: Path | None = args.panels.resolve() if args.panels else None
     if panels_path is None and md_path.is_file():
         panels_path = panels_only_path_for_md(md_path)
         if not panels_path.is_file():
             panels_path = None
-    out_path: Path = args.out
-    if not out_path.is_absolute():
-        out_path = (_ROOT / out_path).resolve()
-    main(
+
+    build_dossier(
+        project_root=project_root,
         md_path=md_path,
         panels_path=panels_path,
         out_path=out_path,
-        variant=args.variant,
+        variant=variant,
         no_gate=args.no_gate,
     )
+
+
+if __name__ == "__main__":
+    main()

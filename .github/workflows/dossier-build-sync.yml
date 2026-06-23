@@ -1,0 +1,36 @@
+# Build dos lotes modo B e compara HTML publicado (caixa/febraban) com rebuild da fonte .md
+name: Sincronizar build e publicação (modo B)
+
+on:
+  pull_request:
+    paths:
+      - "**/dossier_*.md"
+      - "**/dossier_*_panels.yaml"
+      - "caixa/**/*.html"
+      - "febraban/**/*.html"
+      - "loterias2026/scripts/build_dossier_completo.py"
+      - "loterias2026-*/scripts/build_dossier_completo.py"
+      - "tools/dossier_render.py"
+      - "tools/md_dossier_source.py"
+      - "tools/check_dossier_publish_sync.py"
+  push:
+    branches: [main]
+    paths:
+      - "**/dossier_*.md"
+      - "**/dossier_*_panels.yaml"
+      - "caixa/**/*.html"
+      - "febraban/**/*.html"
+      - "loterias2026/scripts/build_dossier_completo.py"
+      - "tools/dossier_render.py"
+      - "tools/md_dossier_source.py"
+      - "tools/check_dossier_publish_sync.py"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar dependências Python
+        run: pip install -r requirements.txt
+      - name: Build lotes + verificar alinhamento com publicado
+        run: python3 tools/check_dossier_publish_sync.py --build

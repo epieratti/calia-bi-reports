@@ -133,7 +133,7 @@ def main() -> int:
     ]
     if args.no_gate:
         build_cmd.append("--no-gate")
-    _run(build_cmd, cwd=str(ROOT / "loterias2026"))
+	_run(build_cmd, cwd=str(ROOT))
 
     if not args.skip_leakage:
         scan_root = _leakage_scan_dir_for_file(out_html)
