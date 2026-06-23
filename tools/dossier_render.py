@@ -6,6 +6,7 @@ Consumido por build_dossier_completo.py (fonte .md + painéis YAML ou YAML legad
 from __future__ import annotations
 
 import html
+import os
 import re
 import sys
 import unicodedata
@@ -777,7 +778,11 @@ def render_loterias_dossier_html(
             "Sem linha nos painéis para este nome (Instagram / TikTok / YouTube)."
         )
     meta = bundle.get("meta") or {}
-    generated = datetime.now(timezone.utc).strftime("%d/%m/%Y")
+    generated = os.environ.get("DOSSIER_BUILD_DATE", "").strip()
+    if not generated:
+        generated = str(meta.get("document_date") or meta.get("build_date") or "").strip()
+    if not generated:
+        generated = datetime.now(timezone.utc).strftime("%d/%m/%Y")
 
     title = esc_plain(meta.get("title", "Squad Always ON Loterias 2026 — Brand Safety"))
     subtitle = esc_plain(meta.get("subtitle", ""))
