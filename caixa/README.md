@@ -5,7 +5,7 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 **Convenção (playbook):**
 
 - **Caixa — temas gerais** (ex.: auditoria de personalidades **sem** ser Loterias): HTML na **raiz** desta pasta — exemplo `20260326-dossie-auditoria-personalidades-caixa-2026.html`.
-- **Caixa — linha Loterias / Always ON** (e similares): novos relatórios em **`caixa/loterias/`** (criar a subpasta se ainda não existir), nome `YYYYMMDD-dossie-….html`. Os ficheiros Loterias já na raiz de `caixa/` mantêm-se por histórico; migração para `loterias/` é opcional.
+- **Caixa — linha Loterias / Always ON** (e similares): novos relatórios em **`caixa/loterias/`** (criar a subpasta se ainda não existir), nome `YYYYMMDD-dossie-….html`. Os arquivos Loterias já na raiz de `caixa/` permanecem por histórico; migração para `loterias/` é opcional.
 
 **Embratur** não usa esta pasta — relatórios ficam em **`embratur/`** na raiz do repo (ex.: `20260323-dossie-auditoria-personalidades-embratur-2026.html`).
 

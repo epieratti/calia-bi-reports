@@ -26,7 +26,7 @@ import requests
 import yaml
 from dotenv import load_dotenv
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA_RAW = ROOT / "data" / "raw"
 INFLUENCERS_PATH = ROOT / "data" / "influencers.yaml"
 

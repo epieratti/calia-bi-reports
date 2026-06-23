@@ -3,7 +3,7 @@
 **Fonte (identificação de handle):** páginas públicas `https://www.tiktok.com/@…` abertas no browser (sem login).  
 **Data:** 2026-04-06. Seguidores/curtidas na página mudam diariamente.
 
-**Fonte (métricas agregadas):** [Upfluence TikTok Audit Tool](https://www.upfluence.com/tiktok-audit-tool) — percentagens são estimativas (disclaimer do site). Dados colados pelo utilizador na mesma data de referência do lote.
+**Fonte (métricas agregadas):** [Upfluence TikTok Audit Tool](https://www.upfluence.com/tiktok-audit-tool) — percentagens são estimativas (disclaimer do site). Dados colados pelo usuário na mesma data de referência do lote.
 
 ## Resumo — handles
 
@@ -24,7 +24,7 @@ O perfil com métricas no Upfluence e presença pública é **@saraivarafael28**
 
 ## Métricas Upfluence (auditoria)
 
-Ficheiro tabular: `data/upfluence_tiktok_audit.csv`.
+Arquivo tabular: `data/upfluence_tiktok_audit.csv`.
 
 | Handle | ER | Seguidores | Vídeos (total) | Público F/M (se houver) |
 |--------|-----|------------|----------------|-------------------------|

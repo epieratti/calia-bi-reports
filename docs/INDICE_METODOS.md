@@ -12,6 +12,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **Prompts** para agentes de IA | [`docs/PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md) |
 | **Vários agentes** — papéis, paralelo seguro, anti-merda | [`docs/MULTI_AGENTES.md`](MULTI_AGENTES.md) |
 | **Governança** — senha, validar vendo no Pages, PDF, escalação | [`docs/GOVERNANCA_ENTREGA.md`](GOVERNANCA_ENTREGA.md) |
+| **Inventário** — dossiês publicados (modo A/B, fonte, URL) | [`docs/INVENTARIO_DOSSIES.md`](INVENTARIO_DOSSIES.md) |
 | **Calibragem de qualidade** — prova por eixo, confiança, delta, institucional | [`docs/CALIBRAGEM_QUALIDADE.md`](CALIBRAGEM_QUALIDADE.md) |
 | **PDF do dossiê** — metodologia (Playwright, Chart.js, QA) | [`docs/METODO_PDF_DOSSIE.md`](METODO_PDF_DOSSIE.md) |
 | **PDF** — script e flags | [`tools/dossier_export_pdf.py`](../tools/dossier_export_pdf.py), `make dossie-pdf` |
@@ -52,4 +53,4 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **QA** — validate + links + build + vazamento HTML | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
 | **Vazamento** em HTML (caminhos repo no texto visível) | [`tools/check_client_html_leakage.py`](../tools/check_client_html_leakage.py) |
 | **Nome automático** `YYYYMMDD-dossie-<slug>.html` + **pipeline** validar→build→pasta Pages | [`tools/dossier_html_filename.py`](../tools/dossier_html_filename.py), [`tools/dossier_publish.py`](../tools/dossier_publish.py), `make dossie-filename` / `make dossie-entregar` |
-| Legado Apify / `run_pipeline` | [`loterias2026/scripts/README_LEGADO.md`](../loterias2026/scripts/README_LEGADO.md) |
+| Legado Apify / `run_pipeline` | [`loterias2026/scripts/legado/README_LEGADO.md`](../loterias2026/scripts/legado/README_LEGADO.md) |

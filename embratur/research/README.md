@@ -2,7 +2,7 @@
 
 ## O que foi gerado
 
-- `penetracao_trends_wiki_2026.csv` / `.json` — saída do script genérico [`tools/penetracao_mercados.py`](../../tools/penetracao_mercados.py) (entidades em `penetracao_entities_embratur_2026.json`). O ficheiro `embratur/scripts/penetracao_mercados.py` é *wrapper* que chama o de `tools/`.
+- `penetracao_trends_wiki_2026.csv` / `.json` — saída do script genérico [`tools/penetracao_mercados.py`](../../tools/penetracao_mercados.py) (entidades em `penetracao_entities_embratur_2026.json`). O arquivo `embratur/scripts/penetracao_mercados.py` é *wrapper* que chama o de `tools/`.
 
 ## Metodologia (resumo)
 

@@ -1,6 +1,6 @@
 # Google Alerts — sugestões (pós-trilha)
 
-**Objetivo:** menções novas entre rondas de dossiê. O agente não cria alertas na conta Google do utilizador; esta lista serve para configuração manual.
+**Objetivo:** menções novas entre rondas de dossiê. O agente não cria alertas na conta Google do usuário; esta lista serve para configuração manual.
 
 | Query sugerida | Creator |
 |----------------|---------|

@@ -2,7 +2,7 @@
 
 Esta pasta documenta **um produto concreto** (Always ON Loterias) e concentra o **exemplo implementado** do **modo B** do [`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md) (fonte `.md` + gerador). Para **outro cliente** com o mesmo tipo de fábrica, o fluxo é o mesmo conceito; o tooling pode continuar aqui até haver outra pasta.
 
-O gerador importa **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** na raiz (código único). Legado Apify: `scripts/README_LEGADO.md`.
+O gerador importa **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`** na raiz (código único). Legado Apify: `scripts/legado/README_LEGADO.md`.
 
 ## Linha de produção (novos dossiês de creators)
 
@@ -10,7 +10,7 @@ O gerador importa **`tools/dossier_render.py`** e **`tools/md_dossier_source.py`
 2. Crie fonte nova: `python3 scripts/new_creator_dossier.py SEU_SLUG --variant squad_13` (ou `squad_8` para layout do lote de 8 perfis).
 3. Edite `dossier_SEU_SLUG.md` e `dossier_SEU_SLUG_panels.yaml`.
 4. Gere HTML: `python3 scripts/build_dossier_completo.py --md data/dossier_SEU_SLUG.md --out output/....html --variant squad_13`
-5. Na raiz do repo: `python3 tools/validate_dossier_source.py loterias2026/data/dossier_SEU_SLUG.md` (ou `make validate-dossier-squad-13` para o ficheiro de referência desta pasta; o alvo `validate-dossier-13` continua como alias). Ver regras de Markdown em **`PLAYBOOK_DOSSIES.md`** → Toolbox.
+5. Na raiz do repo: `python3 tools/validate_dossier_source.py loterias2026/data/dossier_SEU_SLUG.md` (ou `make validate-dossier-squad-13` para o arquivo de referência desta pasta; o alvo `validate-dossier-13` continua como alias). Ver regras de Markdown em **`PLAYBOOK_DOSSIES.md`** → Toolbox.
 
 ## Dossiê HTML (página do cliente)
 
@@ -56,4 +56,4 @@ Fluxo recomendado: editar **`dossier_loterias2026.md`** (texto) e **`dossier_lot
 - **Upfluence** — exportação enviada por quem tem acesso; organização das linhas TikTok no mesmo YAML.
 - **X** — abrir o perfil **no X**; anotar **só o que importa para o painel:** quantidade de **seguidores** e se a conta **está em uso** (há posts recentes / ativa) ou **não usa há muito tempo**; completar colunas de atividade e **teor recente** como nos lotes já no repo.
 
-Scripts em `scripts/collect.py`, `run_pipeline.py`, etc. que mencionam **Apify** são **legado** e **não** entram no fluxo de entrega ao cliente; não há workflow de Actions para isso.
+Scripts em `scripts/legado/` (`collect.py`, `run_pipeline.py`, etc.) que mencionam **Apify** são **legado** e **não** entram no fluxo de entrega ao cliente; não há workflow de Actions para isso.
