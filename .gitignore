@@ -14,3 +14,6 @@ examples/minimo/output-preview.html
 loterias2026/research/osint_runs/**/*.log
 loterias2026/research/osint_runs/**/*.txt
 !loterias2026/research/osint_runs/**/README.txt
+
+# Artefato local GitHub Pages (tools/prepare_pages_artifact.sh — Épico 1)
+/_site/

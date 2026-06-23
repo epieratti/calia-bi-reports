@@ -40,7 +40,9 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | Brand safety, busca aberta, OSINT (ex.: yt-dlp, Sherlock) | [`loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md`](../loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) |
 | Tabela de evidências e URLs (exemplo de entrega passada) | [`loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md`](../loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
 | **Implementação modo B** — `new_creator_dossier`, `build`, template, publish Caixa | [`loterias2026/README.md`](../loterias2026/README.md) |
-| Segundo lote no **mesmo** modelo (8 perfis): inventário pesquisa + build | [`loterias2026-20260406/README.md`](../loterias2026-20260406/README.md) |
+| Segundo lote no **mesmo** modelo (8 perfis): inventário pesquisa + build | [`loterias2026/lotes/20260406/README.md`](../loterias2026/lotes/20260406/README.md) |
+| Lotes por data (`loterias2026/lotes/`) | [`loterias2026/lotes/README.md`](../loterias2026/lotes/README.md) |
+| Consolidado 27 perfis (mai/2026) | [`loterias2026/lotes/20260511/README.md`](../loterias2026/lotes/20260511/README.md) |
 | HTML publicado Caixa, senhas, índice | [`caixa/README.md`](../caixa/README.md) |
 | Embratur + script Trends/Wikipedia | [`embratur/research/README.md`](../embratur/research/README.md) |
 | URLs do site e Pages | [`README.md`](../README.md) (raiz) |
@@ -49,6 +51,7 @@ Mapa **pergunta → arquivo**. O **`PLAYBOOK_DOSSIES.md`** na raiz é o **guia g
 | **OSINT pip** (qualquer cliente) | [`tools/requirements-osint.txt`](../tools/requirements-osint.txt) |
 | **Trends + Wikipedia** (qualquer cliente) | [`tools/penetracao_mercados.py`](../tools/penetracao_mercados.py), [`tools/requirements-penetracao.txt`](../tools/requirements-penetracao.txt) |
 | Validação fonte `.md` (formato do gerador) | `tools/validate_dossier_source.py` |
+| **Sincronização** build vs `caixa/`/`febraban/` (modo B) | `tools/check_dossier_publish_sync.py`, `make check-dossier-publish-sync` |
 | **Dicas semânticas** (lacunas, painéis, links) — `--hints` / `--strict-hints` | `python3 tools/validate_dossier_source.py --hints <dossier.md>` |
 | **QA** — validate + links + build + vazamento HTML | `make qa-dossier-squad-13` ou `make qa-dossier-squad-8` |
 | **Vazamento** em HTML (caminhos repo no texto visível) | [`tools/check_client_html_leakage.py`](../tools/check_client_html_leakage.py) |

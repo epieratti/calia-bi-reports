@@ -18,7 +18,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 
 **Briefing:** o pedido do **usuário** define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. No Pipeline §1, perguntas marcadas **(E)** são essenciais, **(C)** obrigatórias só quando a condição se aplica, **(O)** podem usar padrão do playbook se declarado. **Padrão operacional:** HTML **sempre** com **gate/senha** e entrega **sempre** com **commit + push** ao remoto (Pages), salvo o usuário pedir **explicitamente** o contrário. **Se faltar (E) ou (C) aplicável**, **perguntar** — em especial o **valor** da senha (ou referência a outro dossiê) quando não vier no briefing; não supor pasta ou modo em silêncio.
 
-**Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` e `loterias2026-20260406/scripts/build_dossier_completo.py` — **não duplicar** esses **arquivos** em outras pastas).
+**Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` — **único** build canônico; pastas `loterias2026-*/scripts/` têm wrappers finos).
 
 ## Estrutura principal
 
@@ -29,9 +29,9 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 | Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
 | Dossiês Febraban (no ar) | `febraban/` | HTML do cliente Febraban no Pages. URLs e senha em `febraban/README.md`. |
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
-| Loterias 2026 | `loterias2026/`, `loterias2026-20260406/` | `PLAYBOOK_DOSSIES.md`, `docs/INDICE_METODOS.md`. Build: `scripts/build_dossier_completo.py` (importa `tools/dossier_render.py`). Descoberta de @: `loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`. Novo lote: `loterias2026/scripts/new_creator_dossier.py`. Legado Apify: `loterias2026/scripts/legado/README_LEGADO.md`. |
+| Loterias 2026 | `loterias2026/`, `loterias2026/lotes/` | `PLAYBOOK_DOSSIES.md`, `docs/INDICE_METODOS.md`. Build: `scripts/build_dossier_completo.py` (importa `tools/dossier_render.py`). Lotes por data: `loterias2026/lotes/YYYYMMDD/`. Descoberta de @: `loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`. Novo lote: `loterias2026/scripts/new_creator_dossier.py`. Legado Apify: `loterias2026/scripts/legado/README_LEGADO.md`. |
 
-Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` e `loterias2026-20260406/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). Ver `caixa/README.md` e `loterias2026/README.md`.
+Para os dossiês Loterias **`20260401-…`**, **`20260406-…`** e **`20260504-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` ou `loterias2026/lotes/<data>/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). O consolidado **`20260511-…`** (27 perfis) está em `loterias2026/lotes/20260511/`. Ver `caixa/README.md` e `loterias2026/README.md`.
 
 ## Proteção por senha (client-side)
 

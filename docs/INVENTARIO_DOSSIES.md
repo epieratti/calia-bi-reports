@@ -51,13 +51,13 @@ Enquanto o PDF não estiver no repo, o [`caixa/index.html`](../caixa/index.html)
 | Arquivo | Modo | Fonte editável | Senha | Entrega |
 |---------|------|----------------|-------|---------|
 | [`caixa/20260401-dossie-squad-always-on-loterias-2026.html`](../caixa/20260401-dossie-squad-always-on-loterias-2026.html) | **B** | `loterias2026/data/dossier_loterias2026.md` + `_panels.yaml` | `caixa2026` | 2026-04-01 (13 perfis) |
-| [`caixa/20260406-dossie-squad-always-on-loterias-2026.html`](../caixa/20260406-dossie-squad-always-on-loterias-2026.html) | **B** | `loterias2026-20260406/data/dossier_loterias2026.md` + `_panels.yaml` | `caixa2026` | 2026-04-06 (8 perfis) |
-| [`caixa/20260504-dossie-squad-always-on-loterias-2026.html`](../caixa/20260504-dossie-squad-always-on-loterias-2026.html) | **B** | `loterias2026-20260504/data/dossier_loterias2026.md` + `_panels.yaml` | `caixa2026` | 2026-05-04 (3 perfis) |
-| [`caixa/20260511-dossie-squad-always-on-loterias-2026.html`](../caixa/20260511-dossie-squad-always-on-loterias-2026.html) | **Híbrido** ⚠️ | `tools/build_squad_always_on_consolidated_mai2026.py` + patches em `tools/` — **sem** `dossier_*.md` | `caixa2026` | 2026-05-11 (27 perfis) |
+| [`caixa/20260406-dossie-squad-always-on-loterias-2026.html`](../caixa/20260406-dossie-squad-always-on-loterias-2026.html) | **B** | `loterias2026/lotes/20260406/data/dossier_loterias2026.md` + `_panels.yaml` | `caixa2026` | 2026-04-06 (8 perfis) |
+| [`caixa/20260504-dossie-squad-always-on-loterias-2026.html`](../caixa/20260504-dossie-squad-always-on-loterias-2026.html) | **B** | `loterias2026/lotes/20260504/data/dossier_loterias2026.md` + `_panels.yaml` | `caixa2026` | 2026-05-04 (3 perfis) |
+| [`caixa/20260511-dossie-squad-always-on-loterias-2026.html`](../caixa/20260511-dossie-squad-always-on-loterias-2026.html) | **B*** | `loterias2026/lotes/20260511/data/dossier_loterias2026.md` (merge de lotes) + `scripts/build_consolidated.py` | `caixa2026` | 2026-05-11 (27 perfis) |
 
-**Staging de build (modo B):** HTML gerado em `loterias2026*/output/` → copiar para `caixa/` antes do push. O artefato em `caixa/` é o servido pelo Pages.
+**Staging de build (modo B):** HTML gerado em `loterias2026/output/` ou `loterias2026/lotes/*/output/` → copiar para `caixa/` antes do push. O artefato em `caixa/` é o servido pelo Pages.
 
-**Débito técnico:** migrar 20260511 para modo **B** (Épico 4 do roadmap de organização).
+**\* Consolidado 20260511:** fonte `.md` unificada (27 perfis); o HTML usa `build_consolidated.py` (merge de seções dos lotes anteriores + lote 3). Não entra no `check-dossier-publish-sync` padrão até o motor renderizar o layout consolidado nativamente.
 
 ---
 

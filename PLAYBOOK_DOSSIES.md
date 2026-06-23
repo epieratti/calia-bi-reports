@@ -204,7 +204,7 @@ Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YA
 | Modo | Quando usar | Onde costuma cair | Fluxo resumido |
 |------|-------------|-------------------|----------------|
 | **A — HTML direto** | Dossiê único, layout já definido, pouca repetição de estrutura | Pastas com `.html` servidos pelo Pages **sem** gerador (ver [README](README.md)) | Editar o `.html` (ou duplicar um existente), manter mesmo padrão visual; commit na branch acordada / pasta servida pelo Pages. |
-| **B — Fonte textual + gerador** | Muitos perfis, mesma “fábrica” (brand safety, squad, auditoria tabular) | [Projeto modo B — referência](loterias2026/), [segundo lote no repo](loterias2026-20260406/) | **`.md` = texto humano** (briefing + `##` perfis); **`_panels.yaml` = só métricas** em tabela. **Não** reintroduzir narrativa inteira em YAML. Script → HTML → pasta de publicação do projeto. |
+| **B — Fonte textual + gerador** | Muitos perfis, mesma “fábrica” (brand safety, squad, auditoria tabular) | [Projeto modo B — referência](loterias2026/), [lotes por data](loterias2026/lotes/) | **`.md` = texto humano** (briefing + `##` perfis); **`_panels.yaml` = só métricas** em tabela. **Não** reintroduzir narrativa inteira em YAML. Script → HTML → pasta de publicação do projeto. |
 | **C — Pesquisa + entrega manual** | Dados em CSV/notas, HTML montado na mão no fim | Varia | Pesquisa em `research/` + planilhas; HTML final na pasta do cliente conforme convenção do repo. |
 
 Novos projetos: **comece pelo modo A** se for one-off; **prefira o modo B** se a estrutura for a de “muitos perfis + tabelas + mesmo layout” — use a [pasta de referência do modo B](loterias2026/README.md) como **implementação exemplo**, não como nome do teu projeto.
@@ -597,7 +597,7 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 
 **Resumo:** **Caixa “puro”** (outros temas) → **`caixa/`**. **Caixa + Loterias** (linha dedicada) → **`caixa/loterias/`** para entregas novas. **Embratur** → **`embratur/`** (nunca dentro de `caixa/`).
 
-**Fonte editável (modo B)** continua na pasta do **projeto** (ex.: `loterias2026/data/`, `loterias2026-20260406/data/`) — não confundir com a pasta de **publicação**. O fluxo é: build → copiar o `.html` gerado para `caixa/`, `caixa/loterias/`, `embratur/` ou outra pasta de cliente → commit.
+**Fonte editável (modo B)** continua na pasta do **projeto** (ex.: `loterias2026/data/`, `loterias2026/lotes/<data>/data/`) — não confundir com a pasta de **publicação**. O fluxo é: build → copiar o `.html` gerado para `caixa/`, `caixa/loterias/`, `embratur/` ou outra pasta de cliente → commit.
 
 **Histórico:** alguns dossiês Loterias já publicados estão **diretamente** em `caixa/*.html`; **novos** da mesma linha devem preferir **`caixa/loterias/`**. Migrar arquivos antigos para a subpasta é **opcional** (exige atualizar links em `index.html` e referências).
 
@@ -626,7 +626,7 @@ Cada pasta na **raiz do repo** (irmã de `tools/`, `docs/`) corresponde a um **s
 |---------|--------------|-------------------|
 | Pasta entrega A | [`embratur/`](embratur/) | [README research](embratur/research/README.md) |
 | Pasta entrega B (HTML no ar) | [`caixa/`](caixa/) | [README da pasta](caixa/README.md) |
-| Modo B — referência + segundo lote | [`loterias2026/`](loterias2026/), [`loterias2026-20260406/`](loterias2026-20260406/) | [README modo B](loterias2026/README.md) |
+| Modo B — referência + lotes | [`loterias2026/`](loterias2026/), [`loterias2026/lotes/`](loterias2026/lotes/) | [README modo B](loterias2026/README.md) · [índice lotes](loterias2026/lotes/README.md) |
 | Visão geral + URLs | raiz | [`README.md`](README.md) |
 | Índice métodos → arquivos | raiz | [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) |
 | Agentes / automação | raiz | [`AGENTS.md`](AGENTS.md) |
@@ -687,7 +687,7 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 | **Métricas TikTok** | **Upfluence (TikTok Audit)** — exportação ou captura que **você** faz; enviar os dados (CSV, print estruturado ou tabela) para **organizar no repositório** (inserção nas `rows` do bloco `tiktok` do `_panels.yaml`, alinhado aos cabeçalhos do template). | Coordenação humana + edição de `dossier_*_panels.yaml`; não há integração API automática no fluxo atual. |
 | **Métricas X (Twitter)** | **Plataforma X**, consulta **manual** no perfil público (navegador ou app). O essencial para o painel: **número de seguidores** e se a conta está **ativa** — ou seja, se a pessoa **ainda usa** o X (posts recentes visíveis) ou se está **parada há muito tempo** (sem uso relevante / última atividade antiga). Não é preciso inventariar todo o conteúdo; basta o que sustenta essas duas leituras + uma **linha de teor recente** (resumo objetivo) na tabela, como nos dossiês já publicados. | Preencher o bloco `x` em **`dossier_*_panels.yaml`** (`headers` + `rows`: costuma haver colunas para seguidores, atividade Sim/Não e resumo do teor). Rodapé do HTML: checagem na data da coleta. |
 | **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock (+ na seção **Mercado**: Maigret, Google News/Alerts, imagem inversa, archive.today, holehe se aplicável). Quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](loterias2026/research/METODO_BRAND_SAFETY_LOTERIAS2026.md) (seção *Ferramentas open source e fluxo OSINT*), [lista de fontes](loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`tools/requirements-osint.txt`](tools/requirements-osint.txt) |
-| **Segundo lote (merge / CSV)** | CSVs, merge de baseline, notas de redes | [`merge_creators_baseline.py`](loterias2026-20260406/scripts/merge_creators_baseline.py), [`data/`](loterias2026-20260406/data/), [`research/`](loterias2026-20260406/research/) |
+| **Segundo lote (merge / CSV)** | CSVs, merge de baseline, notas de redes | [`merge_creators_baseline.py`](loterias2026/lotes/20260406/scripts/merge_creators_baseline.py), [`data/`](loterias2026/lotes/20260406/data/), [`research/`](loterias2026/lotes/20260406/research/) |
 | **Proxy Trends / Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | [`tools/penetracao_mercados.py`](tools/penetracao_mercados.py), deps em [`tools/requirements-penetracao.txt`](tools/requirements-penetracao.txt), modelo JSON em [`tools/penetracao_entities_example.json`](tools/penetracao_entities_example.json); [README research Embratur](embratur/research/README.md) para o lote de exemplo. |
 
 **Resumo (modo B — qualquer campanha com esta fábrica):** HTML final = `dossier_*.md` + `_panels.yaml` + `build_dossier_completo.py`. **Apify não faz parte do fluxo operacional.** Métricas típicas neste modelo: **Social Blade** (IG/YT) + **Upfluence** (TT) + **X manual**. **OSINT** opcional para narrativa. Caminhos com nomes de produto no repo são **históricos** do primeiro uso deste pipeline.
