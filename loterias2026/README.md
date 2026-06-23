@@ -57,3 +57,14 @@ Fluxo recomendado: editar **`dossier_loterias2026.md`** (texto) e **`dossier_lot
 - **X** — abrir o perfil **no X**; anotar **só o que importa para o painel:** quantidade de **seguidores** e se a conta **está em uso** (há posts recentes / ativa) ou **não usa há muito tempo**; completar colunas de atividade e **teor recente** como nos lotes já no repo.
 
 Scripts em `scripts/legado/` (`collect.py`, `run_pipeline.py`, etc.) que mencionam **Apify** são **legado** e **não** entram no fluxo de entrega ao cliente; não há workflow de Actions para isso.
+
+## Lotes por data de entrega
+
+Lotes congelados em **[`lotes/`](lotes/)** — cada pasta `YYYYMMDD/` tem `data/`, `output/` e, quando houver, `research/` e `scripts/` auxiliares. Ver [`lotes/README.md`](lotes/README.md).
+
+| Lote | Build |
+|------|-------|
+| Squad 13 (2026-04-01) | `make build-dossier-squad-13` — fonte em `data/` desta pasta |
+| 20260406 (8 perfis) | `make build-dossier-squad-8` |
+| 20260504 (3 perfis) | `make build-dossier-squad-20260504` |
+| 20260511 (27 perfis, consolidado) | `make build-dossier-consolidado-20260511` |

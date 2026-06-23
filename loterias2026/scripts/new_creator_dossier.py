@@ -21,7 +21,7 @@ LOT_ROOT = SCRIPT_DIR.parent
 TEMPLATE = LOT_ROOT / "data" / "dossier_TEMPLATE.md"
 REF_PANELS = {
     "squad_13": LOT_ROOT / "data" / "dossier_loterias2026_panels.yaml",
-    "squad_8": LOT_ROOT.parent / "loterias2026-20260406" / "data" / "dossier_loterias2026_panels.yaml",
+    "squad_8": LOT_ROOT.parent / "lotes" / "20260406" / "data" / "dossier_loterias2026_panels.yaml",
 }
 
 

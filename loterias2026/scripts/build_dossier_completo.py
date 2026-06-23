@@ -4,7 +4,7 @@ Gera o HTML do dossiê a partir da fonte Markdown + painéis YAML.
 
 Uso (na raiz do repo):
   python3 loterias2026/scripts/build_dossier_completo.py --project-root loterias2026
-  python3 loterias2026/scripts/build_dossier_completo.py --project-root loterias2026-20260406
+  python3 loterias2026/scripts/build_dossier_completo.py --project-root loterias2026/lotes/20260406
   python3 loterias2026/scripts/build_dossier_completo.py \\
     --md loterias2026/data/dossier_febraban_concorrencia_2026.md \\
     --panels loterias2026/data/dossier_febraban_concorrencia_2026_panels.yaml \\
@@ -29,35 +29,64 @@ if str(_REPO_ROOT / "tools") not in sys.path:
 from dossier_render import render_loterias_dossier_html
 from md_dossier_source import load_dossier_bundle, panels_only_path_for_md
 
-# Defaults por pasta de lote (nome do diretório --project-root)
+# Defaults por pasta de lote (nome do diretório --project-root ou loterias2026)
 _PROJECT_DEFAULTS: dict[str, dict[str, str]] = {
     "loterias2026": {
         "md": "data/dossier_loterias2026.md",
         "out": "output/20260401-dossie-squad-always-on-loterias-2026.html",
         "variant": "squad_13",
     },
-    "loterias2026-20260406": {
+    "20260406": {
         "md": "data/dossier_loterias2026.md",
         "out": "output/20260406-dossie-squad-always-on-loterias-2026.html",
         "variant": "squad_8",
     },
-    "loterias2026-20260504": {
+    "20260504": {
         "md": "data/dossier_loterias2026.md",
         "out": "output/20260504-dossie-squad-always-on-loterias-2026.html",
         "variant": "squad_8",
     },
+    "20260511": {
+        "md": "data/dossier_loterias2026.md",
+        "out": "output/20260511-dossie-squad-always-on-loterias-2026.html",
+        "variant": "squad_8",
+    },
+}
+
+# Pastas antigas na raiz do repo (redirecionamento)
+_LEGACY_PROJECT_ALIASES = {
+    "loterias2026-20260406": "20260406",
+    "loterias2026-20260504": "20260504",
 }
 
 
-def _resolve_project_root(arg: Path | None) -> Path:
-    return (arg or _DEFAULT_PROJECT).resolve()
+def _preset_key(project_root: Path) -> str:
+    name = project_root.name
+    if name in _LEGACY_PROJECT_ALIASES:
+        return _LEGACY_PROJECT_ALIASES[name]
+    if project_root.parent.name == "lotes" and project_root.parent.parent.name == "loterias2026":
+        return name
+    if name == "loterias2026" and project_root.parent == _REPO_ROOT:
+        return "loterias2026"
+    return name
 
 
 def _defaults_for_project(project_root: Path) -> dict[str, str]:
+    key = _preset_key(project_root)
     return _PROJECT_DEFAULTS.get(
-        project_root.name,
+        key,
         {"md": "data/dossier_loterias2026.md", "out": "", "variant": "squad_8"},
     )
+
+
+def _resolve_project_root(arg: Path | None) -> Path:
+    root = (arg or _DEFAULT_PROJECT).resolve()
+    alias = _LEGACY_PROJECT_ALIASES.get(root.name)
+    if alias:
+        candidate = _REPO_ROOT / "loterias2026" / "lotes" / alias
+        if candidate.is_dir():
+            return candidate
+    return root
 
 
 def load_bundle(
@@ -110,7 +139,7 @@ def main() -> None:
         "--project-root",
         type=Path,
         default=None,
-        help="Pasta do lote (ex.: loterias2026, loterias2026-20260406). Default: loterias2026/",
+        help="Pasta do lote (ex.: loterias2026, loterias2026/lotes/20260406). Default: loterias2026/",
     )
     ap.add_argument(
         "--md",

@@ -29,9 +29,9 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 | Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
 | Dossiês Febraban (no ar) | `febraban/` | HTML do cliente Febraban no Pages. URLs e senha em `febraban/README.md`. |
 | Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
-| Loterias 2026 | `loterias2026/`, `loterias2026-20260406/` | `PLAYBOOK_DOSSIES.md`, `docs/INDICE_METODOS.md`. Build: `scripts/build_dossier_completo.py` (importa `tools/dossier_render.py`). Descoberta de @: `loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`. Novo lote: `loterias2026/scripts/new_creator_dossier.py`. Legado Apify: `loterias2026/scripts/legado/README_LEGADO.md`. |
+| Loterias 2026 | `loterias2026/`, `loterias2026/lotes/` | `PLAYBOOK_DOSSIES.md`, `docs/INDICE_METODOS.md`. Build: `scripts/build_dossier_completo.py` (importa `tools/dossier_render.py`). Lotes por data: `loterias2026/lotes/YYYYMMDD/`. Descoberta de @: `loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`. Novo lote: `loterias2026/scripts/new_creator_dossier.py`. Legado Apify: `loterias2026/scripts/legado/README_LEGADO.md`. |
 
-Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` e `loterias2026-20260406/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). Ver `caixa/README.md` e `loterias2026/README.md`.
+Para os dossiês Loterias **`20260401-…`**, **`20260406-…`** e **`20260504-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` ou `loterias2026/lotes/<data>/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). O consolidado **`20260511-…`** (27 perfis) está em `loterias2026/lotes/20260511/`. Ver `caixa/README.md` e `loterias2026/README.md`.
 
 ## Proteção por senha (client-side)
 

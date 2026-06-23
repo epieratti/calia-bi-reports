@@ -29,8 +29,9 @@ Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/
 Para **`20260401-…`**, **`20260406-…`** e **`20260504-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
 
 - `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 13)
-- `loterias2026-20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
-- `loterias2026-20260504/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 3 — Linnyke Alves, Felipe Hatori, Julimara)
+- `loterias2026/lotes/20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
+- `loterias2026/lotes/20260504/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 3 — Linnyke Alves, Felipe Hatori, Julimara)
+- `loterias2026/lotes/20260511/data/dossier_loterias2026.md` (consolidado 27 perfis; build: `make build-dossier-consolidado-20260511`)
 
 Rode o build na pasta correspondente e **copie** o HTML gerado em `output/` para este diretório (`caixa/`) para publicar no GitHub Pages. O `.html` em `caixa/` é o artefato servido; mantê-lo alinhado ao build evita divergência.
 
@@ -42,7 +43,8 @@ Para outros relatórios em `caixa/` que **não** usem esse pipeline, o HTML nest
 
 ## Uso
 
-- **Always ON Loterias — 13 e 8 perfis** (`20260401-…`, `20260406-…`): editar **`.md` + `_panels.yaml`** nas pastas `loterias2026/` ou `loterias2026-20260406/`, gerar o HTML, copiar para `caixa/` e commitar.
+- **Always ON Loterias — lotes modo B** (`20260401-…`, `20260406-…`, `20260504-…`): editar **`.md` + `_panels.yaml`** em `loterias2026/data/` ou `loterias2026/lotes/<data>/data/`, gerar o HTML (`make build-dossier-squad-*`), copiar para `caixa/` e commitar.
+- **Consolidado 27 perfis** (`20260511-…`): fonte em `loterias2026/lotes/20260511/data/`; `make build-dossier-consolidado-20260511` → copiar para `caixa/`.
 - Adicione outros relatórios como `.html` diretamente em `caixa/` (ou em subpastas, se preferir organizar por data/tema).
 - Não é obrigatório ter `index.html` aqui; cada relatório pode ter sua própria URL.
 - Se quiser uma página inicial em `/caixa/`, crie opcionalmente `caixa/index.html` com links para os relatórios.
