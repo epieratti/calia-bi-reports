@@ -42,7 +42,7 @@ consolidated_narrative:
         - Item único de síntese.
 ---
 
-> **Somente exemplo.** Produção: `PLAYBOOK_AGENTES.md` → `loterias2026/scripts/new_creator_dossier.py` ou copiar este par.
+> **Somente exemplo.** Produção: `PLAYBOOK_AGENTES.md` → `engine/cli/new_creator_dossier.py` ou copiar este par em `projects/<cliente>/<projeto>/data/`.
 
 ## Creator Exemplo
 

@@ -10,7 +10,7 @@ Use este arquivo quando **abrir um agente novo** no **calia-bi-reports**. Idioma
 |-------|---------|----------|
 | 1 | **[`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md)** | Regras, fluxo 0→7, links |
 | 2 | **[`docs/tutorials/PRIMEIRO_DIA.md`](PRIMEIRO_DIA.md)** | Checklist modo B ponta a ponta |
-| 3 | Se o pedido for solto | **[`docs/PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md)** §1 |
+| 3 | Se o pedido for solto | **[`docs/reference/PROMPTS_IA_AGENTES.md`](../reference/PROMPTS_IA_AGENTES.md)** §1 |
 
 **Não precisa ler tudo antes de agir:** leia o **PLAYBOOK_AGENTES** e **pergunte** o que faltar no briefing (itens **E** em `PLAYBOOK_DOSSIES.md` §1).
 
@@ -41,7 +41,7 @@ Se **não houver briefing**, o agente deve **pedir** cliente, objetivo, lista de
 
 | Situação | O que fazer |
 |----------|-------------|
-| **Novo dossiê modo B** | `docs/tutorials/PRIMEIRO_DIA.md` + `loterias2026/scripts/new_creator_dossier.py` ou copiar `dossier_TEMPLATE.md` |
+| **Novo dossiê modo B** | `docs/tutorials/PRIMEIRO_DIA.md` + `engine/cli/new_creator_dossier.py` ou copiar `projects/_template/dossier_TEMPLATE.md` |
 | **Só texto bruto do cliente** | Prompt §1 em `PROMPTS_IA_AGENTES.md` |
 | **Vários agentes** | `docs/how-to/MULTI_AGENTES.md` — um integrador, briefing único |
 | **Senha / PDF / validar no ar** | `docs/how-to/GOVERNANCA_ENTREGA.md` · metodologia PDF: `docs/how-to/METODO_PDF_DOSSIE.md` |

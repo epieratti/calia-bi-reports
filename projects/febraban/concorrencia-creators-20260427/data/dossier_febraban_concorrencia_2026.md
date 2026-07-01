@@ -99,7 +99,7 @@ consolidated_narrative:
         - "Se **RSA** for produto real no portfólio, anexar **link** da página do produto e do **Reclame AQUI** correspondente na versão 1.1 do dossiê."
 ---
 
-> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. Build: `python3 scripts/build_dossier_completo.py --md data/dossier_febraban_concorrencia_2026.md --panels data/dossier_febraban_concorrencia_2026_panels.yaml --out output/20260427-dossie-febraban-concorrencia-creators-2026.html --variant squad_8` — copiar o HTML gerado para **`febraban/`** na raiz do repo (publicação GitHub Pages).
+> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. Build: `make dossie-entregar PROJECT=febraban/concorrencia-creators-20260427` (ou `python3 engine/cli/build_dossier.py --project febraban/concorrencia-creators-20260427`) — publica em **`febraban/`** na raiz do repo (GitHub Pages).
 
 ## Gilberto Nogueira (Gil do Vigor)
 

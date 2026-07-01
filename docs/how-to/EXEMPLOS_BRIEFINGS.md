@@ -54,7 +54,7 @@ Textos abaixo são **resumos** de pedidos que já chegaram — servem para recon
 
 **O que falta quase sempre:** critérios explícitos, redes, pasta, **valor da senha** (gate é padrão), formato — aplicar checklist **(E)/(C)** do `PLAYBOOK_DOSSIES.md` §1. Publicação com push é **padrão**; não precisa “perguntar se publica” salvo exceção explícita.
 
-**Modo:** descoberta de @ pesada ([`METODO_DESCOBERTA_PERFIS_CREATORS.md`](../loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md)); depois A, B ou C conforme quantidade de perfis e profundidade.
+**Modo:** descoberta de @ pesada ([`METODO_DESCOBERTA_PERFIS.md`](../../methods/discovery/METODO_DESCOBERTA_PERFIS.md)); depois A, B ou C conforme quantidade de perfis e profundidade.
 
 ---
 

@@ -4,10 +4,10 @@ Proxy de penetração (Google Trends por país + pageviews Wikipedia EN ~90d).
 Uso genérico: lista de entidades num JSON — não acoplado a um cliente.
 
 Exemplo:
-  pip install -r tools/requirements-penetracao.txt
-  python3 tools/penetracao_mercados.py \\
-    --entities-json embratur/research/penetracao_entities_embratur_2026.json \\
-    --output-prefix embratur/research/penetracao_trends_wiki_2026
+  pip install -r engine/requirements/penetracao.txt
+  python3 engine/research/penetracao_mercados.py \\
+    --entities-json projects/embratur/auditoria-20260323/research/penetracao_entities_embratur_2026.json \\
+    --output-prefix projects/embratur/auditoria-20260323/research/penetracao_trends_wiki_2026
 
 Saída: <prefix>.csv e <prefix>.json
 """

@@ -86,7 +86,7 @@ def collect_semantic_hints(md_path: Path, body: str, fm: dict) -> list[str]:
         if not (qc.get("definicoes_prova") or {}).get("concorrencia"):
             hints.append(
                 "Calibragem: falta `quality_calibration.definicoes_prova` (concorrência/polêmicas/política) "
-                "no front matter — ver docs/CALIBRAGEM_QUALIDADE.md."
+                "no front matter — ver docs/explanation/CALIBRAGEM_QUALIDADE.md."
             )
         if not (str(qc.get("data_corte_coleta") or "").strip() or str((fm.get("meta") or {}).get("periodo") or "").strip()):
             hints.append(

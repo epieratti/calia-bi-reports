@@ -29,7 +29,7 @@ Objetivo: **você precisa abrir o HTML real** (layout, links, gate) antes de dar
 
 - **Metodologia passo a passo** (comando, Chart.js, `check_client_html_leakage`, commit): [`docs/how-to/METODO_PDF_DOSSIE.md`](METODO_PDF_DOSSIE.md).
 - O HTML do modo B (e muitos modo A) pode incluir estilos **`@media print`**: fundo branco, **gate oculto** na impressão, conteúdo visível, blocos com `no-print` só na tela.
-- **Gerar:** `python3 engine/cli/export_pdf.py --html <caminho>.html --out <saida>.pdf` com senha (`--password` ou `DOSSIER_PDF_PASSWORD`) ou `--skip-gate` só **uso interno** — ver `tools/README.md`.
+- **Gerar:** `python3 engine/cli/export_pdf.py --html <caminho>.html --out <saida>.pdf` com senha (`--password` ou `DOSSIER_PDF_PASSWORD`) ou `--skip-gate` só **uso interno** — ver `engine/README.md`.
 - Depende de **Playwright + Chromium** (`engine/requirements/pdf.txt`). O script sobe um **servidor HTTP local na raiz do repo** para o gate funcionar (`crypto.subtle` em contexto seguro) e para resolver `../assets` e outros caminhos relativos.
 
 **Não** commitar PDF com dados sensíveis no repo **público** sem alinhamento com política de dados.

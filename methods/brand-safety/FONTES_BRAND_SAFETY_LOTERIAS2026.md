@@ -2,9 +2,9 @@
 
 **Campanha:** Always ON Loterias 2026 · **Snapshot:** mar/2026  
 **Escopo:** concorrência (bets/loterias), polêmicas, política.  
-**Perfis:** `loterias2026/data/influencers.yaml`
+**Perfis:** `projects/caixa/loterias/always-on-20260401/data/influencers.yaml`
 
-**Este arquivo contém só resultados:** URLs, tabelas de fontes e **status de verificação**. Processo, checklist e guias de busca → `METODO_BRAND_SAFETY_LOTERIAS2026.md`.
+**Este arquivo contém só resultados:** URLs, tabelas de fontes e **status de verificação**. Processo, checklist e guias de busca → `METODO_BRAND_SAFETY.md`.
 
 **Governança — leitura obrigatória:** sem **dados primários das redes** como base do dossiê (sem inventário de posts pela assessoria, sem API proprietária, sem arquivo sistemático de IG/TT/YT/X), aplicam-se os limites na seção **Limite do dossiê — sem dados primários das redes** abaixo.
 
@@ -42,13 +42,13 @@
 2. **Polêmicas:** falas, atitudes ou envolvimento em **situações delicadas e polêmicas** (risco de imagem para anunciante público/institucional).
 3. **Política:** **posicionamento político** declarado ou inferido (publicações recorrentes, pautas políticas sensíveis).
 
-**Redes de ativação foco:** Instagram · TikTok · YouTube · X — handles canônicos em `loterias2026/data/influencers.yaml`. Cada seção abaixo repete a tabela de redes do perfil e encerra com **Achados objetivos** nos três eixos.
+**Redes de ativação foco:** Instagram · TikTok · YouTube · X — handles canônicos em `projects/caixa/loterias/always-on-20260401/data/influencers.yaml`. Cada seção abaixo repete a tabela de redes do perfil e encerra com **Achados objetivos** nos três eixos.
 
 ---
 
 ## Painel Instagram — métricas agregadas (Social Blade, mar/2026)
 
-**Origem:** dados extraídos com **Social Blade** — https://socialblade.com — (tabela consolidada enviada pelo usuário). **Instagram handle** alinhado a `loterias2026/data/influencers.yaml`.
+**Origem:** dados extraídos com **Social Blade** — https://socialblade.com — (tabela consolidada enviada pelo usuário). **Instagram handle** alinhado a `projects/caixa/loterias/always-on-20260401/data/influencers.yaml`.
 
 **Uso no dossiê:** métricas de **audiência e engajamento** — **não** substituem evidência de **concorrência**, **polêmicas** ou **política**; números **variam** por dia e por metodologia do painel — **validar** no app na data oficial do programa. Linha **Megh** veio com **zeros** no export do painel — **conferir** sincronização do painel com o **`@megh_melry`** correto (há **atividade recente** no perfil segundo briefing).
 
@@ -125,7 +125,7 @@
 
 ## Painel X (Twitter) — leitura direta do perfil (mar/2026)
 
-**Origem:** tabela extraída **direto do X** (interface / export do usuário). **Handles no YAML:** campo `x` em `loterias2026/data/influencers.yaml`.
+**Origem:** tabela extraída **direto do X** (interface / export do usuário). **Handles no YAML:** campo `x` em `projects/caixa/loterias/always-on-20260401/data/influencers.yaml`.
 
 **Alinhamento:** a coluna **X (`influencers.yaml`)** é o handle oficial do squad. O **@ na tabela** segue o extract; onde for **diferente** do YAML, marcamos **⚠**.
 
@@ -149,7 +149,7 @@
 
 ## Rodada OSINT — ferramentas open source (31/03/2026)
 
-**Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `loterias2026/research/osint_runs/20260331/` (ver `README.txt` na pasta).
+**Ambiente:** agente cloud (Linux). **Ferramentas:** `sherlock-project`, `yt-dlp`, `instaloader` (pip). **Logs brutos:** `projects/caixa/loterias/always-on-20260401/research/osint_runs/20260331/` (ver `README.txt` na pasta).
 
 | Ferramenta | Resultado neste ambiente |
 |------------|---------------------------|
@@ -1686,9 +1686,9 @@ Usar com critério: **panorama de mercado**, não vínculo com um influencer da 
 
 | Campo | Valor |
 |--------|--------|
-| Arquivo | `loterias2026/research/FONTES_BRAND_SAFETY_LOTERIAS2026.md` |
-| Relação com dados estruturados | `loterias2026/data/influencers.yaml` |
+| Arquivo | `methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md` |
+| Relação com dados estruturados | `projects/caixa/loterias/always-on-20260401/data/influencers.yaml` |
 
 ---
 
-*Somente resultados e fontes. Metodologia: `METODO_BRAND_SAFETY_LOTERIAS2026.md`.*
+*Somente resultados e fontes. Metodologia: `METODO_BRAND_SAFETY.md`.*

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Motor de renderização HTML dos dossiês Loterias (Always ON / Brand Safety).
-Consumido por build_dossier_completo.py (fonte .md + painéis YAML ou YAML legado).
+Consumido por engine/cli/build_dossier.py (fonte .md + painéis YAML ou YAML legado).
 """
 from __future__ import annotations
 

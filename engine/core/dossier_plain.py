@@ -2,7 +2,7 @@
 Normaliza texto que veio de Markdown colado por engano em campos que o gerador
 trata como texto puro (escape HTML), sem interpretar ** ou ##.
 
-Uso: importado por tools/dossier_render.py e tools/validate_dossier_source.py.
+Uso: importado por engine/core/dossier_render.py e engine/qa/validate_source.py.
 """
 from __future__ import annotations
 

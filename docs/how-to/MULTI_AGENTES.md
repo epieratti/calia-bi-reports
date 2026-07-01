@@ -11,7 +11,7 @@ Objetivo: **paralelizar ou especializar** tarefas **sem** dois modelos sobrescre
 3. **Um integrador** — Idealmente **um** agente (ou você) faz o **merge** das notas no `.md` / painéis e o **commit** final. Vários agentes **escrevendo no mesmo par de arquivos ao mesmo tempo** = conflito e trechos perdidos.
 4. **Contrato entre etapas** — Cada agente recebe **entrada explícita** (arquivo, trecho, lista de nomes) e devolve **saída explícita** (novo arquivo ou seção nomeada). Prompt vagão (“melhora o dossiê”) gera retrabalho.
 5. **Quem publica** — Só o passo final roda **`dossie-entregar`** / `build` + **`check_client_html_leakage`** + push. Não publicar HTML pela metade.
-6. **Anti-vazamento** — Qualquer agente que toque em HTML para cliente: **não** citar `loterias2026/`, `tools/`, `.md`, `_panels.yaml` no texto visível.
+6. **Anti-vazamento** — Qualquer agente que toque em HTML para cliente: **não** citar `projects/`, `engine/`, `.md`, `_panels.yaml` no texto visível.
 
 ---
 

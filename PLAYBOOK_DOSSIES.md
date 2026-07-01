@@ -115,7 +115,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 | **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme seção **Coleta de dados** (final deste arquivo) e [brand safety](methods/brand-safety/METODO_BRAND_SAFETY.md) **só se** o briefing exigir esse nível de profundidade. | Afirmações sensíveis com fonte; datas de snapshot. |
 | **4b — Síntese crítica** | **Depois** da coleta: leitura crítica do material, decisão do que entra, ordem, hierarquia e visuais — ver [Síntese crítica e arquitetura da entrega](#síntese-crítica-e-arquitetura-da-entrega-entre-coleta-e-montagem). | Plano explícito (bullet list, 5–20 itens) **antes** de montar HTML ou fechar `.md`; reduz retrabalho. |
 | **5 — Montagem** | **B:** `engine/cli/build_dossier.py --md … --out … --variant …`. **A/C:** editar HTML até fechado. | Artefato `.html` gerado ou atualizado. |
-| **6 — QA** | **B:** `engine/engine/qa/validate_source.py` no `.md` (e opcional `check_dossier_links.py`). Revisar links, typos, gate de senha, impressão básica. **PDF formal:** seguir [`docs/METODO_PDF_DOSSIE.md`](docs/METODO_PDF_DOSSIE.md). | Validador sem erros (ou `--strict` conforme política). |
+| **6 — QA** | **B:** `engine/qa/validate_source.py` no `.md` (e opcional `check_links.py`). Revisar links, typos, gate de senha, impressão básica. **PDF formal:** seguir [`docs/how-to/METODO_PDF_DOSSIE.md`](docs/how-to/METODO_PDF_DOSSIE.md). | Validador sem erros (ou `--strict` conforme política). |
 | **7 — Publicação** | Copiar para pasta servida pelo Pages se necessário; testar URL + senha; `git` conforme [`AGENTS.md`](AGENTS.md) / regras do projeto. | HTML acessível como esperado. |
 
 **Ramificação rápida:** se **modo A** → pular **3a**, fazer **3b**; após **4** + **4b** ir a **5** no HTML. Se **modo C** → **3b** pode ser mínimo; **5** iterativo. Se **modo B** → **3a** obrigatório; **5** via script. Ajustes rápidos só métricas: **4b** pode ser só “painéis + ordem da tabela”; dossiê completo: **4b** completo.
@@ -184,10 +184,10 @@ Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YA
 ## TL;DR — criar um dossiê novo (qualquer cliente)
 
 1. **Este arquivo (`PLAYBOOK_DOSSIES.md`)** — escolher **modo A, B ou C** (tabela abaixo). É o guia geral.
-2. **Índice** — [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) para pular a métodos concretos (pesquisa, métricas, publicação).
+2. **Índice** — [`docs/reference/INDICE_METODOS.md`](docs/reference/INDICE_METODOS.md) para pular a métodos concretos (pesquisa, métricas, publicação).
 3. **Modo A (mais comum para one-off):** HTML direto na **pasta de entrega** servida pelo site — duplicar um `.html` existente ou seguir [`README.md`](README.md) na raiz e o README da pasta em causa (quando existir).
 4. **Modo B (fábrica com muitos perfis):** o **exemplo implementado** está descrito no [README do modo B](projects/caixa/loterias/always-on-20260401/README.md). Dentro da pasta desse projeto: `python3 engine/cli/new_creator_dossier.py SLUG` cria `dossier_SLUG.md` + painéis; `engine/cli/build_dossier.py --md … --out …` gera HTML. O caminho da pasta no repo é **histórico**; o tooling pode mudar de sítio no futuro.
-5. **Validar** (se usares fonte `.md` no formato do gerador): `python3 engine/engine/qa/validate_source.py <teu/dossier_*.md>` — `make validate-dossier-squad-13` só aponta para o **arquivo de exemplo** do repo.
+5. **Validar** (se usares fonte `.md` no formato do gerador): `python3 engine/qa/validate_source.py <teu/dossier_*.md>` — `make validate-dossier-squad-13` só aponta para o **arquivo de exemplo** do repo.
 6. **Descobrir @** (nome ou nome + uma rede): [metodologia passo a passo](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md) (localização do arquivo = histórico do primeiro lote com este fluxo).
 7. **Motor HTML** (modo B): código único em **`engine/dossier_render.py`** + **`engine/md_dossier_source.py`**.
 
@@ -482,7 +482,7 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 #### Perguntas que o briefing deve responder (checklist)
 
-**Exemplos reais** de como os pedidos costumam chegar (squad com tiers, delta de nomes, casting com métricas, link Google Docs, briefing mínimo): [`docs/EXEMPLOS_BRIEFINGS.md`](docs/EXEMPLOS_BRIEFINGS.md) — use para reconhecer o padrão e saber o que ainda falta perguntar.
+**Exemplos reais** de como os pedidos costumam chegar (squad com tiers, delta de nomes, casting com métricas, link Google Docs, briefing mínimo): [`docs/how-to/EXEMPLOS_BRIEFINGS.md`](docs/how-to/EXEMPLOS_BRIEFINGS.md) — use para reconhecer o padrão e saber o que ainda falta perguntar.
 
 **Legenda — obrigatoriedade:**
 
@@ -613,7 +613,7 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 ### 4. Montagem e revisão
 
 - Modo **A/C:** revisar HTML (acessibilidade básica, links, typos, senha).
-- Modo **B:** `python3 scripts/engine/cli/build_dossier.py` com `--md` / `--out` / `--variant` (executar dentro da pasta do lote; ver [README do modo B](projects/caixa/loterias/always-on-20260401/README.md)).
+- Modo **B:** `python3 engine/cli/build_dossier.py` com `--project` ou `--md` / `--out` / `--variant` (ver [README do modo B](projects/caixa/loterias/always-on-20260401/README.md)).
 
 ### 5. Publicação
 
@@ -628,7 +628,7 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 | Pasta entrega B (HTML no ar) | [`caixa/`](caixa/) | [README da pasta](caixa/README.md) |
 | Modo B — referência + segundo lote | [`projects/caixa/loterias/always-on-20260401/`](projects/caixa/loterias/always-on-20260401/), [`projects/caixa/loterias/always-on-20260406/`](projects/caixa/loterias/always-on-20260406/) | [README modo B](projects/caixa/loterias/always-on-20260401/README.md) |
 | Visão geral + URLs | raiz | [`README.md`](README.md) |
-| Índice métodos → arquivos | raiz | [`docs/INDICE_METODOS.md`](docs/INDICE_METODOS.md) |
+| Índice métodos → arquivos | raiz | [`docs/reference/INDICE_METODOS.md`](docs/reference/INDICE_METODOS.md) |
 | Agentes / automação | raiz | [`AGENTS.md`](AGENTS.md) |
 
 ### Disaster check / brand safety — ferramentas (onde está no playbook)
@@ -652,10 +652,10 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 | Ferramenta | Comando | Função |
 |------------|---------|--------|
 | Nome do arquivo publicado | `python3 engine/dossier_html_filename.py --md <dossier_*.md>` | Imprime `YYYYMMDD-dossie-<slug>.html` a partir de `meta.title` (usa hoje se omitir `--date`). |
-| Pipeline até a pasta Pages | `python3 engine/dossier_publish.py --md <…> --dest <pasta ou .html>` | Valida → links → `engine/cli/build_dossier.py` → grava HTML em `DEST` → `check_client_html_leakage` na pasta cliente. `make dossie-entregar MD=… DEST=…` na raiz. |
-| PDF (HTML → PDF, Playwright) | `python3 engine/dossier_export_pdf.py --html <…> --out <…>.pdf` | **Metodologia completa** (fluxo Caixa Isadora: gate, Chart.js, `resize` após `@media print`, servidor na raiz): [`docs/METODO_PDF_DOSSIE.md`](docs/METODO_PDF_DOSSIE.md). Flags (`--skip-gate`, `--post-unlock-wait`): [`engine/README.md`](engine/README.md). `make dossie-pdf HTML=… OUT=…` (opcional `SKIP_GATE=1`, `POST_UNLOCK_WAIT=5`). Deps: `pip install -r engine/requirements-pdf.txt` e `playwright install chromium`. |
-| Governança (senha, validação, escalação) | [`docs/GOVERNANCA_ENTREGA.md`](docs/GOVERNANCA_ENTREGA.md) | Senha **não** em issue pública; validar **abrindo** o HTML no Pages; PDF opcional; escalação de risco grave. |
-| Validação estrutura + regra texto plano | `python3 engine/engine/qa/validate_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos de texto plano. **`--hints`** imprime dicas semânticas (lacunas, painéis, URLs); **`--strict-hints`** falha (exit 3) se houver dica — opcional em CI. [Exemplo de `dossier_*.md`](projects/caixa/loterias/always-on-20260401/data/dossier_loterias2026.md). |
+| Pipeline até a pasta Pages | `python3 engine/cli/publish_dossier.py --md <…> --dest <pasta ou .html>` | Valida → links → `engine/cli/build_dossier.py` → grava HTML em `DEST` → `check_html_leakage` na pasta cliente. `make dossie-entregar PROJECT=…` ou `MD=… DEST=…` na raiz. |
+| PDF (HTML → PDF, Playwright) | `python3 engine/cli/export_pdf.py --html <…> --out <…>.pdf` | **Metodologia completa** (fluxo Caixa Isadora: gate, Chart.js, `resize` após `@media print`, servidor na raiz): [`docs/how-to/METODO_PDF_DOSSIE.md`](docs/how-to/METODO_PDF_DOSSIE.md). Flags (`--skip-gate`, `--post-unlock-wait`): [`engine/README.md`](engine/README.md). `make dossie-pdf HTML=… OUT=…` (opcional `SKIP_GATE=1`, `POST_UNLOCK_WAIT=5`). Deps: `pip install -r engine/requirements/pdf.txt` e `playwright install chromium`. |
+| Governança (senha, validação, escalação) | [`docs/how-to/GOVERNANCA_ENTREGA.md`](docs/how-to/GOVERNANCA_ENTREGA.md) | Senha **não** em issue pública; validar **abrindo** o HTML no Pages; PDF opcional; escalação de risco grave. |
+| Validação estrutura + regra texto plano | `python3 engine/qa/validate_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos de texto plano. **`--hints`** imprime dicas semânticas (lacunas, painéis, URLs); **`--strict-hints`** falha (exit 3) se houver dica — opcional em CI. [Exemplo de `dossier_*.md`](projects/caixa/loterias/always-on-20260401/data/dossier_loterias2026.md). |
 | Checagem de links (opcional) | `python3 engine/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do arquivo (pode falhar por bloqueio de bot). |
 | Makefile | `make help` / `make dossie-filename` / `make dossie-entregar` / `make validate-dossier-squad-13` / `make build-dossier-squad-13` | Atalhos na raiz; `squad-13` / `squad-8` = lotes de referência do modo B. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |

@@ -2,7 +2,7 @@
 
 **Primeiro contato com o repo:** [`docs/tutorials/INICIO_AGENTE.md`](docs/tutorials/INICIO_AGENTE.md) (start do pipeline + texto para colar no chat).
 
-Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/tutorials/PRIMEIRO_DIA.md`](docs/tutorials/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/PROMPTS_IA_AGENTES.md`](docs/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê** (senha: ver governança). **Governança / PDF / validação no ar:** [`docs/how-to/GOVERNANCA_ENTREGA.md`](docs/how-to/GOVERNANCA_ENTREGA.md). **Metodologia PDF (HTML → PDF, Chart.js):** [`docs/how-to/METODO_PDF_DOSSIE.md`](docs/how-to/METODO_PDF_DOSSIE.md). **Vários agentes no mesmo pedido:** [`docs/how-to/MULTI_AGENTES.md`](docs/how-to/MULTI_AGENTES.md) — briefing único, um integrador, contrato entre etapas.
+Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.md`**. Idioma: **pt-BR** (ver `AGENTS.md`). Checklist curto: [`docs/tutorials/PRIMEIRO_DIA.md`](docs/tutorials/PRIMEIRO_DIA.md). Prompts prontos para colar no chat: [`docs/reference/PROMPTS_IA_AGENTES.md`](docs/reference/PROMPTS_IA_AGENTES.md). Briefing via GitHub: **New issue → Briefing — novo dossiê** (senha: ver governança). **Governança / PDF / validação no ar:** [`docs/how-to/GOVERNANCA_ENTREGA.md`](docs/how-to/GOVERNANCA_ENTREGA.md). **Metodologia PDF (HTML → PDF, Chart.js):** [`docs/how-to/METODO_PDF_DOSSIE.md`](docs/how-to/METODO_PDF_DOSSIE.md). **Vários agentes no mesmo pedido:** [`docs/how-to/MULTI_AGENTES.md`](docs/how-to/MULTI_AGENTES.md) — briefing único, um integrador, contrato entre etapas.
 
 ## Regras primordiais
 
@@ -41,7 +41,7 @@ Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.m
 |-------------|--------|
 | Índice pergunta → arquivo | [`docs/reference/INDICE_METODOS.md`](docs/reference/INDICE_METODOS.md) |
 | Métodos (atalhos na pasta `docs/metodos/`) | [`methods/README.md`](methods/README.md) |
-| **Exemplos de briefing** (e-mail / texto bruto) | [`docs/EXEMPLOS_BRIEFINGS.md`](docs/EXEMPLOS_BRIEFINGS.md) |
+| **Exemplos de briefing** (e-mail / texto bruto) | [`docs/how-to/EXEMPLOS_BRIEFINGS.md`](docs/how-to/EXEMPLOS_BRIEFINGS.md) |
 | Playbook completo (cores, gráficos, briefing E/C/O, pastas) | [`PLAYBOOK_DOSSIES.md`](PLAYBOOK_DOSSIES.md) |
 | Instruções git / estrutura repo | [`AGENTS.md`](AGENTS.md) |
 | OSINT pip | `pip install -r engine/requirements/osint.txt` |

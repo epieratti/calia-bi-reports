@@ -4,7 +4,7 @@ Texto operacional em **pt-BR**. Descreve o fluxo usado na entrega **Caixa — Is
 
 **Governança** (senha em canal seguro, commit público, dados sensíveis): [`docs/GOVERNANCA_ENTREGA.md`](GOVERNANCA_ENTREGA.md).
 
-**Implementação e flags do script:** [`tools/dossier_export_pdf.py`](../tools/dossier_export_pdf.py) e secção **PDF** em [`tools/README.md`](../tools/README.md).
+**Implementação e flags do script:** [`engine/cli/export_pdf.py`](../../engine/cli/export_pdf.py) e secção **PDF** em [`engine/README.md`](../../engine/README.md).
 
 ---
 
@@ -21,7 +21,7 @@ Texto operacional em **pt-BR**. Descreve o fluxo usado na entrega **Caixa — Is
 Na **raiz** do repositório:
 
 ```bash
-pip install -r tools/requirements-pdf.txt
+pip install -r engine/requirements/pdf.txt
 playwright install chromium
 ```
 
@@ -38,7 +38,7 @@ playwright install chromium
 4. **Anti-vazamento** no texto visível:
 
 ```bash
-python3 tools/check_client_html_leakage.py caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html
+python3 engine/qa/check_html_leakage.py caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html
 ```
 
 (Ajusta o caminho à pasta do cliente: `caixa`, `embratur`, `febraban`, etc.)
@@ -47,7 +47,7 @@ python3 tools/check_client_html_leakage.py caixa/20260506-dossie-isadora-cruz-ca
 
 ## 4. Servidor HTTP e caminhos relativos
 
-O script **`tools/dossier_export_pdf.py`** sobe um **HTTP server na raiz do repositório** (não só na pasta do `.html`). Assim resolvem-se URLs relativas como `../assets/brand/logo-white.svg` e qualquer recurso referenciado a partir da raiz.
+O script **`engine/cli/export_pdf.py`** sobe um **HTTP server na raiz do repositório** (não só na pasta do `.html`). Assim resolvem-se URLs relativas como `../assets/brand/logo-white.svg` e qualquer recurso referenciado a partir da raiz.
 
 ---
 
@@ -56,7 +56,7 @@ O script **`tools/dossier_export_pdf.py`** sobe um **HTTP server na raiz do repo
 **Uso interno** (sem digitar senha no terminal — o script esconde o gate e chama `initCharts()`):
 
 ```bash
-python3 tools/dossier_export_pdf.py \
+python3 engine/cli/export_pdf.py \
   --html caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html \
   --out caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf \
   --skip-gate \
@@ -72,7 +72,7 @@ python3 tools/dossier_export_pdf.py \
 
 ```bash
 export DOSSIER_PDF_PASSWORD='…'   # preferível a colar a senha na linha de comandos
-python3 tools/dossier_export_pdf.py \
+python3 engine/cli/export_pdf.py \
   --html caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html \
   --out caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf \
   --post-unlock-wait 5
@@ -127,8 +127,8 @@ Quando o PDF (e/ou o HTML) for entregue no **site público**:
 
 ## 9. Resumo ultra-curto (colar no checklist interno)
 
-1. `check_client_html_leakage.py` no `.html`  
-2. `dossier_export_pdf.py` com `--post-unlock-wait 4` ou `5` se houver Chart.js; **`--skip-gate`** só interno  
+1. `check_html_leakage.py` no `.html`  
+2. `export_pdf.py` com `--post-unlock-wait 4` ou `5` se houver Chart.js; **`--skip-gate`** só interno  
 3. Abrir o PDF e validar gráficos + quebras  
 4. Commit + push se for entrega no ar  
 
@@ -142,6 +142,6 @@ Quando o PDF (e/ou o HTML) for entregue no **site público**:
 | PDF | `caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf` |
 | Índice Caixa (link HTML) | `caixa/index.html`, `caixa/README.md` |
 
-PDFs de Isadora e Rodolfo: regenerar com `make dossie-pdf` antes de publicar link no índice (ver [`docs/INVENTARIO_DOSSIES.md`](INVENTARIO_DOSSIES.md)).
+PDFs de Isadora e Rodolfo: regenerar com `make dossie-pdf` antes de publicar link no índice (ver [`docs/reference/INVENTARIO_DOSSIES.md`](../reference/INVENTARIO_DOSSIES.md)).
 
 Para outro dossiê, troca os caminhos mantendo o **mesmo fluxo** de comandos e QA.

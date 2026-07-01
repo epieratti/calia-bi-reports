@@ -1,22 +1,22 @@
-# Exemplo mínimo (1 perfil) — modo B
+# Template — modo B
 
-Uso: copiar e renomear para um novo slug ou usar como referência de estrutura sem carregar o lote completo de 8/13 perfis.
+Par mínimo para novos dossiês:
 
-- `dossier_minimo_exemplo.md` + `dossier_minimo_exemplo_panels.yaml`
+- `dossier_TEMPLATE.md` — modelo completo (copiar e renomear)
+- `dossier_minimo_exemplo.md` + `dossier_minimo_exemplo_panels.yaml` — exemplo com 1 perfil
 
-Build de teste (na raiz):
-
-```bash
-cd loterias2026
-python3 scripts/build_dossier_completo.py \
-  --md ../examples/minimo/dossier_minimo_exemplo.md \
-  --panels ../examples/minimo/dossier_minimo_exemplo_panels.yaml \
-  --out ../examples/minimo/output-preview.html \
-  --variant squad_8
-```
-
-Validar:
+## Novo lote
 
 ```bash
-python3 tools/validate_dossier_source.py examples/minimo/dossier_minimo_exemplo.md
+python3 engine/cli/new_creator_dossier.py meu_slug \
+  --output-dir projects/caixa/loterias/meu-lote/data
 ```
+
+## Teste local
+
+```bash
+make build-dossier-minimo-preview
+make validate-dossier-minimo
+```
+
+Saída de preview: `projects/_template/preview.html` (gitignored)

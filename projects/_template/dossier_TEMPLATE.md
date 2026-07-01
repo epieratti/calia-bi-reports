@@ -60,7 +60,7 @@ consolidated_narrative:
         - Item 1.
 ---
 
-> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. A linha `- **Camada:**` deve coincidir com um valor de `briefing.tier_order`. Novo lote: `python3 scripts/new_creator_dossier.py SEU_SLUG`. Build: `python3 scripts/build_dossier_completo.py --md data/dossier_SEU_SLUG.md --out output/arquivo.html`. Método geral do repo: **`PLAYBOOK_DOSSIES.md`** (raiz).
+> **Modelo de produção:** o corpo abaixo contém **somente perfis**. Cada pessoa = um `## Nome`. A linha `- **Camada:**` deve coincidir com um valor de `briefing.tier_order`. Novo lote: `python3 engine/cli/new_creator_dossier.py SEU_SLUG --output-dir data/`. Build: `python3 engine/cli/build_dossier.py --project <pasta-do-projeto>` ou `make dossie-entregar PROJECT=…`. Método geral do repo: **`PLAYBOOK_DOSSIES.md`** (raiz).
 
 ## Exemplo de perfil (substitua e duplique)
 
