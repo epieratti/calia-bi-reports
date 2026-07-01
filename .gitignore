@@ -18,3 +18,4 @@ loterias2026/research/osint_runs/**/*.txt
 # Staging HTML (modo B) — canônico na superfície caixa/febraban/embratur
 projects/**/.build/
 projects/_template/preview.html
+projects/**/.build/
