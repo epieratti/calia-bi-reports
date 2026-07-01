@@ -1,0 +1,10 @@
+client: caixa
+line: institucional
+delivery_date: 2026-05-06
+slug: isadora-cruz-cartao-caixa-2026
+mode: A
+publish:
+  dest: caixa
+  password_ref: caixa2026
+status: published
+html_published: caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html

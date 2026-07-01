@@ -1,0 +1,14 @@
+client: caixa
+line: loterias
+delivery_date: 2026-04-06
+slug: squad-always-on-loterias-2026
+mode: B
+variant: squad_8
+source:
+  md: data/dossier_loterias2026.md
+  panels: data/dossier_loterias2026_panels.yaml
+publish:
+  dest: caixa/loterias
+  password_ref: caixa2026
+status: published
+html_published: caixa/loterias/20260406-dossie-squad-always-on-loterias-2026.html

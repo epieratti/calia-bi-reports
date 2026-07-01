@@ -1,4 +1,3 @@
-# Valida todas as fontes dossier_*.md do repo (estrutura + dicas semânticas opcionais).
 name: Validar fontes dossier (*.md)
 
 on:
@@ -6,17 +5,17 @@ on:
     paths:
       - "**/dossier_*.md"
       - "**/dossier_*_panels.yaml"
-      - "tools/validate_dossier_source.py"
-      - "tools/md_dossier_source.py"
-      - "tools/dossier_plain.py"
+      - "engine/qa/validate_source.py"
+      - "engine/core/md_dossier_source.py"
+      - "engine/core/dossier_plain.py"
   push:
     branches: [main]
     paths:
       - "**/dossier_*.md"
       - "**/dossier_*_panels.yaml"
-      - "tools/validate_dossier_source.py"
-      - "tools/md_dossier_source.py"
-      - "tools/dossier_plain.py"
+      - "engine/qa/validate_source.py"
+      - "engine/core/md_dossier_source.py"
+      - "engine/core/dossier_plain.py"
 
 jobs:
   validate:
@@ -32,7 +31,7 @@ jobs:
           while IFS= read -r -d '' f; do
             found=1
             echo "=== $f ==="
-            python3 tools/validate_dossier_source.py --hints "$f"
+            python3 engine/qa/validate_source.py --hints "$f"
           done < <(find . -name 'dossier_*.md' -not -path './.git/*' -print0)
           if [ "$found" -eq 0 ]; then
             echo "Nenhum dossier_*.md encontrado."

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Leitura — Rodolfo Macedo (@foiorodolfo) · CAIXA 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'calia-navy': '#252525',
+                        'calia-gold': '#f9a619',
+                        'calia-emerald': '#009966',
+                        'calia-crimson': '#CC0033',
+                        'calia-slate': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        @media screen {
+            html { font-size: 85%; }
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        .card-audit { background: white; border-radius: 4px; border: 1px solid #e2e8f0; padding: 2rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .section-header { border-left: 6px solid #252525; padding-left: 1.25rem; margin-bottom: 1.25rem; }
+        .bio-intro { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; border-left: 4px solid #f9a619; }
+        .toc-link { font-size: inherit; font-weight: 500; color: #252525; text-decoration: underline; text-decoration-color: #f9a619; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+        .toc-link:hover { opacity: 0.82; }
+        .toc-list { margin: 0; padding: 0; list-style: none; border-left: 2px solid #f9a619; padding-left: 1rem; }
+        .toc-list li { margin-top: 0.5rem; }
+        .toc-list li:first-child { margin-top: 0; }
+        #dossier-root .card-audit a[href] { font-size: inherit; font-weight: 500; color: #0f172a; text-decoration: underline; text-decoration-color: #f9a619; }
+        #dossier-root .card-audit a[href] strong { font-weight: 600; }
+        .risk-box { border-radius: 6px; border: 2px solid #252525; overflow: hidden; margin-top: 1rem; }
+        .risk-box__head { background: #252525; color: #f9a619; padding: 0.5rem 1rem; font-size: 10px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+        .risk-box__body { background: #f1f5f9; padding: 1rem 1.25rem; font-size: 0.875rem; line-height: 1.55; }
+        .veredito-top {
+            border-radius: 8px;
+            border: 2px solid #059669;
+            background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 58%);
+            padding: 1.35rem 1.35rem 1.45rem;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+        }
+        .veredito-top__label { font-size: 0.65rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #047857; margin-bottom: 0.4rem; }
+        .veredito-top__title { font-size: 1.45rem; font-weight: 900; color: #065f46; line-height: 1.2; letter-spacing: -0.02em; }
+        @media (min-width: 768px) { .veredito-top__title { font-size: 1.65rem; } }
+        .veredito-top__table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.8125rem; line-height: 1.5; }
+        .veredito-top__table th { text-align: left; font-weight: 800; color: #0f172a; padding: 0.65rem 0.75rem 0.65rem 0; vertical-align: top; width: 38%; border-bottom: 1px solid #d1fae5; }
+        .veredito-top__table td { padding: 0.65rem 0; vertical-align: top; color: #334155; border-bottom: 1px solid #d1fae5; }
+        .veredito-top__table tr:last-child th, .veredito-top__table tr:last-child td { border-bottom: none; }
+        .veredito-top__nota { margin-top: 1rem; font-size: 0.7rem; line-height: 1.45; color: #64748b; }
+        .evidencias-subhead { font-size: 0.95rem; font-weight: 900; color: #252525; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.75rem; margin-bottom: 0.65rem; padding-bottom: 0.35rem; border-bottom: 3px solid #f9a619; }
+        .evidencias-subhead:first-of-type { margin-top: 0.25rem; }
+        .timeline-list { margin: 0; padding: 0; list-style: none; }
+        .timeline-list > li:last-child .timeline-down { display: none; }
+        /* Painel Social Blade — UI */
+        .sb-panel-shell {
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(249, 166, 25, 0.12) 0%, rgba(37, 37, 37, 0.04) 45%, rgba(248, 250, 252, 1) 100%);
+            border: 1px solid rgba(226, 232, 240, 1);
+            padding: 1rem 1rem 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+        @media (min-width: 768px) {
+            .sb-panel-shell { padding: 1.25rem 1.5rem 1.5rem; }
+        }
+        .sb-pill {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            border-radius: 9999px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+            background: #252525; color: #f9a619;
+            border: 1px solid rgba(249, 166, 25, 0.35);
+        }
+        .sb-carousel {
+            display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.35rem;
+            scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+            scrollbar-gutter: stable;
+        }
+        .sb-carousel::-webkit-scrollbar { height: 6px; }
+        .sb-carousel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        .sb-carousel::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 9999px; }
+        @media (min-width: 768px) {
+            .sb-carousel { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; padding-bottom: 0; scroll-snap-type: none; }
+        }
+        .sb-card {
+            scroll-snap-align: start;
+            flex: 0 0 min(100%, 320px);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            background: #fff;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+            overflow: hidden;
+            display: flex; flex-direction: column;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        @media (min-width: 768px) { .sb-card { flex: none; min-width: 0; } }
+        .sb-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+        }
+        .sb-card:focus-within { outline: 2px solid #f9a619; outline-offset: 2px; }
+        .sb-card__head {
+            display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+            padding: 0.65rem 1rem;
+            background: linear-gradient(90deg, #252525 0%, #3a3a3a 100%);
+            color: #fff;
+        }
+        .sb-card__badge {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 2rem; height: 2rem; border-radius: 8px;
+            font-size: 0.65rem; font-weight: 900; letter-spacing: 0.04em;
+            background: rgba(249, 166, 25, 0.2); color: #f9a619; border: 1px solid rgba(249, 166, 25, 0.35);
+        }
+        .sb-card__title { font-size: 0.7rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: #f9a619; }
+        .sb-card__body { padding: 1rem 1rem 1.1rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+        .sb-hero { text-align: center; padding: 0.35rem 0 0.25rem; border-bottom: 1px dashed #e2e8f0; margin-bottom: 0.15rem; }
+        .sb-hero__value {
+            font-size: 1.75rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: #0f172a;
+            font-variant-numeric: tabular-nums;
+        }
+        @media (min-width: 768px) { .sb-hero__value { font-size: 2rem; } }
+        .sb-hero__label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; margin-top: 0.2rem; }
+        .sb-dl { display: grid; grid-template-columns: 1fr auto; gap: 0.35rem 0.75rem; font-size: 0.8125rem; color: #334155; }
+        .sb-dl dt { color: #64748b; font-weight: 600; }
+        .sb-dl dd { margin: 0; text-align: right; font-weight: 700; color: #0f172a; font-variant-numeric: tabular-nums; }
+        .sb-card__foot { margin-top: auto; padding-top: 0.5rem; }
+        .sb-btn {
+            display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+            width: 100%; padding: 0.55rem 0.75rem; border-radius: 8px;
+            font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+            background: #fff; color: #252525; border: 2px solid #252525;
+            text-decoration: none !important;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+        #dossier-root .card-audit a.sb-btn { text-decoration: none !important; }
+        /* Fontes — bloco final compacto */
+        #fontes.card-audit {
+            padding: 0.85rem 1rem 1rem;
+            background: #fafbfc;
+            border-color: #e2e8f0;
+        }
+        #fontes .section-header { margin-bottom: 0.5rem; padding-left: 0.75rem; border-left-width: 4px; }
+        #fontes .section-header h2 { font-size: 0.8125rem; line-height: 1.2; letter-spacing: 0.04em; }
+        #fontes .fontes-list {
+            margin: 0; padding: 0; list-style: none;
+            font-size: 0.6875rem; line-height: 1.32; color: #475569;
+        }
+        #fontes .fontes-list > li { margin-top: 0.3rem; padding-left: 0.55rem; position: relative; }
+        #fontes .fontes-list > li:first-child { margin-top: 0; }
+        #fontes .fontes-list > li::before {
+            content: ""; position: absolute; left: 0; top: 0.45em;
+            width: 3px; height: 3px; border-radius: 9999px; background: #f9a619;
+        }
+        #fontes .fontes-list a[href] {
+            font-size: inherit !important; font-weight: 500 !important;
+            text-underline-offset: 2px; word-break: break-word;
+        }
+        #fontes .fontes-list a.toc-link { font-size: inherit !important; font-weight: 500 !important; }
+        @media (min-width: 768px) {
+            #fontes .fontes-list { column-count: 2; column-gap: 1.25rem; }
+            #fontes .fontes-list > li { break-inside: avoid; }
+        }
+        /* Tabela compacta — Instagram marcas em publi */
+        #publis-marcas-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.6875rem;
+            line-height: 1.28;
+            text-align: left;
+            color: #334155;
+        }
+        #publis-marcas-table th,
+        #publis-marcas-table td {
+            padding: 0.2rem 0.35rem;
+            border: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        #publis-marcas-table thead th {
+            background: #f1f5f9;
+            color: #252525;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: 0.6rem;
+        }
+        #publis-marcas-table .publis-marcas-reg {
+            display: block;
+            margin-top: 0.08rem;
+            color: #64748b;
+            font-size: 0.625rem;
+            font-weight: 500;
+            line-height: 1.22;
+        }
+        @media (min-width: 768px) {
+            #publis-marcas-table { font-size: 0.75rem; }
+            #publis-marcas-table thead th { font-size: 0.65rem; }
+            #publis-marcas-table .publis-marcas-reg { font-size: 0.6875rem; }
+        }
+        #publis-marcas-table th:first-child,
+        #publis-marcas-table td:first-child {
+            width: 1.85rem;
+            max-width: 2.25rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+        /* PDF: alinhado ao modelo «Leitura — Rodolfo Macedo · CAIXA 2026» (2 páginas A4) */
+        @media print {
+            .no-print { display: none !important; }
+            html { font-size: 100% !important; }
+            @page { margin: 8mm 9mm; size: A4 portrait; }
+            body {
+                background: #fff !important;
+                color: #1e293b !important;
+                padding: 0 !important;
+                font-size: 8.5pt !important;
+                line-height: 1.35 !important;
+            }
+            #access-gate { display: none !important; }
+            #dossier-root {
+                display: block !important;
+                visibility: visible !important;
+                max-width: 100% !important;
+            }
+            #dossier-root.hidden { display: block !important; }
+            #dossier-root.space-y-10 > * + * { margin-top: 0.55rem !important; }
+            #dossier-root .toc-link,
+            #dossier-root a[href].toc-link {
+                text-underline-offset: max(1px, 0.12em) !important;
+                text-decoration-thickness: max(0.5px, 0.055em) !important;
+                font-size: inherit !important;
+                font-weight: 500 !important;
+            }
+            header {
+                break-after: avoid;
+                page-break-after: avoid;
+                padding: 0.65rem 0.85rem !important;
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1;
+            }
+            header h1 { font-size: 14pt !important; margin-top: 0.2rem !important; }
+            header .text-xs { font-size: 7.5pt !important; }
+            .card-audit {
+                box-shadow: none !important;
+                border-color: #cbd5e1 !important;
+                padding: 0.65rem 0.75rem !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+                page-break-after: auto !important;
+            }
+            .veredito-top {
+                padding: 0.55rem 0.7rem !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+            .veredito-top__title { font-size: 12pt !important; }
+            .veredito-top__label { font-size: 7pt !important; }
+            .veredito-top__table { margin-top: 0.45rem !important; font-size: 8pt !important; }
+            .veredito-top__table th,
+            .veredito-top__table td { padding: 0.2rem 0.35rem 0.2rem 0 !important; }
+            .section-header { margin-bottom: 0.4rem !important; padding-left: 0.75rem !important; }
+            .section-header h2 { font-size: 11pt !important; }
+            .evidencias-subhead {
+                margin-top: 0.65rem !important;
+                margin-bottom: 0.25rem !important;
+                padding-bottom: 0.2rem !important;
+                font-size: 9pt !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+            .evidencias-subhead:first-of-type { margin-top: 0.15rem !important; }
+            #evidencias.card-audit { display: block !important; }
+            #parcerias-campanhas,
+            #publis-instagram-levantamento,
+            #checagem-reputacional { width: 100% !important; }
+            #publis-leitura.no-print {
+                display: block !important;
+                margin-top: 0.55rem !important;
+                padding-top: 0.55rem !important;
+                break-before: page !important;
+                page-break-before: always !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+            #dossier-root .text-sm { font-size: 8pt !important; line-height: 1.35 !important; }
+            #dossier-root .text-xs { font-size: 7pt !important; }
+            .overflow-x-auto { overflow: visible !important; }
+            table { font-size: 7.5pt !important; width: 100% !important; }
+            table th,
+            table td {
+                padding: 0.22rem 0.3rem !important;
+                vertical-align: top !important;
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
+            thead { display: table-header-group; }
+            tr { break-inside: auto !important; page-break-inside: auto !important; }
+            #publis-marcas-table { font-size: 7.25pt !important; line-height: 1.3 !important; }
+            #publis-marcas-table .publis-marcas-reg {
+                display: block;
+                font-size: 6.75pt !important;
+                margin-top: 0.12rem !important;
+                line-height: 1.28 !important;
+            }
+            .sb-panel-shell {
+                padding: 0.45rem 0.55rem !important;
+                margin-bottom: 0.35rem !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+            .sb-carousel {
+                display: grid !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+                gap: 0.35rem !important;
+                overflow: visible !important;
+            }
+            .sb-card {
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+                box-shadow: none !important;
+            }
+            .sb-card__foot.no-print { display: block !important; }
+            .sb-card__foot .sb-btn {
+                font-size: 6.5pt !important;
+                padding: 0.2rem 0.35rem !important;
+            }
+            .sb-hero__value { font-size: 1.05rem !important; }
+            .sb-dl { font-size: 7pt !important; }
+            #fontes.card-audit {
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+            #fontes .fontes-list {
+                column-count: 2 !important;
+                column-gap: 0.55rem !important;
+                font-size: 7pt !important;
+                line-height: 1.32 !important;
+            }
+            #fontes .fontes-list > li {
+                margin-top: 0.18rem !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+            #fontes .fontes-list a[href] {
+                word-break: break-word !important;
+                overflow-wrap: anywhere !important;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <div id="access-gate" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#252525] p-4">
+        <div class="w-full max-w-sm rounded border border-slate-600 bg-white p-8 shadow-2xl">
+            <p class="text-xs font-bold uppercase tracking-wider text-calia-navy mb-1">Acesso restrito</p>
+            <p class="text-sm text-slate-600 mb-4">Informe a senha para visualizar o conteúdo.</p>
+            <form id="access-form" class="space-y-3">
+                <label class="sr-only" for="access-pw">Senha</label>
+                <input type="password" id="access-pw" required autocomplete="current-password" class="w-full rounded border border-slate-300 px-3 py-2 text-sm focus:border-calia-navy focus:outline-none focus:ring-1 focus:ring-calia-navy" placeholder="Senha">
+                <p id="access-err" class="hidden text-sm font-medium text-red-600"></p>
+                <div class="mt-5 border-t border-slate-200 pt-5">
+                    <button type="submit" class="w-full rounded-md bg-calia-gold py-3.5 text-sm font-black uppercase tracking-widest text-calia-navy shadow-md shadow-black/15 ring-1 ring-black/5 transition hover:brightness-105 active:brightness-95">Entrar</button>
+                </div>
+            </form>
+            <p class="mt-6 border-t border-slate-200 pt-4 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+        </div>
+    </div>
+
+    <div id="dossier-root" class="hidden max-w-4xl mx-auto space-y-10">
+
+        <header id="topo" class="bg-calia-navy text-white p-8 md:p-10 rounded shadow-lg">
+            <p class="text-calia-gold font-bold tracking-widest text-xs uppercase">Agência Calia | Unidade de BI — Cliente CAIXA</p>
+            <h1 class="text-2xl md:text-3xl font-black mt-2 tracking-tight">Rodolfo Macedo (@foiorodolfo)</h1>
+            <p class="text-xs text-white/70 mt-1 font-medium">Leitura · marca e risco · Squad Always ON Loterias · CAIXA</p>
+        </header>
+
+        <nav class="card-audit py-6 no-print" aria-label="Sumário">
+            <div class="section-header mb-3">
+                <h2 class="text-lg font-black text-calia-navy uppercase tracking-tight">Conteúdo</h2>
+            </div>
+            <ul class="toc-list">
+                <li><a class="toc-link" href="#veredito-conclusao">Conclusão</a></li>
+                <li><a class="toc-link" href="#evidencias">Evidências com link</a></li>
+                <li><a class="toc-link" href="#publis-instagram-levantamento">Instagram — marcas em publi (2024–2026)</a></li>
+                <li><a class="toc-link" href="#painel-metricas">Métricas (Social Blade)</a></li>
+                <li><a class="toc-link" href="#fontes">Fontes</a></li>
+            </ul>
+        </nav>
+
+        <section id="veredito-conclusao" class="card-audit scroll-mt-20">
+            <div class="veredito-top">
+                <p class="veredito-top__label">Conclusão</p>
+                <p class="veredito-top__title">Checagem: sem achado que impeça</p>
+                <p class="text-sm text-slate-700 mt-2 leading-relaxed">Até <strong>15/05/2026</strong>, buscamos na <strong>web com link</strong> e <strong>não achamos</strong> aposta, cassino, outra loteria, rifa paralela, militância partidária clara nem escândalo de conduta em grande veículo ligado a este @. Com <strong>reforço em 14/05/2026</strong> (cancelamento, crise de imagem, brigas ou exposição pública), também <strong>não</strong> achamos matéria que ligue <strong>este @</strong> a episódio desse tipo. No <strong>Instagram</strong>, entre <strong>2024</strong> e <strong>2026</strong>, listamos <strong>marcas em publi</strong> no perfil em <strong>18/05/2026</strong> — <a class="toc-link" href="#publis-instagram-levantamento">tabela e leitura abaixo</a>.</p>
+                <table class="veredito-top__table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Risco de marca impede?</th>
+                            <td><strong>Não</strong> foi localizada <strong>evidência</strong> de risco <strong>nos</strong> temas solicitados (veja a <a class="toc-link" href="#checagem-reputacional">checagem por tema</a>).</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Onde estão as fontes?</th>
+                            <td>Nas <a class="toc-link" href="#evidencias">tabelas abaixo</a> e na lista <a class="toc-link" href="#fontes">Fontes</a> ao final do documento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="evidencias" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Evidências com link</h2>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed no-print">Abaixo: <strong>RIC</strong> na Câmara (com link) e <strong>tabela de marcas</strong> do Instagram (feita em <strong>18/05/2026</strong>).</p>
+
+            <div id="parcerias-campanhas" class="scroll-mt-20">
+            <h3 class="evidencias-subhead">RIC 5248/2025 — Campanha Nordeste</h3>
+            <div class="overflow-x-auto mt-2 rounded border border-slate-200 bg-white">
+                <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
+                    <caption class="sr-only">Trecho do RIC 5248/2025 com nome do creator e @ na tabela do PDF da Câmara</caption>
+                    <thead class="bg-slate-100 text-calia-navy font-black uppercase tracking-wider text-[10px]">
+                        <tr>
+                            <th class="p-2 border border-slate-200">Trecho no documento</th>
+                            <th class="p-2 border border-slate-200">Tipo</th>
+                            <th class="p-2 border border-slate-200">Rede / recorte</th>
+                            <th class="p-2 border border-slate-200">Referência</th>
+                            <th class="p-2 border border-slate-200">Evidência (URL)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2 border border-slate-200 font-semibold"><strong>Campanha Nordeste</strong> (comunicação institucional federal no PDF)</td>
+                            <td class="p-2 border border-slate-200">Documento público da Câmara (processo em tramitação)</td>
+                            <td class="p-2 border border-slate-200"><strong>Instagram</strong> (coluna da tabela)</td>
+                            <td class="p-2 border border-slate-200">Data <strong>24/06/2025</strong> no quadro; processo <strong>RIC 5248/2025</strong></td>
+                            <td class="p-2 border border-slate-200"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — íntegra PDF RIC 5248/2025</a> · <a class="toc-link" href="#checagem-ric-5248">RIC na checagem</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed mt-3 no-print">O <strong>RIC</strong> cita <strong>Campanha Nordeste</strong> com este @. No <strong>Instagram</strong> também aparece <strong>Novo PAC</strong> (Governo). Os dois falam de <strong>governo no Nordeste</strong>. Daqui <strong>não</strong> dá para dizer se é um contrato só ou a mesma peça.</p>
+            </div>
+
+            <div id="publis-instagram-levantamento" class="scroll-mt-20">
+            <h3 class="evidencias-subhead">Instagram — marcas em publi (2024–2026)</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-3 no-print">Marcas que aparecem como <strong>publi</strong> no perfil <a href="https://www.instagram.com/foiorodolfo/" target="_blank" rel="noopener noreferrer">@foiorodolfo</a>, vistas em <strong>18/05/2026</strong>, entre <strong>2024</strong> e <strong>2026</strong>.</p>
+            <div class="overflow-x-auto rounded border border-slate-200 bg-white">
+                <table id="publis-marcas-table">
+                    <caption class="sr-only">Marcas em publi no Instagram @foiorodolfo, 18 de maio de 2026, de 2024 a 2026</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Segmento e região</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="font-semibold">1</td><td class="font-semibold">Minhoto</td><td>Alimentício — condimentos e temperos (Grupo Raymundo da Fonte, PE)<span class="publis-marcas-reg">Nacional; forte Nordeste</span></td></tr>
+                        <tr><td class="font-semibold">2</td><td class="font-semibold">Guaraná Jeneve</td><td>Refrigerante regional (Fábrica Psiu)<span class="publis-marcas-reg">São Luís e interior do MA</span></td></tr>
+                        <tr><td class="font-semibold">3</td><td class="font-semibold">Devassa</td><td>Cerveja (Heineken Brasil)<span class="publis-marcas-reg">Nacional</span></td></tr>
+                        <tr><td class="font-semibold">4</td><td class="font-semibold">Centro Elétrico Home Center</td><td>Varejo — materiais elétricos e construção (desde 1923 em São Luís)<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">5</td><td class="font-semibold">BYD Parvi</td><td>Concessionárias veículos elétricos BYD (Grupo Parvi)<span class="publis-marcas-reg">Norte e Nordeste (vários estados)</span></td></tr>
+                        <tr><td class="font-semibold">6</td><td class="font-semibold">Intercar Mitsubishi</td><td>Concessionária Mitsubishi<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">7</td><td class="font-semibold">MotoChefe Maranhão</td><td>Scooters e motos elétricas<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">8</td><td class="font-semibold">Quintal da Vovó</td><td>Restaurante — culinária nordestina (buffet)<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">9</td><td class="font-semibold">Espetinho do Paulinho</td><td>Restaurante — frutos do mar e regional<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">10</td><td class="font-semibold">CEAPE Brasil</td><td>Microcrédito produtivo<span class="publis-marcas-reg">MA, PA, TO, SP</span></td></tr>
+                        <tr><td class="font-semibold">11</td><td class="font-semibold">Festimóveis Maranhão</td><td>Evento (Shopping da Ilha, nov/2025) — <strong>Caixa</strong> citada na publi<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">12</td><td class="font-semibold">Montreal</td><td>Mobiliário / decoração<span class="publis-marcas-reg">São Luís — MA</span></td></tr>
+                        <tr><td class="font-semibold">13</td><td class="font-semibold">Novo PAC — Governo Federal</td><td>Publicidade institucional federal<span class="publis-marcas-reg">Nacional (obras no MA no post)</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="publis-leitura" class="no-print mt-5 border-t border-slate-200 pt-5 scroll-mt-20">
+                <h4 class="text-sm font-black text-calia-navy uppercase tracking-wide mb-2">Leitura das marcas</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">Predominam <strong>marcas de São Luís, do Maranhão ou do Nordeste</strong>, com <strong>algumas marcas nacionais</strong>. Há <strong>Novo PAC</strong> (Governo) e <strong>Festimóveis</strong>, neste último com a <strong>Caixa</strong> na <strong>publi do evento</strong> (nov/2025). <strong>Devassa</strong> é a <strong>única</strong> marca localizada com <strong>público 18+</strong>. <strong>Não</strong> vimos <strong>aposta</strong>, <strong>jogo de azar</strong> nem <strong>conteúdo adulto</strong> no levantamento.</p>
+            </div>
+            </div>
+
+            <div id="checagem-reputacional" class="scroll-mt-20">
+            <h3 class="evidencias-subhead">Checagem por tema</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-2 no-print">Juntamos <strong>busca na web</strong> (até <strong>15/05/2026</strong>), <strong>reforço de reputação em 14/05/2026</strong> (cancelamento, crise de imagem, brigas ou exposição pública) e <strong>lista de marcas em publi</strong> no Instagram (<strong>18/05/2026</strong>, entre <strong>2024</strong> e <strong>2026</strong>) — <a class="toc-link" href="#publis-instagram-levantamento">tabela e leitura</a>.</p>
+            <div class="overflow-x-auto mt-2 rounded border border-slate-200 bg-white">
+                <table class="min-w-full text-xs md:text-sm text-left text-slate-700 border-collapse">
+                    <caption class="sr-only">Checagem por tema com fonte em link</caption>
+                    <thead class="bg-slate-100 text-calia-navy font-black uppercase tracking-wider text-[10px]">
+                        <tr>
+                            <th class="p-2 border border-slate-200">Tema</th>
+                            <th class="p-2 border border-slate-200">Resumo</th>
+                            <th class="p-2 border border-slate-200">Fonte com link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="checagem-concorrencia" class="scroll-mt-20">
+                            <td class="p-2 border border-slate-200 font-semibold">Apostas / cassino</td>
+                            <td class="p-2 border border-slate-200"><strong>Não</strong> achamos aposta nem cassino: nem na web (<strong>15/05/2026</strong>) nem na <strong>tabela de marcas</strong> do Instagram (<strong>18/05/2026</strong>, <strong>2024–2026</strong>).</td>
+                            <td class="p-2 border border-slate-200"><a class="toc-link" href="#evidencias">Evidências</a> · <a class="toc-link" href="#publis-instagram-levantamento">Feed Instagram (publi)</a></td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border border-slate-200 font-semibold">Política partidária</td>
+                            <td class="p-2 border border-slate-200"><strong>Não</strong> achamos, com link que prove, apoio claro a <strong>candidato</strong> ou <strong>partido</strong>. Na lista do Instagram (<strong>18/05/2026</strong>) aparece <strong>Novo PAC</strong> (Governo) — isso <strong>não</strong> é campanha de partido.</td>
+                            <td class="p-2 border border-slate-200"><a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial (2020)</a> · <a class="toc-link" href="#publis-instagram-levantamento">Feed Instagram (publi)</a></td>
+                        </tr>
+                        <tr id="checagem-cancelamento-crise" class="scroll-mt-20">
+                            <td class="p-2 border border-slate-200 font-semibold">Cancelamento, crise de imagem e brigas públicas</td>
+                            <td class="p-2 border border-slate-200"><strong>Não</strong> achamos, no <strong>reforço web (14/05/2026)</strong>, notícia indexada ligando <strong>@foiorodolfo</strong> a cancelamento, crise de imagem ou briga pública. <strong>O Imparcial (2020)</strong> faz só perfil de humor/trajetória, sem episódio desse tipo.</td>
+                            <td class="p-2 border border-slate-200"><a href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial (2020)</a> · <a class="toc-link" href="#fontes">Consultas replicáveis (Fontes)</a></td>
+                        </tr>
+                        <tr id="checagem-ric-5248" class="scroll-mt-20">
+                            <td class="p-2 border border-slate-200 font-semibold">Comunicação pública / mídia institucional</td>
+                            <td class="p-2 border border-slate-200">O <strong>PDF RIC 5248/2025</strong> na Câmara traz <strong>Rodolfo Macedo (@foiorodolfo)</strong> na <strong>Campanha Nordeste</strong> (<strong>24/06/2025</strong>). No Instagram aparece <strong>Novo PAC</strong>. Ver <a class="toc-link" href="#parcerias-campanhas">texto após o RIC</a> e a <a class="toc-link" href="#publis-instagram-levantamento">tabela de marcas</a>.</td>
+                            <td class="p-2 border border-slate-200"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — RIC 5248/2025 (PDF)</a> · <a class="toc-link" href="#publis-instagram-levantamento">Feed Instagram (publi)</a></td>
+                        </tr>
+                        <tr id="checagem-publis-instagram">
+                            <td class="p-2 border border-slate-200 font-semibold">Publi / marcas no Instagram</td>
+                            <td class="p-2 border border-slate-200">No <strong>Instagram</strong>, em <strong>18/05/2026</strong>: <strong>13 marcas</strong> em publi entre <strong>2024</strong> e <strong>2026</strong> (comida, bebida, carro, loja, restaurante, microcrédito, Festimóveis com Caixa na peça, Governo).</td>
+                            <td class="p-2 border border-slate-200"><a href="https://www.instagram.com/foiorodolfo/" target="_blank" rel="noopener noreferrer">Instagram @foiorodolfo</a> · <a class="toc-link" href="#publis-instagram-levantamento">Tabela neste dossiê</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </section>
+
+        <section id="painel-metricas" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="text-xl font-black text-calia-navy uppercase tracking-tight">Métricas (Social Blade)</h2>
+            </div>
+
+            <div class="sb-panel-shell" aria-labelledby="sb-panel-heading">
+                <h3 id="sb-panel-heading" class="sr-only">Resumo visual das métricas públicas no Social Blade</h3>
+                <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="sb-pill" title="Data de referência dos números neste documento">Leitura 15/05/2026</span>
+                        <span class="text-xs font-semibold text-slate-600 no-print">Agregador público · números sujeitos a alteração</span>
+                    </div>
+                    <a href="https://socialblade.com/" target="_blank" rel="noopener noreferrer" class="no-print inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-calia-navy shadow-sm ring-1 ring-black/5 transition hover:border-calia-gold hover:bg-amber-50/80">Site Social Blade<span class="text-calia-gold" aria-hidden="true">↗</span></a>
+                </div>
+                <p class="mt-2 text-xs text-slate-600 leading-relaxed no-print">Números copiados do site do Social Blade em <strong>15/05/2026</strong>.</p>
+            </div>
+
+            <div class="sb-carousel mb-6" role="list" aria-label="Métricas por rede no Social Blade">
+                <!-- Instagram -->
+                <article class="sb-card" role="listitem">
+                    <div class="sb-card__head">
+                        <span class="sb-card__badge" aria-hidden="true">IG</span>
+                        <span class="sb-card__title">Instagram</span>
+                    </div>
+                    <div class="sb-card__body">
+                        <div class="sb-hero">
+                            <div class="sb-hero__value">702&nbsp;209</div>
+                            <div class="sb-hero__label">Seguidores</div>
+                        </div>
+                        <dl class="sb-dl">
+                            <dt>Seguindo</dt><dd>4&nbsp;930</dd>
+                            <dt>Publicações</dt><dd>1&nbsp;860</dd>
+                            <dt>Taxa de engajamento</dt><dd>1,08%</dd>
+                            <dt>Média de curtidas</dt><dd>~7&nbsp;342</dd>
+                            <dt>Média de comentários</dt><dd>~242</dd>
+                        </dl>
+                        <div class="sb-card__foot no-print">
+                            <a class="sb-btn" href="https://socialblade.com/instagram/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Abrir painel no Social Blade</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- TikTok -->
+                <article class="sb-card" role="listitem">
+                    <div class="sb-card__head">
+                        <span class="sb-card__badge" aria-hidden="true">TT</span>
+                        <span class="sb-card__title">TikTok</span>
+                    </div>
+                    <div class="sb-card__body">
+                        <div class="sb-hero">
+                            <div class="sb-hero__value">66,2&nbsp;mil</div>
+                            <div class="sb-hero__label">Seguidores</div>
+                        </div>
+                        <dl class="sb-dl">
+                            <dt>Seguindo</dt><dd>503</dd>
+                            <dt>Curtidas totais</dt><dd>1,4&nbsp;mi</dd>
+                            <dt>Vídeos</dt><dd>990</dd>
+                        </dl>
+                        <div class="sb-card__foot no-print">
+                            <a class="sb-btn" href="https://socialblade.com/tiktok/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Abrir painel no Social Blade</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- YouTube -->
+                <article class="sb-card" role="listitem">
+                    <div class="sb-card__head">
+                        <span class="sb-card__badge" aria-hidden="true">YT</span>
+                        <span class="sb-card__title">YouTube</span>
+                    </div>
+                    <div class="sb-card__body">
+                        <div class="sb-hero">
+                            <div class="sb-hero__value">1,61&nbsp;mil</div>
+                            <div class="sb-hero__label">Inscritos</div>
+                        </div>
+                        <dl class="sb-dl">
+                            <dt>Visualizações (total)</dt><dd>227&nbsp;198</dd>
+                            <dt>Vídeos</dt><dd>100</dd>
+                            <dt>Data no Social Blade</dt><dd>9 set 2024</dd>
+                        </dl>
+                        <div class="sb-card__foot no-print">
+                            <a class="sb-btn" href="https://socialblade.com/youtube/handle/foiorodolfo" target="_blank" rel="noopener noreferrer">Abrir painel no Social Blade</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="fontes" class="card-audit scroll-mt-20">
+            <div class="section-header">
+                <h2 class="font-black text-calia-navy uppercase tracking-tight">Fontes</h2>
+                <p class="text-xs text-slate-600 mt-1 normal-case font-medium tracking-normal no-print">Links usados neste dossiê.</p>
+            </div>
+            <ul class="fontes-list">
+                <li><a href="https://socialblade.com/instagram/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — Instagram @foiorodolfo</a></li>
+                <li><a href="https://socialblade.com/tiktok/user/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — TikTok @foiorodolfo</a></li>
+                <li><a href="https://socialblade.com/youtube/handle/foiorodolfo" target="_blank" rel="noopener noreferrer">Social Blade — YouTube @foiorodolfo</a></li>
+                <li><a href="https://www.instagram.com/foiorodolfo/" target="_blank" rel="noopener noreferrer">Instagram — @foiorodolfo</a> (perfil usado na <a class="toc-link" href="#publis-instagram-levantamento">tabela de marcas</a> de <strong>18/05/2026</strong>)</li>
+                <li><a href="https://www.tiktok.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">TikTok — @foiorodolfo</a></li>
+                <li><a href="https://www.youtube.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">YouTube — @foiorodolfo</a> · <a href="https://www.youtube.com/channel/UCISvnmAj1NR3hbZbogPFudw" target="_blank" rel="noopener noreferrer">canal por ID</a></li>
+                <li><a href="https://www.facebook.com/foiorodolfo" target="_blank" rel="noopener noreferrer">Facebook — /foiorodolfo</a></li>
+                <li><a href="https://www.kwai.com/@foiorodolfo" target="_blank" rel="noopener noreferrer">Kwai — @foiorodolfo</a></li>
+                <li><a href="https://www.threads.net/@foiorodolfo" target="_blank" rel="noopener noreferrer">Threads — @foiorodolfo</a></li>
+                <li><a href="https://banca.oimparcial.com.br/fivepress/201610020000/issue16870.pdf" target="_blank" rel="noopener noreferrer">O Imparcial — PDF da banca (out/2016) — edição com perfil ou entrevista</a></li>
+                <li><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3046403&amp;filename=Tramitacao-RIC%205248/2025" target="_blank" rel="noopener noreferrer">Câmara — PDF RIC 5248/2025</a> (Rodolfo / @foiorodolfo, Campanha Nordeste, <strong>24/06/2025</strong> — <a class="toc-link" href="#checagem-ric-5248">na checagem</a>)</li>
+                <li><a id="ref-oimparcial-perfil-2020" href="https://oimparcial.com.br/entretenimento-e-cultura/2020/08/conheca-5-influenciadores-digitais-maranhenses-de-sucesso/" target="_blank" rel="noopener noreferrer">O Imparcial — ago/2020</a> (matéria com perfil «Foi o Rodolfo»)</li>
+                <li><a href="https://duckduckgo.com/?q=foiorodolfo+%28pol%C3%AAmica+OR+cancelamento+OR+crise+OR+briga%29&amp;kl=br-pt" target="_blank" rel="noopener noreferrer">DuckDuckGo — busca «foiorodolfo» + polêmica/cancelamento/crise/briga</a> (<a class="toc-link" href="#checagem-cancelamento-crise">checagem cancelamento/crise</a>, <strong>14/05/2026</strong>)</li>
+                <li><a href="https://duckduckgo.com/?q=%22Rodolfo+Macedo%22+%28S%C3%A3o+Lu%C3%ADs+OR+Maranh%C3%A3o%29+influenciador+%28pol%C3%AAmica+OR+cancelamento+OR+crise%29&amp;kl=br-pt" target="_blank" rel="noopener noreferrer">DuckDuckGo — busca «Rodolfo Macedo» + MA/SL + polêmica/cancelamento/crise</a> (<strong>14/05/2026</strong>)</li>
+                <li><a href="https://www.reginaldocazumba.com.br/2022/11/toddy-faz-homenagem-ao-nordeste-com.html" target="_blank" rel="noopener noreferrer">Reginaldo Cazumbá — nota Toddy / Vacarreta (2022)</a> (cita “Rodolfo” de forma ambígua; <strong>não</strong> entra no RIC deste arquivo)</li>
+            </ul>
+        </section>
+
+        <footer class="no-print text-center pb-4 text-[10px] text-slate-400 font-black uppercase tracking-widest border-t border-slate-200 pt-6">
+            <a class="underline decoration-slate-400 hover:text-slate-600" href="#topo">Topo</a> · Calia · CAIXA · Squad Always ON Loterias — Rodolfo Macedo · maio/2026
+        </footer>
+    </div>
+
+    <script>
+        const PASSWORD_SHA256_HEX_SET = new Set([
+            '992743c627cb5ed96392d34989de45a8935c3df8faa62587e073b933004c1f1b',
+            'dd21caa79adaf906f9607c301edb4336c61a2e4fb7021869758e9818e7d009e5'
+        ]);
+
+        async function sha256Hex(text) {
+            const buf = new TextEncoder().encode(text);
+            const hash = await crypto.subtle.digest('SHA-256', buf);
+            return Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        document.getElementById('access-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const err = document.getElementById('access-err');
+            err.classList.add('hidden');
+            err.textContent = 'Senha incorreta. Confira se não há espaços no início ou no fim; a senha é sensível a maiúsculas/minúsculas.';
+            if (!globalThis.crypto?.subtle) {
+                err.textContent = 'Não foi possível validar a senha neste ambiente. Abra a página pelo link publicado no GitHub Pages ou tente outro navegador.';
+                err.classList.remove('hidden');
+                return;
+            }
+            const pw = document.getElementById('access-pw').value.trim();
+            try {
+                if (!PASSWORD_SHA256_HEX_SET.has(await sha256Hex(pw))) {
+                    err.classList.remove('hidden');
+                    return;
+                }
+            } catch {
+                err.textContent = 'Não foi possível validar a senha neste ambiente. Tente outro navegador ou o endereço publicado no GitHub Pages.';
+                err.classList.remove('hidden');
+                return;
+            }
+            document.getElementById('access-gate').classList.add('hidden');
+            document.getElementById('dossier-root').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -14,3 +14,7 @@ examples/minimo/output-preview.html
 loterias2026/research/osint_runs/**/*.log
 loterias2026/research/osint_runs/**/*.txt
 !loterias2026/research/osint_runs/**/README.txt
+
+# Staging HTML (modo B) — canônico na superfície caixa/febraban/embratur
+projects/**/.build/
+projects/_template/preview.html

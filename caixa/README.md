@@ -1,48 +1,49 @@
 # Relatórios Caixa
 
-Pasta para **HTML e artefatos** do cliente Caixa, no mesmo padrão de `embratur/`: arquivos servidos pelo GitHub Pages na [pasta `caixa/`](https://epieratti.github.io/calia-bi-reports/caixa/) (caminho típico: `…/caixa/<arquivo>.html`).
+Pasta de **HTML publicados** do cliente Caixa no GitHub Pages: [índice `caixa/`](https://epieratti.github.io/calia-bi-reports/caixa/).
 
-**Convenção (playbook):**
+## Linhas de entrega
 
-- **Caixa — temas gerais** (ex.: auditoria de personalidades **sem** ser Loterias): HTML na **raiz** desta pasta — exemplo `20260326-dossie-auditoria-personalidades-caixa-2026.html`.
-- **Caixa — linha Loterias / Always ON** (e similares): novos relatórios em **`caixa/loterias/`** (criar a subpasta se ainda não existir), nome `YYYYMMDD-dossie-….html`. Os arquivos Loterias já na raiz de `caixa/` permanecem por histórico; migração para `loterias/` é opcional.
+| Linha | Pasta publicada | Conteúdo |
+|-------|-----------------|----------|
+| **Institucional** | `caixa/` (raiz) | Auditorias, cartão, temas gerais |
+| **Loterias / Always ON** | `caixa/loterias/` | Squads, creators, Quina, brand safety Loterias |
 
-**Embratur** não usa esta pasta — relatórios ficam em **`embratur/`** na raiz do repo (ex.: `20260323-dossie-auditoria-personalidades-embratur-2026.html`).
+Arquivos na raiz de `caixa/` com redirect (`meta refresh`) apontam para `caixa/loterias/` — URLs canônicas na subpasta.
 
-**Índice:** [GitHub Pages — índice `caixa/`](https://epieratti.github.io/calia-bi-reports/caixa/) — lista os `.html` com links corretos (evita 404 por digitação). Se existir `caixa/loterias/index.html`, linkar a partir daqui também.
+## Dossiês publicados
 
-## Dossiês em `caixa/` (atualizado em mai/2026)
+### Institucional (`caixa/`)
 
-- **Febraban:** os HTML deste cliente ficam em **`febraban/`** na raiz do repo (não em `caixa/`). Ver **`febraban/README.md`** e [índice `febraban/` no Pages](https://epieratti.github.io/calia-bi-reports/febraban/) — senha **`febraban2026`**. Há **redirecionamento** de `caixa/20260427-dossie-febraban-concorrencia-creators-2026.html` para a URL em `febraban/` (links antigos).
-- **`20260326-dossie-auditoria-personalidades-caixa-2026.html`** — Lúcio Mauro Filho e Alessandra Maestrini (métricas IG, Trends, marcas, riscos).
-- **`20260401-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **13** perfis (lista anterior). **Abrir no ar:** [dossiê Loterias 20260401](https://epieratti.github.io/calia-bi-reports/caixa/20260401-dossie-squad-always-on-loterias-2026.html) — **senha `caixa2026`**.
-- **`20260406-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: squad **8** perfis (lote 06/04/2026), mesma estrutura (painéis IG/TT/YT/X + Brand Safety). **Senha:** `caixa2026`.
-- **`20260504-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: **3 novos nomes** (lote 04/05/2026) — Linnyke Alves, Felipe Hatori e Julimara. **Senha:** `caixa2026`.
-- **`20260511-dossie-squad-always-on-loterias-2026.html`** — Always ON **Loterias 2026**: dossiê **único** com **27 creators** num bloco de perfis, na ordem dos pedidos (referências de coleta **01/04**, **06/04**, **04/05** e **11/05/2026**): Giovanna Pitel, Rafael Gratta, Índio Behn, Megh Melry, Cleane Sampaio, Ivan Baron, Mila Costa, Cristian Wariu, Cereja, Aline Costa, Davi, Paula Mineira, Catraca Livre, Julia Ferrari, João Vítor Mello, Lorena Rufino, Bárbara Coura, Raphael Vicente, Rafael Saraiva, Pedro Ottoni, Ademara, Linnyke Alves, Felipe Hatori, Julimara, Raquel Real, Morgana Camila, Paulo Victor Freitas. **Senha:** `caixa2026`. **No ar:** [HTML](https://epieratti.github.io/calia-bi-reports/caixa/20260511-dossie-squad-always-on-loterias-2026.html) · [PDF](https://epieratti.github.io/calia-bi-reports/caixa/20260511-dossie-squad-always-on-loterias-2026.pdf).
-- **`20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.html`** — **Marca e riscos — Rodolfo Macedo** (@foiorodolfo; Squad Always ON Loterias · CAIXA): **texto curto** no corpo (síntese **achado / não achado**, tabela de parcerias, quadro de checagem, atenção, Social Blade); **material de apoio** opcional (perfil, marcos, redes, tom). **Senha:** `caixa2026` ou `embratur2026`. **No ar (HTML):** [GitHub Pages](https://epieratti.github.io/calia-bi-reports/caixa/20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.html). **PDF:** [`20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.pdf`](20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.pdf) — **A4 retrato**, **2 páginas** (modelo «Leitura — Rodolfo Macedo · CAIXA 2026»); corpo ~8,5pt; inclui leitura das marcas, checagem, métricas SB (3 colunas) e fontes completas; `.no-print` retira sumário e rodapé; ver [`docs/METODO_PDF_DOSSIE.md`](../docs/METODO_PDF_DOSSIE.md); regenerar (uso interno): `python3 tools/dossier_export_pdf.py --html caixa/20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.html --out caixa/20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.pdf --skip-gate --post-unlock-wait 2`. **No ar (PDF):** [GitHub Pages](https://epieratti.github.io/calia-bi-reports/caixa/20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.pdf) · [raw](https://raw.githubusercontent.com/epieratti/calia-bi-reports/main/caixa/20260515-dossie-rodolfo-macedo-foiorodolfo-caixa-2026.pdf).
-- **`20260514-dossie-pulga-oncoto-caixa-2026.html`** — **Dossiê Quina de São João — Pulga** (Wallace Soares / Wallace Santos Soares, @pulga.oncoto; TikTok @pulga.choraboy; Loterias Caixa): identidade, **linha do tempo**, trajetória na imprensa, **outras plataformas** (TikTok, YouTube indireto, X), **painel Social Blade (IG) + Upfluence/SB (TT)**, **checagem reputacional** de brand safety (apostas/loterias/rifas, política, saúde, parcerias, homonímia de nickname), tom, pontos de atenção, limitações. **Senha (HTML):** `caixa2026` ou `embratur2026`. **No ar:** [HTML](https://epieratti.github.io/calia-bi-reports/caixa/20260514-dossie-pulga-oncoto-caixa-2026.html).
-- **`20260506-dossie-isadora-cruz-cartao-caixa-2026.html`** — Perfil **Isadora Cruz** (cartão Caixa): **matriz** em duas colunas (pedido → resposta, com observações na mesma célula), **universo de evidência** no método (inclui busca em **Meio e Mensagem** / PROPmark / AdNews); **#mini-perfil-audiencia** (perfil de quem acompanha enxuto + ficha + polar); **painel Chart.js**, **timeline**; **Nio Fibra** (campanhas 2025–26, links na seção Marcas); **Osklen** (RFW 2026, Gshow/Terra); **#instagram-marcas** (marcas na interface do IG; Arezzo/Osklen também na imprensa linkada); **Sicoob** no bloco **#sicoob-novela** (referência única); **fontes** compactas. TikTok **Upfluence**, **Social Blade** IG; **sem** X/YouTube próprios (brief). **Senha (HTML):** `caixa2026` ou `embratur2026`. **PDF:** [`20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf`](20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf) — versão **compacta** para impressão (`@media print`, tipos menores, sem repetir URL no papel; sumário e trechos redundantes só somem no PDF); regenerar: `python3 tools/dossier_export_pdf.py --html caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html --out caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf --skip-gate --post-unlock-wait 4`. **Abrir o PDF no ar:** [GitHub Pages](https://epieratti.github.io/calia-bi-reports/caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf) · [raw](https://raw.githubusercontent.com/epieratti/calia-bi-reports/main/caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.pdf).
-- **`20260326-dossie-auditoria-personalidades-caixa-2026.html`:** **Senha:** `caixa2026` (sem espaços; sensível a maiúsculas/minúsculas). O HTML também aceita `embratur2026` como alias. Para mudar, atualize `PASSWORD_SHA256_HEX_SET` no `<script>`.
+- `20260326-dossie-auditoria-personalidades-caixa-2026.html` — senha `caixa2026` ou `embratur2026`
+- `20260506-dossie-isadora-cruz-cartao-caixa-2026.html` — senha `caixa2026` ou `embratur2026`
 
-## Fonte da verdade (dossiês Loterias)
+### Loterias (`caixa/loterias/`)
 
-Para **`20260401-…`**, **`20260406-…`** e **`20260504-dossie-squad-always-on-loterias-2026.html`**, a **fonte editável** está em:
+- Squads Always ON: `20260401`, `20260406`, `20260504`, `20260511`
+- One-offs: `20260514` (Pulga), `20260515` (Rodolfo)
+- Senha: `caixa2026`
 
-- `loterias2026/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 13)
-- `loterias2026-20260406/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 8)
-- `loterias2026-20260504/data/dossier_loterias2026.md` + `dossier_loterias2026_panels.yaml` (squad 3 — Linnyke Alves, Felipe Hatori, Julimara)
+Índice: [`caixa/loterias/index.html`](loterias/index.html)
 
-Rode o build na pasta correspondente e **copie** o HTML gerado em `output/` para este diretório (`caixa/`) para publicar no GitHub Pages. O `.html` em `caixa/` é o artefato servido; mantê-lo alinhado ao build evita divergência.
+## Fonte editável (modo B)
 
-**Febraban (abril/2026):** fonte editável em `loterias2026/data/dossier_febraban_concorrencia_2026.md` + `dossier_febraban_concorrencia_2026_panels.yaml`; build com `--variant squad_8`; copiar o `.html` gerado para **`febraban/`** (publicação Pages).
+| HTML publicado | Projeto fonte |
+|----------------|---------------|
+| `loterias/20260401-…` | `projects/caixa/loterias/always-on-20260401/data/` |
+| `loterias/20260406-…` | `projects/caixa/loterias/always-on-20260406/data/` |
+| `loterias/20260504-…` | `projects/caixa/loterias/always-on-20260504/data/` |
 
-Modelo para **novos** dossiês no mesmo formato: `loterias2026/data/dossier_TEMPLATE.md`.
+Build e publicação:
 
-Para outros relatórios em `caixa/` que **não** usem esse pipeline, o HTML nesta pasta continua sendo a referência direta.
+```bash
+make dossie-entregar PROJECT=caixa/loterias/always-on-20260401
+# ou
+make dossie-entregar MD=projects/caixa/loterias/always-on-20260401/data/dossier_loterias2026.md DEST=caixa/loterias
+```
 
-## Uso
+Template novo lote: `projects/_template/` · `python3 engine/cli/new_creator_dossier.py SLUG --output-dir projects/.../data`
 
-- **Always ON Loterias — 13 e 8 perfis** (`20260401-…`, `20260406-…`): editar **`.md` + `_panels.yaml`** nas pastas `loterias2026/` ou `loterias2026-20260406/`, gerar o HTML, copiar para `caixa/` e commitar.
-- Adicione outros relatórios como `.html` diretamente em `caixa/` (ou em subpastas, se preferir organizar por data/tema).
-- Não é obrigatório ter `index.html` aqui; cada relatório pode ter sua própria URL.
-- Se quiser uma página inicial em `/caixa/`, crie opcionalmente `caixa/index.html` com links para os relatórios.
+## Redirect legado
+
+- `caixa/20260427-dossie-febraban-…` → `febraban/` (cliente Febraban)

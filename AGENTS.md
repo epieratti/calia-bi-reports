@@ -1,6 +1,6 @@
 # Instruções para agentes (calia-bi-reports)
 
-**Novo agente / primeiro uso neste repo:** leia **[`docs/INICIO_AGENTE.md`](docs/INICIO_AGENTE.md)** — start do pipeline, primeira mensagem e **CONTRATO** (§7) para colar junto ao briefing e reduzir desvio do fluxo.
+**Novo agente / primeiro uso neste repo:** leia **[`docs/tutorials/INICIO_AGENTE.md`](docs/tutorials/INICIO_AGENTE.md)** — start do pipeline, primeira mensagem e **CONTRATO** (§7) para colar junto ao briefing e reduzir desvio do fluxo.
 
 **Ao receber briefing:** seguir **`PLAYBOOK_AGENTES.md`** regra **0** — checar (E)/(C), plano visível, **depois** executar (não pular para pesquisa/build sem isso).
 
@@ -14,24 +14,24 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 
 **Autocontido e fontes:** o dossiê **não** pode exigir clique em link para entender a análise; **e** toda fonte web com URL deve aparecer com **link** no HTML — ver `PLAYBOOK_DOSSIES.md` → *Documento autocontido e links*.
 
-**Ordem de leitura sugerida:** `PLAYBOOK_AGENTES.md` (camada curta: regras, 0→7, links) → `docs/PRIMEIRO_DIA.md` (checklist) → `PLAYBOOK_DOSSIES.md` (referência completa; fluxo 0→7 **adaptado ao briefing** do usuário) → `docs/INDICE_METODOS.md` → README da pasta do trabalho (`caixa/`, `embratur/`, ou `loterias2026/` **se** for usar o gerador modo B). Prompts para IA: `docs/PROMPTS_IA_AGENTES.md`. **Mais de um agente no mesmo dossiê:** `docs/MULTI_AGENTES.md` (briefing único, integrador, anti-conflito). Briefing estruturado: issue **Briefing — novo dossiê** no GitHub. A pasta `loterias2026/` é **referência de implementação** do modo B, não o nome de todo dossiê novo.
+**Ordem de leitura sugerida:** `PLAYBOOK_AGENTES.md` → `docs/tutorials/PRIMEIRO_DIA.md` → `PLAYBOOK_DOSSIES.md` → `docs/reference/INDICE_METODOS.md` → README da pasta (`caixa/`, `projects/…`). Prompts: `docs/reference/PROMPTS_IA_AGENTES.md`. Multi-agente: `docs/how-to/MULTI_AGENTES.md`.
 
-**Briefing:** o pedido do **usuário** define modo (A/B/C), âmbito, ordem das tarefas e o que pode ser omitido — ver regra no topo de `PLAYBOOK_DOSSIES.md` (*Para o agente de IA*) e a tabela *Briefing → plano customizado*. No Pipeline §1, perguntas marcadas **(E)** são essenciais, **(C)** obrigatórias só quando a condição se aplica, **(O)** podem usar padrão do playbook se declarado. **Padrão operacional:** HTML **sempre** com **gate/senha** e entrega **sempre** com **commit + push** ao remoto (Pages), salvo o usuário pedir **explicitamente** o contrário. **Se faltar (E) ou (C) aplicável**, **perguntar** — em especial o **valor** da senha (ou referência a outro dossiê) quando não vier no briefing; não supor pasta ou modo em silêncio.
-
-**Motor dossiê Loterias (HTML):** `tools/dossier_render.py` + `tools/md_dossier_source.py` (importados por `loterias2026/scripts/build_dossier_completo.py` e `loterias2026-20260406/scripts/build_dossier_completo.py` — **não duplicar** esses **arquivos** em outras pastas).
+**Motor dossiê (modo B):** `engine/core/` · `engine/cli/build_dossier.py` · `make dossie-entregar`.
 
 ## Estrutura principal
 
 | Área | Caminho | Notas |
 |------|---------|--------|
-| Marca (SVG) | `assets/brand/logo-white.svg` | Logo Calia em branco (site oficial); útil em cabeçalhos/rodapés de HTML com fundo escuro. |
-| Dossiê Embratur (referência) | `embratur/` | Página principal do site; `index.html` na raiz redireciona para cá. |
-| Relatórios Caixa (no ar) | `caixa/` | **Artefatos servidos pelo Pages.** URLs em `caixa/README.md`. |
-| Dossiês Febraban (no ar) | `febraban/` | HTML do cliente Febraban no Pages. URLs e senha em `febraban/README.md`. |
-| Pesquisa / scripts Embratur | `embratur/research/`, `embratur/scripts/` | Ver `embratur/research/README.md`. |
-| Loterias 2026 | `loterias2026/`, `loterias2026-20260406/` | `PLAYBOOK_DOSSIES.md`, `docs/INDICE_METODOS.md`. Build: `scripts/build_dossier_completo.py` (importa `tools/dossier_render.py`). Descoberta de @: `loterias2026/research/METODO_DESCOBERTA_PERFIS_CREATORS.md`. Novo lote: `loterias2026/scripts/new_creator_dossier.py`. Legado Apify: `loterias2026/scripts/legado/README_LEGADO.md`. |
+| Marca (SVG) | `assets/brand/logo-white.svg` | Logo Calia |
+| Superfície publicada | `caixa/`, `caixa/loterias/`, `febraban/`, `embratur/` | HTML no GitHub Pages |
+| Fonte editável | `projects/` | `.md` + YAML + `manifest.yaml` — **não** publicado |
+| Motor | `engine/` | Build, QA, PDF |
+| Métodos | `methods/` | Brand safety, descoberta de @ |
+| Caixa institucional | `caixa/` (raiz) | Auditorias, cartão |
+| Caixa Loterias | `caixa/loterias/` | Always ON, squads |
+| Lote referência modo B | `projects/caixa/loterias/always-on-20260401/` | Squad 13 perfis |
 
-Para os dossiês Loterias **`20260401-…`** e **`20260406-…`**, a **fonte de conteúdo** é **`dossier_loterias2026.md`** + **`dossier_loterias2026_panels.yaml`** em `loterias2026/data/` e `loterias2026-20260406/data/`; o HTML em **`caixa/`** é o artefato publicado (gerar com `build_dossier_completo.py` e copiar de `output/`). Ver `caixa/README.md` e `loterias2026/README.md`.
+Para dossiês Loterias modo **B**, a fonte está em `projects/caixa/loterias/always-on-*/data/`; o HTML canônico em `caixa/loterias/`. Ver `caixa/README.md` e `projects/README.md`.
 
 ## Proteção por senha (client-side)
 
@@ -41,21 +41,21 @@ Vários HTML usam **hash SHA-256 no `<script>`** (ex.: `PASSWORD_SHA256_HEX_SET`
 
 - Mensagens de commit em **português do Brasil**, claras (imperativo ou descrição direta do que mudou).
 - Após implementar alterações pedidas: `git status` → `git add` (só o relevante) → `git commit` → push conforme o fluxo do branch em uso.
-- Alterações em **`caixa/*.html`**, **`febraban/*.html`**, **`caixa/loterias/*.html`** (quando existir), **`loterias*/output/*.html`** ou outros artefatos do Pages exigem que o remoto fique alinhado para o site refletir as mudanças (ver regra em `.cursor/rules/git-commit-apos-mudancas.mdc`). **Nomenclatura e pastas:** `PLAYBOOK_DOSSIES.md` → Pipeline §2. O **nome** do `.html` publicado segue **`YYYYMMDD-dossie-<slug>.html`** e é **definido pelo agente** (o briefing só precisa da **pasta** de cliente, salvo pedido explícito de nome fixo).
+- Alterações em **`caixa/`**, **`caixa/loterias/`**, **`febraban/`**, **`embratur/`** exigem push ao remoto (Pages).
 
 ## Boas práticas para mudanças
 
 - **Escopo mínimo:** altere só o necessário; evite refatorações amplas não solicitadas.
 - **Consistência:** siga o estilo e o padrão dos HTML e scripts existentes na mesma pasta.
-- **Documentação:** não crie arquivos `.md` novos por iniciativa própria, exceto quando o pedido pedir documentação **ou** forem notas de pesquisa em `research/` / atualizações a métodos já listados em `docs/INDICE_METODOS.md`.
+- **Documentação:** não crie arquivos `.md` novos por iniciativa própria, exceto quando o pedido pedir documentação **ou** forem notas de pesquisa em `research/` / atualizações a métodos já listados em `docs/reference/INDICE_METODOS.md`.
 
 ## Referência rápida
 
-- Entrega automatizada (nome `YYYYMMDD-dossie-<slug>.html` + pipeline): `tools/dossier_publish.py`, `make dossie-entregar` — ver `tools/README.md` e `make help`.
-- PDF com layout próximo ao HTML: **[`docs/METODO_PDF_DOSSIE.md`](docs/METODO_PDF_DOSSIE.md)** · `tools/dossier_export_pdf.py` / `make dossie-pdf` · [`docs/GOVERNANCA_ENTREGA.md`](docs/GOVERNANCA_ENTREGA.md) (senha por env, não em issue pública).
-- Calibragem editorial (prova, delta, institucional): `docs/CALIBRAGEM_QUALIDADE.md`; front matter `quality_calibration` no modo B.
+- Entrega automatizada (nome `YYYYMMDD-dossie-<slug>.html` + pipeline): `engine/cli/publish_dossier.py`, `make dossie-entregar` — ver `engine/README.md` e `make help`.
+- PDF com layout próximo ao HTML: **[`docs/how-to/METODO_PDF_DOSSIE.md`](docs/how-to/METODO_PDF_DOSSIE.md)** · `engine/cli/export_pdf.py` / `make dossie-pdf` · [`docs/how-to/GOVERNANCA_ENTREGA.md`](docs/how-to/GOVERNANCA_ENTREGA.md) (senha por env, não em issue pública).
+- Calibragem editorial (prova, delta, institucional): `docs/explanation/CALIBRAGEM_QUALIDADE.md`; front matter `quality_calibration` no modo B.
 - Playbook de dossiês (raiz): `PLAYBOOK_DOSSIES.md`
-- Índice métodos: `docs/INDICE_METODOS.md`
+- Índice métodos: `docs/reference/INDICE_METODOS.md`
 - Visão geral e URLs: `README.md`
 - Caixa (índice, senhas, dossiês): `caixa/README.md`
-- Pipeline Loterias 2026: `loterias2026/README.md`
+- Pipeline Loterias 2026: `projects/caixa/loterias/always-on-20260401/README.md`

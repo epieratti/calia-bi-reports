@@ -5,72 +5,73 @@
 	build-dossier-squad-13 build-dossier-squad-8 \
 	validate-dossier-minimo build-dossier-minimo-preview \
 	qa-dossier-squad-13 qa-dossier-squad-8 check-html-leakage \
-	validate-dossier-13 validate-dossier-8 validate-dossier-strict-13 \
-	check-links-13 check-links-8 \
-	build-loterias-13 build-loterias-8 \
-	dossie-filename dossie-entregar dossie-pdf
+	dossie-build dossie-qa dossie-filename dossie-entregar dossie-pdf
 
 PYTHON ?= python3
 ROOT := $(abspath .)
 
+PROJECT_SQUAD_13 := caixa/loterias/always-on-20260401
+PROJECT_SQUAD_8 := caixa/loterias/always-on-20260406
+MD_SQUAD_13 := projects/$(PROJECT_SQUAD_13)/data/dossier_loterias2026.md
+MD_SQUAD_8 := projects/$(PROJECT_SQUAD_8)/data/dossier_loterias2026.md
+MD_MINIMO := projects/_template/dossier_minimo_exemplo.md
+
 help:
 	@echo "Alvos úteis:"
-	@echo "  make dossie-filename MD=<dossier.md> [DATE=YYYYMMDD] [SUFFIX=...] — imprime YYYYMMDD-dossie-<slug>.html"
-	@echo "  make dossie-entregar MD=<dossier.md> DEST=<pasta|arquivo.html> [VARIANT=...] [DATE=...] [SUFFIX=...] [SKIP_LINKS=1]"
-	@echo "       — valida + links + build + cópia em DEST + vazamento na pasta cliente"
-	@echo "  make dossie-pdf HTML=<caixa/....html> OUT=<saida.pdf> — PDF (Playwright; DOSSIER_PDF_PASSWORD ou SKIP_GATE=1 interno; opcional POST_UNLOCK_WAIT=5 para Chart.js; PDF_LANDSCAPE=1; PDF_MARGIN_TIGHT=1)"
-	@echo "  make validate-dossier-squad-13   — valida loterias2026/data/dossier_loterias2026.md"
-	@echo "  make validate-dossier-squad-8   — valida loterias2026-20260406/data/dossier_loterias2026.md"
-	@echo "  make validate-dossier-minimo    — valida examples/minimo/dossier_minimo_exemplo.md"
-	@echo "  make build-dossier-minimo-preview — gera examples/minimo/output-preview.html (gitignored)"
-	@echo "  make qa-dossier-squad-13        — validate + links + build 13 + check vazamento HTML"
-	@echo "  make qa-dossier-squad-8         — idem para lote 8"
-	@echo "  make check-html-leakage         — vazamento em caixa/, embratur/, outputs modo B"
-	@echo "  Dicas semânticas: python3 tools/validate_dossier_source.py --hints <dossier.md>"
-	@echo "  make check-links-squad-13        — HTTP check dos links no .md (13)"
-	@echo "  make build-dossier-squad-13     — gera HTML squad 13 em loterias2026/output/"
-	@echo "  make build-dossier-squad-8      — gera HTML squad 8 em loterias2026-20260406/output/"
-	@echo "(Aliases legados: validate-dossier-13, build-loterias-13, …)"
+	@echo "  make dossie-build PROJECT=caixa/loterias/always-on-20260401"
+	@echo "  make dossie-qa    PROJECT=caixa/loterias/always-on-20260401"
+	@echo "  make dossie-entregar PROJECT=caixa/loterias/always-on-20260401"
+	@echo "  make dossie-entregar MD=projects/.../dossier_x.md DEST=caixa/loterias"
+	@echo "  make dossie-pdf HTML=caixa/loterias/....html OUT=....pdf"
+	@echo "  make qa-dossier-squad-13 / qa-dossier-squad-8 — aliases dos lotes de referência"
+	@echo "  make check-html-leakage — vazamento em caixa/, febraban/, embratur/"
+
+dossie-build:
+	@test -n "$(PROJECT)" || (echo "Defina PROJECT=caixa/loterias/always-on-20260401"; exit 1)
+	cd "$(ROOT)" && $(PYTHON) engine/cli/build_dossier.py --project "$(PROJECT)"
+
+dossie-qa: dossie-build
+	@test -n "$(PROJECT)" || (echo "Defina PROJECT="; exit 1)
+	cd "$(ROOT)" && $(PYTHON) engine/qa/validate_source.py "projects/$(PROJECT)/data/"*.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/check_html_leakage.py caixa febraban embratur
 
 validate-dossier-squad-13:
-	cd "$(ROOT)" && $(PYTHON) tools/validate_dossier_source.py loterias2026/data/dossier_loterias2026.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/validate_source.py "$(MD_SQUAD_13)"
 
 validate-dossier-squad-8:
-	cd "$(ROOT)" && $(PYTHON) tools/validate_dossier_source.py loterias2026-20260406/data/dossier_loterias2026.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/validate_source.py "$(MD_SQUAD_8)"
 
 validate-dossier-squad-13-strict:
-	cd "$(ROOT)" && $(PYTHON) tools/validate_dossier_source.py --strict loterias2026/data/dossier_loterias2026.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/validate_source.py --strict "$(MD_SQUAD_13)"
 
 check-links-squad-13:
-	cd "$(ROOT)" && $(PYTHON) tools/check_dossier_links.py loterias2026/data/dossier_loterias2026.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/check_links.py "$(MD_SQUAD_13)"
 
 check-links-squad-8:
-	cd "$(ROOT)" && $(PYTHON) tools/check_dossier_links.py loterias2026-20260406/data/dossier_loterias2026.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/check_links.py "$(MD_SQUAD_8)"
 
 build-dossier-squad-13:
-	cd "$(ROOT)/loterias2026" && $(PYTHON) scripts/build_dossier_completo.py
+	cd "$(ROOT)" && $(PYTHON) engine/cli/build_dossier.py --project "$(PROJECT_SQUAD_13)"
 
 build-dossier-squad-8:
-	cd "$(ROOT)/loterias2026-20260406" && $(PYTHON) scripts/build_dossier_completo.py
+	cd "$(ROOT)" && $(PYTHON) engine/cli/build_dossier.py --project "$(PROJECT_SQUAD_8)"
 
 validate-dossier-minimo:
-	cd "$(ROOT)" && $(PYTHON) tools/validate_dossier_source.py examples/minimo/dossier_minimo_exemplo.md
+	cd "$(ROOT)" && $(PYTHON) engine/qa/validate_source.py "$(MD_MINIMO)"
 
 build-dossier-minimo-preview:
-	cd "$(ROOT)/loterias2026" && $(PYTHON) scripts/build_dossier_completo.py \
-		--md ../examples/minimo/dossier_minimo_exemplo.md \
-		--panels ../examples/minimo/dossier_minimo_exemplo_panels.yaml \
-		--out ../examples/minimo/output-preview.html \
+	cd "$(ROOT)" && $(PYTHON) engine/cli/build_dossier.py \
+		--md "$(MD_MINIMO)" \
+		--panels projects/_template/dossier_minimo_exemplo_panels.yaml \
+		--out projects/_template/preview.html \
 		--variant squad_8 --no-gate
 
 check-html-leakage:
-	cd "$(ROOT)" && $(PYTHON) tools/check_client_html_leakage.py caixa embratur loterias2026/output loterias2026-20260406/output
+	cd "$(ROOT)" && $(PYTHON) engine/qa/check_html_leakage.py caixa febraban embratur
 
 qa-dossier-squad-13: validate-dossier-squad-13 check-links-squad-13 build-dossier-squad-13 check-html-leakage
-
 qa-dossier-squad-8: validate-dossier-squad-8 check-links-squad-8 build-dossier-squad-8 check-html-leakage
 
-# Aliases (nomes antigos; mantidos para scripts e hábitos locais)
 validate-dossier-13: validate-dossier-squad-13
 validate-dossier-8: validate-dossier-squad-8
 validate-dossier-strict-13: validate-dossier-squad-13-strict
@@ -79,28 +80,31 @@ check-links-8: check-links-squad-8
 build-loterias-13: build-dossier-squad-13
 build-loterias-8: build-dossier-squad-8
 
-# Pipeline completo até pasta Pages (ver tools/dossier_publish.py).
-# Ex.: make dossie-entregar MD=loterias2026/data/dossier_loterias2026.md DEST=caixa/loterias
 dossie-filename:
 	@test -n "$(MD)" || (echo "Defina MD= caminho/dossier_*.md"; exit 1)
-	cd "$(ROOT)" && $(PYTHON) tools/dossier_html_filename.py --md "$(MD)" \
+	cd "$(ROOT)" && $(PYTHON) engine/cli/html_filename.py --md "$(MD)" \
 		$(if $(DATE),--date $(DATE),) \
 		$(if $(SUFFIX),--suffix "$(SUFFIX)",)
 
 dossie-entregar:
-	@test -n "$(MD)" || (echo "Defina MD= e DEST= — ex.: make dossie-entregar MD=.../dossier_x.md DEST=caixa/loterias"; exit 1)
-	@test -n "$(DEST)" || (echo "Defina MD= e DEST= — ex.: make dossie-entregar MD=.../dossier_x.md DEST=caixa/loterias"; exit 1)
-	cd "$(ROOT)" && $(PYTHON) tools/dossier_publish.py --md "$(MD)" --dest "$(DEST)" \
-		$(if $(VARIANT),--variant $(VARIANT),) \
-		$(if $(DATE),--date $(DATE),) \
-		$(if $(SUFFIX),--suffix "$(SUFFIX)",) \
-		$(if $(SKIP_LINKS),--skip-links,)
+	@if [ -n "$(PROJECT)" ]; then \
+		cd "$(ROOT)" && $(PYTHON) engine/cli/publish_dossier.py --project "$(PROJECT)" \
+			$(if $(SKIP_LINKS),--skip-links,); \
+	elif [ -n "$(MD)" ] && [ -n "$(DEST)" ]; then \
+		cd "$(ROOT)" && $(PYTHON) engine/cli/publish_dossier.py --md "$(MD)" --dest "$(DEST)" \
+			$(if $(VARIANT),--variant $(VARIANT),) \
+			$(if $(DATE),--date $(DATE),) \
+			$(if $(SUFFIX),--suffix "$(SUFFIX)",) \
+			$(if $(SKIP_LINKS),--skip-links,); \
+	else \
+		echo "Defina PROJECT= ou MD= + DEST="; exit 1; \
+	fi
 
 dossie-pdf:
-	@test -n "$(HTML)" || (echo "Defina HTML= caminho/arquivo.html e OUT= arquivo.pdf"; exit 1)
-	@test -n "$(OUT)" || (echo "Defina OUT= arquivo.pdf"; exit 1)
-	@if [ "$(SKIP_GATE)" != "1" ] && [ -z "$$DOSSIER_PDF_PASSWORD" ]; then echo "Exporte DOSSIER_PDF_PASSWORD=... (senha do gate) ou use SKIP_GATE=1 (uso interno)"; exit 1; fi
-	cd "$(ROOT)" && $(PYTHON) tools/dossier_export_pdf.py --html "$(HTML)" --out "$(OUT)" \
+	@test -n "$(HTML)" || (echo "Defina HTML= e OUT="; exit 1)
+	@test -n "$(OUT)" || (echo "Defina OUT="; exit 1)
+	@if [ "$(SKIP_GATE)" != "1" ] && [ -z "$$DOSSIER_PDF_PASSWORD" ]; then echo "Exporte DOSSIER_PDF_PASSWORD ou SKIP_GATE=1"; exit 1; fi
+	cd "$(ROOT)" && $(PYTHON) engine/cli/export_pdf.py --html "$(HTML)" --out "$(OUT)" \
 		$(if $(SKIP_GATE),--skip-gate,) \
 		$(if $(POST_UNLOCK_WAIT),--post-unlock-wait $(POST_UNLOCK_WAIT),) \
 		$(if $(PDF_LANDSCAPE),--landscape,) \

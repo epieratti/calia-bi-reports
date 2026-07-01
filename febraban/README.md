@@ -14,7 +14,7 @@ HTML publicados no GitHub Pages: [pasta `febraban/` no site](https://epieratti.g
 
 ## Fonte editável (modo B)
 
-O conteúdo é gerado a partir de `loterias2026/data/dossier_febraban_concorrencia_2026.md` + `dossier_febraban_concorrencia_2026_panels.yaml`. Após o build, copie o HTML de `loterias2026/output/` para esta pasta.
+O conteúdo é gerado a partir de `projects/febraban/concorrencia-creators-20260427/data/dossier_febraban_concorrencia_2026.md` + `dossier_febraban_concorrencia_2026_panels.yaml`. Após o build, copie o HTML de `loterias2026/output/` para esta pasta.
 
 **Coleta Social Blade (métricas IG/YT):** `loterias2026/research/SOCIAL_BLADE_FEBRABAN_20260427.md`.
 

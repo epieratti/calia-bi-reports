@@ -1,5 +1,4 @@
-# Publicação via Actions. Uma vez no repositório: Settings → Pages → Source: "GitHub Actions".
-# Alternativa sem Actions: Source "Deploy from a branch" → main → / (root).
+# Deploy GitHub Pages — publica só a superfície do site
 name: Deploy GitHub Pages
 
 on:
@@ -7,8 +6,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# actions: read — necessário para o deploy-pages localizar o artefacto "github-pages"
-# na mesma execução (sem isto, a API devolve 0 artefactos e o deploy falha).
 permissions:
   contents: read
   actions: read
@@ -29,12 +26,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Montar artefato do site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r assets _site/
+          cp -r caixa febraban embratur _site/
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
-      # Evita corrida: o deploy-pages por vezes corre antes do artefacto ficar visível na API.
       - name: Aguardar índice do artefacto
         run: sleep 15
 

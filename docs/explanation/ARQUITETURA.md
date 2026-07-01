@@ -4,7 +4,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| **Status** | Planejamento — nenhuma migração executada automaticamente |
+| **Status** | Executado (2026-07-01) |
 | **Última revisão** | 2026-07-01 |
 | **Escopo** | Estrutura de pastas, fluxos, CI/CD, migração e decisões arquiteturais |
 
