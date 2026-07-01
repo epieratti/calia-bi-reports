@@ -8,7 +8,7 @@ Use este arquivo quando **abrir um agente novo** no **calia-bi-reports**. Idioma
 
 | Ordem | Arquivo | Para quê |
 |-------|---------|----------|
-| 1 | **[`PLAYBOOK_AGENTES.md`](../PLAYBOOK_AGENTES.md)** | Regras, fluxo 0→7, links |
+| 1 | **[`PLAYBOOK_AGENTES.md`](../../PLAYBOOK_AGENTES.md)** | Regras, fluxo 0→7, links |
 | 2 | **[`docs/tutorials/PRIMEIRO_DIA.md`](PRIMEIRO_DIA.md)** | Checklist modo B ponta a ponta |
 | 3 | Se o pedido for solto | **[`docs/reference/PROMPTS_IA_AGENTES.md`](../reference/PROMPTS_IA_AGENTES.md)** §1 |
 
@@ -42,7 +42,7 @@ Se **não houver briefing**, o agente deve **pedir** cliente, objetivo, lista de
 | Situação | O que fazer |
 |----------|-------------|
 | **Novo dossiê modo B** | `docs/tutorials/PRIMEIRO_DIA.md` + `engine/cli/new_creator_dossier.py` ou copiar `projects/_template/dossier_TEMPLATE.md` |
-| **Só texto bruto do cliente** | Prompt §1 em `PROMPTS_IA_AGENTES.md` |
+| **Só texto bruto do cliente** | Prompt §1 em [`docs/reference/PROMPTS_IA_AGENTES.md`](../reference/PROMPTS_IA_AGENTES.md) |
 | **Vários agentes** | `docs/how-to/MULTI_AGENTES.md` — um integrador, briefing único |
 | **Senha / PDF / validar no ar** | `docs/how-to/GOVERNANCA_ENTREGA.md` · metodologia PDF: `docs/how-to/METODO_PDF_DOSSIE.md` |
 | **Qualidade / prova por eixo** | `docs/explanation/CALIBRAGEM_QUALIDADE.md` + `quality_calibration` no front matter |
@@ -63,9 +63,9 @@ python3 engine/qa/check_html_leakage.py caixa embratur
 
 ## 5. Onde está o “cérebro” longo
 
-- Referência completa: **[`PLAYBOOK_DOSSIES.md`](../PLAYBOOK_DOSSIES.md)**
-- Índice pergunta → arquivo: **[`docs/reference/INDICE_METODOS.md`](INDICE_METODOS.md)**
-- Git e estrutura: **[`AGENTS.md`](../AGENTS.md)**
+- Referência completa: **[`PLAYBOOK_DOSSIES.md`](../../PLAYBOOK_DOSSIES.md)**
+- Índice pergunta → arquivo: **[`docs/reference/INDICE_METODOS.md`](../reference/INDICE_METODOS.md)**
+- Git e estrutura: **[`AGENTS.md`](../../AGENTS.md)** · mapa `docs/`: **[`docs/README.md`](../README.md)**
 
 **Resumo de uma linha:** abra **`PLAYBOOK_AGENTES.md`**, cole o briefing com o template da seção 2, e siga o plano que o agente devolver antes de build pesado.
 
@@ -101,7 +101,7 @@ FASE 2 — Briefing: checar itens (E) e (C) de PLAYBOOK_DOSSIES.md §1. Se falta
 FASE 3 — Na MESMA conversa, PRIMEIRO output visível: (a) “Briefing: fechado OU lacunas: …” (b) Modo A/B/C (c) Plano em 5–7 bullets com caminhos de arquivo previstos.
 FASE 4 — Só depois do bloco (a)(b)(c): executar pesquisa, descoberta de @, edição de .md / _panels.yaml, validate, build, leakage, git conforme AGENTS.md.
 
-PROIBIDO antes de entregar (a)(b)(c): inventar pasta de publicação ou senha; publicar HTML sem plano visível; migrar tudo para YAML monolítico; ignorar validate_dossier_source no modo B.
+PROIBIDO antes de entregar (a)(b)(c): inventar pasta de publicação ou senha; publicar HTML sem plano visível; migrar tudo para YAML monolítico; ignorar validate_source.py no modo B.
 
 Se o usuário escrever só “executa” numa segunda mensagem, retomar a partir da FASE 4 usando o plano já acordado.
 === fim do contrato ===

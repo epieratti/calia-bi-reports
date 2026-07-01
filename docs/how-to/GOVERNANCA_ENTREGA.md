@@ -27,7 +27,7 @@ Objetivo: **você precisa abrir o HTML real** (layout, links, gate) antes de dar
 
 ## 3. PDF com UI digna (export local)
 
-- **Metodologia passo a passo** (comando, Chart.js, `check_client_html_leakage`, commit): [`docs/how-to/METODO_PDF_DOSSIE.md`](METODO_PDF_DOSSIE.md).
+- **Metodologia passo a passo** (comando, Chart.js, `check_html_leakage`, commit): [`docs/how-to/METODO_PDF_DOSSIE.md`](METODO_PDF_DOSSIE.md).
 - O HTML do modo B (e muitos modo A) pode incluir estilos **`@media print`**: fundo branco, **gate oculto** na impressão, conteúdo visível, blocos com `no-print` só na tela.
 - **Gerar:** `python3 engine/cli/export_pdf.py --html <caminho>.html --out <saida>.pdf` com senha (`--password` ou `DOSSIER_PDF_PASSWORD`) ou `--skip-gate` só **uso interno** — ver `engine/README.md`.
 - Depende de **Playwright + Chromium** (`engine/requirements/pdf.txt`). O script sobe um **servidor HTTP local na raiz do repo** para o gate funcionar (`crypto.subtle` em contexto seguro) e para resolver `../assets` e outros caminhos relativos.
@@ -53,6 +53,6 @@ Use como **roteiro**; preencha nomes/canais da tua organização.
 
 ## 5. Checklist rápido antes de “fechado”
 
-- [ ] URL do Pages abre; senha correta; sem vazamento de caminhos do repo no texto visível (`check_client_html_leakage.py`).
+- [ ] URL do Pages abre; senha correta; sem vazamento de caminhos do repo no texto visível (`engine/qa/check_html_leakage.py`).
 - [ ] `index.html` da pasta atualizado se existir.
 - [ ] PDF gerado só se for entrega combinada — e armazenamento conforme política.

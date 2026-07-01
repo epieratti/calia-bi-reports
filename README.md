@@ -25,9 +25,10 @@ No repositório no GitHub: **Settings** → **Pages** → em **Build and deploym
 - **Branch:** `main`, pasta **`/ (root)`**
 - Salve e aguarde alguns minutos.
 
-### Opção B — GitHub Actions
+### Opção B — GitHub Actions (recomendada)
 
 - **Source:** *GitHub Actions*
+- O workflow monta `_site/` com `caixa/`, `febraban/`, `embratur/`, `assets/` — **não** publica `projects/` nem `engine/`.
 - Salve, depois em **Actions** execute de novo o workflow **Deploy GitHub Pages** (ou faça um push em `main`).
 
 Se o Pages foi ativado **depois** de uma execução que falhou, o site só sobe quando houver **pelo menos um deploy com sucesso** (novo push em `main` ou *Re-run* do workflow). Sem isso, a URL pode continuar em 404.
@@ -36,4 +37,16 @@ Enquanto o Pages não estiver ativado com uma dessas fontes, a URL acima mostra 
 
 ## Pesquisa complementar (opcional)
 
-Em **`embratur/scripts/`** e **`embratur/research/`** há script e notas sobre proxy de penetração (Trends/Wikipedia); ver `embratur/research/README.md`.
+Proxy de penetração (Google Trends + Wikipedia EN): [`engine/research/penetracao_mercados.py`](engine/research/penetracao_mercados.py) — ver [`projects/embratur/auditoria-20260323/research/README.md`](projects/embratur/auditoria-20260323/research/README.md).
+
+## Estrutura do repositório
+
+| Zona | Caminho | Papel |
+|------|---------|--------|
+| Publicado (Pages) | `caixa/`, `caixa/loterias/`, `febraban/`, `embratur/` | HTML servido ao cliente |
+| Fonte editável | `projects/` | `.md`, YAML, `manifest.yaml` |
+| Motor | `engine/` | Build, QA, PDF |
+| Métodos | `methods/` | Brand safety, descoberta de @ |
+| Documentação | `docs/` | Diátaxis — ver [`docs/README.md`](docs/README.md) |
+
+Arquitetura completa: [`docs/explanation/ARQUITETURA.md`](docs/explanation/ARQUITETURA.md) · inventário publicado: [`docs/reference/INVENTARIO_DOSSIES.md`](docs/reference/INVENTARIO_DOSSIES.md).

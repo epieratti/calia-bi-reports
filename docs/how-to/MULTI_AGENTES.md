@@ -10,7 +10,7 @@ Objetivo: **paralelizar ou especializar** tarefas **sem** dois modelos sobrescre
 2. **Uma fonte canônica no modo B** — Só existem **`dossier_*.md`** + **`dossier_*_panels.yaml`** como entrada do build. Notas soltas ficam em **`research/`** (ou arquivo por perfil) e **não** substituem o `.md` até alguém **integrar**.
 3. **Um integrador** — Idealmente **um** agente (ou você) faz o **merge** das notas no `.md` / painéis e o **commit** final. Vários agentes **escrevendo no mesmo par de arquivos ao mesmo tempo** = conflito e trechos perdidos.
 4. **Contrato entre etapas** — Cada agente recebe **entrada explícita** (arquivo, trecho, lista de nomes) e devolve **saída explícita** (novo arquivo ou seção nomeada). Prompt vagão (“melhora o dossiê”) gera retrabalho.
-5. **Quem publica** — Só o passo final roda **`dossie-entregar`** / `build` + **`check_client_html_leakage`** + push. Não publicar HTML pela metade.
+5. **Quem publica** — Só o passo final roda **`dossie-entregar`** / `build` + **`check_html_leakage`** + push. Não publicar HTML pela metade.
 6. **Anti-vazamento** — Qualquer agente que toque em HTML para cliente: **não** citar `projects/`, `engine/`, `.md`, `_panels.yaml` no texto visível.
 
 ---
@@ -63,7 +63,7 @@ Mais modelos em [`PROMPTS_IA_AGENTES.md`](PROMPTS_IA_AGENTES.md).
 ## Automação que já ajuda (não é “agente”, mas reduz risco)
 
 - `python3 engine/qa/validate_source.py --hints <dossier.md>`
-- `make dossie-entregar` / `check_client_html_leakage.py`
+- `make dossie-entregar` / `check_html_leakage.py`
 - CI em `dossier_*.md` no GitHub
 
 Isto **não substitui** o integrador humano ou o agente que fecha o `.md`.

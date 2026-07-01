@@ -29,7 +29,7 @@ Todo **texto que o cliente lê** (briefing no HTML, leitura rápida, metodologia
 
 #### Calibragem de qualidade (prova, tempo, confiança)
 
-Guia expandido com checklists copiáveis: [`docs/CALIBRAGEM_QUALIDADE.md`](docs/CALIBRAGEM_QUALIDADE.md). Resumo:
+Guia expandido com checklists copiáveis: [`docs/explanation/CALIBRAGEM_QUALIDADE.md`](docs/explanation/CALIBRAGEM_QUALIDADE.md). Resumo:
 
 | Pilar | O que fazer |
 |-------|-------------|
@@ -89,7 +89,7 @@ Este arquivo existe para **orientar o agente** no fluxo certo. **Regra principal
 
 **Lacunas no briefing:** se faltar qualquer informação necessária para executar bem o pedido (ver checklist em **Pipeline §1**), o agente deve **perguntar ao usuário** antes de avançar — **não** supor silenciosamente pasta de publicação, modo A/B/C ou âmbito de redes. **Padrão operacional Calia (salvo pedido explícito em contrário):** o HTML **sempre** sai **com gate/senha** e o fluxo **sempre** inclui **commit + push** ao remoto (GitHub Pages) conforme [`AGENTS.md`](AGENTS.md) / branch em uso — não é preciso “perguntar se vai publicar” nem “se tem senha”; só **perguntar o valor da senha** (ou “igual ao dossiê X”) quando isso não vier no briefing, e respeitar **exceções explícitas** (ex.: preview sem senha, rascunho só local).
 
-**Vários agentes de IA no mesmo dossiê:** usar **briefing único**, **fonte canônica** (`dossier_*.md` + `_panels.yaml`), **um integrador** e **contrato entre etapas** — detalhes e armadilhas em [`docs/MULTI_AGENTES.md`](docs/MULTI_AGENTES.md).
+**Vários agentes de IA no mesmo dossiê:** usar **briefing único**, **fonte canônica** (`dossier_*.md` + `_panels.yaml`), **um integrador** e **contrato entre etapas** — detalhes e armadilhas em [`docs/how-to/MULTI_AGENTES.md`](docs/how-to/MULTI_AGENTES.md).
 
 **Armadilha:** não confundir modo B com **YAML monolítico** (`dossier_*.yaml` com **toda** a narrativa em chaves) — isso foi **deixado de lado** no fluxo atual (texto “quadrado”, difícil de ajustar). O que vale:
 
@@ -109,7 +109,7 @@ A tabela abaixo resume a ordem **típica** quando o briefing for um dossiê “c
 |-------|------|-----------------------------|
 | **0 — Modo** | A partir do **briefing**, escolher **A**, **B** ou **C** (tabela **Três modos de trabalho** mais abaixo neste arquivo). Se o pedido for ambíguo, propor modo + razão em 1 frase antes de avançar. | Modo escolhido e **coerente com o briefing**. |
 | **1 — Briefing** | Extrair ou confirmar: objetivo, leitor, critérios de risco/concorrência, redes no âmbito, pasta/URL de entrega, **texto da senha** (ou referência a outro dossiê). **Padrão:** gate **sempre**; publicação **sempre** (push), salvo exceção explícita no pedido. O que o usuário **não** pediu fica fora do âmbito salvo combinado. | Lista explícita de requisitos; **perguntar** o que faltar (checklist §1) antes de executar. |
-| **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
+| **2 — Identidade** | Resolver **handles** e homônimos: [descoberta de perfis](methods/discovery/METODO_DESCOBERTA_PERFIS.md). | Lista `@` confirmados por rede (ou “não localizado”) + nota de desambiguação. |
 | **3a — Modo B: arquivos** | Na pasta do lote: `new_creator_dossier.py` ou editar par existente `dossier_*.md` + `dossier_*_panels.yaml`. Front matter + `##` perfis; painéis só métricas. | Par de arquivos consistente; ver [README do modo B](projects/caixa/loterias/always-on-20260401/README.md). |
 | **3b — Modo A/C: arquivos** | Duplicar `.html` de referência ou montar estrutura manual; aplicar seção **Esquema de cores** deste playbook se novo layout. | HTML base válido na pasta de entrega. |
 | **4 — Pesquisa** | Narrativa, eixos, evidências; métricas conforme seção **Coleta de dados** (final deste arquivo) e [brand safety](methods/brand-safety/METODO_BRAND_SAFETY.md) **só se** o briefing exigir esse nível de profundidade. | Afirmações sensíveis com fonte; datas de snapshot. |
@@ -188,7 +188,7 @@ Se o briefing **contradizer** o playbook (ex.: pedir narrativa monolítica em YA
 3. **Modo A (mais comum para one-off):** HTML direto na **pasta de entrega** servida pelo site — duplicar um `.html` existente ou seguir [`README.md`](README.md) na raiz e o README da pasta em causa (quando existir).
 4. **Modo B (fábrica com muitos perfis):** o **exemplo implementado** está descrito no [README do modo B](projects/caixa/loterias/always-on-20260401/README.md). Dentro da pasta desse projeto: `python3 engine/cli/new_creator_dossier.py SLUG` cria `dossier_SLUG.md` + painéis; `engine/cli/build_dossier.py --md … --out …` gera HTML. O caminho da pasta no repo é **histórico**; o tooling pode mudar de sítio no futuro.
 5. **Validar** (se usares fonte `.md` no formato do gerador): `python3 engine/qa/validate_source.py <teu/dossier_*.md>` — `make validate-dossier-squad-13` só aponta para o **arquivo de exemplo** do repo.
-6. **Descobrir @** (nome ou nome + uma rede): [metodologia passo a passo](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md) (localização do arquivo = histórico do primeiro lote com este fluxo).
+6. **Descobrir @** (nome ou nome + uma rede): [metodologia passo a passo](methods/discovery/METODO_DESCOBERTA_PERFIS.md) (localização do arquivo = histórico do primeiro lote com este fluxo).
 7. **Motor HTML** (modo B): código único em **`engine/dossier_render.py`** + **`engine/md_dossier_source.py`**.
 
 ---
@@ -410,7 +410,7 @@ Síntese do que **guias do setor**, fornecedores de *vetting* e relatórios de *
 | Fase | O que fazem | Ligação ao nosso fluxo |
 |------|-------------|-------------------------|
 | **Enquadramento** | Definir objetivo (brand safety, parceria, licitação), público-leitor, risco aceitável, redes no âmbito. | Playbook → briefing fechado; critérios no `.md` / pedido. |
-| **Inventário de identidade** | Confirmar **handles corretos** por rede, homônimos, contas oficiais vs fã. | [Descoberta de perfis](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md). |
+| **Inventário de identidade** | Confirmar **handles corretos** por rede, homônimos, contas oficiais vs fã. | [Descoberta de perfis](methods/discovery/METODO_DESCOBERTA_PERFIS.md). |
 | **Snapshot de métricas** | Seguidores, engagement onde existir, atividade recente, alcance só se houver fonte estável. | Painéis `_panels.yaml`; Social Blade / Upfluence / X manual (toolbox abaixo). |
 | **Avaliação de conteúdo e reputação** | Temas sensíveis, parcerias passadas, menções na imprensa, concorrência, política — com **fonte** por afirmação forte. | Narrativa + eixos no `.md`; evidências em `research/`. |
 | **Síntese e classificação** | Matriz de risco / recomendação, linguagem executiva, data de corte. | Tabela resumo, selos, HTML final. |
@@ -451,8 +451,8 @@ Plataformas **pagas** (ex.: suites de *influencer marketing*, *brand safety* com
 
 #### Alinhamento com este repositório
 
-- **Método de descoberta de perfis:** [METODO_DESCOBERTA_PERFIS_CREATORS.md](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md).
-- **Brand safety, busca aberta, OSINT:** [METODO_BRAND_SAFETY.md](methods/brand-safety/METODO_BRAND_SAFETY.md) e [methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md](projects/caixa/loterias/always-on-20260401/research/methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md).
+- **Método de descoberta de perfis:** [METODO_DESCOBERTA_PERFIS.md](methods/discovery/METODO_DESCOBERTA_PERFIS.md).
+- **Brand safety, busca aberta, OSINT:** [METODO_BRAND_SAFETY.md](methods/brand-safety/METODO_BRAND_SAFETY.md) e [`methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md`](methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md).
 - **Coleta operacional** (métricas nos painéis): seção **Coleta de dados** mais abaixo neste playbook (Social Blade, Upfluence, X manual).
 
 ## Princípios (valem para todos os modos)
@@ -535,7 +535,7 @@ Exceto se o usuário disser explicitamente *“para o que faltar usa o padrão d
 15. (O) Idioma: [ PT-BR — padrão; não preencher ] OU [ outro: ______ ] — só se NÃO for português do Brasil
 16. (O) Mostrar plano de síntese (4b) na resposta antes do build: [ sim | não — padrão: agente faz 4b internamente ]
 17. (O) **Data de corte** explícita da coleta: ______ (ou confiar em `meta.periodo` + `quality_calibration.data_corte_coleta`)
-18. (O) **Definições de prova** por eixo (concorrência / polêmicas / política) para ESTE cliente — ver [`docs/CALIBRAGEM_QUALIDADE.md`](docs/CALIBRAGEM_QUALIDADE.md); no `.md`: `quality_calibration.definicoes_prova`
+18. (O) **Definições de prova** por eixo (concorrência / polêmicas / política) para ESTE cliente — ver [`docs/explanation/CALIBRAGEM_QUALIDADE.md`](docs/explanation/CALIBRAGEM_QUALIDADE.md); no `.md`: `quality_calibration.definicoes_prova`
 19. (O) **Delta** vs versão anterior: [ N/A | texto curto ] → `quality_calibration.delta_vs_entrega_anterior`
 20. (O) **Perfis institucionais** (páginas/marcas): [ lista | nenhum ] → `briefing.perfis_institucionais`
 ```
@@ -546,7 +546,7 @@ Se o usuário só enviar um subconjunto, o agente **pergunta** tudo o que for **
 
 #### Briefing só com nomes de creators ou artistas
 
-Lista de nomes **não** substitui um briefing fechado. O repo já cobre **como** descobrir @ e redes ([`METODO_DESCOBERTA_PERFIS_CREATORS.md`](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md) e a secção **Descoberta de perfis** mais abaixo neste arquivo), **como** montar o HTML (modo B), brand safety e síntese (4b). O que **ainda precisa** existir (por pergunta ao usuário ou por padrão explícito) para um dossiê **completo, profundo e bem estruturado**:
+Lista de nomes **não** substitui um briefing fechado. O repo já cobre **como** descobrir @ e redes ([`METODO_DESCOBERTA_PERFIS.md`](methods/discovery/METODO_DESCOBERTA_PERFIS.md) e a secção **Descoberta de perfis** mais abaixo neste arquivo), **como** montar o HTML (modo B), brand safety e síntese (4b). O que **ainda precisa** existir (por pergunta ao usuário ou por padrão explícito) para um dossiê **completo, profundo e bem estruturado**:
 
 | Lacuna | Por que importa | Ação do agente |
 |--------|-----------------|----------------|
@@ -592,7 +592,7 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 |------------------|---------------------|------------------------------|
 | **Caixa — temas gerais** (auditorias, personalidades, produtos que **não** sejam a linha Loterias/Always ON) | **`caixa/`** (raiz desta pasta) | `20260326-dossie-auditoria-personalidades-caixa-2026.html` — ver [`caixa/README.md`](caixa/README.md). |
 | **Caixa — linha Loterias / Always ON** (e campanhas equivalentes do mesmo “pacote”) | **`caixa/loterias/`** | Novos arquivos aqui (URL `…/caixa/loterias/<arquivo>.html`). No histórico: `20260401-dossie-squad-always-on-loterias-2026.html` ainda em `caixa/` na raiz. |
-| **Embratur** | **`embratur/`** | `20260323-dossie-auditoria-personalidades-embratur-2026.html` — ver [`embratur/research/README.md`](embratur/research/README.md) para contexto. |
+| **Embratur** | **`embratur/`** | `20260323-dossie-auditoria-personalidades-embratur-2026.html` — ver [`projects/embratur/auditoria-20260323/research/README.md`](projects/embratur/auditoria-20260323/research/README.md) para contexto. |
 | **Cliente sem pasta ainda** | **Criar** `/<slug>/` na raiz | `slug` em minúsculas, sem espaços (hífen ok); adicionar **`README.md`** com URL base do Pages e lista de relatórios. |
 
 **Resumo:** **Caixa “puro”** (outros temas) → **`caixa/`**. **Caixa + Loterias** (linha dedicada) → **`caixa/loterias/`** para entregas novas. **Embratur** → **`embratur/`** (nunca dentro de `caixa/`).
@@ -624,7 +624,7 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 
 | Entrega | Pasta típica | Documentação extra |
 |---------|--------------|-------------------|
-| Pasta entrega A | [`embratur/`](embratur/) | [README research](embratur/research/README.md) |
+| Pasta entrega A | [`embratur/`](embratur/) | [README research](projects/embratur/auditoria-20260323/research/README.md) |
 | Pasta entrega B (HTML no ar) | [`caixa/`](caixa/) | [README da pasta](caixa/README.md) |
 | Modo B — referência + segundo lote | [`projects/caixa/loterias/always-on-20260401/`](projects/caixa/loterias/always-on-20260401/), [`projects/caixa/loterias/always-on-20260406/`](projects/caixa/loterias/always-on-20260406/) | [README modo B](projects/caixa/loterias/always-on-20260401/README.md) |
 | Visão geral + URLs | raiz | [`README.md`](README.md) |
@@ -637,13 +637,13 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 
 | Necessidade no disaster check | Onde no playbook / repo |
 |-------------------------------|-------------------------|
-| **Quem é o perfil certo** (homônimos, @ em cada rede) | Secção **Descoberta de perfis** (neste arquivo, após a tabela Toolbox) + [METODO_DESCOBERTA_PERFIS_CREATORS.md](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
+| **Quem é o perfil certo** (homônimos, @ em cada rede) | Secção **Descoberta de perfis** (neste arquivo, após a tabela Toolbox) + [METODO_DESCOBERTA_PERFIS.md](methods/discovery/METODO_DESCOBERTA_PERFIS.md) |
 | **Métricas públicas** (IG/YT, TT, X ativo/teor) | Secção **Coleta de dados** (a seguir a Descoberta) — Social Blade, Upfluence, X manual |
-| **Busca aberta, OSINT, fontes de evidência** | [Metodologia brand safety](methods/brand-safety/METODO_BRAND_SAFETY.md), [lista de fontes](projects/caixa/loterias/always-on-20260401/research/methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md), tabela OSINT em **Coleta de dados** |
+| **Busca aberta, OSINT, fontes de evidência** | [Metodologia brand safety](methods/brand-safety/METODO_BRAND_SAFETY.md), [lista de fontes](methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md), tabela OSINT em **Coleta de dados** |
 | **Sinais de mercado** (engagement, bots, frameworks de vetting) | Secção **Mercado: metodologia típica** (mais acima neste arquivo) + tabela de ferramentas gratuitas/OSINT |
 | **Arquivo / histórico** (Wayback, etc.) | Na seção **Mercado** (sinais típicos) |
-| **Geo / proxy Trends** (quando o dossiê precisar) | Linha **Proxy Trends / Wikipedia** em **Coleta de dados** + [`embratur/scripts/`](embratur/scripts/) |
-| **Qualidade do entregável** (estrutura `.md`, links quebrados) | Tabela **Toolbox** (imediatamente abaixo desta subseção) — `engine/qa/validate_source.py`, `check_dossier_links.py` |
+| **Geo / proxy Trends** (quando o dossiê precisar) | Linha **Proxy Trends / Wikipedia** em **Coleta de dados** + [`engine/research/penetracao_mercados.py`](engine/research/penetracao_mercados.py) |
+| **Qualidade do entregável** (estrutura `.md`, links quebrados) | Tabela **Toolbox** (imediatamente abaixo desta subseção) — `engine/qa/validate_source.py`, `engine/qa/check_links.py` |
 
 **Limitação honesta:** não há integração automática tipo “API de brand safety” no fluxo; é **manual + planilhas + OSINT opcional**, alinhado ao que o repositório já usa. Ferramentas **pagas** de mercado ficam fora do toolbox — só referência na seção **Mercado**.
 
@@ -651,12 +651,12 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 
 | Ferramenta | Comando | Função |
 |------------|---------|--------|
-| Nome do arquivo publicado | `python3 engine/dossier_html_filename.py --md <dossier_*.md>` | Imprime `YYYYMMDD-dossie-<slug>.html` a partir de `meta.title` (usa hoje se omitir `--date`). |
+| Nome do arquivo publicado | `python3 engine/cli/html_filename.py --md <dossier_*.md>` | Imprime `YYYYMMDD-dossie-<slug>.html` a partir de `meta.title` (usa hoje se omitir `--date`). |
 | Pipeline até a pasta Pages | `python3 engine/cli/publish_dossier.py --md <…> --dest <pasta ou .html>` | Valida → links → `engine/cli/build_dossier.py` → grava HTML em `DEST` → `check_html_leakage` na pasta cliente. `make dossie-entregar PROJECT=…` ou `MD=… DEST=…` na raiz. |
 | PDF (HTML → PDF, Playwright) | `python3 engine/cli/export_pdf.py --html <…> --out <…>.pdf` | **Metodologia completa** (fluxo Caixa Isadora: gate, Chart.js, `resize` após `@media print`, servidor na raiz): [`docs/how-to/METODO_PDF_DOSSIE.md`](docs/how-to/METODO_PDF_DOSSIE.md). Flags (`--skip-gate`, `--post-unlock-wait`): [`engine/README.md`](engine/README.md). `make dossie-pdf HTML=… OUT=…` (opcional `SKIP_GATE=1`, `POST_UNLOCK_WAIT=5`). Deps: `pip install -r engine/requirements/pdf.txt` e `playwright install chromium`. |
 | Governança (senha, validação, escalação) | [`docs/how-to/GOVERNANCA_ENTREGA.md`](docs/how-to/GOVERNANCA_ENTREGA.md) | Senha **não** em issue pública; validar **abrindo** o HTML no Pages; PDF opcional; escalação de risco grave. |
 | Validação estrutura + regra texto plano | `python3 engine/qa/validate_source.py <caminho/dossier_*.md>` | Exige `##` perfis com `### Handles` e `### Síntese de risco`; avisa se `meta.title` (etc.) tiver `**` ou `#` colados do Markdown. `--strict` falha com avisos de texto plano. **`--hints`** imprime dicas semânticas (lacunas, painéis, URLs); **`--strict-hints`** falha (exit 3) se houver dica — opcional em CI. [Exemplo de `dossier_*.md`](projects/caixa/loterias/always-on-20260401/data/dossier_loterias2026.md). |
-| Checagem de links (opcional) | `python3 engine/check_dossier_links.py <arquivo.md>` | Testa URLs http(s) do arquivo (pode falhar por bloqueio de bot). |
+| Checagem de links (opcional) | `python3 engine/qa/check_links.py <arquivo.md>` | Testa URLs http(s) do arquivo (pode falhar por bloqueio de bot). |
 | Makefile | `make help` / `make dossie-filename` / `make dossie-entregar` / `make validate-dossier-squad-13` / `make build-dossier-squad-13` | Atalhos na raiz; `squad-13` / `squad-8` = lotes de referência do modo B. |
 | CI | `.github/workflows/dossier-validate.yml` | Em PR/push que tocam nos `.md`, corre o validador (com PyYAML). |
 
@@ -664,7 +664,7 @@ Cada pasta na **raiz do repo** (irmã de `engine/`, `docs/`) corresponde a um **
 
 Quando a entrada for **só o nome do creator** ou **nome + um único user** de uma rede, seguir a metodologia passo a passo para achar **Instagram, TikTok, YouTube e X** com confirmação e desambiguação de homônimos:
 
-**[Metodologia — descoberta de perfis](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md)**
+**[Metodologia — descoberta de perfis](methods/discovery/METODO_DESCOBERTA_PERFIS.md)**
 
 ### Coleta de dados (ferramentas já usadas no repo)
 
@@ -675,20 +675,20 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 | Categoria | Ferramentas / métodos |
 |-----------|------------------------|
 | **Métricas em painel** | Social Blade (IG/YT, browser), Upfluence (TT, dados que envias), X manual (seguidores + ativo + teor) |
-| **OSINT no repo** | Instaloader, yt-dlp, Sherlock — [`engine/requirements-osint.txt`](engine/requirements-osint.txt) (canônico; cópia espelhada em `projects/caixa/loterias/always-on-20260401/research/osint_runs/`) |
-| **Descoberta de @** | Metodologia em [METODO_DESCOBERTA_PERFIS_CREATORS.md](methods/discovery/METODO_DESCOBERTA_PERFIS_CREATORS.md) |
-| **Narrativa / fontes** | [METODO_BRAND_SAFETY.md](methods/brand-safety/METODO_BRAND_SAFETY.md), [methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md](projects/caixa/loterias/always-on-20260401/research/methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
+| **OSINT no repo** | Instaloader, yt-dlp, Sherlock — [`engine/requirements/osint.txt`](engine/requirements/osint.txt) (canônico; cópia espelhada em `projects/caixa/loterias/always-on-20260401/research/osint_runs/`) |
+| **Descoberta de @** | Metodologia em [METODO_DESCOBERTA_PERFIS.md](methods/discovery/METODO_DESCOBERTA_PERFIS.md) |
+| **Narrativa / fontes** | [METODO_BRAND_SAFETY.md](methods/brand-safety/METODO_BRAND_SAFETY.md), [`methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md`](methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md) |
 | **Arquivo e mercado** | Wayback, tabela ampliada na seção **Mercado** (Sherlock, gallery-dl, Maigret, Google News/Alerts, etc.) |
-| **Geo / tendências (proxy Trends + Wikipedia)** | [`engine/penetracao_mercados.py`](engine/penetracao_mercados.py) + JSON de entidades (ex.: [`embratur/research/penetracao_entities_embratur_2026.json`](embratur/research/penetracao_entities_embratur_2026.json)); *wrapper* [`embratur/scripts/penetracao_mercados.py`](embratur/scripts/penetracao_mercados.py) chama o de `engine/`. |
+| **Geo / tendências (proxy Trends + Wikipedia)** | [`engine/research/penetracao_mercados.py`](engine/research/penetracao_mercados.py) + JSON de entidades (ex.: [`projects/embratur/auditoria-20260323/research/penetracao_entities_embratur_2026.json`](projects/embratur/auditoria-20260323/research/penetracao_entities_embratur_2026.json)); ver [README research Embratur](projects/embratur/auditoria-20260323/research/README.md). |
 
 | Área | O quê | Onde / como |
 |------|--------|-------------|
 | **Métricas Instagram e YouTube** | **Social Blade** — consulta manual no site (navegador); copiar números para o painel do dossiê. | Preencher `instagram` e `youtube` em **`dossier_*_panels.yaml`** (estrutura como nos [dados de exemplo](projects/caixa/loterias/always-on-20260401/data/)). Rodapés do HTML já citam “Social Blade” onde aplicável. |
 | **Métricas TikTok** | **Upfluence (TikTok Audit)** — exportação ou captura que **você** faz; enviar os dados (CSV, print estruturado ou tabela) para **organizar no repositório** (inserção nas `rows` do bloco `tiktok` do `_panels.yaml`, alinhado aos cabeçalhos do template). | Coordenação humana + edição de `dossier_*_panels.yaml`; não há integração API automática no fluxo atual. |
 | **Métricas X (Twitter)** | **Plataforma X**, consulta **manual** no perfil público (navegador ou app). O essencial para o painel: **número de seguidores** e se a conta está **ativa** — ou seja, se a pessoa **ainda usa** o X (posts recentes visíveis) ou se está **parada há muito tempo** (sem uso relevante / última atividade antiga). Não é preciso inventariar todo o conteúdo; basta o que sustenta essas duas leituras + uma **linha de teor recente** (resumo objetivo) na tabela, como nos dossiês já publicados. | Preencher o bloco `x` em **`dossier_*_panels.yaml`** (`headers` + `rows`: costuma haver colunas para seguidores, atividade Sim/Não e resumo do teor). Rodapé do HTML: checagem na data da coleta. |
-| **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock (+ na seção **Mercado**: Maigret, Google News/Alerts, imagem inversa, archive.today, holehe se aplicável). Quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](methods/brand-safety/METODO_BRAND_SAFETY.md) (seção *Ferramentas open source e fluxo OSINT*), [lista de fontes](projects/caixa/loterias/always-on-20260401/research/methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`engine/requirements-osint.txt`](engine/requirements-osint.txt) |
-| **Segundo lote (merge / CSV)** | CSVs, merge de baseline, notas de redes | [`merge_creators_baseline.py`](projects/caixa/loterias/always-on-20260406/scripts/merge_creators_baseline.py), [`data/`](projects/caixa/loterias/always-on-20260406/data/), [`research/`](projects/caixa/loterias/always-on-20260406/research/) |
-| **Proxy Trends / Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | [`engine/penetracao_mercados.py`](engine/penetracao_mercados.py), deps em [`engine/requirements-penetracao.txt`](engine/requirements-penetracao.txt), modelo JSON em [`engine/penetracao_entities_example.json`](engine/penetracao_entities_example.json); [README research Embratur](embratur/research/README.md) para o lote de exemplo. |
+| **OSINT open source** (suplemento narrativa) | Instaloader, yt-dlp, Sherlock (+ na seção **Mercado**: Maigret, Google News/Alerts, imagem inversa, archive.today, holehe se aplicável). Quando a imprensa não cobre o handle; logs em `research/osint_runs/`. | [Metodologia brand safety](methods/brand-safety/METODO_BRAND_SAFETY.md) (seção *Ferramentas open source e fluxo OSINT*), [lista de fontes](methods/brand-safety/FONTES_BRAND_SAFETY_LOTERIAS2026.md), [`engine/requirements/osint.txt`](engine/requirements/osint.txt) |
+| **Segundo lote (merge / CSV)** | CSVs, merge de baseline, notas de redes | [`data/`](projects/caixa/loterias/always-on-20260406/data/), [`research/`](projects/caixa/loterias/always-on-20260406/research/) |
+| **Proxy Trends / Wikipedia** | Penetração mercados (índices relativos; ver limites no README). | [`engine/research/penetracao_mercados.py`](engine/research/penetracao_mercados.py), deps em [`engine/requirements/penetracao.txt`](engine/requirements/penetracao.txt), exemplo JSON em [`projects/embratur/auditoria-20260323/research/penetracao_entities_embratur_2026.json`](projects/embratur/auditoria-20260323/research/penetracao_entities_embratur_2026.json); [README research Embratur](projects/embratur/auditoria-20260323/research/README.md). |
 
 **Resumo (modo B — qualquer campanha com esta fábrica):** HTML final = `dossier_*.md` + `_panels.yaml` + `engine/cli/build_dossier.py`. **Apify não faz parte do fluxo operacional.** Métricas típicas neste modelo: **Social Blade** (IG/YT) + **Upfluence** (TT) + **X manual**. **OSINT** opcional para narrativa. Caminhos com nomes de produto no repo são **históricos** do primeiro uso deste pipeline.
 
@@ -696,7 +696,7 @@ Não são os mesmos scripts que validam o `.md`; servem para **alimentar pesquis
 
 - **Onde pode `**` e links `[x](url)`:** parágrafos do briefing (`intro_paragraphs`, `criterios`), blocos `executive_summary` / `consolidated_narrative`, e no **corpo** do perfil: `### Narrativa`, eixos longos, `### Resumo tabela` e células da matriz — o gerador aplica **mini Markdown** (negrito, links).
 - **Onde deve ser texto plano:** `meta.title`, `meta.subtitle`, `meta.client_line`, `meta.periodo`, nomes em `briefing.redes`, rótulos `methodology.columns[].label`, **tabelas de painéis** (`_panels.yaml`), e identificadores estruturais (`## Nome`, `- **Camada:**`, handles). Não colar linhas com `##` ou `**` vindas de outras seções para esses campos.
-- **Defesa no código:** `engine/dossier_plain.strip_markdown_to_plain()` remove `**`, cabeçalhos `#` e converte links em “texto (URL)” nos campos que são só escape HTML, e normaliza nome/camada/handles ao ler o `.md`, para o HTML do cliente não mostrar lixo literal se alguém colar errado.
+- **Defesa no código:** `engine/core/dossier_plain.strip_markdown_to_plain()` remove `**`, cabeçalhos `#` e converte links em “texto (URL)” nos campos que são só escape HTML, e normaliza nome/camada/handles ao ler o `.md`, para o HTML do cliente não mostrar lixo literal se alguém colar errado.
 
 ## Evolução do método
 

@@ -10,4 +10,6 @@ Metodologia **genérica** para dossiês brand safety / vetting — aplica-se a *
 
 Pesquisa **específica de um lote** fica em `projects/<cliente>/…/research/`.
 
-Índice completo: [`docs/reference/INDICE_METODOS.md`](../docs/reference/INDICE_METODOS.md).
+**Como usar:** leia o método antes da coleta; registre evidências em `research/` do projeto ou em arquivo FONTES dedicado. O HTML entregue ao cliente **não** deve citar estes caminhos.
+
+Índice completo: [`docs/reference/INDICE_METODOS.md`](../docs/reference/INDICE_METODOS.md) · [`docs/README.md`](../docs/README.md).

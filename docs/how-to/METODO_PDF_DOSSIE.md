@@ -2,7 +2,7 @@
 
 Texto operacional em **pt-BR**. Descreve o fluxo usado na entrega **Caixa — Isadora Cruz** (`caixa/20260506-dossie-isadora-cruz-cartao-caixa-2026.html` → `.pdf`) e generaliza para **qualquer** dossiê HTML com gate no repositório.
 
-**Governança** (senha em canal seguro, commit público, dados sensíveis): [`docs/GOVERNANCA_ENTREGA.md`](GOVERNANCA_ENTREGA.md).
+**Governança** (senha em canal seguro, commit público, dados sensíveis): [`docs/how-to/GOVERNANCA_ENTREGA.md`](GOVERNANCA_ENTREGA.md).
 
 **Implementação e flags do script:** [`engine/cli/export_pdf.py`](../../engine/cli/export_pdf.py) e secção **PDF** em [`engine/README.md`](../../engine/README.md).
 

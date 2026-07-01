@@ -13,7 +13,8 @@
 ## Índice
 
 1. [Resumo executivo](#1-resumo-executivo)
-2. [Diagnóstico do estado atual](#2-diagnóstico-do-estado-atual)
+2. [Estado atual (pós-migração)](#2-estado-atual-pós-migração-2026-07-01)
+2bis. [Diagnóstico pré-reorganização (histórico)](#2bis-diagnóstico-pré-reorganização-histórico)
 3. [Princípios de design](#3-princípios-de-design)
 4. [As quatro zonas](#4-as-quatro-zonas)
 5. [Árvore completa — estado-alvo](#5-árvore-completa--estado-alvo)
@@ -49,9 +50,67 @@
 
 **Solução proposta:** reorganizar em **quatro zonas** com fronteiras explícitas, manter **monorepo** (compartilhamento de motor e contexto para agentes), separar **Caixa institucional** de **Caixa Loterias** na superfície e em `projects/`, unificar o motor em `engine/` e publicar no Pages **apenas** o artefato de site montado.
 
+**Status da migração:** **executada em 2026-07-01**. Pastas legadas `loterias2026/`, `tools/` e `examples/minimo/` foram removidas. Ver [§2 Estado atual](#2-estado-atual-pós-migração-2026-07-01).
+
 ---
 
-## 2. Diagnóstico do estado atual
+## 2. Estado atual (pós-migração 2026-07-01)
+
+### Árvore operacional (resumo)
+
+```
+calia-bi-reports/
+├── caixa/                    # Zona A — HTML publicado (institucional)
+├── caixa/loterias/           # Zona A — HTML Loterias / Always ON
+├── febraban/                 # Zona A — HTML Febraban
+├── embratur/                 # Zona A — HTML Embratur
+├── assets/                   # Marca, recursos estáticos
+├── projects/                 # Zona B — fonte editável (.md, YAML, manifest)
+│   ├── caixa/loterias/always-on-20260401/   # referência modo B (13 perfis)
+│   ├── caixa/loterias/always-on-20260406/   # lote 8 perfis
+│   ├── caixa/loterias/always-on-20260504/   # lote 3 perfis
+│   ├── febraban/concorrencia-creators-20260427/
+│   ├── embratur/auditoria-20260323/
+│   └── _template/
+├── engine/                   # Zona C — motor Python
+│   ├── core/                 # render, parse .md
+│   ├── cli/                  # build, publish, pdf, new_creator
+│   ├── qa/                   # validate, links, leakage
+│   ├── research/             # penetracao_mercados.py
+│   └── requirements/         # osint, pdf, penetracao
+├── methods/                  # Métodos reutilizáveis (brand safety, descoberta @)
+└── docs/                     # Diátaxis — ver docs/README.md
+    ├── tutorials/
+    ├── how-to/
+    ├── reference/
+    └── explanation/
+```
+
+### Comandos canônicos
+
+```bash
+make help
+make dossie-entregar PROJECT=caixa/loterias/always-on-20260401
+python3 engine/qa/validate_source.py projects/.../dossier_*.md
+python3 engine/qa/check_html_leakage.py caixa febraban embratur
+```
+
+### Documentação
+
+| Pergunta | Arquivo |
+|----------|---------|
+| Por onde começo? | `docs/tutorials/INICIO_AGENTE.md` |
+| Mapa pergunta → arquivo | `docs/reference/INDICE_METODOS.md` |
+| O que está publicado? | `docs/reference/INVENTARIO_DOSSIES.md` |
+| Índice de toda a doc | `docs/README.md` |
+
+### Deploy Pages
+
+O workflow `.github/workflows/deploy-pages.yml` monta `_site/` com `caixa/`, `febraban/`, `embratur/`, `assets/` e `index.html` — **não** publica `projects/` nem `engine/`.
+
+---
+
+## 2bis. Diagnóstico pré-reorganização (histórico)
 
 ### 2.1 O que funciona (manter)
 

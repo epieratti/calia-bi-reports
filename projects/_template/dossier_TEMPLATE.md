@@ -12,7 +12,7 @@ password_sha256_hex:
 #   executive_dashboard: true
 #   product_tagline: "Uso interno — brand safety / vetting"
 #   footer_note: "Texto legal ou disclaimer curto (texto plano)."
-# Calibragem de qualidade (recomendado se 2+ perfis) — ver docs/CALIBRAGEM_QUALIDADE.md
+# Calibragem de qualidade (recomendado se 2+ perfis) — ver docs/explanation/CALIBRAGEM_QUALIDADE.md
 # quality_calibration:
 #   data_corte_coleta: "DD/MM/AAAA"
 #   delta_vs_entrega_anterior: "N/A ou o que mudou vs versão anterior"

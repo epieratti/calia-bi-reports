@@ -26,7 +26,7 @@ Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.m
 | 4 | Pesquisa e métricas — [`PLAYBOOK_DOSSIES.md`](PLAYBOOK_DOSSIES.md) (*Coleta de dados*, *Mercado*). |
 | 4b | **Síntese crítica** — após a coleta: o que entra, hierarquia, gráficos (se houver), credibilidade; plano em bullets **antes** do build. Ver *Síntese crítica e arquitetura da entrega* no playbook completo. |
 | 5 | Build ou edição HTML. |
-| 6 | QA — `engine/qa/validate_source.py` (modo B; `--hints` para calibragem/vagueza); opcional `check_dossier_links.py`; passo **advogado do diabo** por perfil de risco (`docs/explanation/CALIBRAGEM_QUALIDADE.md`); **`make qa-dossier-squad-13`** ou `qa-dossier-squad-8`. |
+| 6 | QA — `engine/qa/validate_source.py` (modo B; `--hints` para calibragem/vagueza); opcional `engine/qa/check_links.py`; passo **advogado do diabo** por perfil de risco (`docs/explanation/CALIBRAGEM_QUALIDADE.md`); **`make qa-dossier-squad-13`** ou `qa-dossier-squad-8`. |
 | 7 | Publicar na pasta correta (`caixa/`, `caixa/loterias/`, `embratur/`, …); **nome do `.html`** = padrão `YYYYMMDD-dossie-<slug>.html` (Pipeline §2) — **definido pelo agente**; git conforme `AGENTS.md`. |
 
 ## Limites do que o agente faz
@@ -40,7 +40,7 @@ Leia **este arquivo em seguida**; o guia completo está em **`PLAYBOOK_DOSSIES.m
 | Precisa de… | Abrir |
 |-------------|--------|
 | Índice pergunta → arquivo | [`docs/reference/INDICE_METODOS.md`](docs/reference/INDICE_METODOS.md) |
-| Métodos (atalhos na pasta `docs/metodos/`) | [`methods/README.md`](methods/README.md) |
+| Métodos reutilizáveis | [`methods/README.md`](methods/README.md) |
 | **Exemplos de briefing** (e-mail / texto bruto) | [`docs/how-to/EXEMPLOS_BRIEFINGS.md`](docs/how-to/EXEMPLOS_BRIEFINGS.md) |
 | Playbook completo (cores, gráficos, briefing E/C/O, pastas) | [`PLAYBOOK_DOSSIES.md`](PLAYBOOK_DOSSIES.md) |
 | Instruções git / estrutura repo | [`AGENTS.md`](AGENTS.md) |

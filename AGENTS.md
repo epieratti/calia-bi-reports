@@ -14,7 +14,7 @@ Este repositório contém **relatórios e dossiês em HTML** publicados via **Gi
 
 **Autocontido e fontes:** o dossiê **não** pode exigir clique em link para entender a análise; **e** toda fonte web com URL deve aparecer com **link** no HTML — ver `PLAYBOOK_DOSSIES.md` → *Documento autocontido e links*.
 
-**Ordem de leitura sugerida:** `PLAYBOOK_AGENTES.md` → `docs/tutorials/PRIMEIRO_DIA.md` → `PLAYBOOK_DOSSIES.md` → `docs/reference/INDICE_METODOS.md` → README da pasta (`caixa/`, `projects/…`). Prompts: `docs/reference/PROMPTS_IA_AGENTES.md`. Multi-agente: `docs/how-to/MULTI_AGENTES.md`.
+**Ordem de leitura sugerida:** `PLAYBOOK_AGENTES.md` → `docs/tutorials/PRIMEIRO_DIA.md` → `PLAYBOOK_DOSSIES.md` → `docs/README.md` → `docs/reference/INDICE_METODOS.md` → README da pasta (`caixa/`, `projects/…`). Prompts: `docs/reference/PROMPTS_IA_AGENTES.md`. Multi-agente: `docs/how-to/MULTI_AGENTES.md`. Arquitetura: `docs/explanation/ARQUITETURA.md`.
 
 **Motor dossiê (modo B):** `engine/core/` · `engine/cli/build_dossier.py` · `make dossie-entregar`.
 

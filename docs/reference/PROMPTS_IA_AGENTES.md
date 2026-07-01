@@ -2,14 +2,14 @@
 
 Use com o repositório aberto. Idioma da **resposta ao usuário:** **pt-BR**. **Conteúdo do dossiê:** **pt-BR** salvo pedido explícito em contrário.
 
-**Coordenação entre agentes:** ver [`MULTI_AGENTES.md`](MULTI_AGENTES.md). **Calibragem de qualidade:** [`CALIBRAGEM_QUALIDADE.md`](CALIBRAGEM_QUALIDADE.md).
+**Coordenação entre agentes:** ver [`docs/how-to/MULTI_AGENTES.md`](../how-to/MULTI_AGENTES.md). **Calibragem de qualidade:** [`docs/explanation/CALIBRAGEM_QUALIDADE.md`](../explanation/CALIBRAGEM_QUALIDADE.md).
 
 ---
 
 ## 0. Briefing do cliente + pipeline obrigatório (colar no início)
 
 ```
-[Cole aqui o bloco CONTRATO completo de docs/INICIO_AGENTE.md §7]
+[Cole aqui o bloco CONTRATO completo de docs/tutorials/INICIO_AGENTE.md §7]
 
 [Briefing bruto do cliente abaixo]
 ```
@@ -64,7 +64,7 @@ quando existir URL. Liste só o que estiver incompleto segundo PLAYBOOK_DOSSIES.
 
 ```
 Nome: [X]. Handles candidatos: [lista]. Briefing: [contexto].
-Segundo METODO_DESCOBERTA_PERFIS_CREATORS.md, quais checks faltam para confirmar
+Segundo methods/discovery/METODO_DESCOBERTA_PERFIS.md, quais checks faltam para confirmar
 que é a mesma pessoa? Que perguntas devo fazer ao usuário?
 ```
 
@@ -84,7 +84,7 @@ Inclua VARIANT squad_13 ou squad_8 se aplicável.
 
 ```
 Com base no briefing abaixo, escreva o bloco YAML `quality_calibration` e `briefing.perfis_institucionais`
-conforme docs/CALIBRAGEM_QUALIDADE.md. Texto plano nas strings. Se for revisão, inclua delta_vs_entrega_anterior.
+conforme docs/explanation/CALIBRAGEM_QUALIDADE.md. Texto plano nas strings. Se for revisão, inclua delta_vs_entrega_anterior.
 
 [Briefing ou bullet points do cliente]
 ```
